@@ -1,24 +1,305 @@
 import { createFileRoute } from "@tanstack/react-router";
+import logo from "@/assets/logo.png";
+import avatar from "@/assets/avatar.png";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
+// TODO: Cal.com – ersetze diese URL mit deinem echten Cal.com Handle,
+// z.B. "https://cal.com/michel-meier/personal-training"
+const CAL_BASE = "https://cal.com/your-handle";
+
+const pillars = [
+  {
+    tag: "M¹",
+    title: "Metabolism",
+    desc: "Stoffwechsel, Ernährung, Darmgesundheit & Vitalstoffe – die Grundlage für echte Leistung.",
+  },
+  {
+    tag: "M²",
+    title: "Movement",
+    desc: "Kraft, Mobilität und Schmerzfreiheit. Training, das deinen Körper langfristig stark macht.",
+  },
+  {
+    tag: "M³",
+    title: "Mental Performance",
+    desc: "Energie, Fokus, Motivation. Klarer Kopf für Alltag, Beruf und Sport.",
+  },
+];
+
+const services = [
+  {
+    name: "Personal Training",
+    price: "ab 120 €",
+    duration: "60 Min",
+    desc: "Individuelles 1-zu-1 Training – abgestimmt auf deine Ziele, dein Level und deinen Alltag.",
+    features: ["Bewegungsanalyse", "Individueller Trainingsplan", "Kontinuierliche Betreuung"],
+    slug: "personal-training",
+  },
+  {
+    name: "Health & Performance Coaching",
+    price: "ab 180 €",
+    duration: "90 Min",
+    desc: "Ganzheitliches Coaching für Stoffwechsel, Ernährung, Darmgesundheit und Vitalstoffe.",
+    features: ["Anamnese & Zielbild", "Ernährungsstrategie", "Vitalstoff-Analyse"],
+    slug: "health-coaching",
+    featured: true,
+  },
+  {
+    name: "Schmerzfrei-Programm",
+    price: "ab 150 €",
+    duration: "75 Min",
+    desc: "Zurück in Bewegung – Mobilität, Haltung und funktionelles Training gegen chronische Beschwerden.",
+    features: ["Ursachenanalyse", "Mobility Plan", "Alltagsübungen"],
+    slug: "schmerzfrei",
+  },
+  {
+    name: "Kennenlern-Gespräch",
+    price: "kostenlos",
+    duration: "20 Min",
+    desc: "Wir sprechen über deine Ziele und finden heraus, welches Angebot am besten zu dir passt.",
+    features: ["Zieldefinition", "Erstberatung", "Passendes Konzept"],
+    slug: "kennenlernen",
+  },
+];
+
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      {/* NAV */}
+      <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border">
+        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+          <a href="#top" className="flex items-center gap-3">
+            <img src={logo} alt="M³ Performance Logo" className="h-9 w-9 object-contain" />
+            <span className="font-display text-xl tracking-wider">
+              M³ <span className="text-gold">Performance</span>
+            </span>
+          </a>
+          <nav className="hidden md:flex items-center gap-8 text-sm text-muted-foreground">
+            <a href="#philosophie" className="hover:text-foreground transition">Philosophie</a>
+            <a href="#saeulen" className="hover:text-foreground transition">Die 3 Säulen</a>
+            <a href="#services" className="hover:text-foreground transition">Services</a>
+            <a href="#ueber" className="hover:text-foreground transition">Über Michél</a>
+          </nav>
+          <a
+            href={`${CAL_BASE}/kennenlernen`}
+            target="_blank" rel="noopener noreferrer"
+            className="inline-flex items-center rounded-full bg-gold-gradient px-5 py-2 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
+          >
+            Termin buchen
+          </a>
+        </div>
+      </header>
+
+      {/* HERO */}
+      <section id="top" className="relative hero-bg overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full bg-gold/5 blur-3xl animate-glow" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-6 pt-20 pb-0 md:pt-32 min-h-[95vh] flex flex-col">
+          <div className="max-w-3xl mx-auto text-center animate-float-up">
+            <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold mb-8">
+              <span className="w-1.5 h-1.5 rounded-full bg-gold" />
+              Performance & Gesundheit
+            </div>
+
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-display leading-[0.95]">
+              Mehr Energie.<br />
+              Mehr Leistung.<br />
+              <span className="text-gold">Mehr Leben.</span>
+            </h1>
+
+            <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              Performance beginnt mit Gesundheit. Personal Training, Ernährung, Stoffwechsel &
+              Gesundheitscoaching – für Menschen, die mehr wollen als nur Sport.
+            </p>
+
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+              <a
+                href={`${CAL_BASE}/kennenlernen`}
+                target="_blank" rel="noopener noreferrer"
+                className="inline-flex items-center rounded-full bg-gold-gradient px-8 py-3.5 font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
+              >
+                Kostenloses Kennenlern-Gespräch
+              </a>
+              <a href="#services" className="inline-flex items-center rounded-full border border-border px-8 py-3.5 font-semibold hover:bg-secondary transition">
+                Services entdecken
+              </a>
+            </div>
+          </div>
+
+          {/* Avatar am unteren Bildrand */}
+          <div className="mt-auto flex justify-center relative">
+            <img
+              src={avatar}
+              alt="Michél Meier – Personal Trainer 3D Avatar"
+              className="avatar-shadow h-[55vh] md:h-[70vh] max-h-[720px] w-auto object-contain object-bottom select-none pointer-events-none animate-float-up"
+              style={{ animationDelay: "0.3s" }}
+            />
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-16 bg-gold/20 blur-3xl rounded-full" />
+          </div>
+        </div>
+      </section>
+
+      {/* PHILOSOPHIE */}
+      <section id="philosophie" className="py-24 md:py-32 border-t border-border">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <p className="text-xs uppercase tracking-[0.3em] text-gold mb-4">Die Philosophie</p>
+          <h2 className="text-4xl md:text-6xl font-display leading-tight">
+            Performance beginnt<br /><span className="text-gold">mit Gesundheit.</span>
+          </h2>
+          <p className="mt-8 text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Ich bin nicht der klassische Fitness-Coach. Gesundheit ist die Grundlage.
+            Ernährung, Darmgesundheit, Vitalstoffe – darauf baut Training auf. Erst daraus
+            entsteht echte Performance. Für Sportler, Berufstätige und alle, die im Alltag
+            wieder leistungsfähig, schmerzfrei und energiegeladen leben wollen.
+          </p>
+        </div>
+      </section>
+
+      {/* 3 SÄULEN */}
+      <section id="saeulen" className="py-24 md:py-32 bg-card/40 border-y border-border">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-xs uppercase tracking-[0.3em] text-gold mb-4">Die drei M</p>
+            <h2 className="text-4xl md:text-6xl font-display">Drei Säulen. Ein System.</h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {pillars.map((p) => (
+              <div key={p.tag} className="group relative rounded-2xl border border-border bg-card p-8 hover:border-gold/50 transition-all hover:-translate-y-1">
+                <div className="font-display text-7xl text-gold/20 group-hover:text-gold/40 transition mb-4">{p.tag}</div>
+                <h3 className="text-2xl font-display mb-3">{p.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section id="services" className="py-24 md:py-32">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-xs uppercase tracking-[0.3em] text-gold mb-4">Angebote</p>
+            <h2 className="text-4xl md:text-6xl font-display">Deine nächsten Schritte.</h2>
+            <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
+              Jedes Angebot direkt online buchbar über Cal.com.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {services.map((s) => (
+              <div
+                key={s.slug}
+                className={`relative rounded-2xl border p-8 flex flex-col ${
+                  s.featured
+                    ? "border-gold/60 bg-gradient-to-br from-gold/10 to-transparent"
+                    : "border-border bg-card hover:border-gold/40"
+                } transition-all`}
+              >
+                {s.featured && (
+                  <span className="absolute -top-3 left-8 rounded-full bg-gold-gradient px-3 py-1 text-xs font-semibold text-primary-foreground uppercase tracking-wider">
+                    Beliebt
+                  </span>
+                )}
+                <div className="flex items-start justify-between gap-4 mb-4">
+                  <h3 className="text-2xl font-display">{s.name}</h3>
+                  <div className="text-right shrink-0">
+                    <div className="text-gold font-semibold">{s.price}</div>
+                    <div className="text-xs text-muted-foreground">{s.duration}</div>
+                  </div>
+                </div>
+                <p className="text-muted-foreground leading-relaxed mb-6">{s.desc}</p>
+                <ul className="space-y-2 mb-8">
+                  {s.features.map((f) => (
+                    <li key={f} className="flex items-center gap-3 text-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
+                      {f}
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={`${CAL_BASE}/${s.slug}`}
+                  target="_blank" rel="noopener noreferrer"
+                  className={`mt-auto inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold transition ${
+                    s.featured
+                      ? "bg-gold-gradient text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90"
+                      : "border border-border hover:bg-secondary"
+                  }`}
+                >
+                  Jetzt buchen →
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ÜBER */}
+      <section id="ueber" className="py-24 md:py-32 border-t border-border">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+          <div>
+            <p className="text-xs uppercase tracking-[0.3em] text-gold mb-4">Über Michél</p>
+            <h2 className="text-4xl md:text-5xl font-display leading-tight mb-6">
+              Mehr als<br /><span className="text-gold">Training.</span>
+            </h2>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                Ich bin Michél Meier – Personal Trainer und Gesundheitsberater. Seit Jahren
+                begleite ich Menschen dabei, wieder in Bewegung zu kommen, ihren Stoffwechsel
+                zu optimieren und ihre Leistungsfähigkeit im Alltag, Beruf und Sport zu steigern.
+              </p>
+              <p>
+                Meine Arbeit verbindet Training, Ernährung, Darmgesundheit, Vitalstoffe und
+                mentale Performance – zu einem klaren, ganzheitlichen System: M³ Performance.
+              </p>
+            </div>
+          </div>
+          <div className="relative">
+            <div className="aspect-square rounded-3xl bg-gradient-to-br from-gold/20 to-transparent border border-gold/20 p-8 flex items-center justify-center">
+              <img src={logo} alt="M³ Performance" className="w-full max-w-[280px] object-contain" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 md:py-32 bg-card/40 border-t border-border">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className="text-4xl md:text-6xl font-display leading-tight">
+            Bereit für<br /><span className="text-gold">deinen nächsten Schritt?</span>
+          </h2>
+          <p className="mt-6 text-lg text-muted-foreground">
+            Lass uns in einem kostenlosen Kennenlern-Gespräch herausfinden, wie ich dich
+            optimal unterstützen kann.
+          </p>
+          <a
+            href={`${CAL_BASE}/kennenlernen`}
+            target="_blank" rel="noopener noreferrer"
+            className="mt-10 inline-flex items-center rounded-full bg-gold-gradient px-8 py-4 font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
+          >
+            Kostenlosen Termin buchen
+          </a>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="border-t border-border py-12">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-3">
+            <img src={logo} alt="M³ Performance" className="h-8 w-8 object-contain" />
+            <div>
+              <div className="font-display tracking-wider">M³ Performance</div>
+              <div className="text-xs text-muted-foreground">Performance beginnt mit Gesundheit.</div>
+            </div>
+          </div>
+          <div className="text-sm text-muted-foreground">
+            © {new Date().getFullYear()} Michél Meier · M³ Performance
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
