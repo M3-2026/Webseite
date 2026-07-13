@@ -256,8 +256,14 @@ function Index() {
             </div>
           </div>
           <div className="relative">
-            <div className="aspect-square rounded-3xl bg-gradient-to-br from-gold/20 to-transparent border border-gold/20 p-8 flex items-center justify-center">
-              <img src={logo} alt="M³ Performance" className="w-full max-w-[280px] object-contain" />
+            <div className="aspect-square rounded-3xl bg-gradient-to-br from-gold/20 to-transparent border border-gold/20 p-3 overflow-hidden">
+              <iframe
+                className="w-full h-full rounded-2xl"
+                src="https://www.youtube.com/embed/dQrADZQ1d5I"
+                title="M³ Performance"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
             </div>
           </div>
         </div>
