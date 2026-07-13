@@ -36,33 +36,35 @@
 
 :root {
   --radius: 0.75rem;
-  --background: oklch(0.14 0.005 260);
-  --foreground: oklch(0.98 0 0);
-  --card: oklch(0.18 0.006 260);
-  --card-foreground: oklch(0.98 0 0);
-  --popover: oklch(0.18 0.006 260);
-  --popover-foreground: oklch(0.98 0 0);
-  --primary: oklch(0.82 0.14 85);
-  --primary-foreground: oklch(0.14 0.005 260);
-  --secondary: oklch(0.24 0.008 260);
-  --secondary-foreground: oklch(0.98 0 0);
-  --muted: oklch(0.22 0.006 260);
-  --muted-foreground: oklch(0.7 0.01 260);
-  --accent: oklch(0.82 0.14 85);
-  --accent-foreground: oklch(0.14 0.005 260);
-  --destructive: oklch(0.6 0.22 27);
-  --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 12%);
-  --ring: oklch(0.82 0.14 85);
-  --gold: oklch(0.82 0.14 85);
-  --gold-soft: oklch(0.88 0.09 88);
+  /* Warm, natural, light palette – cream, sand, clay, olive */
+  --background: oklch(0.975 0.012 85);        /* warm cream */
+  --foreground: oklch(0.24 0.02 55);          /* deep espresso */
+  --card: oklch(0.995 0.008 85);              /* near-white cream */
+  --card-foreground: oklch(0.24 0.02 55);
+  --popover: oklch(0.995 0.008 85);
+  --popover-foreground: oklch(0.24 0.02 55);
+  --primary: oklch(0.55 0.13 45);             /* terracotta / clay */
+  --primary-foreground: oklch(0.985 0.008 85);
+  --secondary: oklch(0.93 0.02 80);           /* soft sand */
+  --secondary-foreground: oklch(0.28 0.02 55);
+  --muted: oklch(0.94 0.015 80);
+  --muted-foreground: oklch(0.45 0.02 60);    /* warm gray */
+  --accent: oklch(0.55 0.13 45);
+  --accent-foreground: oklch(0.985 0.008 85);
+  --destructive: oklch(0.55 0.2 27);
+  --destructive-foreground: oklch(0.985 0.008 85);
+  --border: oklch(0.28 0.02 55 / 12%);
+  --input: oklch(0.28 0.02 55 / 14%);
+  --ring: oklch(0.55 0.13 45);
+  /* "gold" token repurposed as warm clay/terracotta accent */
+  --gold: oklch(0.58 0.13 45);
+  --gold-soft: oklch(0.72 0.1 55);
 
-  --gradient-hero: radial-gradient(ellipse at 50% 40%, oklch(0.24 0.02 85 / 0.4), transparent 60%),
-                   linear-gradient(180deg, oklch(0.14 0.005 260) 0%, oklch(0.1 0.005 260) 100%);
-  --gradient-gold: linear-gradient(135deg, oklch(0.88 0.11 88), oklch(0.75 0.14 75));
-  --shadow-gold: 0 20px 60px -20px oklch(0.82 0.14 85 / 0.4);
-  --shadow-avatar: 0 40px 80px -20px oklch(0 0 0 / 0.8), 0 0 120px oklch(0.82 0.14 85 / 0.15);
+  --gradient-hero: radial-gradient(ellipse at 50% 35%, oklch(0.9 0.05 60 / 0.6), transparent 65%),
+                   linear-gradient(180deg, oklch(0.98 0.012 85) 0%, oklch(0.94 0.02 75) 100%);
+  --gradient-gold: linear-gradient(135deg, oklch(0.65 0.14 50), oklch(0.5 0.13 40));
+  --shadow-gold: 0 20px 50px -20px oklch(0.55 0.13 45 / 0.35);
+  --shadow-avatar: 0 30px 60px -20px oklch(0.35 0.05 55 / 0.35), 0 0 120px oklch(0.72 0.1 55 / 0.2);
 }
 
 @layer base {
@@ -91,7 +93,7 @@
   background: var(--gradient-hero);
 }
 @utility avatar-shadow {
-  filter: drop-shadow(0 30px 40px rgba(0,0,0,0.7)) drop-shadow(0 0 60px oklch(0.82 0.14 85 / 0.2));
+  filter: drop-shadow(0 25px 30px rgba(90, 60, 40, 0.25)) drop-shadow(0 0 60px oklch(0.72 0.1 55 / 0.25));
 }
 
 @keyframes float-up {
@@ -99,8 +101,8 @@
   100% { opacity: 1; transform: translateY(0); }
 }
 @keyframes glow-pulse {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 0.9; }
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.75; }
 }
 .animate-float-up { animation: float-up 1s cubic-bezier(0.16, 1, 0.3, 1) both; }
 .animate-glow { animation: glow-pulse 4s ease-in-out infinite; }
