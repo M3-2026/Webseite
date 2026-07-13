@@ -6,9 +6,8 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// TODO: Cal.com – ersetze diese URL mit deinem echten Cal.com Handle,
-// z.B. "https://cal.com/michel-meier/personal-training"
-const CAL_BASE = "https://cal.com/your-handle";
+// WhatsApp Direktkontakt
+const WHATSAPP_URL = "https://wa.me/4917699016640";
 
 const pillars = [
   {
@@ -30,37 +29,41 @@ const pillars = [
 
 const services = [
   {
-    name: "Personal Training",
-    price: "ab 120 €",
-    duration: "60 Min",
-    desc: "Individuelles 1-zu-1 Training – abgestimmt auf deine Ziele, dein Level und deinen Alltag.",
-    features: ["Bewegungsanalyse", "Individueller Trainingsplan", "Kontinuierliche Betreuung"],
-    slug: "personal-training",
-  },
-  {
-    name: "Health & Performance Coaching",
-    price: "ab 180 €",
-    duration: "90 Min",
-    desc: "Ganzheitliches Coaching für Stoffwechsel, Ernährung, Darmgesundheit und Vitalstoffe.",
-    features: ["Anamnese & Zielbild", "Ernährungsstrategie", "Vitalstoff-Analyse"],
-    slug: "health-coaching",
+    name: "M³ System Start",
+    tagline: "Struktur für deinen Start.",
+    desc: "Du willst etwas verändern, hast schon einiges ausprobiert – aber dir fehlt eine klare Linie, die wirklich funktioniert. Im System Start bringen wir Struktur in deine Situation und finden heraus, welche Schritte für dich wirklich sinnvoll sind.",
+    features: ["Standortbestimmung", "Klare Orientierung", "Individueller Plan"],
     featured: true,
   },
   {
-    name: "Schmerzfrei-Programm",
-    price: "ab 150 €",
-    duration: "75 Min",
-    desc: "Zurück in Bewegung – Mobilität, Haltung und funktionelles Training gegen chronische Beschwerden.",
-    features: ["Ursachenanalyse", "Mobility Plan", "Alltagsübungen"],
-    slug: "schmerzfrei",
+    name: "M³ Body Reset",
+    tagline: "Dein Neustart von innen.",
+    desc: "Wenn dein Körper nicht mehr richtig läuft, setzen wir genau dort an. Ein klares System zur Unterstützung von Darm und Stoffwechsel – gezielte Vitalstoffe und eine strukturierte Herangehensweise bringen dich wieder ins Gleichgewicht.",
+    features: ["Darm & Stoffwechsel", "Vitalstoff-Strategie", "Mehr Energie & Klarheit"],
   },
   {
-    name: "Kennenlern-Gespräch",
-    price: "kostenlos",
-    duration: "20 Min",
-    desc: "Wir sprechen über deine Ziele und finden heraus, welches Angebot am besten zu dir passt.",
-    features: ["Zieldefinition", "Erstberatung", "Passendes Konzept"],
-    slug: "kennenlernen",
+    name: "M³ Ernährungscoaching",
+    tagline: "Deine Ernährung. Dein Erfolg.",
+    desc: "Keine starren Pläne, keine Verbote – sondern eine Struktur, die zu dir passt. Du lernst, wie du deine Ernährung sinnvoll steuerst und dauerhaft in deinen Alltag integrierst.",
+    features: ["Alltagstauglich", "Individuelle Struktur", "Nachhaltige Umsetzung"],
+  },
+  {
+    name: "M³ Performance Training",
+    tagline: "Stärke mit System.",
+    desc: "Gezielt an Kraft, Technik und Belastbarkeit arbeiten. Jede Einheit ist auf dein aktuelles Level abgestimmt – ob Wiedereinstieg oder gezielter Aufbau. Personal Training flexibel mit 1–2 Einheiten pro Woche.",
+    features: ["Kraft & Technik", "Individuelles Level", "1–2× / Woche"],
+  },
+  {
+    name: "M³ Schmerzfrei",
+    tagline: "Beweglich. Stabil. Frei.",
+    desc: "Wenn Bewegung im Alltag oder Training Probleme macht, liegt es meist an einem Zusammenspiel aus Belastung, Haltung und Gewohnheiten. Wir arbeiten daran, deinen Körper wieder beweglicher und stabiler zu machen.",
+    features: ["Mobilität & Stabilität", "Effektive Übungen", "Alltagsintegration"],
+  },
+  {
+    name: "M³ Coaching für Zwei",
+    tagline: "Gemeinsam. Motiviert. Erfolgreich.",
+    desc: "Gemeinsam bleibt ihr verbindlicher und zieht besser durch. Das Training wird auf euch beide abgestimmt – jeder arbeitet auf seinem Level und trotzdem funktioniert ihr als Team. Flexibel mit 1–2 Einheiten pro Woche.",
+    features: ["Zu zweit trainieren", "Individuelle Level", "1–2× / Woche"],
   },
 ];
 
@@ -83,11 +86,11 @@ function Index() {
             <a href="#ueber" className="hover:text-foreground transition">Über Michél</a>
           </nav>
           <a
-            href={`${CAL_BASE}/kennenlernen`}
+            href={WHATSAPP_URL}
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center rounded-full bg-gold-gradient px-5 py-2 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
           >
-            Termin buchen
+            WhatsApp Kontakt
           </a>
         </div>
       </header>
@@ -118,11 +121,11 @@ function Index() {
 
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <a
-                href={`${CAL_BASE}/kennenlernen`}
+                href={WHATSAPP_URL}
                 target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center rounded-full bg-gold-gradient px-8 py-3.5 font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
               >
-                Kostenloses Kennenlern-Gespräch
+                Jetzt via WhatsApp starten
               </a>
               <a href="#services" className="inline-flex items-center rounded-full border border-border px-8 py-3.5 font-semibold hover:bg-secondary transition">
                 Services entdecken
@@ -185,14 +188,14 @@ function Index() {
             <p className="text-xs uppercase tracking-[0.3em] text-gold mb-4">Angebote</p>
             <h2 className="text-4xl md:text-6xl font-display">Deine nächsten Schritte.</h2>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Jedes Angebot direkt online buchbar über Cal.com.
+              Persönliche Begleitung – Kontakt direkt per WhatsApp.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {services.map((s) => (
               <div
-                key={s.slug}
+                key={s.name}
                 className={`relative rounded-2xl border p-8 flex flex-col ${
                   s.featured
                     ? "border-gold/60 bg-gradient-to-br from-gold/10 to-transparent"
@@ -201,16 +204,11 @@ function Index() {
               >
                 {s.featured && (
                   <span className="absolute -top-3 left-8 rounded-full bg-gold-gradient px-3 py-1 text-xs font-semibold text-primary-foreground uppercase tracking-wider">
-                    Beliebt
+                    Empfohlener Start
                   </span>
                 )}
-                <div className="flex items-start justify-between gap-4 mb-4">
-                  <h3 className="text-2xl font-display">{s.name}</h3>
-                  <div className="text-right shrink-0">
-                    <div className="text-gold font-semibold">{s.price}</div>
-                    <div className="text-xs text-muted-foreground">{s.duration}</div>
-                  </div>
-                </div>
+                <h3 className="text-2xl font-display mb-1">{s.name}</h3>
+                <p className="text-sm uppercase tracking-[0.2em] text-gold mb-4">{s.tagline}</p>
                 <p className="text-muted-foreground leading-relaxed mb-6">{s.desc}</p>
                 <ul className="space-y-2 mb-8">
                   {s.features.map((f) => (
@@ -221,7 +219,7 @@ function Index() {
                   ))}
                 </ul>
                 <a
-                  href={`${CAL_BASE}/${s.slug}`}
+                  href={WHATSAPP_URL}
                   target="_blank" rel="noopener noreferrer"
                   className={`mt-auto inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold transition ${
                     s.featured
@@ -229,7 +227,7 @@ function Index() {
                       : "border border-border hover:bg-secondary"
                   }`}
                 >
-                  Jetzt buchen →
+                  Per WhatsApp anfragen →
                 </a>
               </div>
             ))}
@@ -272,15 +270,15 @@ function Index() {
             Bereit für<br /><span className="text-gold">deinen nächsten Schritt?</span>
           </h2>
           <p className="mt-6 text-lg text-muted-foreground">
-            Lass uns in einem kostenlosen Kennenlern-Gespräch herausfinden, wie ich dich
-            optimal unterstützen kann.
+            Schreib mir direkt auf WhatsApp – wir finden gemeinsam heraus, welcher
+            Weg für dich der richtige ist.
           </p>
           <a
-            href={`${CAL_BASE}/kennenlernen`}
+            href={WHATSAPP_URL}
             target="_blank" rel="noopener noreferrer"
             className="mt-10 inline-flex items-center rounded-full bg-gold-gradient px-8 py-4 font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
           >
-            Kostenlosen Termin buchen
+            WhatsApp Chat starten
           </a>
         </div>
       </section>
