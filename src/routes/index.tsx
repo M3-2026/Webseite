@@ -6,9 +6,8 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-// TODO: Cal.com – ersetze diese URL mit deinem echten Cal.com Handle,
-// z.B. "https://cal.com/michel-meier/personal-training"
-const CAL_BASE = "https://cal.com/your-handle";
+// WhatsApp Direktkontakt
+const WHATSAPP_URL = "https://wa.me/4917699016640";
 
 const pillars = [
   {
@@ -30,37 +29,41 @@ const pillars = [
 
 const services = [
   {
-    name: "Personal Training",
-    price: "ab 120 €",
-    duration: "60 Min",
-    desc: "Individuelles 1-zu-1 Training – abgestimmt auf deine Ziele, dein Level und deinen Alltag.",
-    features: ["Bewegungsanalyse", "Individueller Trainingsplan", "Kontinuierliche Betreuung"],
-    slug: "personal-training",
-  },
-  {
-    name: "Health & Performance Coaching",
-    price: "ab 180 €",
-    duration: "90 Min",
-    desc: "Ganzheitliches Coaching für Stoffwechsel, Ernährung, Darmgesundheit und Vitalstoffe.",
-    features: ["Anamnese & Zielbild", "Ernährungsstrategie", "Vitalstoff-Analyse"],
-    slug: "health-coaching",
+    name: "M³ System Start",
+    tagline: "Struktur für deinen Start.",
+    desc: "Du willst etwas verändern, hast schon einiges ausprobiert – aber dir fehlt eine klare Linie, die wirklich funktioniert. Im System Start bringen wir Struktur in deine Situation und finden heraus, welche Schritte für dich wirklich sinnvoll sind.",
+    features: ["Standortbestimmung", "Klare Orientierung", "Individueller Plan"],
     featured: true,
   },
   {
-    name: "Schmerzfrei-Programm",
-    price: "ab 150 €",
-    duration: "75 Min",
-    desc: "Zurück in Bewegung – Mobilität, Haltung und funktionelles Training gegen chronische Beschwerden.",
-    features: ["Ursachenanalyse", "Mobility Plan", "Alltagsübungen"],
-    slug: "schmerzfrei",
+    name: "M³ Body Reset",
+    tagline: "Dein Neustart von innen.",
+    desc: "Wenn dein Körper nicht mehr richtig läuft, setzen wir genau dort an. Ein klares System zur Unterstützung von Darm und Stoffwechsel – gezielte Vitalstoffe und eine strukturierte Herangehensweise bringen dich wieder ins Gleichgewicht.",
+    features: ["Darm & Stoffwechsel", "Vitalstoff-Strategie", "Mehr Energie & Klarheit"],
   },
   {
-    name: "Kennenlern-Gespräch",
-    price: "kostenlos",
-    duration: "20 Min",
-    desc: "Wir sprechen über deine Ziele und finden heraus, welches Angebot am besten zu dir passt.",
-    features: ["Zieldefinition", "Erstberatung", "Passendes Konzept"],
-    slug: "kennenlernen",
+    name: "M³ Ernährungscoaching",
+    tagline: "Deine Ernährung. Dein Erfolg.",
+    desc: "Keine starren Pläne, keine Verbote – sondern eine Struktur, die zu dir passt. Du lernst, wie du deine Ernährung sinnvoll steuerst und dauerhaft in deinen Alltag integrierst.",
+    features: ["Alltagstauglich", "Individuelle Struktur", "Nachhaltige Umsetzung"],
+  },
+  {
+    name: "M³ Performance Training",
+    tagline: "Stärke mit System.",
+    desc: "Gezielt an Kraft, Technik und Belastbarkeit arbeiten. Jede Einheit ist auf dein aktuelles Level abgestimmt – ob Wiedereinstieg oder gezielter Aufbau. Personal Training flexibel mit 1–2 Einheiten pro Woche.",
+    features: ["Kraft & Technik", "Individuelles Level", "1–2× / Woche"],
+  },
+  {
+    name: "M³ Schmerzfrei",
+    tagline: "Beweglich. Stabil. Frei.",
+    desc: "Wenn Bewegung im Alltag oder Training Probleme macht, liegt es meist an einem Zusammenspiel aus Belastung, Haltung und Gewohnheiten. Wir arbeiten daran, deinen Körper wieder beweglicher und stabiler zu machen.",
+    features: ["Mobilität & Stabilität", "Effektive Übungen", "Alltagsintegration"],
+  },
+  {
+    name: "M³ Coaching für Zwei",
+    tagline: "Gemeinsam. Motiviert. Erfolgreich.",
+    desc: "Gemeinsam bleibt ihr verbindlicher und zieht besser durch. Das Training wird auf euch beide abgestimmt – jeder arbeitet auf seinem Level und trotzdem funktioniert ihr als Team. Flexibel mit 1–2 Einheiten pro Woche.",
+    features: ["Zu zweit trainieren", "Individuelle Level", "1–2× / Woche"],
   },
 ];
 
