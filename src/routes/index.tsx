@@ -121,11 +121,11 @@ function Index() {
 
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
               <a
-                href={`${CAL_BASE}/kennenlernen`}
+                href={WHATSAPP_URL}
                 target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center rounded-full bg-gold-gradient px-8 py-3.5 font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
               >
-                Kostenloses Kennenlern-Gespräch
+                Jetzt via WhatsApp starten
               </a>
               <a href="#services" className="inline-flex items-center rounded-full border border-border px-8 py-3.5 font-semibold hover:bg-secondary transition">
                 Services entdecken
