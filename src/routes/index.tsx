@@ -86,11 +86,11 @@ function Index() {
             <a href="#ueber" className="hover:text-foreground transition">Über Michél</a>
           </nav>
           <a
-            href={`${CAL_BASE}/kennenlernen`}
+            href={WHATSAPP_URL}
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center rounded-full bg-gold-gradient px-5 py-2 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
           >
-            Termin buchen
+            WhatsApp Kontakt
           </a>
         </div>
       </header>
