@@ -188,14 +188,14 @@ function Index() {
             <p className="text-xs uppercase tracking-[0.3em] text-gold mb-4">Angebote</p>
             <h2 className="text-4xl md:text-6xl font-display">Deine nächsten Schritte.</h2>
             <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Jedes Angebot direkt online buchbar über Cal.com.
+              Persönliche Begleitung – Kontakt direkt per WhatsApp.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             {services.map((s) => (
               <div
-                key={s.slug}
+                key={s.name}
                 className={`relative rounded-2xl border p-8 flex flex-col ${
                   s.featured
                     ? "border-gold/60 bg-gradient-to-br from-gold/10 to-transparent"
@@ -204,16 +204,11 @@ function Index() {
               >
                 {s.featured && (
                   <span className="absolute -top-3 left-8 rounded-full bg-gold-gradient px-3 py-1 text-xs font-semibold text-primary-foreground uppercase tracking-wider">
-                    Beliebt
+                    Empfohlener Start
                   </span>
                 )}
-                <div className="flex items-start justify-between gap-4 mb-4">
-                  <h3 className="text-2xl font-display">{s.name}</h3>
-                  <div className="text-right shrink-0">
-                    <div className="text-gold font-semibold">{s.price}</div>
-                    <div className="text-xs text-muted-foreground">{s.duration}</div>
-                  </div>
-                </div>
+                <h3 className="text-2xl font-display mb-1">{s.name}</h3>
+                <p className="text-sm uppercase tracking-[0.2em] text-gold mb-4">{s.tagline}</p>
                 <p className="text-muted-foreground leading-relaxed mb-6">{s.desc}</p>
                 <ul className="space-y-2 mb-8">
                   {s.features.map((f) => (
@@ -224,7 +219,7 @@ function Index() {
                   ))}
                 </ul>
                 <a
-                  href={`${CAL_BASE}/${s.slug}`}
+                  href={WHATSAPP_URL}
                   target="_blank" rel="noopener noreferrer"
                   className={`mt-auto inline-flex items-center justify-center rounded-full px-6 py-3 font-semibold transition ${
                     s.featured
@@ -232,7 +227,7 @@ function Index() {
                       : "border border-border hover:bg-secondary"
                   }`}
                 >
-                  Jetzt buchen →
+                  Per WhatsApp anfragen →
                 </a>
               </div>
             ))}
