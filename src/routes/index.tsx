@@ -270,15 +270,15 @@ function Index() {
             Bereit für<br /><span className="text-gold">deinen nächsten Schritt?</span>
           </h2>
           <p className="mt-6 text-lg text-muted-foreground">
-            Lass uns in einem kostenlosen Kennenlern-Gespräch herausfinden, wie ich dich
-            optimal unterstützen kann.
+            Schreib mir direkt auf WhatsApp – wir finden gemeinsam heraus, welcher
+            Weg für dich der richtige ist.
           </p>
           <a
-            href={`${CAL_BASE}/kennenlernen`}
+            href={WHATSAPP_URL}
             target="_blank" rel="noopener noreferrer"
             className="mt-10 inline-flex items-center rounded-full bg-gold-gradient px-8 py-4 font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
           >
-            Kostenlosen Termin buchen
+            WhatsApp Chat starten
           </a>
         </div>
       </section>
