@@ -153,8 +153,8 @@ function Index() {
           <h2 className="text-4xl md:text-6xl font-display leading-tight">
             Performance beginnt<br /><span className="text-gold">mit Gesundheit.</span>
           </h2>
-          <p className="mt-8 text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Ich bin nicht der klassische Fitness-Coach. Gesundheit ist die Grundlage.
+          <p className="mt-8 text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed whitespace-pre-line">
+            Ich bin nicht der klassische Fitness-Coach.{"\u00a0"}{"\n"}
             Ernährung, Darmgesundheit, Vitalstoffe – darauf baut Training auf. Erst daraus
             entsteht echte Performance. Für Sportler, Berufstätige und alle, die im Alltag
             wieder leistungsfähig, schmerzfrei und energiegeladen leben wollen.
