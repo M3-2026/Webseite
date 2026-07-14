@@ -114,9 +114,9 @@ function Index() {
               <span className="text-gold">Mehr Leben.</span>
             </h1>
 
-            <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Performance beginnt mit Gesundheit. Personal Training, Ernährung, Stoffwechsel &
-              Gesundheitscoaching – für Menschen, die mehr wollen als nur Sport.
+            <p className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed whitespace-pre-line">
+              Performance beginnt mit Gesundheit.{"\u00a0"}{"\n"}
+              Personal Training, Ernährung, Stoffwechsel & Gesundheitscoaching – für Menschen, die mehr wollen als nur Sport.
             </p>
 
             <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
