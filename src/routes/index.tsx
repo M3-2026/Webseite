@@ -74,7 +74,97 @@ const services = [
   },
 ];
 
+const testimonials = [
+  {
+    name: "Sarah K.",
+    role: "Marketing Managerin",
+    initials: "SK",
+    stars: 5,
+    text: "Michél hat mir geholfen, wieder Energie im Alltag zu finden. Nach 3 Monaten fühle ich mich stärker und klarer als seit Jahren.",
+  },
+  {
+    name: "Thomas B.",
+    role: "Unternehmer",
+    initials: "TB",
+    stars: 5,
+    text: "Endlich ein Coach, der Training UND Ernährung zusammen denkt. Der Body Reset war ein echter Gamechanger für meinen Stoffwechsel.",
+  },
+  {
+    name: "Julia M.",
+    role: "Ärztin",
+    initials: "JM",
+    stars: 5,
+    text: "Fachlich top und menschlich absolut auf Augenhöhe. Meine Rückenschmerzen sind weg – zum ersten Mal seit über 5 Jahren.",
+  },
+  {
+    name: "Daniel R.",
+    role: "Softwareentwickler",
+    initials: "DR",
+    stars: 5,
+    text: "Kein Bullshit, keine leeren Versprechen. Nur ein klares System, das funktioniert. Bin heute 12 kg leichter und deutlich fitter.",
+  },
+  {
+    name: "Anna & Felix",
+    role: "Coaching für Zwei",
+    initials: "AF",
+    stars: 5,
+    text: "Zusammen zu trainieren war die beste Entscheidung. Michél holt jeden auf seinem Level ab – wir ziehen es endlich durch.",
+  },
+  {
+    name: "Michael W.",
+    role: "Manager",
+    initials: "MW",
+    stars: 5,
+    text: "Fokus, Struktur, Ergebnisse. Nach Jahren des Ausprobierens habe ich hier endlich das gefunden, was ich gesucht habe.",
+  },
+  {
+    name: "Lisa S.",
+    role: "Läuferin",
+    initials: "LS",
+    stars: 5,
+    text: "Meine Bestzeiten sind gefallen, weil ich zum ersten Mal ganzheitlich betreut werde. Ernährung, Kraft, Regeneration – alles greift ineinander.",
+  },
+  {
+    name: "Christoph H.",
+    role: "Vater & Selbstständig",
+    initials: "CH",
+    stars: 5,
+    text: "Weniger Zeit, mehr Effekt. Die Einheiten sind knackig, klar strukturiert und ich sehe Fortschritte Woche für Woche.",
+  },
+];
+
 type Pillar = (typeof pillars)[number];
+type Testimonial = (typeof testimonials)[number];
+
+function Stars({ count }: { count: number }) {
+  return (
+    <div className="flex gap-0.5 text-gold" aria-label={`${count} von 5 Sternen`}>
+      {Array.from({ length: 5 }).map((_, i) => (
+        <svg key={i} viewBox="0 0 20 20" className={`h-4 w-4 ${i < count ? "fill-current" : "fill-current opacity-20"}`}>
+          <path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.6l1-5.8L1.5 7.7l5.9-.9L10 1.5z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
+function TestimonialCard({ t }: { t: Testimonial }) {
+  return (
+    <div className="w-[320px] shrink-0 rounded-2xl border border-border bg-card p-6 shadow-sm hover:border-gold/40 hover:shadow-[var(--shadow-gold)] transition-all">
+      <Stars count={t.stars} />
+      <p className="mt-4 text-foreground/85 leading-relaxed text-sm">"{t.text}"</p>
+      <div className="mt-5 flex items-center gap-3 pt-4 border-t border-border">
+        <div className="h-10 w-10 rounded-full bg-gold-gradient text-primary-foreground flex items-center justify-center text-sm font-semibold shadow-[var(--shadow-gold)]">
+          {t.initials}
+        </div>
+        <div>
+          <div className="text-sm font-semibold">{t.name}</div>
+          <div className="text-xs text-muted-foreground">{t.role}</div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function PillarCard({ pillar }: { pillar: Pillar }) {
   const [flipped, setFlipped] = useState(false);
@@ -232,6 +322,30 @@ function Index() {
           <div className="grid md:grid-cols-3 gap-6">
             {pillars.map((p) => (
               <PillarCard key={p.tag} pillar={p} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section id="stimmen" className="py-24 md:py-32 border-t border-border overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 text-center mb-14">
+          <p className="text-xs uppercase tracking-[0.3em] text-gold mb-4">Stimmen</p>
+          <h2 className="text-4xl md:text-6xl font-display">Was Klienten sagen.</h2>
+          <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
+            Echte Menschen. Echte Ergebnisse. Und der Weg dorthin.
+          </p>
+        </div>
+
+        <div className="space-y-6 marquee-mask">
+          <div className="flex gap-6 w-max animate-marquee-left marquee-pause">
+            {[...testimonials, ...testimonials].map((t, i) => (
+              <TestimonialCard key={`row1-${i}`} t={t} />
+            ))}
+          </div>
+          <div className="flex gap-6 w-max animate-marquee-right marquee-pause">
+            {[...testimonials.slice(4), ...testimonials.slice(0, 4), ...testimonials.slice(4), ...testimonials.slice(0, 4)].map((t, i) => (
+              <TestimonialCard key={`row2-${i}`} t={t} />
             ))}
           </div>
         </div>
