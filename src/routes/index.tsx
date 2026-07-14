@@ -133,7 +133,38 @@ const testimonials = [
   },
 ];
 
+type Pillar = (typeof pillars)[number];
+type Testimonial = (typeof testimonials)[number];
 
+function Stars({ count }: { count: number }) {
+  return (
+    <div className="flex gap-0.5 text-gold" aria-label={`${count} von 5 Sternen`}>
+      {Array.from({ length: 5 }).map((_, i) => (
+        <svg key={i} viewBox="0 0 20 20" className={`h-4 w-4 ${i < count ? "fill-current" : "fill-current opacity-20"}`}>
+          <path d="M10 1.5l2.6 5.3 5.9.9-4.2 4.1 1 5.8L10 14.9 4.7 17.6l1-5.8L1.5 7.7l5.9-.9L10 1.5z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
+
+function TestimonialCard({ t }: { t: Testimonial }) {
+  return (
+    <div className="w-[320px] shrink-0 rounded-2xl border border-border bg-card p-6 shadow-sm hover:border-gold/40 hover:shadow-[var(--shadow-gold)] transition-all">
+      <Stars count={t.stars} />
+      <p className="mt-4 text-foreground/85 leading-relaxed text-sm">"{t.text}"</p>
+      <div className="mt-5 flex items-center gap-3 pt-4 border-t border-border">
+        <div className="h-10 w-10 rounded-full bg-gold-gradient text-primary-foreground flex items-center justify-center text-sm font-semibold shadow-[var(--shadow-gold)]">
+          {t.initials}
+        </div>
+        <div>
+          <div className="text-sm font-semibold">{t.name}</div>
+          <div className="text-xs text-muted-foreground">{t.role}</div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function PillarCard({ pillar }: { pillar: Pillar }) {
   const [flipped, setFlipped] = useState(false);
