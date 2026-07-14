@@ -178,11 +178,7 @@ function Index() {
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {pillars.map((p) => (
-              <div key={p.tag} className="group relative rounded-2xl border border-border bg-card p-8 hover:border-gold/50 transition-all hover:-translate-y-1">
-                <div className="font-display text-7xl text-gold/20 group-hover:text-gold/40 transition mb-4">{p.tag}</div>
-                <h3 className="text-2xl font-display mb-3">{p.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{p.desc}</p>
-              </div>
+              <PillarCard key={p.tag} pillar={p} />
             ))}
           </div>
         </div>
