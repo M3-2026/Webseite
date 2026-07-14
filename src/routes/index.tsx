@@ -14,16 +14,22 @@ const pillars = [
     tag: "M¹",
     title: "Metabolism",
     desc: "Stoffwechsel, Ernährung, Darmgesundheit & Vitalstoffe – die Grundlage für echte Leistung.",
+    pitch: "Ohne funktionierenden Stoffwechsel keine Leistung. Wir bringen Ernährung, Darm & Vitalstoffe in Balance – für mehr Energie, klaren Kopf und einen Körper, der wieder mitspielt.",
+    cta: "Metabolism starten",
   },
   {
     tag: "M²",
     title: "Movement",
     desc: "Kraft, Mobilität und Schmerzfreiheit. Training, das deinen Körper langfristig stark macht.",
+    pitch: "Training mit System statt Beliebigkeit. Wir bauen Kraft, Mobilität und Stabilität auf – abgestimmt auf dein Level, damit du im Alltag und Sport belastbar und schmerzfrei bleibst.",
+    cta: "Movement starten",
   },
   {
     tag: "M³",
     title: "Mental Performance",
     desc: "Energie, Fokus, Motivation. Klarer Kopf für Alltag, Beruf und Sport.",
+    pitch: "Fokus, Antrieb und Klarheit sind trainierbar. Wir arbeiten an Routinen, Regeneration und Mindset – damit du im Kopf genauso stark bist wie im Körper.",
+    cta: "Mental Performance starten",
   },
 ];
 
