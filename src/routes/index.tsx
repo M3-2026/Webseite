@@ -327,6 +327,30 @@ function Index() {
         </div>
       </section>
 
+      {/* TESTIMONIALS */}
+      <section id="stimmen" className="py-24 md:py-32 border-t border-border overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 text-center mb-14">
+          <p className="text-xs uppercase tracking-[0.3em] text-gold mb-4">Stimmen</p>
+          <h2 className="text-4xl md:text-6xl font-display">Was Klienten sagen.</h2>
+          <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
+            Echte Menschen. Echte Ergebnisse. Und der Weg dorthin.
+          </p>
+        </div>
+
+        <div className="space-y-6 marquee-mask">
+          <div className="flex gap-6 w-max animate-marquee-left marquee-pause">
+            {[...testimonials, ...testimonials].map((t, i) => (
+              <TestimonialCard key={`row1-${i}`} t={t} />
+            ))}
+          </div>
+          <div className="flex gap-6 w-max animate-marquee-right marquee-pause">
+            {[...testimonials.slice(4), ...testimonials.slice(0, 4), ...testimonials.slice(4), ...testimonials.slice(0, 4)].map((t, i) => (
+              <TestimonialCard key={`row2-${i}`} t={t} />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* SERVICES */}
       <section id="services" className="py-24 md:py-32">
         <div className="max-w-7xl mx-auto px-6">
