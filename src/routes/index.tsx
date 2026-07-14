@@ -74,6 +74,50 @@ const services = [
   },
 ];
 
+type Pillar = (typeof pillars)[number];
+
+function PillarCard({ pillar }: { pillar: Pillar }) {
+  const [flipped, setFlipped] = useState(false);
+  return (
+    <button
+      type="button"
+      onClick={() => setFlipped((f) => !f)}
+      aria-pressed={flipped}
+      className="group relative h-72 w-full text-left [perspective:1200px] focus:outline-none"
+    >
+      <div
+        className={`relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] ${
+          flipped ? "[transform:rotateY(180deg)]" : ""
+        }`}
+      >
+        {/* Front */}
+        <div className="absolute inset-0 rounded-2xl border border-border bg-card p-8 [backface-visibility:hidden] hover:border-gold/50 transition-colors">
+          <div className="font-display text-7xl text-gold/20 group-hover:text-gold/40 transition mb-4">{pillar.tag}</div>
+          <h3 className="text-2xl font-display mb-3">{pillar.title}</h3>
+          <p className="text-muted-foreground leading-relaxed">{pillar.desc}</p>
+          <span className="absolute bottom-4 right-5 text-xs uppercase tracking-[0.2em] text-gold/70">Tippen ↻</span>
+        </div>
+        {/* Back */}
+        <div className="absolute inset-0 rounded-2xl border border-gold/50 bg-gradient-to-br from-gold/10 to-transparent p-8 flex flex-col [backface-visibility:hidden] [transform:rotateY(180deg)]">
+          <h3 className="text-2xl font-display mb-3">
+            <span className="text-gold">{pillar.tag}</span> {pillar.title}
+          </h3>
+          <p className="text-foreground/85 leading-relaxed">{pillar.pitch}</p>
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="mt-auto inline-flex items-center justify-center rounded-full bg-gold-gradient px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition self-start"
+          >
+            {pillar.cta} via WhatsApp →
+          </a>
+        </div>
+      </div>
+    </button>
+  );
+}
+
 function Index() {
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
