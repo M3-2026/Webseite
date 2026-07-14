@@ -74,7 +74,66 @@ const services = [
   },
 ];
 
-type Pillar = (typeof pillars)[number];
+const testimonials = [
+  {
+    name: "Sarah K.",
+    role: "Marketing Managerin",
+    initials: "SK",
+    stars: 5,
+    text: "Michél hat mir geholfen, wieder Energie im Alltag zu finden. Nach 3 Monaten fühle ich mich stärker und klarer als seit Jahren.",
+  },
+  {
+    name: "Thomas B.",
+    role: "Unternehmer",
+    initials: "TB",
+    stars: 5,
+    text: "Endlich ein Coach, der Training UND Ernährung zusammen denkt. Der Body Reset war ein echter Gamechanger für meinen Stoffwechsel.",
+  },
+  {
+    name: "Julia M.",
+    role: "Ärztin",
+    initials: "JM",
+    stars: 5,
+    text: "Fachlich top und menschlich absolut auf Augenhöhe. Meine Rückenschmerzen sind weg – zum ersten Mal seit über 5 Jahren.",
+  },
+  {
+    name: "Daniel R.",
+    role: "Softwareentwickler",
+    initials: "DR",
+    stars: 5,
+    text: "Kein Bullshit, keine leeren Versprechen. Nur ein klares System, das funktioniert. Bin heute 12 kg leichter und deutlich fitter.",
+  },
+  {
+    name: "Anna & Felix",
+    role: "Coaching für Zwei",
+    initials: "AF",
+    stars: 5,
+    text: "Zusammen zu trainieren war die beste Entscheidung. Michél holt jeden auf seinem Level ab – wir ziehen es endlich durch.",
+  },
+  {
+    name: "Michael W.",
+    role: "Manager",
+    initials: "MW",
+    stars: 5,
+    text: "Fokus, Struktur, Ergebnisse. Nach Jahren des Ausprobierens habe ich hier endlich das gefunden, was ich gesucht habe.",
+  },
+  {
+    name: "Lisa S.",
+    role: "Läuferin",
+    initials: "LS",
+    stars: 5,
+    text: "Meine Bestzeiten sind gefallen, weil ich zum ersten Mal ganzheitlich betreut werde. Ernährung, Kraft, Regeneration – alles greift ineinander.",
+  },
+  {
+    name: "Christoph H.",
+    role: "Vater & Selbstständig",
+    initials: "CH",
+    stars: 5,
+    text: "Weniger Zeit, mehr Effekt. Die Einheiten sind knackig, klar strukturiert und ich sehe Fortschritte Woche für Woche.",
+  },
+];
+
+
 
 function PillarCard({ pillar }: { pillar: Pillar }) {
   const [flipped, setFlipped] = useState(false);
