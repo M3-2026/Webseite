@@ -214,8 +214,17 @@ function Index() {
       </section>
 
       {/* 3 SÄULEN */}
-      <section id="saeulen" className="py-24 md:py-32 bg-card/40 border-y border-border">
-        <div className="max-w-7xl mx-auto px-6">
+      <section id="saeulen" className="relative py-24 md:py-32 bg-card/40 border-y border-border overflow-hidden">
+        {/* Animated performance background */}
+        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
+          <div className="absolute -top-24 -left-24 w-[480px] h-[480px] rounded-full bg-gold/15 blur-3xl animate-drift-slow" />
+          <div className="absolute top-1/2 -right-32 w-[520px] h-[520px] rounded-full bg-gold-soft/20 blur-3xl animate-drift-fast" />
+          <div className="absolute bottom-0 left-1/3 w-[420px] h-[420px] rounded-full bg-primary/10 blur-3xl animate-drift-mid" />
+          <div className="absolute inset-0 opacity-[0.18] bg-performance-lines animate-lines-shift" />
+          <div className="absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-gold/60 to-transparent animate-pulse-line" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <p className="text-xs uppercase tracking-[0.3em] text-gold mb-4">Die drei M</p>
             <h2 className="text-4xl md:text-6xl font-display">Drei Säulen. Ein System.</h2>

@@ -95,6 +95,15 @@
 @utility avatar-shadow {
   filter: drop-shadow(0 25px 30px rgba(90, 60, 40, 0.25)) drop-shadow(0 0 60px oklch(0.72 0.1 55 / 0.25));
 }
+@utility bg-performance-lines {
+  background-image: repeating-linear-gradient(
+    115deg,
+    transparent 0 22px,
+    oklch(0.55 0.13 45 / 0.35) 22px 23px,
+    transparent 23px 60px
+  );
+  background-size: 200% 200%;
+}
 
 @keyframes float-up {
   0% { opacity: 0; transform: translateY(40px); }
@@ -104,5 +113,30 @@
   0%, 100% { opacity: 0.4; }
   50% { opacity: 0.75; }
 }
+@keyframes drift-slow {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%     { transform: translate(60px, 40px) scale(1.15); }
+}
+@keyframes drift-mid {
+  0%, 100% { transform: translate(0, 0) scale(1.05); }
+  50%     { transform: translate(-70px, -30px) scale(0.95); }
+}
+@keyframes drift-fast {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%     { transform: translate(-40px, 60px) scale(1.1); }
+}
+@keyframes lines-shift {
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+@keyframes pulse-line {
+  0%, 100% { opacity: 0.15; transform: scaleX(0.6); }
+  50%      { opacity: 0.9;  transform: scaleX(1); }
+}
 .animate-float-up { animation: float-up 1s cubic-bezier(0.16, 1, 0.3, 1) both; }
 .animate-glow { animation: glow-pulse 4s ease-in-out infinite; }
+.animate-drift-slow { animation: drift-slow 18s ease-in-out infinite; }
+.animate-drift-mid  { animation: drift-mid 14s ease-in-out infinite; }
+.animate-drift-fast { animation: drift-fast 11s ease-in-out infinite; }
+.animate-lines-shift { animation: lines-shift 22s linear infinite; }
+.animate-pulse-line { animation: pulse-line 3.5s ease-in-out infinite; transform-origin: center; }
