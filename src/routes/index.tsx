@@ -278,11 +278,11 @@ function Index() {
           <div className="mt-auto flex justify-center relative">
             <img
               src={avatar}
-              alt="Michél Meier – Personal Trainer 3D Avatar"
-              className="avatar-shadow h-[55vh] md:h-[70vh] max-h-[720px] w-auto object-contain object-bottom select-none pointer-events-none animate-float-up"
+              alt="Michél Meier – Personal Trainer"
+              className="avatar-shadow h-[75vh] md:h-[90vh] max-h-[900px] w-auto object-contain object-bottom select-none pointer-events-none animate-float-up"
               style={{ animationDelay: "0.3s" }}
             />
-            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-16 bg-gold/20 blur-3xl rounded-full" />
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-20 bg-gold/25 blur-3xl rounded-full" />
           </div>
         </div>
       </section>
