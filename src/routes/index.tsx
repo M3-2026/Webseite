@@ -242,7 +242,7 @@ function Index() {
           <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full bg-gold/5 blur-3xl animate-glow" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 pt-20 pb-0 md:pt-32 min-h-[95vh] flex flex-col">
+        <div className="relative max-w-7xl mx-auto px-6 pt-20 pb-0 md:pt-24 flex flex-col">
           <div className="max-w-3xl mx-auto text-center animate-float-up">
             <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-gold" />
