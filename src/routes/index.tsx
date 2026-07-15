@@ -242,7 +242,7 @@ function Index() {
           <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[900px] h-[900px] rounded-full bg-gold/5 blur-3xl animate-glow" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6 pt-20 pb-0 md:pt-32 min-h-[95vh] flex flex-col">
+        <div className="relative max-w-7xl mx-auto px-6 pt-20 pb-0 md:pt-24 flex flex-col">
           <div className="max-w-3xl mx-auto text-center animate-float-up">
             <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-gold" />
@@ -274,16 +274,17 @@ function Index() {
             </div>
           </div>
 
-          {/* Avatar am unteren Bildrand */}
-          <div className="mt-auto flex justify-center relative">
+          {/* Avatar näher an den CTAs */}
+          <div className="mt-4 md:mt-6 flex justify-center relative">
             <img
               src={avatar}
               alt="Michél Meier – Personal Trainer"
-              className="avatar-shadow h-[75vh] md:h-[90vh] max-h-[900px] w-auto object-contain object-bottom select-none pointer-events-none animate-float-up"
+              className="avatar-shadow h-[60vh] md:h-[70vh] max-h-[750px] w-auto object-contain object-bottom select-none pointer-events-none animate-float-up"
               style={{ animationDelay: "0.3s" }}
             />
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-20 bg-gold/25 blur-3xl rounded-full" />
           </div>
+
         </div>
       </section>
 
