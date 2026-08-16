@@ -1,0 +1,192 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+
+export const Route = createFileRoute("/schmerzfrei")({
+  component: SchmerzfreiPage,
+});
+
+function SchmerzfreiPage() {
+  const WHATSAPP_URL = "https://wa.me/4917699016640?text=Hallo%20Mich%C3%A9l,%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20kostenloses%20Erstgespr%C3%A4ch%20zu%20M%C2%B3%20Schmerzfrei.";
+
+  return (
+    <div className="min-h-screen bg-background text-foreground flex flex-col justify-between overflow-x-hidden">
+      <Header />
+
+      <main className="flex-grow py-24 md:py-32 relative hero-bg">
+        {/* Decorative background glow */}
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-gold/5 blur-3xl" />
+        </div>
+
+        <div className="relative max-w-5xl mx-auto px-6">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition mb-12"
+          >
+            ← Zurück zur Startseite
+          </Link>
+
+          {/* HERO */}
+          <div className="mb-24">
+            <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold mb-8 animate-fade-in">
+              M² · Movement Offer
+            </div>
+
+            <h1 className="text-5xl md:text-7xl font-display leading-[0.95] tracking-tight mb-8">
+              M³ Schmerzfrei
+            </h1>
+            <p className="text-xl md:text-2xl text-gold font-medium leading-relaxed max-w-3xl mb-6">
+              Bewegung mit Vertrauen.
+            </p>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mb-12 whitespace-pre-line">
+              Beschwerden verändern häufig den Alltag.
+              {"\n\n"}
+              Gemeinsam entwickeln wir Strategien, um deine Bewegungsqualität zu verbessern, Belastungen sinnvoll zu steuern und deinen Körper Schritt für Schritt wieder leistungsfähiger werden zu lassen.
+            </p>
+
+            <a
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-full bg-gold-gradient px-8 py-4 font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
+            >
+              Kostenloses Erstgespräch
+            </a>
+          </div>
+
+          {/* ABSCHNITT 2: Schmerz verändert Bewegung. */}
+          <section className="py-16 border-t border-border/80">
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <h2 className="text-3xl font-display text-gold">Schmerz verändert Bewegung.</h2>
+              </div>
+              <div className="md:col-span-2 text-muted-foreground leading-relaxed whitespace-pre-line text-base">
+                Viele Menschen vermeiden bestimmte Bewegungen aus Unsicherheit oder aufgrund von Beschwerden.
+                {"\n\n"}
+                Dadurch entstehen häufig Ausweichbewegungen, Einschränkungen oder ein zunehmender Verlust an Beweglichkeit.
+                {"\n\n"}
+                M³ Schmerzfrei setzt genau dort an.
+                {"\n\n"}
+                Unser Ziel ist es, Bewegung wieder verständlich, sicher und alltagstauglich zu gestalten.
+              </div>
+            </div>
+          </section>
+
+          {/* ABSCHNITT 3: Unser Ansatz */}
+          <section className="py-16 border-t border-border/80">
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <h2 className="text-3xl font-display text-gold">Unser Ansatz</h2>
+              </div>
+              <div className="md:col-span-2">
+                <p className="text-muted-foreground leading-relaxed mb-8 whitespace-pre-line">
+                  Nicht jede Beschwerde hat dieselbe Ursache.
+                  {"\n\n"}
+                  Deshalb beginnt jede Zusammenarbeit mit einer individuellen Betrachtung deiner Situation.
+                  {"\n\n"}
+                  Gemeinsam entwickeln wir Strategien, die zu deinem Körper, deinem Alltag und deinen persönlichen Zielen passen.
+                  {"\n\n"}
+                  Im Mittelpunkt stehen unter anderem:
+                </p>
+
+                <div className="grid sm:grid-cols-2 gap-4">
+                  {[
+                    "Bewegungsqualität",
+                    "Mobilität",
+                    "Stabilität",
+                    "Kraft",
+                    "Belastungssteuerung",
+                    "Individuelle Übungen"
+                  ].map((item) => (
+                    <div key={item} className="flex items-center gap-3 py-3 px-5 rounded-xl border border-border bg-card/45">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
+                      <span className="text-sm font-medium">{item}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ABSCHNITT 4: Für wen eignet sich M³ Schmerzfrei? */}
+          <section className="py-16 border-t border-border/80">
+            <h2 className="text-3xl font-display text-center mb-12">Für wen eignet sich M³ Schmerzfrei?</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+              {[
+                "Wieder mehr Bewegungsfreiheit gewinnen",
+                "Beschwerden im Alltag reduzieren",
+                "Nach Verletzungen wieder sicher trainieren",
+                "Bewegungsabläufe verbessern",
+                "Mehr Vertrauen in den eigenen Körper entwickeln",
+                "Langfristig belastbarer werden"
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-3">
+                  <span className="w-5 h-5 rounded-full bg-gold/10 text-gold flex items-center justify-center text-xs font-semibold shrink-0">✓</span>
+                  <span className="text-sm font-medium text-muted-foreground">{item}</span>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* ABSCHNITT 5: So begleiten wir dich */}
+          <section className="py-16 border-t border-border/80">
+            <h2 className="text-3xl font-display text-center mb-12">So begleiten wir dich</h2>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                {
+                  title: "Analyse",
+                  desc: "Gemeinsam betrachten wir deine aktuelle Situation."
+                },
+                {
+                  title: "Verständnis",
+                  desc: "Wir erklären Zusammenhänge verständlich und nachvollziehbar."
+                },
+                {
+                  title: "Individuelle Strategie",
+                  desc: "Wir entwickeln einen Plan, der zu deinem Alltag passt."
+                },
+                {
+                  title: "Begleitung",
+                  desc: "Schritt für Schritt passen wir den Weg an deine Entwicklung an."
+                }
+              ].map((item, idx) => (
+                <div key={item.title} className="border border-border bg-card p-6 rounded-2xl flex flex-col justify-between hover:border-gold/40 transition-all hover:translate-y-[-2px]">
+                  <div>
+                    <div className="w-8 h-8 rounded-full bg-gold/10 text-gold flex items-center justify-center font-display text-xs mb-6">
+                      0{idx + 1}
+                    </div>
+                    <h3 className="text-lg font-display text-gold mb-3">{item.title}</h3>
+                    <p className="text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* ABSCHNITT 6: Mehr Bewegungsqualität. Mehr Vertrauen. Mehr Lebensqualität. */}
+          <section className="py-16 border-t border-border/80 text-center">
+            <div className="max-w-2xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-display mb-6">Mehr Bewegungsqualität. Mehr Vertrauen. Mehr Lebensqualität.</h2>
+              <p className="text-muted-foreground leading-relaxed mb-10 whitespace-pre-line">
+                Beschwerden müssen nicht deinen Alltag bestimmen.
+                {"\n\n"}
+                Gemeinsam schaffen wir die Voraussetzungen für mehr Sicherheit, mehr Belastbarkeit und mehr Freude an Bewegung.
+              </p>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full bg-gold-gradient px-8 py-4 font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
+              >
+                Kostenloses Erstgespräch vereinbaren
+              </a>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}

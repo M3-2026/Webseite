@@ -6,6 +6,7 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  useLocation,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
@@ -80,9 +81,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  const location = useLocation();
+  const canonicalUrl = `https://m3-performance.com${location.pathname === '/' ? '' : location.pathname}`;
+
   return (
     <html lang="de">
-      <head><HeadContent /></head>
+      <head>
+        <HeadContent />
+        <link rel="canonical" href={canonicalUrl} />
+      </head>
       <body>{children}<Scripts /></body>
     </html>
   );

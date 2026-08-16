@@ -10,33 +10,194 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BodyResetRouteImport } from './routes/body-reset'
+import { Route as CoachingFuerZweiRouteImport } from './routes/coaching-fuer-zwei'
+import { Route as DarmStoffwechselbegleitungRouteImport } from './routes/darm-stoffwechselbegleitung'
+import { Route as ErnaehrungscoachingRouteImport } from './routes/ernaehrungscoaching'
+import { Route as GoldeneGrundversorgungRouteImport } from './routes/goldene-grundversorgung'
+import { Route as MentalPerformanceRouteImport } from './routes/mental-performance'
+import { Route as MetabolismRouteImport } from './routes/metabolism'
+import { Route as MovementRouteImport } from './routes/movement'
+import { Route as PerformanceTrainingRouteImport } from './routes/performance-training'
+import { Route as SchmerzfreiRouteImport } from './routes/schmerzfrei'
+import { Route as SystemStartRouteImport } from './routes/system-start'
+import { Route as UeberMichRouteImport } from './routes/ueber-mich'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BodyResetRoute = BodyResetRouteImport.update({
+  id: '/body-reset',
+  path: '/body-reset',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CoachingFuerZweiRoute = CoachingFuerZweiRouteImport.update({
+  id: '/coaching-fuer-zwei',
+  path: '/coaching-fuer-zwei',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DarmStoffwechselbegleitungRoute =
+  DarmStoffwechselbegleitungRouteImport.update({
+    id: '/darm-stoffwechselbegleitung',
+    path: '/darm-stoffwechselbegleitung',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ErnaehrungscoachingRoute = ErnaehrungscoachingRouteImport.update({
+  id: '/ernaehrungscoaching',
+  path: '/ernaehrungscoaching',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GoldeneGrundversorgungRoute = GoldeneGrundversorgungRouteImport.update({
+  id: '/goldene-grundversorgung',
+  path: '/goldene-grundversorgung',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MentalPerformanceRoute = MentalPerformanceRouteImport.update({
+  id: '/mental-performance',
+  path: '/mental-performance',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MetabolismRoute = MetabolismRouteImport.update({
+  id: '/metabolism',
+  path: '/metabolism',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MovementRoute = MovementRouteImport.update({
+  id: '/movement',
+  path: '/movement',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PerformanceTrainingRoute = PerformanceTrainingRouteImport.update({
+  id: '/performance-training',
+  path: '/performance-training',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SchmerzfreiRoute = SchmerzfreiRouteImport.update({
+  id: '/schmerzfrei',
+  path: '/schmerzfrei',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SystemStartRoute = SystemStartRouteImport.update({
+  id: '/system-start',
+  path: '/system-start',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UeberMichRoute = UeberMichRouteImport.update({
+  id: '/ueber-mich',
+  path: '/ueber-mich',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/body-reset': typeof BodyResetRoute
+  '/coaching-fuer-zwei': typeof CoachingFuerZweiRoute
+  '/darm-stoffwechselbegleitung': typeof DarmStoffwechselbegleitungRoute
+  '/ernaehrungscoaching': typeof ErnaehrungscoachingRoute
+  '/goldene-grundversorgung': typeof GoldeneGrundversorgungRoute
+  '/mental-performance': typeof MentalPerformanceRoute
+  '/metabolism': typeof MetabolismRoute
+  '/movement': typeof MovementRoute
+  '/performance-training': typeof PerformanceTrainingRoute
+  '/schmerzfrei': typeof SchmerzfreiRoute
+  '/system-start': typeof SystemStartRoute
+  '/ueber-mich': typeof UeberMichRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/body-reset': typeof BodyResetRoute
+  '/coaching-fuer-zwei': typeof CoachingFuerZweiRoute
+  '/darm-stoffwechselbegleitung': typeof DarmStoffwechselbegleitungRoute
+  '/ernaehrungscoaching': typeof ErnaehrungscoachingRoute
+  '/goldene-grundversorgung': typeof GoldeneGrundversorgungRoute
+  '/mental-performance': typeof MentalPerformanceRoute
+  '/metabolism': typeof MetabolismRoute
+  '/movement': typeof MovementRoute
+  '/performance-training': typeof PerformanceTrainingRoute
+  '/schmerzfrei': typeof SchmerzfreiRoute
+  '/system-start': typeof SystemStartRoute
+  '/ueber-mich': typeof UeberMichRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/body-reset': typeof BodyResetRoute
+  '/coaching-fuer-zwei': typeof CoachingFuerZweiRoute
+  '/darm-stoffwechselbegleitung': typeof DarmStoffwechselbegleitungRoute
+  '/ernaehrungscoaching': typeof ErnaehrungscoachingRoute
+  '/goldene-grundversorgung': typeof GoldeneGrundversorgungRoute
+  '/mental-performance': typeof MentalPerformanceRoute
+  '/metabolism': typeof MetabolismRoute
+  '/movement': typeof MovementRoute
+  '/performance-training': typeof PerformanceTrainingRoute
+  '/schmerzfrei': typeof SchmerzfreiRoute
+  '/system-start': typeof SystemStartRoute
+  '/ueber-mich': typeof UeberMichRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/body-reset'
+    | '/coaching-fuer-zwei'
+    | '/darm-stoffwechselbegleitung'
+    | '/ernaehrungscoaching'
+    | '/goldene-grundversorgung'
+    | '/mental-performance'
+    | '/metabolism'
+    | '/movement'
+    | '/performance-training'
+    | '/schmerzfrei'
+    | '/system-start'
+    | '/ueber-mich'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/body-reset'
+    | '/coaching-fuer-zwei'
+    | '/darm-stoffwechselbegleitung'
+    | '/ernaehrungscoaching'
+    | '/goldene-grundversorgung'
+    | '/mental-performance'
+    | '/metabolism'
+    | '/movement'
+    | '/performance-training'
+    | '/schmerzfrei'
+    | '/system-start'
+    | '/ueber-mich'
+  id:
+    | '__root__'
+    | '/'
+    | '/body-reset'
+    | '/coaching-fuer-zwei'
+    | '/darm-stoffwechselbegleitung'
+    | '/ernaehrungscoaching'
+    | '/goldene-grundversorgung'
+    | '/mental-performance'
+    | '/metabolism'
+    | '/movement'
+    | '/performance-training'
+    | '/schmerzfrei'
+    | '/system-start'
+    | '/ueber-mich'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BodyResetRoute: typeof BodyResetRoute
+  CoachingFuerZweiRoute: typeof CoachingFuerZweiRoute
+  DarmStoffwechselbegleitungRoute: typeof DarmStoffwechselbegleitungRoute
+  ErnaehrungscoachingRoute: typeof ErnaehrungscoachingRoute
+  GoldeneGrundversorgungRoute: typeof GoldeneGrundversorgungRoute
+  MentalPerformanceRoute: typeof MentalPerformanceRoute
+  MetabolismRoute: typeof MetabolismRoute
+  MovementRoute: typeof MovementRoute
+  PerformanceTrainingRoute: typeof PerformanceTrainingRoute
+  SchmerzfreiRoute: typeof SchmerzfreiRoute
+  SystemStartRoute: typeof SystemStartRoute
+  UeberMichRoute: typeof UeberMichRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,12 +209,118 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/body-reset': {
+      id: '/body-reset'
+      path: '/body-reset'
+      fullPath: '/body-reset'
+      preLoaderRoute: typeof BodyResetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/coaching-fuer-zwei': {
+      id: '/coaching-fuer-zwei'
+      path: '/coaching-fuer-zwei'
+      fullPath: '/coaching-fuer-zwei'
+      preLoaderRoute: typeof CoachingFuerZweiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/darm-stoffwechselbegleitung': {
+      id: '/darm-stoffwechselbegleitung'
+      path: '/darm-stoffwechselbegleitung'
+      fullPath: '/darm-stoffwechselbegleitung'
+      preLoaderRoute: typeof DarmStoffwechselbegleitungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ernaehrungscoaching': {
+      id: '/ernaehrungscoaching'
+      path: '/ernaehrungscoaching'
+      fullPath: '/ernaehrungscoaching'
+      preLoaderRoute: typeof ErnaehrungscoachingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/goldene-grundversorgung': {
+      id: '/goldene-grundversorgung'
+      path: '/goldene-grundversorgung'
+      fullPath: '/goldene-grundversorgung'
+      preLoaderRoute: typeof GoldeneGrundversorgungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mental-performance': {
+      id: '/mental-performance'
+      path: '/mental-performance'
+      fullPath: '/mental-performance'
+      preLoaderRoute: typeof MentalPerformanceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/metabolism': {
+      id: '/metabolism'
+      path: '/metabolism'
+      fullPath: '/metabolism'
+      preLoaderRoute: typeof MetabolismRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/movement': {
+      id: '/movement'
+      path: '/movement'
+      fullPath: '/movement'
+      preLoaderRoute: typeof MovementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/performance-training': {
+      id: '/performance-training'
+      path: '/performance-training'
+      fullPath: '/performance-training'
+      preLoaderRoute: typeof PerformanceTrainingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/schmerzfrei': {
+      id: '/schmerzfrei'
+      path: '/schmerzfrei'
+      fullPath: '/schmerzfrei'
+      preLoaderRoute: typeof SchmerzfreiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/system-start': {
+      id: '/system-start'
+      path: '/system-start'
+      fullPath: '/system-start'
+      preLoaderRoute: typeof SystemStartRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ueber-mich': {
+      id: '/ueber-mich'
+      path: '/ueber-mich'
+      fullPath: '/ueber-mich'
+      preLoaderRoute: typeof UeberMichRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BodyResetRoute: BodyResetRoute,
+  CoachingFuerZweiRoute: CoachingFuerZweiRoute,
+  DarmStoffwechselbegleitungRoute: DarmStoffwechselbegleitungRoute,
+  ErnaehrungscoachingRoute: ErnaehrungscoachingRoute,
+  GoldeneGrundversorgungRoute: GoldeneGrundversorgungRoute,
+  MentalPerformanceRoute: MentalPerformanceRoute,
+  MetabolismRoute: MetabolismRoute,
+  MovementRoute: MovementRoute,
+  PerformanceTrainingRoute: PerformanceTrainingRoute,
+  SchmerzfreiRoute: SchmerzfreiRoute,
+  SystemStartRoute: SystemStartRoute,
+  UeberMichRoute: UeberMichRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
