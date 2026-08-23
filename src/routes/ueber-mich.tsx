@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import avatar from "@/assets/avatar.png";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 
@@ -13,42 +14,54 @@ function UeberMichPage() {
     <div className="min-h-screen bg-background text-foreground flex flex-col justify-between overflow-x-hidden">
       <Header />
 
-      <main className="flex-grow py-24 md:py-32 relative hero-bg">
+      <main className="flex-grow py-20 md:py-28 relative hero-bg">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-gold/5 blur-3xl" />
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[700px] rounded-full bg-gold/5 blur-3xl" />
         </div>
 
-        <div className="relative max-w-4xl mx-auto px-6">
+        <div className="relative max-w-5xl mx-auto px-6">
           <Link
             to="/"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition mb-12"
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition mb-10"
           >
             ← Zurück zur Startseite
           </Link>
 
-          <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold mb-8">
+          <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold mb-6">
             Über Michél
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-display leading-[0.95] mb-6">
+          <h1 className="text-4xl md:text-6xl font-display font-extrabold tracking-tight mb-6">
             Meine Geschichte
           </h1>
 
-          <p className="text-xl text-muted-foreground leading-relaxed mb-12 max-w-2xl">
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-12 max-w-3xl">
             Mehr als Training. Warum Gesundheit der einzig wahre Schlüssel zu echter Leistungsfähigkeit ist – und wie M³ entstanden ist.
           </p>
 
-          <div className="rounded-2xl border border-border bg-card p-8 md:p-12 mb-12 shadow-sm space-y-6">
-            <h2 className="text-2xl font-display mb-4">Vom Breakdance zum Gesundheitscoach</h2>
-            <p className="text-muted-foreground leading-relaxed">
-              Meine Reise begann im Leistungssport und Tanzbereich – genauer gesagt beim Breakdance. Hier lernte ich die extremen Fähigkeiten des menschlichen Körpers kennen, aber auch seine Grenzen und Schwachstellen durch eigene schwere Verletzungen.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Jahre des reinen Krafttrainings und klassischen Fitness-Denkens brachten mich an einen Punkt, an dem mir klar wurde: Echte und dauerhafte Performance kann nicht auf einem maroden Fundament aufgebaut werden. Wenn der Stoffwechsel nicht läuft, der Darm streikt oder die Regeneration ausbleibt, bringt das härteste Training nichts.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Aus diesem Grund habe ich das M³-System entwickelt: Die Verschmelzung aus **Metabolism** (Stoffwechsel & Darm), **Movement** (Training & Schmerzfreiheit) und **Mental Performance** (Fokus & Energie).
-            </p>
+          <div className="grid md:grid-cols-12 gap-8 items-center mb-12">
+            <div className="md:col-span-5 flex justify-center">
+              <div className="relative rounded-3xl p-1.5 bg-gradient-to-b from-gold/40 via-gold/15 to-border/40 shadow-xl overflow-hidden max-w-xs sm:max-w-sm">
+                <img
+                  src={avatar}
+                  alt="Michél Meier"
+                  className="rounded-[1.3rem] w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="md:col-span-7 rounded-2xl border border-border bg-card p-8 md:p-10 shadow-sm space-y-5">
+              <h2 className="text-2xl md:text-3xl font-display font-bold">Vom Breakdance zum Gesundheitscoach</h2>
+              <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                Meine Reise begann im Leistungssport und Tanzbereich – genauer gesagt beim Breakdance. Hier lernte ich die extremen Fähigkeiten des menschlichen Körpers kennen, aber auch seine Grenzen und Schwachstellen durch eigene schwere Verletzungen.
+              </p>
+              <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                Jahre des reinen Krafttrainings und klassischen Fitness-Denkens brachten mich an einen Punkt, an dem mir klar wurde: Echte und dauerhafte Performance kann nicht auf einem maroden Fundament aufgebaut werden. Wenn der Stoffwechsel nicht läuft, der Darm streikt oder die Regeneration ausbleibt, bringt das härteste Training nichts.
+              </p>
+              <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                Aus diesem Grund habe ich das M³-System entwickelt: Die Verschmelzung aus <strong className="text-foreground">Metabolism</strong> (Stoffwechsel & Darm), <strong className="text-foreground">Movement</strong> (Training & Schmerzfreiheit) und <strong className="text-foreground">Mental Performance</strong> (Fokus & Energie).
+              </p>
+            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center gap-4">
