@@ -45,44 +45,26 @@ interface ServiceItem {
 const services: ServiceItem[] = [
   // M1
   {
-    name: "M³ Body Reset",
+    name: "M³ Body Reset (Komplettprogramm)",
     pillar: "M1",
     pillarName: "Metabolism",
-    tagline: "Dein Neustart von innen",
-    desc: "Gezielte Entlastung und Aktivierung von Stoffwechsel und Darm. Bringt deinen Körper wieder in die energetische Grundbalance.",
-    features: ["Darm-Protokoll", "Mikronährstoff-Balance", "Stoffwechsel-Aktivierung"],
+    tagline: "Ganzheitlicher Neustart von innen",
+    desc: "Das 60-Tage Komplettprogramm zur Reaktivierung von Stoffwechsel und Darm. Beinhaltet die individuelle Darmbegleitung sowie die Goldene Grundversorgung mit allen essenziellen Vitalstoffen.",
+    features: ["Darm- & Mikrobiom-Protokoll", "Inkl. Goldene Grundversorgung", "Stoffwechsel- & Zellenergie-Aktivierung"],
+    badge: "Komplett-Programm",
     route: "/body-reset",
-    whatsappMessage: "Hallo Michél, ich interessiere mich für das M³ Body Reset Programm.",
-  },
-  {
-    name: "Darm- & Stoffwechselbegleitung",
-    pillar: "M1",
-    pillarName: "Metabolism",
-    tagline: "Ganzheitliche Begleitung",
-    desc: "Tiefe biochemische Analyse und strukturierte Begleitung zur nachhaltigen Behebung chronischer Energie- und Verdauungsprobleme.",
-    features: ["Laborwert-Analyse", "Persönliches Protokoll", "Fortlaufende Anpassung"],
-    route: "/darm-stoffwechselbegleitung",
-    whatsappMessage: "Hallo Michél, ich interessiere mich für die Darm- und Stoffwechselbegleitung.",
+    whatsappMessage: "Hallo Michél, ich interessiere mich für das M³ Body Reset Komplettprogramm.",
   },
   {
     name: "M³ Ernährungscoaching",
     pillar: "M1",
     pillarName: "Metabolism",
     tagline: "Deine Ernährung. Dein Alltag.",
-    desc: "Keine starren Diät-Korsetts, keine Dogmen – sondern eine alltagstaugliche Struktur, die dich langfristig ernährt statt einschränkt.",
-    features: ["Alltagstaugliche Routinen", "Individuelle Makro-Struktur", "Nachhaltige Umsetzung"],
+    desc: "Keine starren Diät-Korsetts oder Verbote – sondern eine alltagstaugliche 1:1 Ernährungsstruktur, die dich langfristig ernährt und perfekt zu Beruf, Sport und Familie passt.",
+    features: ["1:1 persönliche Begleitung", "Individuelle Makro-Struktur", "Dauerhafte Routine ohne Jojo-Effekt"],
+    badge: "1:1 Coaching",
     route: "/ernaehrungscoaching",
-    whatsappMessage: "Hallo Michél, ich interessiere mich für das Ernährungscoaching.",
-  },
-  {
-    name: "Goldene Grundversorgung",
-    pillar: "M1",
-    pillarName: "Metabolism",
-    tagline: "Die Basis für Vitalität",
-    desc: "Eine wissenschaftlich fundierte Grundversorgung mit allen essenziellen Vitalstoffen – das Fundament für Zellregeneration.",
-    features: ["Nährstoff-Fundament", "Zellgesundheit & Schutz", "Tägliche Grundenergie"],
-    route: "/goldene-grundversorgung",
-    whatsappMessage: "Hallo Michél, ich interessiere mich für die Goldene Grundversorgung.",
+    whatsappMessage: "Hallo Michél, ich interessiere mich für das 1:1 Ernährungscoaching.",
   },
   // M2
   {
@@ -90,8 +72,9 @@ const services: ServiceItem[] = [
     pillar: "M2",
     pillarName: "Movement",
     tagline: "Stärke mit System",
-    desc: "Intelligentes Personal Training für echte Leistungsfähigkeit – Technik vor Gewicht, Struktur statt Zufall.",
-    features: ["Präzise Technik & Kontrolle", "Individueller Aufbau", "1–2× wöchentlich"],
+    desc: "Intelligentes 1:1 Personal Training für echte Leistungsfähigkeit – Technik vor Gewicht, Struktur statt Chaos.",
+    features: ["Präzise Technik & Kontrolle", "Individueller Kraftaufbau", "1–2× wöchentlich"],
+    badge: "1:1 Personal Training",
     route: "/performance-training",
     whatsappMessage: "Hallo Michél, ich interessiere mich für das Performance Training.",
   },
@@ -100,8 +83,9 @@ const services: ServiceItem[] = [
     pillar: "M2",
     pillarName: "Movement",
     tagline: "Beweglich & Stabil",
-    desc: "Gezieltes Mobilitätstraining und Bewegungskorrekturen zur dauerhaften Behebung von Alltags- und Trainingsbeschwerden.",
+    desc: "Gezieltes Mobilitätstraining und Bewegungskorrekturen zur dauerhaften Behebung von Rücken-, Nacken- und Gelenkbeschwerden.",
     features: ["Gelenkmobilität", "Schwachstellen-Ausgleich", "Schmerzfreie Belastbarkeit"],
+    badge: "Mobilität & Reha",
     route: "/schmerzfrei",
     whatsappMessage: "Hallo Michél, ich interessiere mich für das Schmerzfrei-Programm.",
   },
@@ -110,8 +94,9 @@ const services: ServiceItem[] = [
     pillar: "M2",
     pillarName: "Movement",
     tagline: "Gemeinsam stärker",
-    desc: "Personal Training für zwei Personen. Jeder auf seinem individuellen Level, mit doppelter Motivation und Verbindlichkeit.",
+    desc: "Personal Training für zwei Personen (Partner oder Freunde) – jeder auf seinem individuellen Level, mit doppelter Motivation und Verbindlichkeit.",
     features: ["Partner-Training", "Hohe Verbindlichkeit", "Zwei maßgeschneiderte Pläne"],
+    badge: "Partner-Coaching",
     route: "/coaching-fuer-zwei",
     whatsappMessage: "Hallo Michél, wir interessieren uns für das Coaching für Zwei.",
   },
@@ -121,8 +106,8 @@ const services: ServiceItem[] = [
     pillar: "M3",
     pillarName: "Mental & System",
     tagline: "Die Eingangstür zu M³",
-    desc: "Erst verstehen, dann handeln: Wir analysieren deinen Ist-Zustand, definieren Prioritäten und erstellen deinen klaren Fahrplan.",
-    features: ["Ganzheitliche Standortbestimmung", "Klare Priorisierung", "Individueller Fahrplan"],
+    desc: "Erst verstehen, dann handeln: In einer ganzheitlichen Standortbestimmung analysieren wir deinen Ist-Zustand und erstellen deinen individuellen 3-Säulen-Fahrplan.",
+    features: ["Ganzheitliche Standortbestimmung", "Klare Engpass-Priorisierung", "Individueller Fahrplan über alle Säulen"],
     badge: "Empfohlener Einstieg",
     route: "/system-start",
     whatsappMessage: "Hallo Michél, ich möchte mit dem M³ System Start beginnen.",
@@ -132,8 +117,9 @@ const services: ServiceItem[] = [
     pillar: "M3",
     pillarName: "Mental Performance",
     tagline: "Dranbleiben & verankern",
-    desc: "Aus Motivation wird Disziplin, aus Disziplin wird Routine. Stressresistenz, Schlaf-Optimierung und mentale Routinen.",
+    desc: "Aus Motivation wird Disziplin, aus Disziplin wird Routine. Stressresistenz, Schlaf-Optimierung, mentale Routinen und langfristige Selbstständigkeit.",
     features: ["Stress- & Schlaf-Optimierung", "Routinen-Architektur", "Langfristige Selbstständigkeit"],
+    badge: "Mindset & Routinen",
     route: "/mental-performance",
     whatsappMessage: "Hallo Michél, ich interessiere mich für das Mental Performance Coaching.",
   },
@@ -968,13 +954,13 @@ function IndexPage() {
               </Link>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {services
                 .filter((s) => s.pillar === "M1")
                 .map((s, idx) => (
                   <div
                     key={idx}
-                    className={`rounded-2xl border p-6 flex flex-col justify-between transition-all duration-200 ${
+                    className={`rounded-2xl border p-6 sm:p-8 flex flex-col justify-between transition-all duration-200 ${
                       s.badge
                         ? "border-gold/60 bg-gradient-to-br from-gold/10 via-card to-card shadow-[var(--shadow-gold)]"
                         : "border-border bg-card hover:border-primary/50 shadow-sm hover:shadow-md"
@@ -992,13 +978,13 @@ function IndexPage() {
                         )}
                       </div>
 
-                      <h4 className="font-display font-bold text-lg text-foreground mb-1">
+                      <h4 className="font-display font-bold text-xl text-foreground mb-1">
                         {s.name}
                       </h4>
                       <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3 font-semibold">
                         {s.tagline}
                       </p>
-                      <p className="text-xs text-muted-foreground leading-relaxed mb-6">
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-6">
                         {s.desc}
                       </p>
 
@@ -1031,6 +1017,33 @@ function IndexPage() {
                     </div>
                   </div>
                 ))}
+            </div>
+
+            {/* Integrierte Kernbausteine Infoleiste */}
+            <div className="max-w-4xl mx-auto rounded-2xl border border-primary/20 bg-card/60 p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+              <div className="space-y-1">
+                <div className="text-xs font-bold uppercase tracking-wider text-primary flex items-center gap-1.5">
+                  <span>💡</span> Integrierte Kernbausteine im Body Reset
+                </div>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Die <strong>Darm- & Stoffwechselbegleitung</strong> sowie die <strong>Goldene Grundversorgung</strong> sind feste Kernbausteine des Body Resets – können bei Bedarf aber auch einzeln vertieft werden.
+                </p>
+              </div>
+              <div className="flex items-center gap-3 shrink-0 pt-1 sm:pt-0">
+                <Link
+                  to="/darm-stoffwechselbegleitung"
+                  className="text-xs font-bold text-primary hover:underline underline-offset-4"
+                >
+                  Darmbegleitung →
+                </Link>
+                <span className="text-border">|</span>
+                <Link
+                  to="/goldene-grundversorgung"
+                  className="text-xs font-bold text-primary hover:underline underline-offset-4"
+                >
+                  Grundversorgung →
+                </Link>
+              </div>
             </div>
           </div>
 
