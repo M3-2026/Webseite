@@ -121,6 +121,77 @@ function BodyResetPage() {
             </div>
           </section>
 
+          {/* ABSCHNITT: Die Bausteine des M³ Body Reset */}
+          <section className="py-16 border-t border-border/80">
+            <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
+              <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
+                Modulare Struktur
+              </span>
+              <h2 className="text-3xl md:text-4xl font-display font-extrabold tracking-tight">
+                Die Programme im Body Reset
+              </h2>
+              <p className="text-muted-foreground text-sm md:text-base">
+                Je nach deinem individuellen Bedarf kombinieren wir die Kuren mit der dauerhaften Grundversorgung:
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              {/* Darmkur */}
+              <div className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-gold/50 transition-all shadow-sm">
+                <div>
+                  <div className="inline-flex items-center gap-1.5 rounded-full bg-gold/10 px-3 py-1 text-xs font-bold text-gold mb-4">
+                    <span>16 Tage</span>
+                  </div>
+                  <h3 className="font-display font-bold text-xl text-foreground mb-2">
+                    Die Darmkur
+                  </h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed mb-4">
+                    Gezielte Entlastung und Aufbau des Mikrobioms sowie der Darmschleimhaut. Für eine regulierte Verdauung und optimale Nährstoffaufnahme.
+                  </p>
+                </div>
+                <div className="text-xs font-semibold text-foreground pt-4 border-t border-border/60">
+                  ✓ Mikrobiom & Schleimhaut
+                </div>
+              </div>
+
+              {/* Stoffwechselkur */}
+              <div className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-gold/50 transition-all shadow-sm">
+                <div>
+                  <div className="inline-flex items-center gap-1.5 rounded-full bg-gold/10 px-3 py-1 text-xs font-bold text-gold mb-4">
+                    <span>Min. 21 Tage + Stabilisation</span>
+                  </div>
+                  <h3 className="font-display font-bold text-xl text-foreground mb-2">
+                    Die Stoffwechselkur
+                  </h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed mb-4">
+                    Strenge Phase zur Reaktivierung des Fettstoffwechsels bis zum Idealgewicht, gefolgt von einer gleichlangen Stabilisationsphase.
+                  </p>
+                </div>
+                <div className="text-xs font-semibold text-foreground pt-4 border-t border-border/60">
+                  ✓ Fettstoffwechsel & Wunschgewicht
+                </div>
+              </div>
+
+              {/* Goldene Grundversorgung */}
+              <div className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-gold/50 transition-all shadow-sm">
+                <div>
+                  <div className="inline-flex items-center gap-1.5 rounded-full bg-gold/10 px-3 py-1 text-xs font-bold text-gold mb-4">
+                    <span>Dauerhaft & Zeitlich unbegrenzt</span>
+                  </div>
+                  <h3 className="font-display font-bold text-xl text-foreground mb-2">
+                    Goldene Grundversorgung
+                  </h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed mb-4">
+                    Wissenschaftlich fundierte Grundversorgung mit allen essenziellen Vitalstoffen – das tägliche Fundament für Zellregeneration.
+                  </p>
+                </div>
+                <div className="text-xs font-semibold text-foreground pt-4 border-t border-border/60">
+                  ✓ Tägliches Nährstoff-Fundament
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* ABSCHNITT 4: Für wen eignet sich der M³ Body Reset? */}
           <section className="py-16 border-t border-border/80">
             <h2 className="text-3xl font-display text-center mb-12">Für wen eignet sich der M³ Body Reset?</h2>

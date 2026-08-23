@@ -45,15 +45,15 @@ interface ServiceItem {
 const services: ServiceItem[] = [
   // M1
   {
-    name: "M³ Body Reset (Komplettprogramm)",
+    name: "M³ Body Reset",
     pillar: "M1",
     pillarName: "Metabolism",
     tagline: "Ganzheitlicher Neustart von innen",
-    desc: "Das 60-Tage Komplettprogramm zur Reaktivierung von Stoffwechsel und Darm. Beinhaltet die individuelle Darmbegleitung sowie die Goldene Grundversorgung mit allen essenziellen Vitalstoffen.",
-    features: ["Darm- & Mikrobiom-Protokoll", "Inkl. Goldene Grundversorgung", "Stoffwechsel- & Zellenergie-Aktivierung"],
-    badge: "Komplett-Programm",
+    desc: "Das modulare Konzept für Darm und Stoffwechsel: Beinhaltet die 16-Tage Darmkur, die gezielte Stoffwechselkur sowie die tägliche Goldene Grundversorgung.",
+    features: ["16-Tage Darmkur & Mikrobiom", "Stoffwechselkur (min. 21 Tage)", "Goldene Grundversorgung"],
+    badge: "Ganzheitliches Konzept",
     route: "/body-reset",
-    whatsappMessage: "Hallo Michél, ich interessiere mich für das M³ Body Reset Komplettprogramm.",
+    whatsappMessage: "Hallo Michél, ich interessiere mich für den M³ Body Reset.",
   },
   {
     name: "M³ Ernährungscoaching",
