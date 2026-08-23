@@ -915,10 +915,10 @@ function IndexPage() {
       </section>
 
       {/* ---------------------------------------------------- */}
-      {/* 7. ALLE LEISTUNGEN IM ÜBERBLICK */}
+      {/* 7. ALLE LEISTUNGEN IM ÜBERBLICK (Kategorisiert nach M1, M2, M3) */}
       {/* ---------------------------------------------------- */}
       <section id="leistungen" className="py-16 md:py-24 border-b border-border/70 bg-card">
-        <div className="max-w-7xl mx-auto px-5 md:px-6 space-y-12">
+        <div className="max-w-7xl mx-auto px-5 md:px-6 space-y-16">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
               Die Bausteine
@@ -931,67 +931,277 @@ function IndexPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((s, idx) => (
-              <div
-                key={idx}
-                className={`rounded-2xl border p-8 flex flex-col justify-between transition-all duration-200 ${
-                  s.badge
-                    ? "border-gold/60 bg-gradient-to-br from-gold/10 to-card shadow-[var(--shadow-gold)]"
-                    : "border-border bg-card hover:border-gold/40 shadow-sm"
-                }`}
-              >
-                <div>
-                  <div className="flex items-center justify-between gap-2 mb-3">
-                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-gold">
-                      {s.pillar} · {s.pillarName}
-                    </span>
-                    {s.badge && (
-                      <span className="rounded-full bg-gold-gradient px-2.5 py-0.5 text-[10px] font-bold text-primary-foreground uppercase tracking-wider">
-                        {s.badge}
-                      </span>
-                    )}
-                  </div>
-
-                  <h3 className="font-display font-bold text-xl md:text-2xl text-foreground mb-1">
-                    {s.name}
-                  </h3>
-                  <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">
-                    {s.tagline}
-                  </p>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-6">
-                    {s.desc}
-                  </p>
-
-                  <ul className="space-y-2 mb-8 border-t border-border/60 pt-4">
-                    {s.features.map((f, fIdx) => (
-                      <li key={fIdx} className="flex items-center gap-2 text-xs text-foreground/90 font-medium">
-                        <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
-                        <span>{f}</span>
-                      </li>
-                    ))}
-                  </ul>
+          {/* KATEGORIE 1: M1 METABOLISM */}
+          <div className="rounded-3xl border border-border bg-secondary/20 p-6 md:p-10 space-y-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-border/70 pb-5">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-2xl bg-primary/10 text-primary flex items-center justify-center border border-primary/25 font-display font-bold text-sm shrink-0">
+                  M¹
                 </div>
-
-                <div className="flex flex-col gap-2.5 pt-2">
-                  <Link
-                    to={s.route}
-                    className="w-full inline-flex items-center justify-center rounded-full border border-border px-5 py-2.5 text-xs font-bold text-foreground hover:bg-secondary transition"
-                  >
-                    Details & Ablauf ansehen
-                  </Link>
-                  <a
-                    href={`${BASE_WHATSAPP}?text=${encodeURIComponent(s.whatsappMessage)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full inline-flex items-center justify-center gap-1.5 rounded-full bg-secondary hover:bg-secondary/80 px-5 py-2.5 text-xs font-bold text-foreground transition"
-                  >
-                    <MessageCircle className="w-3.5 h-3.5 text-gold" />
-                    WhatsApp Anfrage
-                  </a>
+                <div>
+                  <h3 className="font-display font-extrabold text-2xl text-foreground">
+                    Metabolism
+                  </h3>
+                  <p className="text-xs font-semibold text-primary uppercase tracking-wider">
+                    Die Basis schaffen · Gesundheit von innen
+                  </p>
                 </div>
               </div>
-            ))}
+              <Link
+                to="/metabolism"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:opacity-80 transition self-start sm:self-auto"
+              >
+                <span>Alle M¹ Details ansehen</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+              {services
+                .filter((s) => s.pillar === "M1")
+                .map((s, idx) => (
+                  <div
+                    key={idx}
+                    className={`rounded-2xl border p-6 flex flex-col justify-between transition-all duration-200 ${
+                      s.badge
+                        ? "border-gold/60 bg-gradient-to-br from-gold/10 via-card to-card shadow-[var(--shadow-gold)]"
+                        : "border-border bg-card hover:border-primary/50 shadow-sm hover:shadow-md"
+                    }`}
+                  >
+                    <div>
+                      <div className="flex items-center justify-between gap-2 mb-3">
+                        <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-primary">
+                          {s.pillar} · {s.pillarName}
+                        </span>
+                        {s.badge && (
+                          <span className="rounded-full bg-gold-gradient px-2.5 py-0.5 text-[10px] font-bold text-primary-foreground uppercase tracking-wider">
+                            {s.badge}
+                          </span>
+                        )}
+                      </div>
+
+                      <h4 className="font-display font-bold text-lg text-foreground mb-1">
+                        {s.name}
+                      </h4>
+                      <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3 font-semibold">
+                        {s.tagline}
+                      </p>
+                      <p className="text-xs text-muted-foreground leading-relaxed mb-6">
+                        {s.desc}
+                      </p>
+
+                      <ul className="space-y-2 mb-6 border-t border-border/60 pt-4">
+                        {s.features.map((f, fIdx) => (
+                          <li key={fIdx} className="flex items-center gap-2 text-xs text-foreground/90 font-medium">
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                            <span>{f}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="flex flex-col gap-2 pt-2 mt-auto">
+                      <Link
+                        to={s.route}
+                        className="w-full inline-flex items-center justify-center rounded-full border border-border px-4 py-2.5 text-xs font-bold text-foreground hover:bg-secondary transition"
+                      >
+                        Details ansehen
+                      </Link>
+                      <a
+                        href={`${BASE_WHATSAPP}?text=${encodeURIComponent(s.whatsappMessage)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full inline-flex items-center justify-center gap-1.5 rounded-full bg-secondary hover:bg-secondary/80 px-4 py-2.5 text-xs font-bold text-foreground transition"
+                      >
+                        <MessageCircle className="w-3.5 h-3.5 text-primary" />
+                        WhatsApp Anfrage
+                      </a>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          </div>
+
+          {/* KATEGORIE 2: M2 MOVEMENT */}
+          <div className="rounded-3xl border border-border bg-secondary/20 p-6 md:p-10 space-y-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-border/70 pb-5">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-2xl bg-emerald-600/10 text-emerald-700 flex items-center justify-center border border-emerald-600/25 font-display font-bold text-sm shrink-0">
+                  M²
+                </div>
+                <div>
+                  <h3 className="font-display font-extrabold text-2xl text-foreground">
+                    Movement
+                  </h3>
+                  <p className="text-xs font-semibold text-emerald-700 uppercase tracking-wider">
+                    In Bewegung kommen · Leistungsfähig & Schmerzfrei
+                  </p>
+                </div>
+              </div>
+              <Link
+                to="/movement"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:opacity-80 transition self-start sm:self-auto"
+              >
+                <span>Alle M² Details ansehen</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {services
+                .filter((s) => s.pillar === "M2")
+                .map((s, idx) => (
+                  <div
+                    key={idx}
+                    className={`rounded-2xl border p-6 flex flex-col justify-between transition-all duration-200 ${
+                      s.badge
+                        ? "border-gold/60 bg-gradient-to-br from-gold/10 via-card to-card shadow-[var(--shadow-gold)]"
+                        : "border-border bg-card hover:border-emerald-600/50 shadow-sm hover:shadow-md"
+                    }`}
+                  >
+                    <div>
+                      <div className="flex items-center justify-between gap-2 mb-3">
+                        <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-emerald-700">
+                          {s.pillar} · {s.pillarName}
+                        </span>
+                        {s.badge && (
+                          <span className="rounded-full bg-gold-gradient px-2.5 py-0.5 text-[10px] font-bold text-primary-foreground uppercase tracking-wider">
+                            {s.badge}
+                          </span>
+                        )}
+                      </div>
+
+                      <h4 className="font-display font-bold text-lg text-foreground mb-1">
+                        {s.name}
+                      </h4>
+                      <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3 font-semibold">
+                        {s.tagline}
+                      </p>
+                      <p className="text-xs text-muted-foreground leading-relaxed mb-6">
+                        {s.desc}
+                      </p>
+
+                      <ul className="space-y-2 mb-6 border-t border-border/60 pt-4">
+                        {s.features.map((f, fIdx) => (
+                          <li key={fIdx} className="flex items-center gap-2 text-xs text-foreground/90 font-medium">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0" />
+                            <span>{f}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="flex flex-col gap-2 pt-2 mt-auto">
+                      <Link
+                        to={s.route}
+                        className="w-full inline-flex items-center justify-center rounded-full border border-border px-4 py-2.5 text-xs font-bold text-foreground hover:bg-secondary transition"
+                      >
+                        Details ansehen
+                      </Link>
+                      <a
+                        href={`${BASE_WHATSAPP}?text=${encodeURIComponent(s.whatsappMessage)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full inline-flex items-center justify-center gap-1.5 rounded-full bg-secondary hover:bg-secondary/80 px-4 py-2.5 text-xs font-bold text-foreground transition"
+                      >
+                        <MessageCircle className="w-3.5 h-3.5 text-emerald-700" />
+                        WhatsApp Anfrage
+                      </a>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          </div>
+
+          {/* KATEGORIE 3: M3 MENTAL PERFORMANCE & SYSTEM */}
+          <div className="rounded-3xl border border-border bg-secondary/20 p-6 md:p-10 space-y-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-border/70 pb-5">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-2xl bg-indigo-600/10 text-indigo-700 flex items-center justify-center border border-indigo-600/25 font-display font-bold text-sm shrink-0">
+                  M³
+                </div>
+                <div>
+                  <h3 className="font-display font-extrabold text-2xl text-foreground">
+                    Mental Performance & System
+                  </h3>
+                  <p className="text-xs font-semibold text-indigo-700 uppercase tracking-wider">
+                    Dranbleiben · Veränderung im Alltag verankern
+                  </p>
+                </div>
+              </div>
+              <Link
+                to="/mental-performance"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-700 hover:opacity-80 transition self-start sm:self-auto"
+              >
+                <span>Alle M³ Details ansehen</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {services
+                .filter((s) => s.pillar === "M3")
+                .map((s, idx) => (
+                  <div
+                    key={idx}
+                    className={`rounded-2xl border p-6 sm:p-8 flex flex-col justify-between transition-all duration-200 ${
+                      s.badge
+                        ? "border-gold/60 bg-gradient-to-br from-gold/10 via-card to-card shadow-[var(--shadow-gold)]"
+                        : "border-border bg-card hover:border-indigo-600/50 shadow-sm hover:shadow-md"
+                    }`}
+                  >
+                    <div>
+                      <div className="flex items-center justify-between gap-2 mb-3">
+                        <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-indigo-700">
+                          {s.pillar} · {s.pillarName}
+                        </span>
+                        {s.badge && (
+                          <span className="rounded-full bg-gold-gradient px-2.5 py-0.5 text-[10px] font-bold text-primary-foreground uppercase tracking-wider">
+                            {s.badge}
+                          </span>
+                        )}
+                      </div>
+
+                      <h4 className="font-display font-bold text-xl text-foreground mb-1">
+                        {s.name}
+                      </h4>
+                      <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3 font-semibold">
+                        {s.tagline}
+                      </p>
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-6">
+                        {s.desc}
+                      </p>
+
+                      <ul className="space-y-2 mb-6 border-t border-border/60 pt-4">
+                        {s.features.map((f, fIdx) => (
+                          <li key={fIdx} className="flex items-center gap-2 text-xs text-foreground/90 font-medium">
+                            <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0" />
+                            <span>{f}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    <div className="flex flex-col gap-2 pt-2 mt-auto">
+                      <Link
+                        to={s.route}
+                        className="w-full inline-flex items-center justify-center rounded-full border border-border px-4 py-2.5 text-xs font-bold text-foreground hover:bg-secondary transition"
+                      >
+                        Details ansehen
+                      </Link>
+                      <a
+                        href={`${BASE_WHATSAPP}?text=${encodeURIComponent(s.whatsappMessage)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full inline-flex items-center justify-center gap-1.5 rounded-full bg-secondary hover:bg-secondary/80 px-4 py-2.5 text-xs font-bold text-foreground transition"
+                      >
+                        <MessageCircle className="w-3.5 h-3.5 text-indigo-700" />
+                        WhatsApp Anfrage
+                      </a>
+                    </div>
+                  </div>
+                ))}
+            </div>
           </div>
         </div>
       </section>
