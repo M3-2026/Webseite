@@ -158,6 +158,16 @@ export function Header() {
               <MessageCircle className="w-5 h-5" />
               Kostenloses Erstgespräch anfragen
             </a>
+            <a
+              href="https://wa.me/c/4917699016640"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="w-full inline-flex items-center justify-center gap-2 rounded-full border border-gold/40 bg-card py-3 text-sm font-semibold text-gold hover:bg-secondary transition"
+            >
+              <MessageCircle className="w-4 h-4" />
+              WhatsApp Katalog ansehen
+            </a>
             <p className="text-center text-xs text-muted-foreground">
               Unverbindlich · 20 Minuten Orientierung mit Michél
             </p>

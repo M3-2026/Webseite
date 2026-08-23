@@ -929,6 +929,18 @@ function IndexPage() {
             <p className="text-base md:text-lg text-muted-foreground">
               Alle Angebote greifen modular ineinander oder können gezielt als Einzellösung genutzt werden.
             </p>
+            <div className="pt-2 flex justify-center">
+              <a
+                href="https://wa.me/c/4917699016640"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/5 px-6 py-2.5 text-xs sm:text-sm font-bold text-gold hover:bg-gold/10 transition shadow-sm hover:scale-[1.02] active:scale-[0.98]"
+              >
+                <MessageCircle className="w-4 h-4" />
+                <span>M³ WhatsApp-Katalog öffnen</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
           </div>
 
           {/* KATEGORIE 1: M1 METABOLISM */}

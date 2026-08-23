@@ -110,6 +110,17 @@ export function Footer() {
                 </a>
               </li>
               <li>
+                <a
+                  href="https://wa.me/c/4917699016640"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-gold transition-colors inline-flex items-center gap-1 text-gold font-semibold"
+                >
+                  WhatsApp Katalog ansehen
+                  <ArrowUpRight className="w-3.5 h-3.5 text-gold" />
+                </a>
+              </li>
+              <li>
                 <Link to="/ueber-mich" className="hover:text-gold transition-colors">
                   Über Michél Meier
                 </Link>
