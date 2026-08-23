@@ -692,7 +692,7 @@ function IndexPage() {
               M³ System Start
             </span>
             <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight">
-              Nicht irgendein Angebot. Deine Eingangstür.
+              Nicht irgendein Angebot.<br className="hidden md:inline" /> Deine Eingangstür.
             </h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
               Du musst nicht vorher wissen, ob du Darmbegleitung, Personal Training oder Ernährungsberatung brauchst. Der <strong>M³ System Start</strong> schafft Klarheit, analysiert deine Ausgangslage und baut deinen individuellen Fahrplan.
@@ -710,12 +710,12 @@ function IndexPage() {
       <section id="philosophie" className="py-16 md:py-24 border-b border-border/70 bg-card">
         <div className="max-w-5xl mx-auto px-5 md:px-6">
           <div className="grid md:grid-cols-12 gap-10 items-center">
-            <div className="md:col-span-5 space-y-4">
+            <div className="md:col-span-5 space-y-4 text-left">
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
                 Die M³ Philosophie
               </span>
               <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight leading-tight">
-                Warum viele scheitern – und was M³ anders macht.
+                Warum viele scheitern –<br className="hidden md:inline" /> und was M³ anders macht.
               </h2>
               <p className="text-base text-gold font-medium italic">
                 „Wer seinen Körper besser versteht, trifft dauerhaft bessere Entscheidungen.“
