@@ -658,18 +658,18 @@ function IndexPage() {
           </div>
 
           {/* Hero Avatar Michél Meier */}
-          <div className="mt-8 md:mt-12 flex justify-center relative pb-6">
-            <div className="relative group max-w-xs sm:max-w-md md:max-w-lg">
-              <div className="relative rounded-3xl p-1.5 bg-gradient-to-b from-gold/40 via-gold/15 to-border/40 shadow-[var(--shadow-avatar)] overflow-hidden">
-                <img
-                  src={avatar}
-                  alt="Michél Meier – Gründer & Coach M³ Performance"
-                  className="rounded-[1.3rem] w-full h-[55vh] sm:h-[65vh] md:h-[70vh] max-h-[700px] object-cover object-top select-none animate-float-up"
-                />
-              </div>
+          <div className="mt-8 md:mt-10 flex justify-center relative">
+            <div className="relative">
+              <img
+                src={avatar}
+                alt="Michél Meier – Gründer & Coach M³ Performance"
+                className="avatar-shadow h-[62vh] sm:h-[72vh] md:h-[80vh] max-h-[820px] w-auto object-contain object-bottom select-none pointer-events-none animate-float-up"
+              />
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[450px] h-20 bg-gold/20 blur-3xl rounded-full pointer-events-none" />
+
               {/* Floating Credential Badge */}
-              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 sm:translate-x-0 sm:left-4 md:-left-6 bg-card/95 backdrop-blur-md border border-border/80 rounded-2xl p-3.5 shadow-xl flex items-center gap-3 animate-float-up z-10 w-[92%] sm:w-auto">
-                <div className="w-10 h-10 rounded-xl bg-gold-gradient text-primary-foreground flex items-center justify-center font-display font-bold text-sm shrink-0">
+              <div className="absolute bottom-6 left-4 md:-left-8 bg-card/90 backdrop-blur-md border border-border/80 rounded-2xl p-3.5 shadow-lg flex items-center gap-3 animate-float-up">
+                <div className="w-10 h-10 rounded-xl bg-gold-gradient text-primary-foreground flex items-center justify-center font-display font-bold text-sm">
                   M³
                 </div>
                 <div>

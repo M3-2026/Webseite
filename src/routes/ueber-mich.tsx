@@ -41,11 +41,11 @@ function UeberMichPage() {
 
           <div className="grid md:grid-cols-12 gap-8 items-center mb-12">
             <div className="md:col-span-5 flex justify-center">
-              <div className="relative rounded-3xl p-1.5 bg-gradient-to-b from-gold/40 via-gold/15 to-border/40 shadow-xl overflow-hidden max-w-xs sm:max-w-sm">
+              <div className="relative">
                 <img
                   src={avatar}
                   alt="Michél Meier"
-                  className="rounded-[1.3rem] w-full h-auto object-cover"
+                  className="avatar-shadow h-[40vh] sm:h-[48vh] max-h-[500px] w-auto object-contain object-bottom select-none"
                 />
               </div>
             </div>
