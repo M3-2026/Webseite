@@ -40,9 +40,9 @@ function MetabolismPage() {
               Die Grundlage für nachhaltige Gesundheit und Leistungsfähigkeit.
             </p>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mb-12 whitespace-pre-line">
-              Bevor Bewegung ihr volles Potenzial entfalten kann, braucht der Körper eine stabile Grundlage.
+              Wenn dein Fundament brennt, nützt kein härteres Training. Wir bringen Darm und Stoffwechsel in Ordnung — messbar, strukturiert und alltagstauglich.
               {"\n\n"}
-              Ein funktionierender Stoffwechsel, eine passende Ernährung und eine gute Versorgung bilden die Basis für Energie, Regeneration und langfristige Gesundheit.
+              Ein funktionierender Stoffwechsel, ein gesundes Mikrobiom und eine gezielte Vitalstoffversorgung bilden die Basis für Energie, Regeneration und echte Leistungsfähigkeit.
             </p>
 
             <a
@@ -51,7 +51,7 @@ function MetabolismPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full bg-gold-gradient px-8 py-4 font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
             >
-              Kostenloses Erstgespräch
+              Erst verstehen. Dann entscheiden. ➔ Erstgespräch
             </a>
           </div>
 

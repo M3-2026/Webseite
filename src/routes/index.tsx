@@ -425,12 +425,12 @@ function PillarTriadExplorer() {
     m1: {
       tag: "M¹ · METABOLISM",
       headline: "Die Basis schaffen. Gesundheit von innen.",
-      quote: "„Bevor Bewegung ihr volles Potenzial entfalten kann, braucht der Körper ein funktionierendes Fundament.“",
-      text: "Ein überlasteter Darm oder ein blockierter Stoffwechsel machen jedes Training zur Qual. In M¹ regulieren wir Verdauung, Mikronährstoffe und zelluläre Energie – damit dein Körper die Kraft hat, sich nachhaltig zu regenerieren.",
+      quote: "„Wenn dein Fundament brennt, nützt kein härteres Training.“",
+      text: "Wir bringen Darm und Stoffwechsel in Ordnung — messbar, strukturiert und alltagstauglich. In M¹ regulieren wir Mikrobiom, Verdauung und zelluläre Vitalstoffe, damit dein Körper wieder die volle Energie für Training und Alltag hat.",
       features: [
-        "M³ Body Reset – Energetischer Neustart für den Darm",
+        "M³ Body Reset – Modulares Konzept für Darm & Stoffwechsel",
         "Ganzheitliche Darm- & Stoffwechselbegleitung",
-        "Alltagstaugliches Ernährungscoaching ohne Verbote",
+        "Alltagstaugliches 1:1 Ernährungscoaching ohne Verbote",
         "Goldene Grundversorgung für zelluläre Vitalität",
       ],
       link: "/metabolism",
@@ -621,7 +621,7 @@ function IndexPage() {
                 className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-8 py-4 text-sm md:text-base font-bold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95 hover:scale-[1.02] active:scale-[0.98] transition-all"
               >
                 <MessageCircle className="w-5 h-5" />
-                Kostenloses Erstgespräch vereinbaren
+                Erst verstehen. Dann entscheiden. ➔ Orientierungsgespräch
               </a>
               <Link
                 to="/"
@@ -715,9 +715,9 @@ function IndexPage() {
               <p className="font-semibold text-foreground">
                 Nicht, weil sie sich zu wenig anstrengen – sondern weil die biochemischen und mentalen Grundlagen übersehen werden.
               </p>
-              <div className="rounded-2xl bg-secondary/50 border border-border p-5 space-y-2">
+              <div className="rounded-2xl bg-secondary/50 border border-border p-5 space-y-3">
                 <div className="text-xs uppercase tracking-wider font-bold text-foreground">
-                  Unsere 3 Grundsätze:
+                  Unsere Leitprinzipien:
                 </div>
                 <div className="text-sm font-medium text-foreground">
                   • <strong>Struktur statt Chaos.</strong>
@@ -727,6 +727,9 @@ function IndexPage() {
                 </div>
                 <div className="text-sm font-medium text-foreground">
                   • <strong>Ergebnis statt Zufall.</strong>
+                </div>
+                <div className="text-xs text-muted-foreground pt-2 border-t border-border/60 italic">
+                  „Verständnis, wenn Verständnis gebraucht wird. Arschtritt, wenn Arschtritt gebraucht wird.“
                 </div>
               </div>
             </div>
@@ -765,10 +768,10 @@ function IndexPage() {
               Zielgruppen & Passgenauigkeit
             </span>
             <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight">
-              Erkennst du dich hier wieder?
+              Du willst etwas verändern – weißt aber nicht, an welcher Stellschraube du zuerst drehen sollst?
             </h2>
             <p className="text-base md:text-lg text-muted-foreground">
-              Wir arbeiten mit Menschen, die echte Eigenverantwortung schätzen und bereit für Veränderung sind.
+              Wir arbeiten mit Menschen, die echte Eigenverantwortung schätzen und bereit für nachhaltige Veränderung sind.
             </p>
           </div>
 
@@ -844,9 +847,12 @@ function IndexPage() {
                 </ul>
               </div>
 
-              <div className="pt-8 border-t border-border/80">
-                <p className="text-xs text-muted-foreground italic">
-                  „Der Coach kann begleiten, Wissen vermitteln und korrigieren. Gehen muss der Kunde selbst.“
+              <div className="pt-8 border-t border-border/80 space-y-2">
+                <p className="text-sm font-bold text-foreground">
+                  „Ich mache mich absichtlich überflüssig.“
+                </p>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Du lernst das System, bis du deinen Körper selbst steuerst — ein Leben lang. Der Coach kann begleiten, korrigieren und antreiben. Gehen muss der Kunde selbst.
                 </p>
               </div>
             </div>
