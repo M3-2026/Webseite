@@ -436,6 +436,7 @@ function PillarTriadExplorer() {
       link: "/metabolism",
       btnText: "M¹ Metabolism vertiefen",
       badgeColor: "bg-primary/10 text-primary border-primary/30",
+      nodeColor: "border-primary text-primary bg-primary/10 shadow-[0_0_20px_oklch(0.58_0.14_45/0.25)]",
     },
     m2: {
       tag: "M² · MOVEMENT",
@@ -451,6 +452,7 @@ function PillarTriadExplorer() {
       link: "/movement",
       btnText: "M² Movement vertiefen",
       badgeColor: "bg-emerald-600/10 text-emerald-700 border-emerald-600/30",
+      nodeColor: "border-emerald-600 text-emerald-700 bg-emerald-600/10 shadow-[0_0_20px_rgba(5,150,105,0.25)]",
     },
     m3: {
       tag: "M³ · MENTAL PERFORMANCE",
@@ -466,15 +468,96 @@ function PillarTriadExplorer() {
       link: "/mental-performance",
       btnText: "M³ Mental Performance vertiefen",
       badgeColor: "bg-indigo-600/10 text-indigo-700 border-indigo-600/30",
+      nodeColor: "border-indigo-600 text-indigo-700 bg-indigo-600/10 shadow-[0_0_20px_rgba(79,70,229,0.25)]",
     },
   };
 
   const current = pillars[activeTab];
 
   return (
-    <div className="rounded-3xl border border-border bg-card p-6 md:p-10 shadow-[var(--shadow-card)]">
+    <div className="rounded-3xl border border-border bg-card p-6 md:p-10 shadow-[var(--shadow-card)] space-y-10">
+      {/* Visual Interactive Triad Diagram */}
+      <div className="relative rounded-2xl bg-secondary/30 border border-border/70 p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-8 overflow-hidden">
+        {/* Interactive SVG Connector Triangle */}
+        <div className="relative w-full max-w-[320px] h-[220px] shrink-0 mx-auto select-none">
+          <svg className="w-full h-full" viewBox="0 0 320 220" fill="none">
+            {/* Background connecting lines */}
+            <path
+              d="M 160 35 L 265 175 L 55 175 Z"
+              stroke="currentColor"
+              className="text-border"
+              strokeWidth="2"
+              strokeDasharray="4 4"
+            />
+            {/* Active illuminated path */}
+            <path
+              d={
+                activeTab === "m1"
+                  ? "M 160 35 L 265 175 M 160 35 L 55 175"
+                  : activeTab === "m2"
+                  ? "M 55 175 L 160 35 M 55 175 L 265 175"
+                  : "M 265 175 L 160 35 M 265 175 L 55 175"
+              }
+              stroke={activeTab === "m1" ? "var(--color-primary)" : activeTab === "m2" ? "#059669" : "#4f46e5"}
+              strokeWidth="3"
+              strokeLinecap="round"
+              className="transition-all duration-500"
+            />
+          </svg>
+
+          {/* Node M1 (Top) */}
+          <button
+            type="button"
+            onClick={() => setActiveTab("m1")}
+            className={`absolute top-0 left-1/2 -translate-x-1/2 w-16 h-16 rounded-2xl border-2 flex flex-col items-center justify-center gap-0.5 cursor-pointer transition-all duration-300 ${
+              activeTab === "m1" ? current.nodeColor : "border-border bg-card hover:border-primary/60 text-muted-foreground"
+            }`}
+          >
+            <Flame className="w-4 h-4" />
+            <span className="font-display font-extrabold text-xs">M¹</span>
+          </button>
+
+          {/* Node M2 (Bottom-Left) */}
+          <button
+            type="button"
+            onClick={() => setActiveTab("m2")}
+            className={`absolute bottom-0 left-2 w-16 h-16 rounded-2xl border-2 flex flex-col items-center justify-center gap-0.5 cursor-pointer transition-all duration-300 ${
+              activeTab === "m2" ? current.nodeColor : "border-border bg-card hover:border-emerald-600/60 text-muted-foreground"
+            }`}
+          >
+            <Dumbbell className="w-4 h-4" />
+            <span className="font-display font-extrabold text-xs">M²</span>
+          </button>
+
+          {/* Node M3 (Bottom-Right) */}
+          <button
+            type="button"
+            onClick={() => setActiveTab("m3")}
+            className={`absolute bottom-0 right-2 w-16 h-16 rounded-2xl border-2 flex flex-col items-center justify-center gap-0.5 cursor-pointer transition-all duration-300 ${
+              activeTab === "m3" ? current.nodeColor : "border-border bg-card hover:border-indigo-600/60 text-muted-foreground"
+            }`}
+          >
+            <Brain className="w-4 h-4" />
+            <span className="font-display font-extrabold text-xs">M³</span>
+          </button>
+        </div>
+
+        {/* Visual Dynamic Caption */}
+        <div className="space-y-2 text-center md:text-left max-w-md">
+          <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider bg-card border border-border">
+            <Activity className="w-3.5 h-3.5 text-gold" />
+            <span>Interaktives Triaden-Zusammenspiel</span>
+          </div>
+          <p className="text-xs text-muted-foreground leading-relaxed">
+            {activeTab === "m1" && "M¹ liefert die biochemische Grundlage: Ohne gesunden Darm & aktiven Stoffwechsel verpufft jedes Training."}
+            {activeTab === "m2" && "M² formt die körperliche Belastbarkeit: Intelligente Bewegung schützt vor Schmerzen und baut echte Kraft auf."}
+            {activeTab === "m3" && "M³ verankert die Routinen im Alltag: Stressmanagement und Schlaf sichern die dauerhafte Umsetzung."}
+          </p>
+        </div>
+      </div>
+
       {/* Tab Switchers */}
-      <div className="grid grid-cols-3 gap-2 md:gap-3 p-1.5 rounded-2xl bg-secondary/60 border border-border mb-8">
+      <div className="grid grid-cols-3 gap-2 md:gap-3 p-1.5 rounded-2xl bg-secondary/60 border border-border">
         {(["m1", "m2", "m3"] as const).map((key) => (
           <button
             key={key}
@@ -694,7 +777,7 @@ function IndexPage() {
       {/* 3. PHILOSOPHIE: Verstehen vor Verändern */}
       {/* ---------------------------------------------------- */}
       <section id="philosophie" className="py-16 md:py-24 border-b border-border/70 bg-card">
-        <div className="max-w-5xl mx-auto px-5 md:px-6">
+        <div className="max-w-5xl mx-auto px-5 md:px-6 space-y-12">
           <div className="grid md:grid-cols-12 gap-10 items-center">
             <div className="md:col-span-5 space-y-4 text-left">
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
@@ -732,6 +815,53 @@ function IndexPage() {
                   „Verständnis, wenn Verständnis gebraucht wird. Arschtritt, wenn Arschtritt gebraucht wird.“
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Visual System Comparison Matrix */}
+          <div className="grid md:grid-cols-2 gap-6 pt-4">
+            {/* Klassischer Ansatz */}
+            <div className="rounded-2xl border border-destructive/30 bg-destructive/5 p-6 md:p-8 space-y-4">
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-destructive">
+                <X className="w-4 h-4" />
+                <span>Klassischer Fitness-Ansatz (Symptomfokus)</span>
+              </div>
+              <ul className="space-y-2.5 text-xs sm:text-sm text-muted-foreground">
+                <li className="flex items-start gap-2.5">
+                  <span className="text-destructive font-bold">✕</span>
+                  <span><strong>Isolierte Symptome:</strong> Man trainiert über Schmerzen hinweg und ignoriert Verdauung oder Stress.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-destructive font-bold">✕</span>
+                  <span><strong>Radikale Verbote:</strong> Crash-Diäten führen fast unausweichlich zum Jojo-Effekt.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-destructive font-bold">✕</span>
+                  <span><strong>Trainer-Abhängigkeit:</strong> Man folgt blind Plänen, ohne das System dahinter zu begreifen.</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* M3 Ansatz */}
+            <div className="rounded-2xl border border-gold/40 bg-gold/5 p-6 md:p-8 space-y-4">
+              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gold">
+                <Check className="w-4 h-4" />
+                <span>Das M³ Gesamtsystem (Ursachenbehebung)</span>
+              </div>
+              <ul className="space-y-2.5 text-xs sm:text-sm text-foreground/90 font-medium">
+                <li className="flex items-start gap-2.5">
+                  <span className="text-gold font-bold">✓</span>
+                  <span><strong>Biochemisches Fundament:</strong> Darm & Stoffwechsel zuerst stabilisieren für echte Zellenergie.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-gold font-bold">✓</span>
+                  <span><strong>Präzise Biomechanik:</strong> Technik vor Gewicht für schmerzfreie Belastbarkeit im Alltag.</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <span className="text-gold font-bold">✓</span>
+                  <span><strong>Echte Autonomie:</strong> Du verstehst die Zusammenhänge und steuerst deinen Körper selbst.</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -879,21 +1009,26 @@ function IndexPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
             {[
-              { step: "01", title: "Kennenlernen", desc: "Unverbindliches Gespräch über deine Situation, Ziele und Erwartungen." },
-              { step: "02", title: "Analyse", desc: "Ganzheitliche Bestandsaufnahme von Stoffwechsel, Bewegung und Alltag." },
-              { step: "03", title: "Strategie", desc: "Dein maßgeschneiderter Fahrplan mit klaren Prioritäten." },
-              { step: "04", title: "Begleitung", desc: "Schritt-für-Schritt Umsetzung mit engmaschiger Korrektur." },
-              { step: "05", title: "Routine", desc: "Verstetigung der Gewohnheiten bis zur vollständigen Selbstständigkeit." },
+              { step: "01", phase: "Diagnostik", title: "Kennenlernen", desc: "Unverbindliches Gespräch über deine Situation, Ziele und Erwartungen." },
+              { step: "02", phase: "Biometrie", title: "Analyse", desc: "Ganzheitliche Bestandsaufnahme von Stoffwechsel, Bewegung und Alltag." },
+              { step: "03", phase: "Masterplan", title: "Strategie", desc: "Dein maßgeschneiderter Fahrplan mit klaren Prioritäten." },
+              { step: "04", phase: "Begleitung", title: "Begleitung", desc: "Schritt-für-Schritt Umsetzung mit engmaschiger Korrektur." },
+              { step: "05", phase: "Autonomie", title: "Routine", desc: "Verstetigung der Gewohnheiten bis zur vollständigen Selbstständigkeit." },
             ].map((item, index) => (
               <div
                 key={index}
-                className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-gold/50 shadow-sm transition-all hover:translate-y-[-2px]"
+                className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-gold/50 shadow-sm transition-all hover:translate-y-[-2px] group"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-gold-gradient text-primary-foreground flex items-center justify-center font-display font-bold text-sm mb-4 shadow-[var(--shadow-gold)]">
-                    {item.step}
+                  <div className="flex items-center justify-between gap-2 mb-4">
+                    <div className="w-10 h-10 rounded-xl bg-gold-gradient text-primary-foreground flex items-center justify-center font-display font-bold text-sm shadow-[var(--shadow-gold)]">
+                      {item.step}
+                    </div>
+                    <span className="text-[10px] uppercase font-mono tracking-wider text-gold font-bold px-2 py-0.5 rounded-full bg-gold/10">
+                      {item.phase}
+                    </span>
                   </div>
-                  <h3 className="font-display font-bold text-lg text-foreground mb-2">
+                  <h3 className="font-display font-bold text-lg text-foreground mb-2 group-hover:text-gold transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-xs text-muted-foreground leading-relaxed">
