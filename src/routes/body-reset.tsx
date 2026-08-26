@@ -28,31 +28,45 @@ function BodyResetPage() {
           </Link>
 
           {/* HERO */}
-          <div className="mb-24">
-            <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold mb-8 animate-fade-in">
-              M¹ · Metabolism Offer
+          <div className="mb-20 grid lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-7 space-y-6">
+              <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold mb-2 animate-fade-in">
+                M¹ · Metabolism Offer
+              </div>
+
+              <h1 className="text-4xl sm:text-6xl md:text-7xl font-display font-extrabold leading-[0.95] tracking-tight">
+                M³ Body Reset
+              </h1>
+              <p className="text-xl md:text-2xl text-gold font-medium leading-relaxed max-w-2xl">
+                Gesundheit beginnt mit einer starken Grundlage: Dein Neustart von innen.
+              </p>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl whitespace-pre-line">
+                Mehr Energie. Mehr Wohlbefinden. Mehr Leistungsfähigkeit.
+                {"\n\n"}
+                Der M³ Body Reset unterstützt dich dabei, deinen Körper neu auszurichten – individuell, strukturiert und mit einem ganzheitlichen Blick auf Ernährung, Stoffwechsel und Mikrobiom.
+              </p>
+
+              <div className="pt-2">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full bg-gold-gradient px-8 py-4 font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
+                >
+                  Erst verstehen. Dann entscheiden. ➔ Erstgespräch
+                </a>
+              </div>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-display leading-[0.95] tracking-tight mb-8">
-              M³ Body Reset
-            </h1>
-            <p className="text-xl md:text-2xl text-gold font-medium leading-relaxed max-w-3xl mb-6">
-              Gesundheit beginnt mit einer starken Grundlage.
-            </p>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mb-12 whitespace-pre-line">
-              Mehr Energie. Mehr Wohlbefinden. Mehr Leistungsfähigkeit.
-              {"\n\n"}
-              Der M³ Body Reset unterstützt dich dabei, deinen Körper neu auszurichten – individuell, strukturiert und mit einem ganzheitlichen Blick auf Ernährung, Stoffwechsel und Gesundheit.
-            </p>
-
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-gold-gradient px-8 py-4 font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
-            >
-              Erst verstehen. Dann entscheiden. ➔ Erstgespräch
-            </a>
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="relative w-full max-w-md rounded-3xl overflow-hidden border-2 border-gold/40 shadow-[var(--shadow-gold)] bg-black group aspect-square">
+                <img
+                  src="/images/performance/card-body-reset.png"
+                  alt="M³ Body Reset – Dein Neustart von innen"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+            </div>
           </div>
 
           {/* ABSCHNITT 2: Warum überhaupt ein Body Reset? */}

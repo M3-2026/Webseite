@@ -40,6 +40,7 @@ interface ServiceItem {
   route: string;
   whatsappMessage: string;
   badge?: string;
+  image: string;
 }
 
 const services: ServiceItem[] = [
@@ -54,6 +55,7 @@ const services: ServiceItem[] = [
     badge: "Ganzheitliches Konzept",
     route: "/body-reset",
     whatsappMessage: "Hallo Michél, ich interessiere mich für den M³ Body Reset.",
+    image: "/images/performance/card-body-reset.png",
   },
   {
     name: "M³ Ernährungscoaching",
@@ -65,6 +67,7 @@ const services: ServiceItem[] = [
     badge: "1:1 Coaching",
     route: "/ernaehrungscoaching",
     whatsappMessage: "Hallo Michél, ich interessiere mich für das 1:1 Ernährungscoaching.",
+    image: "/images/performance/card-ernaehrungscoaching.png",
   },
   // M2
   {
@@ -77,6 +80,7 @@ const services: ServiceItem[] = [
     badge: "1:1 Personal Training",
     route: "/performance-training",
     whatsappMessage: "Hallo Michél, ich interessiere mich für das Performance Training.",
+    image: "/images/performance/card-performance-training.png",
   },
   {
     name: "M³ Schmerzfrei",
@@ -88,6 +92,7 @@ const services: ServiceItem[] = [
     badge: "Mobilität & Reha",
     route: "/schmerzfrei",
     whatsappMessage: "Hallo Michél, ich interessiere mich für das Schmerzfrei-Programm.",
+    image: "/images/performance/card-schmerzfrei.png",
   },
   {
     name: "Coaching für Zwei",
@@ -99,6 +104,7 @@ const services: ServiceItem[] = [
     badge: "Partner-Coaching",
     route: "/coaching-fuer-zwei",
     whatsappMessage: "Hallo Michél, wir interessieren uns für das Coaching für Zwei.",
+    image: "/images/performance/card-coaching-fuer-zwei.png",
   },
   // M3
   {
@@ -111,6 +117,7 @@ const services: ServiceItem[] = [
     badge: "Empfohlener Einstieg",
     route: "/system-start",
     whatsappMessage: "Hallo Michél, ich möchte mit dem M³ System Start beginnen.",
+    image: "/images/performance/card-system-start.png",
   },
   {
     name: "M³ Mental Performance",
@@ -122,6 +129,7 @@ const services: ServiceItem[] = [
     badge: "Mindset & Routinen",
     route: "/mental-performance",
     whatsappMessage: "Hallo Michél, ich interessiere mich für das Mental Performance Coaching.",
+    image: "/images/performance/card-m3-coaching.png",
   },
 ];
 
@@ -427,6 +435,8 @@ function PillarTriadExplorer() {
       headline: "Die Basis schaffen. Gesundheit von innen.",
       quote: "„Wenn dein Fundament brennt, nützt kein härteres Training.“",
       text: "Wir bringen Darm und Stoffwechsel in Ordnung — messbar, strukturiert und alltagstauglich. In M¹ regulieren wir Mikrobiom, Verdauung und zelluläre Vitalstoffe, damit dein Körper wieder die volle Energie für Training und Alltag hat.",
+      image: "/images/performance/m1-vitality-glass.jpg",
+      imageCaption: "Zelluläre Vitalstoffversorgung & Mikrobiom-Balance",
       features: [
         "M³ Body Reset – Modulares Konzept für Darm & Stoffwechsel",
         "Ganzheitliche Darm- & Stoffwechselbegleitung",
@@ -443,6 +453,8 @@ function PillarTriadExplorer() {
       headline: "In Bewegung kommen. Technik vor Gewicht.",
       quote: "„Bewegung schafft Leistungsfähigkeit, Stabilität und Vertrauen in den eigenen Körper.“",
       text: "Weder Drill noch blindes Auspowern: Wir trainieren deinen Körper intelligent, präzise und anatomisch sinnvoll. Schmerzen werden reduziert, Schwachstellen ausgeglichen und echte athletische Belastbarkeit aufgebaut.",
+      image: "/images/performance/m2-movement-flow.jpg",
+      imageCaption: "Intelligente Biomechanik & explosive Bewegungsqualität",
       features: [
         "M³ Performance Training – 1:1 Personal Coaching",
         "M³ Schmerzfrei – Mobilität & Gelenkentlastung",
@@ -459,6 +471,8 @@ function PillarTriadExplorer() {
       headline: "Dranbleiben. Aus Disziplin wird Routine.",
       quote: "„Mindset allein verändert nichts. Entscheidend ist die dauerhafte Umsetzung im echten Alltag.“",
       text: "Nachhaltige Veränderung scheitert selten am Wissen, sondern an fehlender Struktur im fordernden Alltag. M³ gibt dir Werkzeuge, Schlaf- und Stressstrategien an die Hand, bis du vollkommen eigenständig auf Kurs bleibst.",
+      image: "/images/performance/m3-neural-blueprint.jpg",
+      imageCaption: "Mentale Architektur, Schlafqualität & Gewohnheitsverankerung",
       features: [
         "M³ System Start – Die Eingangstür zur Analyse",
         "Stress- & Regenerationsarchitektur",
@@ -605,18 +619,35 @@ function PillarTriadExplorer() {
           </div>
         </div>
 
-        <div className="lg:col-span-5 rounded-2xl bg-secondary/40 border border-border p-6 md:p-8 space-y-4">
-          <h4 className="font-display font-bold text-xs uppercase tracking-widest text-muted-foreground">
-            Zentrale Bausteine in dieser Säule
-          </h4>
-          <ul className="space-y-3">
-            {current.features.map((feat, i) => (
-              <li key={i} className="flex items-start gap-3 text-sm text-foreground/90 leading-snug">
-                <CheckCircle2 className="w-4 h-4 text-gold shrink-0 mt-0.5" />
-                <span>{feat}</span>
-              </li>
-            ))}
-          </ul>
+        <div className="lg:col-span-5 flex flex-col gap-4">
+          {/* Visual Performance Preview Card */}
+          <div className="relative w-full h-48 sm:h-56 rounded-2xl overflow-hidden border border-border/80 group shadow-md bg-black">
+            <img
+              src={current.image}
+              alt={current.headline}
+              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent" />
+            <div className="absolute bottom-3 left-4 right-4 text-xs font-semibold text-white/95 drop-shadow flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-gold animate-pulse shrink-0" />
+              <span className="truncate">{current.imageCaption}</span>
+            </div>
+          </div>
+
+          <div className="rounded-2xl bg-secondary/40 border border-border p-5 space-y-3">
+            <h4 className="font-display font-bold text-xs uppercase tracking-widest text-muted-foreground">
+              Zentrale Bausteine in dieser Säule
+            </h4>
+            <ul className="space-y-2.5">
+              {current.features.map((feat, i) => (
+                <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-foreground/90 leading-snug">
+                  <CheckCircle2 className="w-4 h-4 text-gold shrink-0 mt-0.5" />
+                  <span>{feat}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -736,14 +767,25 @@ function IndexPage() {
               />
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[450px] h-20 bg-gold/20 blur-3xl rounded-full pointer-events-none" />
 
-              {/* Floating Credential Badge */}
+              {/* Floating Credential Badge Left */}
               <div className="absolute bottom-6 left-4 md:-left-8 bg-card/90 backdrop-blur-md border border-border/80 rounded-2xl p-3.5 shadow-lg flex items-center gap-3 animate-float-up">
-                <div className="w-10 h-10 rounded-xl bg-gold-gradient text-primary-foreground flex items-center justify-center font-display font-bold text-sm">
+                <div className="w-10 h-10 rounded-xl bg-gold-gradient text-primary-foreground flex items-center justify-center font-display font-bold text-sm shrink-0">
                   M³
                 </div>
                 <div>
                   <div className="font-display font-bold text-sm text-foreground">Michél Meier</div>
                   <div className="text-[11px] text-muted-foreground">Breakdance-Weltmeister & Gesundheitscoach</div>
+                </div>
+              </div>
+
+              {/* Floating Performance Triad Badge Right */}
+              <div className="hidden sm:flex absolute top-1/4 right-2 md:-right-8 bg-card/90 backdrop-blur-md border border-gold/40 rounded-2xl p-3.5 shadow-lg items-center gap-3 animate-float-up">
+                <div className="w-10 h-10 rounded-xl bg-gold/10 text-gold flex items-center justify-center font-bold text-sm border border-gold/30 shrink-0">
+                  3D
+                </div>
+                <div>
+                  <div className="font-display font-bold text-sm text-foreground">High Performance System</div>
+                  <div className="text-[11px] text-gold font-medium">Metabolism · Movement · Mindset</div>
                 </div>
               </div>
             </div>
@@ -779,7 +821,7 @@ function IndexPage() {
       <section id="philosophie" className="py-16 md:py-24 border-b border-border/70 bg-card">
         <div className="max-w-5xl mx-auto px-5 md:px-6 space-y-12">
           <div className="grid md:grid-cols-12 gap-10 items-center">
-            <div className="md:col-span-5 space-y-4 text-left">
+            <div className="md:col-span-5 space-y-5 text-left">
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
                 Die M³ Philosophie
               </span>
@@ -789,6 +831,20 @@ function IndexPage() {
               <p className="text-base text-gold font-medium italic">
                 „Wer seinen Körper besser versteht, trifft dauerhaft bessere Entscheidungen.“
               </p>
+
+              {/* Visual Philosophy Sketch Accent */}
+              <div className="relative rounded-2xl overflow-hidden border border-border/80 bg-black/60 shadow-md max-w-sm group">
+                <img
+                  src="/images/performance/m3-philosophy-sketch.jpg"
+                  alt="M³ Philosophie – Verstehen vor Verändern"
+                  className="w-full h-44 object-cover object-center grayscale contrast-125 opacity-90 group-hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
+                <div className="absolute bottom-2.5 left-3 right-3 text-[11px] font-mono text-gold/90 font-semibold tracking-wider">
+                  ANALYSE · BIOMECHANIK · ANATOMIE
+                </div>
+              </div>
             </div>
 
             <div className="md:col-span-7 space-y-4 text-base text-muted-foreground leading-relaxed">
@@ -1101,13 +1157,25 @@ function IndexPage() {
                 .map((s, idx) => (
                   <div
                     key={idx}
-                    className={`rounded-2xl border p-6 sm:p-8 flex flex-col justify-between transition-all duration-200 ${
+                    className={`rounded-2xl border p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 overflow-hidden group ${
                       s.badge
                         ? "border-gold/60 bg-gradient-to-br from-gold/10 via-card to-card shadow-[var(--shadow-gold)]"
                         : "border-border bg-card hover:border-primary/50 shadow-sm hover:shadow-md"
                     }`}
                   >
                     <div>
+                      {s.image && (
+                        <div className="relative w-full h-44 -mt-6 sm:-mt-8 -mx-6 sm:-mx-8 mb-5 overflow-hidden rounded-t-2xl border-b border-border/70 group-hover:border-gold/50 transition-colors bg-black">
+                          <img
+                            src={s.image}
+                            alt={s.name}
+                            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                            loading="lazy"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
+                        </div>
+                      )}
+
                       <div className="flex items-center justify-between gap-2 mb-3">
                         <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-primary">
                           {s.pillar} · {s.pillarName}
@@ -1219,13 +1287,25 @@ function IndexPage() {
                 .map((s, idx) => (
                   <div
                     key={idx}
-                    className={`rounded-2xl border p-6 flex flex-col justify-between transition-all duration-200 ${
+                    className={`rounded-2xl border p-6 flex flex-col justify-between transition-all duration-300 overflow-hidden group ${
                       s.badge
                         ? "border-gold/60 bg-gradient-to-br from-gold/10 via-card to-card shadow-[var(--shadow-gold)]"
                         : "border-border bg-card hover:border-emerald-600/50 shadow-sm hover:shadow-md"
                     }`}
                   >
                     <div>
+                      {s.image && (
+                        <div className="relative w-full h-40 -mt-6 -mx-6 mb-5 overflow-hidden rounded-t-2xl border-b border-border/70 group-hover:border-gold/50 transition-colors bg-black">
+                          <img
+                            src={s.image}
+                            alt={s.name}
+                            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                            loading="lazy"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
+                        </div>
+                      )}
+
                       <div className="flex items-center justify-between gap-2 mb-3">
                         <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-emerald-700">
                           {s.pillar} · {s.pillarName}
@@ -1310,13 +1390,25 @@ function IndexPage() {
                 .map((s, idx) => (
                   <div
                     key={idx}
-                    className={`rounded-2xl border p-6 sm:p-8 flex flex-col justify-between transition-all duration-200 ${
+                    className={`rounded-2xl border p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 overflow-hidden group ${
                       s.badge
                         ? "border-gold/60 bg-gradient-to-br from-gold/10 via-card to-card shadow-[var(--shadow-gold)]"
                         : "border-border bg-card hover:border-indigo-600/50 shadow-sm hover:shadow-md"
                     }`}
                   >
                     <div>
+                      {s.image && (
+                        <div className="relative w-full h-44 -mt-6 sm:-mt-8 -mx-6 sm:-mx-8 mb-5 overflow-hidden rounded-t-2xl border-b border-border/70 group-hover:border-gold/50 transition-colors bg-black">
+                          <img
+                            src={s.image}
+                            alt={s.name}
+                            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                            loading="lazy"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
+                        </div>
+                      )}
+
                       <div className="flex items-center justify-between gap-2 mb-3">
                         <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-indigo-700">
                           {s.pillar} · {s.pillarName}

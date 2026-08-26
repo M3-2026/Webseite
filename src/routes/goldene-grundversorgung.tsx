@@ -28,31 +28,49 @@ function GoldeneGrundversorgungPage() {
           </Link>
 
           {/* HERO */}
-          <div className="mb-24">
-            <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold mb-8 animate-fade-in">
-              M¹ · Metabolism Offer
+          <div className="mb-20 grid lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-7 space-y-6">
+              <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold mb-2 animate-fade-in">
+                M¹ · Metabolism Offer
+              </div>
+
+              <h1 className="text-4xl sm:text-6xl md:text-7xl font-display font-extrabold leading-[0.95] tracking-tight">
+                Goldene Grundversorgung
+              </h1>
+              <p className="text-xl md:text-2xl text-gold font-medium leading-relaxed max-w-2xl">
+                Gesundheit beginnt mit den richtigen Grundlagen: Zelluläre Versorgung jeden Tag.
+              </p>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl whitespace-pre-line">
+                Ein leistungsfähiger Körper benötigt jeden Tag eine Vielzahl an Nährstoffen, um Stoffwechselprozesse, Regeneration und normale Körperfunktionen optimal zu unterstützen.
+                {"\n\n"}
+                Die Goldene Grundversorgung bildet innerhalb des M³-Systems die Basis für eine individuelle und langfristig gedachte Gesundheitsstrategie.
+              </p>
+
+              <div className="pt-2">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full bg-gold-gradient px-8 py-4 font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
+                >
+                  Kostenloses Erstgespräch
+                </a>
+              </div>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-display leading-[0.95] tracking-tight mb-8">
-              Goldene Grundversorgung
-            </h1>
-            <p className="text-xl md:text-2xl text-gold font-medium leading-relaxed max-w-3xl mb-6">
-              Gesundheit beginnt mit den richtigen Grundlagen.
-            </p>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mb-12 whitespace-pre-line">
-              Ein leistungsfähiger Körper benötigt jeden Tag eine Vielzahl an Nährstoffen, um Stoffwechselprozesse, Regeneration und normale Körperfunktionen optimal zu unterstützen.
-              {"\n\n"}
-              Die Goldene Grundversorgung bildet innerhalb des M³-Systems die Basis für eine individuelle und langfristig gedachte Gesundheitsstrategie.
-            </p>
-
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-gold-gradient px-8 py-4 font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
-            >
-              Kostenloses Erstgespräch
-            </a>
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="relative w-full max-w-sm rounded-3xl overflow-hidden border-2 border-gold/40 shadow-[var(--shadow-gold)] bg-black group aspect-square">
+                <img
+                  src="/images/performance/m1-cellular-capsule.jpg"
+                  alt="Goldene Grundversorgung – Zelluläre Reinheit"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                <div className="absolute bottom-3 left-4 right-4 text-xs font-mono text-gold font-bold text-center">
+                  ZELLULÄRE BASISVERSORGUNG
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* ABSCHNITT 2: Warum überhaupt eine Grundversorgung? */}

@@ -28,31 +28,45 @@ function PerformanceTrainingPage() {
           </Link>
 
           {/* HERO */}
-          <div className="mb-24">
-            <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold mb-8 animate-fade-in">
-              M² · Movement Offer
+          <div className="mb-20 grid lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-7 space-y-6">
+              <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold mb-2 animate-fade-in">
+                M² · Movement Offer
+              </div>
+
+              <h1 className="text-4xl sm:text-6xl md:text-7xl font-display font-extrabold leading-[0.95] tracking-tight">
+                M³ Performance Training
+              </h1>
+              <p className="text-xl md:text-2xl text-gold font-medium leading-relaxed max-w-2xl">
+                Trainiere nicht härter. Trainiere intelligenter: Stärke mit System.
+              </p>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl whitespace-pre-line">
+                Nachhaltige Leistungsfähigkeit entsteht nicht durch Zufall oder sinnloses Auspowern.
+                {"\n\n"}
+                Mit einer maßgeschneiderten 1:1 Strategie, anatomisch präziser Belastungssteuerung und 25 Jahren Praxiserfahrung schaffen wir echte Kraft, Gelenkstabilität und Belastbarkeit für Beruf und Alltag.
+              </p>
+
+              <div className="pt-2">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full bg-gold-gradient px-8 py-4 font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
+                >
+                  Kostenloses Erstgespräch
+                </a>
+              </div>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-display leading-[0.95] tracking-tight mb-8">
-              M³ Performance Training
-            </h1>
-            <p className="text-xl md:text-2xl text-gold font-medium leading-relaxed max-w-3xl mb-6">
-              Trainiere nicht härter. Trainiere intelligenter.
-            </p>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mb-12 whitespace-pre-line">
-              Nachhaltige Leistungsfähigkeit entsteht nicht durch Zufall.
-              {"\n\n"}
-              Mit einer individuellen Strategie, einer sinnvollen Belastungssteuerung und einem strukturierten Trainingskonzept schaffen wir die Grundlage für langfristige Fortschritte.
-            </p>
-
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-gold-gradient px-8 py-4 font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
-            >
-              Kostenloses Erstgespräch
-            </a>
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="relative w-full max-w-md rounded-3xl overflow-hidden border-2 border-gold/40 shadow-[var(--shadow-gold)] bg-black group aspect-square">
+                <img
+                  src="/images/performance/card-performance-training.png"
+                  alt="M³ Performance Training – Stärke mit System"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+            </div>
           </div>
 
           {/* ABSCHNITT 2: Warum individuelles Performance Training? */}

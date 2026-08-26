@@ -28,31 +28,45 @@ function CoachingFuerZweiPage() {
           </Link>
 
           {/* HERO */}
-          <div className="mb-24">
-            <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold mb-8 animate-fade-in">
-              M² · Movement Offer
+          <div className="mb-20 grid lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-7 space-y-6">
+              <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold mb-2 animate-fade-in">
+                M² · Movement Offer
+              </div>
+
+              <h1 className="text-4xl sm:text-6xl md:text-7xl font-display font-extrabold leading-[0.95] tracking-tight">
+                M³ Coaching für Zwei
+              </h1>
+              <p className="text-xl md:text-2xl text-gold font-medium leading-relaxed max-w-2xl">
+                Gemeinsam fällt Veränderung leichter: Gemeinsam stark.
+              </p>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl whitespace-pre-line">
+                Gemeinsame Ziele schaffen maximale Verbindlichkeit, Motivation und Freude an der nachhaltigen Veränderung.
+                {"\n\n"}
+                Mit dem M³ Coaching für Zwei trainiert ihr gemeinsam als Paar, Freunde oder Geschäftspartner – individuell angepasst an das jeweilige Leistungsniveau jedes Einzelnen.
+              </p>
+
+              <div className="pt-2">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full bg-gold-gradient px-8 py-4 font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
+                >
+                  Kostenloses Erstgespräch
+                </a>
+              </div>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-display leading-[0.95] tracking-tight mb-8">
-              M³ Coaching für Zwei
-            </h1>
-            <p className="text-xl md:text-2xl text-gold font-medium leading-relaxed max-w-3xl mb-6">
-              Gemeinsam fällt Veränderung leichter.
-            </p>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mb-12 whitespace-pre-line">
-              Gemeinsame Ziele schaffen Verbindlichkeit, Motivation und Freude an der Veränderung.
-              {"\n\n"}
-              Mit dem M³ Coaching für Zwei begleitet ihr euch gegenseitig auf eurem Weg zu mehr Gesundheit, Leistungsfähigkeit und einem aktiveren Alltag.
-            </p>
-
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-gold-gradient px-8 py-4 font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
-            >
-              Kostenloses Erstgespräch
-            </a>
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="relative w-full max-w-md rounded-3xl overflow-hidden border-2 border-gold/40 shadow-[var(--shadow-gold)] bg-black group aspect-square">
+                <img
+                  src="/images/performance/card-coaching-fuer-zwei.png"
+                  alt="M³ Coaching für Zwei – Gemeinsam stark."
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+            </div>
           </div>
 
           {/* ABSCHNITT 2: Warum gemeinsam? */}

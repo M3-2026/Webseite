@@ -28,31 +28,45 @@ function SystemStartPage() {
           </Link>
 
           {/* HERO */}
-          <div className="mb-24">
-            <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold mb-8 animate-fade-in">
-              M³ · Orientierung
+          <div className="mb-20 grid lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-7 space-y-6">
+              <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold mb-2 animate-fade-in">
+                M³ · Orientierung
+              </div>
+
+              <h1 className="text-4xl sm:text-6xl md:text-7xl font-display font-extrabold leading-[0.95] tracking-tight">
+                M³ System Start
+              </h1>
+              <p className="text-xl md:text-2xl text-gold font-medium leading-relaxed max-w-2xl">
+                Der richtige Weg beginnt mit einer klaren Ausgangslage.
+              </p>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl whitespace-pre-line">
+                Jeder Mensch startet an einem anderen Punkt.
+                {"\n\n"}
+                Deshalb beginnt bei M³ keine Zusammenarbeit mit einem Standardplan, sondern mit einer individuellen Analyse deiner Situation, deiner Ziele und deiner persönlichen Voraussetzungen über alle drei Säulen.
+              </p>
+
+              <div className="pt-2">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-full bg-gold-gradient px-8 py-4 font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
+                >
+                  Erst verstehen. Dann entscheiden. ➔ Erstgespräch
+                </a>
+              </div>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-display leading-[0.95] tracking-tight mb-8">
-              M³ System Start
-            </h1>
-            <p className="text-xl md:text-2xl text-gold font-medium leading-relaxed max-w-3xl mb-6">
-              Der richtige Weg beginnt mit einer klaren Ausgangslage.
-            </p>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mb-12 whitespace-pre-line">
-              Jeder Mensch startet an einem anderen Punkt.
-              {"\n\n"}
-              Deshalb beginnt bei M³ keine Zusammenarbeit mit einem Standardplan, sondern mit einer individuellen Analyse deiner Situation, deiner Ziele und deiner persönlichen Voraussetzungen.
-            </p>
-
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full bg-gold-gradient px-8 py-4 font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
-            >
-              Erst verstehen. Dann entscheiden. ➔ Erstgespräch
-            </a>
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="relative w-full max-w-md rounded-3xl overflow-hidden border-2 border-gold/40 shadow-[var(--shadow-gold)] bg-black group aspect-square">
+                <img
+                  src="/images/performance/card-system-start.png"
+                  alt="M³ System Start – Dein strukturierter Einstieg"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                />
+              </div>
+            </div>
           </div>
 
           {/* ABSCHNITT 2: Warum der System Start? */}
