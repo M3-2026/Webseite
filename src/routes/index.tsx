@@ -702,90 +702,142 @@ function IndexPage() {
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-gold/8 blur-3xl" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-5 md:px-6 flex flex-col">
-          <div className="max-w-4xl mx-auto text-center animate-float-up space-y-6">
-            {/* Top Badge */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-card/80 backdrop-blur px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold font-bold shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-              M³ Systemische Performance & Gesundheit
-            </div>
-
-            {/* Main Headline Hierarchy */}
-            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-extrabold leading-[1.02] tracking-tight text-foreground">
-              Leistung beginnt mit <span className="text-gold">Gesundheit.</span>
-            </h1>
-
-            {/* Emotional Subclaim */}
-            <p className="text-xl md:text-3xl font-display font-bold text-foreground/90 tracking-tight">
-              Mehr Energie. Mehr Leistung. Mehr Leben.
-            </p>
-
-            {/* Value Proposition */}
-            <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Gesundheit nicht dem Zufall überlassen. Das eigene Leben aktiv gestalten.
-              M³ verbindet Stoffwechsel (<span className="text-foreground font-semibold">M¹</span>), intelligentes Training (<span className="text-foreground font-semibold">M²</span>) und mentale Routinen (<span className="text-foreground font-semibold">M³</span>) zu einem System, das wirklich zu deinem Alltag passt.
-            </p>
-
-            {/* Dual Actions */}
-            <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-8 py-4 text-sm md:text-base font-bold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95 hover:scale-[1.02] active:scale-[0.98] transition-all"
-              >
-                <MessageCircle className="w-5 h-5" />
-                Erst verstehen. Dann entscheiden. ➔ Orientierungsgespräch
-              </a>
-              <Link
-                to="/"
-                hash="system-kompass"
-                className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-card/90 px-8 py-4 text-sm md:text-base font-semibold text-foreground hover:bg-secondary transition-all shadow-sm"
-              >
-                <Compass className="w-4 h-4 text-gold" />
-                System-Kompass starten
-              </Link>
-            </div>
-
-            {/* Trust Anchors */}
-            <div className="pt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-              <span>✓ Verstehen vor Verändern</span>
-              <span className="hidden sm:inline">·</span>
-              <span>✓ Individuell statt Stange</span>
-              <span className="hidden sm:inline">·</span>
-              <span>✓ Ziel: Selbstständigkeit</span>
-            </div>
-          </div>
-
-          {/* Hero Avatar Michél Meier */}
-          <div className="mt-8 md:mt-10 flex justify-center relative">
-            <div className="relative">
-              <img
-                src={avatar}
-                alt="Michél Meier – Gründer & Coach M³ Performance"
-                className="avatar-shadow h-[62vh] sm:h-[72vh] md:h-[80vh] max-h-[820px] w-auto object-contain object-bottom select-none pointer-events-none animate-float-up"
-              />
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[450px] h-20 bg-gold/20 blur-3xl rounded-full pointer-events-none" />
-
-              {/* Floating Credential Badge Left */}
-              <div className="absolute bottom-6 left-4 md:-left-8 bg-card/90 backdrop-blur-md border border-border/80 rounded-2xl p-3.5 shadow-lg flex items-center gap-3 animate-float-up">
-                <div className="w-10 h-10 rounded-xl bg-gold-gradient text-primary-foreground flex items-center justify-center font-display font-bold text-sm shrink-0">
-                  M³
-                </div>
-                <div>
-                  <div className="font-display font-bold text-sm text-foreground">Michél Meier</div>
-                  <div className="text-[11px] text-muted-foreground">Breakdance-Weltmeister & Gesundheitscoach</div>
-                </div>
+        <div className="relative max-w-7xl mx-auto px-5 md:px-6">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-end pt-4 md:pt-8 pb-0">
+            {/* Left Column: Left-Aligned Text Block */}
+            <div className="lg:col-span-7 space-y-6 pb-8 lg:pb-16 text-left animate-float-up">
+              {/* Top Badge */}
+              <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-card/80 backdrop-blur px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold font-bold shadow-sm">
+                <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
+                M³ Systemische Performance & Gesundheit
               </div>
 
-              {/* Floating Performance Triad Badge Right */}
-              <div className="hidden sm:flex absolute top-1/4 right-2 md:-right-8 bg-card/90 backdrop-blur-md border border-gold/40 rounded-2xl p-3.5 shadow-lg items-center gap-3 animate-float-up">
-                <div className="w-10 h-10 rounded-xl bg-gold/10 text-gold flex items-center justify-center font-bold text-sm border border-gold/30 shrink-0">
-                  3D
+              {/* Main Headline Hierarchy */}
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold leading-[1.02] tracking-tight text-foreground text-left">
+                Leistung beginnt mit <span className="text-gold">Gesundheit.</span>
+              </h1>
+
+              {/* Emotional Subclaim */}
+              <p className="text-xl md:text-2xl lg:text-3xl font-display font-bold text-foreground/90 tracking-tight text-left">
+                Mehr Energie. Mehr Leistung. Mehr Leben.
+              </p>
+
+              {/* Value Proposition */}
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-left max-w-xl">
+                Gesundheit nicht dem Zufall überlassen. Das eigene Leben aktiv gestalten.
+                M³ verbindet Stoffwechsel (<span className="text-foreground font-semibold">M¹</span>), intelligentes Training (<span className="text-foreground font-semibold">M²</span>) und mentale Routinen (<span className="text-foreground font-semibold">M³</span>) zu einem System, das wirklich zu deinem Alltag passt.
+              </p>
+
+              {/* Dual Actions (Left-Aligned) */}
+              <div className="pt-2 flex flex-wrap items-center gap-4 text-left">
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-7 py-4 text-sm md:text-base font-bold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95 hover:scale-[1.02] active:scale-[0.98] transition-all"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Erst verstehen. Dann entscheiden. ➔ Orientierungsgespräch
+                </a>
+                <Link
+                  to="/"
+                  hash="system-kompass"
+                  className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-card/90 px-7 py-4 text-sm md:text-base font-semibold text-foreground hover:bg-secondary transition-all shadow-sm"
+                >
+                  <Compass className="w-4 h-4 text-gold" />
+                  System-Kompass starten
+                </Link>
+              </div>
+
+              {/* Trust Anchors (Left-Aligned) */}
+              <div className="pt-1 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground text-left">
+                <span>✓ Verstehen vor Verändern</span>
+                <span className="hidden sm:inline">·</span>
+                <span>✓ Individuell statt Stange</span>
+                <span className="hidden sm:inline">·</span>
+                <span>✓ Ziel: Selbstständigkeit</span>
+              </div>
+
+              {/* M³ Performance Leitspruch */}
+              <div className="pt-3 border-t border-border/60 max-w-xl">
+                <div className="flex items-start gap-3 rounded-2xl bg-secondary/50 border border-border/70 p-3.5 shadow-sm">
+                  <div className="w-8 h-8 rounded-xl bg-gold/15 text-gold flex items-center justify-center font-serif text-lg font-bold shrink-0 mt-0.5">
+                    „
+                  </div>
+                  <div className="space-y-0.5">
+                    <p className="text-xs sm:text-sm font-medium text-foreground italic">
+                      „Wer seinen Körper versteht, trifft dauerhaft bessere Entscheidungen.“
+                    </p>
+                    <div className="text-[10px] font-mono uppercase tracking-wider text-gold font-bold">
+                      M³ Leitsatz · Struktur statt Chaos
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <div className="font-display font-bold text-sm text-foreground">High Performance System</div>
-                  <div className="text-[11px] text-gold font-medium">Metabolism · Movement · Mindset</div>
+              </div>
+            </div>
+
+            {/* Right Column: Hero Avatar & Floating M³ Performance Zitate / Motivationssprüche */}
+            <div className="lg:col-span-5 relative flex justify-center items-end self-end pt-8 lg:pt-0">
+              <div className="relative w-full max-w-[420px] lg:max-w-none flex justify-center items-end">
+                <img
+                  src={avatar}
+                  alt="Michél Meier – Gründer & Coach M³ Performance"
+                  className="avatar-shadow h-[52vh] sm:h-[62vh] lg:h-[72vh] max-h-[760px] w-auto object-contain object-bottom select-none pointer-events-none animate-float-up z-10"
+                />
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[320px] sm:w-[400px] h-24 bg-gold/20 blur-3xl rounded-full pointer-events-none" />
+
+                {/* Motivationsspruch 1: Oben Links (Fundament & Stoffwechsel) */}
+                <div className="absolute top-2 -left-2 sm:-left-6 max-w-[210px] bg-card/95 backdrop-blur-md border border-gold/40 rounded-2xl p-3 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform">
+                  <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider text-gold font-bold mb-1">
+                    <Flame className="w-3.5 h-3.5 text-gold" />
+                    <span>M¹ · Fundament</span>
+                  </div>
+                  <p className="text-[11px] sm:text-xs font-medium text-foreground italic leading-snug">
+                    „Wenn dein Fundament brennt, nützt kein härteres Training.“
+                  </p>
+                </div>
+
+                {/* Motivationsspruch 2: Oben Rechts (Biomechanik & Training) */}
+                <div className="absolute top-16 -right-2 sm:-right-6 max-w-[200px] bg-card/95 backdrop-blur-md border border-emerald-600/40 rounded-2xl p-3 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform">
+                  <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider text-emerald-600 font-bold mb-1">
+                    <Dumbbell className="w-3.5 h-3.5 text-emerald-600" />
+                    <span>M² · Biomechanik</span>
+                  </div>
+                  <p className="text-[11px] sm:text-xs font-medium text-foreground italic leading-snug">
+                    „Technik schlägt Gewicht – Immer.“
+                  </p>
+                </div>
+
+                {/* Motivationsspruch 3: Mitte Rechts (Mindset & Routinen) */}
+                <div className="absolute bottom-32 -right-2 sm:-right-8 max-w-[220px] bg-card/95 backdrop-blur-md border border-indigo-600/40 rounded-2xl p-3 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform">
+                  <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider text-indigo-400 font-bold mb-1">
+                    <Brain className="w-3.5 h-3.5 text-indigo-400" />
+                    <span>M³ · Mindset</span>
+                  </div>
+                  <p className="text-[11px] sm:text-xs font-medium text-foreground italic leading-snug">
+                    „Routine schlägt flüchtige Motivation.“
+                  </p>
+                </div>
+
+                {/* Credential Badge: Unten Links */}
+                <div className="absolute bottom-4 -left-2 sm:-left-6 bg-card/95 backdrop-blur-md border border-border/90 rounded-2xl p-3 shadow-xl flex items-center gap-3 animate-float-up z-20">
+                  <div className="w-10 h-10 rounded-xl bg-gold-gradient text-primary-foreground flex items-center justify-center font-display font-bold text-sm shrink-0">
+                    M³
+                  </div>
+                  <div className="text-left">
+                    <div className="font-display font-bold text-xs sm:text-sm text-foreground">Michél Meier</div>
+                    <div className="text-[10px] sm:text-[11px] text-gold font-medium">Breakdance-Weltmeister & Coach</div>
+                  </div>
+                </div>
+
+                {/* Motivationsspruch 4: Unten Rechts (Klartext & Führung) */}
+                <div className="hidden sm:block absolute -bottom-3 right-0 sm:right-2 max-w-[210px] bg-card/95 backdrop-blur-md border border-gold/30 rounded-2xl p-2.5 shadow-lg animate-float-up z-20 text-left">
+                  <div className="text-[10px] font-bold uppercase tracking-wider text-gold font-mono mb-0.5">
+                    Autonomie & Klarheit
+                  </div>
+                  <p className="text-[11px] text-foreground font-medium italic leading-tight">
+                    „Ich mache mich absichtlich überflüssig.“
+                  </p>
                 </div>
               </div>
             </div>
