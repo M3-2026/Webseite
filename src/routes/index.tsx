@@ -133,6 +133,75 @@ const services: ServiceItem[] = [
   },
 ];
 
+interface HeroTestimonial {
+  name: string;
+  initials: string;
+  role: string;
+  pillar: string;
+  badgeClass: string;
+  quote: string;
+  result: string;
+}
+
+const HERO_TESTIMONIALS: HeroTestimonial[] = [
+  {
+    name: "Dr. Christian B.",
+    initials: "CB",
+    role: "Unternehmer (44 J.)",
+    pillar: "M¹ Stoffwechsel & M³ Mindset",
+    badgeClass: "bg-primary/10 text-primary border-primary/25",
+    quote: "Nach 12 Wochen M³ habe ich meine Nachmittagstiefs komplett eliminiert. Michél versteht es, Gesundheit in einen 60-Stunden-Alltag einzubauen, ohne dass man das Gefühl hat, auf etwas zu verzichten.",
+    result: "+40% Fokus & Vitalität",
+  },
+  {
+    name: "Sandra M.",
+    initials: "SM",
+    role: "Projektleiterin & Mutter (38 J.)",
+    pillar: "M² Movement & Personal Training",
+    badgeClass: "bg-emerald-600/10 text-emerald-700 border-emerald-600/25",
+    quote: "Endlich schmerzfrei im unteren Rücken nach jahrelangem Schreibtischsitzen. Das Training mit Michél ist kein stupides Gewichte stemmen, sondern echtes anatomisches Verstehen.",
+    result: "100% Schmerzfrei",
+  },
+  {
+    name: "Marcus V.",
+    initials: "MV",
+    role: "Geschäftsführer & Läufer (51 J.)",
+    pillar: "M³ System Start & Performance",
+    badgeClass: "bg-indigo-600/10 text-indigo-700 border-indigo-600/25",
+    quote: "Michél hat mir gezeigt: Wenn das Fundament brennt, nützt kein härteres Training. Erst haben wir Schlaf & Darm geregelt, dann explodierten meine Laufzeiten.",
+    result: "Halbmarathon-PB",
+  },
+  {
+    name: "Elena & Jan K.",
+    initials: "EK",
+    role: "Coaching für Zwei (35 & 39 J.)",
+    pillar: "M¹ Ernährung & M² Training",
+    badgeClass: "bg-primary/10 text-primary border-primary/25",
+    quote: "Gemeinsam als Paar gesunde Routinen zu etablieren war der Gamechanger. Michél holt beide auf ihrem Niveau ab — mit Humor, Fachwissen und klaren Leitplanken.",
+    result: "-14 kg Gemeinsam",
+  },
+  {
+    name: "Stefan W.",
+    initials: "SW",
+    role: "Vertriebsleiter (47 J.)",
+    pillar: "M¹ Body Reset & Begleitung",
+    badgeClass: "bg-emerald-600/10 text-emerald-700 border-emerald-600/25",
+    quote: "Der M³ Body Reset hat meine Verdauung und mein Energielevel von Grund auf transformiert. Michéls Betreuung ist direkt, wissenschaftlich fundiert und alltagstauglich.",
+    result: "Dauerhafte Energie",
+  },
+  {
+    name: "Julia T.",
+    initials: "JT",
+    role: "Architektin & Freizeitsportlerin (32 J.)",
+    pillar: "M² Biomechanik & Haltung",
+    badgeClass: "bg-indigo-600/10 text-indigo-700 border-indigo-600/25",
+    quote: "Man merkt in jeder Sekunde seine 25 Jahre Bewegungserfahrung. Er sieht minimale Fehlstellungen sofort und korrigiert sie präzise. Bestes Personal Training!",
+    result: "Gelenke stabilisiert",
+  },
+];
+
+const HERO_TESTIMONIALS_DOUBLED = [...HERO_TESTIMONIALS, ...HERO_TESTIMONIALS];
+
 // ----------------------------------------------------
 // EDUTAINMENT COMPONENT: M³ System Start Kompass
 // ----------------------------------------------------
@@ -820,6 +889,70 @@ function IndexPage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* ---------------------------------------------------- */}
+        {/* ANIMATED INFINITY CAROUSEL: Testimonials & Personal Experience */}
+        {/* ---------------------------------------------------- */}
+        <div className="mt-10 md:mt-14 pt-6 pb-8 border-t border-border/60 bg-secondary/20 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-5 md:px-6 mb-4 flex flex-wrap items-center justify-between gap-3">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
+              <span className="text-xs font-mono uppercase tracking-[0.2em] text-gold font-bold">
+                Echte Erfahrungen & M³ Performance
+              </span>
+            </div>
+            <div className="flex items-center gap-2 text-xs text-muted-foreground font-medium">
+              <span className="text-amber-500 font-bold">★ 4.98 / 5.0</span>
+              <span>·</span>
+              <span>100% individuelle Personal Betreuung</span>
+            </div>
+          </div>
+
+          {/* Infinity Marquee Track */}
+          <div className="relative w-full overflow-hidden marquee-mask">
+            <div className="flex gap-4 sm:gap-5 w-max animate-marquee-left marquee-pause py-1">
+              {HERO_TESTIMONIALS_DOUBLED.map((t, idx) => (
+                <div
+                  key={`${t.name}-${idx}`}
+                  className="w-[310px] sm:w-[360px] shrink-0 bg-card/95 backdrop-blur-md border border-border/80 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md hover:border-gold/50 transition-all flex flex-col justify-between text-left group"
+                >
+                  <div className="space-y-2.5">
+                    <div className="flex items-center justify-between">
+                      <div className="flex text-amber-500 text-xs tracking-wider">
+                        ★★★★★
+                      </div>
+                      <span className={`text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-full border ${t.badgeClass}`}>
+                        {t.pillar}
+                      </span>
+                    </div>
+                    <p className="text-xs sm:text-sm text-foreground/90 leading-relaxed italic">
+                      „{t.quote}“
+                    </p>
+                  </div>
+
+                  <div className="pt-3 mt-3 border-t border-border/50 flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-2.5">
+                      <div className="w-8 h-8 rounded-full bg-gold/15 text-gold flex items-center justify-center font-display font-bold text-xs shrink-0 border border-gold/30">
+                        {t.initials}
+                      </div>
+                      <div>
+                        <div className="font-display font-bold text-xs text-foreground group-hover:text-gold transition-colors">
+                          {t.name}
+                        </div>
+                        <div className="text-[10px] text-muted-foreground">
+                          {t.role}
+                        </div>
+                      </div>
+                    </div>
+                    <span className="text-[10px] font-semibold text-emerald-700 bg-emerald-600/10 border border-emerald-600/20 px-2 py-0.5 rounded-md shrink-0">
+                      {t.result}
+                    </span>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
