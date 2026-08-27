@@ -202,47 +202,16 @@ const HERO_TESTIMONIALS: HeroTestimonial[] = [
 
 const HERO_TESTIMONIALS_DOUBLED = [...HERO_TESTIMONIALS, ...HERO_TESTIMONIALS];
 
-interface HeroPerformancePicture {
-  image: string;
-  title: string;
-  badge: string;
-  tagline: string;
-}
-
-const HERO_PERFORMANCE_PICTURES: HeroPerformancePicture[] = [
-  {
-    image: "/images/performance/hero-performance-1.jpg",
-    title: "Breakdance Weltklasse",
-    badge: "IDO World Champion",
-    tagline: "Dynamische Flugphase & pure Körperspannung",
-  },
-  {
-    image: "/images/performance/hero-performance-2.jpg",
-    title: "Handwerk & Disziplin",
-    badge: "25+ Jahre Praxis",
-    tagline: "Klassischer Headstand Freeze in Reinform",
-  },
-  {
-    image: "/images/performance/hero-performance-5.jpg",
-    title: "Akrobatik & Flow",
-    badge: "Körperspannung M²",
-    tagline: "One-Arm Elbow Freeze & Beinkontrolle",
-  },
-  {
-    image: "/images/performance/hero-performance-3.jpg",
-    title: "Biomechanik & Balance",
-    badge: "M² Movement Mastery",
-    tagline: "Funktionelle Gelenkkontrolle & Hebelkraft",
-  },
-  {
-    image: "/images/performance/hero-performance-4.jpg",
-    title: "Präzision & Athletik",
-    badge: "Master Personal Training",
-    tagline: "One-Arm Balance & absolute Körperbeherrschung",
-  },
+const HERO_PERFORMANCE_PICTURES = [
+  { image: "/images/performance/hero-performance-1.jpg", alt: "Michél Meier – Breakdance World Champion Flying Freeze" },
+  { image: "/images/performance/hero-performance-2.jpg", alt: "Michél Meier – Headstand Freeze Studio" },
+  { image: "/images/performance/hero-performance-5.jpg", alt: "Michél Meier – OBEY Cap Elbow Lever Freeze" },
+  { image: "/images/performance/hero-performance-3.jpg", alt: "Michél Meier – Urban Street Balance Freeze" },
+  { image: "/images/performance/hero-performance-4.jpg", alt: "Michél Meier – Rooftop One-Arm Freeze" },
 ];
 
 const HERO_PERFORMANCE_PICTURES_DOUBLED = [
+  ...HERO_PERFORMANCE_PICTURES,
   ...HERO_PERFORMANCE_PICTURES,
   ...HERO_PERFORMANCE_PICTURES,
 ];
@@ -940,7 +909,7 @@ function IndexPage() {
         </div>
 
         {/* ---------------------------------------------------- */}
-        {/* ANIMATED INFINITY CAROUSEL: Performance Action Pictures */}
+        {/* ANIMATED INFINITY CAROUSEL: Performance Action Pictures (Clean & Fully Visible) */}
         {/* ---------------------------------------------------- */}
         <div className="flex-shrink-0 mt-3 lg:mt-4 pt-3 pb-3.5 md:pb-4 border-t border-border/60 bg-secondary/30 relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-5 md:px-6 mb-2 flex flex-wrap items-center justify-between gap-2">
@@ -957,41 +926,21 @@ function IndexPage() {
             </div>
           </div>
 
-          {/* Infinity Marquee Track with Action Pictures */}
+          {/* Infinity Marquee Track with Pure Action Pictures */}
           <div className="relative w-full overflow-hidden marquee-mask">
-            <div className="flex gap-3 sm:gap-4 w-max animate-marquee-left marquee-pause py-0.5">
+            <div className="flex gap-3 sm:gap-4 w-max animate-marquee-left marquee-pause py-1">
               {HERO_PERFORMANCE_PICTURES_DOUBLED.map((p, idx) => (
                 <div
-                  key={`${p.title}-${idx}`}
-                  className="w-[260px] sm:w-[300px] md:w-[320px] h-[135px] sm:h-[150px] shrink-0 rounded-2xl overflow-hidden relative group border border-border/80 shadow-sm hover:shadow-xl hover:border-gold/60 transition-all cursor-pointer text-left"
+                  key={`${p.image}-${idx}`}
+                  className="h-[145px] sm:h-[165px] md:h-[180px] shrink-0 bg-card rounded-2xl overflow-hidden border border-border/80 shadow-sm hover:shadow-lg hover:border-gold/60 transition-all p-1 flex items-center justify-center group cursor-pointer"
                 >
-                  {/* Photo with smooth zoom */}
+                  {/* Entire photo completely visible with zero crop and no text overlay */}
                   <img
                     src={p.image}
-                    alt={p.title}
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                    alt={p.alt}
+                    className="h-full w-auto max-w-none object-contain rounded-xl select-none group-hover:scale-[1.03] transition-transform duration-500"
                     loading="lazy"
                   />
-                  {/* Gradient Overlay for Readability */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent pointer-events-none" />
-
-                  {/* Top Badge */}
-                  <div className="absolute top-2.5 left-2.5">
-                    <span className="inline-flex items-center gap-1 text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-gold/40 text-gold shadow-sm">
-                      <Sparkles className="w-2.5 h-2.5 text-gold" />
-                      {p.badge}
-                    </span>
-                  </div>
-
-                  {/* Bottom Text Details */}
-                  <div className="absolute bottom-2.5 left-2.5 right-2.5 space-y-0.5">
-                    <div className="text-xs sm:text-sm font-display font-extrabold text-white leading-tight group-hover:text-gold transition-colors drop-shadow-sm">
-                      {p.title}
-                    </div>
-                    <div className="text-[10px] sm:text-[11px] text-white/85 line-clamp-1">
-                      {p.tagline}
-                    </div>
-                  </div>
                 </div>
               ))}
             </div>
