@@ -202,6 +202,46 @@ const HERO_TESTIMONIALS: HeroTestimonial[] = [
 
 const HERO_TESTIMONIALS_DOUBLED = [...HERO_TESTIMONIALS, ...HERO_TESTIMONIALS];
 
+interface HeroPerformancePicture {
+  image: string;
+  title: string;
+  badge: string;
+  tagline: string;
+}
+
+const HERO_PERFORMANCE_PICTURES: HeroPerformancePicture[] = [
+  {
+    image: "/images/performance/hero-performance-1.jpg",
+    title: "Breakdance Weltklasse",
+    badge: "IDO World Champion",
+    tagline: "Dynamische Flugphase & pure Körperspannung",
+  },
+  {
+    image: "/images/performance/hero-performance-2.jpg",
+    title: "Handwerk & Disziplin",
+    badge: "25+ Jahre Praxis",
+    tagline: "Klassischer Headstand Freeze in Reinform",
+  },
+  {
+    image: "/images/performance/hero-performance-3.jpg",
+    title: "Biomechanik & Balance",
+    badge: "M² Movement Mastery",
+    tagline: "Funktionelle Gelenkkontrolle & Hebelkraft",
+  },
+  {
+    image: "/images/performance/hero-performance-4.jpg",
+    title: "Präzision & Athletik",
+    badge: "Master Personal Training",
+    tagline: "One-Arm Balance & absolute Körperbeherrschung",
+  },
+];
+
+const HERO_PERFORMANCE_PICTURES_DOUBLED = [
+  ...HERO_PERFORMANCE_PICTURES,
+  ...HERO_PERFORMANCE_PICTURES,
+  ...HERO_PERFORMANCE_PICTURES,
+];
+
 // ----------------------------------------------------
 // EDUTAINMENT COMPONENT: M³ System Start Kompass
 // ----------------------------------------------------
@@ -895,66 +935,125 @@ function IndexPage() {
         </div>
 
         {/* ---------------------------------------------------- */}
-        {/* ANIMATED INFINITY CAROUSEL: Testimonials & Personal Experience */}
+        {/* ANIMATED INFINITY CAROUSEL: Performance Action Pictures */}
         {/* ---------------------------------------------------- */}
-        <div className="flex-shrink-0 mt-3 lg:mt-4 pt-3.5 pb-4 md:pb-5 border-t border-border/60 bg-secondary/25 relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-5 md:px-6 mb-2.5 flex flex-wrap items-center justify-between gap-2">
+        <div className="flex-shrink-0 mt-3 lg:mt-4 pt-3 pb-3.5 md:pb-4 border-t border-border/60 bg-secondary/30 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-5 md:px-6 mb-2 flex flex-wrap items-center justify-between gap-2">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
               <span className="text-[11px] font-mono uppercase tracking-[0.18em] text-gold font-bold">
-                Echte Erfahrungen & M³ Performance
+                M³ Live Performance · 25+ Jahre Bewegungspraxis & Weltmeisterjahre
               </span>
             </div>
             <div className="flex items-center gap-2 text-[11px] text-muted-foreground font-medium">
-              <span className="text-amber-500 font-bold">★ 4.98 / 5.0</span>
+              <span className="text-foreground font-semibold">Breakdance-Weltmeister</span>
               <span>·</span>
-              <span>100% individuelle Personal Betreuung</span>
+              <span>Master Personal Trainer</span>
             </div>
           </div>
 
-          {/* Infinity Marquee Track */}
+          {/* Infinity Marquee Track with Action Pictures */}
           <div className="relative w-full overflow-hidden marquee-mask">
             <div className="flex gap-3 sm:gap-4 w-max animate-marquee-left marquee-pause py-0.5">
-              {HERO_TESTIMONIALS_DOUBLED.map((t, idx) => (
+              {HERO_PERFORMANCE_PICTURES_DOUBLED.map((p, idx) => (
                 <div
-                  key={`${t.name}-${idx}`}
-                  className="w-[290px] sm:w-[340px] shrink-0 bg-card/95 backdrop-blur-md border border-border/80 rounded-xl p-3.5 sm:p-4 shadow-sm hover:shadow-md hover:border-gold/50 transition-all flex flex-col justify-between text-left group"
+                  key={`${p.title}-${idx}`}
+                  className="w-[260px] sm:w-[300px] md:w-[320px] h-[135px] sm:h-[150px] shrink-0 rounded-2xl overflow-hidden relative group border border-border/80 shadow-sm hover:shadow-xl hover:border-gold/60 transition-all cursor-pointer text-left"
                 >
-                  <div className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <div className="flex text-amber-500 text-xs tracking-wider">
-                        ★★★★★
-                      </div>
-                      <span className={`text-[9px] font-mono font-bold uppercase px-2 py-0.5 rounded-full border ${t.badgeClass}`}>
-                        {t.pillar}
-                      </span>
-                    </div>
-                    <p className="text-[11px] sm:text-xs text-foreground/90 leading-relaxed italic line-clamp-3">
-                      „{t.quote}“
-                    </p>
+                  {/* Photo with smooth zoom */}
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                    loading="lazy"
+                  />
+                  {/* Gradient Overlay for Readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent pointer-events-none" />
+
+                  {/* Top Badge */}
+                  <div className="absolute top-2.5 left-2.5">
+                    <span className="inline-flex items-center gap-1 text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md border border-gold/40 text-gold shadow-sm">
+                      <Sparkles className="w-2.5 h-2.5 text-gold" />
+                      {p.badge}
+                    </span>
                   </div>
 
-                  <div className="pt-2.5 mt-2 border-t border-border/50 flex items-center justify-between gap-2">
-                    <div className="flex items-center gap-2">
-                      <div className="w-7 h-7 rounded-full bg-gold/15 text-gold flex items-center justify-center font-display font-bold text-[10px] shrink-0 border border-gold/30">
-                        {t.initials}
-                      </div>
-                      <div>
-                        <div className="font-display font-bold text-[11px] text-foreground group-hover:text-gold transition-colors">
-                          {t.name}
-                        </div>
-                        <div className="text-[9px] text-muted-foreground">
-                          {t.role}
-                        </div>
-                      </div>
+                  {/* Bottom Text Details */}
+                  <div className="absolute bottom-2.5 left-2.5 right-2.5 space-y-0.5">
+                    <div className="text-xs sm:text-sm font-display font-extrabold text-white leading-tight group-hover:text-gold transition-colors drop-shadow-sm">
+                      {p.title}
                     </div>
-                    <span className="text-[9px] font-semibold text-emerald-700 bg-emerald-600/10 border border-emerald-600/20 px-1.5 py-0.5 rounded-md shrink-0">
-                      {t.result}
-                    </span>
+                    <div className="text-[10px] sm:text-[11px] text-white/85 line-clamp-1">
+                      {p.tagline}
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ---------------------------------------------------- */}
+      {/* SOCIAL PROOF: Kundenerfahrungen & Echte Resultate */}
+      {/* ---------------------------------------------------- */}
+      <section className="py-10 md:py-12 border-b border-border/70 bg-secondary/15 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-5 md:px-6 mb-5 flex flex-wrap items-center justify-between gap-4">
+          <div className="flex items-center gap-2.5">
+            <span className="w-2.5 h-2.5 rounded-full bg-gold animate-pulse" />
+            <span className="text-xs font-mono uppercase tracking-[0.2em] text-gold font-bold">
+              Echte Kundenstimmen & Erfahrungen
+            </span>
+          </div>
+          <div className="flex items-center gap-2 text-xs text-muted-foreground font-medium">
+            <span className="text-amber-500 font-bold">★ 4.98 / 5.0</span>
+            <span>·</span>
+            <span>100% persönliche 1:1 Betreuung</span>
+          </div>
+        </div>
+
+        {/* Infinity Marquee for Testimonials */}
+        <div className="relative w-full overflow-hidden marquee-mask">
+          <div className="flex gap-4 sm:gap-5 w-max animate-marquee-left marquee-pause py-1">
+            {HERO_TESTIMONIALS_DOUBLED.map((t, idx) => (
+              <div
+                key={`${t.name}-${idx}`}
+                className="w-[310px] sm:w-[360px] shrink-0 bg-card backdrop-blur-md border border-border/80 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md hover:border-gold/50 transition-all flex flex-col justify-between text-left group"
+              >
+                <div className="space-y-2.5">
+                  <div className="flex items-center justify-between">
+                    <div className="flex text-amber-500 text-xs tracking-wider">
+                      ★★★★★
+                    </div>
+                    <span className={`text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-full border ${t.badgeClass}`}>
+                      {t.pillar}
+                    </span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-foreground/90 leading-relaxed italic">
+                    „{t.quote}“
+                  </p>
+                </div>
+
+                <div className="pt-3 mt-3 border-t border-border/50 flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded-full bg-gold/15 text-gold flex items-center justify-center font-display font-bold text-xs shrink-0 border border-gold/30">
+                      {t.initials}
+                    </div>
+                    <div>
+                      <div className="font-display font-bold text-xs text-foreground group-hover:text-gold transition-colors">
+                        {t.name}
+                      </div>
+                      <div className="text-[10px] text-muted-foreground">
+                        {t.role}
+                      </div>
+                    </div>
+                  </div>
+                  <span className="text-[10px] font-semibold text-emerald-700 bg-emerald-600/10 border border-emerald-600/20 px-2 py-0.5 rounded-md shrink-0">
+                    {t.result}
+                  </span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
