@@ -223,6 +223,12 @@ const HERO_PERFORMANCE_PICTURES: HeroPerformancePicture[] = [
     tagline: "Klassischer Headstand Freeze in Reinform",
   },
   {
+    image: "/images/performance/hero-performance-5.jpg",
+    title: "Akrobatik & Flow",
+    badge: "Körperspannung M²",
+    tagline: "One-Arm Elbow Freeze & Beinkontrolle",
+  },
+  {
     image: "/images/performance/hero-performance-3.jpg",
     title: "Biomechanik & Balance",
     badge: "M² Movement Mastery",
@@ -237,7 +243,6 @@ const HERO_PERFORMANCE_PICTURES: HeroPerformancePicture[] = [
 ];
 
 const HERO_PERFORMANCE_PICTURES_DOUBLED = [
-  ...HERO_PERFORMANCE_PICTURES,
   ...HERO_PERFORMANCE_PICTURES,
   ...HERO_PERFORMANCE_PICTURES,
 ];
