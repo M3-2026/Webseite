@@ -703,9 +703,9 @@ function IndexPage() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-5 md:px-6">
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-6 md:pt-10 pb-0">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-end pt-6 md:pt-12 pb-0">
             {/* Left Column: Calmer, cleaner text block with prominent Personal Trainer positioning */}
-            <div className="lg:col-span-7 space-y-6 pb-6 lg:pb-12 text-left animate-float-up">
+            <div className="lg:col-span-7 space-y-6 pb-8 lg:pb-16 text-left animate-float-up">
               {/* Top Badge: Personal Trainer & System */}
               <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold font-bold shadow-sm">
                 <Sparkles className="w-3.5 h-3.5 text-gold" />
@@ -765,18 +765,18 @@ function IndexPage() {
               </div>
             </div>
 
-            {/* Right Column: Hero Portrait with generously spaced, non-cramped M3 quotes */}
-            <div className="lg:col-span-5 relative flex justify-center items-end self-end pt-6 lg:pt-0">
-              <div className="relative w-full max-w-[420px] lg:max-w-none flex justify-center items-end min-h-[460px] sm:min-h-[520px] lg:min-h-[580px]">
+            {/* Right Column: Hero Portrait (larger scale & perfectly spaced M1, M2, M3 quotes) */}
+            <div className="lg:col-span-5 relative flex justify-center items-end self-end pt-8 lg:pt-0">
+              <div className="relative w-full max-w-[460px] lg:max-w-none flex justify-center items-end min-h-[500px] sm:min-h-[580px] lg:min-h-[660px]">
                 <img
                   src={avatar}
                   alt="Michél Meier – Master Personal Trainer & Gesundheitscoach"
-                  className="avatar-shadow h-[50vh] sm:h-[58vh] lg:h-[68vh] max-h-[720px] w-auto object-contain object-bottom select-none pointer-events-none animate-float-up z-10"
+                  className="avatar-shadow h-[56vh] sm:h-[66vh] md:h-[76vh] lg:h-[84vh] max-h-[860px] w-auto object-contain object-bottom select-none pointer-events-none animate-float-up z-10"
                 />
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[300px] sm:w-[380px] h-24 bg-gold/20 blur-3xl rounded-full pointer-events-none" />
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[340px] sm:w-[440px] h-28 bg-gold/15 blur-3xl rounded-full pointer-events-none" />
 
                 {/* Spaced Quote 1: Top-Left (Fundament & Stoffwechsel) */}
-                <div className="absolute -top-3 -left-3 sm:-left-8 max-w-[205px] bg-card/95 backdrop-blur-md border border-gold/35 rounded-2xl p-3.5 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform">
+                <div className="absolute top-2 -left-4 sm:-left-12 lg:-left-16 max-w-[215px] bg-card/95 backdrop-blur-md border border-gold/35 rounded-2xl p-3.5 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform text-left">
                   <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider text-gold font-bold mb-1">
                     <Flame className="w-3.5 h-3.5 text-gold" />
                     <span>M¹ · Fundament</span>
@@ -786,8 +786,8 @@ function IndexPage() {
                   </p>
                 </div>
 
-                {/* Spaced Quote 2: Upper-Right (Biomechanik & Intelligentes Training) */}
-                <div className="absolute top-16 -right-3 sm:-right-8 max-w-[205px] bg-card/95 backdrop-blur-md border border-emerald-600/35 rounded-2xl p-3.5 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform">
+                {/* Spaced Quote 2: Top-Right (Biomechanik & Intelligentes Training) */}
+                <div className="absolute top-2 -right-4 sm:-right-12 lg:-right-16 max-w-[215px] bg-card/95 backdrop-blur-md border border-emerald-600/35 rounded-2xl p-3.5 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform text-left">
                   <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider text-emerald-600 font-bold mb-1">
                     <Dumbbell className="w-3.5 h-3.5 text-emerald-600" />
                     <span>M² · Biomechanik</span>
@@ -797,8 +797,8 @@ function IndexPage() {
                   </p>
                 </div>
 
-                {/* Spaced Quote 3: Lower-Right (Mindset & Routinen) */}
-                <div className="hidden sm:block absolute bottom-16 -right-3 sm:-right-8 max-w-[200px] bg-card/95 backdrop-blur-md border border-indigo-600/35 rounded-2xl p-3 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform text-left">
+                {/* Spaced Quote 3: Mid/Upper-Right (Mindset & Routinen - höher gesetzt & abgesetzt) */}
+                <div className="absolute top-[36%] -right-4 sm:-right-12 lg:-right-16 max-w-[215px] bg-card/95 backdrop-blur-md border border-indigo-600/35 rounded-2xl p-3.5 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform text-left">
                   <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider text-indigo-400 font-bold mb-1">
                     <Brain className="w-3.5 h-3.5 text-indigo-400" />
                     <span>M³ · Mindset</span>
@@ -809,7 +809,7 @@ function IndexPage() {
                 </div>
 
                 {/* Credential Badge: Lower-Left (Personal Trainer Highlight) */}
-                <div className="absolute bottom-4 -left-3 sm:-left-6 bg-card/95 backdrop-blur-md border border-gold/35 rounded-2xl p-3.5 shadow-2xl flex items-center gap-3 animate-float-up z-20 text-left">
+                <div className="absolute bottom-6 -left-4 sm:-left-10 lg:-left-14 bg-card/95 backdrop-blur-md border border-gold/35 rounded-2xl p-3.5 shadow-2xl flex items-center gap-3 animate-float-up z-20 text-left">
                   <div className="w-10 h-10 rounded-xl bg-gold-gradient text-primary-foreground flex items-center justify-center font-display font-bold text-sm shrink-0 shadow-sm">
                     M³
                   </div>

@@ -39,25 +39,25 @@
 
 :root {
   --radius: 1rem;
-  /* Warm, natural, high-contrast palette – cashmere cream, deep espresso, terracotta, champagne gold */
-  --background: oklch(0.982 0.009 85);        /* warm cashmere cream */
+  /* Clean, crisp white high-contrast palette */
+  --background: #ffffff;                      /* pure white background */
   --foreground: oklch(0.18 0.025 55);         /* deep espresso (high contrast) */
-  --card: oklch(0.996 0.005 85);              /* crisp warm card background */
+  --card: #ffffff;                            /* pure white card background */
   --card-foreground: oklch(0.18 0.025 55);
-  --popover: oklch(0.996 0.005 85);
+  --popover: #ffffff;
   --popover-foreground: oklch(0.18 0.025 55);
   --primary: oklch(0.55 0.14 45);             /* terracotta / clay */
   --primary-foreground: oklch(0.99 0.005 85);
-  --secondary: oklch(0.94 0.015 80);          /* soft sand / champagne tint */
+  --secondary: oklch(0.982 0.003 85);         /* subtle light off-white tone */
   --secondary-foreground: oklch(0.22 0.025 55);
-  --muted: oklch(0.945 0.012 80);
+  --muted: oklch(0.975 0.003 85);
   --muted-foreground: oklch(0.40 0.028 55);   /* WCAG AAA compliant text contrast */
   --accent: oklch(0.55 0.14 45);
   --accent-foreground: oklch(0.99 0.005 85);
   --destructive: oklch(0.55 0.2 27);
   --destructive-foreground: oklch(0.99 0.005 85);
-  --border: oklch(0.25 0.02 55 / 10%);
-  --input: oklch(0.25 0.02 55 / 12%);
+  --border: oklch(0.20 0.02 55 / 9%);
+  --input: oklch(0.20 0.02 55 / 10%);
   --ring: oklch(0.55 0.14 45);
 
   /* Semantic M³ Säulen-Farben */
@@ -70,12 +70,12 @@
   --gold-soft: oklch(0.72 0.11 55);           /* Soft warm gold */
   --gold-champagne: oklch(0.78 0.10 75);      /* Champagne gold highlight */
 
-  --gradient-hero: radial-gradient(ellipse at 50% 30%, oklch(0.92 0.04 60 / 0.7), transparent 65%),
-                   linear-gradient(180deg, oklch(0.985 0.009 85) 0%, oklch(0.945 0.018 75) 100%);
+  --gradient-hero: radial-gradient(ellipse at 50% 15%, oklch(0.96 0.02 65 / 0.25), transparent 60%),
+                   #ffffff;
   --gradient-gold: linear-gradient(135deg, oklch(0.62 0.15 48), oklch(0.48 0.14 40));
   --shadow-gold: 0 16px 40px -12px oklch(0.55 0.14 45 / 0.35);
   --shadow-card: 0 10px 30px -10px oklch(0.20 0.02 55 / 0.06);
-  --shadow-avatar: 0 25px 50px -15px oklch(0.30 0.04 55 / 0.25), 0 0 90px oklch(0.72 0.1 55 / 0.15);
+  --shadow-avatar: 0 25px 50px -15px oklch(0.30 0.04 55 / 0.18), 0 0 90px oklch(0.72 0.1 55 / 0.12);
 }
 
 @layer base {
