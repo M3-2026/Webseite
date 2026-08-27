@@ -765,44 +765,45 @@ function IndexPage() {
       {/* ---------------------------------------------------- */}
       {/* 1. HERO SECTION (Brand-DNA & Golden Circle Hierarchy) */}
       {/* ---------------------------------------------------- */}
-      <section id="top" className="relative hero-bg overflow-hidden border-b border-border/70 pt-10 md:pt-16 pb-0">
+      <section id="top" className="relative hero-bg overflow-hidden border-b border-border/70 min-h-[calc(100dvh-4.5rem)] lg:h-[calc(100dvh-4.5rem)] flex flex-col justify-between pt-3 sm:pt-4 md:pt-6 pb-0">
         {/* Subtle Ambient Radial Glow */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-gold/8 blur-3xl" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-5 md:px-6">
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-end pt-6 md:pt-12 pb-0">
+        {/* Main Content Area (Flex-Grow to fill viewport space harmoniously) */}
+        <div className="relative max-w-7xl mx-auto px-5 md:px-6 w-full flex-grow flex items-end">
+          <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-end w-full pt-2 md:pt-4 pb-0">
             {/* Left Column: Calmer, cleaner text block with prominent Personal Trainer positioning */}
-            <div className="lg:col-span-7 space-y-6 pb-8 lg:pb-16 text-left animate-float-up">
+            <div className="lg:col-span-7 space-y-4 sm:space-y-5 pb-4 lg:pb-8 text-left animate-float-up">
               {/* Top Badge: Personal Trainer & System */}
-              <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold font-bold shadow-sm">
+              <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/5 px-3.5 py-1 text-xs uppercase tracking-[0.2em] text-gold font-bold shadow-sm">
                 <Sparkles className="w-3.5 h-3.5 text-gold" />
                 <span>Personal Training & Gesundheitssystem</span>
               </div>
 
               {/* Main Headline */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold leading-[1.04] tracking-tight text-foreground text-left">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] xl:text-[3.8rem] font-display font-extrabold leading-[1.04] tracking-tight text-foreground text-left">
                 Leistung beginnt mit <span className="text-gold">Gesundheit.</span>
               </h1>
 
               {/* Emotional Subclaim with Personal Trainer Focus */}
-              <p className="text-lg sm:text-xl md:text-2xl font-display font-semibold text-foreground/90 tracking-tight text-left">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-display font-semibold text-foreground/90 tracking-tight text-left">
                 Dein Personal Training & Gesundheitssystem für echte Lebensenergie und schmerzfreie Leistungsfähigkeit.
               </p>
 
               {/* Clear, calm value proposition */}
-              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed text-left max-w-xl">
+              <p className="text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed text-left max-w-xl">
                 Wissenschaftlich fundiertes 1:1 Personal Training, das Stoffwechsel (<strong className="text-foreground">M¹</strong>), Biomechanik (<strong className="text-foreground">M²</strong>) und alltagstaugliche Routinen (<strong className="text-foreground">M³</strong>) vereint. Individuell, schmerzfrei und nachhaltig.
               </p>
 
               {/* Dual Actions */}
-              <div className="pt-2 flex flex-wrap items-center gap-4 text-left">
+              <div className="pt-1 flex flex-wrap items-center gap-3 text-left">
                 <a
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-8 py-4 text-sm md:text-base font-bold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95 hover:scale-[1.02] active:scale-[0.98] transition-all"
+                  className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-6 sm:px-8 py-3.5 sm:py-4 text-sm md:text-base font-bold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95 hover:scale-[1.02] active:scale-[0.98] transition-all"
                 >
                   <MessageCircle className="w-5 h-5" />
                   Kostenloses Orientierungsgespräch
@@ -810,7 +811,7 @@ function IndexPage() {
                 <Link
                   to="/"
                   hash="system-kompass"
-                  className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-card/90 px-6 py-4 text-sm md:text-base font-semibold text-foreground hover:bg-secondary transition-all shadow-sm"
+                  className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-card/90 px-5 sm:px-6 py-3.5 sm:py-4 text-sm md:text-base font-semibold text-foreground hover:bg-secondary transition-all shadow-sm"
                 >
                   <Compass className="w-4 h-4 text-gold" />
                   System-Kompass
@@ -818,74 +819,74 @@ function IndexPage() {
               </div>
 
               {/* Authority & Personal Trainer Credential Strip */}
-              <div className="pt-2 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-semibold text-muted-foreground text-left border-t border-border/60 max-w-lg">
-                <div className="flex items-center gap-1.5 pt-1">
+              <div className="pt-1.5 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-xs font-semibold text-muted-foreground text-left border-t border-border/60 max-w-lg">
+                <div className="flex items-center gap-1.5 pt-0.5">
                   <span className="text-gold">★</span>
                   <span className="text-foreground font-semibold">Master Personal Trainer</span>
                 </div>
-                <div className="flex items-center gap-1.5 pt-1">
+                <div className="flex items-center gap-1.5 pt-0.5">
                   <span className="text-gold">★</span>
                   <span>25+ Jahre Bewegungspraxis</span>
                 </div>
-                <div className="flex items-center gap-1.5 pt-1">
+                <div className="flex items-center gap-1.5 pt-0.5">
                   <span className="text-gold">★</span>
                   <span>IDO Breakdance-Weltmeister</span>
                 </div>
               </div>
             </div>
 
-            {/* Right Column: Hero Portrait (larger scale & perfectly spaced M1, M2, M3 quotes) */}
-            <div className="lg:col-span-5 relative flex justify-center items-end self-end pt-8 lg:pt-0">
-              <div className="relative w-full max-w-[460px] lg:max-w-none flex justify-center items-end min-h-[500px] sm:min-h-[580px] lg:min-h-[660px]">
+            {/* Right Column: Hero Portrait (calibrated to viewport height with M1, M2, M3 quotes) */}
+            <div className="lg:col-span-5 relative flex justify-center items-end self-end pt-4 lg:pt-0">
+              <div className="relative w-full max-w-[440px] lg:max-w-none flex justify-center items-end">
                 <img
                   src={avatar}
                   alt="Michél Meier – Master Personal Trainer & Gesundheitscoach"
-                  className="avatar-shadow h-[56vh] sm:h-[66vh] md:h-[76vh] lg:h-[84vh] max-h-[860px] w-auto object-contain object-bottom select-none pointer-events-none animate-float-up z-10"
+                  className="avatar-shadow h-[44vh] sm:h-[50vh] md:h-[54vh] lg:h-[58vh] xl:h-[62vh] max-h-[640px] w-auto object-contain object-bottom select-none pointer-events-none animate-float-up z-10"
                 />
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[340px] sm:w-[440px] h-28 bg-gold/15 blur-3xl rounded-full pointer-events-none" />
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[300px] sm:w-[380px] h-20 bg-gold/15 blur-3xl rounded-full pointer-events-none" />
 
                 {/* Spaced Quote 1: Top-Left (Fundament & Stoffwechsel) */}
-                <div className="absolute top-2 -left-4 sm:-left-12 lg:-left-16 max-w-[215px] bg-card/95 backdrop-blur-md border border-gold/35 rounded-2xl p-3.5 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform text-left">
-                  <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider text-gold font-bold mb-1">
-                    <Flame className="w-3.5 h-3.5 text-gold" />
+                <div className="absolute top-1 -left-3 sm:-left-8 lg:-left-12 max-w-[190px] xl:max-w-[210px] bg-card/95 backdrop-blur-md border border-gold/35 rounded-2xl p-2.5 sm:p-3.5 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform text-left">
+                  <div className="flex items-center gap-1 text-[10px] font-mono uppercase tracking-wider text-gold font-bold mb-0.5">
+                    <Flame className="w-3 h-3 text-gold" />
                     <span>M¹ · Fundament</span>
                   </div>
-                  <p className="text-[11px] sm:text-xs font-medium text-foreground italic leading-snug">
+                  <p className="text-[10px] sm:text-xs font-medium text-foreground italic leading-snug">
                     „Wenn dein Fundament brennt, nützt kein härteres Training.“
                   </p>
                 </div>
 
                 {/* Spaced Quote 2: Top-Right (Biomechanik & Intelligentes Training) */}
-                <div className="absolute top-2 -right-4 sm:-right-12 lg:-right-16 max-w-[215px] bg-card/95 backdrop-blur-md border border-emerald-600/35 rounded-2xl p-3.5 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform text-left">
-                  <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider text-emerald-600 font-bold mb-1">
-                    <Dumbbell className="w-3.5 h-3.5 text-emerald-600" />
+                <div className="absolute top-1 -right-3 sm:-right-8 lg:-right-12 max-w-[190px] xl:max-w-[210px] bg-card/95 backdrop-blur-md border border-emerald-600/35 rounded-2xl p-2.5 sm:p-3.5 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform text-left">
+                  <div className="flex items-center gap-1 text-[10px] font-mono uppercase tracking-wider text-emerald-600 font-bold mb-0.5">
+                    <Dumbbell className="w-3 h-3 text-emerald-600" />
                     <span>M² · Biomechanik</span>
                   </div>
-                  <p className="text-[11px] sm:text-xs font-medium text-foreground italic leading-snug">
+                  <p className="text-[10px] sm:text-xs font-medium text-foreground italic leading-snug">
                     „Technik schlägt Gewicht – Immer.“
                   </p>
                 </div>
 
-                {/* Spaced Quote 3: Mid/Upper-Right (Mindset & Routinen - höher gesetzt & abgesetzt) */}
-                <div className="absolute top-[36%] -right-4 sm:-right-12 lg:-right-16 max-w-[215px] bg-card/95 backdrop-blur-md border border-indigo-600/35 rounded-2xl p-3.5 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform text-left">
-                  <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider text-indigo-400 font-bold mb-1">
-                    <Brain className="w-3.5 h-3.5 text-indigo-400" />
+                {/* Spaced Quote 3: Mid/Upper-Right (Mindset & Routinen) */}
+                <div className="absolute top-[35%] -right-3 sm:-right-8 lg:-right-12 max-w-[190px] xl:max-w-[210px] bg-card/95 backdrop-blur-md border border-indigo-600/35 rounded-2xl p-2.5 sm:p-3.5 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform text-left">
+                  <div className="flex items-center gap-1 text-[10px] font-mono uppercase tracking-wider text-indigo-400 font-bold mb-0.5">
+                    <Brain className="w-3 h-3 text-indigo-400" />
                     <span>M³ · Mindset</span>
                   </div>
-                  <p className="text-[11px] sm:text-xs font-medium text-foreground italic leading-snug">
+                  <p className="text-[10px] sm:text-xs font-medium text-foreground italic leading-snug">
                     „Routine schlägt flüchtige Motivation.“
                   </p>
                 </div>
 
                 {/* Credential Badge: Lower-Left (Personal Trainer Highlight) */}
-                <div className="absolute bottom-6 -left-4 sm:-left-10 lg:-left-14 bg-card/95 backdrop-blur-md border border-gold/35 rounded-2xl p-3.5 shadow-2xl flex items-center gap-3 animate-float-up z-20 text-left">
-                  <div className="w-10 h-10 rounded-xl bg-gold-gradient text-primary-foreground flex items-center justify-center font-display font-bold text-sm shrink-0 shadow-sm">
+                <div className="absolute bottom-4 -left-3 sm:-left-8 lg:-left-12 bg-card/95 backdrop-blur-md border border-gold/35 rounded-2xl p-2.5 sm:p-3.5 shadow-2xl flex items-center gap-2.5 animate-float-up z-20 text-left">
+                  <div className="w-9 h-9 rounded-xl bg-gold-gradient text-primary-foreground flex items-center justify-center font-display font-bold text-xs shrink-0 shadow-sm">
                     M³
                   </div>
                   <div className="space-y-0.5">
-                    <div className="font-display font-bold text-xs sm:text-sm text-foreground">Michél Meier</div>
-                    <div className="text-[11px] sm:text-xs text-gold font-semibold">Master Personal Trainer</div>
-                    <div className="text-[10px] text-muted-foreground">IDO Weltmeister · 1:1 Coaching</div>
+                    <div className="font-display font-bold text-xs text-foreground">Michél Meier</div>
+                    <div className="text-[10px] sm:text-[11px] text-gold font-semibold">Master Personal Trainer</div>
+                    <div className="text-[9px] sm:text-[10px] text-muted-foreground">IDO Weltmeister · 1:1 Coaching</div>
                   </div>
                 </div>
               </div>
@@ -896,15 +897,15 @@ function IndexPage() {
         {/* ---------------------------------------------------- */}
         {/* ANIMATED INFINITY CAROUSEL: Testimonials & Personal Experience */}
         {/* ---------------------------------------------------- */}
-        <div className="mt-10 md:mt-14 pt-6 pb-8 border-t border-border/60 bg-secondary/20 relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-5 md:px-6 mb-4 flex flex-wrap items-center justify-between gap-3">
+        <div className="flex-shrink-0 mt-3 lg:mt-4 pt-3.5 pb-4 md:pb-5 border-t border-border/60 bg-secondary/25 relative overflow-hidden">
+          <div className="max-w-7xl mx-auto px-5 md:px-6 mb-2.5 flex flex-wrap items-center justify-between gap-2">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-              <span className="text-xs font-mono uppercase tracking-[0.2em] text-gold font-bold">
+              <span className="text-[11px] font-mono uppercase tracking-[0.18em] text-gold font-bold">
                 Echte Erfahrungen & M³ Performance
               </span>
             </div>
-            <div className="flex items-center gap-2 text-xs text-muted-foreground font-medium">
+            <div className="flex items-center gap-2 text-[11px] text-muted-foreground font-medium">
               <span className="text-amber-500 font-bold">★ 4.98 / 5.0</span>
               <span>·</span>
               <span>100% individuelle Personal Betreuung</span>
@@ -913,41 +914,41 @@ function IndexPage() {
 
           {/* Infinity Marquee Track */}
           <div className="relative w-full overflow-hidden marquee-mask">
-            <div className="flex gap-4 sm:gap-5 w-max animate-marquee-left marquee-pause py-1">
+            <div className="flex gap-3 sm:gap-4 w-max animate-marquee-left marquee-pause py-0.5">
               {HERO_TESTIMONIALS_DOUBLED.map((t, idx) => (
                 <div
                   key={`${t.name}-${idx}`}
-                  className="w-[310px] sm:w-[360px] shrink-0 bg-card/95 backdrop-blur-md border border-border/80 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md hover:border-gold/50 transition-all flex flex-col justify-between text-left group"
+                  className="w-[290px] sm:w-[340px] shrink-0 bg-card/95 backdrop-blur-md border border-border/80 rounded-xl p-3.5 sm:p-4 shadow-sm hover:shadow-md hover:border-gold/50 transition-all flex flex-col justify-between text-left group"
                 >
-                  <div className="space-y-2.5">
+                  <div className="space-y-2">
                     <div className="flex items-center justify-between">
                       <div className="flex text-amber-500 text-xs tracking-wider">
                         ★★★★★
                       </div>
-                      <span className={`text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-full border ${t.badgeClass}`}>
+                      <span className={`text-[9px] font-mono font-bold uppercase px-2 py-0.5 rounded-full border ${t.badgeClass}`}>
                         {t.pillar}
                       </span>
                     </div>
-                    <p className="text-xs sm:text-sm text-foreground/90 leading-relaxed italic">
+                    <p className="text-[11px] sm:text-xs text-foreground/90 leading-relaxed italic line-clamp-3">
                       „{t.quote}“
                     </p>
                   </div>
 
-                  <div className="pt-3 mt-3 border-t border-border/50 flex items-center justify-between gap-2">
-                    <div className="flex items-center gap-2.5">
-                      <div className="w-8 h-8 rounded-full bg-gold/15 text-gold flex items-center justify-center font-display font-bold text-xs shrink-0 border border-gold/30">
+                  <div className="pt-2.5 mt-2 border-t border-border/50 flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-full bg-gold/15 text-gold flex items-center justify-center font-display font-bold text-[10px] shrink-0 border border-gold/30">
                         {t.initials}
                       </div>
                       <div>
-                        <div className="font-display font-bold text-xs text-foreground group-hover:text-gold transition-colors">
+                        <div className="font-display font-bold text-[11px] text-foreground group-hover:text-gold transition-colors">
                           {t.name}
                         </div>
-                        <div className="text-[10px] text-muted-foreground">
+                        <div className="text-[9px] text-muted-foreground">
                           {t.role}
                         </div>
                       </div>
                     </div>
-                    <span className="text-[10px] font-semibold text-emerald-700 bg-emerald-600/10 border border-emerald-600/20 px-2 py-0.5 rounded-md shrink-0">
+                    <span className="text-[9px] font-semibold text-emerald-700 bg-emerald-600/10 border border-emerald-600/20 px-1.5 py-0.5 rounded-md shrink-0">
                       {t.result}
                     </span>
                   </div>
