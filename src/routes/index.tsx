@@ -703,91 +703,80 @@ function IndexPage() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-5 md:px-6">
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 items-end pt-4 md:pt-8 pb-0">
-            {/* Left Column: Left-Aligned Text Block */}
-            <div className="lg:col-span-7 space-y-6 pb-8 lg:pb-16 text-left animate-float-up">
-              {/* Top Badge */}
-              <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-card/80 backdrop-blur px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold font-bold shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-                M³ Systemische Performance & Gesundheit
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center pt-6 md:pt-10 pb-0">
+            {/* Left Column: Calmer, cleaner text block with prominent Personal Trainer positioning */}
+            <div className="lg:col-span-7 space-y-6 pb-6 lg:pb-12 text-left animate-float-up">
+              {/* Top Badge: Personal Trainer & System */}
+              <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold font-bold shadow-sm">
+                <Sparkles className="w-3.5 h-3.5 text-gold" />
+                <span>Personal Training & Gesundheitssystem</span>
               </div>
 
-              {/* Main Headline Hierarchy */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold leading-[1.02] tracking-tight text-foreground text-left">
+              {/* Main Headline */}
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold leading-[1.04] tracking-tight text-foreground text-left">
                 Leistung beginnt mit <span className="text-gold">Gesundheit.</span>
               </h1>
 
-              {/* Emotional Subclaim */}
-              <p className="text-xl md:text-2xl lg:text-3xl font-display font-bold text-foreground/90 tracking-tight text-left">
-                Mehr Energie. Mehr Leistung. Mehr Leben.
+              {/* Emotional Subclaim with Personal Trainer Focus */}
+              <p className="text-lg sm:text-xl md:text-2xl font-display font-semibold text-foreground/90 tracking-tight text-left">
+                Dein Personal Training & Gesundheitssystem für echte Lebensenergie und schmerzfreie Leistungsfähigkeit.
               </p>
 
-              {/* Value Proposition */}
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed text-left max-w-xl">
-                Gesundheit nicht dem Zufall überlassen. Das eigene Leben aktiv gestalten.
-                M³ verbindet Stoffwechsel (<span className="text-foreground font-semibold">M¹</span>), intelligentes Training (<span className="text-foreground font-semibold">M²</span>) und mentale Routinen (<span className="text-foreground font-semibold">M³</span>) zu einem System, das wirklich zu deinem Alltag passt.
+              {/* Clear, calm value proposition */}
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed text-left max-w-xl">
+                Wissenschaftlich fundiertes 1:1 Personal Training, das Stoffwechsel (<strong className="text-foreground">M¹</strong>), Biomechanik (<strong className="text-foreground">M²</strong>) und alltagstaugliche Routinen (<strong className="text-foreground">M³</strong>) vereint. Individuell, schmerzfrei und nachhaltig.
               </p>
 
-              {/* Dual Actions (Left-Aligned) */}
+              {/* Dual Actions */}
               <div className="pt-2 flex flex-wrap items-center gap-4 text-left">
                 <a
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-7 py-4 text-sm md:text-base font-bold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95 hover:scale-[1.02] active:scale-[0.98] transition-all"
+                  className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-8 py-4 text-sm md:text-base font-bold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95 hover:scale-[1.02] active:scale-[0.98] transition-all"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  Erst verstehen. Dann entscheiden. ➔ Orientierungsgespräch
+                  Kostenloses Orientierungsgespräch
                 </a>
                 <Link
                   to="/"
                   hash="system-kompass"
-                  className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-card/90 px-7 py-4 text-sm md:text-base font-semibold text-foreground hover:bg-secondary transition-all shadow-sm"
+                  className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-card/90 px-6 py-4 text-sm md:text-base font-semibold text-foreground hover:bg-secondary transition-all shadow-sm"
                 >
                   <Compass className="w-4 h-4 text-gold" />
-                  System-Kompass starten
+                  System-Kompass
                 </Link>
               </div>
 
-              {/* Trust Anchors (Left-Aligned) */}
-              <div className="pt-1 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground text-left">
-                <span>✓ Verstehen vor Verändern</span>
-                <span className="hidden sm:inline">·</span>
-                <span>✓ Individuell statt Stange</span>
-                <span className="hidden sm:inline">·</span>
-                <span>✓ Ziel: Selbstständigkeit</span>
-              </div>
-
-              {/* M³ Performance Leitspruch */}
-              <div className="pt-3 border-t border-border/60 max-w-xl">
-                <div className="flex items-start gap-3 rounded-2xl bg-secondary/50 border border-border/70 p-3.5 shadow-sm">
-                  <div className="w-8 h-8 rounded-xl bg-gold/15 text-gold flex items-center justify-center font-serif text-lg font-bold shrink-0 mt-0.5">
-                    „
-                  </div>
-                  <div className="space-y-0.5">
-                    <p className="text-xs sm:text-sm font-medium text-foreground italic">
-                      „Wer seinen Körper versteht, trifft dauerhaft bessere Entscheidungen.“
-                    </p>
-                    <div className="text-[10px] font-mono uppercase tracking-wider text-gold font-bold">
-                      M³ Leitsatz · Struktur statt Chaos
-                    </div>
-                  </div>
+              {/* Authority & Personal Trainer Credential Strip */}
+              <div className="pt-2 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-semibold text-muted-foreground text-left border-t border-border/60 max-w-lg">
+                <div className="flex items-center gap-1.5 pt-1">
+                  <span className="text-gold">★</span>
+                  <span className="text-foreground font-semibold">Master Personal Trainer</span>
+                </div>
+                <div className="flex items-center gap-1.5 pt-1">
+                  <span className="text-gold">★</span>
+                  <span>25+ Jahre Bewegungspraxis</span>
+                </div>
+                <div className="flex items-center gap-1.5 pt-1">
+                  <span className="text-gold">★</span>
+                  <span>IDO Breakdance-Weltmeister</span>
                 </div>
               </div>
             </div>
 
-            {/* Right Column: Hero Avatar & Floating M³ Performance Zitate / Motivationssprüche */}
-            <div className="lg:col-span-5 relative flex justify-center items-end self-end pt-8 lg:pt-0">
-              <div className="relative w-full max-w-[420px] lg:max-w-none flex justify-center items-end">
+            {/* Right Column: Hero Portrait with generously spaced, non-cramped M3 quotes */}
+            <div className="lg:col-span-5 relative flex justify-center items-end self-end pt-6 lg:pt-0">
+              <div className="relative w-full max-w-[420px] lg:max-w-none flex justify-center items-end min-h-[460px] sm:min-h-[520px] lg:min-h-[580px]">
                 <img
                   src={avatar}
-                  alt="Michél Meier – Gründer & Coach M³ Performance"
-                  className="avatar-shadow h-[52vh] sm:h-[62vh] lg:h-[72vh] max-h-[760px] w-auto object-contain object-bottom select-none pointer-events-none animate-float-up z-10"
+                  alt="Michél Meier – Master Personal Trainer & Gesundheitscoach"
+                  className="avatar-shadow h-[50vh] sm:h-[58vh] lg:h-[68vh] max-h-[720px] w-auto object-contain object-bottom select-none pointer-events-none animate-float-up z-10"
                 />
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[320px] sm:w-[400px] h-24 bg-gold/20 blur-3xl rounded-full pointer-events-none" />
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[300px] sm:w-[380px] h-24 bg-gold/20 blur-3xl rounded-full pointer-events-none" />
 
-                {/* Motivationsspruch 1: Oben Links (Fundament & Stoffwechsel) */}
-                <div className="absolute top-2 -left-2 sm:-left-6 max-w-[210px] bg-card/95 backdrop-blur-md border border-gold/40 rounded-2xl p-3 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform">
+                {/* Spaced Quote 1: Top-Left (Fundament & Stoffwechsel) */}
+                <div className="absolute -top-3 -left-3 sm:-left-8 max-w-[205px] bg-card/95 backdrop-blur-md border border-gold/35 rounded-2xl p-3.5 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform">
                   <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider text-gold font-bold mb-1">
                     <Flame className="w-3.5 h-3.5 text-gold" />
                     <span>M¹ · Fundament</span>
@@ -797,8 +786,8 @@ function IndexPage() {
                   </p>
                 </div>
 
-                {/* Motivationsspruch 2: Oben Rechts (Biomechanik & Training) */}
-                <div className="absolute top-16 -right-2 sm:-right-6 max-w-[200px] bg-card/95 backdrop-blur-md border border-emerald-600/40 rounded-2xl p-3 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform">
+                {/* Spaced Quote 2: Upper-Right (Biomechanik & Intelligentes Training) */}
+                <div className="absolute top-16 -right-3 sm:-right-8 max-w-[205px] bg-card/95 backdrop-blur-md border border-emerald-600/35 rounded-2xl p-3.5 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform">
                   <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider text-emerald-600 font-bold mb-1">
                     <Dumbbell className="w-3.5 h-3.5 text-emerald-600" />
                     <span>M² · Biomechanik</span>
@@ -808,8 +797,8 @@ function IndexPage() {
                   </p>
                 </div>
 
-                {/* Motivationsspruch 3: Mitte Rechts (Mindset & Routinen) */}
-                <div className="absolute bottom-32 -right-2 sm:-right-8 max-w-[220px] bg-card/95 backdrop-blur-md border border-indigo-600/40 rounded-2xl p-3 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform">
+                {/* Spaced Quote 3: Lower-Right (Mindset & Routinen) */}
+                <div className="hidden sm:block absolute bottom-16 -right-3 sm:-right-8 max-w-[200px] bg-card/95 backdrop-blur-md border border-indigo-600/35 rounded-2xl p-3 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform text-left">
                   <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider text-indigo-400 font-bold mb-1">
                     <Brain className="w-3.5 h-3.5 text-indigo-400" />
                     <span>M³ · Mindset</span>
@@ -819,25 +808,16 @@ function IndexPage() {
                   </p>
                 </div>
 
-                {/* Credential Badge: Unten Links */}
-                <div className="absolute bottom-4 -left-2 sm:-left-6 bg-card/95 backdrop-blur-md border border-border/90 rounded-2xl p-3 shadow-xl flex items-center gap-3 animate-float-up z-20">
-                  <div className="w-10 h-10 rounded-xl bg-gold-gradient text-primary-foreground flex items-center justify-center font-display font-bold text-sm shrink-0">
+                {/* Credential Badge: Lower-Left (Personal Trainer Highlight) */}
+                <div className="absolute bottom-4 -left-3 sm:-left-6 bg-card/95 backdrop-blur-md border border-gold/35 rounded-2xl p-3.5 shadow-2xl flex items-center gap-3 animate-float-up z-20 text-left">
+                  <div className="w-10 h-10 rounded-xl bg-gold-gradient text-primary-foreground flex items-center justify-center font-display font-bold text-sm shrink-0 shadow-sm">
                     M³
                   </div>
-                  <div className="text-left">
+                  <div className="space-y-0.5">
                     <div className="font-display font-bold text-xs sm:text-sm text-foreground">Michél Meier</div>
-                    <div className="text-[10px] sm:text-[11px] text-gold font-medium">Breakdance-Weltmeister & Coach</div>
+                    <div className="text-[11px] sm:text-xs text-gold font-semibold">Master Personal Trainer</div>
+                    <div className="text-[10px] text-muted-foreground">IDO Weltmeister · 1:1 Coaching</div>
                   </div>
-                </div>
-
-                {/* Motivationsspruch 4: Unten Rechts (Klartext & Führung) */}
-                <div className="hidden sm:block absolute -bottom-3 right-0 sm:right-2 max-w-[210px] bg-card/95 backdrop-blur-md border border-gold/30 rounded-2xl p-2.5 shadow-lg animate-float-up z-20 text-left">
-                  <div className="text-[10px] font-bold uppercase tracking-wider text-gold font-mono mb-0.5">
-                    Autonomie & Klarheit
-                  </div>
-                  <p className="text-[11px] text-foreground font-medium italic leading-tight">
-                    „Ich mache mich absichtlich überflüssig.“
-                  </p>
                 </div>
               </div>
             </div>
