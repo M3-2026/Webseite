@@ -758,7 +758,7 @@ function IndexPage() {
       <section id="top" className="relative hero-bg overflow-hidden border-b border-border/70 min-h-[calc(100dvh-4.5rem)] lg:h-[calc(100dvh-4.5rem)] flex flex-col justify-between pt-3 sm:pt-4 md:pt-6 pb-0">
         {/* Subtle Ambient Radial Glow */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-gold/8 blur-3xl" />
+          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-amber-500/10 blur-3xl" />
         </div>
 
         {/* Main Content Area */}
@@ -767,19 +767,19 @@ function IndexPage() {
             {/* Left Column: Clean, punchy text block with prominent authority */}
             <div className="lg:col-span-7 space-y-4 sm:space-y-5 pb-4 lg:pb-8 text-left animate-float-up">
               {/* Top Badge */}
-              <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/5 px-3.5 py-1 text-xs uppercase tracking-[0.2em] text-gold font-bold shadow-sm">
-                <Sparkles className="w-3.5 h-3.5 text-gold" />
+              <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-amber-500/10 px-3.5 py-1 text-xs uppercase tracking-[0.22em] text-amber-700 font-bold shadow-sm">
+                <Sparkles className="w-3.5 h-3.5 text-amber-600" />
                 <span>1:1 Coaching & Gesundheitssystem</span>
               </div>
 
               {/* Main Headline */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] xl:text-[3.8rem] font-display font-extrabold leading-[1.04] tracking-tight text-foreground text-left">
-                Leistung beginnt mit <span className="text-gold">Gesundheit.</span>
+                Leistung beginnt mit <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-500">Gesundheit.</span>
               </h1>
 
               {/* Distilled Value Proposition */}
               <p className="text-base sm:text-lg md:text-xl text-foreground/90 font-medium leading-relaxed text-left max-w-xl">
-                Ganzheitliches Personal Training, das Stoffwechsel (<strong className="text-foreground">M¹</strong>), Biomechanik (<strong className="text-foreground">M²</strong>) und Mindset (<strong className="text-foreground">M³</strong>) vereint – für schmerzfreie Belastbarkeit und echte Zellenergie im Alltag.
+                Ganzheitliches Personal Training, das Stoffwechsel (<strong className="text-orange-600 font-bold">M¹</strong>), Biomechanik (<strong className="text-emerald-700 font-bold">M²</strong>) und Mindset (<strong className="text-blue-700 font-bold">M³</strong>) vereint – für schmerzfreie Belastbarkeit und echte Zellenergie im Alltag.
               </p>
 
               {/* Dual Actions */}
@@ -788,7 +788,7 @@ function IndexPage() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-6 sm:px-8 py-3.5 sm:py-4 text-sm md:text-base font-bold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95 hover:scale-[1.02] active:scale-[0.98] transition-all"
+                  className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-6 sm:px-8 py-3.5 sm:py-4 text-sm md:text-base font-bold text-primary-foreground shadow-[var(--shadow-gold)] hover:shadow-[var(--shadow-gold-hover)] hover:opacity-95 hover:scale-[1.02] active:scale-[0.98] transition-all"
                 >
                   <MessageCircle className="w-5 h-5" />
                   Kostenloses Erstgespräch
@@ -797,7 +797,7 @@ function IndexPage() {
                   href="#system-kompass"
                   className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-card/90 px-5 sm:px-6 py-3.5 sm:py-4 text-sm md:text-base font-semibold text-foreground hover:bg-secondary transition-all shadow-sm"
                 >
-                  <Compass className="w-4 h-4 text-gold" />
+                  <Compass className="w-4 h-4 text-amber-600" />
                   System-Kompass
                 </a>
               </div>
@@ -805,15 +805,15 @@ function IndexPage() {
               {/* Authority Credential Strip */}
               <div className="pt-1.5 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-xs font-semibold text-muted-foreground text-left border-t border-border/60 max-w-lg">
                 <div className="flex items-center gap-1.5 pt-0.5">
-                  <span className="text-gold">★</span>
+                  <span className="text-amber-500">★</span>
                   <span className="text-foreground font-semibold">Master Personal Trainer</span>
                 </div>
                 <div className="flex items-center gap-1.5 pt-0.5">
-                  <span className="text-gold">★</span>
+                  <span className="text-amber-500">★</span>
                   <span>25+ Jahre Praxis</span>
                 </div>
                 <div className="flex items-center gap-1.5 pt-0.5">
-                  <span className="text-gold">★</span>
+                  <span className="text-amber-500">★</span>
                   <span>IDO Weltmeister</span>
                 </div>
               </div>
@@ -827,12 +827,12 @@ function IndexPage() {
                   alt="Michél Meier – Master Personal Trainer & Gesundheitscoach"
                   className="avatar-shadow h-[44vh] sm:h-[50vh] md:h-[54vh] lg:h-[58vh] xl:h-[62vh] max-h-[640px] w-auto object-contain object-bottom select-none pointer-events-none animate-float-up z-10"
                 />
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[300px] sm:w-[380px] h-20 bg-gold/15 blur-3xl rounded-full pointer-events-none" />
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[300px] sm:w-[380px] h-20 bg-amber-500/20 blur-3xl rounded-full pointer-events-none" />
 
                 {/* Quote 1: Top-Left */}
-                <div className="absolute top-1 -left-3 sm:-left-8 lg:-left-12 max-w-[190px] xl:max-w-[210px] bg-card/95 backdrop-blur-md border border-gold/35 rounded-2xl p-2.5 sm:p-3.5 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform text-left">
-                  <div className="flex items-center gap-1 text-[10px] font-mono uppercase tracking-wider text-gold font-bold mb-0.5">
-                    <Flame className="w-3 h-3 text-gold" />
+                <div className="absolute top-1 -left-3 sm:-left-8 lg:-left-12 max-w-[190px] xl:max-w-[210px] bg-card/95 backdrop-blur-md border border-orange-500/35 rounded-2xl p-2.5 sm:p-3.5 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform text-left">
+                  <div className="flex items-center gap-1 text-[10px] font-mono uppercase tracking-wider text-orange-600 font-bold mb-0.5">
+                    <Flame className="w-3 h-3 text-orange-500" />
                     <span>M¹ · Fundament</span>
                   </div>
                   <p className="text-[10px] sm:text-xs font-medium text-foreground italic leading-snug">
@@ -841,8 +841,8 @@ function IndexPage() {
                 </div>
 
                 {/* Quote 2: Top-Right */}
-                <div className="absolute top-1 -right-3 sm:-right-8 lg:-right-12 max-w-[190px] xl:max-w-[210px] bg-card/95 backdrop-blur-md border border-emerald-600/35 rounded-2xl p-2.5 sm:p-3.5 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform text-left">
-                  <div className="flex items-center gap-1 text-[10px] font-mono uppercase tracking-wider text-emerald-600 font-bold mb-0.5">
+                <div className="absolute top-1 -right-3 sm:-right-8 lg:-right-12 max-w-[190px] xl:max-w-[210px] bg-card/95 backdrop-blur-md border border-emerald-500/35 rounded-2xl p-2.5 sm:p-3.5 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform text-left">
+                  <div className="flex items-center gap-1 text-[10px] font-mono uppercase tracking-wider text-emerald-700 font-bold mb-0.5">
                     <Dumbbell className="w-3 h-3 text-emerald-600" />
                     <span>M² · Biomechanik</span>
                   </div>
@@ -852,9 +852,9 @@ function IndexPage() {
                 </div>
 
                 {/* Quote 3: Mid/Upper-Right */}
-                <div className="absolute top-[35%] -right-3 sm:-right-8 lg:-right-12 max-w-[190px] xl:max-w-[210px] bg-card/95 backdrop-blur-md border border-indigo-600/35 rounded-2xl p-2.5 sm:p-3.5 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform text-left">
-                  <div className="flex items-center gap-1 text-[10px] font-mono uppercase tracking-wider text-indigo-400 font-bold mb-0.5">
-                    <Brain className="w-3 h-3 text-indigo-400" />
+                <div className="absolute top-[35%] -right-3 sm:-right-8 lg:-right-12 max-w-[190px] xl:max-w-[210px] bg-card/95 backdrop-blur-md border border-blue-500/35 rounded-2xl p-2.5 sm:p-3.5 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform text-left">
+                  <div className="flex items-center gap-1 text-[10px] font-mono uppercase tracking-wider text-blue-700 font-bold mb-0.5">
+                    <Brain className="w-3 h-3 text-blue-600" />
                     <span>M³ · Mindset</span>
                   </div>
                   <p className="text-[10px] sm:text-xs font-medium text-foreground italic leading-snug">
@@ -863,14 +863,17 @@ function IndexPage() {
                 </div>
 
                 {/* Credential Badge: Lower-Left */}
-                <div className="absolute bottom-4 -left-3 sm:-left-8 lg:-left-12 bg-card/95 backdrop-blur-md border border-gold/35 rounded-2xl p-2.5 sm:p-3.5 shadow-2xl flex items-center gap-2.5 animate-float-up z-20 text-left">
+                <div className="absolute bottom-4 -left-3 sm:-left-8 lg:-left-12 bg-card/95 backdrop-blur-md border border-amber-500/40 rounded-2xl p-2.5 sm:p-3.5 shadow-2xl flex items-center gap-2.5 animate-float-up z-20 text-left">
                   <div className="w-9 h-9 rounded-xl bg-gold-gradient text-primary-foreground flex items-center justify-center font-display font-bold text-xs shrink-0 shadow-sm">
                     M³
                   </div>
                   <div className="space-y-0.5">
                     <div className="font-display font-bold text-xs text-foreground">Michél Meier</div>
-                    <div className="text-[10px] sm:text-[11px] text-gold font-semibold">Master Personal Trainer</div>
-                    <div className="text-[9px] sm:text-[10px] text-muted-foreground">IDO Weltmeister · 1:1 Coaching</div>
+                    <div className="text-[10px] sm:text-[11px] text-amber-600 font-semibold">Master Personal Trainer</div>
+                    <div className="text-[9px] sm:text-[10px] text-muted-foreground flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                      <span>IDO Weltmeister · 1:1 Coaching</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -900,32 +903,32 @@ function IndexPage() {
           {/* Master Trinity Bento Grid */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
             {/* Bento 1: M1 Metabolism (4 cols) */}
-            <div className="md:col-span-4 rounded-3xl border border-primary/25 bg-gradient-to-br from-primary/5 via-card to-card p-6 md:p-8 flex flex-col justify-between shadow-sm hover:border-primary/50 transition-all text-left group">
+            <div className="md:col-span-4 rounded-3xl border border-orange-500/30 bg-gradient-to-br from-orange-500/10 via-card to-card p-6 md:p-8 flex flex-col justify-between shadow-sm hover:border-orange-500/60 hover:shadow-xl hover:shadow-orange-500/10 transition-all text-left group">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="w-10 h-10 rounded-2xl bg-primary/10 text-primary flex items-center justify-center font-display font-bold text-sm">
+                  <div className="w-10 h-10 rounded-2xl bg-orange-500/15 text-orange-600 flex items-center justify-center font-display font-bold text-sm">
                     M¹
                   </div>
-                  <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-primary bg-primary/10 px-2.5 py-0.5 rounded-full">
+                  <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-orange-600 bg-orange-500/15 px-2.5 py-0.5 rounded-full border border-orange-500/30">
                     Metabolism
                   </span>
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-display font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl md:text-2xl font-display font-bold text-foreground mb-1 group-hover:text-orange-600 transition-colors">
                     Gesundheit von innen
                   </h3>
                   <p className="text-xs text-muted-foreground leading-relaxed">
                     Mikrobiom, Darmgesundheit, zelluläre Vitalstoffe und regulierter Blutzucker als Fundament für dauerhafte Energie.
                   </p>
                 </div>
-                <div className="text-xs font-medium text-gold italic border-l-2 border-gold pl-3 py-1">
+                <div className="text-xs font-medium text-amber-600 italic border-l-2 border-amber-500 pl-3 py-1 bg-amber-500/5 rounded-r-lg">
                   „Wenn dein Fundament brennt, nützt kein härteres Training.“
                 </div>
               </div>
               <div className="pt-6">
                 <Link
                   to="/metabolism"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:opacity-80 transition"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-orange-600 hover:opacity-80 transition"
                 >
                   <span>M¹ Details ansehen</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -934,13 +937,13 @@ function IndexPage() {
             </div>
 
             {/* Bento 2: M2 Movement (4 cols) */}
-            <div className="md:col-span-4 rounded-3xl border border-emerald-600/25 bg-gradient-to-br from-emerald-600/5 via-card to-card p-6 md:p-8 flex flex-col justify-between shadow-sm hover:border-emerald-600/50 transition-all text-left group">
+            <div className="md:col-span-4 rounded-3xl border border-emerald-500/30 bg-gradient-to-br from-emerald-500/10 via-card to-card p-6 md:p-8 flex flex-col justify-between shadow-sm hover:border-emerald-500/60 hover:shadow-xl hover:shadow-emerald-500/10 transition-all text-left group">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="w-10 h-10 rounded-2xl bg-emerald-600/10 text-emerald-700 flex items-center justify-center font-display font-bold text-sm">
+                  <div className="w-10 h-10 rounded-2xl bg-emerald-500/15 text-emerald-700 flex items-center justify-center font-display font-bold text-sm">
                     M²
                   </div>
-                  <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-emerald-700 bg-emerald-600/10 px-2.5 py-0.5 rounded-full">
+                  <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-emerald-700 bg-emerald-500/15 px-2.5 py-0.5 rounded-full border border-emerald-500/30">
                     Movement
                   </span>
                 </div>
@@ -952,7 +955,7 @@ function IndexPage() {
                     Funktionelle Biomechanik, 1:1 Personal Training, Gelenkstabilität und schmerzfreie Belastbarkeit im Alltag.
                   </p>
                 </div>
-                <div className="text-xs font-medium text-gold italic border-l-2 border-gold pl-3 py-1">
+                <div className="text-xs font-medium text-amber-600 italic border-l-2 border-amber-500 pl-3 py-1 bg-amber-500/5 rounded-r-lg">
                   „Technik schlägt Gewicht – Immer.“
                 </div>
               </div>
@@ -968,32 +971,32 @@ function IndexPage() {
             </div>
 
             {/* Bento 3: M3 Mindset (4 cols) */}
-            <div className="md:col-span-4 rounded-3xl border border-indigo-600/25 bg-gradient-to-br from-indigo-600/5 via-card to-card p-6 md:p-8 flex flex-col justify-between shadow-sm hover:border-indigo-600/50 transition-all text-left group">
+            <div className="md:col-span-4 rounded-3xl border border-blue-500/30 bg-gradient-to-br from-blue-500/10 via-card to-card p-6 md:p-8 flex flex-col justify-between shadow-sm hover:border-blue-500/60 hover:shadow-xl hover:shadow-blue-500/10 transition-all text-left group">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="w-10 h-10 rounded-2xl bg-indigo-600/10 text-indigo-700 flex items-center justify-center font-display font-bold text-sm">
+                  <div className="w-10 h-10 rounded-2xl bg-blue-500/15 text-blue-700 flex items-center justify-center font-display font-bold text-sm">
                     M³
                   </div>
-                  <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-indigo-700 bg-indigo-600/10 px-2.5 py-0.5 rounded-full">
+                  <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-blue-700 bg-blue-500/15 px-2.5 py-0.5 rounded-full border border-blue-500/30">
                     Mindset & Routinen
                   </span>
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-display font-bold text-foreground mb-1 group-hover:text-indigo-700 transition-colors">
+                  <h3 className="text-xl md:text-2xl font-display font-bold text-foreground mb-1 group-hover:text-blue-700 transition-colors">
                     Aus Disziplin wird Routine
                   </h3>
                   <p className="text-xs text-muted-foreground leading-relaxed">
                     Stressresilienz, Schlaf-Optimierung, minimale Alltagsgewohnheiten und nachhaltige Selbstständigkeit.
                   </p>
                 </div>
-                <div className="text-xs font-medium text-gold italic border-l-2 border-gold pl-3 py-1">
+                <div className="text-xs font-medium text-amber-600 italic border-l-2 border-amber-500 pl-3 py-1 bg-amber-500/5 rounded-r-lg">
                   „Routine schlägt flüchtige Motivation.“
                 </div>
               </div>
               <div className="pt-6">
                 <Link
                   to="/mental-performance"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-700 hover:opacity-80 transition"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-blue-700 hover:opacity-80 transition"
                 >
                   <span>M³ Details ansehen</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -1123,49 +1126,54 @@ function IndexPage() {
 
           {/* Asymmetric Solution Bento Grid */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
-            {/* Tile 1: Flagship Body Reset (7 cols) */}
-            <div className="md:col-span-7 rounded-3xl border-2 border-gold/40 bg-gradient-to-br from-gold/10 via-card to-card p-6 md:p-8 flex flex-col justify-between shadow-[var(--shadow-gold)] text-left group">
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-primary">
+            {/* Tile 1: Flagship Body Reset (7 cols) - ATHLETIC DARK CARBON HERO CARD */}
+            <div className="md:col-span-7 rounded-3xl border-2 border-amber-500/50 bg-[#090d16] text-white p-6 md:p-8 flex flex-col justify-between shadow-2xl shadow-amber-500/10 text-left group relative overflow-hidden">
+              {/* Subtle Kinetic Ambient Glow in Dark Card */}
+              <div className="absolute -top-12 -right-12 w-64 h-64 bg-amber-500/15 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-orange-600/10 rounded-full blur-3xl pointer-events-none" />
+
+              <div className="relative space-y-4">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
                     M¹ · METABOLISM FLAGGSCHIFF
                   </span>
-                  <span className="rounded-full bg-gold-gradient px-3 py-0.5 text-[10px] font-bold text-primary-foreground uppercase tracking-wider">
+                  <span className="rounded-full bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-600 px-3.5 py-1 text-[11px] font-black text-slate-950 uppercase tracking-wider shadow-md">
                     Ganzheitliches Konzept
                   </span>
                 </div>
                 <div>
-                  <h3 className="text-2xl md:text-3xl font-display font-extrabold text-foreground mb-1 group-hover:text-gold transition-colors">
+                  <h3 className="text-2xl md:text-3xl font-display font-black text-white mb-1 group-hover:text-amber-400 transition-colors">
                     M³ Body Reset
                   </h3>
-                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-amber-300/90 mb-3">
                     Ganzheitlicher Neustart von innen
                   </p>
-                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-4">
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
                     Das modulare Konzept für Darm und Stoffwechsel: Beinhaltet die 16-Tage Darmkur, die gezielte Stoffwechselkur sowie die tägliche Goldene Grundversorgung.
                   </p>
                 </div>
 
-                <div className="grid sm:grid-cols-3 gap-2 py-3 border-t border-b border-border/70 text-xs font-medium text-foreground">
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
-                    <span>16-Tage Darmkur</span>
+                <div className="grid sm:grid-cols-3 gap-2 py-3 border-t border-b border-slate-800 text-xs font-medium text-slate-200">
+                  <div className="flex items-center gap-2 bg-slate-900/80 border border-slate-800 rounded-xl p-2.5">
+                    <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0" />
+                    <span className="font-semibold">16-Tage Darmkur</span>
                   </div>
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
-                    <span>Stoffwechselkur</span>
+                  <div className="flex items-center gap-2 bg-slate-900/80 border border-slate-800 rounded-xl p-2.5">
+                    <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0" />
+                    <span className="font-semibold">Stoffwechselkur</span>
                   </div>
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
-                    <span>Grundversorgung</span>
+                  <div className="flex items-center gap-2 bg-slate-900/80 border border-slate-800 rounded-xl p-2.5">
+                    <span className="w-2 h-2 rounded-full bg-amber-400 shrink-0" />
+                    <span className="font-semibold">Grundversorgung</span>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-6 flex flex-col sm:flex-row items-center gap-3">
+              <div className="relative pt-6 flex flex-col sm:flex-row items-center gap-3">
                 <Link
                   to="/body-reset"
-                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-full border border-border px-6 py-2.5 text-xs font-bold text-foreground hover:bg-secondary transition"
+                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-full border border-slate-700 bg-slate-800/80 px-6 py-2.5 text-xs font-bold text-white hover:bg-slate-700 transition"
                 >
                   Details ansehen
                 </Link>
@@ -1173,7 +1181,7 @@ function IndexPage() {
                   href={`${BASE_WHATSAPP}?text=Hallo%20Mich%C3%A9l,%20ich%20interessiere%20mich%20f%C3%BCr%20den%20M%C3%B3%20Body%20Reset.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 rounded-full bg-gold-gradient px-6 py-2.5 text-xs font-bold text-primary-foreground shadow-sm transition"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 rounded-full bg-gold-gradient px-6 py-2.5 text-xs font-bold text-primary-foreground shadow-lg shadow-amber-500/25 hover:scale-105 transition-all"
                 >
                   <MessageCircle className="w-3.5 h-3.5" />
                   WhatsApp Anfrage
@@ -1182,18 +1190,18 @@ function IndexPage() {
             </div>
 
             {/* Tile 2: 1:1 Ernährungscoaching (5 cols) */}
-            <div className="md:col-span-5 rounded-3xl border border-border bg-card p-6 md:p-8 flex flex-col justify-between shadow-sm hover:border-primary/50 transition-all text-left group">
+            <div className="md:col-span-5 rounded-3xl border border-orange-500/25 bg-card p-6 md:p-8 flex flex-col justify-between shadow-sm hover:border-orange-500/50 hover:shadow-lg transition-all text-left group">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-primary">
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-orange-600">
                     M¹ · ERNÄHRUNG
                   </span>
-                  <span className="text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full bg-primary/10 text-primary">
+                  <span className="text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full bg-orange-500/15 text-orange-600 border border-orange-500/20">
                     1:1 Coaching
                   </span>
                 </div>
                 <div>
-                  <h3 className="text-xl md:text-2xl font-display font-extrabold text-foreground mb-1 group-hover:text-primary transition-colors">
+                  <h3 className="text-xl md:text-2xl font-display font-extrabold text-foreground mb-1 group-hover:text-orange-600 transition-colors">
                     M³ Ernährungscoaching
                   </h3>
                   <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">
@@ -1206,11 +1214,11 @@ function IndexPage() {
 
                 <ul className="space-y-1.5 border-t border-border/60 pt-3 text-xs text-muted-foreground">
                   <li className="flex items-center gap-2 text-foreground font-medium">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0" />
                     <span>Individuelle Makro-Struktur</span>
                   </li>
                   <li className="flex items-center gap-2 text-foreground font-medium">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-orange-500 shrink-0" />
                     <span>Perfekt für Beruf & Familie</span>
                   </li>
                 </ul>
@@ -1229,20 +1237,20 @@ function IndexPage() {
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-1 rounded-full bg-secondary hover:bg-secondary/80 px-4 py-2.5 text-xs font-bold text-foreground transition"
                 >
-                  <MessageCircle className="w-3.5 h-3.5 text-primary" />
+                  <MessageCircle className="w-3.5 h-3.5 text-orange-600" />
                   WhatsApp
                 </a>
               </div>
             </div>
 
             {/* Tile 3: M3 Schmerzfrei (4 cols) */}
-            <div className="md:col-span-4 rounded-3xl border border-border bg-card p-6 flex flex-col justify-between shadow-sm hover:border-emerald-600/50 transition-all text-left group">
+            <div className="md:col-span-4 rounded-3xl border border-emerald-500/25 bg-card p-6 flex flex-col justify-between shadow-sm hover:border-emerald-500/50 hover:shadow-lg transition-all text-left group">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-emerald-700">
                     M² · REHA
                   </span>
-                  <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-emerald-600/10 text-emerald-700">
+                  <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-700 border border-emerald-500/20">
                     Mobilität
                   </span>
                 </div>
@@ -1273,13 +1281,13 @@ function IndexPage() {
             </div>
 
             {/* Tile 4: M3 Performance Training (4 cols) */}
-            <div className="md:col-span-4 rounded-3xl border border-border bg-card p-6 flex flex-col justify-between shadow-sm hover:border-emerald-600/50 transition-all text-left group">
+            <div className="md:col-span-4 rounded-3xl border border-emerald-500/25 bg-card p-6 flex flex-col justify-between shadow-sm hover:border-emerald-500/50 hover:shadow-lg transition-all text-left group">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-emerald-700">
                     M² · ATHLETIK
                   </span>
-                  <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-emerald-600/10 text-emerald-700">
+                  <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-700 border border-emerald-500/20">
                     1:1 Training
                   </span>
                 </div>
@@ -1310,13 +1318,13 @@ function IndexPage() {
             </div>
 
             {/* Tile 5: Coaching für Zwei (4 cols) */}
-            <div className="md:col-span-4 rounded-3xl border border-border bg-card p-6 flex flex-col justify-between shadow-sm hover:border-emerald-600/50 transition-all text-left group">
+            <div className="md:col-span-4 rounded-3xl border border-emerald-500/25 bg-card p-6 flex flex-col justify-between shadow-sm hover:border-emerald-500/50 hover:shadow-lg transition-all text-left group">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-emerald-700">
                     M² · PARTNER
                   </span>
-                  <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-emerald-600/10 text-emerald-700">
+                  <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-700 border border-emerald-500/20">
                     Für Zwei
                   </span>
                 </div>
@@ -1347,10 +1355,10 @@ function IndexPage() {
             </div>
 
             {/* Tile 6: Spezialvertiefungen (12 cols) */}
-            <div className="md:col-span-12 rounded-2xl border border-primary/20 bg-secondary/30 p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-left">
+            <div className="md:col-span-12 rounded-2xl border border-amber-500/25 bg-amber-500/5 p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-left">
               <div className="space-y-1">
-                <div className="text-xs font-bold uppercase tracking-wider text-primary flex items-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5 text-gold" />
+                <div className="text-xs font-bold uppercase tracking-wider text-amber-700 flex items-center gap-1.5">
+                  <Sparkles className="w-3.5 h-3.5 text-amber-600" />
                   <span>Weitere Kern-Bausteine & Spezialmodule</span>
                 </div>
                 <p className="text-xs text-muted-foreground">
@@ -1358,15 +1366,15 @@ function IndexPage() {
                 </p>
               </div>
               <div className="flex flex-wrap items-center gap-3 shrink-0">
-                <Link to="/darm-stoffwechselbegleitung" className="text-xs font-bold text-primary hover:underline">
+                <Link to="/darm-stoffwechselbegleitung" className="text-xs font-bold text-orange-600 hover:underline">
                   Darmbegleitung →
                 </Link>
                 <span className="text-border">|</span>
-                <Link to="/goldene-grundversorgung" className="text-xs font-bold text-primary hover:underline">
+                <Link to="/goldene-grundversorgung" className="text-xs font-bold text-amber-600 hover:underline">
                   Grundversorgung →
                 </Link>
                 <span className="text-border">|</span>
-                <Link to="/mental-performance" className="text-xs font-bold text-indigo-700 hover:underline">
+                <Link to="/mental-performance" className="text-xs font-bold text-blue-700 hover:underline">
                   Mental Performance →
                 </Link>
               </div>
@@ -1501,19 +1509,19 @@ function IndexPage() {
               </div>
             </div>
 
-            {/* Tile: M³ Live Performance Infinity Carousel (12 cols) */}
-            <div className="lg:col-span-12 rounded-3xl border border-border bg-card p-4 sm:p-6 shadow-sm overflow-hidden text-left space-y-3">
-              <div className="flex flex-wrap items-center justify-between gap-2 px-2">
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-                  <span className="text-xs font-mono uppercase tracking-[0.18em] text-gold font-bold">
+            {/* Tile: M³ Live Performance Infinity Carousel (12 cols) - ATHLETIC DARK CARBON STRIP */}
+            <div className="lg:col-span-12 rounded-3xl border border-slate-800 bg-[#090d16] text-white p-5 sm:p-7 shadow-2xl shadow-slate-950/25 overflow-hidden text-left space-y-4">
+              <div className="flex flex-wrap items-center justify-between gap-2 px-1">
+                <div className="flex items-center gap-2.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse" />
+                  <span className="text-xs font-mono uppercase tracking-[0.2em] text-amber-400 font-bold">
                     M³ Live Performance · 25+ Jahre Bewegungspraxis & Weltmeisterjahre
                   </span>
                 </div>
-                <div className="flex items-center gap-2 text-xs text-muted-foreground font-medium">
-                  <span className="text-foreground font-semibold">Breakdance-Weltmeister</span>
+                <div className="flex items-center gap-2 text-xs text-slate-400 font-medium">
+                  <span className="text-white font-semibold">Breakdance-Weltmeister</span>
                   <span>·</span>
-                  <span>Master Personal Trainer</span>
+                  <span className="text-amber-400">Master Personal Trainer</span>
                 </div>
               </div>
 
@@ -1523,7 +1531,7 @@ function IndexPage() {
                   {HERO_PERFORMANCE_PICTURES_DOUBLED.map((p, idx) => (
                     <div
                       key={`${p.image}-${idx}`}
-                      className="h-[145px] sm:h-[165px] md:h-[185px] shrink-0 bg-secondary/40 rounded-2xl overflow-hidden border border-border/80 shadow-sm hover:shadow-lg hover:border-gold/60 transition-all p-1 flex items-center justify-center group cursor-pointer"
+                      className="h-[155px] sm:h-[175px] md:h-[195px] shrink-0 bg-slate-900/90 rounded-2xl overflow-hidden border border-slate-700/80 shadow-md hover:shadow-xl hover:border-amber-400 hover:shadow-amber-500/20 transition-all p-1.5 flex items-center justify-center group cursor-pointer"
                     >
                       <img
                         src={p.image}
