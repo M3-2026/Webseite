@@ -793,14 +793,13 @@ function IndexPage() {
                   <MessageCircle className="w-5 h-5" />
                   Kostenloses Erstgespräch
                 </a>
-                <Link
-                  to="/"
-                  hash="system-kompass"
+                <a
+                  href="#system-kompass"
                   className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-card/90 px-5 sm:px-6 py-3.5 sm:py-4 text-sm md:text-base font-semibold text-foreground hover:bg-secondary transition-all shadow-sm"
                 >
                   <Compass className="w-4 h-4 text-gold" />
                   System-Kompass
-                </Link>
+                </a>
               </div>
 
               {/* Authority Credential Strip */}
@@ -883,7 +882,8 @@ function IndexPage() {
       {/* ---------------------------------------------------- */}
       {/* 2. BENTO CHAPTER 1: DAS M³ TRINITY BENTO (3 Säulen & Philosophie-Hub) */}
       {/* ---------------------------------------------------- */}
-      <section id="system" className="py-16 md:py-24 border-b border-border/70 bg-card">
+      <section id="system" className="relative py-16 md:py-24 border-b border-border/70 bg-card">
+        <span id="philosophie" className="absolute -top-24 pointer-events-none" aria-hidden="true" />
         <div className="max-w-7xl mx-auto px-5 md:px-6 space-y-10">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
