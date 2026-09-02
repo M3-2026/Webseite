@@ -554,7 +554,7 @@ function PillarTriadExplorer() {
     },
   };
 
-  const current = pillars[activeTab];
+  const current = pillars[activeTab] || pillars.m1;
 
   return (
     <div className="space-y-6">
@@ -1470,8 +1470,8 @@ function IndexPage() {
                       <div className="space-y-1.5">
                         <div className="flex items-center justify-between">
                           <span className="text-amber-500 text-xs">★★★★★</span>
-                          <span className={`text-[9px] font-mono font-bold uppercase px-2 py-0.5 rounded-full border ${t.badgeClass}`}>
-                            {t.pillar.split(" ")[0]}
+                          <span className={`text-[9px] font-mono font-bold uppercase px-2 py-0.5 rounded-full border ${t.badgeClass || ""}`}>
+                            {(t.pillar || "M³").split(" ")[0]}
                           </span>
                         </div>
                         <p className="text-xs text-foreground/90 italic leading-relaxed line-clamp-3">
