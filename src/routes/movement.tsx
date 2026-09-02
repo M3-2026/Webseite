@@ -228,7 +228,7 @@ function MovementPage() {
                   25 Jahre Erfahrung im Spitzensport
                 </h2>
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                  Vom Breakdance-Weltmeistertitel 2006/07 bis zur täglichen Coaching-Praxis als Master Personal Trainer: Michél Meier vermittelt Bewegung so, dass sie dich nicht verschleißt, sondern deinen Körper widerstandsfähig und stark für alle Anforderungen des Lebens macht.
+                  Vom Breakdance-Weltmeistertitel 2006/07 bis zur täglichen Coaching-Praxis als Personal Trainer & Gesundheitscoach: Michél Meier vermittelt Bewegung so, dass sie dich nicht verschleißt, sondern deinen Körper widerstandsfähig und stark für alle Anforderungen des Lebens macht.
                 </p>
                 <div className="pt-2">
                   <Link

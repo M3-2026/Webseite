@@ -115,7 +115,7 @@ function UeberMichPage() {
                   <div className="absolute bottom-5 left-5 right-5 space-y-1">
                     <div className="font-display font-extrabold text-xl text-white">Michél Meier</div>
                     <div className="text-xs font-semibold text-gold tracking-wide">
-                      IDO Breakdance World Champion · Master Personal Trainer
+                      IDO Breakdance World Champion · Personal Trainer & Coach
                     </div>
                   </div>
                 </div>
@@ -491,8 +491,8 @@ function UeberMichPage() {
                 {
                   year: "2024 – Heute",
                   tag: "Ganzheitlichkeit",
-                  title: "M³ Performance & Master Personal Trainer",
-                  desc: "Bündelung von 25 Jahren Praxiserfahrung in das modulare M³-System (Metabolism, Movement, Mental) und Vollendung der Master Personal Trainer Ausbildung.",
+                  title: "M³ Performance & Personal Training",
+                  desc: "Bündelung von 25 Jahren Praxiserfahrung in das modulare M³-System (Metabolism, Movement, Mental) und kontinuierliche Weiterbildung im Rahmen der Master Personal Trainer Ausbildung.",
                 },
               ].map((item, index) => (
                 <div
