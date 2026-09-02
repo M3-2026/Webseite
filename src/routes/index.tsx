@@ -878,44 +878,6 @@ function IndexPage() {
             </div>
           </div>
         </div>
-
-        {/* ---------------------------------------------------- */}
-        {/* ANIMATED INFINITY CAROUSEL: Performance Action Pictures */}
-        {/* ---------------------------------------------------- */}
-        <div className="flex-shrink-0 mt-3 lg:mt-4 pt-3 pb-3.5 md:pb-4 border-t border-border/60 bg-secondary/30 relative overflow-hidden">
-          <div className="max-w-7xl mx-auto px-5 md:px-6 mb-2 flex flex-wrap items-center justify-between gap-2">
-            <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-              <span className="text-[11px] font-mono uppercase tracking-[0.18em] text-gold font-bold">
-                M³ Live Performance · 25+ Jahre Bewegungspraxis & Weltmeisterjahre
-              </span>
-            </div>
-            <div className="flex items-center gap-2 text-[11px] text-muted-foreground font-medium">
-              <span className="text-foreground font-semibold">Breakdance-Weltmeister</span>
-              <span>·</span>
-              <span>Master Personal Trainer</span>
-            </div>
-          </div>
-
-          {/* Infinity Marquee Track with Action Pictures */}
-          <div className="relative w-full overflow-hidden marquee-mask">
-            <div className="flex gap-3 sm:gap-4 w-max animate-marquee-left marquee-pause py-1">
-              {HERO_PERFORMANCE_PICTURES_DOUBLED.map((p, idx) => (
-                <div
-                  key={`${p.image}-${idx}`}
-                  className="h-[145px] sm:h-[165px] md:h-[180px] shrink-0 bg-card rounded-2xl overflow-hidden border border-border/80 shadow-sm hover:shadow-lg hover:border-gold/60 transition-all p-1 flex items-center justify-center group cursor-pointer"
-                >
-                  <img
-                    src={p.image}
-                    alt={p.alt}
-                    className="h-full w-auto max-w-none object-contain rounded-xl select-none group-hover:scale-[1.03] transition-transform duration-500"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* ---------------------------------------------------- */}
@@ -1536,6 +1498,42 @@ function IndexPage() {
                 <Link to="/ueber-mich" className="font-bold text-gold hover:underline">
                   Alle Erfahrungen ansehen →
                 </Link>
+              </div>
+            </div>
+
+            {/* Tile: M³ Live Performance Infinity Carousel (12 cols) */}
+            <div className="lg:col-span-12 rounded-3xl border border-border bg-card p-4 sm:p-6 shadow-sm overflow-hidden text-left space-y-3">
+              <div className="flex flex-wrap items-center justify-between gap-2 px-2">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
+                  <span className="text-xs font-mono uppercase tracking-[0.18em] text-gold font-bold">
+                    M³ Live Performance · 25+ Jahre Bewegungspraxis & Weltmeisterjahre
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-muted-foreground font-medium">
+                  <span className="text-foreground font-semibold">Breakdance-Weltmeister</span>
+                  <span>·</span>
+                  <span>Master Personal Trainer</span>
+                </div>
+              </div>
+
+              {/* Infinity Marquee Track with Action Pictures */}
+              <div className="relative w-full overflow-hidden marquee-mask pt-1">
+                <div className="flex gap-3 sm:gap-4 w-max animate-marquee-left marquee-pause py-1">
+                  {HERO_PERFORMANCE_PICTURES_DOUBLED.map((p, idx) => (
+                    <div
+                      key={`${p.image}-${idx}`}
+                      className="h-[145px] sm:h-[165px] md:h-[185px] shrink-0 bg-secondary/40 rounded-2xl overflow-hidden border border-border/80 shadow-sm hover:shadow-lg hover:border-gold/60 transition-all p-1 flex items-center justify-center group cursor-pointer"
+                    >
+                      <img
+                        src={p.image}
+                        alt={p.alt}
+                        className="h-full w-auto max-w-none object-contain rounded-xl select-none group-hover:scale-[1.03] transition-transform duration-500"
+                        loading="lazy"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
