@@ -764,12 +764,12 @@ function IndexPage() {
         {/* Main Content Area */}
         <div className="relative max-w-7xl mx-auto px-5 md:px-6 w-full flex-grow flex items-end">
           <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-end w-full pt-2 md:pt-4 pb-0">
-            {/* Left Column: Clean text block with prominent Master Personal Trainer authority */}
+            {/* Left Column: Clean, punchy text block with prominent authority */}
             <div className="lg:col-span-7 space-y-4 sm:space-y-5 pb-4 lg:pb-8 text-left animate-float-up">
-              {/* Top Badge: Personal Training & System */}
+              {/* Top Badge */}
               <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/5 px-3.5 py-1 text-xs uppercase tracking-[0.2em] text-gold font-bold shadow-sm">
                 <Sparkles className="w-3.5 h-3.5 text-gold" />
-                <span>Personal Training & Gesundheitssystem</span>
+                <span>1:1 Coaching & Gesundheitssystem</span>
               </div>
 
               {/* Main Headline */}
@@ -777,14 +777,9 @@ function IndexPage() {
                 Leistung beginnt mit <span className="text-gold">Gesundheit.</span>
               </h1>
 
-              {/* Emotional Subclaim */}
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-display font-semibold text-foreground/90 tracking-tight text-left">
-                Dein Personal Training & Gesundheitssystem für echte Lebensenergie und schmerzfreie Leistungsfähigkeit.
-              </p>
-
-              {/* Value Proposition */}
-              <p className="text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed text-left max-w-xl">
-                Wissenschaftlich fundiertes 1:1 Personal Training, das Stoffwechsel (<strong className="text-foreground">M¹</strong>), Biomechanik (<strong className="text-foreground">M²</strong>) und alltagstaugliche Routinen (<strong className="text-foreground">M³</strong>) vereint. Individuell, schmerzfrei und nachhaltig.
+              {/* Distilled Value Proposition */}
+              <p className="text-base sm:text-lg md:text-xl text-foreground/90 font-medium leading-relaxed text-left max-w-xl">
+                Ganzheitliches Personal Training, das Stoffwechsel (<strong className="text-foreground">M¹</strong>), Biomechanik (<strong className="text-foreground">M²</strong>) und Mindset (<strong className="text-foreground">M³</strong>) vereint – für schmerzfreie Belastbarkeit und echte Zellenergie im Alltag.
               </p>
 
               {/* Dual Actions */}
@@ -796,7 +791,7 @@ function IndexPage() {
                   className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-6 sm:px-8 py-3.5 sm:py-4 text-sm md:text-base font-bold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95 hover:scale-[1.02] active:scale-[0.98] transition-all"
                 >
                   <MessageCircle className="w-5 h-5" />
-                  Kostenloses Orientierungsgespräch
+                  Kostenloses Erstgespräch
                 </a>
                 <Link
                   to="/"
@@ -816,11 +811,11 @@ function IndexPage() {
                 </div>
                 <div className="flex items-center gap-1.5 pt-0.5">
                   <span className="text-gold">★</span>
-                  <span>25+ Jahre Bewegungspraxis</span>
+                  <span>25+ Jahre Praxis</span>
                 </div>
                 <div className="flex items-center gap-1.5 pt-0.5">
                   <span className="text-gold">★</span>
-                  <span>IDO Breakdance-Weltmeister</span>
+                  <span>IDO Weltmeister</span>
                 </div>
               </div>
             </div>
