@@ -17,6 +17,10 @@ import {
   ChevronDown,
   Layers,
   Activity,
+  HeartPulse,
+  TrendingUp,
+  UserCheck,
+  Zap,
 } from "lucide-react";
 import avatar from "@/assets/avatar.png";
 import { Header } from "@/components/Header";
@@ -313,195 +317,176 @@ function SystemStartKompass() {
   const result = getRecommendation();
 
   return (
-    <div className="relative rounded-3xl border border-border/90 bg-card p-6 md:p-10 shadow-[var(--shadow-card)] overflow-hidden">
+    <div className="relative rounded-3xl border border-border/90 bg-card p-6 md:p-8 shadow-sm overflow-hidden h-full flex flex-col justify-between text-left">
       {/* Header bar of the quiz */}
-      <div className="flex flex-wrap items-center justify-between gap-4 border-b border-border/70 pb-6 mb-8">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-2xl bg-gold/15 text-gold flex items-center justify-center">
-            <Compass className="w-5 h-5" />
+      <div>
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border/70 pb-5 mb-6">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-2xl bg-gold/15 text-gold flex items-center justify-center font-bold">
+              <Compass className="w-5 h-5" />
+            </div>
+            <div>
+              <h3 className="font-display text-lg md:text-xl font-bold tracking-tight">
+                M³ System-Kompass
+              </h3>
+              <p className="text-xs text-muted-foreground">
+                In 60 Sekunden zu deinem persönlichen Start-Schwerpunkt
+              </p>
+            </div>
           </div>
-          <div>
-            <h3 className="font-display text-xl md:text-2xl font-bold tracking-tight">
-              M³ System-Kompass
-            </h3>
-            <p className="text-xs text-muted-foreground">
-              In 60 Sekunden zu deinem persönlichen Start-Schwerpunkt
-            </p>
-          </div>
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-            Schritt {step} von 3
-          </span>
-          <div className="flex gap-1.5">
-            <span className={`w-6 h-1.5 rounded-full transition-all ${step >= 1 ? "bg-gold" : "bg-border"}`} />
-            <span className={`w-6 h-1.5 rounded-full transition-all ${step >= 2 ? "bg-gold" : "bg-border"}`} />
-            <span className={`w-6 h-1.5 rounded-full transition-all ${step >= 3 ? "bg-gold" : "bg-border"}`} />
-          </div>
-        </div>
-      </div>
-
-      {/* Step 1: Engpass */}
-      {step === 1 && (
-        <div className="space-y-6 animate-float-up">
-          <div className="max-w-2xl">
-            <span className="text-xs font-bold uppercase tracking-widest text-gold mb-1 block">
-              Schritt 1: Standortbestimmung
+          <div className="flex items-center gap-2">
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-muted-foreground">
+              Schritt {step}/3
             </span>
-            <h4 className="text-2xl md:text-3xl font-display font-extrabold">
-              Wo spürst du aktuell die größte Hürde in deinem Leben?
-            </h4>
-            <p className="text-sm text-muted-foreground mt-2">
-              Verstehen vor Verändern: Wähle den Bereich, der dich im Alltag am meisten Energie oder Wohlbefinden kostet.
-            </p>
+            <div className="flex gap-1">
+              <span className={`w-5 h-1.5 rounded-full transition-all ${step >= 1 ? "bg-gold" : "bg-border"}`} />
+              <span className={`w-5 h-1.5 rounded-full transition-all ${step >= 2 ? "bg-gold" : "bg-border"}`} />
+              <span className={`w-5 h-1.5 rounded-full transition-all ${step >= 3 ? "bg-gold" : "bg-border"}`} />
+            </div>
           </div>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-            {engpassOptions.map((opt) => {
-              const Icon = opt.icon;
-              return (
+        {/* Step 1: Engpass */}
+        {step === 1 && (
+          <div className="space-y-4 animate-float-up">
+            <div>
+              <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-gold block">
+                Schritt 1 · Standortbestimmung
+              </span>
+              <h4 className="text-xl md:text-2xl font-display font-extrabold text-foreground">
+                Wo spürst du aktuell deine größte Hürde?
+              </h4>
+            </div>
+
+            <div className="grid grid-cols-1 gap-3 pt-1">
+              {engpassOptions.map((opt) => {
+                const Icon = opt.icon;
+                return (
+                  <button
+                    key={opt.id}
+                    type="button"
+                    onClick={() => handleSelectEngpass(opt.id)}
+                    className="group text-left rounded-2xl border border-border p-4 hover:border-gold/60 hover:bg-secondary/40 transition-all flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-gold cursor-pointer"
+                  >
+                    <div className="flex items-start gap-3.5">
+                      <div className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${opt.color}`}>
+                        <Icon className="w-4 h-4" />
+                      </div>
+                      <div>
+                        <span className="text-[10px] font-bold uppercase text-gold block">
+                          {opt.pillar}
+                        </span>
+                        <div className="font-display font-bold text-sm text-foreground">
+                          {opt.title}
+                        </div>
+                        <div className="text-xs text-muted-foreground line-clamp-1">
+                          {opt.desc}
+                        </div>
+                      </div>
+                    </div>
+                    <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-gold group-hover:translate-x-1 transition-all shrink-0" />
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* Step 2: Ziel */}
+        {step === 2 && (
+          <div className="space-y-4 animate-float-up">
+            <div>
+              <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-gold block">
+                Schritt 2 · Zielausrichtung
+              </span>
+              <h4 className="text-xl md:text-2xl font-display font-extrabold text-foreground">
+                Was ist dein wichtigstes Resultat für die nächsten Monate?
+              </h4>
+            </div>
+
+            <div className="grid grid-cols-1 gap-3 pt-1">
+              {zielOptions.map((opt) => (
                 <button
                   key={opt.id}
                   type="button"
-                  onClick={() => handleSelectEngpass(opt.id)}
-                  className="group text-left rounded-2xl border border-border p-6 hover:border-gold/60 hover:bg-secondary/40 transition-all duration-200 flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-gold cursor-pointer"
+                  onClick={() => handleSelectZiel(opt.title)}
+                  className="group text-left rounded-2xl border border-border p-4 hover:border-gold/60 hover:bg-secondary/40 transition-all flex items-center justify-between gap-4 focus:outline-none focus:ring-2 focus:ring-gold cursor-pointer"
                 >
-                  <div>
-                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110 ${opt.color}`}>
-                      <Icon className="w-5 h-5" />
+                  <div className="flex items-center gap-3">
+                    <div className="w-7 h-7 rounded-full bg-gold/10 text-gold flex items-center justify-center font-bold text-xs shrink-0">
+                      ✓
                     </div>
-                    <span className="text-xs font-bold tracking-wider uppercase text-gold block mb-1">
-                      {opt.pillar}
-                    </span>
-                    <h5 className="font-display font-bold text-lg text-foreground mb-2">
-                      {opt.title}
-                    </h5>
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      {opt.desc}
-                    </p>
+                    <div>
+                      <div className="font-display font-bold text-sm text-foreground">
+                        {opt.title}
+                      </div>
+                      <div className="text-xs text-muted-foreground line-clamp-1">
+                        {opt.desc}
+                      </div>
+                    </div>
                   </div>
-                  <div className="mt-6 flex items-center gap-2 text-xs font-bold text-gold group-hover:translate-x-1 transition-transform">
-                    <span>Auswählen</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </div>
+                  <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-gold group-hover:translate-x-1 transition-all shrink-0" />
                 </button>
-              );
-            })}
-          </div>
-        </div>
-      )}
-
-      {/* Step 2: Ziel */}
-      {step === 2 && (
-        <div className="space-y-6 animate-float-up">
-          <div className="max-w-2xl">
-            <span className="text-xs font-bold uppercase tracking-widest text-gold mb-1 block">
-              Schritt 2: Zielausrichtung
-            </span>
-            <h4 className="text-2xl md:text-3xl font-display font-extrabold">
-              Was ist dein wichtigstes Resultat für die kommenden 6 Monate?
-            </h4>
-            <p className="text-sm text-muted-foreground mt-2">
-              Nicht möglichst viel auf einmal – sondern das eine Ziel, das für dich den größten Unterschied macht.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
-            {zielOptions.map((opt) => (
-              <button
-                key={opt.id}
-                type="button"
-                onClick={() => handleSelectZiel(opt.title)}
-                className="group text-left rounded-2xl border border-border p-6 hover:border-gold/60 hover:bg-secondary/40 transition-all duration-200 flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-gold cursor-pointer"
-              >
-                <div>
-                  <div className="w-8 h-8 rounded-full bg-gold/10 text-gold flex items-center justify-center font-display font-bold text-sm mb-4">
-                    ✓
-                  </div>
-                  <h5 className="font-display font-bold text-lg text-foreground mb-2">
-                    {opt.title}
-                  </h5>
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    {opt.desc}
-                  </p>
-                </div>
-                <div className="mt-6 flex items-center gap-2 text-xs font-bold text-gold group-hover:translate-x-1 transition-transform">
-                  <span>Diesen Weg wählen</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </div>
-              </button>
-            ))}
-          </div>
-
-          <div className="pt-2">
-            <button
-              type="button"
-              onClick={() => setStep(1)}
-              className="text-xs text-muted-foreground hover:text-foreground underline transition cursor-pointer"
-            >
-              ← Zurück zu Schritt 1
-            </button>
-          </div>
-        </div>
-      )}
-
-      {/* Step 3: Ergebnis & Klarer CTA */}
-      {step === 3 && (
-        <div className="space-y-6 animate-float-up">
-          <div className="rounded-2xl bg-gradient-to-br from-gold/15 via-gold/5 to-transparent border border-gold/40 p-6 md:p-8">
-            <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
-              <span className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-3.5 py-1 text-xs font-bold text-primary-foreground uppercase tracking-wider">
-                <Sparkles className="w-3.5 h-3.5" />
-                Deine M³ System-Empfehlung
-              </span>
-              <span className="text-xs font-mono font-semibold text-gold">
-                Fokus-Säule: {result.pillarCode}
-              </span>
+              ))}
             </div>
 
-            <h4 className="text-2xl md:text-3xl font-display font-extrabold text-foreground mb-3">
-              {result.focusTitle}
-            </h4>
-            <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-2xl mb-6">
-              {result.focusDesc}
-            </p>
-
-            <div className="grid sm:grid-cols-2 gap-4 border-t border-gold/20 pt-4 mb-6">
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-4 h-4 text-gold shrink-0 mt-0.5" />
-                <span className="text-xs text-foreground font-medium">
-                  Kein Blindflug: Wir analysieren exakt, wo deine wichtigste Stellschraube liegt.
-                </span>
-              </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-4 h-4 text-gold shrink-0 mt-0.5" />
-                <span className="text-xs text-foreground font-medium">
-                  Ziel ist Selbstständigkeit: Du lernst, deinen Körper selbst zu steuern.
-                </span>
-              </div>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-center gap-4">
-              <a
-                href={result.prefilledUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-gold-gradient px-7 py-3.5 font-bold text-sm text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95 hover:scale-[1.02] active:scale-[0.98] transition-all"
-              >
-                <MessageCircle className="w-4 h-4" />
-                Ergebnis im 20-Min. Erstgespräch besprechen
-              </a>
+            <div className="pt-2">
               <button
                 type="button"
-                onClick={resetKompass}
-                className="text-xs font-semibold text-muted-foreground hover:text-foreground transition underline cursor-pointer"
+                onClick={() => setStep(1)}
+                className="text-xs text-muted-foreground hover:text-foreground underline transition cursor-pointer"
               >
-                Kompass neu starten
+                ← Zurück zu Schritt 1
               </button>
             </div>
           </div>
-        </div>
-      )}
+        )}
+
+        {/* Step 3: Ergebnis */}
+        {step === 3 && (
+          <div className="space-y-4 animate-float-up">
+            <div className="rounded-2xl bg-gradient-to-br from-gold/15 via-gold/5 to-transparent border border-gold/40 p-5 md:p-6 space-y-4">
+              <div className="flex items-center justify-between gap-2">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-gold-gradient px-3 py-0.5 text-[10px] font-bold text-primary-foreground uppercase tracking-wider">
+                  <Sparkles className="w-3 h-3" />
+                  Deine M³ Empfehlung
+                </span>
+                <span className="text-xs font-mono font-bold text-gold">
+                  Fokus: {result.pillarCode}
+                </span>
+              </div>
+
+              <div>
+                <h4 className="text-lg md:text-xl font-display font-extrabold text-foreground mb-1">
+                  {result.focusTitle}
+                </h4>
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                  {result.focusDesc}
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-center gap-3 pt-2">
+                <a
+                  href={result.prefilledUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-gold-gradient px-6 py-3 font-bold text-xs md:text-sm text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95 transition-all"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  Ergebnis im Erstgespräch besprechen
+                </a>
+                <button
+                  type="button"
+                  onClick={resetKompass}
+                  className="text-xs font-semibold text-muted-foreground hover:text-foreground underline cursor-pointer"
+                >
+                  Neu starten
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }
@@ -572,13 +557,12 @@ function PillarTriadExplorer() {
   const current = pillars[activeTab];
 
   return (
-    <div className="rounded-3xl border border-border bg-card p-6 md:p-10 shadow-[var(--shadow-card)] space-y-10">
-      {/* Visual Interactive Triad Diagram */}
-      <div className="relative rounded-2xl bg-secondary/30 border border-border/70 p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-8 overflow-hidden">
+    <div className="space-y-6">
+      {/* Visual Interactive Triad Diagram & Switcher */}
+      <div className="rounded-2xl bg-secondary/30 border border-border/70 p-5 md:p-6 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden">
         {/* Interactive SVG Connector Triangle */}
-        <div className="relative w-full max-w-[320px] h-[220px] shrink-0 mx-auto select-none">
+        <div className="relative w-full max-w-[280px] h-[190px] shrink-0 mx-auto select-none">
           <svg className="w-full h-full" viewBox="0 0 320 220" fill="none">
-            {/* Background connecting lines */}
             <path
               d="M 160 35 L 265 175 L 55 175 Z"
               stroke="currentColor"
@@ -586,7 +570,6 @@ function PillarTriadExplorer() {
               strokeWidth="2"
               strokeDasharray="4 4"
             />
-            {/* Active illuminated path */}
             <path
               d={
                 activeTab === "m1"
@@ -606,41 +589,41 @@ function PillarTriadExplorer() {
           <button
             type="button"
             onClick={() => setActiveTab("m1")}
-            className={`absolute top-0 left-1/2 -translate-x-1/2 w-16 h-16 rounded-2xl border-2 flex flex-col items-center justify-center gap-0.5 cursor-pointer transition-all duration-300 ${
+            className={`absolute top-0 left-1/2 -translate-x-1/2 w-14 h-14 rounded-2xl border-2 flex flex-col items-center justify-center gap-0.5 cursor-pointer transition-all duration-300 ${
               activeTab === "m1" ? current.nodeColor : "border-border bg-card hover:border-primary/60 text-muted-foreground"
             }`}
           >
             <Flame className="w-4 h-4" />
-            <span className="font-display font-extrabold text-xs">M¹</span>
+            <span className="font-display font-extrabold text-[11px]">M¹</span>
           </button>
 
           {/* Node M2 (Bottom-Left) */}
           <button
             type="button"
             onClick={() => setActiveTab("m2")}
-            className={`absolute bottom-0 left-2 w-16 h-16 rounded-2xl border-2 flex flex-col items-center justify-center gap-0.5 cursor-pointer transition-all duration-300 ${
+            className={`absolute bottom-0 left-2 w-14 h-14 rounded-2xl border-2 flex flex-col items-center justify-center gap-0.5 cursor-pointer transition-all duration-300 ${
               activeTab === "m2" ? current.nodeColor : "border-border bg-card hover:border-emerald-600/60 text-muted-foreground"
             }`}
           >
             <Dumbbell className="w-4 h-4" />
-            <span className="font-display font-extrabold text-xs">M²</span>
+            <span className="font-display font-extrabold text-[11px]">M²</span>
           </button>
 
           {/* Node M3 (Bottom-Right) */}
           <button
             type="button"
             onClick={() => setActiveTab("m3")}
-            className={`absolute bottom-0 right-2 w-16 h-16 rounded-2xl border-2 flex flex-col items-center justify-center gap-0.5 cursor-pointer transition-all duration-300 ${
+            className={`absolute bottom-0 right-2 w-14 h-14 rounded-2xl border-2 flex flex-col items-center justify-center gap-0.5 cursor-pointer transition-all duration-300 ${
               activeTab === "m3" ? current.nodeColor : "border-border bg-card hover:border-indigo-600/60 text-muted-foreground"
             }`}
           >
             <Brain className="w-4 h-4" />
-            <span className="font-display font-extrabold text-xs">M³</span>
+            <span className="font-display font-extrabold text-[11px]">M³</span>
           </button>
         </div>
 
-        {/* Visual Dynamic Caption */}
-        <div className="space-y-2 text-center md:text-left max-w-md">
+        {/* Dynamic Caption & Switcher */}
+        <div className="space-y-3 text-center md:text-left max-w-md">
           <div className="inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wider bg-card border border-border">
             <Activity className="w-3.5 h-3.5 text-gold" />
             <span>Interaktives Triaden-Zusammenspiel</span>
@@ -650,82 +633,75 @@ function PillarTriadExplorer() {
             {activeTab === "m2" && "M² formt die körperliche Belastbarkeit: Intelligente Bewegung schützt vor Schmerzen und baut echte Kraft auf."}
             {activeTab === "m3" && "M³ verankert die Routinen im Alltag: Stressmanagement und Schlaf sichern die dauerhafte Umsetzung."}
           </p>
+
+          <div className="flex gap-2 pt-1">
+            {(["m1", "m2", "m3"] as const).map((key) => (
+              <button
+                key={key}
+                type="button"
+                onClick={() => setActiveTab(key)}
+                className={`py-1.5 px-3 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                  activeTab === key
+                    ? "bg-card text-foreground shadow-sm border border-gold/40"
+                    : "bg-secondary text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                {key.toUpperCase()}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Tab Switchers */}
-      <div className="grid grid-cols-3 gap-2 md:gap-3 p-1.5 rounded-2xl bg-secondary/60 border border-border">
-        {(["m1", "m2", "m3"] as const).map((key) => (
-          <button
-            key={key}
-            type="button"
-            onClick={() => setActiveTab(key)}
-            className={`py-3 px-2 md:px-4 rounded-xl font-display font-bold text-sm md:text-base transition-all text-center flex flex-col md:flex-row items-center justify-center gap-1.5 md:gap-2 cursor-pointer ${
-              activeTab === key
-                ? "bg-card text-foreground shadow-sm border border-border/80"
-                : "text-muted-foreground hover:text-foreground"
-            }`}
-          >
-            <span className="text-gold font-mono uppercase text-xs">
-              {key.toUpperCase()}
-            </span>
-            <span className="truncate">
-              {key === "m1" ? "Metabolism" : key === "m2" ? "Movement" : "Mental"}
-            </span>
-          </button>
-        ))}
-      </div>
-
-      {/* Content Area */}
-      <div className="grid lg:grid-cols-12 gap-8 items-center animate-float-up" key={activeTab}>
-        <div className="lg:col-span-7 space-y-4">
-          <div className={`inline-flex items-center gap-2 rounded-full px-3.5 py-1 text-xs font-bold uppercase tracking-wider border ${current.badgeColor}`}>
+      {/* Details Row */}
+      <div className="grid lg:grid-cols-12 gap-6 items-center animate-float-up" key={activeTab}>
+        <div className="lg:col-span-7 space-y-3 text-left">
+          <div className={`inline-flex items-center gap-1.5 rounded-full px-3 py-0.5 text-xs font-bold uppercase tracking-wider border ${current.badgeColor}`}>
             {current.tag}
           </div>
-          <h3 className="text-2xl md:text-4xl font-display font-extrabold tracking-tight text-foreground">
+          <h3 className="text-xl md:text-3xl font-display font-extrabold tracking-tight text-foreground">
             {current.headline}
           </h3>
-          <p className="text-base text-gold font-medium italic border-l-2 border-gold pl-4 py-1">
+          <p className="text-xs sm:text-sm text-gold font-medium italic border-l-2 border-gold pl-3 py-0.5">
             {current.quote}
           </p>
-          <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+          <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
             {current.text}
           </p>
-          <div className="pt-3">
+          <div className="pt-2">
             <Link
               to={current.link}
-              className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-6 py-3 text-sm font-bold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95 hover:scale-[1.02] transition-all"
+              className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-5 py-2.5 text-xs font-bold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95 transition-all"
             >
               <span>{current.btnText}</span>
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
         </div>
 
-        <div className="lg:col-span-5 flex flex-col gap-4">
-          {/* Visual Performance Preview Card */}
-          <div className="relative w-full h-48 sm:h-56 rounded-2xl overflow-hidden border border-border/80 group shadow-md bg-black">
+        <div className="lg:col-span-5 flex flex-col gap-3">
+          <div className="relative w-full h-40 rounded-2xl overflow-hidden border border-border/80 group shadow-sm bg-black">
             <img
               src={current.image}
               alt={current.headline}
               className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent" />
-            <div className="absolute bottom-3 left-4 right-4 text-xs font-semibold text-white/95 drop-shadow flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-gold animate-pulse shrink-0" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+            <div className="absolute bottom-2.5 left-3 right-3 text-[11px] font-semibold text-white drop-shadow flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse shrink-0" />
               <span className="truncate">{current.imageCaption}</span>
             </div>
           </div>
 
-          <div className="rounded-2xl bg-secondary/40 border border-border p-5 space-y-3">
-            <h4 className="font-display font-bold text-xs uppercase tracking-widest text-muted-foreground">
-              Zentrale Bausteine in dieser Säule
-            </h4>
-            <ul className="space-y-2.5">
+          <div className="rounded-xl bg-secondary/40 border border-border p-3.5 space-y-2">
+            <div className="font-display font-bold text-[10px] uppercase tracking-widest text-muted-foreground">
+              Zentrale Bausteine
+            </div>
+            <ul className="space-y-1.5">
               {current.features.map((feat, i) => (
-                <li key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-foreground/90 leading-snug">
-                  <CheckCircle2 className="w-4 h-4 text-gold shrink-0 mt-0.5" />
+                <li key={i} className="flex items-start gap-2 text-xs text-foreground/90 leading-tight">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-gold shrink-0 mt-0.5" />
                   <span>{feat}</span>
                 </li>
               ))}
@@ -748,7 +724,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         type="button"
         onClick={() => setOpen(!open)}
         aria-expanded={open}
-        className="w-full flex items-center justify-between p-6 text-left font-display font-bold text-lg md:text-xl hover:text-gold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold cursor-pointer"
+        className="w-full flex items-center justify-between p-5 sm:p-6 text-left font-display font-bold text-base md:text-lg hover:text-gold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold cursor-pointer"
       >
         <span className="pr-4">{q}</span>
         <ChevronDown
@@ -758,7 +734,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         />
       </button>
       {open && (
-        <div className="px-6 pb-6 pt-1 text-sm md:text-base text-muted-foreground leading-relaxed border-t border-border/40 bg-secondary/15 animate-float-up">
+        <div className="px-5 sm:px-6 pb-5 sm:pb-6 pt-1 text-xs sm:text-sm text-muted-foreground leading-relaxed border-t border-border/40 bg-secondary/15 animate-float-up">
           {a}
         </div>
       )}
@@ -767,7 +743,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 }
 
 // ----------------------------------------------------
-// MAIN INDEX COMPONENT
+// MAIN INDEX PAGE COMPONENT
 // ----------------------------------------------------
 function IndexPage() {
   const [videoLoaded, setVideoLoaded] = useState(false);
@@ -777,7 +753,7 @@ function IndexPage() {
       <Header />
 
       {/* ---------------------------------------------------- */}
-      {/* 1. HERO SECTION (Brand-DNA & Golden Circle Hierarchy) */}
+      {/* 1. HERO SECTION (Identity & Authority Bento + Infinity Performance Carousel) */}
       {/* ---------------------------------------------------- */}
       <section id="top" className="relative hero-bg overflow-hidden border-b border-border/70 min-h-[calc(100dvh-4.5rem)] lg:h-[calc(100dvh-4.5rem)] flex flex-col justify-between pt-3 sm:pt-4 md:pt-6 pb-0">
         {/* Subtle Ambient Radial Glow */}
@@ -785,12 +761,12 @@ function IndexPage() {
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-gold/8 blur-3xl" />
         </div>
 
-        {/* Main Content Area (Flex-Grow to fill viewport space harmoniously) */}
+        {/* Main Content Area */}
         <div className="relative max-w-7xl mx-auto px-5 md:px-6 w-full flex-grow flex items-end">
           <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-end w-full pt-2 md:pt-4 pb-0">
-            {/* Left Column: Calmer, cleaner text block with prominent Personal Trainer positioning */}
+            {/* Left Column: Clean text block with prominent Master Personal Trainer authority */}
             <div className="lg:col-span-7 space-y-4 sm:space-y-5 pb-4 lg:pb-8 text-left animate-float-up">
-              {/* Top Badge: Personal Trainer & System */}
+              {/* Top Badge: Personal Training & System */}
               <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/5 px-3.5 py-1 text-xs uppercase tracking-[0.2em] text-gold font-bold shadow-sm">
                 <Sparkles className="w-3.5 h-3.5 text-gold" />
                 <span>Personal Training & Gesundheitssystem</span>
@@ -801,12 +777,12 @@ function IndexPage() {
                 Leistung beginnt mit <span className="text-gold">Gesundheit.</span>
               </h1>
 
-              {/* Emotional Subclaim with Personal Trainer Focus */}
+              {/* Emotional Subclaim */}
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-display font-semibold text-foreground/90 tracking-tight text-left">
                 Dein Personal Training & Gesundheitssystem für echte Lebensenergie und schmerzfreie Leistungsfähigkeit.
               </p>
 
-              {/* Clear, calm value proposition */}
+              {/* Value Proposition */}
               <p className="text-xs sm:text-sm md:text-base text-muted-foreground leading-relaxed text-left max-w-xl">
                 Wissenschaftlich fundiertes 1:1 Personal Training, das Stoffwechsel (<strong className="text-foreground">M¹</strong>), Biomechanik (<strong className="text-foreground">M²</strong>) und alltagstaugliche Routinen (<strong className="text-foreground">M³</strong>) vereint. Individuell, schmerzfrei und nachhaltig.
               </p>
@@ -832,7 +808,7 @@ function IndexPage() {
                 </Link>
               </div>
 
-              {/* Authority & Personal Trainer Credential Strip */}
+              {/* Authority Credential Strip */}
               <div className="pt-1.5 flex flex-wrap items-center gap-x-5 gap-y-1.5 text-xs font-semibold text-muted-foreground text-left border-t border-border/60 max-w-lg">
                 <div className="flex items-center gap-1.5 pt-0.5">
                   <span className="text-gold">★</span>
@@ -849,7 +825,7 @@ function IndexPage() {
               </div>
             </div>
 
-            {/* Right Column: Hero Portrait (calibrated to viewport height with M1, M2, M3 quotes) */}
+            {/* Right Column: Hero Portrait with floating quotes */}
             <div className="lg:col-span-5 relative flex justify-center items-end self-end pt-4 lg:pt-0">
               <div className="relative w-full max-w-[440px] lg:max-w-none flex justify-center items-end">
                 <img
@@ -859,7 +835,7 @@ function IndexPage() {
                 />
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[300px] sm:w-[380px] h-20 bg-gold/15 blur-3xl rounded-full pointer-events-none" />
 
-                {/* Spaced Quote 1: Top-Left (Fundament & Stoffwechsel) */}
+                {/* Quote 1: Top-Left */}
                 <div className="absolute top-1 -left-3 sm:-left-8 lg:-left-12 max-w-[190px] xl:max-w-[210px] bg-card/95 backdrop-blur-md border border-gold/35 rounded-2xl p-2.5 sm:p-3.5 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform text-left">
                   <div className="flex items-center gap-1 text-[10px] font-mono uppercase tracking-wider text-gold font-bold mb-0.5">
                     <Flame className="w-3 h-3 text-gold" />
@@ -870,7 +846,7 @@ function IndexPage() {
                   </p>
                 </div>
 
-                {/* Spaced Quote 2: Top-Right (Biomechanik & Intelligentes Training) */}
+                {/* Quote 2: Top-Right */}
                 <div className="absolute top-1 -right-3 sm:-right-8 lg:-right-12 max-w-[190px] xl:max-w-[210px] bg-card/95 backdrop-blur-md border border-emerald-600/35 rounded-2xl p-2.5 sm:p-3.5 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform text-left">
                   <div className="flex items-center gap-1 text-[10px] font-mono uppercase tracking-wider text-emerald-600 font-bold mb-0.5">
                     <Dumbbell className="w-3 h-3 text-emerald-600" />
@@ -881,7 +857,7 @@ function IndexPage() {
                   </p>
                 </div>
 
-                {/* Spaced Quote 3: Mid/Upper-Right (Mindset & Routinen) */}
+                {/* Quote 3: Mid/Upper-Right */}
                 <div className="absolute top-[35%] -right-3 sm:-right-8 lg:-right-12 max-w-[190px] xl:max-w-[210px] bg-card/95 backdrop-blur-md border border-indigo-600/35 rounded-2xl p-2.5 sm:p-3.5 shadow-xl animate-float-up z-20 hover:scale-105 transition-transform text-left">
                   <div className="flex items-center gap-1 text-[10px] font-mono uppercase tracking-wider text-indigo-400 font-bold mb-0.5">
                     <Brain className="w-3 h-3 text-indigo-400" />
@@ -892,7 +868,7 @@ function IndexPage() {
                   </p>
                 </div>
 
-                {/* Credential Badge: Lower-Left (Personal Trainer Highlight) */}
+                {/* Credential Badge: Lower-Left */}
                 <div className="absolute bottom-4 -left-3 sm:-left-8 lg:-left-12 bg-card/95 backdrop-blur-md border border-gold/35 rounded-2xl p-2.5 sm:p-3.5 shadow-2xl flex items-center gap-2.5 animate-float-up z-20 text-left">
                   <div className="w-9 h-9 rounded-xl bg-gold-gradient text-primary-foreground flex items-center justify-center font-display font-bold text-xs shrink-0 shadow-sm">
                     M³
@@ -909,7 +885,7 @@ function IndexPage() {
         </div>
 
         {/* ---------------------------------------------------- */}
-        {/* ANIMATED INFINITY CAROUSEL: Performance Action Pictures (Clean & Fully Visible) */}
+        {/* ANIMATED INFINITY CAROUSEL: Performance Action Pictures */}
         {/* ---------------------------------------------------- */}
         <div className="flex-shrink-0 mt-3 lg:mt-4 pt-3 pb-3.5 md:pb-4 border-t border-border/60 bg-secondary/30 relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-5 md:px-6 mb-2 flex flex-wrap items-center justify-between gap-2">
@@ -926,7 +902,7 @@ function IndexPage() {
             </div>
           </div>
 
-          {/* Infinity Marquee Track with Pure Action Pictures */}
+          {/* Infinity Marquee Track with Action Pictures */}
           <div className="relative w-full overflow-hidden marquee-mask">
             <div className="flex gap-3 sm:gap-4 w-max animate-marquee-left marquee-pause py-1">
               {HERO_PERFORMANCE_PICTURES_DOUBLED.map((p, idx) => (
@@ -934,7 +910,6 @@ function IndexPage() {
                   key={`${p.image}-${idx}`}
                   className="h-[145px] sm:h-[165px] md:h-[180px] shrink-0 bg-card rounded-2xl overflow-hidden border border-border/80 shadow-sm hover:shadow-lg hover:border-gold/60 transition-all p-1 flex items-center justify-center group cursor-pointer"
                 >
-                  {/* Entire photo completely visible with zero crop and no text overlay */}
                   <img
                     src={p.image}
                     alt={p.alt}
@@ -949,381 +924,225 @@ function IndexPage() {
       </section>
 
       {/* ---------------------------------------------------- */}
-      {/* SOCIAL PROOF: Kundenerfahrungen & Echte Resultate */}
+      {/* 2. BENTO CHAPTER 1: DAS M³ TRINITY BENTO (3 Säulen & Philosophie-Hub) */}
       {/* ---------------------------------------------------- */}
-      <section className="py-10 md:py-12 border-b border-border/70 bg-secondary/15 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-5 md:px-6 mb-5 flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-center gap-2.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-gold animate-pulse" />
-            <span className="text-xs font-mono uppercase tracking-[0.2em] text-gold font-bold">
-              Echte Kundenstimmen & Erfahrungen
+      <section id="system" className="py-16 md:py-24 border-b border-border/70 bg-card">
+        <div className="max-w-7xl mx-auto px-5 md:px-6 space-y-10">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
+              Ganzheitliche System-Architektur
             </span>
+            <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight">
+              Drei Säulen. Ein vernetztes System.
+            </h2>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+              Gesundheit ist kein isolierter Muskel. Stoffwechsel, Biomechanik und Mindset bedingen einander.
+            </p>
           </div>
-          <div className="flex items-center gap-2 text-xs text-muted-foreground font-medium">
-            <span className="text-amber-500 font-bold">★ 4.98 / 5.0</span>
-            <span>·</span>
-            <span>100% persönliche 1:1 Betreuung</span>
-          </div>
-        </div>
 
-        {/* Infinity Marquee for Testimonials */}
-        <div className="relative w-full overflow-hidden marquee-mask">
-          <div className="flex gap-4 sm:gap-5 w-max animate-marquee-left marquee-pause py-1">
-            {HERO_TESTIMONIALS_DOUBLED.map((t, idx) => (
-              <div
-                key={`${t.name}-${idx}`}
-                className="w-[310px] sm:w-[360px] shrink-0 bg-card backdrop-blur-md border border-border/80 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md hover:border-gold/50 transition-all flex flex-col justify-between text-left group"
-              >
-                <div className="space-y-2.5">
-                  <div className="flex items-center justify-between">
-                    <div className="flex text-amber-500 text-xs tracking-wider">
-                      ★★★★★
-                    </div>
-                    <span className={`text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded-full border ${t.badgeClass}`}>
-                      {t.pillar}
-                    </span>
+          {/* Master Trinity Bento Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+            {/* Bento 1: M1 Metabolism (4 cols) */}
+            <div className="md:col-span-4 rounded-3xl border border-primary/25 bg-gradient-to-br from-primary/5 via-card to-card p-6 md:p-8 flex flex-col justify-between shadow-sm hover:border-primary/50 transition-all text-left group">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="w-10 h-10 rounded-2xl bg-primary/10 text-primary flex items-center justify-center font-display font-bold text-sm">
+                    M¹
                   </div>
-                  <p className="text-xs sm:text-sm text-foreground/90 leading-relaxed italic">
-                    „{t.quote}“
-                  </p>
-                </div>
-
-                <div className="pt-3 mt-3 border-t border-border/50 flex items-center justify-between gap-2">
-                  <div className="flex items-center gap-2.5">
-                    <div className="w-8 h-8 rounded-full bg-gold/15 text-gold flex items-center justify-center font-display font-bold text-xs shrink-0 border border-gold/30">
-                      {t.initials}
-                    </div>
-                    <div>
-                      <div className="font-display font-bold text-xs text-foreground group-hover:text-gold transition-colors">
-                        {t.name}
-                      </div>
-                      <div className="text-[10px] text-muted-foreground">
-                        {t.role}
-                      </div>
-                    </div>
-                  </div>
-                  <span className="text-[10px] font-semibold text-emerald-700 bg-emerald-600/10 border border-emerald-600/20 px-2 py-0.5 rounded-md shrink-0">
-                    {t.result}
+                  <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-primary bg-primary/10 px-2.5 py-0.5 rounded-full">
+                    Metabolism
                   </span>
                 </div>
+                <div>
+                  <h3 className="text-xl md:text-2xl font-display font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
+                    Gesundheit von innen
+                  </h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    Mikrobiom, Darmgesundheit, zelluläre Vitalstoffe und regulierter Blutzucker als Fundament für dauerhafte Energie.
+                  </p>
+                </div>
+                <div className="text-xs font-medium text-gold italic border-l-2 border-gold pl-3 py-1">
+                  „Wenn dein Fundament brennt, nützt kein härteres Training.“
+                </div>
               </div>
-            ))}
+              <div className="pt-6">
+                <Link
+                  to="/metabolism"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:opacity-80 transition"
+                >
+                  <span>M¹ Details ansehen</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Bento 2: M2 Movement (4 cols) */}
+            <div className="md:col-span-4 rounded-3xl border border-emerald-600/25 bg-gradient-to-br from-emerald-600/5 via-card to-card p-6 md:p-8 flex flex-col justify-between shadow-sm hover:border-emerald-600/50 transition-all text-left group">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="w-10 h-10 rounded-2xl bg-emerald-600/10 text-emerald-700 flex items-center justify-center font-display font-bold text-sm">
+                    M²
+                  </div>
+                  <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-emerald-700 bg-emerald-600/10 px-2.5 py-0.5 rounded-full">
+                    Movement
+                  </span>
+                </div>
+                <div>
+                  <h3 className="text-xl md:text-2xl font-display font-bold text-foreground mb-1 group-hover:text-emerald-700 transition-colors">
+                    Technik vor Gewicht
+                  </h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    Funktionelle Biomechanik, 1:1 Personal Training, Gelenkstabilität und schmerzfreie Belastbarkeit im Alltag.
+                  </p>
+                </div>
+                <div className="text-xs font-medium text-gold italic border-l-2 border-gold pl-3 py-1">
+                  „Technik schlägt Gewicht – Immer.“
+                </div>
+              </div>
+              <div className="pt-6">
+                <Link
+                  to="/movement"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:opacity-80 transition"
+                >
+                  <span>M² Details ansehen</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Bento 3: M3 Mindset (4 cols) */}
+            <div className="md:col-span-4 rounded-3xl border border-indigo-600/25 bg-gradient-to-br from-indigo-600/5 via-card to-card p-6 md:p-8 flex flex-col justify-between shadow-sm hover:border-indigo-600/50 transition-all text-left group">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <div className="w-10 h-10 rounded-2xl bg-indigo-600/10 text-indigo-700 flex items-center justify-center font-display font-bold text-sm">
+                    M³
+                  </div>
+                  <span className="text-[10px] font-mono uppercase tracking-wider font-bold text-indigo-700 bg-indigo-600/10 px-2.5 py-0.5 rounded-full">
+                    Mindset & Routinen
+                  </span>
+                </div>
+                <div>
+                  <h3 className="text-xl md:text-2xl font-display font-bold text-foreground mb-1 group-hover:text-indigo-700 transition-colors">
+                    Aus Disziplin wird Routine
+                  </h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    Stressresilienz, Schlaf-Optimierung, minimale Alltagsgewohnheiten und nachhaltige Selbstständigkeit.
+                  </p>
+                </div>
+                <div className="text-xs font-medium text-gold italic border-l-2 border-gold pl-3 py-1">
+                  „Routine schlägt flüchtige Motivation.“
+                </div>
+              </div>
+              <div className="pt-6">
+                <Link
+                  to="/mental-performance"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-700 hover:opacity-80 transition"
+                >
+                  <span>M³ Details ansehen</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Bento 4: Der Interaktive Synergie-Hub (12 cols) */}
+            <div className="md:col-span-12 rounded-3xl border border-border/90 bg-secondary/20 p-6 md:p-10 shadow-sm">
+              <PillarTriadExplorer />
+            </div>
           </div>
         </div>
       </section>
 
       {/* ---------------------------------------------------- */}
-      {/* 2. EDUTAINMENT INTERACTION: M³ System-Kompass */}
+      {/* 3. BENTO CHAPTER 2: DIAGNOSTIC & PERSONA BENTO (System Start & Resonanz) */}
       {/* ---------------------------------------------------- */}
       <section id="system-kompass" className="py-16 md:py-24 border-b border-border/70 bg-secondary/25">
-        <div className="max-w-5xl mx-auto px-5 md:px-6">
-          <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
+        <div className="max-w-7xl mx-auto px-5 md:px-6 space-y-10">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
               M³ System Start
             </span>
             <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight">
-              Nicht irgendein Angebot.<br className="hidden md:inline" /> Deine Eingangstür.
+              Nicht irgendein Angebot. Deine Eingangstür.
             </h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              Du musst nicht vorher wissen, ob du Darmbegleitung, Personal Training oder Ernährungsberatung brauchst. Der <strong>M³ System Start</strong> schafft Klarheit, analysiert deine Ausgangslage und baut deinen individuellen Fahrplan.
+              Du musst nicht vorher wissen, was du brauchst. Der <strong>M³ System Start</strong> schafft Klarheit, analysiert deine Ausgangslage und baut deinen individuellen Fahrplan.
             </p>
           </div>
 
-          {/* Interactive Diagnostic Tool */}
-          <SystemStartKompass />
-        </div>
-      </section>
-
-      {/* ---------------------------------------------------- */}
-      {/* 3. PHILOSOPHIE: Verstehen vor Verändern */}
-      {/* ---------------------------------------------------- */}
-      <section id="philosophie" className="py-16 md:py-24 border-b border-border/70 bg-card">
-        <div className="max-w-5xl mx-auto px-5 md:px-6 space-y-12">
-          <div className="grid md:grid-cols-12 gap-10 items-center">
-            <div className="md:col-span-5 space-y-5 text-left">
-              <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
-                Die M³ Philosophie
-              </span>
-              <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight leading-tight">
-                Warum viele scheitern –<br className="hidden md:inline" /> und was M³ anders macht.
-              </h2>
-              <p className="text-base text-gold font-medium italic">
-                „Wer seinen Körper besser versteht, trifft dauerhaft bessere Entscheidungen.“
-              </p>
-
-              {/* Visual Philosophy Sketch Accent */}
-              <div className="relative rounded-2xl overflow-hidden border border-border/80 bg-black/60 shadow-md max-w-sm group">
-                <img
-                  src="/images/performance/m3-philosophy-sketch.jpg"
-                  alt="M³ Philosophie – Verstehen vor Verändern"
-                  className="w-full h-44 object-cover object-center grayscale contrast-125 opacity-90 group-hover:scale-105 transition-transform duration-700"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/30 to-transparent" />
-                <div className="absolute bottom-2.5 left-3 right-3 text-[11px] font-mono text-gold/90 font-semibold tracking-wider">
-                  ANALYSE · BIOMECHANIK · ANATOMIE
-                </div>
-              </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+            {/* Left Tile: Interactive Kompass (7 cols) */}
+            <div className="lg:col-span-7">
+              <SystemStartKompass />
             </div>
 
-            <div className="md:col-span-7 space-y-4 text-base text-muted-foreground leading-relaxed">
-              <p>
-                Viele Menschen investieren viel Disziplin in harte Trainingspläne oder radikale Diäten. Und trotzdem bleiben echte Energie, Schmerzfreiheit oder langfristige Fortschritte aus.
-              </p>
-              <p className="font-semibold text-foreground">
-                Nicht, weil sie sich zu wenig anstrengen – sondern weil die biochemischen und mentalen Grundlagen übersehen werden.
-              </p>
-              <div className="rounded-2xl bg-secondary/50 border border-border p-5 space-y-3">
-                <div className="text-xs uppercase tracking-wider font-bold text-foreground">
-                  Unsere Leitprinzipien:
+            {/* Right Tile: Target Personas & Transparenz (5 cols) */}
+            <div className="lg:col-span-5 rounded-3xl border border-border/90 bg-card p-6 md:p-8 flex flex-col justify-between shadow-sm text-left">
+              <div className="space-y-6">
+                <div>
+                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gold mb-2">
+                    <CheckCircle2 className="w-4 h-4 text-gold" />
+                    <span>Für wen M³ perfekt ist</span>
+                  </div>
+                  <h3 className="font-display font-bold text-xl md:text-2xl text-foreground">
+                    Echte Resultate für echte Menschen
+                  </h3>
                 </div>
-                <div className="text-sm font-medium text-foreground">
-                  • <strong>Struktur statt Chaos.</strong>
+
+                <div className="space-y-2.5 text-xs sm:text-sm text-muted-foreground">
+                  <div className="flex items-start gap-2.5 p-2 rounded-xl bg-secondary/40">
+                    <span className="text-gold font-bold">✓</span>
+                    <span><strong>Führungskräfte & 60h-Woche:</strong> Volle Vitalität ohne Nachmittagstiefs.</span>
+                  </div>
+                  <div className="flex items-start gap-2.5 p-2 rounded-xl bg-secondary/40">
+                    <span className="text-gold font-bold">✓</span>
+                    <span><strong>Schreibtisch-Schmerzen:</strong> Wieder schmerzfrei und anatomisch stabil.</span>
+                  </div>
+                  <div className="flex items-start gap-2.5 p-2 rounded-xl bg-secondary/40">
+                    <span className="text-gold font-bold">✓</span>
+                    <span><strong>Diät-Müde:</strong> Stoffwechsel-Reset ohne Jojo-Effekt und ohne Verbote.</span>
+                  </div>
+                  <div className="flex items-start gap-2.5 p-2 rounded-xl bg-secondary/40">
+                    <span className="text-gold font-bold">✓</span>
+                    <span><strong>Sportler & Ambitionierte:</strong> Plateaus durchbrechen & Belastbarkeit steigern.</span>
+                  </div>
                 </div>
-                <div className="text-sm font-medium text-foreground">
-                  • <strong>Technik vor Gewicht.</strong>
-                </div>
-                <div className="text-sm font-medium text-foreground">
-                  • <strong>Ergebnis statt Zufall.</strong>
-                </div>
-                <div className="text-xs text-muted-foreground pt-2 border-t border-border/60 italic">
-                  „Verständnis, wenn Verständnis gebraucht wird. Arschtritt, wenn Arschtritt gebraucht wird.“
+
+                {/* Filter / Not a fit */}
+                <div className="pt-4 border-t border-border/70 space-y-2">
+                  <div className="text-[11px] uppercase tracking-wider font-bold text-muted-foreground flex items-center gap-1.5">
+                    <X className="w-3.5 h-3.5 text-destructive" />
+                    <span>Ehrlichkeit vor Verkauf</span>
+                  </div>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    Keine Wunderpillen, keine 14-Tage-Crash-Diäten. Wir begleiten dich, bis du deinen Körper selbstständig steuerst.
+                  </p>
                 </div>
               </div>
-            </div>
-          </div>
 
-          {/* Visual System Comparison Matrix */}
-          <div className="grid md:grid-cols-2 gap-6 pt-4">
-            {/* Klassischer Ansatz */}
-            <div className="rounded-2xl border border-destructive/30 bg-destructive/5 p-6 md:p-8 space-y-4">
-              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-destructive">
-                <X className="w-4 h-4" />
-                <span>Klassischer Fitness-Ansatz (Symptomfokus)</span>
-              </div>
-              <ul className="space-y-2.5 text-xs sm:text-sm text-muted-foreground">
-                <li className="flex items-start gap-2.5">
-                  <span className="text-destructive font-bold">✕</span>
-                  <span><strong>Isolierte Symptome:</strong> Man trainiert über Schmerzen hinweg und ignoriert Verdauung oder Stress.</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="text-destructive font-bold">✕</span>
-                  <span><strong>Radikale Verbote:</strong> Crash-Diäten führen fast unausweichlich zum Jojo-Effekt.</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="text-destructive font-bold">✕</span>
-                  <span><strong>Trainer-Abhängigkeit:</strong> Man folgt blind Plänen, ohne das System dahinter zu begreifen.</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* M3 Ansatz */}
-            <div className="rounded-2xl border border-gold/40 bg-gold/5 p-6 md:p-8 space-y-4">
-              <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gold">
-                <Check className="w-4 h-4" />
-                <span>Das M³ Gesamtsystem (Ursachenbehebung)</span>
-              </div>
-              <ul className="space-y-2.5 text-xs sm:text-sm text-foreground/90 font-medium">
-                <li className="flex items-start gap-2.5">
-                  <span className="text-gold font-bold">✓</span>
-                  <span><strong>Biochemisches Fundament:</strong> Darm & Stoffwechsel zuerst stabilisieren für echte Zellenergie.</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="text-gold font-bold">✓</span>
-                  <span><strong>Präzise Biomechanik:</strong> Technik vor Gewicht für schmerzfreie Belastbarkeit im Alltag.</span>
-                </li>
-                <li className="flex items-start gap-2.5">
-                  <span className="text-gold font-bold">✓</span>
-                  <span><strong>Echte Autonomie:</strong> Du verstehst die Zusammenhänge und steuerst deinen Körper selbst.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ---------------------------------------------------- */}
-      {/* 4. DAS M³ SYSTEM: Die 3 Säulen Explorer */}
-      {/* ---------------------------------------------------- */}
-      <section id="system" className="py-16 md:py-24 border-b border-border/70 bg-secondary/30">
-        <div className="max-w-6xl mx-auto px-5 md:px-6 space-y-10">
-          <div className="text-center max-w-3xl mx-auto space-y-3">
-            <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
-              Ganzheitliche Architektur
-            </span>
-            <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight">
-              Drei Säulen. Ein nahtloses System.
-            </h2>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              Gesundheit ist kein isolierter Muskel. Stoffwechsel, Bewegung und Gewohnheiten beeinflussen sich gegenseitig.
-            </p>
-          </div>
-
-          <PillarTriadExplorer />
-        </div>
-      </section>
-
-      {/* ---------------------------------------------------- */}
-      {/* 5. FÜR WEN IST M³? (Resonanz statt generischer Kachelflut) */}
-      {/* ---------------------------------------------------- */}
-      <section id="zielgruppen" className="py-16 md:py-24 border-b border-border/70 bg-card">
-        <div className="max-w-6xl mx-auto px-5 md:px-6 space-y-12">
-          <div className="text-center max-w-3xl mx-auto space-y-3">
-            <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
-              Zielgruppen & Passgenauigkeit
-            </span>
-            <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight">
-              Du willst etwas verändern – weißt aber nicht, an welcher Stellschraube du zuerst drehen sollst?
-            </h2>
-            <p className="text-base md:text-lg text-muted-foreground">
-              Wir arbeiten mit Menschen, die echte Eigenverantwortung schätzen und bereit für nachhaltige Veränderung sind.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 items-stretch">
-            {/* Primäre Zielgruppe: Ideal Match */}
-            <div className="rounded-3xl border-2 border-gold/40 bg-gradient-to-br from-gold/10 via-card to-card p-8 md:p-10 flex flex-col justify-between shadow-sm">
-              <div className="space-y-5">
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gold">
-                  <CheckCircle2 className="w-4 h-4" />
-                  Für wen M³ perfekt ist
-                </div>
-                <h3 className="font-display font-bold text-2xl md:text-3xl text-foreground">
-                  „Ich will etwas verändern – brauche aber Orientierung und ein klares System.“
-                </h3>
-                <ul className="space-y-3 text-sm md:text-base text-muted-foreground">
-                  <li className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-gold shrink-0 mt-0.5" />
-                    <span><strong>Wenig Energie & Stoffwechsel-Chaos:</strong> Du fühlst dich oft antriebslos, aufgebläht oder unrund.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-gold shrink-0 mt-0.5" />
-                    <span><strong>Körperliche Beschwerden:</strong> Schmerzen schränken deinen Alltag oder dein Training ein.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-gold shrink-0 mt-0.5" />
-                    <span><strong>Wenig Zeit im Alltag:</strong> Beruf und Familie erfordern Lösungen, die realistisch umsetzbar sind.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-gold shrink-0 mt-0.5" />
-                    <span><strong>Wunsch nach Autonomie:</strong> Du willst verstehen, was dir guttut, statt ewig vom Coach abzuhängen.</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="pt-8">
+              <div className="pt-6">
                 <a
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gold-gradient py-3.5 px-6 font-bold text-sm text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95 transition"
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gold-gradient py-3.5 px-6 font-bold text-xs sm:text-sm text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95 transition"
                 >
+                  <MessageCircle className="w-4 h-4" />
                   Unverbindlich prüfen lassen
                 </a>
               </div>
             </div>
-
-            {/* Wer NICHT zu M³ passt */}
-            <div className="rounded-3xl border border-border bg-secondary/30 p-8 md:p-10 flex flex-col justify-between">
-              <div className="space-y-5">
-                <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-muted-foreground">
-                  <X className="w-4 h-4 text-destructive" />
-                  Wer NICHT zu M³ passt
-                </div>
-                <h3 className="font-display font-bold text-2xl md:text-3xl text-foreground">
-                  Ehrlichkeit vor Verkauf: M³ verlangt Mitarbeit.
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  Wir verkaufen dir keine Wunderpillen und kein Fitness-Influencer-Gehabe. Wenn du nach folgenden Dingen suchst, sind wir der falsche Partner:
-                </p>
-                <ul className="space-y-3 text-sm text-muted-foreground">
-                  <li className="flex items-start gap-3">
-                    <X className="w-4 h-4 text-destructive shrink-0 mt-1" />
-                    <span>Schnelle 14-Tage-Crash-Diäten ohne Bereitschaft zu echten Gewohnheitsänderungen.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <X className="w-4 h-4 text-destructive shrink-0 mt-1" />
-                    <span>Reines Konsumieren von Information ohne eigene Umsetzung und Verantwortung.</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <X className="w-4 h-4 text-destructive shrink-0 mt-1" />
-                    <span>Erwartung permanenter Fremdsteuerung, ohne den Wunsch nach Selbstständigkeit.</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="pt-8 border-t border-border/80 space-y-2">
-                <p className="text-sm font-bold text-foreground">
-                  „Ich mache mich absichtlich überflüssig.“
-                </p>
-                <p className="text-xs text-muted-foreground leading-relaxed">
-                  Du lernst das System, bis du deinen Körper selbst steuerst — ein Leben lang. Der Coach kann begleiten, korrigieren und antreiben. Gehen muss der Kunde selbst.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
       {/* ---------------------------------------------------- */}
-      {/* 6. ABLAUF: So arbeiten wir zusammen (Timeline) */}
-      {/* ---------------------------------------------------- */}
-      <section id="so-arbeiten-wir" className="py-16 md:py-24 border-b border-border/70 bg-secondary/20">
-        <div className="max-w-6xl mx-auto px-5 md:px-6 space-y-12">
-          <div className="text-center max-w-3xl mx-auto space-y-3">
-            <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
-              Der 5-Stufen-Prozess
-            </span>
-            <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight">
-              So arbeiten wir zusammen
-            </h2>
-            <p className="text-base md:text-lg text-muted-foreground">
-              Struktur statt Zufall: Von der ersten Analyse bis zur gefestigten Routine.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
-            {[
-              { step: "01", phase: "Diagnostik", title: "Kennenlernen", desc: "Unverbindliches Gespräch über deine Situation, Ziele und Erwartungen." },
-              { step: "02", phase: "Biometrie", title: "Analyse", desc: "Ganzheitliche Bestandsaufnahme von Stoffwechsel, Bewegung und Alltag." },
-              { step: "03", phase: "Masterplan", title: "Strategie", desc: "Dein maßgeschneiderter Fahrplan mit klaren Prioritäten." },
-              { step: "04", phase: "Begleitung", title: "Begleitung", desc: "Schritt-für-Schritt Umsetzung mit engmaschiger Korrektur." },
-              { step: "05", phase: "Autonomie", title: "Routine", desc: "Verstetigung der Gewohnheiten bis zur vollständigen Selbstständigkeit." },
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="rounded-2xl border border-border bg-card p-6 flex flex-col justify-between hover:border-gold/50 shadow-sm transition-all hover:translate-y-[-2px] group"
-              >
-                <div>
-                  <div className="flex items-center justify-between gap-2 mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-gold-gradient text-primary-foreground flex items-center justify-center font-display font-bold text-sm shadow-[var(--shadow-gold)]">
-                      {item.step}
-                    </div>
-                    <span className="text-[10px] uppercase font-mono tracking-wider text-gold font-bold px-2 py-0.5 rounded-full bg-gold/10">
-                      {item.phase}
-                    </span>
-                  </div>
-                  <h3 className="font-display font-bold text-lg text-foreground mb-2 group-hover:text-gold transition-colors">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    {item.desc}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ---------------------------------------------------- */}
-      {/* 7. ALLE LEISTUNGEN IM ÜBERBLICK (Kategorisiert nach M1, M2, M3) */}
+      {/* 4. BENTO CHAPTER 3: SOLUTION ECOSYSTEM BENTO (Die 8 Angebote) */}
       {/* ---------------------------------------------------- */}
       <section id="leistungen" className="py-16 md:py-24 border-b border-border/70 bg-card">
-        <div className="max-w-7xl mx-auto px-5 md:px-6 space-y-16">
+        <div className="max-w-7xl mx-auto px-5 md:px-6 space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
-              Die Bausteine
+              Modulare Bausteine
             </span>
             <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight">
               Deine Möglichkeiten mit M³
@@ -1345,379 +1164,321 @@ function IndexPage() {
             </div>
           </div>
 
-          {/* KATEGORIE 1: M1 METABOLISM */}
-          <div className="rounded-3xl border border-border bg-secondary/20 p-6 md:p-10 space-y-6">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-border/70 pb-5">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-2xl bg-primary/10 text-primary flex items-center justify-center border border-primary/25 font-display font-bold text-sm shrink-0">
-                  M¹
+          {/* Asymmetric Solution Bento Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+            {/* Tile 1: Flagship Body Reset (7 cols) */}
+            <div className="md:col-span-7 rounded-3xl border-2 border-gold/40 bg-gradient-to-br from-gold/10 via-card to-card p-6 md:p-8 flex flex-col justify-between shadow-[var(--shadow-gold)] text-left group">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-primary">
+                    M¹ · METABOLISM FLAGGSCHIFF
+                  </span>
+                  <span className="rounded-full bg-gold-gradient px-3 py-0.5 text-[10px] font-bold text-primary-foreground uppercase tracking-wider">
+                    Ganzheitliches Konzept
+                  </span>
                 </div>
                 <div>
-                  <h3 className="font-display font-extrabold text-2xl text-foreground">
-                    Metabolism
+                  <h3 className="text-2xl md:text-3xl font-display font-extrabold text-foreground mb-1 group-hover:text-gold transition-colors">
+                    M³ Body Reset
                   </h3>
-                  <p className="text-xs font-semibold text-primary uppercase tracking-wider">
-                    Die Basis schaffen · Gesundheit von innen
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
+                    Ganzheitlicher Neustart von innen
+                  </p>
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-4">
+                    Das modulare Konzept für Darm und Stoffwechsel: Beinhaltet die 16-Tage Darmkur, die gezielte Stoffwechselkur sowie die tägliche Goldene Grundversorgung.
                   </p>
                 </div>
-              </div>
-              <Link
-                to="/metabolism"
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:opacity-80 transition self-start sm:self-auto"
-              >
-                <span>Alle M¹ Details ansehen</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {services
-                .filter((s) => s.pillar === "M1")
-                .map((s, idx) => (
-                  <div
-                    key={idx}
-                    className={`rounded-2xl border p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 overflow-hidden group ${
-                      s.badge
-                        ? "border-gold/60 bg-gradient-to-br from-gold/10 via-card to-card shadow-[var(--shadow-gold)]"
-                        : "border-border bg-card hover:border-primary/50 shadow-sm hover:shadow-md"
-                    }`}
-                  >
-                    <div>
-                      {s.image && (
-                        <div className="relative w-full h-44 -mt-6 sm:-mt-8 -mx-6 sm:-mx-8 mb-5 overflow-hidden rounded-t-2xl border-b border-border/70 group-hover:border-gold/50 transition-colors bg-black">
-                          <img
-                            src={s.image}
-                            alt={s.name}
-                            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                            loading="lazy"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
-                        </div>
-                      )}
-
-                      <div className="flex items-center justify-between gap-2 mb-3">
-                        <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-primary">
-                          {s.pillar} · {s.pillarName}
-                        </span>
-                        {s.badge && (
-                          <span className="rounded-full bg-gold-gradient px-2.5 py-0.5 text-[10px] font-bold text-primary-foreground uppercase tracking-wider">
-                            {s.badge}
-                          </span>
-                        )}
-                      </div>
-
-                      <h4 className="font-display font-bold text-xl text-foreground mb-1">
-                        {s.name}
-                      </h4>
-                      <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3 font-semibold">
-                        {s.tagline}
-                      </p>
-                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-6">
-                        {s.desc}
-                      </p>
-
-                      <ul className="space-y-2 mb-6 border-t border-border/60 pt-4">
-                        {s.features.map((f, fIdx) => (
-                          <li key={fIdx} className="flex items-center gap-2 text-xs text-foreground/90 font-medium">
-                            <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                            <span>{f}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="flex flex-col gap-2 pt-2 mt-auto">
-                      <Link
-                        to={s.route}
-                        className="w-full inline-flex items-center justify-center rounded-full border border-border px-4 py-2.5 text-xs font-bold text-foreground hover:bg-secondary transition"
-                      >
-                        Details ansehen
-                      </Link>
-                      <a
-                        href={`${BASE_WHATSAPP}?text=${encodeURIComponent(s.whatsappMessage)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full inline-flex items-center justify-center gap-1.5 rounded-full bg-secondary hover:bg-secondary/80 px-4 py-2.5 text-xs font-bold text-foreground transition"
-                      >
-                        <MessageCircle className="w-3.5 h-3.5 text-primary" />
-                        WhatsApp Anfrage
-                      </a>
-                    </div>
+                <div className="grid sm:grid-cols-3 gap-2 py-3 border-t border-b border-border/70 text-xs font-medium text-foreground">
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
+                    <span>16-Tage Darmkur</span>
                   </div>
-                ))}
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
+                    <span>Stoffwechselkur</span>
+                  </div>
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
+                    <span>Grundversorgung</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-6 flex flex-col sm:flex-row items-center gap-3">
+                <Link
+                  to="/body-reset"
+                  className="w-full sm:w-auto inline-flex items-center justify-center rounded-full border border-border px-6 py-2.5 text-xs font-bold text-foreground hover:bg-secondary transition"
+                >
+                  Details ansehen
+                </Link>
+                <a
+                  href={`${BASE_WHATSAPP}?text=Hallo%20Mich%C3%A9l,%20ich%20interessiere%20mich%20f%C3%BCr%20den%20M%C3%B3%20Body%20Reset.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 rounded-full bg-gold-gradient px-6 py-2.5 text-xs font-bold text-primary-foreground shadow-sm transition"
+                >
+                  <MessageCircle className="w-3.5 h-3.5" />
+                  WhatsApp Anfrage
+                </a>
+              </div>
             </div>
 
-            {/* Integrierte Kernbausteine Infoleiste */}
-            <div className="max-w-4xl mx-auto rounded-2xl border border-primary/20 bg-card/60 p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
-              <div className="space-y-1">
-                <div className="text-xs font-bold uppercase tracking-wider text-primary flex items-center gap-1.5">
-                  <span>💡</span> Integrierte Kernbausteine im Body Reset
+            {/* Tile 2: 1:1 Ernährungscoaching (5 cols) */}
+            <div className="md:col-span-5 rounded-3xl border border-border bg-card p-6 md:p-8 flex flex-col justify-between shadow-sm hover:border-primary/50 transition-all text-left group">
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-primary">
+                    M¹ · ERNÄHRUNG
+                  </span>
+                  <span className="text-[10px] font-bold uppercase px-2.5 py-0.5 rounded-full bg-primary/10 text-primary">
+                    1:1 Coaching
+                  </span>
                 </div>
+                <div>
+                  <h3 className="text-xl md:text-2xl font-display font-extrabold text-foreground mb-1 group-hover:text-primary transition-colors">
+                    M³ Ernährungscoaching
+                  </h3>
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">
+                    Deine Ernährung. Dein Alltag.
+                  </p>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    Keine starren Diät-Korsetts oder Verbote – sondern eine alltagstaugliche 1:1 Makro-Struktur ohne Jojo-Effekt.
+                  </p>
+                </div>
+
+                <ul className="space-y-1.5 border-t border-border/60 pt-3 text-xs text-muted-foreground">
+                  <li className="flex items-center gap-2 text-foreground font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                    <span>Individuelle Makro-Struktur</span>
+                  </li>
+                  <li className="flex items-center gap-2 text-foreground font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+                    <span>Perfekt für Beruf & Familie</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="pt-6 flex items-center gap-3">
+                <Link
+                  to="/ernaehrungscoaching"
+                  className="w-full inline-flex items-center justify-center rounded-full border border-border px-4 py-2.5 text-xs font-bold text-foreground hover:bg-secondary transition"
+                >
+                  Details
+                </Link>
+                <a
+                  href={`${BASE_WHATSAPP}?text=Hallo%20Mich%C3%A9l,%20ich%20interessiere%20mich%20f%C3%BCr%20das%201:1%20Ern%C3%A4hrungscoaching.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-1 rounded-full bg-secondary hover:bg-secondary/80 px-4 py-2.5 text-xs font-bold text-foreground transition"
+                >
+                  <MessageCircle className="w-3.5 h-3.5 text-primary" />
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+
+            {/* Tile 3: M3 Schmerzfrei (4 cols) */}
+            <div className="md:col-span-4 rounded-3xl border border-border bg-card p-6 flex flex-col justify-between shadow-sm hover:border-emerald-600/50 transition-all text-left group">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-emerald-700">
+                    M² · REHA
+                  </span>
+                  <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-emerald-600/10 text-emerald-700">
+                    Mobilität
+                  </span>
+                </div>
+                <h3 className="text-lg md:text-xl font-display font-bold text-foreground group-hover:text-emerald-700 transition-colors">
+                  M³ Schmerzfrei
+                </h3>
                 <p className="text-xs text-muted-foreground leading-relaxed">
-                  Die <strong>Darm- & Stoffwechselbegleitung</strong> sowie die <strong>Goldene Grundversorgung</strong> sind feste Kernbausteine des Body Resets – können bei Bedarf aber auch einzeln vertieft werden.
+                  Gezielte Mobilität & Ursachenbehebung bei Rücken-, Nacken- und Gelenkbeschwerden.
                 </p>
               </div>
-              <div className="flex items-center gap-3 shrink-0 pt-1 sm:pt-0">
+              <div className="pt-5 flex items-center gap-2">
                 <Link
-                  to="/darm-stoffwechselbegleitung"
-                  className="text-xs font-bold text-primary hover:underline underline-offset-4"
+                  to="/schmerzfrei"
+                  className="w-full inline-flex items-center justify-center rounded-full border border-border px-3 py-2 text-xs font-bold text-foreground hover:bg-secondary transition"
                 >
+                  Details
+                </Link>
+                <a
+                  href={`${BASE_WHATSAPP}?text=Hallo%20Mich%C3%A9l,%20ich%20interessiere%20mich%20f%C3%BCr%20das%20Schmerzfrei-Programm.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-1 rounded-full bg-secondary hover:bg-secondary/80 px-3 py-2 text-xs font-bold text-foreground transition"
+                >
+                  <MessageCircle className="w-3.5 h-3.5 text-emerald-700" />
+                  Anfrage
+                </a>
+              </div>
+            </div>
+
+            {/* Tile 4: M3 Performance Training (4 cols) */}
+            <div className="md:col-span-4 rounded-3xl border border-border bg-card p-6 flex flex-col justify-between shadow-sm hover:border-emerald-600/50 transition-all text-left group">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-emerald-700">
+                    M² · ATHLETIK
+                  </span>
+                  <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-emerald-600/10 text-emerald-700">
+                    1:1 Training
+                  </span>
+                </div>
+                <h3 className="text-lg md:text-xl font-display font-bold text-foreground group-hover:text-emerald-700 transition-colors">
+                  M³ Performance Training
+                </h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Intelligentes 1:1 Personal Training für echte Kraft, Explosivität und Körperbeherrschung.
+                </p>
+              </div>
+              <div className="pt-5 flex items-center gap-2">
+                <Link
+                  to="/performance-training"
+                  className="w-full inline-flex items-center justify-center rounded-full border border-border px-3 py-2 text-xs font-bold text-foreground hover:bg-secondary transition"
+                >
+                  Details
+                </Link>
+                <a
+                  href={`${BASE_WHATSAPP}?text=Hallo%20Mich%C3%A9l,%20ich%20interessiere%20mich%20f%C3%BCr%20das%20Performance%20Training.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-1 rounded-full bg-secondary hover:bg-secondary/80 px-3 py-2 text-xs font-bold text-foreground transition"
+                >
+                  <MessageCircle className="w-3.5 h-3.5 text-emerald-700" />
+                  Anfrage
+                </a>
+              </div>
+            </div>
+
+            {/* Tile 5: Coaching für Zwei (4 cols) */}
+            <div className="md:col-span-4 rounded-3xl border border-border bg-card p-6 flex flex-col justify-between shadow-sm hover:border-emerald-600/50 transition-all text-left group">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-emerald-700">
+                    M² · PARTNER
+                  </span>
+                  <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded-full bg-emerald-600/10 text-emerald-700">
+                    Für Zwei
+                  </span>
+                </div>
+                <h3 className="text-lg md:text-xl font-display font-bold text-foreground group-hover:text-emerald-700 transition-colors">
+                  Coaching für Zwei
+                </h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">
+                  Personal Training für Partner oder Freunde – individuelle Pläne mit doppelter Motivation.
+                </p>
+              </div>
+              <div className="pt-5 flex items-center gap-2">
+                <Link
+                  to="/coaching-fuer-zwei"
+                  className="w-full inline-flex items-center justify-center rounded-full border border-border px-3 py-2 text-xs font-bold text-foreground hover:bg-secondary transition"
+                >
+                  Details
+                </Link>
+                <a
+                  href={`${BASE_WHATSAPP}?text=Hallo%20Mich%C3%A9l,%20wir%20interessieren%20uns%20f%C3%BCr%20das%20Coaching%20f%C3%BCr%20Zwei.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-1 rounded-full bg-secondary hover:bg-secondary/80 px-3 py-2 text-xs font-bold text-foreground transition"
+                >
+                  <MessageCircle className="w-3.5 h-3.5 text-emerald-700" />
+                  Anfrage
+                </a>
+              </div>
+            </div>
+
+            {/* Tile 6: Spezialvertiefungen (12 cols) */}
+            <div className="md:col-span-12 rounded-2xl border border-primary/20 bg-secondary/30 p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-left">
+              <div className="space-y-1">
+                <div className="text-xs font-bold uppercase tracking-wider text-primary flex items-center gap-1.5">
+                  <Sparkles className="w-3.5 h-3.5 text-gold" />
+                  <span>Weitere Kern-Bausteine & Spezialmodule</span>
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  Ganzheitliche Vertiefungen für <strong>Darmbegleitung</strong>, <strong>Goldene Grundversorgung</strong> und <strong>Mental Performance Coaching</strong>.
+                </p>
+              </div>
+              <div className="flex flex-wrap items-center gap-3 shrink-0">
+                <Link to="/darm-stoffwechselbegleitung" className="text-xs font-bold text-primary hover:underline">
                   Darmbegleitung →
                 </Link>
                 <span className="text-border">|</span>
-                <Link
-                  to="/goldene-grundversorgung"
-                  className="text-xs font-bold text-primary hover:underline underline-offset-4"
-                >
+                <Link to="/goldene-grundversorgung" className="text-xs font-bold text-primary hover:underline">
                   Grundversorgung →
                 </Link>
+                <span className="text-border">|</span>
+                <Link to="/mental-performance" className="text-xs font-bold text-indigo-700 hover:underline">
+                  Mental Performance →
+                </Link>
               </div>
-            </div>
-          </div>
-
-          {/* KATEGORIE 2: M2 MOVEMENT */}
-          <div className="rounded-3xl border border-border bg-secondary/20 p-6 md:p-10 space-y-6">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-border/70 pb-5">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-2xl bg-emerald-600/10 text-emerald-700 flex items-center justify-center border border-emerald-600/25 font-display font-bold text-sm shrink-0">
-                  M²
-                </div>
-                <div>
-                  <h3 className="font-display font-extrabold text-2xl text-foreground">
-                    Movement
-                  </h3>
-                  <p className="text-xs font-semibold text-emerald-700 uppercase tracking-wider">
-                    In Bewegung kommen · Leistungsfähig & Schmerzfrei
-                  </p>
-                </div>
-              </div>
-              <Link
-                to="/movement"
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 hover:opacity-80 transition self-start sm:self-auto"
-              >
-                <span>Alle M² Details ansehen</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-              {services
-                .filter((s) => s.pillar === "M2")
-                .map((s, idx) => (
-                  <div
-                    key={idx}
-                    className={`rounded-2xl border p-6 flex flex-col justify-between transition-all duration-300 overflow-hidden group ${
-                      s.badge
-                        ? "border-gold/60 bg-gradient-to-br from-gold/10 via-card to-card shadow-[var(--shadow-gold)]"
-                        : "border-border bg-card hover:border-emerald-600/50 shadow-sm hover:shadow-md"
-                    }`}
-                  >
-                    <div>
-                      {s.image && (
-                        <div className="relative w-full h-40 -mt-6 -mx-6 mb-5 overflow-hidden rounded-t-2xl border-b border-border/70 group-hover:border-gold/50 transition-colors bg-black">
-                          <img
-                            src={s.image}
-                            alt={s.name}
-                            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                            loading="lazy"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
-                        </div>
-                      )}
-
-                      <div className="flex items-center justify-between gap-2 mb-3">
-                        <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-emerald-700">
-                          {s.pillar} · {s.pillarName}
-                        </span>
-                        {s.badge && (
-                          <span className="rounded-full bg-gold-gradient px-2.5 py-0.5 text-[10px] font-bold text-primary-foreground uppercase tracking-wider">
-                            {s.badge}
-                          </span>
-                        )}
-                      </div>
-
-                      <h4 className="font-display font-bold text-lg text-foreground mb-1">
-                        {s.name}
-                      </h4>
-                      <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3 font-semibold">
-                        {s.tagline}
-                      </p>
-                      <p className="text-xs text-muted-foreground leading-relaxed mb-6">
-                        {s.desc}
-                      </p>
-
-                      <ul className="space-y-2 mb-6 border-t border-border/60 pt-4">
-                        {s.features.map((f, fIdx) => (
-                          <li key={fIdx} className="flex items-center gap-2 text-xs text-foreground/90 font-medium">
-                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 shrink-0" />
-                            <span>{f}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="flex flex-col gap-2 pt-2 mt-auto">
-                      <Link
-                        to={s.route}
-                        className="w-full inline-flex items-center justify-center rounded-full border border-border px-4 py-2.5 text-xs font-bold text-foreground hover:bg-secondary transition"
-                      >
-                        Details ansehen
-                      </Link>
-                      <a
-                        href={`${BASE_WHATSAPP}?text=${encodeURIComponent(s.whatsappMessage)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full inline-flex items-center justify-center gap-1.5 rounded-full bg-secondary hover:bg-secondary/80 px-4 py-2.5 text-xs font-bold text-foreground transition"
-                      >
-                        <MessageCircle className="w-3.5 h-3.5 text-emerald-700" />
-                        WhatsApp Anfrage
-                      </a>
-                    </div>
-                  </div>
-                ))}
-            </div>
-          </div>
-
-          {/* KATEGORIE 3: M3 MENTAL PERFORMANCE & SYSTEM */}
-          <div className="rounded-3xl border border-border bg-secondary/20 p-6 md:p-10 space-y-6">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-border/70 pb-5">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-2xl bg-indigo-600/10 text-indigo-700 flex items-center justify-center border border-indigo-600/25 font-display font-bold text-sm shrink-0">
-                  M³
-                </div>
-                <div>
-                  <h3 className="font-display font-extrabold text-2xl text-foreground">
-                    Mental Performance & System
-                  </h3>
-                  <p className="text-xs font-semibold text-indigo-700 uppercase tracking-wider">
-                    Dranbleiben · Veränderung im Alltag verankern
-                  </p>
-                </div>
-              </div>
-              <Link
-                to="/mental-performance"
-                className="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-700 hover:opacity-80 transition self-start sm:self-auto"
-              >
-                <span>Alle M³ Details ansehen</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {services
-                .filter((s) => s.pillar === "M3")
-                .map((s, idx) => (
-                  <div
-                    key={idx}
-                    className={`rounded-2xl border p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 overflow-hidden group ${
-                      s.badge
-                        ? "border-gold/60 bg-gradient-to-br from-gold/10 via-card to-card shadow-[var(--shadow-gold)]"
-                        : "border-border bg-card hover:border-indigo-600/50 shadow-sm hover:shadow-md"
-                    }`}
-                  >
-                    <div>
-                      {s.image && (
-                        <div className="relative w-full h-44 -mt-6 sm:-mt-8 -mx-6 sm:-mx-8 mb-5 overflow-hidden rounded-t-2xl border-b border-border/70 group-hover:border-gold/50 transition-colors bg-black">
-                          <img
-                            src={s.image}
-                            alt={s.name}
-                            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                            loading="lazy"
-                          />
-                          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
-                        </div>
-                      )}
-
-                      <div className="flex items-center justify-between gap-2 mb-3">
-                        <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-indigo-700">
-                          {s.pillar} · {s.pillarName}
-                        </span>
-                        {s.badge && (
-                          <span className="rounded-full bg-gold-gradient px-2.5 py-0.5 text-[10px] font-bold text-primary-foreground uppercase tracking-wider">
-                            {s.badge}
-                          </span>
-                        )}
-                      </div>
-
-                      <h4 className="font-display font-bold text-xl text-foreground mb-1">
-                        {s.name}
-                      </h4>
-                      <p className="text-xs uppercase tracking-widest text-muted-foreground mb-3 font-semibold">
-                        {s.tagline}
-                      </p>
-                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-6">
-                        {s.desc}
-                      </p>
-
-                      <ul className="space-y-2 mb-6 border-t border-border/60 pt-4">
-                        {s.features.map((f, fIdx) => (
-                          <li key={fIdx} className="flex items-center gap-2 text-xs text-foreground/90 font-medium">
-                            <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 shrink-0" />
-                            <span>{f}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    <div className="flex flex-col gap-2 pt-2 mt-auto">
-                      <Link
-                        to={s.route}
-                        className="w-full inline-flex items-center justify-center rounded-full border border-border px-4 py-2.5 text-xs font-bold text-foreground hover:bg-secondary transition"
-                      >
-                        Details ansehen
-                      </Link>
-                      <a
-                        href={`${BASE_WHATSAPP}?text=${encodeURIComponent(s.whatsappMessage)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-full inline-flex items-center justify-center gap-1.5 rounded-full bg-secondary hover:bg-secondary/80 px-4 py-2.5 text-xs font-bold text-foreground transition"
-                      >
-                        <MessageCircle className="w-3.5 h-3.5 text-indigo-700" />
-                        WhatsApp Anfrage
-                      </a>
-                    </div>
-                  </div>
-                ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* ---------------------------------------------------- */}
-      {/* 8. ÜBER MICHÉL: Story & High-Trust Video Facade */}
+      {/* 5. BENTO CHAPTER 4: STORY, PROOF & TRUST BENTO */}
       {/* ---------------------------------------------------- */}
       <section id="ueber" className="py-16 md:py-24 border-b border-border/70 bg-secondary/25">
-        <div className="max-w-6xl mx-auto px-5 md:px-6">
-          <div className="grid lg:grid-cols-12 gap-10 items-center">
-            <div className="lg:col-span-6 space-y-6">
-              <div className="space-y-2">
-                <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
-                  Die Geschichte hinter M³
+        <div className="max-w-7xl mx-auto px-5 md:px-6 space-y-10">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
+              Authentizität & Erfahrung
+            </span>
+            <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight">
+              Hinter M³ steckt mehr als Training.
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+            {/* Tile 1: Story & Video Facade (5 cols) */}
+            <div className="lg:col-span-5 rounded-3xl border border-border bg-card p-6 md:p-8 flex flex-col justify-between shadow-sm text-left">
+              <div className="space-y-4">
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-gold">
+                  Michél Meier · Master Personal Trainer
                 </span>
-                <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight">
-                  Hinter M³ steckt mehr als Training.
-                </h2>
-              </div>
-
-              <div className="space-y-4 text-sm md:text-base text-muted-foreground leading-relaxed">
-                <p className="text-foreground font-semibold">
-                  Als Breakdance-Weltmeister durfte ich erleben, wozu der menschliche Körper fähig ist.
+                <h3 className="text-xl md:text-2xl font-display font-extrabold text-foreground">
+                  25+ Jahre Bewegungspraxis & Weltmeisterjahre
+                </h3>
+                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                  Als IDO Breakdance-Weltmeister durfte ich erleben, wozu der Körper fähig ist. Schwere Rückschläge und Darmthemen lehrten mich: Höchstleistung zerbricht ohne biochemisches Fundament.
                 </p>
-                <p>
-                  Gleichzeitig haben mich schwere Verletzungen, Rückschläge und intensive Auseinandersetzungen mit Biochemie, Stoffwechsel und mentalen Blockaden gelehrt: Echte Höchstleistung bricht sofort zusammen, wenn das Fundament nicht stimmt.
-                </p>
-                <p>
-                  Heute verbinde ich diese Erfahrung mit systemischem Gesundheitscoaching. Nicht, um dir das nächste Extrem aufzuzwingen – sondern um dir die Werkzeuge zu geben, mit denen du dein Leben dauerhaft meisterst.
-                </p>
-                <p className="text-gold font-medium italic border-l-2 border-gold pl-4 py-1">
+                <div className="text-xs font-medium text-gold italic border-l-2 border-gold pl-3 py-1">
                   „Manchmal braucht es Verständnis. Manchmal einen Arschtritt. Oft beides.“
-                </p>
+                </div>
+
+                {/* Video Facade */}
+                <div className="aspect-video rounded-2xl bg-secondary/50 border border-border overflow-hidden relative group mt-3">
+                  {videoLoaded ? (
+                    <iframe
+                      className="w-full h-full"
+                      src="https://www.youtube-nocookie.com/embed/dQrADZQ1d5I?autoplay=1"
+                      title="M³ Performance & Gesundheit – Michél Meier"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  ) : (
+                    <div
+                      onClick={() => setVideoLoaded(true)}
+                      className="w-full h-full flex flex-col items-center justify-center p-4 cursor-pointer text-center"
+                    >
+                      <div className="w-12 h-12 rounded-full bg-gold-gradient text-primary-foreground flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mb-2">
+                        <Play className="w-5 h-5 ml-0.5 fill-current" />
+                      </div>
+                      <span className="font-display font-bold text-xs text-foreground">
+                        M³ Performance Video abspielen
+                      </span>
+                    </div>
+                  )}
+                </div>
               </div>
 
-              <div className="pt-2 flex items-center gap-4">
+              <div className="pt-6">
                 <Link
                   to="/ueber-mich"
-                  className="inline-flex items-center gap-2 rounded-full bg-gold-gradient px-7 py-3.5 text-sm font-bold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95 transition"
+                  className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gold-gradient py-3 text-xs sm:text-sm font-bold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95 transition"
                 >
                   Meine ganze Story lesen
                   <ArrowRight className="w-4 h-4" />
@@ -1725,33 +1486,100 @@ function IndexPage() {
               </div>
             </div>
 
-            {/* Video Facade (Privacy Friendly & Fast Loading) */}
-            <div className="lg:col-span-6">
-              <div className="aspect-video rounded-3xl bg-card border border-border overflow-hidden shadow-xl relative group">
-                {videoLoaded ? (
-                  <iframe
-                    className="w-full h-full"
-                    src="https://www.youtube-nocookie.com/embed/dQrADZQ1d5I?autoplay=1"
-                    title="M³ Performance & Gesundheit – Michél Meier"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                ) : (
-                  <div
-                    onClick={() => setVideoLoaded(true)}
-                    className="w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-card via-secondary to-card p-6 cursor-pointer text-center"
-                  >
-                    <div className="w-16 h-16 rounded-full bg-gold-gradient text-primary-foreground flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform mb-4">
-                      <Play className="w-6 h-6 ml-1 fill-current" />
+            {/* Tile 2: Testimonials & Real Proof (7 cols) */}
+            <div className="lg:col-span-7 rounded-3xl border border-border bg-card p-6 md:p-8 flex flex-col justify-between shadow-sm text-left overflow-hidden">
+              <div className="space-y-4">
+                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border/70 pb-4">
+                  <div>
+                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-gold">
+                      Kundenstimmen & Resultate
+                    </span>
+                    <h3 className="font-display font-bold text-xl text-foreground">
+                      Echte Erfahrungen mit M³
+                    </h3>
+                  </div>
+                  <div className="flex items-center gap-1.5 text-xs text-muted-foreground font-semibold">
+                    <span className="text-amber-500 font-bold">★★★★★ 4.98 / 5.0</span>
+                  </div>
+                </div>
+
+                {/* Testimonial Cards Grid */}
+                <div className="grid sm:grid-cols-2 gap-3.5 pt-1">
+                  {HERO_TESTIMONIALS.slice(0, 4).map((t, idx) => (
+                    <div
+                      key={idx}
+                      className="rounded-2xl border border-border/80 bg-secondary/30 p-4 flex flex-col justify-between space-y-3"
+                    >
+                      <div className="space-y-1.5">
+                        <div className="flex items-center justify-between">
+                          <span className="text-amber-500 text-xs">★★★★★</span>
+                          <span className={`text-[9px] font-mono font-bold uppercase px-2 py-0.5 rounded-full border ${t.badgeClass}`}>
+                            {t.pillar.split(" ")[0]}
+                          </span>
+                        </div>
+                        <p className="text-xs text-foreground/90 italic leading-relaxed line-clamp-3">
+                          „{t.quote}“
+                        </p>
+                      </div>
+
+                      <div className="flex items-center justify-between pt-2 border-t border-border/50 text-[11px]">
+                        <div>
+                          <div className="font-bold text-foreground">{t.name}</div>
+                          <div className="text-[10px] text-muted-foreground">{t.role}</div>
+                        </div>
+                        <span className="text-[9px] font-bold text-emerald-700 bg-emerald-600/10 px-1.5 py-0.5 rounded">
+                          {t.result}
+                        </span>
+                      </div>
                     </div>
-                    <h4 className="font-display font-bold text-lg text-foreground">
-                      M³ Performance Video ansehen
-                    </h4>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      Klicken zum Laden (Datenschutzfreundlich via YouTube-NoCookie)
+                  ))}
+                </div>
+              </div>
+
+              <div className="pt-4 flex items-center justify-between text-xs text-muted-foreground">
+                <span>100% persönliche 1:1 Betreuung</span>
+                <Link to="/ueber-mich" className="font-bold text-gold hover:underline">
+                  Alle Erfahrungen ansehen →
+                </Link>
+              </div>
+            </div>
+
+            {/* Tile 3: 5 M³-Werte & Qualitätsgarantien (12 cols) */}
+            <div className="lg:col-span-12 rounded-3xl border border-border bg-card p-6 md:p-8 space-y-6 text-left">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border/70 pb-4">
+                <div>
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-gold">
+                    Unverrückbare Prinzipien
+                  </span>
+                  <h3 className="font-display font-extrabold text-xl md:text-2xl text-foreground">
+                    Darauf kannst du dich verlassen
+                  </h3>
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  Fünf Werte, nach denen jede Begleitung ausgerichtet ist.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
+                {[
+                  { title: "Eigenverantwortung", desc: "Wir begleiten dich eng – aber nehmen dir deine Verantwortung nicht ab." },
+                  { title: "Ehrlichkeit", desc: "Wir sprechen Dinge direkt an – auch dann, wenn es einmal unbequem ist." },
+                  { title: "Authentizität", desc: "Kein aufgesetztes Gehabe. Wir bleiben menschlich, pragmatisch und echt." },
+                  { title: "Menschlichkeit", desc: "Vor dem Problem steht der Mensch mit all seinen Alltagshürden." },
+                  { title: "Qualität", desc: "Wir empfehlen nur Maßnahmen, die einem fundierten Anspruch genügen." },
+                ].map((v, i) => (
+                  <div key={i} className="rounded-2xl border border-border/80 bg-secondary/20 p-4 space-y-2">
+                    <div className="w-7 h-7 rounded-lg bg-gold/15 text-gold flex items-center justify-center font-display font-bold text-xs">
+                      0{i + 1}
+                    </div>
+                    <div className="font-display font-bold text-sm text-foreground">
+                      {v.title}
+                    </div>
+                    <p className="text-xs text-muted-foreground leading-relaxed">
+                      {v.desc}
                     </p>
                   </div>
-                )}
+                ))}
               </div>
             </div>
           </div>
@@ -1759,55 +1587,48 @@ function IndexPage() {
       </section>
 
       {/* ---------------------------------------------------- */}
-      {/* 9. DIE 5 M³-WERTE: Fundament des Coachings */}
+      {/* 6. BENTO CHAPTER 5: DER 5-STUFEN-PROZESS & FAQ & FINAL CTA */}
       {/* ---------------------------------------------------- */}
-      <section className="py-16 md:py-24 border-b border-border/70 bg-card">
-        <div className="max-w-6xl mx-auto px-5 md:px-6 space-y-12">
+      <section id="so-arbeiten-wir" className="py-16 md:py-24 border-b border-border/70 bg-secondary/20">
+        <div className="max-w-7xl mx-auto px-5 md:px-6 space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
-              Die M³ Werte
+              Der 5-Stufen-Prozess
             </span>
             <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight">
-              Darauf kannst du dich verlassen
+              So arbeiten wir zusammen
             </h2>
             <p className="text-base md:text-lg text-muted-foreground">
-              Fünf unverrückbare Prinzipien, nach denen jede Begleitung ausgerichtet ist.
+              Struktur statt Zufall: Von der ersten Analyse bis zur gefestigten Routine.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
             {[
-              {
-                title: "Eigenverantwortung",
-                desc: "Wir begleiten dich eng – aber nehmen dir deine Verantwortung nicht ab.",
-              },
-              {
-                title: "Ehrlichkeit",
-                desc: "Wir sprechen Dinge direkt an – auch dann, wenn es einmal unbequem ist.",
-              },
-              {
-                title: "Authentizität",
-                desc: "Kein aufgesetztes Gehabe. Wir bleiben menschlich, pragmatisch und echt.",
-              },
-              {
-                title: "Menschlichkeit",
-                desc: "Vor dem Problem steht der Mensch mit all seinen Alltagshürden.",
-              },
-              {
-                title: "Qualität",
-                desc: "Wir empfehlen nur Maßnahmen, die einem fundierten Anspruch genügen.",
-              },
-            ].map((v, i) => (
-              <div key={i} className="rounded-2xl border border-border bg-secondary/30 p-6 flex flex-col justify-between">
+              { step: "01", phase: "Diagnostik", title: "Kennenlernen", desc: "Unverbindliches Gespräch über deine Situation, Ziele und Erwartungen." },
+              { step: "02", phase: "Biometrie", title: "Analyse", desc: "Ganzheitliche Bestandsaufnahme von Stoffwechsel, Bewegung und Alltag." },
+              { step: "03", phase: "Masterplan", title: "Strategie", desc: "Dein maßgeschneiderter Fahrplan mit klaren Prioritäten." },
+              { step: "04", phase: "Begleitung", title: "Begleitung", desc: "Schritt-für-Schritt Umsetzung mit engmaschiger Korrektur." },
+              { step: "05", phase: "Autonomie", title: "Routine", desc: "Verstetigung der Gewohnheiten bis zur vollständigen Selbstständigkeit." },
+            ].map((item, index) => (
+              <div
+                key={index}
+                className="rounded-2xl border border-border bg-card p-5 flex flex-col justify-between hover:border-gold/50 shadow-sm transition-all text-left group"
+              >
                 <div>
-                  <div className="w-8 h-8 rounded-full bg-gold/15 text-gold flex items-center justify-center font-display font-bold text-xs mb-4">
-                    0{i + 1}
+                  <div className="flex items-center justify-between gap-2 mb-3">
+                    <div className="w-9 h-9 rounded-xl bg-gold-gradient text-primary-foreground flex items-center justify-center font-display font-bold text-xs shadow-sm">
+                      {item.step}
+                    </div>
+                    <span className="text-[10px] uppercase font-mono tracking-wider text-gold font-bold px-2 py-0.5 rounded-full bg-gold/10">
+                      {item.phase}
+                    </span>
                   </div>
-                  <h3 className="font-display font-bold text-base text-foreground mb-2">
-                    {v.title}
+                  <h3 className="font-display font-bold text-base text-foreground mb-1.5 group-hover:text-gold transition-colors">
+                    {item.title}
                   </h3>
                   <p className="text-xs text-muted-foreground leading-relaxed">
-                    {v.desc}
+                    {item.desc}
                   </p>
                 </div>
               </div>
@@ -1817,9 +1638,9 @@ function IndexPage() {
       </section>
 
       {/* ---------------------------------------------------- */}
-      {/* 10. FAQ SECTION: Häufige Fragen */}
+      {/* 7. FAQ SECTION */}
       {/* ---------------------------------------------------- */}
-      <section id="faq" className="py-16 md:py-24 border-b border-border/70 bg-secondary/20">
+      <section id="faq" className="py-16 md:py-24 border-b border-border/70 bg-card">
         <div className="max-w-4xl mx-auto px-5 md:px-6 space-y-10">
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
@@ -1859,7 +1680,7 @@ function IndexPage() {
       </section>
 
       {/* ---------------------------------------------------- */}
-      {/* 11. FINAL HIGH-CONVERTING CTA */}
+      {/* 8. FINAL HIGH-CONVERTING CTA */}
       {/* ---------------------------------------------------- */}
       <section id="kontakt" className="py-20 md:py-28 bg-card relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
