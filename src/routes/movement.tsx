@@ -11,6 +11,8 @@ import {
 } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { PathwayCrossNav } from "@/components/PathwayCrossNav";
 
 export const Route = createFileRoute("/movement")({
   component: MovementPage,
@@ -23,21 +25,15 @@ function MovementPage() {
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col justify-between overflow-x-hidden selection:bg-gold/20 selection:text-foreground">
       <Header />
+      <Breadcrumbs items={[{ label: "M² Movement", pillar: "m2" }]} />
 
-      <main className="flex-grow py-16 md:py-24 relative hero-bg">
+      <main className="flex-grow py-12 md:py-16 relative hero-bg">
         {/* Decorative background glow */}
         <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-emerald-600/10 blur-3xl" />
         </div>
 
         <div className="relative max-w-6xl mx-auto px-5 md:px-6 space-y-16 md:space-y-24">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition group"
-          >
-            <span className="group-hover:-translate-x-1 transition-transform">←</span>
-            <span>Zurück zur Startseite</span>
-          </Link>
 
           {/* HERO SPLIT */}
           <div className="grid lg:grid-cols-12 gap-10 items-center">
@@ -292,6 +288,7 @@ function MovementPage() {
         </div>
       </main>
 
+      <PathwayCrossNav currentRoute="movement" />
       <Footer />
     </div>
   );

@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { PathwayCrossNav } from "@/components/PathwayCrossNav";
 
 export const Route = createFileRoute("/darm-stoffwechselbegleitung")({
   component: DarmStoffwechselPage,
@@ -12,19 +14,19 @@ function DarmStoffwechselPage() {
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col justify-between overflow-x-hidden">
       <Header />
+      <Breadcrumbs
+        items={[
+          { label: "M¹ Metabolism", href: "/metabolism", pillar: "m1" },
+          { label: "Darm- & Stoffwechselbegleitung", pillar: "m1" },
+        ]}
+      />
 
-      <main className="flex-grow py-24 md:py-32 relative hero-bg">
+      <main className="flex-grow py-12 md:py-20 relative hero-bg">
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-gold/5 blur-3xl" />
         </div>
 
         <div className="relative max-w-4xl mx-auto px-6">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition mb-12"
-          >
-            ← Zurück zur Startseite
-          </Link>
 
           <div className="mb-20 grid lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-7 space-y-6">
@@ -97,6 +99,7 @@ function DarmStoffwechselPage() {
         </div>
       </main>
 
+      <PathwayCrossNav currentRoute="metabolism" />
       <Footer />
     </div>
   );

@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Breadcrumbs } from "@/components/Breadcrumbs";
+import { PathwayCrossNav } from "@/components/PathwayCrossNav";
 
 export const Route = createFileRoute("/system-start")({
   component: SystemStartPage,
@@ -12,20 +14,15 @@ function SystemStartPage() {
   return (
     <div className="min-h-screen bg-background text-foreground flex flex-col justify-between overflow-x-hidden">
       <Header />
+      <Breadcrumbs items={[{ label: "M³ System Start", pillar: "gold" }]} />
 
-      <main className="flex-grow py-24 md:py-32 relative hero-bg">
+      <main className="flex-grow py-12 md:py-20 relative hero-bg">
         {/* Decorative background glow */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-gold/5 blur-3xl" />
         </div>
 
         <div className="relative max-w-5xl mx-auto px-6">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition mb-12"
-          >
-            ← Zurück zur Startseite
-          </Link>
 
           {/* HERO */}
           <div className="mb-20 grid lg:grid-cols-12 gap-10 items-center">
@@ -174,6 +171,7 @@ function SystemStartPage() {
         </div>
       </main>
 
+      <PathwayCrossNav currentRoute="system-start" />
       <Footer />
     </div>
   );
