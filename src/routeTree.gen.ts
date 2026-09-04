@@ -20,6 +20,7 @@ import { Route as MetabolismRouteImport } from './routes/metabolism'
 import { Route as MovementRouteImport } from './routes/movement'
 import { Route as PerformanceTrainingRouteImport } from './routes/performance-training'
 import { Route as SchmerzfreiRouteImport } from './routes/schmerzfrei'
+import { Route as SitemapRouteImport } from './routes/sitemap'
 import { Route as SystemStartRouteImport } from './routes/system-start'
 import { Route as UeberMichRouteImport } from './routes/ueber-mich'
 
@@ -79,6 +80,11 @@ const SchmerzfreiRoute = SchmerzfreiRouteImport.update({
   path: '/schmerzfrei',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SitemapRoute = SitemapRouteImport.update({
+  id: '/sitemap',
+  path: '/sitemap',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SystemStartRoute = SystemStartRouteImport.update({
   id: '/system-start',
   path: '/system-start',
@@ -102,6 +108,7 @@ export interface FileRoutesByFullPath {
   '/movement': typeof MovementRoute
   '/performance-training': typeof PerformanceTrainingRoute
   '/schmerzfrei': typeof SchmerzfreiRoute
+  '/sitemap': typeof SitemapRoute
   '/system-start': typeof SystemStartRoute
   '/ueber-mich': typeof UeberMichRoute
 }
@@ -117,6 +124,7 @@ export interface FileRoutesByTo {
   '/movement': typeof MovementRoute
   '/performance-training': typeof PerformanceTrainingRoute
   '/schmerzfrei': typeof SchmerzfreiRoute
+  '/sitemap': typeof SitemapRoute
   '/system-start': typeof SystemStartRoute
   '/ueber-mich': typeof UeberMichRoute
 }
@@ -133,6 +141,7 @@ export interface FileRoutesById {
   '/movement': typeof MovementRoute
   '/performance-training': typeof PerformanceTrainingRoute
   '/schmerzfrei': typeof SchmerzfreiRoute
+  '/sitemap': typeof SitemapRoute
   '/system-start': typeof SystemStartRoute
   '/ueber-mich': typeof UeberMichRoute
 }
@@ -150,6 +159,7 @@ export interface FileRouteTypes {
     | '/movement'
     | '/performance-training'
     | '/schmerzfrei'
+    | '/sitemap'
     | '/system-start'
     | '/ueber-mich'
   fileRoutesByTo: FileRoutesByTo
@@ -165,6 +175,7 @@ export interface FileRouteTypes {
     | '/movement'
     | '/performance-training'
     | '/schmerzfrei'
+    | '/sitemap'
     | '/system-start'
     | '/ueber-mich'
   id:
@@ -180,6 +191,7 @@ export interface FileRouteTypes {
     | '/movement'
     | '/performance-training'
     | '/schmerzfrei'
+    | '/sitemap'
     | '/system-start'
     | '/ueber-mich'
   fileRoutesById: FileRoutesById
@@ -196,6 +208,7 @@ export interface RootRouteChildren {
   MovementRoute: typeof MovementRoute
   PerformanceTrainingRoute: typeof PerformanceTrainingRoute
   SchmerzfreiRoute: typeof SchmerzfreiRoute
+  SitemapRoute: typeof SitemapRoute
   SystemStartRoute: typeof SystemStartRoute
   UeberMichRoute: typeof UeberMichRoute
 }
@@ -279,6 +292,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SchmerzfreiRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/sitemap': {
+      id: '/sitemap'
+      path: '/sitemap'
+      fullPath: '/sitemap'
+      preLoaderRoute: typeof SitemapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/system-start': {
       id: '/system-start'
       path: '/system-start'
@@ -308,6 +328,7 @@ const rootRouteChildren: RootRouteChildren = {
   MovementRoute: MovementRoute,
   PerformanceTrainingRoute: PerformanceTrainingRoute,
   SchmerzfreiRoute: SchmerzfreiRoute,
+  SitemapRoute: SitemapRoute,
   SystemStartRoute: SystemStartRoute,
   UeberMichRoute: UeberMichRoute,
 }

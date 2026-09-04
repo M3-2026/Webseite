@@ -150,48 +150,51 @@ function MovementPage() {
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
-                  title: "M³ Performance Training",
-                  tagline: "1:1 Personal Training",
-                  desc: "Intelligentes Kraft- und Athletiktraining mit System: Individuelle Belastungssteuerung für spürbaren Muskel- und Kraftaufbau.",
+                  badge: "M² · 1:1 Personal Training",
+                  headline: "Intelligenter Kraftaufbau ohne Verschleiß",
+                  desc: "Funktionelles Kraft- & Athletiktraining mit System: Individuelle Belastungssteuerung für spürbaren Muskelaufbau und echte Explosivität.",
                   route: "/performance-training",
                   image: "/images/performance/card-performance-training.png",
+                  cta: "Performance Training ansehen",
                 },
                 {
-                  title: "M³ Schmerzfrei",
-                  tagline: "Mobilität & Reha",
-                  desc: "Gezielte Bewegungskorrekturen und Schmerzbehebung für Rücken, Nacken und Gelenke – für dauerhafte Bewegungsfreiheit.",
+                  badge: "M² · Reha & Mobilität",
+                  headline: "Gezielte Schmerzbefreiung für Rücken & Nacken",
+                  desc: "Gezielte Bewegungskorrekturen und Ursachenbehebung bei Dysbalancen – für dauerhafte Bewegungsfreiheit und Gelenkstabilität.",
                   route: "/schmerzfrei",
                   image: "/images/performance/card-schmerzfrei.png",
+                  cta: "Schmerzfrei-Programm ansehen",
                 },
                 {
-                  title: "Coaching für Zwei",
-                  tagline: "Partner-Training",
-                  desc: "Zusammen trainieren mit maximaler Verbindlichkeit – jeder auf seinem individuellen Niveau mit eigenem Plan.",
+                  badge: "M² · Partner-Training",
+                  headline: "Gemeinsam trainieren mit doppelter Verbindlichkeit",
+                  desc: "Zu zweit trainieren mit maximalem Teamgeist – jeder auf seinem individuellen Niveau mit maßgeschneidertem Trainingsplan.",
                   route: "/coaching-fuer-zwei",
                   image: "/images/performance/card-coaching-fuer-zwei.png",
+                  cta: "Coaching für Zwei ansehen",
                 },
               ].map((item) => (
                 <div
-                  key={item.title}
-                  className="rounded-3xl border border-border bg-card overflow-hidden flex flex-col justify-between hover:border-gold/50 transition-all duration-300 group shadow-sm hover:shadow-md"
+                  key={item.headline}
+                  className="rounded-3xl border border-border bg-card overflow-hidden flex flex-col justify-between hover:border-emerald-500/50 transition-all duration-300 group shadow-sm hover:shadow-xl text-left"
                 >
                   <div>
                     <div className="relative w-full h-48 bg-black overflow-hidden border-b border-border/70">
                       <img
                         src={item.image}
-                        alt={item.title}
+                        alt={item.headline}
                         className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
                     </div>
 
-                    <div className="p-6 space-y-2">
-                      <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-emerald-700">
-                        {item.tagline}
+                    <div className="p-6 space-y-2.5">
+                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-700 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20 inline-block">
+                        {item.badge}
                       </span>
-                      <h3 className="text-xl font-display font-bold text-foreground">
-                        {item.title}
+                      <h3 className="text-lg sm:text-xl font-display font-extrabold text-foreground leading-snug group-hover:text-emerald-700 transition-colors">
+                        {item.headline}
                       </h3>
                       <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                         {item.desc}
@@ -202,10 +205,10 @@ function MovementPage() {
                   <div className="p-6 pt-0">
                     <Link
                       to={item.route}
-                      className="w-full inline-flex items-center justify-center gap-1.5 rounded-full border border-border py-2.5 px-4 text-xs font-bold text-foreground hover:bg-secondary hover:border-gold/40 transition text-center"
+                      className="w-full inline-flex items-center justify-center gap-1.5 rounded-full border border-border py-2.5 px-4 text-xs font-bold text-foreground hover:bg-secondary hover:border-emerald-500/40 transition text-center shadow-sm"
                     >
-                      <span>Details ansehen</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
+                      <span>{item.cta}</span>
+                      <ArrowRight className="w-3.5 h-3.5 text-emerald-700" />
                     </Link>
                   </div>
                 </div>

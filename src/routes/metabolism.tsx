@@ -151,48 +151,51 @@ function MetabolismPage() {
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 {
-                  title: "M³ Body Reset",
-                  tagline: "Ganzheitlicher Neustart",
-                  desc: "Das modulare Konzept für Darm und Stoffwechsel: Beinhaltet 16-Tage Darmkur, Stoffwechselkur und tägliche Grundversorgung.",
+                  badge: "M¹ · Flaggschiff-Konzept",
+                  headline: "Ganzheitlicher Neustart für Darm & Stoffwechsel",
+                  desc: "Das 3-Phasen-Konzept: 16-Tage Darmkur zur Mikrobiom-Entlastung, gezielte Stoffwechselkur zur Fettverbrennung und tägliche zelluläre Grundversorgung.",
                   route: "/body-reset",
                   image: "/images/performance/card-body-reset.png",
+                  cta: "Body Reset entdecken",
                 },
                 {
-                  title: "M³ Ernährungscoaching",
-                  tagline: "1:1 Individuelle Struktur",
-                  desc: "Keine starren Pläne oder Verbote – sondern eine alltagstaugliche Makro-Struktur, die dich satt macht und dauerhaft funktioniert.",
+                  badge: "M¹ · 1:1 Begleitung",
+                  headline: "Alltagstaugliche Makro-Struktur ohne Diät-Korsett",
+                  desc: "Keine starren Pläne oder Verbote – sondern eine flexible Makro-Struktur, die sich nahtlos in 60-Stunden-Wochen und Familienalltag einfügt.",
                   route: "/ernaehrungscoaching",
                   image: "/images/performance/card-ernaehrungscoaching.png",
+                  cta: "Ernährungscoaching ansehen",
                 },
                 {
-                  title: "M³ System Start",
-                  tagline: "Die Eingangstür",
-                  desc: "Ganzheitliche Standortbestimmung: Wir analysieren deinen Stoffwechsel und erstellen deinen 3-Säulen-Fahrplan.",
+                  badge: "Orientierung & Diagnostik",
+                  headline: "Deine persönliche 360°-Standortbestimmung",
+                  desc: "Ganzheitliche Bestandsaufnahme: Wir analysieren deinen Stoffwechsel, decken Blockaden auf und erstellen deinen individuellen 3-Säulen-Fahrplan.",
                   route: "/system-start",
                   image: "/images/performance/card-system-start.png",
+                  cta: "System Start kennenlernen",
                 },
               ].map((item) => (
                 <div
-                  key={item.title}
-                  className="rounded-3xl border border-border bg-card overflow-hidden flex flex-col justify-between hover:border-gold/50 transition-all duration-300 group shadow-sm hover:shadow-md"
+                  key={item.headline}
+                  className="rounded-3xl border border-border bg-card overflow-hidden flex flex-col justify-between hover:border-amber-500/50 transition-all duration-300 group shadow-sm hover:shadow-xl text-left"
                 >
                   <div>
                     <div className="relative w-full h-48 bg-black overflow-hidden border-b border-border/70">
                       <img
                         src={item.image}
-                        alt={item.title}
+                        alt={item.headline}
                         className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                         loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
                     </div>
 
-                    <div className="p-6 space-y-2">
-                      <span className="text-[11px] font-mono font-bold uppercase tracking-wider text-primary">
-                        {item.tagline}
+                    <div className="p-6 space-y-2.5">
+                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-orange-600 bg-orange-500/10 px-2.5 py-0.5 rounded-full border border-orange-500/20 inline-block">
+                        {item.badge}
                       </span>
-                      <h3 className="text-xl font-display font-bold text-foreground">
-                        {item.title}
+                      <h3 className="text-lg sm:text-xl font-display font-extrabold text-foreground leading-snug group-hover:text-orange-600 transition-colors">
+                        {item.headline}
                       </h3>
                       <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                         {item.desc}
@@ -203,10 +206,10 @@ function MetabolismPage() {
                   <div className="p-6 pt-0">
                     <Link
                       to={item.route}
-                      className="w-full inline-flex items-center justify-center gap-1.5 rounded-full border border-border py-2.5 px-4 text-xs font-bold text-foreground hover:bg-secondary hover:border-gold/40 transition text-center"
+                      className="w-full inline-flex items-center justify-center gap-1.5 rounded-full border border-border py-2.5 px-4 text-xs font-bold text-foreground hover:bg-secondary hover:border-amber-500/40 transition text-center shadow-sm"
                     >
-                      <span>Details ansehen</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
+                      <span>{item.cta}</span>
+                      <ArrowRight className="w-3.5 h-3.5 text-amber-600" />
                     </Link>
                   </div>
                 </div>
