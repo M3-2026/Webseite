@@ -59,7 +59,7 @@ const services: ServiceItem[] = [
     badge: "Ganzheitliches Konzept",
     route: "/body-reset",
     whatsappMessage: "Hallo Michél, ich interessiere mich für den M³ Body Reset.",
-    image: "/images/performance/card-body-reset.png",
+    image: "/images/performance/hero-body-reset.jpg",
   },
   {
     name: "M³ Ernährungscoaching",
@@ -71,7 +71,7 @@ const services: ServiceItem[] = [
     badge: "1:1 Coaching",
     route: "/ernaehrungscoaching",
     whatsappMessage: "Hallo Michél, ich interessiere mich für das 1:1 Ernährungscoaching.",
-    image: "/images/performance/card-ernaehrungscoaching.png",
+    image: "/images/performance/hero-nutrition.jpg",
   },
   // M2
   {
@@ -84,7 +84,7 @@ const services: ServiceItem[] = [
     badge: "1:1 Personal Training",
     route: "/performance-training",
     whatsappMessage: "Hallo Michél, ich interessiere mich für das Performance Training.",
-    image: "/images/performance/card-performance-training.png",
+    image: "/images/performance/hero-performance-training.jpg",
   },
   {
     name: "M³ Schmerzfrei",
@@ -96,7 +96,7 @@ const services: ServiceItem[] = [
     badge: "Mobilität & Reha",
     route: "/schmerzfrei",
     whatsappMessage: "Hallo Michél, ich interessiere mich für das Schmerzfrei-Programm.",
-    image: "/images/performance/card-schmerzfrei.png",
+    image: "/images/performance/hero-schmerzfrei.jpg",
   },
   {
     name: "Coaching für Zwei",
@@ -108,7 +108,7 @@ const services: ServiceItem[] = [
     badge: "Partner-Coaching",
     route: "/coaching-fuer-zwei",
     whatsappMessage: "Hallo Michél, wir interessieren uns für das Coaching für Zwei.",
-    image: "/images/performance/card-coaching-fuer-zwei.png",
+    image: "/images/performance/hero-coaching-zwei.jpg",
   },
   // M3
   {
@@ -121,7 +121,7 @@ const services: ServiceItem[] = [
     badge: "Empfohlener Einstieg",
     route: "/system-start",
     whatsappMessage: "Hallo Michél, ich möchte mit dem M³ System Start beginnen.",
-    image: "/images/performance/card-system-start.png",
+    image: "/images/performance/hero-system-start.jpg",
   },
   {
     name: "M³ Mental Performance",
@@ -133,7 +133,7 @@ const services: ServiceItem[] = [
     badge: "Mindset & Routinen",
     route: "/mental-performance",
     whatsappMessage: "Hallo Michél, ich interessiere mich für das Mental Performance Coaching.",
-    image: "/images/performance/card-m3-coaching.png",
+    image: "/images/performance/m3-neural-blueprint.jpg",
   },
 ];
 

@@ -154,7 +154,7 @@ function MovementPage() {
                   headline: "Intelligenter Kraftaufbau ohne Verschleiß",
                   desc: "Funktionelles Kraft- & Athletiktraining mit System: Individuelle Belastungssteuerung für spürbaren Muskelaufbau und echte Explosivität.",
                   route: "/performance-training",
-                  image: "/images/performance/card-performance-training.png",
+                  image: "/images/performance/hero-performance-training.jpg",
                   cta: "Performance Training ansehen",
                 },
                 {
@@ -162,7 +162,7 @@ function MovementPage() {
                   headline: "Gezielte Schmerzbefreiung für Rücken & Nacken",
                   desc: "Gezielte Bewegungskorrekturen und Ursachenbehebung bei Dysbalancen – für dauerhafte Bewegungsfreiheit und Gelenkstabilität.",
                   route: "/schmerzfrei",
-                  image: "/images/performance/card-schmerzfrei.png",
+                  image: "/images/performance/hero-schmerzfrei.jpg",
                   cta: "Schmerzfrei-Programm ansehen",
                 },
                 {
@@ -170,7 +170,7 @@ function MovementPage() {
                   headline: "Gemeinsam trainieren mit doppelter Verbindlichkeit",
                   desc: "Zu zweit trainieren mit maximalem Teamgeist – jeder auf seinem individuellen Niveau mit maßgeschneidertem Trainingsplan.",
                   route: "/coaching-fuer-zwei",
-                  image: "/images/performance/card-coaching-fuer-zwei.png",
+                  image: "/images/performance/hero-coaching-zwei.jpg",
                   cta: "Coaching für Zwei ansehen",
                 },
               ].map((item) => (

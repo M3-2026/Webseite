@@ -168,14 +168,14 @@ function MentalPerformancePage() {
                   tagline: "Die Eingangstür",
                   desc: "Ganzheitliche Standortbestimmung: In einer tiefen Analyse erfassen wir Stoffwechsel, Bewegungsmuster und Alltagsstruktur für deinen 3-Säulen-Masterplan.",
                   route: "/system-start",
-                  image: "/images/performance/card-system-start.png",
+                  image: "/images/performance/hero-system-start.jpg",
                 },
                 {
                   title: "M³ Coaching",
                   tagline: "Performance & Gesundheit",
                   desc: "Ganzheitliche persönliche Begleitung über alle 3 Säulen – maßgeschneidert auf Beruf, Leistungsanspruch und persönliche Ziele.",
                   route: "/ueber-mich",
-                  image: "/images/performance/card-m3-coaching.png",
+                  image: "/images/performance/michel-portrait-blazer.jpg",
                 },
               ].map((item) => (
                 <div

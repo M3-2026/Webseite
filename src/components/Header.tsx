@@ -263,7 +263,7 @@ export function Header() {
 
               {activeDropdown === "offers" && (
                 <div className="absolute top-full left-0 w-[620px] mt-1 p-4 bg-card/95 backdrop-blur-2xl border border-border/90 rounded-3xl shadow-2xl animate-scale-up grid grid-cols-2 gap-4 text-left z-50">
-                  {/* Column 1: M1 Stoffwechsel & Ernährung */}
+                    {/* Column 1: M1 Stoffwechsel & Ernährung */}
                   <div className="space-y-1.5">
                     <div className="text-[10px] font-mono uppercase tracking-wider font-bold text-orange-600 px-2 pb-1 flex items-center gap-1.5">
                       <Flame className="w-3 h-3" />
@@ -273,46 +273,46 @@ export function Header() {
                     <Link
                       to="/body-reset"
                       onClick={() => setActiveDropdown(null)}
-                      className="block p-2 rounded-xl hover:bg-secondary/60 transition group"
+                      className="block p-2.5 rounded-2xl hover:bg-orange-500/10 transition group border border-transparent hover:border-orange-500/30"
                     >
-                      <div className="text-xs font-bold text-foreground group-hover:text-amber-600 flex items-center justify-between">
+                      <div className="text-xs font-bold text-foreground group-hover:text-orange-600 flex items-center justify-between">
                         <span>M³ Body Reset</span>
                         <span className="text-[9px] font-mono font-bold bg-amber-500/15 text-amber-700 px-1.5 py-0.5 rounded">Flaggschiff</span>
                       </div>
-                      <div className="text-[11px] text-muted-foreground">Darm- & Stoffwechselneustart</div>
+                      <div className="text-[11px] text-muted-foreground mt-0.5">3-Phasen-Reset für Darm & Stoffwechsel</div>
                     </Link>
 
                     <Link
                       to="/ernaehrungscoaching"
                       onClick={() => setActiveDropdown(null)}
-                      className="block p-2 rounded-xl hover:bg-secondary/60 transition group"
+                      className="block p-2.5 rounded-2xl hover:bg-orange-500/10 transition group border border-transparent hover:border-orange-500/30"
                     >
                       <div className="text-xs font-bold text-foreground group-hover:text-orange-600">
                         1:1 Ernährungscoaching
                       </div>
-                      <div className="text-[11px] text-muted-foreground">Makro-Struktur ohne Verbote</div>
+                      <div className="text-[11px] text-muted-foreground mt-0.5">Alltagstaugliche Makro-Struktur ohne Diät-Korsett</div>
                     </Link>
 
                     <Link
                       to="/darm-stoffwechselbegleitung"
                       onClick={() => setActiveDropdown(null)}
-                      className="block p-2 rounded-xl hover:bg-secondary/60 transition group"
+                      className="block p-2.5 rounded-2xl hover:bg-orange-500/10 transition group border border-transparent hover:border-orange-500/30"
                     >
                       <div className="text-xs font-bold text-foreground group-hover:text-orange-600">
                         Darmbegleitung
                       </div>
-                      <div className="text-[11px] text-muted-foreground">Mikrobiom- & Beschwerde-Fokus</div>
+                      <div className="text-[11px] text-muted-foreground mt-0.5">Mikrobiom- & gezielte Darmregulation</div>
                     </Link>
 
                     <Link
                       to="/goldene-grundversorgung"
                       onClick={() => setActiveDropdown(null)}
-                      className="block p-2 rounded-xl hover:bg-secondary/60 transition group"
+                      className="block p-2.5 rounded-2xl hover:bg-orange-500/10 transition group border border-transparent hover:border-orange-500/30"
                     >
                       <div className="text-xs font-bold text-foreground group-hover:text-amber-600">
                         Goldene Grundversorgung
                       </div>
-                      <div className="text-[11px] text-muted-foreground">Tägliche Mikronährstoff-Basis</div>
+                      <div className="text-[11px] text-muted-foreground mt-0.5">Tägliche Mikronährstoff- & Zellbasis</div>
                     </Link>
                   </div>
 
@@ -324,36 +324,36 @@ export function Header() {
                     </div>
 
                     <Link
+                      to="/performance-training"
+                      onClick={() => setActiveDropdown(null)}
+                      className="block p-2.5 rounded-2xl hover:bg-emerald-500/10 transition group border border-transparent hover:border-emerald-500/30"
+                    >
+                      <div className="text-xs font-bold text-foreground group-hover:text-emerald-700">
+                        M³ Performance Training
+                      </div>
+                      <div className="text-[11px] text-muted-foreground mt-0.5">Intelligenter Kraftaufbau ohne Verschleiß (1:1)</div>
+                    </Link>
+
+                    <Link
                       to="/schmerzfrei"
                       onClick={() => setActiveDropdown(null)}
-                      className="block p-2 rounded-xl hover:bg-secondary/60 transition group"
+                      className="block p-2.5 rounded-2xl hover:bg-emerald-500/10 transition group border border-transparent hover:border-emerald-500/30"
                     >
                       <div className="text-xs font-bold text-foreground group-hover:text-emerald-700">
                         M³ Schmerzfrei
                       </div>
-                      <div className="text-[11px] text-muted-foreground">Rücken- & Nackenmobilisation</div>
-                    </Link>
-
-                    <Link
-                      to="/performance-training"
-                      onClick={() => setActiveDropdown(null)}
-                      className="block p-2 rounded-xl hover:bg-secondary/60 transition group"
-                    >
-                      <div className="text-xs font-bold text-foreground group-hover:text-emerald-700">
-                        Performance Training
-                      </div>
-                      <div className="text-[11px] text-muted-foreground">1:1 Kraft & Explosivität</div>
+                      <div className="text-[11px] text-muted-foreground mt-0.5">Gezielte Schmerzbefreiung für Rücken & Nacken</div>
                     </Link>
 
                     <Link
                       to="/coaching-fuer-zwei"
                       onClick={() => setActiveDropdown(null)}
-                      className="block p-2 rounded-xl hover:bg-secondary/60 transition group"
+                      className="block p-2.5 rounded-2xl hover:bg-emerald-500/10 transition group border border-transparent hover:border-emerald-500/30"
                     >
                       <div className="text-xs font-bold text-foreground group-hover:text-emerald-700">
                         Coaching für Zwei
                       </div>
-                      <div className="text-[11px] text-muted-foreground">Partnertraining für Paare & Freunde</div>
+                      <div className="text-[11px] text-muted-foreground mt-0.5">Gemeinsam trainieren mit doppelter Verbindlichkeit</div>
                     </Link>
 
                     <div className="pt-2 border-t border-border/60">
@@ -363,7 +363,7 @@ export function Header() {
                         className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-700 hover:text-amber-600"
                       >
                         <Layers className="w-3.5 h-3.5" />
-                        <span>Alle 14 Module im Verzeichnis</span>
+                        <span>Alle Module in der Übersicht</span>
                       </Link>
                     </div>
                   </div>

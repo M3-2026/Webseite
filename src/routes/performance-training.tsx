@@ -61,12 +61,29 @@ function PerformanceTrainingPage() {
             </div>
 
             <div className="lg:col-span-5 flex justify-center lg:justify-end shrink-0 w-full">
-              <div className="relative w-full max-w-[360px] sm:max-w-md rounded-3xl overflow-hidden border-2 border-emerald-500/40 shadow-2xl bg-black group aspect-square">
+              <div className="relative w-full max-w-[380px] sm:max-w-md rounded-3xl overflow-hidden border border-emerald-500/30 bg-card/80 shadow-2xl group aspect-square">
                 <img
-                  src="/images/performance/card-performance-training.png"
-                  alt="M³ Performance Training – Stärke mit System"
+                  src="/images/performance/hero-performance-training.jpg"
+                  alt="M³ Performance Training – 1:1 Personal Training & Biomechanik"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                
+                {/* Floating Glassmorphic UI Chip */}
+                <div className="absolute bottom-4 left-4 right-4 p-3 rounded-2xl bg-black/60 backdrop-blur-md border border-white/15 text-white shadow-xl flex items-center justify-between">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-8 h-8 rounded-xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-sm font-bold shrink-0">
+                      🏋️
+                    </div>
+                    <div>
+                      <div className="text-xs font-bold tracking-tight text-white">1:1 Performance Training</div>
+                      <div className="text-[10px] text-slate-300">Kraft, Athletik & Biomechanik</div>
+                    </div>
+                  </div>
+                  <span className="text-[9px] font-mono uppercase tracking-wider text-emerald-400 font-bold px-2 py-0.5 rounded-md bg-emerald-500/20 border border-emerald-500/30">
+                    M² Movement
+                  </span>
+                </div>
               </div>
             </div>
           </div>

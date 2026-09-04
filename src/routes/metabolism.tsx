@@ -155,7 +155,7 @@ function MetabolismPage() {
                   headline: "Ganzheitlicher Neustart für Darm & Stoffwechsel",
                   desc: "Das 3-Phasen-Konzept: 16-Tage Darmkur zur Mikrobiom-Entlastung, gezielte Stoffwechselkur zur Fettverbrennung und tägliche zelluläre Grundversorgung.",
                   route: "/body-reset",
-                  image: "/images/performance/card-body-reset.png",
+                  image: "/images/performance/hero-body-reset.jpg",
                   cta: "Body Reset entdecken",
                 },
                 {
@@ -163,7 +163,7 @@ function MetabolismPage() {
                   headline: "Alltagstaugliche Makro-Struktur ohne Diät-Korsett",
                   desc: "Keine starren Pläne oder Verbote – sondern eine flexible Makro-Struktur, die sich nahtlos in 60-Stunden-Wochen und Familienalltag einfügt.",
                   route: "/ernaehrungscoaching",
-                  image: "/images/performance/card-ernaehrungscoaching.png",
+                  image: "/images/performance/hero-nutrition.jpg",
                   cta: "Ernährungscoaching ansehen",
                 },
                 {
@@ -171,7 +171,7 @@ function MetabolismPage() {
                   headline: "Deine persönliche 360°-Standortbestimmung",
                   desc: "Ganzheitliche Bestandsaufnahme: Wir analysieren deinen Stoffwechsel, decken Blockaden auf und erstellen deinen individuellen 3-Säulen-Fahrplan.",
                   route: "/system-start",
-                  image: "/images/performance/card-system-start.png",
+                  image: "/images/performance/hero-system-start.jpg",
                   cta: "System Start kennenlernen",
                 },
               ].map((item) => (
