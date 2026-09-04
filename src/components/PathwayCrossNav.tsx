@@ -19,14 +19,14 @@ interface PathwayCrossNavProps {
 const DEFAULT_PATHWAYS: Record<string, PathwayItem[]> = {
   metabolism: [
     {
-      title: "M³ Body Reset",
+      title: "M¹ Body Reset",
       subtitle: "Ganzheitlicher Neustart: 16-Tage Darmkur, Stoffwechselkur & Grundversorgung",
       href: "/body-reset",
       pillar: "gold",
       tag: "Flaggschiff-Konzept",
     },
     {
-      title: "1:1 Ernährungscoaching",
+      title: "M¹ Ernährungscoaching",
       subtitle: "Alltagstaugliche Makro-Struktur ohne Diät-Korsett und ohne Jojo-Effekt",
       href: "/ernaehrungscoaching",
       pillar: "m1",
@@ -42,14 +42,14 @@ const DEFAULT_PATHWAYS: Record<string, PathwayItem[]> = {
   ],
   movement: [
     {
-      title: "M³ Schmerzfrei-Begleitung",
+      title: "M² Schmerzfrei",
       subtitle: "Gezielte Mobilisation & Ursachenbehebung bei Rücken- & Nackenbeschwerden",
       href: "/schmerzfrei",
       pillar: "m2",
       tag: "Reha & Mobilität",
     },
     {
-      title: "M³ Performance Training",
+      title: "M² Performance Training",
       subtitle: "1:1 Personal Training für echte Kraft, Explosivität & Körperbeherrschung",
       href: "/performance-training",
       pillar: "m2",
@@ -88,7 +88,7 @@ const DEFAULT_PATHWAYS: Record<string, PathwayItem[]> = {
   ],
   "body-reset": [
     {
-      title: "1:1 Ernährungscoaching",
+      title: "M¹ Ernährungscoaching",
       subtitle: "Sichere deine Reset-Ergebnisse langfristig mit alltagstauglichen Makros ab",
       href: "/ernaehrungscoaching",
       pillar: "m1",
@@ -128,7 +128,7 @@ export function PathwayCrossNav({
         tag: "Eingangstür",
       },
       {
-        title: "M³ Body Reset",
+        title: "M¹ Body Reset",
         subtitle: "Das modulare Flaggschiff-Konzept für Darm und Stoffwechsel",
         href: "/body-reset",
         pillar: "gold",

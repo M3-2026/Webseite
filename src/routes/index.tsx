@@ -50,7 +50,7 @@ interface ServiceItem {
 const services: ServiceItem[] = [
   // M1
   {
-    name: "M³ Body Reset",
+    name: "M¹ Body Reset",
     pillar: "M1",
     pillarName: "Metabolism",
     tagline: "Ganzheitlicher Neustart von innen",
@@ -58,11 +58,11 @@ const services: ServiceItem[] = [
     features: ["16-Tage Darmkur & Mikrobiom", "Stoffwechselkur (min. 21 Tage)", "Goldene Grundversorgung"],
     badge: "Ganzheitliches Konzept",
     route: "/body-reset",
-    whatsappMessage: "Hallo Michél, ich interessiere mich für den M³ Body Reset.",
+    whatsappMessage: "Hallo Michél, ich interessiere mich für den M¹ Body Reset.",
     image: "/images/performance/hero-body-reset.jpg",
   },
   {
-    name: "M³ Ernährungscoaching",
+    name: "M¹ Ernährungscoaching",
     pillar: "M1",
     pillarName: "Metabolism",
     tagline: "Deine Ernährung. Dein Alltag.",
@@ -70,12 +70,12 @@ const services: ServiceItem[] = [
     features: ["1:1 persönliche Begleitung", "Individuelle Makro-Struktur", "Dauerhafte Routine ohne Jojo-Effekt"],
     badge: "1:1 Coaching",
     route: "/ernaehrungscoaching",
-    whatsappMessage: "Hallo Michél, ich interessiere mich für das 1:1 Ernährungscoaching.",
+    whatsappMessage: "Hallo Michél, ich interessiere mich für das M¹ Ernährungscoaching.",
     image: "/images/performance/hero-nutrition.jpg",
   },
   // M2
   {
-    name: "M³ Performance Training",
+    name: "M² Performance Training",
     pillar: "M2",
     pillarName: "Movement",
     tagline: "Stärke mit System",
@@ -83,11 +83,11 @@ const services: ServiceItem[] = [
     features: ["Präzise Technik & Kontrolle", "Individueller Kraftaufbau", "1–2× wöchentlich"],
     badge: "1:1 Personal Training",
     route: "/performance-training",
-    whatsappMessage: "Hallo Michél, ich interessiere mich für das Performance Training.",
+    whatsappMessage: "Hallo Michél, ich interessiere mich für das M² Performance Training.",
     image: "/images/performance/hero-performance-training.jpg",
   },
   {
-    name: "M³ Schmerzfrei",
+    name: "M² Schmerzfrei",
     pillar: "M2",
     pillarName: "Movement",
     tagline: "Beweglich & Stabil",
@@ -95,11 +95,11 @@ const services: ServiceItem[] = [
     features: ["Gelenkmobilität", "Schwachstellen-Ausgleich", "Schmerzfreie Belastbarkeit"],
     badge: "Mobilität & Reha",
     route: "/schmerzfrei",
-    whatsappMessage: "Hallo Michél, ich interessiere mich für das Schmerzfrei-Programm.",
+    whatsappMessage: "Hallo Michél, ich interessiere mich für M² Schmerzfrei.",
     image: "/images/performance/hero-schmerzfrei.jpg",
   },
   {
-    name: "Coaching für Zwei",
+    name: "M² Coaching für Zwei",
     pillar: "M2",
     pillarName: "Movement",
     tagline: "Gemeinsam stärker",
@@ -107,7 +107,7 @@ const services: ServiceItem[] = [
     features: ["Partner-Training", "Hohe Verbindlichkeit", "Zwei maßgeschneiderte Pläne"],
     badge: "Partner-Coaching",
     route: "/coaching-fuer-zwei",
-    whatsappMessage: "Hallo Michél, wir interessieren uns für das Coaching für Zwei.",
+    whatsappMessage: "Hallo Michél, wir interessieren uns für das M² Coaching für Zwei.",
     image: "/images/performance/hero-coaching-zwei.jpg",
   },
   // M3
@@ -190,7 +190,7 @@ const HERO_TESTIMONIALS: HeroTestimonial[] = [
     role: "Vertriebsleiter (47 J.)",
     pillar: "M¹ Body Reset & Begleitung",
     badgeClass: "bg-emerald-600/10 text-emerald-700 border-emerald-600/25",
-    quote: "Der M³ Body Reset hat meine Verdauung und mein Energielevel von Grund auf transformiert. Michéls Betreuung ist direkt, wissenschaftlich fundiert und alltagstauglich.",
+    quote: "Der M¹ Body Reset hat meine Verdauung und mein Energielevel von Grund auf transformiert. Michéls Betreuung ist direkt, wissenschaftlich fundiert und alltagstauglich.",
     result: "Dauerhafte Energie",
   },
   {
@@ -1144,7 +1144,7 @@ function IndexPage() {
                 </div>
                 <div>
                   <h3 className="text-2xl md:text-3xl font-display font-black text-white mb-1 group-hover:text-amber-400 transition-colors">
-                    M³ Body Reset
+                    M¹ Body Reset
                   </h3>
                   <p className="text-xs font-semibold uppercase tracking-wider text-amber-300/90 mb-3">
                     Ganzheitlicher Neustart von innen
@@ -1178,7 +1178,7 @@ function IndexPage() {
                   Details ansehen
                 </Link>
                 <a
-                  href={`${BASE_WHATSAPP}?text=Hallo%20Mich%C3%A9l,%20ich%20interessiere%20mich%20f%C3%BCr%20den%20M%C3%B3%20Body%20Reset.`}
+                  href={`${BASE_WHATSAPP}?text=Hallo%20Mich%C3%A9l,%20ich%20interessiere%20mich%20f%C3%BCr%20den%20M%C2%B9%20Body%20Reset.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 rounded-full bg-gold-gradient px-6 py-2.5 text-xs font-bold text-primary-foreground shadow-lg shadow-amber-500/25 hover:scale-105 transition-all"
@@ -1202,7 +1202,7 @@ function IndexPage() {
                 </div>
                 <div>
                   <h3 className="text-xl md:text-2xl font-display font-extrabold text-foreground mb-1 group-hover:text-orange-600 transition-colors">
-                    M³ Ernährungscoaching
+                    M¹ Ernährungscoaching
                   </h3>
                   <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">
                     Deine Ernährung. Dein Alltag.
@@ -1232,7 +1232,7 @@ function IndexPage() {
                   Details
                 </Link>
                 <a
-                  href={`${BASE_WHATSAPP}?text=Hallo%20Mich%C3%A9l,%20ich%20interessiere%20mich%20f%C3%BCr%20das%201:1%20Ern%C3%A4hrungscoaching.`}
+                  href={`${BASE_WHATSAPP}?text=Hallo%20Mich%C3%A9l,%20ich%20interessiere%20mich%20f%C3%BCr%20das%20M%C2%B9%20Ern%C3%A4hrungscoaching.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-1 rounded-full bg-secondary hover:bg-secondary/80 px-4 py-2.5 text-xs font-bold text-foreground transition"
@@ -1243,7 +1243,7 @@ function IndexPage() {
               </div>
             </div>
 
-            {/* Tile 3: M3 Schmerzfrei (4 cols) */}
+            {/* Tile 3: M2 Schmerzfrei (4 cols) */}
             <div className="md:col-span-4 rounded-3xl border border-emerald-500/25 bg-card p-6 flex flex-col justify-between shadow-sm hover:border-emerald-500/50 hover:shadow-lg transition-all text-left group">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
@@ -1255,7 +1255,7 @@ function IndexPage() {
                   </span>
                 </div>
                 <h3 className="text-lg md:text-xl font-display font-bold text-foreground group-hover:text-emerald-700 transition-colors">
-                  M³ Schmerzfrei
+                  M² Schmerzfrei
                 </h3>
                 <p className="text-xs text-muted-foreground leading-relaxed">
                   Gezielte Mobilität & Ursachenbehebung bei Rücken-, Nacken- und Gelenkbeschwerden.
@@ -1269,7 +1269,7 @@ function IndexPage() {
                   Details
                 </Link>
                 <a
-                  href={`${BASE_WHATSAPP}?text=Hallo%20Mich%C3%A9l,%20ich%20interessiere%20mich%20f%C3%BCr%20das%20Schmerzfrei-Programm.`}
+                  href={`${BASE_WHATSAPP}?text=Hallo%20Mich%C3%A9l,%20ich%20interessiere%20mich%20f%C3%BCr%20M%C2%B2%20Schmerzfrei.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-1 rounded-full bg-secondary hover:bg-secondary/80 px-3 py-2 text-xs font-bold text-foreground transition"
@@ -1280,7 +1280,7 @@ function IndexPage() {
               </div>
             </div>
 
-            {/* Tile 4: M3 Performance Training (4 cols) */}
+            {/* Tile 4: M2 Performance Training (4 cols) */}
             <div className="md:col-span-4 rounded-3xl border border-emerald-500/25 bg-card p-6 flex flex-col justify-between shadow-sm hover:border-emerald-500/50 hover:shadow-lg transition-all text-left group">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
@@ -1292,7 +1292,7 @@ function IndexPage() {
                   </span>
                 </div>
                 <h3 className="text-lg md:text-xl font-display font-bold text-foreground group-hover:text-emerald-700 transition-colors">
-                  M³ Performance Training
+                  M² Performance Training
                 </h3>
                 <p className="text-xs text-muted-foreground leading-relaxed">
                   Intelligentes 1:1 Personal Training für echte Kraft, Explosivität und Körperbeherrschung.
@@ -1306,7 +1306,7 @@ function IndexPage() {
                   Details
                 </Link>
                 <a
-                  href={`${BASE_WHATSAPP}?text=Hallo%20Mich%C3%A9l,%20ich%20interessiere%20mich%20f%C3%BCr%20das%20Performance%20Training.`}
+                  href={`${BASE_WHATSAPP}?text=Hallo%20Mich%C3%A9l,%20ich%20interessiere%20mich%20f%C3%BCr%20das%20M%C2%B2%20Performance%20Training.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-1 rounded-full bg-secondary hover:bg-secondary/80 px-3 py-2 text-xs font-bold text-foreground transition"
@@ -1329,7 +1329,7 @@ function IndexPage() {
                   </span>
                 </div>
                 <h3 className="text-lg md:text-xl font-display font-bold text-foreground group-hover:text-emerald-700 transition-colors">
-                  Coaching für Zwei
+                  M² Coaching für Zwei
                 </h3>
                 <p className="text-xs text-muted-foreground leading-relaxed">
                   Personal Training für Partner oder Freunde – individuelle Pläne mit doppelter Motivation.
@@ -1343,7 +1343,7 @@ function IndexPage() {
                   Details
                 </Link>
                 <a
-                  href={`${BASE_WHATSAPP}?text=Hallo%20Mich%C3%A9l,%20wir%20interessieren%20uns%20f%C3%BCr%20das%20Coaching%20f%C3%BCr%20Zwei.`}
+                  href={`${BASE_WHATSAPP}?text=Hallo%20Mich%C3%A9l,%20wir%20interessieren%20uns%20f%C3%BCr%20das%20M%C2%B2%20Coaching%20f%C3%BCr%20Zwei.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full inline-flex items-center justify-center gap-1 rounded-full bg-secondary hover:bg-secondary/80 px-3 py-2 text-xs font-bold text-foreground transition"

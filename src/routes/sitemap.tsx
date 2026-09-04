@@ -65,7 +65,7 @@ const SITEMAP_ITEMS: SitemapItem[] = [
     whatsappMessage: "Hallo Michél, ich interessiere mich für den M³ System Start.",
   },
   {
-    title: "M³ Body Reset",
+    title: "M¹ Body Reset",
     subtitle: "Ganzheitlicher Neustart für Darm und Stoffwechsel",
     description:
       "Das modulare Flaggschiff-Konzept: 16-Tage Darmkur zur Mikrobiom-Entlastung, gezielte Stoffwechselkur zur Fettverbrennung und tägliche Goldene Grundversorgung.",
@@ -76,7 +76,7 @@ const SITEMAP_ITEMS: SitemapItem[] = [
     targetAudience: "Menschen mit Trägheit, Blähbauch, Heißhunger oder Stoffwechselblockaden",
     keyBenefits: ["16-Tage Darmreinigung", "Aktivierte Fettverbrennung", "Zelluläre Mikronährstoffe"],
     icon: Sparkles,
-    whatsappMessage: "Hallo Michél, ich interessiere mich für den M³ Body Reset.",
+    whatsappMessage: "Hallo Michél, ich interessiere mich für den M¹ Body Reset.",
   },
   {
     title: "M¹ Metabolism",
@@ -93,7 +93,7 @@ const SITEMAP_ITEMS: SitemapItem[] = [
     whatsappMessage: "Hallo Michél, ich möchte mehr über die Säule M¹ Metabolism erfahren.",
   },
   {
-    title: "1:1 Ernährungscoaching",
+    title: "M¹ Ernährungscoaching",
     subtitle: "Alltagstaugliche Makro-Struktur ohne Verbote",
     description:
       "Keine starren Diät-Korsetts oder Jojo-Effekte: Wir bauen eine Ernährungsstruktur, die sich flexibel in 60-Stunden-Arbeitswochen und Familienalltag einfügt.",
@@ -104,10 +104,10 @@ const SITEMAP_ITEMS: SitemapItem[] = [
     targetAudience: "Vielbeschäftigte Berufstätige, die ohne Diätstress ihr Wohlfühlgewicht erreichen wollen",
     keyBenefits: ["Individuelle Makronährstoffe", "Echtes Restaurant- & Reise-Handling", "Dauerhafte Gewohnheiten"],
     icon: Flame,
-    whatsappMessage: "Hallo Michél, ich interessiere mich für das 1:1 Ernährungscoaching.",
+    whatsappMessage: "Hallo Michél, ich interessiere mich für das M¹ Ernährungscoaching.",
   },
   {
-    title: "Darm- & Stoffwechselbegleitung",
+    title: "M¹ Darmbegleitung",
     subtitle: "Gezielte Vertiefung für ein starkes Mikrobiom",
     description:
       "Intensive 1:1 Begleitung bei spezifischen Magen-Darm-Themen, Nahrungsmittelunverträglichkeiten und Stoffwechselträgheit mit fundierten Protokollen.",
@@ -118,10 +118,10 @@ const SITEMAP_ITEMS: SitemapItem[] = [
     targetAudience: "Personen mit wiederkehrenden Verdauungsbeschwerden & Reizdarmsymptomen",
     keyBenefits: ["Mikrobiom-Aufbauprotokoll", "Entzündungshemmende Ernährung", "Engmaschige WhatsApp-Begleitung"],
     icon: Activity,
-    whatsappMessage: "Hallo Michél, ich interessiere mich für die Darm- & Stoffwechselbegleitung.",
+    whatsappMessage: "Hallo Michél, ich interessiere mich für die M¹ Darmbegleitung.",
   },
   {
-    title: "Goldene Grundversorgung",
+    title: "M¹ Goldene Grundversorgung",
     subtitle: "Tägliche zelluläre Mikronährstoff-Basis",
     description:
       "Die hoch bioverfügbare Basisversorgung mit essentiellen Vitaminen, Spurenelementen und Antioxidantien zur Absicherung deiner täglichen Zellgesundheit.",
@@ -132,7 +132,7 @@ const SITEMAP_ITEMS: SitemapItem[] = [
     targetAudience: "Jeder, der eine verlässliche zelluläre Vitalstoffbasis im Alltag sicherstellen will",
     keyBenefits: ["Höchste Bioverfügbarkeit", "Stärkung des Immunsystems", "Optimale Regeneration"],
     icon: Sparkles,
-    whatsappMessage: "Hallo Michél, ich möchte mehr über die Goldene Grundversorgung wissen.",
+    whatsappMessage: "Hallo Michél, ich möchte mehr über die M¹ Goldene Grundversorgung wissen.",
   },
   {
     title: "M² Movement",
@@ -149,7 +149,7 @@ const SITEMAP_ITEMS: SitemapItem[] = [
     whatsappMessage: "Hallo Michél, ich möchte mehr über die Säule M² Movement erfahren.",
   },
   {
-    title: "M³ Schmerzfrei-Programm",
+    title: "M² Schmerzfrei",
     subtitle: "Rücken-, Nacken- & Gelenkmobilität",
     description:
       "Schluss mit Schreibtisch-Verspannungen und Schonhaltungen: Präzise 1:1 Analyse von Dysbalancen und strukturierte Mobilisation für einen schmerzfreien Alltag.",
@@ -160,10 +160,10 @@ const SITEMAP_ITEMS: SitemapItem[] = [
     targetAudience: "Büro- und Schreibtischtäter mit chronischen Verspannungen im Nacken/Rücken",
     keyBenefits: ["Ursachen- statt Symptombehebung", "Effektive 5-Minuten Alltagsroutinen", "Spürbare Erleichterung"],
     icon: Dumbbell,
-    whatsappMessage: "Hallo Michél, ich interessiere mich für das Schmerzfrei-Programm.",
+    whatsappMessage: "Hallo Michél, ich interessiere mich für M² Schmerzfrei.",
   },
   {
-    title: "M³ Performance Training",
+    title: "M² Performance Training",
     subtitle: "1:1 Personal Training für Kraft & Explosivität",
     description:
       "Hochindividuelles Personal Training, das Maximalkraft, Schnellkraft und athletische Körperbeherrschung verbindet – basierend auf 25+ Jahren Weltklasse-Erfahrung.",
@@ -174,10 +174,10 @@ const SITEMAP_ITEMS: SitemapItem[] = [
     targetAudience: "Sportler, Ambitionierte und Führungskräfte, die ein neues Kraftlevel erreichen wollen",
     keyBenefits: ["1:1 Begleitung bei jeder Wiederholung", "Progressive Leistungssteigerung", "Feinste Biomechanik"],
     icon: Dumbbell,
-    whatsappMessage: "Hallo Michél, ich interessiere mich für das 1:1 Performance Training.",
+    whatsappMessage: "Hallo Michél, ich interessiere mich für das M² Performance Training.",
   },
   {
-    title: "Coaching für Zwei",
+    title: "M² Coaching für Zwei",
     subtitle: "Personal Training für Paare & Freunde",
     description:
       "Gemeinsam fit werden mit doppelter Motivation: Individuell angepasste Trainingspläne für zwei Personen, kombiniert mit maximalem Spaß und Teamgeist.",
@@ -188,7 +188,7 @@ const SITEMAP_ITEMS: SitemapItem[] = [
     targetAudience: "Paare, Geschwister oder Freunde, die gemeinsam gesund und stark werden möchten",
     keyBenefits: ["Gemeinsames Training mit individuellen Zielen", "Doppelte Verbindlichkeit", "Gegenseitige Motivation"],
     icon: HeartHandshake,
-    whatsappMessage: "Hallo Michél, wir interessieren uns für das Coaching für Zwei.",
+    whatsappMessage: "Hallo Michél, wir interessieren uns für das M² Coaching für Zwei.",
   },
   {
     title: "M³ Mental Performance",

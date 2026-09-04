@@ -85,37 +85,37 @@ export function Footer() {
             <ul className="space-y-2.5 text-xs sm:text-sm text-muted-foreground">
               <li>
                 <Link to="/body-reset" className="hover:text-amber-600 transition-colors font-semibold text-foreground">
-                  M³ Body Reset (Flaggschiff)
+                  M¹ Body Reset (Flaggschiff)
                 </Link>
               </li>
               <li>
                 <Link to="/ernaehrungscoaching" className="hover:text-amber-600 transition-colors">
-                  1:1 Ernährungscoaching
+                  M¹ Ernährungscoaching
                 </Link>
               </li>
               <li>
                 <Link to="/schmerzfrei" className="hover:text-amber-600 transition-colors">
-                  M³ Schmerzfrei-Begleitung
+                  M² Schmerzfrei
                 </Link>
               </li>
               <li>
                 <Link to="/performance-training" className="hover:text-amber-600 transition-colors">
-                  1:1 Performance Training
+                  M² Performance Training
                 </Link>
               </li>
               <li>
                 <Link to="/coaching-fuer-zwei" className="hover:text-amber-600 transition-colors">
-                  Coaching für Zwei
+                  M² Coaching für Zwei
                 </Link>
               </li>
               <li>
                 <Link to="/darm-stoffwechselbegleitung" className="hover:text-amber-600 transition-colors">
-                  Darm- & Stoffwechselbegleitung
+                  M¹ Darmbegleitung
                 </Link>
               </li>
               <li>
                 <Link to="/goldene-grundversorgung" className="hover:text-amber-600 transition-colors">
-                  Goldene Grundversorgung
+                  M¹ Goldene Grundversorgung
                 </Link>
               </li>
             </ul>

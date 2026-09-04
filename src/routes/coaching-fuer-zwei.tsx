@@ -17,7 +17,7 @@ function CoachingFuerZweiPage() {
       <Breadcrumbs
         items={[
           { label: "M² Movement", href: "/movement", pillar: "m2" },
-          { label: "Coaching für Zwei", pillar: "m2" },
+          { label: "M² Coaching für Zwei", pillar: "m2" },
         ]}
       />
 
@@ -37,7 +37,7 @@ function CoachingFuerZweiPage() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-display font-extrabold leading-[1.08] tracking-tight text-foreground break-words hyphens-auto">
-                M³ Coaching für Zwei
+                M² Coaching für Zwei
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-emerald-700 font-medium leading-relaxed max-w-2xl">
                 Maximale Verbindlichkeit und gemeinsame Motivation – mit individuellen Trainingsplänen für beide Partner.
@@ -45,7 +45,7 @@ function CoachingFuerZweiPage() {
               <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl whitespace-pre-line">
                 Gemeinsame Ziele schaffen maximale Verbindlichkeit, Motivation und Freude an der nachhaltigen Veränderung.
                 {"\n\n"}
-                Mit dem M³ Coaching für Zwei trainiert ihr gemeinsam als Paar, Freunde oder Geschäftspartner – präzise abgestimmt auf das jeweilige Leistungsniveau jedes Einzelnen.
+                Mit dem M² Coaching für Zwei trainiert ihr gemeinsam als Paar, Freunde oder Geschäftspartner – präzise abgestimmt auf das jeweilige Leistungsniveau jedes Einzelnen.
               </p>
 
               <div className="pt-2">
@@ -64,7 +64,7 @@ function CoachingFuerZweiPage() {
               <div className="relative w-full max-w-[380px] sm:max-w-md rounded-3xl overflow-hidden border border-emerald-500/30 bg-card/80 shadow-2xl group aspect-square">
                 <img
                   src="/images/performance/hero-coaching-zwei.jpg"
-                  alt="M³ Coaching für Zwei – Partner-Training"
+                  alt="M² Coaching für Zwei – Partner-Training"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />

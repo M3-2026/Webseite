@@ -17,7 +17,7 @@ function SchmerzfreiPage() {
       <Breadcrumbs
         items={[
           { label: "M² Movement", href: "/movement", pillar: "m2" },
-          { label: "M³ Schmerzfrei", pillar: "m2" },
+          { label: "M² Schmerzfrei", pillar: "m2" },
         ]}
       />
 
@@ -37,7 +37,7 @@ function SchmerzfreiPage() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-display font-extrabold leading-[1.08] tracking-tight text-foreground break-words hyphens-auto">
-                M³ Schmerzfrei
+                M² Schmerzfrei
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-emerald-700 font-medium leading-relaxed max-w-2xl">
                 Gezielte Korrektur muskulärer Dysbalancen für dauerhafte Schmerzfreiheit in Rücken, Nacken und Gelenken.
@@ -64,7 +64,7 @@ function SchmerzfreiPage() {
               <div className="relative w-full max-w-[380px] sm:max-w-md rounded-3xl overflow-hidden border border-emerald-500/30 bg-card/80 shadow-2xl group aspect-square">
                 <img
                   src="/images/performance/hero-schmerzfrei.jpg"
-                  alt="M³ Schmerzfrei – Gezielte Schmerzbefreiung & Mobilität"
+                  alt="M² Schmerzfrei – Gezielte Schmerzbefreiung & Mobilität"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
@@ -99,7 +99,7 @@ function SchmerzfreiPage() {
                 {"\n\n"}
                 Dadurch entstehen häufig Ausweichbewegungen, Einschränkungen oder ein zunehmender Verlust an Beweglichkeit.
                 {"\n\n"}
-                M³ Schmerzfrei setzt genau dort an.
+                M² Schmerzfrei setzt genau dort an.
                 {"\n\n"}
                 Unser Ziel ist es, Bewegung wieder verständlich, sicher und alltagstauglich zu gestalten.
               </div>
@@ -142,9 +142,9 @@ function SchmerzfreiPage() {
             </div>
           </section>
 
-          {/* ABSCHNITT 4: Für wen eignet sich M³ Schmerzfrei? */}
+          {/* ABSCHNITT 4: Für wen eignet sich M² Schmerzfrei? */}
           <section className="py-16 border-t border-border/80">
-            <h2 className="text-3xl font-display text-center mb-12">Für wen eignet sich M³ Schmerzfrei?</h2>
+            <h2 className="text-3xl font-display text-center mb-12">Für wen eignet sich M² Schmerzfrei?</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {[
                 "Wieder mehr Bewegungsfreiheit gewinnen",

@@ -17,7 +17,7 @@ function PerformanceTrainingPage() {
       <Breadcrumbs
         items={[
           { label: "M² Movement", href: "/movement", pillar: "m2" },
-          { label: "1:1 Performance Training", pillar: "m2" },
+          { label: "M² Performance Training", pillar: "m2" },
         ]}
       />
 
@@ -37,7 +37,7 @@ function PerformanceTrainingPage() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-display font-extrabold leading-[1.08] tracking-tight text-foreground break-words hyphens-auto">
-                M³ Performance Training
+                M² Performance Training
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-emerald-700 font-medium leading-relaxed max-w-2xl">
                 Wissenschaftlich fundierter Kraft- und Muskelaufbau mit präziser anatomischer Belastungssteuerung.
@@ -64,7 +64,7 @@ function PerformanceTrainingPage() {
               <div className="relative w-full max-w-[380px] sm:max-w-md rounded-3xl overflow-hidden border border-emerald-500/30 bg-card/80 shadow-2xl group aspect-square">
                 <img
                   src="/images/performance/hero-performance-training.jpg"
-                  alt="M³ Performance Training – 1:1 Personal Training & Biomechanik"
+                  alt="M² Performance Training – 1:1 Personal Training & Biomechanik"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
@@ -141,9 +141,9 @@ function PerformanceTrainingPage() {
             </div>
           </section>
 
-          {/* ABSCHNITT 4: Für wen eignet sich M³ Performance Training? */}
+          {/* ABSCHNITT 4: Für wen eignet sich M² Performance Training? */}
           <section className="py-16 border-t border-border/80">
-            <h2 className="text-3xl font-display text-center mb-12">Für wen eignet sich M³ Performance Training?</h2>
+            <h2 className="text-3xl font-display text-center mb-12">Für wen eignet sich M² Performance Training?</h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {[
                 "Muskelaufbau",

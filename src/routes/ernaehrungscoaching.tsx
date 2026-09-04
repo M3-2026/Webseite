@@ -17,7 +17,7 @@ function ErnaehrungscoachingPage() {
       <Breadcrumbs
         items={[
           { label: "M¹ Metabolism", href: "/metabolism", pillar: "m1" },
-          { label: "1:1 Ernährungscoaching", pillar: "m1" },
+          { label: "M¹ Ernährungscoaching", pillar: "m1" },
         ]}
       />
 
@@ -37,7 +37,7 @@ function ErnaehrungscoachingPage() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-display font-extrabold leading-[1.08] tracking-tight text-foreground break-words hyphens-auto">
-                M³ Ernährungscoaching
+                M¹ Ernährungscoaching
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-gold font-medium leading-relaxed max-w-2xl">
                 Alltagstaugliche Makro-Struktur und nachhaltige Essgewohnheiten – ohne Diät-Korsett und ohne Jojo-Effekt.
@@ -64,7 +64,7 @@ function ErnaehrungscoachingPage() {
               <div className="relative w-full max-w-[380px] sm:max-w-md rounded-3xl overflow-hidden border border-orange-500/30 bg-card/80 shadow-2xl group aspect-square">
                 <img
                   src="/images/performance/hero-nutrition.jpg"
-                  alt="M³ Ernährungscoaching – Makro-Struktur & Performance Nutrition"
+                  alt="M¹ Ernährungscoaching – Makro-Struktur & Performance Nutrition"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />

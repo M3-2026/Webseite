@@ -17,7 +17,7 @@ function BodyResetPage() {
       <Breadcrumbs
         items={[
           { label: "M¹ Metabolism", href: "/metabolism", pillar: "m1" },
-          { label: "M³ Body Reset", pillar: "gold" },
+          { label: "M¹ Body Reset", pillar: "gold" },
         ]}
       />
 
@@ -37,7 +37,7 @@ function BodyResetPage() {
               </div>
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-display font-extrabold leading-[1.08] tracking-tight text-foreground break-words hyphens-auto">
-                M³ Body Reset
+                M¹ Body Reset
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl text-gold font-medium leading-relaxed max-w-2xl">
                 Ganzheitliche Zellregeneration, Darmgesundheit und spürbare Vitalität von Grund auf.
@@ -45,7 +45,7 @@ function BodyResetPage() {
               <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl whitespace-pre-line">
                 Mehr Energie. Mehr Wohlbefinden. Mehr nachhaltige Leistungsfähigkeit.
                 {"\n\n"}
-                Der M³ Body Reset unterstützt dich dabei, deinen Stoffwechsel neu auszurichten – individuell, evidenzbasiert und mit einem ganzheitlichen Blick auf Ernährung, Zellgesundheit und Mikrobiom.
+                Der M¹ Body Reset unterstützt dich dabei, deinen Stoffwechsel neu auszurichten – individuell, evidenzbasiert und mit einem ganzheitlichen Blick auf Ernährung, Zellgesundheit und Mikrobiom.
               </p>
 
               <div className="pt-2">
@@ -64,7 +64,7 @@ function BodyResetPage() {
               <div className="relative w-full max-w-[380px] sm:max-w-md rounded-3xl overflow-hidden border border-orange-500/30 bg-card/80 shadow-2xl group aspect-square">
                 <img
                   src="/images/performance/hero-body-reset.jpg"
-                  alt="M³ Body Reset – Ganzheitliche Zell- & Darmregeneration"
+                  alt="M¹ Body Reset – Ganzheitliche Zell- & Darmregeneration"
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
@@ -108,7 +108,7 @@ function BodyResetPage() {
                   {"\n\n"}
                   Sondern daran, dass die Grundlage nicht ausreichend berücksichtigt wird.
                   {"\n\n"}
-                  Genau hier setzt der M³ Body Reset an.
+                  Genau hier setzt der M¹ Body Reset an.
                 </p>
               </div>
             </div>
@@ -122,7 +122,7 @@ function BodyResetPage() {
               </div>
               <div className="md:col-span-2">
                 <p className="text-muted-foreground leading-relaxed mb-8 whitespace-pre-line">
-                  Der M³ Body Reset ist kein kurzfristiges Programm.
+                  Der M¹ Body Reset ist kein kurzfristiges Programm.
                   {"\n\n"}
                   Er ist der strukturierte Einstieg in eine nachhaltige Veränderung.
                   {"\n\n"}
@@ -154,7 +154,7 @@ function BodyResetPage() {
             </div>
           </section>
 
-          {/* ABSCHNITT: Die Bausteine des M³ Body Reset */}
+          {/* ABSCHNITT: Die Bausteine des M¹ Body Reset */}
           <section className="py-16 border-t border-border/80">
             <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
@@ -225,9 +225,9 @@ function BodyResetPage() {
             </div>
           </section>
 
-          {/* ABSCHNITT 4: Für wen eignet sich der M³ Body Reset? */}
+          {/* ABSCHNITT 4: Für wen eignet sich der M¹ Body Reset? */}
           <section className="py-16 border-t border-border/80">
-            <h2 className="text-3xl font-display text-center mb-12">Für wen eignet sich der M³ Body Reset?</h2>
+            <h2 className="text-3xl font-display text-center mb-12">Für wen eignet sich der M¹ Body Reset?</h2>
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {[
                 "Du möchtest wieder mehr Energie im Alltag.",
@@ -245,9 +245,9 @@ function BodyResetPage() {
             </div>
           </section>
 
-          {/* ABSCHNITT 5: So läuft der M³ Body Reset ab */}
+          {/* ABSCHNITT 5: So läuft der M¹ Body Reset ab */}
           <section className="py-16 border-t border-border/80">
-            <h2 className="text-3xl font-display text-center mb-16">So läuft der M³ Body Reset ab</h2>
+            <h2 className="text-3xl font-display text-center mb-16">So läuft der M¹ Body Reset ab</h2>
             <div className="relative max-w-xl mx-auto">
               {/* Central vertical line */}
               <div className="absolute top-0 bottom-0 left-[20px] md:left-1/2 w-0.5 bg-border -translate-x-1/2 z-0" />
@@ -292,7 +292,7 @@ function BodyResetPage() {
                 <p className="text-muted-foreground leading-relaxed mb-8 whitespace-pre-line">
                   Eine gute Versorgung bildet die Grundlage vieler Stoffwechsel- und Regenerationsprozesse.
                   {"\n\n"}
-                  Deshalb ist die Goldene Grundversorgung ein wichtiger Bestandteil des M³ Body Reset.
+                  Deshalb ist die Goldene Grundversorgung ein wichtiger Bestandteil des M¹ Body Reset.
                   {"\n\n"}
                   Sie wird individuell auf deine Situation abgestimmt und sinnvoll in das Gesamtkonzept integriert.
                 </p>
@@ -315,7 +315,7 @@ function BodyResetPage() {
                 {"\n\n"}
                 Sie entwickelt sich Schritt für Schritt.
                 {"\n\n"}
-                Genau dabei begleitet dich der M³ Body Reset.
+                Genau dabei begleitet dich der M¹ Body Reset.
               </p>
               <a
                 href={WHATSAPP_URL}

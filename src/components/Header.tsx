@@ -220,7 +220,7 @@ export function Header() {
                       <span className="text-[9px] font-mono font-bold uppercase tracking-wider text-amber-400 bg-amber-500/15 px-2 py-0.5 rounded-full inline-block">
                         Flaggschiff
                       </span>
-                      <div className="font-display font-bold text-sm text-white">M³ Body Reset</div>
+                      <div className="font-display font-bold text-sm text-white">M¹ Body Reset</div>
                       <p className="text-[10px] text-slate-300 leading-tight">
                         Darmkur, Stoffwechsel & Grundversorgung in einem System.
                       </p>
@@ -276,7 +276,7 @@ export function Header() {
                       className="block p-2.5 rounded-2xl hover:bg-orange-500/10 transition group border border-transparent hover:border-orange-500/30"
                     >
                       <div className="text-xs font-bold text-foreground group-hover:text-orange-600 flex items-center justify-between">
-                        <span>M³ Body Reset</span>
+                        <span>M¹ Body Reset</span>
                         <span className="text-[9px] font-mono font-bold bg-amber-500/15 text-amber-700 px-1.5 py-0.5 rounded">Flaggschiff</span>
                       </div>
                       <div className="text-[11px] text-muted-foreground mt-0.5">3-Phasen-Reset für Darm & Stoffwechsel</div>
@@ -288,7 +288,7 @@ export function Header() {
                       className="block p-2.5 rounded-2xl hover:bg-orange-500/10 transition group border border-transparent hover:border-orange-500/30"
                     >
                       <div className="text-xs font-bold text-foreground group-hover:text-orange-600">
-                        1:1 Ernährungscoaching
+                        M¹ Ernährungscoaching
                       </div>
                       <div className="text-[11px] text-muted-foreground mt-0.5">Alltagstaugliche Makro-Struktur ohne Diät-Korsett</div>
                     </Link>
@@ -299,7 +299,7 @@ export function Header() {
                       className="block p-2.5 rounded-2xl hover:bg-orange-500/10 transition group border border-transparent hover:border-orange-500/30"
                     >
                       <div className="text-xs font-bold text-foreground group-hover:text-orange-600">
-                        Darmbegleitung
+                        M¹ Darmbegleitung
                       </div>
                       <div className="text-[11px] text-muted-foreground mt-0.5">Mikrobiom- & gezielte Darmregulation</div>
                     </Link>
@@ -310,7 +310,7 @@ export function Header() {
                       className="block p-2.5 rounded-2xl hover:bg-orange-500/10 transition group border border-transparent hover:border-orange-500/30"
                     >
                       <div className="text-xs font-bold text-foreground group-hover:text-amber-600">
-                        Goldene Grundversorgung
+                        M¹ Goldene Grundversorgung
                       </div>
                       <div className="text-[11px] text-muted-foreground mt-0.5">Tägliche Mikronährstoff- & Zellbasis</div>
                     </Link>
@@ -329,7 +329,7 @@ export function Header() {
                       className="block p-2.5 rounded-2xl hover:bg-emerald-500/10 transition group border border-transparent hover:border-emerald-500/30"
                     >
                       <div className="text-xs font-bold text-foreground group-hover:text-emerald-700">
-                        M³ Performance Training
+                        M² Performance Training
                       </div>
                       <div className="text-[11px] text-muted-foreground mt-0.5">Intelligenter Kraftaufbau ohne Verschleiß (1:1)</div>
                     </Link>
@@ -340,7 +340,7 @@ export function Header() {
                       className="block p-2.5 rounded-2xl hover:bg-emerald-500/10 transition group border border-transparent hover:border-emerald-500/30"
                     >
                       <div className="text-xs font-bold text-foreground group-hover:text-emerald-700">
-                        M³ Schmerzfrei
+                        M² Schmerzfrei
                       </div>
                       <div className="text-[11px] text-muted-foreground mt-0.5">Gezielte Schmerzbefreiung für Rücken & Nacken</div>
                     </Link>
@@ -351,7 +351,7 @@ export function Header() {
                       className="block p-2.5 rounded-2xl hover:bg-emerald-500/10 transition group border border-transparent hover:border-emerald-500/30"
                     >
                       <div className="text-xs font-bold text-foreground group-hover:text-emerald-700">
-                        Coaching für Zwei
+                        M² Coaching für Zwei
                       </div>
                       <div className="text-[11px] text-muted-foreground mt-0.5">Gemeinsam trainieren mit doppelter Verbindlichkeit</div>
                     </Link>
@@ -565,7 +565,7 @@ export function Header() {
                       onClick={() => setMobileMenuOpen(false)}
                       className="flex items-center justify-between p-2.5 rounded-xl bg-amber-500/10 text-amber-800 font-bold"
                     >
-                      <span>M³ Body Reset (Flaggschiff)</span>
+                      <span>M¹ Body Reset (Flaggschiff)</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                     <Link
@@ -573,42 +573,42 @@ export function Header() {
                       onClick={() => setMobileMenuOpen(false)}
                       className="block p-2 rounded-xl text-foreground hover:bg-secondary"
                     >
-                      1:1 Ernährungscoaching
+                      M¹ Ernährungscoaching
                     </Link>
                     <Link
                       to="/schmerzfrei"
                       onClick={() => setMobileMenuOpen(false)}
                       className="block p-2 rounded-xl text-foreground hover:bg-secondary"
                     >
-                      M³ Schmerzfrei-Begleitung
+                      M² Schmerzfrei
                     </Link>
                     <Link
                       to="/performance-training"
                       onClick={() => setMobileMenuOpen(false)}
                       className="block p-2 rounded-xl text-foreground hover:bg-secondary"
                     >
-                      1:1 Performance Training
+                      M² Performance Training
                     </Link>
                     <Link
                       to="/coaching-fuer-zwei"
                       onClick={() => setMobileMenuOpen(false)}
                       className="block p-2 rounded-xl text-foreground hover:bg-secondary"
                     >
-                      Coaching für Zwei
+                      M² Coaching für Zwei
                     </Link>
                     <Link
                       to="/darm-stoffwechselbegleitung"
                       onClick={() => setMobileMenuOpen(false)}
                       className="block p-2 rounded-xl text-foreground hover:bg-secondary"
                     >
-                      Darm- & Stoffwechselbegleitung
+                      M¹ Darmbegleitung
                     </Link>
                     <Link
                       to="/goldene-grundversorgung"
                       onClick={() => setMobileMenuOpen(false)}
                       className="block p-2 rounded-xl text-foreground hover:bg-secondary"
                     >
-                      Goldene Grundversorgung
+                      M¹ Goldene Grundversorgung
                     </Link>
                   </div>
                 )}
