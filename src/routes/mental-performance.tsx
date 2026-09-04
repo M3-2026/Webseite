@@ -37,22 +37,22 @@ function MentalPerformancePage() {
         <div className="relative max-w-6xl mx-auto px-5 md:px-6 space-y-16 md:space-y-24">
 
           {/* HERO SPLIT */}
-          <div className="grid lg:grid-cols-12 gap-10 items-center">
-            <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 rounded-full border border-indigo-600/30 bg-indigo-600/10 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-indigo-700 font-bold shadow-sm">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
+            <div className="lg:col-span-7 space-y-5 sm:space-y-6 min-w-0">
+              <div className="inline-flex items-center gap-2 rounded-full border border-indigo-600/30 bg-indigo-600/10 px-3.5 py-1 text-xs uppercase tracking-[0.18em] text-indigo-700 font-bold shadow-sm">
                 <Brain className="w-3.5 h-3.5" />
                 <span>M³ · Mental Performance</span>
               </div>
 
-              <h1 className="text-4xl sm:text-6xl md:text-7xl font-display font-extrabold tracking-tight leading-[1.02] text-foreground">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-display font-extrabold tracking-tight leading-[1.08] text-foreground break-words hyphens-auto">
                 M³ – <span className="text-gold">Mental Performance</span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-gold font-medium leading-relaxed max-w-2xl">
+              <p className="text-lg sm:text-xl md:text-2xl text-gold font-medium leading-relaxed max-w-2xl">
                 Aus Veränderung wird Gewohnheit. Aus Disziplin wird Routine.
               </p>
 
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl">
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl">
                 Gesundheit entsteht nicht durch Motivation allein. Sie entsteht durch automatisierte Entscheidungen im Alltag. Mental Performance bedeutet, Veränderungen stressresistent zu verankern und aus Wissen langfristige Selbstständigkeit entstehen zu lassen.
               </p>
 
@@ -70,8 +70,8 @@ function MentalPerformancePage() {
             </div>
 
             {/* Visual Performance Asset Card */}
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-md rounded-3xl overflow-hidden border-2 border-indigo-600/30 shadow-[var(--shadow-card)] bg-black group">
+            <div className="lg:col-span-5 flex justify-center lg:justify-end shrink-0 w-full">
+              <div className="relative w-full max-w-[360px] sm:max-w-md rounded-3xl overflow-hidden border-2 border-indigo-600/30 shadow-2xl bg-black group">
                 <img
                   src="/images/performance/m3-neural-blueprint.jpg"
                   alt="Mentale Architektur & Routinen-Verankerung"

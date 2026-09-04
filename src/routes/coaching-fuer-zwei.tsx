@@ -27,25 +27,25 @@ function CoachingFuerZweiPage() {
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-gold/5 blur-3xl" />
         </div>
 
-        <div className="relative max-w-5xl mx-auto px-6">
+        <div className="relative max-w-6xl mx-auto px-5 sm:px-6">
 
           {/* HERO */}
-          <div className="mb-20 grid lg:grid-cols-12 gap-10 items-center">
-            <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold mb-2 animate-fade-in">
-                M² · Movement Offer
+          <div className="mb-20 grid lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
+            <div className="lg:col-span-7 space-y-5 sm:space-y-6 min-w-0">
+              <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-1 text-xs uppercase tracking-[0.18em] text-emerald-700 font-bold animate-fade-in">
+                M² · Partner-Training
               </div>
 
-              <h1 className="text-4xl sm:text-6xl md:text-7xl font-display font-extrabold leading-[0.95] tracking-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-display font-extrabold leading-[1.08] tracking-tight text-foreground break-words hyphens-auto">
                 M³ Coaching für Zwei
               </h1>
-              <p className="text-xl md:text-2xl text-gold font-medium leading-relaxed max-w-2xl">
-                Gemeinsam fällt Veränderung leichter: Gemeinsam stark.
+              <p className="text-lg sm:text-xl md:text-2xl text-emerald-700 font-medium leading-relaxed max-w-2xl">
+                Maximale Verbindlichkeit und gemeinsame Motivation – mit individuellen Trainingsplänen für beide Partner.
               </p>
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl whitespace-pre-line">
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl whitespace-pre-line">
                 Gemeinsame Ziele schaffen maximale Verbindlichkeit, Motivation und Freude an der nachhaltigen Veränderung.
                 {"\n\n"}
-                Mit dem M³ Coaching für Zwei trainiert ihr gemeinsam als Paar, Freunde oder Geschäftspartner – individuell angepasst an das jeweilige Leistungsniveau jedes Einzelnen.
+                Mit dem M³ Coaching für Zwei trainiert ihr gemeinsam als Paar, Freunde oder Geschäftspartner – präzise abgestimmt auf das jeweilige Leistungsniveau jedes Einzelnen.
               </p>
 
               <div className="pt-2">
@@ -53,15 +53,15 @@ function CoachingFuerZweiPage() {
                   href={WHATSAPP_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full bg-gold-gradient px-8 py-4 font-semibold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-90 transition"
+                  className="inline-flex items-center justify-center rounded-full bg-emerald-700 px-8 py-4 font-semibold text-white shadow-lg hover:bg-emerald-800 transition"
                 >
                   Kostenloses Erstgespräch
                 </a>
               </div>
             </div>
 
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-md rounded-3xl overflow-hidden border-2 border-gold/40 shadow-[var(--shadow-gold)] bg-black group aspect-square">
+            <div className="lg:col-span-5 flex justify-center lg:justify-end shrink-0 w-full">
+              <div className="relative w-full max-w-[360px] sm:max-w-md rounded-3xl overflow-hidden border-2 border-emerald-500/40 shadow-2xl bg-black group aspect-square">
                 <img
                   src="/images/performance/card-coaching-fuer-zwei.png"
                   alt="M³ Coaching für Zwei – Gemeinsam stark."

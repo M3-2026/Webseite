@@ -22,25 +22,25 @@ function SystemStartPage() {
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-gold/5 blur-3xl" />
         </div>
 
-        <div className="relative max-w-5xl mx-auto px-6">
+        <div className="relative max-w-6xl mx-auto px-5 sm:px-6">
 
           {/* HERO */}
-          <div className="mb-20 grid lg:grid-cols-12 gap-10 items-center">
-            <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold mb-2 animate-fade-in">
-                M³ · Orientierung
+          <div className="mb-20 grid lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center">
+            <div className="lg:col-span-7 space-y-5 sm:space-y-6 min-w-0">
+              <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-3.5 py-1 text-xs uppercase tracking-[0.18em] text-gold font-bold animate-fade-in">
+                M³ · Orientierung & Diagnostik
               </div>
 
-              <h1 className="text-4xl sm:text-6xl md:text-7xl font-display font-extrabold leading-[0.95] tracking-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-display font-extrabold leading-[1.08] tracking-tight text-foreground break-words hyphens-auto">
                 M³ System Start
               </h1>
-              <p className="text-xl md:text-2xl text-gold font-medium leading-relaxed max-w-2xl">
-                Der richtige Weg beginnt mit einer klaren Ausgangslage.
+              <p className="text-lg sm:text-xl md:text-2xl text-gold font-medium leading-relaxed max-w-2xl">
+                Deine persönliche 360°-Standortbestimmung: Erst verstehen, gezielt analysieren, dann die richtige Priorität wählen.
               </p>
-              <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl whitespace-pre-line">
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl whitespace-pre-line">
                 Jeder Mensch startet an einem anderen Punkt.
                 {"\n\n"}
-                Deshalb beginnt bei M³ keine Zusammenarbeit mit einem Standardplan, sondern mit einer individuellen Analyse deiner Situation, deiner Ziele und deiner persönlichen Voraussetzungen über alle drei Säulen.
+                Deshalb beginnt bei M³ keine Zusammenarbeit mit einem Standardplan, sondern mit einer strukturierten Analyse deiner Situation, deiner Ziele und deiner persönlichen Voraussetzungen über alle drei Säulen.
               </p>
 
               <div className="pt-2">
@@ -55,8 +55,8 @@ function SystemStartPage() {
               </div>
             </div>
 
-            <div className="lg:col-span-5 flex justify-center">
-              <div className="relative w-full max-w-md rounded-3xl overflow-hidden border-2 border-gold/40 shadow-[var(--shadow-gold)] bg-black group aspect-square">
+            <div className="lg:col-span-5 flex justify-center lg:justify-end shrink-0 w-full">
+              <div className="relative w-full max-w-[360px] sm:max-w-md rounded-3xl overflow-hidden border-2 border-gold/40 shadow-2xl bg-black group aspect-square">
                 <img
                   src="/images/performance/card-system-start.png"
                   alt="M³ System Start – Dein strukturierter Einstieg"
