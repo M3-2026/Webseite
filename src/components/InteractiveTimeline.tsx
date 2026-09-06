@@ -57,7 +57,7 @@ export const MILESTONES: Milestone[] = [
         "Wir lebten damals im Haus direkt über unserer familieneigenen Gastronomie, die meine Eltern gemeinsam aufgebaut hatten. Doch als ich 14 Jahre alt war, riss der Krebstod meines Vaters innerhalb weniger Monate das bisherige Leben komplett auseinander – meine Mutter führte den Betrieb fortan unter enormem Einsatz alleine weiter.",
         "Kurz darauf verstarb auch mein Großvater, und meine schwer an Alzheimer erkrankte Großmutter zog zu uns. Ein ganzes Jahr lang schlief sie bei mir im Kinderzimmer. Nachts wurde ich regelmäßig durch lautes Poltern wach, wenn sie desorientiert im Dunkeln durch die Wohnung irrte. Ich stand Nacht für Nacht auf, beruhigte sie sanft, stellte mich geduldig immer wieder neu vor, wer ich bin – und begleitete sie behutsam zurück ins Bett. Dieses Jahr hat sich tief in mein Herz eingebrannt und mich gelehrt, was bedingungslose Hingabe, Empathie und Geduld wirklich bedeuten.",
         "1996 überlebte ich gemeinsam mit Freunden einen schweren Autounfall mit mehrfachem Überschlag wie durch ein Wunder. Aus diesen Prüfungen wuchs eine unbändige Kraft: Mit 15 Jahren stand ich bereits selbst als Tanzlehrer auf der Fläche und wirkte im ersten Thüringer Jugend-Musical „Crazy Town“ (an der Seite des damals noch jungen Clueso und der späteren VIVA-Moderatorin Janine Reinhard) mit.",
-        "1997 gründete ich mit Freunden die Breakdance-Formation „Nasty Stylistix“, mit der wir bereits 1998 den Titel als Thüringenmeister holten und die ostdeutsche Szene aufmischten.",
+        "1996/1997 gründete ich gemeinsam mit DJ Nas-D (dem heutigen DJ Nas-D) die Breakdance-Formation „Nasty Stylistix“, mit der wir bereits 1998 den Titel als Thüringenmeister holten und die ostdeutsche Szene aufmischten.",
       ],
       highlights: [
         "Erste Schritte im Breakdance & Hip Hop mit 12 Jahren auf der Straße",
@@ -65,7 +65,7 @@ export const MILESTONES: Milestone[] = [
         "Ein Jahr nächtliche Fürsorge für die an Alzheimer erkrankte Großmutter",
         "Mit 15 Jahren bereits erste Lehrtätigkeit als Tanzlehrer",
         "Ensemble-Mitglied im 1. Thüringer Jugendmusical 'Crazy Town' (mit Clueso)",
-        "Mitbegründer der 'Nasty Stylistix' & Thüringenmeister 1998",
+        "Gründung der 'Nasty Stylistix' mit DJ Nas-D (1996/97) & Thüringenmeister 1998",
       ],
       lesson:
         "Schwere Schicksale und Verluste nehmen dir die Illusion, dass dich irgendjemand rettet. Du lernst früh: Wenn du dein Leben und deine Energie nicht selbst in die Hand nimmst, tut es niemand für dich.",
@@ -114,7 +114,7 @@ export const MILESTONES: Milestone[] = [
     categoryLabel: "Weltmeister-Ära",
     title: "Tanzfabrik Erfurt, Nasty Stylistix & Battle of the Year National",
     shortDesc:
-      "Aufbau vieler Nachwuchstänzer in Thüringen, Crew-Gründung mit DJ Nasty, Platz 7 beim Battle of the Year Germany und bundesweite Hip-Hop-Jams.",
+      "Aufbau vieler Nachwuchstänzer in Thüringen, Crew-Fokus mit DJ Nas-D, Platz 7 beim Battle of the Year Germany und Masterclasses mit Weltstars.",
     image: "/images/performance/hero-performance-2.jpg",
     badge: "Szene-Pionier & BOTY",
     fullStory: {
@@ -122,17 +122,17 @@ export const MILESTONES: Milestone[] = [
         "Über viele Jahre die urbane Tanzszene in Thüringen geprägt – mit ehrlichem Training, starker Mindset-Arbeit und dem Durchbruch zur Deutschen Meisterschaft.",
       paragraphs: [
         "Nach meiner Zeit in NRW kehrte ich nach Erfurt zurück und wurde Dozent an der Tanzfabrik Erfurt. Über viele Jahre bildete ich zahlreiche Tänzer, Jugendliche und Nachwuchstalente aus und leistete damit kontinuierliche Aufbauarbeit für die urbane Tanzkultur in ganz Thüringen.",
-        "Gemeinsam mit dem heutigen DJ Nasty gründete und formte ich die „Nasty Stylistix“. Wir verbanden schweißtreibendes Training mit intensiver mentaler Vorbereitung (Mindset-Arbeit) und tourten durch ganz Deutschland auf unzählige Hip-Hop-Jams, um uns mit der Szene zu vernetzen und Erfahrungen zu sammeln.",
+        "Mit den Nasty Stylistix (1996/97 gemeinsam mit dem heutigen DJ Nas-D gegründet) ging es nun in die intensive Leistungsphase: Wir verbanden schweißtreibendes Training mit mentaler Fokusarbeit (Mindset-Training) und tourten durch ganz Deutschland auf unzählige Hip-Hop-Jams, um uns mit der Szene zu vernetzen und Erfahrungen zu sammeln.",
         "2005 folgte der große sportliche Meilenstein: Beim Vorentscheid „Battle of the East“ holten wir den Sieg und qualifizierten uns für das renommierte „Battle of the Year Germany“ (die inoffizielle Deutsche Meisterschaft der Breakdance-Crews). Vor großem Publikum erkämpften wir uns einen starken 7. Platz unter den besten 16 Crews des Landes.",
-        "In dieser Ära nutzte ich jede Gelegenheit, um mich auf Workshops bei Pionieren der Szene weiterzuentwickeln – unter anderem verbrachte ich wertvolle Trainingszeit mit Breakdance-Legende Niels Robitzky (Storm), Marco da Silva und weiteren internationalen Dozenten.",
+        "In dieser Ära nutzte ich jede Gelegenheit, um mich auf Workshops bei den prägendsten Dozenten der Zeit weiterzuentwickeln – unter anderem verbrachte ich wertvolle Trainingszeit mit Breakdance-Legende Niels Robitzky (Storm), Marco da Silva (No Angels), Marvin A. Smith (Britney Spears), Marty Kudelka (Justin Timberlake) und Dante Harper (Streetstyle).",
       ],
       highlights: [
         "Dozent an der Tanzfabrik Erfurt: Ausbildung vieler Tänzer & Talente in Thüringen",
-        "Gründung & Aufbau der 'Nasty Stylistix' gemeinsam mit DJ Nasty",
-        "Bundesweite Hip-Hop-Jams, Szene-Vernetzung & intensives Mindset-Training",
+        "Intensives Training & Mindset-Arbeit mit den 'Nasty Stylistix' (mit DJ Nas-D)",
+        "Bundesweite Hip-Hop-Jams & enge Vernetzung in der deutschen Tanzszene",
         "Sieg beim 'Battle of the East' & Qualifikation zum Battle of the Year National 2005",
         "Platz 7 bei den inoffiziellen Deutschen Meisterschaften (BOTY Germany 2005)",
-        "Workshops & Austausch mit Legenden wie Niels Robitzky (Storm) & Marco da Silva",
+        "Masterclasses mit Storm (Niels Robitzky), Marco da Silva, Marvin A. Smith, Marty Kudelka & Dante Harper",
       ],
       lesson:
         "Wahre Leistung entsteht durch Kontinuität und echte Gemeinschaft. Wer eine Kultur vorantreibt, hart an sich arbeitet und offen von den Besten lernt, setzt nachhaltige Meilensteine.",
