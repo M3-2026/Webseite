@@ -1384,236 +1384,135 @@ function IndexPage() {
       </section>
 
       {/* ---------------------------------------------------- */}
-      {/* 5. BENTO CHAPTER 4: STORY, PROOF & TRUST BENTO */}
+      {/* 5. BENTO CHAPTER 4: STORY, PROOF & TRUST TEASER */}
       {/* ---------------------------------------------------- */}
       <section id="ueber" className="py-16 md:py-24 border-b border-border/70 bg-secondary/25">
         <div className="max-w-7xl mx-auto px-5 md:px-6 space-y-10">
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
-              Authentizität & Erfahrung
-            </span>
-            <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight">
+            <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-card/80 backdrop-blur px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold font-bold shadow-sm">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Authentizität & Erfahrung</span>
+            </div>
+            <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight text-foreground">
               Hinter M³ steckt mehr als Training.
             </h2>
+            <p className="text-base md:text-lg text-muted-foreground">
+              Vom IDO Breakdance-Weltmeister zum ganzheitlichen Gesundheitssystem – 25+ Jahre Bewegungspraxis ohne Dogmen.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-            {/* Tile 1: Story & Video Facade (5 cols) */}
-            <div className="lg:col-span-5 rounded-3xl border border-border bg-card p-6 md:p-8 flex flex-col justify-between shadow-sm text-left">
-              <div className="space-y-4">
-                <span className="text-xs font-mono font-bold uppercase tracking-wider text-amber-600">
-                  Michél Meier · Personal Trainer & Coach
-                </span>
-                <h3 className="text-xl md:text-2xl font-display font-extrabold text-foreground">
-                  25+ Jahre Bewegungspraxis & Weltmeisterjahre
-                </h3>
-                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                  Als IDO Breakdance-Weltmeister durfte ich erleben, wozu der Körper fähig ist. Schwere Rückschläge und Darmthemen lehrten mich: Höchstleistung zerbricht ohne biochemisches Fundament.
-                </p>
-                <div className="text-xs font-medium text-amber-600 italic border-l-2 border-amber-500 pl-3 py-1 bg-amber-500/5 rounded-r-lg">
-                  „Manchmal braucht es Verständnis. Manchmal einen Arschtritt. Oft beides.“
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            {/* Left: Authentic Portrait Card with Credentials */}
+            <div className="lg:col-span-5 rounded-3xl border border-border bg-card p-6 sm:p-8 flex flex-col justify-between shadow-sm text-left relative overflow-hidden group">
+              <div className="space-y-6">
+                <div className="relative rounded-2xl overflow-hidden border border-border/80 bg-black aspect-[4/3] shadow-md">
+                  <img
+                    src="/images/performance/michel-portrait-blazer.jpg"
+                    alt="Michél Meier – Gründer & Personal Trainer"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                  <div className="absolute bottom-4 left-4 right-4 text-white">
+                    <div className="font-display font-extrabold text-lg">Michél Meier</div>
+                    <div className="text-xs text-gold font-medium">Personal Trainer & Coach · IDO Weltmeister</div>
+                  </div>
                 </div>
 
-                {/* Video Facade */}
-                <div className="aspect-video rounded-2xl bg-secondary/50 border border-border overflow-hidden relative group mt-3">
-                  {videoLoaded ? (
-                    <iframe
-                      className="w-full h-full"
-                      src="https://www.youtube-nocookie.com/embed/dQrADZQ1d5I?autoplay=1"
-                      title="M³ Performance & Gesundheit – Michél Meier"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  ) : (
-                    <div
-                      onClick={() => setVideoLoaded(true)}
-                      className="w-full h-full flex flex-col items-center justify-center p-4 cursor-pointer text-center"
-                    >
-                      <div className="w-12 h-12 rounded-full bg-gold-gradient text-primary-foreground flex items-center justify-center shadow-md group-hover:scale-110 transition-transform mb-2">
-                        <Play className="w-5 h-5 ml-0.5 fill-current" />
-                      </div>
-                      <span className="font-display font-bold text-xs text-foreground">
-                        M³ Performance Video abspielen
-                      </span>
-                    </div>
-                  )}
+                <div className="space-y-3">
+                  <div className="text-xs font-medium text-amber-600 italic border-l-2 border-amber-500 pl-3 py-1.5 bg-amber-500/5 rounded-r-lg">
+                    „Manchmal braucht es Verständnis. Manchmal einen Arschtritt. Oft beides.“
+                  </div>
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                    25 Jahre Erfahrung im Leistungssport, Bühnenarbeit und der Begleitung von Menschen mitten im fordernden Berufs- und Familienalltag.
+                  </p>
                 </div>
               </div>
 
-              <div className="pt-6">
+              {/* Badges */}
+              <div className="grid grid-cols-2 gap-2 pt-5 border-t border-border/70 mt-6">
+                <div className="rounded-xl border border-border bg-secondary/40 p-2.5 text-center">
+                  <div className="font-display font-bold text-sm text-foreground">2006 / 2007</div>
+                  <div className="text-[11px] text-muted-foreground">IDO World Champion</div>
+                </div>
+                <div className="rounded-xl border border-border bg-secondary/40 p-2.5 text-center">
+                  <div className="font-display font-bold text-sm text-foreground">25+ Jahre</div>
+                  <div className="text-[11px] text-muted-foreground">Bewegungspraxis</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: The M³ Philosophy & Direct Deep-Dive */}
+            <div className="lg:col-span-7 rounded-3xl border border-border bg-card p-6 sm:p-8 md:p-10 flex flex-col justify-between shadow-sm text-left">
+              <div className="space-y-6">
+                <div className="space-y-2">
+                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-gold">
+                    Ganzheitliche Systematik statt Zufall
+                  </span>
+                  <h3 className="font-display font-extrabold text-2xl md:text-3xl text-foreground">
+                    „Höchstleistung zerbricht ohne gesundes Fundament.“
+                  </h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                    Klassisches Fitnesstraining greift zu kurz: Wenn Darm, Stoffwechsel oder Schlaf blockiert sind, verpufft jede Anstrengung. M³ verbindet Biochemie (M¹), Biomechanik (M²) und Mindset (M³) zu einem alltagstauglichen System.
+                  </p>
+                </div>
+
+                {/* 4 Trust Highlights */}
+                <div className="grid sm:grid-cols-2 gap-3.5">
+                  <div className="rounded-2xl border border-orange-500/25 bg-orange-500/5 p-4 space-y-1.5">
+                    <div className="flex items-center gap-1.5 font-bold text-xs text-orange-600">
+                      <Flame className="w-4 h-4" />
+                      <span>Biochemie vor Muskelkraft</span>
+                    </div>
+                    <p className="text-xs text-foreground/80 leading-relaxed">
+                      Zelluläre Energie, Darmgesundheit und stabiler Stoffwechsel als stabiles Fundament.
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl border border-emerald-500/25 bg-emerald-500/5 p-4 space-y-1.5">
+                    <div className="flex items-center gap-1.5 font-bold text-xs text-emerald-700">
+                      <Dumbbell className="w-4 h-4" />
+                      <span>Technik vor Gewicht</span>
+                    </div>
+                    <p className="text-xs text-foreground/80 leading-relaxed">
+                      Präzise 1:1 Bewegungskorrektur für schmerzfreie Belastbarkeit und stabile Gelenke.
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl border border-blue-500/25 bg-blue-500/5 p-4 space-y-1.5">
+                    <div className="flex items-center gap-1.5 font-bold text-xs text-blue-700">
+                      <Brain className="w-4 h-4" />
+                      <span>Alltag statt Extremismus</span>
+                    </div>
+                    <p className="text-xs text-foreground/80 leading-relaxed">
+                      Pläne, die sich nahtlos in Beruf, Familie und Reisen integrieren lassen.
+                    </p>
+                  </div>
+
+                  <div className="rounded-2xl border border-gold/25 bg-gold/5 p-4 space-y-1.5">
+                    <div className="flex items-center gap-1.5 font-bold text-xs text-gold">
+                      <ShieldCheck className="w-4 h-4" />
+                      <span>100% Autonomie als Ziel</span>
+                    </div>
+                    <p className="text-xs text-foreground/80 leading-relaxed">
+                      Ich mache mich überflüssig: Du lernst deinen Körper selbstständig dauerhaft zu steuern.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* CTAs */}
+              <div className="pt-6 border-t border-border/70 mt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div className="text-xs text-muted-foreground text-center sm:text-left">
+                  <span>Möchtest du die ganze Geschichte, Videos und Werte kennenlernen?</span>
+                </div>
                 <Link
                   to="/ueber-mich"
-                  className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gold-gradient py-3 text-xs sm:text-sm font-bold text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95 transition"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-gold-gradient px-6 py-3 font-bold text-xs sm:text-sm text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95 hover:scale-[1.02] transition-all shrink-0"
                 >
-                  Meine ganze Story lesen
+                  <span>Mehr über Michél & Werte erfahren</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-              </div>
-            </div>
-
-            {/* Tile 2: Praxis-Ergebnisse & Mehrwert (7 cols) */}
-            <div className="lg:col-span-7 rounded-3xl border border-border bg-card p-6 md:p-8 flex flex-col justify-between shadow-sm text-left overflow-hidden">
-              <div className="space-y-4">
-                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border/70 pb-4">
-                  <div>
-                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-amber-600">
-                      Ergebnisse & Methodik
-                    </span>
-                    <h3 className="font-display font-bold text-xl text-foreground">
-                      Was dich im M³-System erwartet
-                    </h3>
-                  </div>
-                  <div className="flex items-center gap-1.5 text-xs text-muted-foreground font-semibold">
-                    <span className="text-emerald-700 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20 font-bold">
-                      100% Persönliche 1:1 Betreuung
-                    </span>
-                  </div>
-                </div>
-
-                {/* 4 Core Pillars Results Grid */}
-                <div className="grid sm:grid-cols-2 gap-3.5 pt-1">
-                  <div className="rounded-2xl border border-orange-500/25 bg-orange-500/5 p-4 space-y-2">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-1.5 font-bold text-xs text-orange-600">
-                        <Flame className="w-3.5 h-3.5" />
-                        <span>M¹ · Stoffwechsel & Darm</span>
-                      </div>
-                      <span className="text-[9px] font-bold text-orange-700 bg-orange-500/15 px-2 py-0.5 rounded-full">
-                        Zellenergie
-                      </span>
-                    </div>
-                    <p className="text-xs text-foreground/90 leading-relaxed">
-                      Keine Nachmittagstiefs mehr: Gezielte Entlastung von Verdauung & Darm, optimierte Nährstoffversorgung und stabiler Blutzucker.
-                    </p>
-                  </div>
-
-                  <div className="rounded-2xl border border-emerald-500/25 bg-emerald-500/5 p-4 space-y-2">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-1.5 font-bold text-xs text-emerald-700">
-                        <Dumbbell className="w-3.5 h-3.5" />
-                        <span>M² · Biomechanik</span>
-                      </div>
-                      <span className="text-[9px] font-bold text-emerald-700 bg-emerald-500/15 px-2 py-0.5 rounded-full">
-                        Schmerzfrei
-                      </span>
-                    </div>
-                    <p className="text-xs text-foreground/90 leading-relaxed">
-                      Technik vor Gewicht: Beseitigung von Dysbalancen und Verspannungen im Rücken- & Nackenbereich durch präzise 1:1 Bewegungskorrektur.
-                    </p>
-                  </div>
-
-                  <div className="rounded-2xl border border-orange-500/25 bg-orange-500/5 p-4 space-y-2">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-1.5 font-bold text-xs text-orange-600">
-                        <Sparkles className="w-3.5 h-3.5" />
-                        <span>M¹ · Alltagsernährung</span>
-                      </div>
-                      <span className="text-[9px] font-bold text-orange-700 bg-orange-500/15 px-2 py-0.5 rounded-full">
-                        Ohne Diät-Zwang
-                      </span>
-                    </div>
-                    <p className="text-xs text-foreground/90 leading-relaxed">
-                      Individuelle Makro-Struktur, die perfekt zu 60h-Arbeitswochen, Sport und Familie passt – ohne Jojo-Effekt und ohne Verbote.
-                    </p>
-                  </div>
-
-                  <div className="rounded-2xl border border-blue-500/25 bg-blue-500/5 p-4 space-y-2">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-1.5 font-bold text-xs text-blue-700">
-                        <Brain className="w-3.5 h-3.5" />
-                        <span>M³ · Mindset & Routine</span>
-                      </div>
-                      <span className="text-[9px] font-bold text-blue-700 bg-blue-500/15 px-2 py-0.5 rounded-full">
-                        Selbstständigkeit
-                      </span>
-                    </div>
-                    <p className="text-xs text-foreground/90 leading-relaxed">
-                      Routinen-Architektur und Stressresistenz: Du lernst deinen Körper selbstständig zu steuern – dauerhaft und unabhängig.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="pt-4 flex items-center justify-between text-xs text-muted-foreground">
-                <span>Ehrlichkeit vor leeren Versprechungen</span>
-                <Link to="/system-start" className="font-bold text-amber-600 hover:underline flex items-center gap-1">
-                  M³ System Start kennenlernen →
-                </Link>
-              </div>
-            </div>
-
-            {/* Tile: M³ Live Performance Infinity Carousel (12 cols) - ATHLETIC DARK CARBON STRIP */}
-            <div className="lg:col-span-12 rounded-3xl border border-slate-800 bg-[#090d16] text-white p-5 sm:p-7 shadow-2xl shadow-slate-950/25 overflow-hidden text-left space-y-4">
-              <div className="flex flex-wrap items-center justify-between gap-2 px-1">
-                <div className="flex items-center gap-2.5">
-                  <span className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse" />
-                  <span className="text-xs font-mono uppercase tracking-[0.2em] text-amber-400 font-bold">
-                    M³ Live Performance · 25+ Jahre Bewegungspraxis & Weltmeisterjahre
-                  </span>
-                </div>
-                <div className="flex items-center gap-2 text-xs text-slate-400 font-medium">
-                  <span className="text-white font-semibold">Breakdance-Weltmeister</span>
-                  <span>·</span>
-                  <span className="text-amber-400">Personal Trainer & Coach</span>
-                </div>
-              </div>
-
-              {/* Infinity Marquee Track with Action Pictures */}
-              <div className="relative w-full overflow-hidden marquee-mask pt-1">
-                <div className="flex gap-3 sm:gap-4 w-max animate-marquee-left marquee-pause py-1">
-                  {HERO_PERFORMANCE_PICTURES_DOUBLED.map((p, idx) => (
-                    <div
-                      key={`${p.image}-${idx}`}
-                      className="h-[155px] sm:h-[175px] md:h-[195px] shrink-0 bg-slate-900/90 rounded-2xl overflow-hidden border border-slate-700/80 shadow-md hover:shadow-xl hover:border-amber-400 hover:shadow-amber-500/20 transition-all p-1.5 flex items-center justify-center group cursor-pointer"
-                    >
-                      <img
-                        src={p.image}
-                        alt={p.alt}
-                        className="h-full w-auto max-w-none object-contain rounded-xl select-none group-hover:scale-[1.03] transition-transform duration-500"
-                        loading="lazy"
-                      />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Tile 3: 5 M³-Werte & Qualitätsgarantien (12 cols) */}
-            <div className="lg:col-span-12 rounded-3xl border border-border bg-card p-6 md:p-8 space-y-6 text-left">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border/70 pb-4">
-                <div>
-                  <span className="text-xs font-mono font-bold uppercase tracking-wider text-gold">
-                    Unverrückbare Prinzipien
-                  </span>
-                  <h3 className="font-display font-extrabold text-xl md:text-2xl text-foreground">
-                    Darauf kannst du dich verlassen
-                  </h3>
-                </div>
-                <p className="text-xs text-muted-foreground">
-                  Fünf Werte, nach denen jede Begleitung ausgerichtet ist.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
-                {[
-                  { title: "Eigenverantwortung", desc: "Wir begleiten dich eng – aber nehmen dir deine Verantwortung nicht ab." },
-                  { title: "Ehrlichkeit", desc: "Wir sprechen Dinge direkt an – auch dann, wenn es einmal unbequem ist." },
-                  { title: "Authentizität", desc: "Kein aufgesetztes Gehabe. Wir bleiben menschlich, pragmatisch und echt." },
-                  { title: "Menschlichkeit", desc: "Vor dem Problem steht der Mensch mit all seinen Alltagshürden." },
-                  { title: "Qualität", desc: "Wir empfehlen nur Maßnahmen, die einem fundierten Anspruch genügen." },
-                ].map((v, i) => (
-                  <div key={i} className="rounded-2xl border border-border/80 bg-secondary/20 p-4 space-y-2">
-                    <div className="w-7 h-7 rounded-lg bg-gold/15 text-gold flex items-center justify-center font-display font-bold text-xs">
-                      0{i + 1}
-                    </div>
-                    <div className="font-display font-bold text-sm text-foreground">
-                      {v.title}
-                    </div>
-                    <p className="text-xs text-muted-foreground leading-relaxed">
-                      {v.desc}
-                    </p>
-                  </div>
-                ))}
               </div>
             </div>
           </div>

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Trophy,
@@ -16,6 +17,8 @@ import {
   Zap,
   Activity,
   HeartPulse,
+  Play,
+  Check,
 } from "lucide-react";
 import avatar from "@/assets/avatar.png";
 import { Header } from "@/components/Header";
@@ -25,9 +28,34 @@ import { PathwayCrossNav } from "@/components/PathwayCrossNav";
 
 export const Route = createFileRoute("/ueber-mich")({
   component: UeberMichPage,
+  head: () => ({
+    meta: [
+      { title: "Über Michél Meier – Story, Werte & Werdegang | M³ Performance" },
+      {
+        name: "description",
+        content:
+          "25+ Jahre Bewegungserfahrung, IDO Breakdance-Weltmeister & Master Personal Trainer: Erfahre alles über Michél Meiers Geschichte und die Entstehung des M³-Systems.",
+      },
+    ],
+  }),
 });
 
+const HERO_PERFORMANCE_PICTURES = [
+  { image: "/images/performance/hero-performance-1.jpg", alt: "Michél Meier – Breakdance World Champion Flying Freeze" },
+  { image: "/images/performance/hero-performance-2.jpg", alt: "Michél Meier – Headstand Freeze Studio" },
+  { image: "/images/performance/hero-performance-5.jpg", alt: "Michél Meier – OBEY Cap Elbow Lever Freeze" },
+  { image: "/images/performance/hero-performance-3.jpg", alt: "Michél Meier – Urban Street Balance Freeze" },
+  { image: "/images/performance/hero-performance-4.jpg", alt: "Michél Meier – Rooftop One-Arm Freeze" },
+];
+
+const HERO_PERFORMANCE_PICTURES_DOUBLED = [
+  ...HERO_PERFORMANCE_PICTURES,
+  ...HERO_PERFORMANCE_PICTURES,
+  ...HERO_PERFORMANCE_PICTURES,
+];
+
 function UeberMichPage() {
+  const [videoLoaded, setVideoLoaded] = useState(false);
   const WHATSAPP_URL =
     "https://wa.me/4917699016640?text=Hallo%20Mich%C3%A9l,%20ich%20habe%20deine%20Geschichte%20gelesen%20und%20m%C3%B6chte%20ein%20unverbindliches%20Orientierungsgespr%C3%A4ch%20vereinbaren.";
 
@@ -132,13 +160,13 @@ function UeberMichPage() {
           {/* ---------------------------------------------------- */}
           <section className="rounded-3xl border border-border bg-card/60 p-8 md:p-12 space-y-10">
             <div className="grid lg:grid-cols-12 gap-10 items-center">
-              <div className="lg:col-span-7 space-y-5">
+              <div className="lg:col-span-7 space-y-5 text-left">
                 <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-gold">
                   <Trophy className="w-4 h-4" />
                   <span>Kapitel 1 · Die Lektion des Spitzensports</span>
                 </div>
 
-                <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight">
+                <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight text-foreground">
                   „Ich habe am eigenen Körper gelernt, was passiert, wenn man nur Muskeln aufbaut.“
                 </h2>
 
@@ -191,6 +219,112 @@ function UeberMichPage() {
           </section>
 
           {/* ---------------------------------------------------- */}
+          {/* MEDIA SHOWCASE: VIDEO & LIVE PERFORMANCE INFINITY MARQUEE */}
+          {/* ---------------------------------------------------- */}
+          <section className="space-y-8">
+            <div className="text-center max-w-3xl mx-auto space-y-3">
+              <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
+                Einblicke & Live Action
+              </span>
+              <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight text-foreground">
+                25 Jahre Bewegung in Aktion
+              </h2>
+              <p className="text-base text-muted-foreground">
+                Authentische Erfahrung aus Spitzensport, internationaler Meisterschaft und fundierter Trainerpraxis.
+              </p>
+            </div>
+
+            {/* Video Showcase Card */}
+            <div className="rounded-3xl border border-border bg-card p-6 md:p-10 shadow-lg text-left">
+              <div className="grid lg:grid-cols-12 gap-8 items-center">
+                <div className="lg:col-span-5 space-y-4">
+                  <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-3.5 py-1 text-xs uppercase tracking-[0.18em] text-gold font-bold">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>M³ Performance Video</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-display font-extrabold text-foreground">
+                    Erlebe die Philosophie von M³
+                  </h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                    Wie aus 25 Jahren Spitzensport, Anatomie-Verständnis und echter Alltagserfahrung ein modulares Gesundheitssystem für schmerzfreie Belastbarkeit und dauerhafte Energie entstand.
+                  </p>
+                  <div className="text-xs font-medium text-amber-600 italic border-l-2 border-amber-500 pl-3 py-1 bg-amber-500/5 rounded-r-lg">
+                    „Manchmal braucht es Verständnis. Manchmal einen Arschtritt. Oft beides.“
+                  </div>
+                </div>
+
+                <div className="lg:col-span-7">
+                  <div className="aspect-video rounded-2xl bg-[#090d16] border border-slate-800 overflow-hidden relative group shadow-2xl">
+                    {videoLoaded ? (
+                      <iframe
+                        className="w-full h-full"
+                        src="https://www.youtube-nocookie.com/embed/dQrADZQ1d5I?autoplay=1"
+                        title="M³ Performance & Gesundheit – Michél Meier"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      />
+                    ) : (
+                      <div
+                        onClick={() => setVideoLoaded(true)}
+                        className="w-full h-full flex flex-col items-center justify-center p-6 cursor-pointer text-center relative overflow-hidden group"
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/30 group-hover:scale-105 transition-transform duration-700 pointer-events-none" />
+                        <div className="relative z-10 flex flex-col items-center space-y-3">
+                          <div className="w-16 h-16 rounded-full bg-gold-gradient text-primary-foreground flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
+                            <Play className="w-7 h-7 ml-1 fill-current" />
+                          </div>
+                          <span className="font-display font-extrabold text-sm sm:text-base text-white tracking-tight">
+                            M³ Performance Video abspielen
+                          </span>
+                          <span className="text-xs text-slate-300">
+                            Direkter Einblick in Philosophie & Methodik mit Michél
+                          </span>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* M³ Live Performance Infinity Carousel - ATHLETIC DARK CARBON STRIP */}
+            <div className="rounded-3xl border border-slate-800 bg-[#090d16] text-white p-5 sm:p-7 shadow-2xl shadow-slate-950/25 overflow-hidden text-left space-y-4">
+              <div className="flex flex-wrap items-center justify-between gap-2 px-1">
+                <div className="flex items-center gap-2.5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-amber-400 animate-pulse" />
+                  <span className="text-xs font-mono uppercase tracking-[0.2em] text-amber-400 font-bold">
+                    M³ Live Performance · 25+ Jahre Bewegungspraxis & Weltmeisterjahre
+                  </span>
+                </div>
+                <div className="flex items-center gap-2 text-xs text-slate-400 font-medium">
+                  <span className="text-white font-semibold">Breakdance-Weltmeister</span>
+                  <span>·</span>
+                  <span className="text-amber-400">Personal Trainer & Coach</span>
+                </div>
+              </div>
+
+              {/* Infinity Marquee Track with Action Pictures */}
+              <div className="relative w-full overflow-hidden marquee-mask pt-1">
+                <div className="flex gap-3 sm:gap-4 w-max animate-marquee-left marquee-pause py-1">
+                  {HERO_PERFORMANCE_PICTURES_DOUBLED.map((p, idx) => (
+                    <div
+                      key={`${p.image}-${idx}`}
+                      className="h-[155px] sm:h-[175px] md:h-[195px] shrink-0 bg-slate-900/90 rounded-2xl overflow-hidden border border-slate-700/80 shadow-md hover:shadow-xl hover:border-amber-400 hover:shadow-amber-500/20 transition-all p-1.5 flex items-center justify-center group cursor-pointer"
+                    >
+                      <img
+                        src={p.image}
+                        alt={p.alt}
+                        className="h-full w-auto max-w-none object-contain rounded-xl select-none group-hover:scale-[1.03] transition-transform duration-500"
+                        loading="lazy"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ---------------------------------------------------- */}
           {/* PERFORMANCE STORYLINE: DIE 3 DIMENSIONEN IN AKTION */}
           {/* ---------------------------------------------------- */}
           <section className="space-y-12">
@@ -198,7 +332,7 @@ function UeberMichPage() {
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
                 Visual Performance Storyline
               </span>
-              <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight text-foreground">
                 Die 3 Dimensionen des M³-Systems
               </h2>
               <p className="text-base md:text-lg text-muted-foreground">
@@ -206,9 +340,9 @@ function UeberMichPage() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 gap-6 text-left">
               {/* Säule 1 Visual */}
-              <div className="rounded-3xl border border-border bg-card overflow-hidden flex flex-col justify-between hover:border-primary/50 transition-all duration-300 group shadow-sm hover:shadow-md">
+              <div className="rounded-3xl border border-border bg-card overflow-hidden flex flex-col justify-between hover:border-orange-500/50 transition-all duration-300 group shadow-sm hover:shadow-md">
                 <div className="relative w-full h-56 bg-black overflow-hidden">
                   <img
                     src="/images/performance/m1-cardio-vitality.jpg"
@@ -217,14 +351,14 @@ function UeberMichPage() {
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
-                  <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-primary/20 backdrop-blur border border-primary/40 text-primary font-mono text-[11px] font-bold uppercase">
+                  <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-orange-500/20 backdrop-blur border border-orange-500/40 text-orange-600 font-mono text-[11px] font-bold uppercase">
                     M¹ · Biochemie
                   </div>
                 </div>
 
                 <div className="p-6 md:p-8 space-y-3 flex-grow flex flex-col justify-between">
                   <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-primary text-xs font-bold uppercase tracking-wider">
+                    <div className="flex items-center gap-2 text-orange-600 text-xs font-bold uppercase tracking-wider">
                       <Flame className="w-4 h-4" />
                       <span>Fundament von innen</span>
                     </div>
@@ -239,7 +373,7 @@ function UeberMichPage() {
                   <div className="pt-4 border-t border-border/70">
                     <Link
                       to="/metabolism"
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:opacity-80 transition"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-orange-600 hover:opacity-80 transition"
                     >
                       <span>M¹ Details ansehen</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -352,13 +486,13 @@ function UeberMichPage() {
                 </div>
               </div>
 
-              <div className="lg:col-span-7 order-1 lg:order-2 space-y-5">
+              <div className="lg:col-span-7 order-1 lg:order-2 space-y-5 text-left">
                 <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-gold">
                   <Activity className="w-4 h-4" />
                   <span>Kapitel 2 · Alltagstauglichkeit</span>
                 </div>
 
-                <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight">
+                <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight text-foreground">
                   Kein 20-jähriger Fitness-Influencer. Mitten im echten Leben.
                 </h2>
 
@@ -393,14 +527,73 @@ function UeberMichPage() {
           </section>
 
           {/* ---------------------------------------------------- */}
+          {/* DIE 5 UNVERRÜCKBAREN M³-WERTE */}
+          {/* ---------------------------------------------------- */}
+          <section className="rounded-3xl border border-border bg-card p-8 md:p-12 space-y-8 text-left">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-border/70 pb-6">
+              <div className="space-y-1">
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-gold">
+                  Marken-DNA & Qualitätsversprechen
+                </span>
+                <h3 className="font-display font-extrabold text-2xl md:text-4xl text-foreground">
+                  Die fünf M³-Werte
+                </h3>
+              </div>
+              <p className="text-xs sm:text-sm text-muted-foreground max-w-md">
+                Fünf Grundsätze, nach denen jede Begleitung, jedes Training und jede Beratung unverrückbar ausgerichtet ist.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+              {[
+                {
+                  title: "Eigenverantwortung",
+                  desc: "Wir begleiten dich eng – aber nehmen dir deine Verantwortung nicht ab. Coach und Kunde tragen Verantwortung für ihren Teil des gemeinsamen Weges.",
+                },
+                {
+                  title: "Ehrlichkeit",
+                  desc: "Wir sprechen Dinge direkt an. Auch dann, wenn es einmal unbequem ist. Ehrliches Feedback ist das Fundament echter Fortschritte.",
+                },
+                {
+                  title: "Authentizität",
+                  desc: "M³ braucht keinen zweiten Michel. Persönlichkeit ist erwünscht – bodenständig, menschlich und ohne künstliches Gehabe.",
+                },
+                {
+                  title: "Menschlichkeit",
+                  desc: "Vor dem Problem steht der Mensch. Lebenssituation, Familie, Arbeit, Belastungen und persönliche Hürden gehören zum Coaching dazu.",
+                },
+                {
+                  title: "Qualität",
+                  desc: "Wir empfehlen nur Maßnahmen, die einem fundierten Anspruch genügen. Kein Verkauf um des Verkaufens willen.",
+                },
+              ].map((v, i) => (
+                <div
+                  key={i}
+                  className="rounded-2xl border border-border/80 bg-secondary/30 p-5 space-y-2.5 hover:border-gold/50 transition-colors shadow-sm"
+                >
+                  <div className="w-8 h-8 rounded-xl bg-gold/15 text-gold flex items-center justify-center font-display font-bold text-xs">
+                    0{i + 1}
+                  </div>
+                  <div className="font-display font-bold text-base text-foreground">
+                    {v.title}
+                  </div>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
+                    {v.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* ---------------------------------------------------- */}
           {/* KAPITEL 3: DIE M³ COACHING-PRINZIPIEN */}
           {/* ---------------------------------------------------- */}
           <section className="space-y-10">
             <div className="text-center max-w-2xl mx-auto space-y-3">
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
-                Haltung & Werte
+                Arbeitsweise & Haltung
               </span>
-              <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight text-foreground">
                 Worauf du dich bei mir verlassen kannst.
               </h2>
               <p className="text-muted-foreground text-sm md:text-base">
@@ -408,7 +601,7 @@ function UeberMichPage() {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 gap-6 text-left">
               <div className="rounded-2xl border border-border bg-card p-6 md:p-8 space-y-3 hover:border-gold/50 transition-colors shadow-sm">
                 <div className="flex items-center gap-2.5 text-gold font-display font-bold text-lg">
                   <Target className="w-5 h-5" />
@@ -419,8 +612,8 @@ function UeberMichPage() {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-border bg-card p-6 md:p-8 space-y-3 hover:border-primary/50 transition-colors shadow-sm">
-                <div className="flex items-center gap-2.5 text-primary font-display font-bold text-lg">
+              <div className="rounded-2xl border border-border bg-card p-6 md:p-8 space-y-3 hover:border-orange-500/50 transition-colors shadow-sm">
+                <div className="flex items-center gap-2.5 text-orange-600 font-display font-bold text-lg">
                   <Flame className="w-5 h-5" />
                   <span>2. Verstehen vor Verändern</span>
                 </div>
@@ -459,12 +652,12 @@ function UeberMichPage() {
               <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
                 Meilensteine & Stationen
               </span>
-              <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight text-foreground">
                 25+ Jahre Bewegung & Performance
               </h2>
             </div>
 
-            <div className="relative max-w-4xl mx-auto space-y-4">
+            <div className="relative max-w-4xl mx-auto space-y-4 text-left">
               {[
                 {
                   year: "1995 – 2005",
@@ -521,7 +714,7 @@ function UeberMichPage() {
           {/* ---------------------------------------------------- */}
           <section className="pt-8 border-t border-border/80 text-center space-y-8">
             <div className="max-w-2xl mx-auto space-y-4">
-              <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight">
+              <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight text-foreground">
                 Lass uns über deine Ausgangslage sprechen.
               </h2>
               <p className="text-base text-muted-foreground leading-relaxed">
