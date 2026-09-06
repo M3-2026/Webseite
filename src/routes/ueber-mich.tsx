@@ -89,11 +89,11 @@ function UeberMichPage() {
               <div className="relative w-full max-w-md">
                 <div className="rounded-3xl overflow-hidden border-2 border-gold/40 shadow-[var(--shadow-gold)] bg-black/60 aspect-[4/5] relative group">
                   <img
-                    src="/images/gym-shooting/A7401490.jpg"
+                    src="/images/gym-shooting/A7401490_enhanced.jpg"
                     alt="Michél Meier – Master Personal Trainer & Gründer M³"
-                    className="w-full h-full object-cover object-[center_20%] group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent" />
                   <div className="absolute bottom-5 left-5 right-5 space-y-1 text-left">
                     <div className="font-display font-extrabold text-xl text-white">Michél Meier</div>
                     <div className="text-xs font-semibold text-gold tracking-wide">
