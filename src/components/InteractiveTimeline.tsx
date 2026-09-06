@@ -76,32 +76,34 @@ export const MILESTONES: Milestone[] = [
   {
     id: "military-1998",
     year: "1998 – 2001",
-    era: "Disziplin & Lehre",
+    era: "Disziplin & Autodidaktik",
     category: "roots",
     categoryLabel: "Jugend & Wurzeln",
-    title: "Feldjäger-Führung & Staatlich geprüfte Tanzlehrerausbildung",
+    title: "Feldjäger-Stab, Ausdauer-Durchbruch & Tanzlehrer bei Traut & Heigl",
     shortDesc:
-      "Wehrdienst bei den Feldjägern (Militärpolizei) der Bundeswehr und die fundierte 3-jährige Vollzeitausbildung bei Traut & Heigl in Heiligenhaus.",
+      "1,5 Jahre Dienst bei den Feldjägern (Stab & Kompanietrupp in Mainz), 3-km-Laufrekord von 9:56 Min. und Aufbau von 120 Tanzschülern bei Traut & Heigl.",
     image: "/images/performance/m2-bruce-lee-mastery.jpg",
-    badge: "Struktur & Pädagogik",
+    badge: "Feldjäger & Autodidakt",
     fullStory: {
       lead:
-        "Kameradschaft, Disziplin und klare Abläufe unter extremem Druck – kombiniert mit fundierter Bewegungsdidaktik, Pädagogik und funktioneller Anatomie.",
+        "Zwischen Stabsdienst im Kompanietrupp, täglichem Hochleistungssport in der Kaserne und dem Aufbau einer 120-köpfigen Tanz-Community als leidenschaftlicher Autodidakt.",
       paragraphs: [
-        "Von 1998 bis 1999 leistete ich meinen Grundwehrdienst bei den Feldjägern (Militärpolizei) der Bundeswehr. Schichtbetrieb bei Tag und Nacht, Alarmbereitschaft, Absicherung und Eskortenfahrten lehrten mich, was es bedeutet, unter mentaler und physischer Dauerbelastung die Ruhe zu bewahren und im Team bedingungslos Verantwortung zu tragen.",
-        "Direkt im Anschluss (1999–2001) zog es mich nach Nordrhein-Westfalen zur renommierten Tanzschule Traut & Heigl in Heiligenhaus. Hier absolvierte ich eine dreijährige, intensive praktische Vollzeitausbildung zum staatlich geprüften Tanzlehrer.",
-        "In dieser Phase eignete ich mir das wissenschaftliche Fundament der Bewegungslehre an: Funktionelle Anatomie, Haltungsanalysen, Rhythmusgefühl, Didaktik und die Kunst, komplexe motorische Muster so zu zerlegen, dass Menschen jeden Alters und Leistungsniveaus sie sicher und mit Begeisterung erlernen können.",
+        "Von 1998 bis 1999/2000 leistete ich 1,5 Jahre Dienst (freiwillige Wehrdienstverlängerung) bei den Feldjägern (Militärpolizei der Bundeswehr). Nach der Grundausbildung in Schwalmstadt kam ich in meine Stammeinheit nach Mainz (Kurmainz-Kaserne). Dort war ich im Stab und Kompanietrupp eingesetzt – im Geschäftszimmer an der direkten Schnittstelle zwischen Spieß und Major/Kompaniechef, zuständig für zentrale Dienstvorschriften (ZDVs), Sportabzeichen und das militärische Urkundenwesen.",
+        "Die Zeit nach Dienstschluss nutzte ich für kompromisslosen Leistungssport: Tägliches Schwimmtraining, Kraftübungen und wöchentliche 10- bis 20-km-Märsche im Wald (mit und ohne Gepäck). In der Grundausbildung lag meine 3-km-Zeit noch bei knapp 14 Minuten – durch eiserne Kontinuität steigerte ich mich in Mainz auf spektakuläre 9 Minuten und 56 Sekunden! Ich absolvierte mehrere militärische und zivile Sportabzeichen und verinnerlichte, wie drastisch der Körper auf zielgerichtete Trainingsreize reagiert.",
+        "Direkt im Anschluss (1999–2001) ging ich nach Nordrhein-Westfalen zur Tanzschule Traut & Heigl in Heiligenhaus. Als fest angestellter Tanzlehrer und reiner Autodidakt – geformt durch unzählige Workshops und unstillbaren Wissensdurst – baute ich die Hip-Hop- und Breakdance-Kurse von knapp 20 auf fast 120 Schüler auf. Ich kreierte innovative Formate wie eigene Mama-Hip-Hop-Kurse, unterrichtete Jugendliche und schärfte meine didaktische Fähigkeit, Menschen über ihre Grenzen hinaus zu begeistern.",
       ],
       highlights: [
-        "Feldjäger-Wehrdienst (Bundeswehr): Führung, Disziplin & Schichtbelastung",
-        "3-jährige Tanzlehrerausbildung bei Traut & Heigl (Heiligenhaus)",
-        "Fundierte Ausbildung in funktioneller Anatomie & Bewegungsvermittlung",
-        "Start der deutschlandweiten Workshop- und Coaching-Tätigkeit",
+        "1,5 Jahre Feldjäger (Militärpolizei): Stabsdienst & Kompanietrupp (Mainz)",
+        "Verantwortung für Sportabzeichen, ZDVs & Geschäftszimmer-Organisation",
+        "Ausdauer-Durchbruch: 3-km-Laufzeit von knapp 14 Min. auf 9:56 Min. pulverisiert",
+        "Wöchentliche 10–20 km Märsche, Schwimm- & Krafttraining nach Dienst",
+        "Angestellter Tanzlehrer & Autodidakt bei Traut & Heigl (Heiligenhaus)",
+        "Community-Explosion: Kurse von 20 auf knapp 120 Schüler aufgebaut (inkl. Mama-Hip-Hop)",
       ],
       lesson:
-        "Disziplin ist keine Einschränkung, sondern der Schlüssel zur Freiheit. Wenn deine täglichen Routinen und deine Struktur stehen, bleibst du auch im größten Alltagsstress belastbar.",
+        "Wahres Können braucht keinen starren Ausbildungstitel: Wenn eiserne militärische Disziplin, autodidaktische Leidenschaft und echte Begeisterung für Menschen zusammenkommen, wächst jedes Projekt exponentiell.",
       quote:
-        "„Wer gelernt hat, seinen eigenen Körper und Geist zu disziplinieren, kann andere Menschen mit Klarheit und echter Empathie führen.“",
+        "„Disziplin ist die Brücke zwischen deinen Zielen und deinen Ergebnissen – ob auf der 3-Kilometer-Laufbahn oder im Tanzsaal vor 120 Schülern.“",
     },
   },
   {
