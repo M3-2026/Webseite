@@ -128,7 +128,7 @@ export const MILESTONES: Milestone[] = [
     categoryLabel: "Weltmeister-Ära",
     title: "IDO Breakdance-Weltmeister & Theater Erfurt",
     shortDesc:
-      "Weltmeistertitel mit den „Da Rookies“ und renommierte Solorollen auf den großen Bühnen des Theater Erfurt.",
+      "IDO Breakdance-Weltmeistertitel mit den „Da Rookies“ und renommierte Solorollen auf den großen Bühnen des Theater Erfurt.",
     image: "/images/performance/hero-performance-1.jpg",
     badge: "Weltklasse 2006/07",
     fullStory: {
@@ -183,7 +183,7 @@ export const MILESTONES: Milestone[] = [
     title: "Bandscheibenvorfall, Schmerzen & Der Weckruf",
     shortDesc:
       "Schwerer HWS-Vorfall (C6/C7), Impingement, Darmprobleme und die fundamentale Erkenntnis: Höchstleistung scheitert ohne Fundament.",
-    image: "/images/performance/m2-never-give-up.jpg",
+    image: "/images/gym-shooting/A7401521.jpg",
     badge: "Krise & Reset",
     fullStory: {
       lead: "Als der Körper stoppte: Der schmerzhafte Zusammenbruch und die wichtigste Wende meines gesamten Lebens.",
@@ -212,7 +212,7 @@ export const MILESTONES: Milestone[] = [
     title: "90-Tage Challenge & Psychologische Modulauswertung",
     shortDesc:
       "Intensive 90-Tage Transformation, zertifizierte Berufscoachings (TÜV) und die offizielle Bestätigung höchster Durchhaltekraft.",
-    image: "/images/performance/m3-neural-blueprint.jpg",
+    image: "/images/gym-shooting/A7401576.jpg",
     badge: "Validierung & Coaching",
     fullStory: {
       lead: "Die Verschmelzung aus 25 Jahren Erfahrung, psychologischer Analyse und wissenschaftlich fundierter Ernährungs- und Trainingslehre.",
@@ -239,7 +239,7 @@ export const MILESTONES: Milestone[] = [
     title: "Gründung M³ Performance & Master Personal Training",
     shortDesc:
       "Bündelung der gesamten Lebenspraxis im M³-System: 1:1 Betreuung für schmerzfreie Belastbarkeit, Vitalität und Unabhängigkeit.",
-    image: "/images/performance/michel-portrait-blazer.jpg",
+    image: "/images/gym-shooting/A7401490.jpg",
     badge: "M³ Gründer & Master Coach",
     fullStory: {
       lead: "Mein Lebenswerk in Aktion: Menschen mitten im Leben zu echter Gesundheit, Vitalität und Autonomie führen.",

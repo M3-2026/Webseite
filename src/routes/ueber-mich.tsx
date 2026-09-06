@@ -35,10 +35,15 @@ export const Route = createFileRoute("/ueber-mich")({
 
 const HERO_PERFORMANCE_PICTURES = [
   { image: "/images/performance/hero-performance-1.jpg", alt: "Michél Meier – Breakdance World Champion Flying Freeze" },
+  { image: "/images/gym-shooting/A7401556.jpg", alt: "Michél Meier – Landmine Barbell Rotation Training" },
   { image: "/images/performance/hero-performance-2.jpg", alt: "Michél Meier – Headstand Freeze Studio" },
+  { image: "/images/gym-shooting/A7401533.jpg", alt: "Michél Meier – Functional Core Training 20kg" },
   { image: "/images/performance/hero-performance-5.jpg", alt: "Michél Meier – OBEY Cap Elbow Lever Freeze" },
+  { image: "/images/gym-shooting/A7401604.jpg", alt: "Michél Meier – Heavy Dumbbell Press 34kg" },
   { image: "/images/performance/hero-performance-3.jpg", alt: "Michél Meier – Urban Street Balance Freeze" },
+  { image: "/images/gym-shooting/A7401466.jpg", alt: "Michél Meier – Cossack Squat & Hip Mobility" },
   { image: "/images/performance/hero-performance-4.jpg", alt: "Michél Meier – Rooftop One-Arm Freeze" },
+  { image: "/images/gym-shooting/A7401490.jpg", alt: "Michél Meier – Personal Trainer & Coach" },
 ];
 
 const HERO_PERFORMANCE_PICTURES_DOUBLED = [
