@@ -142,31 +142,33 @@ export const MILESTONES: Milestone[] = [
   },
   {
     id: "worldchamp-2006",
-    year: "2006 – 2007",
+    year: "2005 – 2007",
     era: "Weltmeistertitel & Theater",
     category: "champion",
     categoryLabel: "Weltmeister-Ära",
-    title: "IDO Breakdance-Weltmeister & Solorollen am Theater Erfurt",
+    title: "Deutscher Meister, Europameister, IDO Weltmeister & Theater Erfurt",
     shortDesc:
-      "Der Weltmeistertitel mit den „Da Rookies“ und renommierte Solorollen in „Anatevka“ und „Der Feuervogel“ am Theater Erfurt.",
+      "Titel-Triple mit den „Da Rookies“, Solorollen am Theater Erfurt („Anatevka“, „Der Feuervogel“, Gounods „Faust“) und 5 Jahre UNICEF-Gala.",
     image: "/images/performance/hero-performance-1.jpg",
     badge: "Weltklasse & Kunst",
     fullStory: {
       lead:
-        "Der Traum jedes Athleten wird Wirklichkeit: Offizieller Weltmeistertitel und Standing Ovations auf den renommiertesten Bühnen Europas.",
+        "Der sportliche und künstlerische Höhepunkt: Deutscher Meister, Europameister und offizieller IDO World Champion – parallel zu Solorollen am Theater Erfurt und hochkarätigen Galashows.",
       paragraphs: [
-        "2006 schloss ich mich der Ausnahme-Formation „Da Rookies“ an – einer der stärksten und renommiertesten Breakdance-Crews Europas. In monatelangem Höchstleistungstraining perfektionierten wir Akrobatik, Kraft und synchrone Schnelligkeit.",
-        "2006/2007 dann der historische Triumph: Vor internationaler Fachjury und tausenden Zuschauern gewannen wir den offiziellen IDO Breakdance-Weltmeistertitel und setzten uns gegen die Weltspitze durch.",
-        "Parallel öffnete sich die Tür zur Hochkultur: Als fest engagierter Solist stand ich am Theater Erfurt auf der Bühne in großen Opern- und Ballettinszenierungen – darunter der Broadway-Klassiker „Anatevka“ und Igor Strawinskys Meisterwerk „Der Feuervogel“. Es folgten europaweite Tourneen, Fernsehauftritte und Galashows vor großem Publikum.",
+        "2005/2006 schloss ich mich der Ausnahme-Formation „Da Rookies“ an – einer der stärksten Breakdance-Crews Deutschlands. In monatelangem Höchstleistungstraining perfektionierten wir Akrobatik, Kraft und synchrone Schnelligkeit auf absolutem Weltklasse-Niveau.",
+        "Der sportliche Durchmarsch war historisch: Zunächst sicherten wir uns den Titel als Deutscher Meister sowie als Europameister. 2005/2006 folgte der ultimative Triumph: Vor internationaler Fachjury und tausenden Zuschauern holten wir den offiziellen IDO Breakdance-Weltmeistertitel (IDO World Champion) und setzten uns souverän gegen die weltweite Konkurrenz durch.",
+        "Parallel öffnete sich die Tür zur Hochkultur: Als fest engagierter Solist stand ich am Theater Erfurt auf der Bühne in großen Opern- und Ballettinszenierungen – darunter der Broadway-Klassiker „Anatevka“, Igor Strawinskys Meisterwerk „Der Feuervogel“, Charles Gounods Oper „Faust“ sowie weitere Theaterproduktionen.",
+        "Es folgten ausgewählte Fernsehauftritte und zahlreiche hochkarätige Gala-Veranstaltungen mit Rang und Namen – darunter 5 Jahre in Folge die renommierte UNICEF-Gala (unter der Schirmherrschaft von Heribert Klein) sowie exklusive bundesweite Bühnenformate.",
       ],
       highlights: [
-        "Offizieller IDO Breakdance-Weltmeister 2006/2007 mit den 'Da Rookies'",
-        "Solist am Theater Erfurt in 'Anatevka' und 'Strawinsky – Der Feuervogel'",
-        "Internationale Galashows, TV-Auftritte & Tourneen durch ganz Europa",
+        "Titel-Triple mit den 'Da Rookies': Deutscher Meister, Europameister & IDO World Champion (2005/2006)",
+        "Offizieller IDO Breakdance-Weltmeistertitel vor internationaler Fachjury",
+        "Solorollen am Theater Erfurt in 'Anatevka', 'Strawinsky – Der Feuervogel' & Gounods 'Faust'",
+        "5 Jahre in Folge UNICEF-Gala (unter Schirmherrschaft von Heribert Klein) & TV-Auftritte",
         "Verschmelzung von urbaner Höchstleistungs-Akrobatik und klassischem Theater",
       ],
       lesson:
-        "Unter maximalem Druck vor 2.000 Menschen gibt es keinen Konjunktiv. Nur wenn Geist und Körper eine unzerstörbare Einheit bilden, kannst du auf den Punkt Spitzenleistung abrufen.",
+        "Unter maximalem Druck vor tausenden Menschen gibt es keinen Konjunktiv. Nur wenn Geist und Körper eine unzerstörbare Einheit bilden, kannst du auf den Punkt Spitzenleistung abrufen.",
       quote:
         "„Weltmeister wirst du nicht am Tag des Wettkampfs – du wirst es an den tausenden Tagen davor im stillen Trainingsraum.“",
     },
