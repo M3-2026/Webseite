@@ -87,13 +87,13 @@ function UeberMichPage() {
             {/* Authentic Studio Portrait */}
             <div className="lg:col-span-5 flex justify-center relative">
               <div className="relative w-full max-w-md">
-                <div className="rounded-3xl overflow-hidden border-2 border-gold/40 shadow-[var(--shadow-gold)] bg-black/40 aspect-[3/5] relative group">
+                <div className="rounded-3xl overflow-hidden border-2 border-gold/40 shadow-[var(--shadow-gold)] bg-black/40 aspect-[2/3] relative group">
                   <img
                     src="/images/gym-shooting/A7401490_enhanced.jpg"
                     alt="Michél Meier – Master Personal Trainer i.A. & Gründer M³"
-                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent pointer-events-none" />
                   <div className="absolute bottom-3.5 left-3.5 right-3.5 p-3.5 rounded-2xl bg-black/65 backdrop-blur-md border border-white/10 text-left">
                     <div className="font-display font-extrabold text-base sm:text-lg text-white">Michél Meier</div>
                     <div className="text-[11px] sm:text-xs font-semibold text-gold tracking-wide">
