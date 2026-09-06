@@ -60,16 +60,11 @@ function UeberMichPage() {
     "https://wa.me/4917699016640?text=Hallo%20Mich%C3%A9l,%20ich%20habe%20deine%20Geschichte%20gelesen%20und%20m%C3%B6chte%20ein%20unverbindliches%20Orientierungsgespr%C3%A4ch%20vereinbaren.";
 
   return (
-    <div className="min-h-screen bg-background text-foreground flex flex-col justify-between overflow-x-hidden selection:bg-gold/20 selection:text-foreground">
+    <div className="min-h-screen bg-white text-foreground flex flex-col justify-between overflow-x-hidden selection:bg-gold/20 selection:text-foreground">
       <Header />
       <Breadcrumbs items={[{ label: "Über Michél Meier", pillar: "gold" }]} />
 
-      <main className="flex-grow py-12 md:py-16 relative hero-bg">
-        {/* Ambient Glow */}
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true">
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-gold/8 blur-3xl" />
-        </div>
-
+      <main className="flex-grow py-12 md:py-16 relative bg-white">
         <div className="relative max-w-6xl mx-auto px-5 md:px-6 space-y-20 md:space-y-28">
 
           {/* ---------------------------------------------------- */}
@@ -77,7 +72,7 @@ function UeberMichPage() {
           {/* ---------------------------------------------------- */}
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-7 space-y-5 sm:space-y-6 min-w-0">
-              <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-card/80 backdrop-blur px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold font-bold shadow-sm">
+              <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-white px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-gold font-bold shadow-sm">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Über Michél Meier · Gründer von M³</span>
               </div>
@@ -92,7 +87,7 @@ function UeberMichPage() {
 
               {/* Quick Key Facts Badges */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-                <div className="rounded-2xl border border-border bg-card/70 p-4 flex flex-col justify-between hover:border-gold/50 transition-colors shadow-sm">
+                <div className="rounded-2xl border border-border bg-white p-4 flex flex-col justify-between hover:border-gold/50 transition-colors shadow-sm">
                   <Trophy className="w-5 h-5 text-gold mb-2" />
                   <div>
                     <div className="font-display font-bold text-lg text-foreground">2006/07</div>
@@ -100,7 +95,7 @@ function UeberMichPage() {
                   </div>
                 </div>
 
-                <div className="rounded-2xl border border-border bg-card/70 p-4 flex flex-col justify-between hover:border-primary/50 transition-colors shadow-sm">
+                <div className="rounded-2xl border border-border bg-white p-4 flex flex-col justify-between hover:border-primary/50 transition-colors shadow-sm">
                   <Clock className="w-5 h-5 text-primary mb-2" />
                   <div>
                     <div className="font-display font-bold text-lg text-foreground">25+ Jahre</div>
@@ -108,7 +103,7 @@ function UeberMichPage() {
                   </div>
                 </div>
 
-                <div className="rounded-2xl border border-border bg-card/70 p-4 flex flex-col justify-between hover:border-emerald-600/50 transition-colors shadow-sm">
+                <div className="rounded-2xl border border-border bg-white p-4 flex flex-col justify-between hover:border-emerald-600/50 transition-colors shadow-sm">
                   <Award className="w-5 h-5 text-emerald-600 mb-2" />
                   <div>
                     <div className="font-display font-bold text-lg text-foreground">Master Trainer</div>
@@ -116,7 +111,7 @@ function UeberMichPage() {
                   </div>
                 </div>
 
-                <div className="rounded-2xl border border-border bg-card/70 p-4 flex flex-col justify-between hover:border-indigo-600/50 transition-colors shadow-sm">
+                <div className="rounded-2xl border border-border bg-white p-4 flex flex-col justify-between hover:border-indigo-600/50 transition-colors shadow-sm">
                   <ShieldCheck className="w-5 h-5 text-indigo-600 mb-2" />
                   <div>
                     <div className="font-display font-bold text-lg text-foreground">100% Autonomie</div>
@@ -145,7 +140,7 @@ function UeberMichPage() {
                 </div>
 
                 {/* Floating Micro Badge */}
-                <div className="absolute -top-4 -right-4 bg-card/90 backdrop-blur-md border border-border/80 rounded-2xl p-3 shadow-lg flex items-center gap-2.5">
+                <div className="absolute -top-4 -right-4 bg-white border border-border/80 rounded-2xl p-3 shadow-lg flex items-center gap-2.5">
                   <div className="w-8 h-8 rounded-xl bg-gold-gradient text-primary-foreground flex items-center justify-center font-display font-bold text-xs">
                     M³
                   </div>
@@ -158,7 +153,7 @@ function UeberMichPage() {
           {/* ---------------------------------------------------- */}
           {/* KAPITEL 1: DER WENDEPUNKT & SPITZENSPORT-LEKTION */}
           {/* ---------------------------------------------------- */}
-          <section className="rounded-3xl border border-border bg-card/60 p-8 md:p-12 space-y-10">
+          <section className="rounded-3xl border border-border bg-white p-8 md:p-12 space-y-10 shadow-sm">
             <div className="grid lg:grid-cols-12 gap-10 items-center">
               <div className="lg:col-span-7 space-y-5 text-left">
                 <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.25em] text-gold">
@@ -235,7 +230,7 @@ function UeberMichPage() {
             </div>
 
             {/* Video Showcase Card */}
-            <div className="rounded-3xl border border-border bg-card p-6 md:p-10 shadow-lg text-left">
+            <div className="rounded-3xl border border-border bg-white p-6 md:p-10 shadow-sm text-left">
               <div className="grid lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-5 space-y-4">
                   <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-3.5 py-1 text-xs uppercase tracking-[0.18em] text-gold font-bold">
@@ -342,7 +337,7 @@ function UeberMichPage() {
 
             <div className="grid md:grid-cols-3 gap-6 text-left">
               {/* Säule 1 Visual */}
-              <div className="rounded-3xl border border-border bg-card overflow-hidden flex flex-col justify-between hover:border-orange-500/50 transition-all duration-300 group shadow-sm hover:shadow-md">
+              <div className="rounded-3xl border border-border bg-white overflow-hidden flex flex-col justify-between hover:border-orange-500/50 transition-all duration-300 group shadow-sm hover:shadow-md">
                 <div className="relative w-full h-56 bg-black overflow-hidden">
                   <img
                     src="/images/performance/m1-cardio-vitality.jpg"
@@ -350,13 +345,13 @@ function UeberMichPage() {
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-transparent" />
                   <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-orange-500/20 backdrop-blur border border-orange-500/40 text-orange-600 font-mono text-[11px] font-bold uppercase">
                     M¹ · Biochemie
                   </div>
                 </div>
 
-                <div className="p-6 md:p-8 space-y-3 flex-grow flex flex-col justify-between">
+                <div className="p-6 md:p-8 space-y-3 flex-grow flex flex-col justify-between bg-white">
                   <div className="space-y-2">
                     <div className="flex items-center gap-2 text-orange-600 text-xs font-bold uppercase tracking-wider">
                       <Flame className="w-4 h-4" />
@@ -383,7 +378,7 @@ function UeberMichPage() {
               </div>
 
               {/* Säule 2 Visual */}
-              <div className="rounded-3xl border border-border bg-card overflow-hidden flex flex-col justify-between hover:border-emerald-600/50 transition-all duration-300 group shadow-sm hover:shadow-md">
+              <div className="rounded-3xl border border-border bg-white overflow-hidden flex flex-col justify-between hover:border-emerald-600/50 transition-all duration-300 group shadow-sm hover:shadow-md">
                 <div className="relative w-full h-56 bg-black overflow-hidden">
                   <img
                     src="/images/performance/m2-never-give-up.jpg"
@@ -391,13 +386,13 @@ function UeberMichPage() {
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-transparent" />
                   <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-emerald-600/20 backdrop-blur border border-emerald-600/40 text-emerald-700 font-mono text-[11px] font-bold uppercase">
                     M² · Biomechanik
                   </div>
                 </div>
 
-                <div className="p-6 md:p-8 space-y-3 flex-grow flex flex-col justify-between">
+                <div className="p-6 md:p-8 space-y-3 flex-grow flex flex-col justify-between bg-white">
                   <div className="space-y-2">
                     <div className="flex items-center gap-2 text-emerald-700 text-xs font-bold uppercase tracking-wider">
                       <Dumbbell className="w-4 h-4" />
@@ -424,7 +419,7 @@ function UeberMichPage() {
               </div>
 
               {/* Säule 3 Visual */}
-              <div className="rounded-3xl border border-border bg-card overflow-hidden flex flex-col justify-between hover:border-indigo-600/50 transition-all duration-300 group shadow-sm hover:shadow-md">
+              <div className="rounded-3xl border border-border bg-white overflow-hidden flex flex-col justify-between hover:border-indigo-600/50 transition-all duration-300 group shadow-sm hover:shadow-md">
                 <div className="relative w-full h-56 bg-black overflow-hidden">
                   <img
                     src="/images/performance/m3-neural-blueprint.jpg"
@@ -432,13 +427,13 @@ function UeberMichPage() {
                     className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-transparent to-transparent" />
                   <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-indigo-600/20 backdrop-blur border border-indigo-600/40 text-indigo-700 font-mono text-[11px] font-bold uppercase">
                     M³ · Mindset & System
                   </div>
                 </div>
 
-                <div className="p-6 md:p-8 space-y-3 flex-grow flex flex-col justify-between">
+                <div className="p-6 md:p-8 space-y-3 flex-grow flex flex-col justify-between bg-white">
                   <div className="space-y-2">
                     <div className="flex items-center gap-2 text-indigo-700 text-xs font-bold uppercase tracking-wider">
                       <Brain className="w-4 h-4" />
@@ -469,7 +464,7 @@ function UeberMichPage() {
           {/* ---------------------------------------------------- */}
           {/* KAPITEL 2: FÜR ECHTE MENSCHEN GEBAUT */}
           {/* ---------------------------------------------------- */}
-          <section className="rounded-3xl border border-border bg-secondary/30 p-8 md:p-12 space-y-10">
+          <section className="rounded-3xl border border-border bg-white p-8 md:p-12 space-y-10 shadow-sm">
             <div className="grid lg:grid-cols-12 gap-10 items-center">
               <div className="lg:col-span-5 order-2 lg:order-1 flex justify-center">
                 <div className="relative w-full max-w-sm rounded-3xl overflow-hidden border border-border shadow-lg bg-black group">
@@ -501,21 +496,21 @@ function UeberMichPage() {
                 </p>
 
                 <div className="grid sm:grid-cols-3 gap-4 pt-2">
-                  <div className="rounded-2xl border border-border bg-card p-4 space-y-2">
+                  <div className="rounded-2xl border border-border bg-white p-4 space-y-2 shadow-sm">
                     <div className="font-display font-extrabold text-sm text-foreground">01. Berufspraxis</div>
                     <p className="text-xs text-muted-foreground leading-relaxed">
                       Verständnis für Büroalltag, Dienstreisen, Schichtarbeit & Zeitknappheit.
                     </p>
                   </div>
 
-                  <div className="rounded-2xl border border-border bg-card p-4 space-y-2">
+                  <div className="rounded-2xl border border-border bg-white p-4 space-y-2 shadow-sm">
                     <div className="font-display font-extrabold text-sm text-foreground">02. Familienleben</div>
                     <p className="text-xs text-muted-foreground leading-relaxed">
                       Pläne, die sich nahtlos in den Familienalltag integrieren lassen.
                     </p>
                   </div>
 
-                  <div className="rounded-2xl border border-border bg-card p-4 space-y-2">
+                  <div className="rounded-2xl border border-border bg-white p-4 space-y-2 shadow-sm">
                     <div className="font-display font-extrabold text-sm text-foreground">03. Master Trainer</div>
                     <p className="text-xs text-muted-foreground leading-relaxed">
                       Fundiertes Fachwissen gepaart mit 25 Jahren Praxiserfahrung.
@@ -529,7 +524,7 @@ function UeberMichPage() {
           {/* ---------------------------------------------------- */}
           {/* DIE 5 UNVERRÜCKBAREN M³-WERTE */}
           {/* ---------------------------------------------------- */}
-          <section className="rounded-3xl border border-border bg-card p-8 md:p-12 space-y-8 text-left">
+          <section className="rounded-3xl border border-border bg-white p-8 md:p-12 space-y-8 text-left shadow-sm">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-border/70 pb-6">
               <div className="space-y-1">
                 <span className="text-xs font-mono font-bold uppercase tracking-wider text-gold">
@@ -569,7 +564,7 @@ function UeberMichPage() {
               ].map((v, i) => (
                 <div
                   key={i}
-                  className="rounded-2xl border border-border/80 bg-secondary/30 p-5 space-y-2.5 hover:border-gold/50 transition-colors shadow-sm"
+                  className="rounded-2xl border border-border bg-white p-5 space-y-2.5 hover:border-gold/50 transition-colors shadow-sm"
                 >
                   <div className="w-8 h-8 rounded-xl bg-gold/15 text-gold flex items-center justify-center font-display font-bold text-xs">
                     0{i + 1}
@@ -602,7 +597,7 @@ function UeberMichPage() {
             </div>
 
             <div className="grid sm:grid-cols-2 gap-6 text-left">
-              <div className="rounded-2xl border border-border bg-card p-6 md:p-8 space-y-3 hover:border-gold/50 transition-colors shadow-sm">
+              <div className="rounded-2xl border border-border bg-white p-6 md:p-8 space-y-3 hover:border-gold/50 transition-colors shadow-sm">
                 <div className="flex items-center gap-2.5 text-gold font-display font-bold text-lg">
                   <Target className="w-5 h-5" />
                   <span>1. Struktur statt Chaos</span>
@@ -612,7 +607,7 @@ function UeberMichPage() {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-border bg-card p-6 md:p-8 space-y-3 hover:border-orange-500/50 transition-colors shadow-sm">
+              <div className="rounded-2xl border border-border bg-white p-6 md:p-8 space-y-3 hover:border-orange-500/50 transition-colors shadow-sm">
                 <div className="flex items-center gap-2.5 text-orange-600 font-display font-bold text-lg">
                   <Flame className="w-5 h-5" />
                   <span>2. Verstehen vor Verändern</span>
@@ -622,7 +617,7 @@ function UeberMichPage() {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-border bg-card p-6 md:p-8 space-y-3 hover:border-emerald-600/50 transition-colors shadow-sm">
+              <div className="rounded-2xl border border-border bg-white p-6 md:p-8 space-y-3 hover:border-emerald-600/50 transition-colors shadow-sm">
                 <div className="flex items-center gap-2.5 text-emerald-700 font-display font-bold text-lg">
                   <ShieldCheck className="w-5 h-5" />
                   <span>3. Klarheit & echte Begleitung</span>
@@ -632,7 +627,7 @@ function UeberMichPage() {
                 </p>
               </div>
 
-              <div className="rounded-2xl border border-border bg-card p-6 md:p-8 space-y-3 hover:border-indigo-600/50 transition-colors shadow-sm">
+              <div className="rounded-2xl border border-border bg-white p-6 md:p-8 space-y-3 hover:border-indigo-600/50 transition-colors shadow-sm">
                 <div className="flex items-center gap-2.5 text-indigo-700 font-display font-bold text-lg">
                   <UserCheck className="w-5 h-5" />
                   <span>4. Ich mache mich überflüssig</span>
@@ -686,7 +681,7 @@ function UeberMichPage() {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="rounded-2xl border border-border bg-card/70 p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-gold/50 transition-all shadow-sm group"
+                  className="rounded-2xl border border-border bg-white p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-gold/50 transition-all shadow-sm group"
                 >
                   <div className="sm:w-1/3 flex items-center gap-3">
                     <span className="font-mono font-bold text-xs uppercase tracking-wider text-gold px-3 py-1 rounded-full bg-gold/10 inline-block">
@@ -735,7 +730,7 @@ function UeberMichPage() {
               <Link
                 to="/"
                 hash="system"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-border bg-card px-8 py-4 font-semibold text-foreground hover:bg-secondary transition-all"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-border bg-white px-8 py-4 font-semibold text-foreground hover:bg-slate-50 transition-all shadow-sm"
               >
                 <span>Das M³-System ansehen</span>
                 <ArrowRight className="w-4 h-4" />

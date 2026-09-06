@@ -158,7 +158,7 @@ export function PathwayCrossNav({
   };
 
   return (
-    <section className="py-12 md:py-16 border-t border-border/80 bg-secondary/15">
+    <section className="py-12 md:py-16 border-t border-border/80 bg-white">
       <div className="max-w-7xl mx-auto px-5 md:px-6 space-y-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-border/60 pb-6 text-left">
           <div>
@@ -175,7 +175,7 @@ export function PathwayCrossNav({
           <div className="flex items-center gap-3 shrink-0">
             <Link
               to="/sitemap"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-700 hover:text-amber-600 transition bg-card border border-amber-500/30 px-3.5 py-2 rounded-full shadow-sm"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-700 hover:text-amber-600 transition bg-white border border-amber-500/30 px-3.5 py-2 rounded-full shadow-sm"
             >
               <span>Alle Module im Verzeichnis</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -194,11 +194,11 @@ export function PathwayCrossNav({
               <Link
                 key={idx}
                 to={item.href}
-                className={`rounded-3xl border p-6 flex flex-col justify-between shadow-sm transition-all hover:scale-[1.02] hover:shadow-lg text-left group ${borderClass}`}
+                className={`rounded-3xl border bg-white p-6 flex flex-col justify-between shadow-sm transition-all hover:scale-[1.02] hover:shadow-lg text-left group ${borderClass}`}
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className={`text-[10px] font-mono uppercase tracking-wider font-bold px-2.5 py-0.5 rounded-full bg-secondary/80 border border-border/70 ${textClass}`}>
+                    <span className={`text-[10px] font-mono uppercase tracking-wider font-bold px-2.5 py-0.5 rounded-full bg-slate-50 border border-border/70 ${textClass}`}>
                       {item.tag}
                     </span>
                     <ArrowRight className={`w-4 h-4 transition-transform group-hover:translate-x-1 ${textClass}`} />

@@ -7,7 +7,7 @@ const WHATSAPP_URL =
 
 export function Footer() {
   return (
-    <footer className="border-t border-border/80 bg-card/70 pt-16 pb-12 transition-colors text-left">
+    <footer className="border-t border-border/80 bg-white pt-16 pb-12 transition-colors text-left">
       <div className="max-w-7xl mx-auto px-5 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-border/60">
           {/* Brand & Claim */}
