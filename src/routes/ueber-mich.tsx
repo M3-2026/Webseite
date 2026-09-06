@@ -4,8 +4,8 @@ import {
   Award,
   ShieldCheck,
   Target,
-  Flame,
   Clock,
+  Sparkles,
   UserCheck,
   HeartHandshake,
 } from "lucide-react";
