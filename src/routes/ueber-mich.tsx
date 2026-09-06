@@ -25,6 +25,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { PathwayCrossNav } from "@/components/PathwayCrossNav";
+import { InteractiveTimeline } from "@/components/InteractiveTimeline";
 
 export const Route = createFileRoute("/ueber-mich")({
   component: UeberMichPage,
@@ -640,69 +641,9 @@ function UeberMichPage() {
           </section>
 
           {/* ---------------------------------------------------- */}
-          {/* MEILENSTEINE / TIMELINE */}
+          {/* INTERAKTIVE HORIZONTALE TIMELINE MIT DETAIL-POPUPS */}
           {/* ---------------------------------------------------- */}
-          <section className="space-y-10">
-            <div className="text-center max-w-2xl mx-auto space-y-3">
-              <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
-                Meilensteine & Stationen
-              </span>
-              <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight text-foreground">
-                25+ Jahre Bewegung & Performance
-              </h2>
-            </div>
-
-            <div className="relative max-w-4xl mx-auto space-y-4 text-left">
-              {[
-                {
-                  year: "1995 – 2005",
-                  tag: "Fundament",
-                  title: "Frühe Leidenschaft & Erste Lehrtätigkeit",
-                  desc: "Einstieg in Breakdance & Hip Hop mit 12 Jahren, erste Unterrichtstätigkeit mit 15 Jahren, Mitbegründer der 'Nasty Stylistix' (Thüringenmeister) und Bühnenprojekte mit Künstlern wie Clueso.",
-                },
-                {
-                  year: "2006 / 2007",
-                  tag: "Weltklasse",
-                  title: "IDO Breakdance World Champion",
-                  desc: "Weltmeistertitel mit den 'Da Rookies', internationale Meisterschaften, Solist am Theater Erfurt ('Anatevka', 'Strawinsky – Der Feuervogel') und europaweite Workshops.",
-                },
-                {
-                  year: "2012 – 2021",
-                  tag: "Dozentur & Reha",
-                  title: "Tanzdozent, Choreograf & Projektleiter",
-                  desc: "Leitung internationaler Tanzprojekte in Deutschland, Frankreich und den Niederlanden, Schirmherr sozialer Jugendinitiativen und Vertiefung präventiver Bewegungsmuster.",
-                },
-                {
-                  year: "2024 – Heute",
-                  tag: "Ganzheitlichkeit",
-                  title: "M³ Performance & Personal Training",
-                  desc: "Bündelung von 25 Jahren Praxiserfahrung in das modulare M³-System (Metabolism, Movement, Mental) und kontinuierliche Weiterbildung im Rahmen der Master Personal Trainer Ausbildung.",
-                },
-              ].map((item, index) => (
-                <div
-                  key={index}
-                  className="rounded-2xl border border-border bg-white p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-gold/50 transition-all shadow-sm group"
-                >
-                  <div className="sm:w-1/3 flex items-center gap-3">
-                    <span className="font-mono font-bold text-xs uppercase tracking-wider text-gold px-3 py-1 rounded-full bg-gold/10 inline-block">
-                      {item.year}
-                    </span>
-                    <span className="text-[10px] uppercase font-bold text-muted-foreground tracking-widest">
-                      {item.tag}
-                    </span>
-                  </div>
-                  <div className="sm:w-2/3 space-y-1">
-                    <h4 className="font-display font-bold text-base text-foreground group-hover:text-gold transition-colors">
-                      {item.title}
-                    </h4>
-                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                      {item.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
+          <InteractiveTimeline />
 
           {/* ---------------------------------------------------- */}
           {/* BOTTOM CTA */}
