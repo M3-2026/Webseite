@@ -109,32 +109,35 @@ export const MILESTONES: Milestone[] = [
   {
     id: "pro-2001",
     year: "2001 – 2005",
-    era: "Profitanz & Masterclasses",
+    era: "Szene-Aufbau & BOTY",
     category: "champion",
     categoryLabel: "Weltmeister-Ära",
-    title: "Tanzfabrik Erfurt, Battle of the Year & Internationale Masterclasses",
+    title: "Tanzfabrik Erfurt, Nasty Stylistix & Battle of the Year National",
     shortDesc:
-      "Dozent an der Tanzfabrik Erfurt, nationale Meisterschaften und Meisterkurse mit Weltstars von Britney Spears bis Justin Timberlake.",
+      "Aufbau vieler Nachwuchstänzer in Thüringen, Crew-Gründung mit DJ Nasty, Platz 7 beim Battle of the Year Germany und bundesweite Hip-Hop-Jams.",
     image: "/images/performance/hero-performance-2.jpg",
-    badge: "Hochleistung & Elite",
+    badge: "Szene-Pionier & BOTY",
     fullStory: {
       lead:
-        "Tägliches Ausreizen der menschlichen Leistungsgrenzen, Hunderte Schüler und der direkte Austausch mit den besten Choreografen des Planeten.",
+        "Über viele Jahre die urbane Tanzszene in Thüringen geprägt – mit ehrlichem Training, starker Mindset-Arbeit und dem Durchbruch zur Deutschen Meisterschaft.",
       paragraphs: [
-        "Nach meiner Ausbildung kehrte ich nach Erfurt zurück und wurde fester Dozent an der renommierten „Tanzfabrik Erfurt“. Über viele Jahre bildete ich hunderte Tänzer, Jugendliche und Nachwuchstalente aus und etablierte Thüringen als festen Punkt auf der deutschen Urban-Dance-Landkarte.",
-        "Gleichzeitig trainierten wir mit den „Nasty Stylistix“ bis zur physischen Erschöpfung. 2005 gelang uns der Durchbruch beim nationalen Vorentscheid des legendären „Battle of the Year“ (der inoffiziellen Weltmeisterschaft der Breakdance-Crews) mit einer Top-Platzierung.",
-        "Um meine eigene Leistungsfähigkeit auf internationales Niveau zu heben, saugte ich jedes Wissen auf: Ich absolvierte Masterclasses und intensives Coaching bei Ikonen der globalen Tanz- und Performance-Welt – darunter Breakdance-Legende Storm (Niels Robitzky), Marco da Silva (No Angels), Marvin A. Smith (Britney Spears), Marty Kudelka (Chef-Choreograf von Justin Timberlake) und US-Pionier Dante Harper.",
+        "Nach meiner Zeit in NRW kehrte ich nach Erfurt zurück und wurde Dozent an der Tanzfabrik Erfurt. Über viele Jahre bildete ich zahlreiche Tänzer, Jugendliche und Nachwuchstalente aus und leistete damit kontinuierliche Aufbauarbeit für die urbane Tanzkultur in ganz Thüringen.",
+        "Gemeinsam mit dem heutigen DJ Nasty gründete und formte ich die „Nasty Stylistix“. Wir verbanden schweißtreibendes Training mit intensiver mentaler Vorbereitung (Mindset-Arbeit) und tourten durch ganz Deutschland auf unzählige Hip-Hop-Jams, um uns mit der Szene zu vernetzen und Erfahrungen zu sammeln.",
+        "2005 folgte der große sportliche Meilenstein: Beim Vorentscheid „Battle of the East“ holten wir den Sieg und qualifizierten uns für das renommierte „Battle of the Year Germany“ (die inoffizielle Deutsche Meisterschaft der Breakdance-Crews). Vor großem Publikum erkämpften wir uns einen starken 7. Platz unter den besten 16 Crews des Landes.",
+        "In dieser Ära nutzte ich jede Gelegenheit, um mich auf Workshops bei Pionieren der Szene weiterzuentwickeln – unter anderem verbrachte ich wertvolle Trainingszeit mit Breakdance-Legende Niels Robitzky (Storm), Marco da Silva und weiteren internationalen Dozenten.",
       ],
       highlights: [
-        "Leitender Dozent an der Tanzfabrik Erfurt (Hunderte Absolventen)",
-        "Erfolgreiche Platzierung beim Battle of the Year National 2005",
-        "Masterclasses mit Storm, Marvin A. Smith (Britney Spears) & Marty Kudelka (Justin Timberlake)",
-        "Perfektionierung von Athletik, Kraftausdauer und Höchstleistungs-Choreografie",
+        "Dozent an der Tanzfabrik Erfurt: Ausbildung vieler Tänzer & Talente in Thüringen",
+        "Gründung & Aufbau der 'Nasty Stylistix' gemeinsam mit DJ Nasty",
+        "Bundesweite Hip-Hop-Jams, Szene-Vernetzung & intensives Mindset-Training",
+        "Sieg beim 'Battle of the East' & Qualifikation zum Battle of the Year National 2005",
+        "Platz 7 bei den inoffiziellen Deutschen Meisterschaften (BOTY Germany 2005)",
+        "Workshops & Austausch mit Legenden wie Niels Robitzky (Storm) & Marco da Silva",
       ],
       lesson:
-        "Wahre Spitzenleistung entsteht niemals durch Zufall. Sie ist das Resultat der bedingungslosen Wiederholung der Grundlagen, bis jede Faser deines Körpers automatisch reagiert.",
+        "Wahre Leistung entsteht durch Kontinuität und echte Gemeinschaft. Wer eine Kultur vorantreibt, hart an sich arbeitet und offen von den Besten lernt, setzt nachhaltige Meilensteine.",
       quote:
-        "„Von den weltbesten Coaches habe ich gelernt: Erst wenn die Grundlagen absolut perfekt sitzen, entsteht echte Magie auf der Bühne.“",
+        "„Es ging uns nie um Selbstdarstellung – es ging um ehrliches Training, echten Zusammenhalt und die pure Leidenschaft für die Bewegung.“",
     },
   },
   {
@@ -171,26 +174,28 @@ export const MILESTONES: Milestone[] = [
   {
     id: "projects-2008",
     year: "2008 – 2015",
-    era: "Choreografie & Vaterschaft",
+    era: "Air4Day & Vaterschaft",
     category: "roots",
     categoryLabel: "Jugend & Wurzeln",
-    title: "Internationale Großprojekte & Das Leben als alleinerziehender Vater",
+    title: "10 Jahre „Air4Day“, Ausbildungs-Module & Alleinerziehender Vater",
     shortDesc:
-      "Leitung von Kultur- und Jugendprojekten („Air4Day“, „De-Light-House“) und die größte persönliche Bewährungsprobe des Lebens.",
+      "Initiator von 13 Ausgaben des „Air4Day“, die innovative „Air4Day Station“ mit Top-Dozenten (Breakletics, Break Anatomy) und Meisterschaft als alleinerziehender Vater.",
     image: "/images/performance/hero-performance-5.jpg",
-    badge: "Führung & Familie",
+    badge: "Air4Day & Familie",
     fullStory: {
       lead:
-        "Internationale Events mit tausenden Teilnehmern organisieren – und gleichzeitig als alleinerziehender Vater das Leben eines Kleinkinds meistern.",
+        "10 Jahre Herzblut für 13 Ausgaben des „Air4Day“ und Bildungs-Wochenenden – und gleichzeitig als alleinerziehender Vater das Leben eines Kleinkinds meistern.",
       paragraphs: [
-        "In dieser Schaffensphase konzipierte, choreografierte und leitete ich internationale Großprojekte wie „Air4Day meets Kingz Of The Circle“, „De-Light-House“ und „DLH 2.0 Streetskillz“. Zudem leitete ich bilaterale Austauschprogramme mit Frankreich (Picardie) und den Niederlanden (Den Haag) und engagierte mich als Schirmherr für benachteiligte Jugendliche.",
+        "Über 10 Jahre hinweg (mit insgesamt 13 erfolgreichen Groß-Events bis 2019) rief ich das überregional bekannte Urban-Dance-Format „Air4Day“ und „Kingz Of The Circle“ ins Leben. Mit der eigens entwickelten „Air4Day Station“ schuf ich ein intensives Ausbildungs-Wochenende mit praxisnahen Fachmodulen für Tänzer und Athleten.",
+        "Dafür holte ich renommierte Pioniere nach Thüringen – darunter Peter Sowinski (Entwickler des weltweiten Trainingskonzepts Breakletics) sowie Sebastian Kim Jung Ung (engagierter Tänzer aus Köln und Initiator der „Break Anatomy“ an der Tanzhochschule Köln). Zudem leitete ich bilaterale Austauschprogramme mit Frankreich (Picardie) und den Niederlanden (Den Haag) und engagierte mich als Schirmherr für benachteiligte Jugendliche.",
         "Doch mitten in dieser intensiven Phase stellte das Leben mir die größte Prüfung: Als meine Tochter gerade einmal ein Jahr alt war, trennte sich ihre Mutter und verließ unsere Familie. Von einer Sekunde auf die andere war ich alleinerziehender Vater eines Kleinkinds.",
         "Es folgten Jahre des extremen Spagats: Zwischen Windeln wechseln, Brei kochen, schlaflosen Nächten, Kindergartenorganisation, Schichtbetrieb und internationalen Projektfristen gab es kein Netz und keinen doppelten Boden. Diese Jahre ohne Ausreden haben mein Verständnis von alltagstauglicher Organisation und echter Belastbarkeit für immer geprägt.",
       ],
       highlights: [
-        "Projektleitung & Moderation von 'Air4Day' & 'Kingz Of The Circle'",
+        "10 Jahre & 13 Ausgaben des 'Air4Day' & 'Kingz Of The Circle' (bis 2019)",
+        "'Air4Day Station': Fachausbildungs-Wochenenden mit innovativen Modulen",
+        "Kooperationen mit Peter Sowinski (Breakletics) & Sebastian Kim Jung Ung (Break Anatomy)",
         "Bilaterale Jugendaustauschprogramme (Deutschland, Frankreich, Niederlande)",
-        "Schirmherrschaft & Integrationsarbeit für benachteiligte Jugendliche",
         "Volle Verantwortung und Meisterschaft als alleinerziehender Vater ab dem 1. Lebensjahr",
       ],
       lesson:
