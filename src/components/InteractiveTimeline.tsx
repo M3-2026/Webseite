@@ -41,30 +41,33 @@ export const MILESTONES: Milestone[] = [
   {
     id: "roots-1995",
     year: "1995 – 1998",
-    era: "Wurzeln & Anfänge",
+    era: "Wurzeln & Schicksale",
     category: "roots",
     categoryLabel: "Jugend & Wurzeln",
     title: "Frühe Schicksale, Breakdance & Erste Verantwortung",
     shortDesc:
-      "Mit 12 Jahren Entdeckung des Tanzsports. Schwere Verluste in jungen Jahren und der Beginn einer lebenslangen Leidenschaft.",
+      "Vom 12-jährigen Breakdance-Pionier auf Pappe und Beton über frühe familiäre Schicksalsschläge bis zum ersten Thüringer Jugendmusical mit Clueso.",
     image: "/images/performance/hero-performance-3.jpg",
-    badge: "Fundament & Passion",
+    badge: "Wurzeln & Leidenschaft",
     fullStory: {
-      lead: "Meine Reise begann nicht im Glanz, sondern mitten im echten Leben und mit frühen, prägenden Prüfungen.",
+      lead:
+        "Meine Reise begann nicht mit perfekten Trainingsplänen, sondern auf rauem Beton – und mit harten Prüfungen, die mich zwangen, früh erwachsen zu werden.",
       paragraphs: [
-        "Mit 12 Jahren entdeckte ich meine Leidenschaft für Hip Hop und Breakdance. Doch die Jugend war von schweren Verlusten geprägt: Mit 14 Jahren verlor ich meinen Vater innerhalb weniger Monate an Krebs. Kurz darauf verstarben mein Opa und meine Oma. Meine Großmutter lebte zuvor bei uns – erkrankt an Alzheimer. Als 15-Jähriger hatte ich sie nachts bei mir im Zimmer und erklärte ihr oft stundenlang, wer ich bin.",
-        "1996 überlebte ich mit Freunden nur knapp einen schweren Autounfall mit mehrfachem Überschlag. Doch das Tanzen gab mir Halt, Fokus und Richtung: Mit 15 Jahren stand ich bereits als Tanzlehrer auf der Fläche und wirkte im ersten Thüringer Jugend-Musical „Crazy Town“ (u.a. mit Clueso und VIVA-Moderatorin Janine Reinhard) mit.",
-        "1997 war ich Mitbegründer der legendären Formation „Nasty Stylistix“, mit der wir bereits 1998 Thüringenmeister im Breakdance wurden.",
+        "Mit 12 Jahren infizierte mich das Breakdance-Fieber. Es waren die 90er: Pappkartons auf dem Asphalt, scheppernde Kassettenrekorder, endlose Versuche, die Gesetze der Schwerkraft zu überlisten. Die Bewegung war mein Ventil, mein kreativer Ausdruck und mein sicherer emotionaler Hafen.",
+        "Doch die Jugend hielt brutale Lektionen bereit: Mit nur 14 Jahren verlor ich meinen geliebten Vater innerhalb weniger Monate an den Krebs – von heute auf morgen fehlte der wichtigste Anker. Kurz darauf verstarben auch mein Großvater und meine Großmutter. Meine Oma lebte zuvor bei uns im Haus, schwer an Alzheimer erkrankt. Als 15-Jähriger saß ich nachts unzählige Stunden an ihrem Bett und erklärte ihr mit unendlicher Geduld, wer ich bin und dass sie in Sicherheit ist.",
+        "1996 überlebte ich gemeinsam mit Freunden einen schweren Autounfall mit mehrfachem Überschlag wie durch ein Wunder. Doch statt zu verzweifeln, schwor ich mir: Ich nutze jeden einzelnen Tag. Mit 15 Jahren stand ich bereits selbst als Tanzlehrer auf der Fläche und wirkte im ersten Thüringer Jugend-Musical „Crazy Town“ (an der Seite des damals noch jungen Clueso und der späteren VIVA-Moderatorin Janine Reinhard) mit.",
+        "1997 gründete ich mit Freunden die Breakdance-Formation „Nasty Stylistix“, mit der wir bereits 1998 den Titel als Thüringenmeister holten und die ostdeutsche Szene aufmischten.",
       ],
       highlights: [
-        "Einstieg in den Tanzsport mit 12 Jahren",
-        "Erste Lehrtätigkeit als Tanzlehrer mit 15 Jahren",
-        "Musical 'Crazy Town' mit Clueso & Janine Reinhard",
-        "Mitbegründer der 'Nasty Stylistix' (Thüringenmeister 1998)",
+        "Erste Schritte im Breakdance & Hip Hop mit 12 Jahren auf der Straße",
+        "Mit 15 Jahren bereits erste Lehrtätigkeit als Tanzlehrer",
+        "Ensemble-Mitglied im 1. Thüringer Jugendmusical 'Crazy Town' (mit Clueso)",
+        "Mitbegründer der 'Nasty Stylistix' & Thüringenmeister 1998",
       ],
       lesson:
-        "Frühe Verluste und Schicksalsschläge lehren dich: Niemand rettet dich. Du musst selbst Verantwortung für dein Leben und deinen Weg übernehmen.",
-      quote: "„Schicksalsschläge formen den Charakter – die Bewegung gab mir den Fokus, den ich brauchte.“",
+        "Schwere Schicksale und Verluste nehmen dir die Illusion, dass dich irgendjemand rettet. Du lernst früh: Wenn du dein Leben und deine Energie nicht selbst in die Hand nimmst, tut es niemand für dich.",
+      quote:
+        "„Die Bewegung hat mich in den dunkelsten Stunden gehalten – dort habe ich gelernt, was unbändiger Wille und Selbstverantwortung wirklich bedeuten.“",
     },
   },
   {
@@ -73,25 +76,29 @@ export const MILESTONES: Milestone[] = [
     era: "Disziplin & Lehre",
     category: "roots",
     categoryLabel: "Jugend & Wurzeln",
-    title: "Feldjäger-Disziplin & Tanzlehrerausbildung",
+    title: "Feldjäger-Führung & Staatlich geprüfte Tanzlehrerausbildung",
     shortDesc:
-      "Wehrdienst bei den Feldjägern der Bundeswehr und die fundierte Ausbildung zum staatlich geprüften Tanzlehrer.",
+      "Wehrdienst bei den Feldjägern (Militärpolizei) der Bundeswehr und die fundierte 3-jährige Vollzeitausbildung bei Traut & Heigl in Heiligenhaus.",
     image: "/images/performance/m2-bruce-lee-mastery.jpg",
-    badge: "Struktur & Führung",
+    badge: "Struktur & Pädagogik",
     fullStory: {
-      lead: "Struktur statt Chaos: Hier lernte ich, wie entscheidend klare Abläufe und mentale Disziplin für den Erfolg sind.",
+      lead:
+        "Kameradschaft, Disziplin und klare Abläufe unter extremem Druck – kombiniert mit fundierter Bewegungsdidaktik, Pädagogik und funktioneller Anatomie.",
       paragraphs: [
-        "Von 1998 bis 1999 leistete ich meinen Wehrdienst bei den Feldjägern (Militärpolizei) der Bundeswehr. Diese Zeit prägte mein Verständnis für Führung, absolute Zuverlässigkeit, Schichtbelastung und Teamkoordination unter Druck nachhaltig.",
-        "Direkt im Anschluss (1999–2001) absolvierte ich meine praktische Tanzlehrerausbildung bei Traut & Heigl in Heiligenhaus. Neben sportlicher Hochleistung lernte ich hier Didaktik, Biomechanik und die Kunst, komplexe Bewegungsabläufe verständlich und motivierend zu vermitteln.",
+        "Von 1998 bis 1999 leistete ich meinen Grundwehrdienst bei den Feldjägern (Militärpolizei) der Bundeswehr. Schichtbetrieb bei Tag und Nacht, Alarmbereitschaft, Absicherung und Eskortenfahrten lehrten mich, was es bedeutet, unter mentaler und physischer Dauerbelastung die Ruhe zu bewahren und im Team bedingungslos Verantwortung zu tragen.",
+        "Direkt im Anschluss (1999–2001) zog es mich nach Nordrhein-Westfalen zur renommierten Tanzschule Traut & Heigl in Heiligenhaus. Hier absolvierte ich eine dreijährige, intensive praktische Vollzeitausbildung zum staatlich geprüften Tanzlehrer.",
+        "In dieser Phase eignete ich mir das wissenschaftliche Fundament der Bewegungslehre an: Funktionelle Anatomie, Haltungsanalysen, Rhythmusgefühl, Didaktik und die Kunst, komplexe motorische Muster so zu zerlegen, dass Menschen jeden Alters und Leistungsniveaus sie sicher und mit Begeisterung erlernen können.",
       ],
       highlights: [
-        "Wehrdienst bei den Feldjägern der Bundeswehr (Führung & Disziplin)",
-        "Tanzlehrerausbildung bei Traut & Heigl (Didaktik & Unterrichtspraxis)",
-        "Erste eigene Kurse und Workshops in ganz Deutschland",
+        "Feldjäger-Wehrdienst (Bundeswehr): Führung, Disziplin & Schichtbelastung",
+        "3-jährige Tanzlehrerausbildung bei Traut & Heigl (Heiligenhaus)",
+        "Fundierte Ausbildung in funktioneller Anatomie & Bewegungsvermittlung",
+        "Start der deutschlandweiten Workshop- und Coaching-Tätigkeit",
       ],
       lesson:
-        "Disziplin ist keine Strafe, sondern das Fundament für Freiheit, physische Belastbarkeit und dauerhafte Höchstleistung.",
-      quote: "„Wer in schwierigen Situationen Ruhe bewahrt, behält die Kontrolle über seinen Körper und sein Ziel.“",
+        "Disziplin ist keine Einschränkung, sondern der Schlüssel zur Freiheit. Wenn deine täglichen Routinen und deine Struktur stehen, bleibst du auch im größten Alltagsstress belastbar.",
+      quote:
+        "„Wer gelernt hat, seinen eigenen Körper und Geist zu disziplinieren, kann andere Menschen mit Klarheit und echter Empathie führen.“",
     },
   },
   {
@@ -100,24 +107,29 @@ export const MILESTONES: Milestone[] = [
     era: "Profitanz & Masterclasses",
     category: "champion",
     categoryLabel: "Weltmeister-Ära",
-    title: "Tanzfabrik Erfurt & Masterclasses mit Weltstars",
+    title: "Tanzfabrik Erfurt, Battle of the Year & Internationale Masterclasses",
     shortDesc:
-      "Profitänzer, Battle of the Year National und Meisterkurse mit internationalen Ikonen von Britney Spears bis Justin Timberlake.",
+      "Dozent an der Tanzfabrik Erfurt, nationale Meisterschaften und Meisterkurse mit Weltstars von Britney Spears bis Justin Timberlake.",
     image: "/images/performance/hero-performance-2.jpg",
-    badge: "Athletik & Perfektion",
+    badge: "Hochleistung & Elite",
     fullStory: {
-      lead: "Tägliches kompromissloses Training, nationale Meisterschaften und der intensive Austausch mit der Weltelite des Tanzes.",
+      lead:
+        "Tägliches Ausreizen der menschlichen Leistungsgrenzen, Hunderte Schüler und der direkte Austausch mit den besten Choreografen des Planeten.",
       paragraphs: [
-        "Als fester Dozent an der Tanzfabrik Erfurt bildete ich Hunderte Tänzer aus und vertiefte meine eigene Athletik. 2005 platzierten wir uns mit den „Nasty Stylistix“ beim nationalen Battle of the Year.",
-        "Gleichzeitig nutzte ich jede Gelegenheit, um von den besten Dozenten der Welt zu lernen: Masterclasses mit Breakdance-Legende Storm, Marco da Silva (No Angels), Marvin A. Smith (Britney Spears), Marty Kudelka (Justin Timberlake) und Dante Harper (Streetstyle).",
+        "Nach meiner Ausbildung kehrte ich nach Erfurt zurück und wurde fester Dozent an der renommierten „Tanzfabrik Erfurt“. Über viele Jahre bildete ich hunderte Tänzer, Jugendliche und Nachwuchstalente aus und etablierte Thüringen als festen Punkt auf der deutschen Urban-Dance-Landkarte.",
+        "Gleichzeitig trainierten wir mit den „Nasty Stylistix“ bis zur physischen Erschöpfung. 2005 gelang uns der Durchbruch beim nationalen Vorentscheid des legendären „Battle of the Year“ (der inoffiziellen Weltmeisterschaft der Breakdance-Crews) mit einer Top-Platzierung.",
+        "Um meine eigene Leistungsfähigkeit auf internationales Niveau zu heben, saugte ich jedes Wissen auf: Ich absolvierte Masterclasses und intensives Coaching bei Ikonen der globalen Tanz- und Performance-Welt – darunter Breakdance-Legende Storm (Niels Robitzky), Marco da Silva (No Angels), Marvin A. Smith (Britney Spears), Marty Kudelka (Chef-Choreograf von Justin Timberlake) und US-Pionier Dante Harper.",
       ],
       highlights: [
-        "Platzierung beim Battle of the Year National",
-        "Masterclasses mit Storm, Marvin A. Smith, Marty Kudelka",
-        "Dozent an der Tanzfabrik Erfurt für hunderte Schüler",
+        "Leitender Dozent an der Tanzfabrik Erfurt (Hunderte Absolventen)",
+        "Erfolgreiche Platzierung beim Battle of the Year National 2005",
+        "Masterclasses mit Storm, Marvin A. Smith (Britney Spears) & Marty Kudelka (Justin Timberlake)",
+        "Perfektionierung von Athletik, Kraftausdauer und Höchstleistungs-Choreografie",
       ],
       lesson:
-        "Wahre Meisterschaft entsteht durch bedingungslose Präzision in den Grundlagen – Technik schlägt immer bloße Kraft.",
+        "Wahre Spitzenleistung entsteht niemals durch Zufall. Sie ist das Resultat der bedingungslosen Wiederholung der Grundlagen, bis jede Faser deines Körpers automatisch reagiert.",
+      quote:
+        "„Von den weltbesten Coaches habe ich gelernt: Erst wenn die Grundlagen absolut perfekt sitzen, entsteht echte Magie auf der Bühne.“",
     },
   },
   {
@@ -126,25 +138,29 @@ export const MILESTONES: Milestone[] = [
     era: "Weltmeistertitel & Theater",
     category: "champion",
     categoryLabel: "Weltmeister-Ära",
-    title: "IDO Breakdance-Weltmeister & Theater Erfurt",
+    title: "IDO Breakdance-Weltmeister & Solorollen am Theater Erfurt",
     shortDesc:
-      "IDO Breakdance-Weltmeistertitel mit den „Da Rookies“ und renommierte Solorollen auf den großen Bühnen des Theater Erfurt.",
+      "Der Weltmeistertitel mit den „Da Rookies“ und renommierte Solorollen in „Anatevka“ und „Der Feuervogel“ am Theater Erfurt.",
     image: "/images/performance/hero-performance-1.jpg",
-    badge: "Weltklasse 2006/07",
+    badge: "Weltklasse & Kunst",
     fullStory: {
-      lead: "Der Höhepunkt jahrelangen Trainings: Weltmeister auf internationaler Bühne und gefeierte Theaterproduktionen.",
+      lead:
+        "Der Traum jedes Athleten wird Wirklichkeit: Offizieller Weltmeistertitel und Standing Ovations auf den renommiertesten Bühnen Europas.",
       paragraphs: [
-        "Mit den „Da Rookies“ erreichten wir den absoluten Zenit: 2006/2007 gewannen wir den IDO Breakdance-Weltmeistertitel und setzten uns gegen die stärkste internationale Konkurrenz durch.",
-        "Parallel stand ich als Solist auf den renommiertesten Theaterbühnen – unter anderem am Theater Erfurt in Meisterwerken wie „Anatevka“ und „Strawinsky – Der Feuervogel“. Es folgten TV-Auftritte, internationale Meisterkurse und Showacts vor tausenden Zuschauern in ganz Europa.",
+        "2006 schloss ich mich der Ausnahme-Formation „Da Rookies“ an – einer der stärksten und renommiertesten Breakdance-Crews Europas. In monatelangem Höchstleistungstraining perfektionierten wir Akrobatik, Kraft und synchrone Schnelligkeit.",
+        "2006/2007 dann der historische Triumph: Vor internationaler Fachjury und tausenden Zuschauern gewannen wir den offiziellen IDO Breakdance-Weltmeistertitel und setzten uns gegen die Weltspitze durch.",
+        "Parallel öffnete sich die Tür zur Hochkultur: Als fest engagierter Solist stand ich am Theater Erfurt auf der Bühne in großen Opern- und Ballettinszenierungen – darunter der Broadway-Klassiker „Anatevka“ und Igor Strawinskys Meisterwerk „Der Feuervogel“. Es folgten europaweite Tourneen, Fernsehauftritte und Galashows vor großem Publikum.",
       ],
       highlights: [
-        "IDO World Champion 2006/2007 mit den 'Da Rookies'",
-        "Solist am Theater Erfurt ('Anatevka', 'Strawinsky – Der Feuervogel')",
-        "Internationale Shows und TV-Produktionen in ganz Europa",
+        "Offizieller IDO Breakdance-Weltmeister 2006/2007 mit den 'Da Rookies'",
+        "Solist am Theater Erfurt in 'Anatevka' und 'Strawinsky – Der Feuervogel'",
+        "Internationale Galashows, TV-Auftritte & Tourneen durch ganz Europa",
+        "Verschmelzung von urbaner Höchstleistungs-Akrobatik und klassischem Theater",
       ],
       lesson:
-        "Auf Weltklasse-Niveau entscheidet nicht nur körperliche Fitness, sondern absolute Nervenstärke, mentale Klarheit und Teamführung auf den Punkt.",
-      quote: "„Auf der Bühne vor 2.000 Menschen gibt es keinen zweiten Versuch. Du musst im Moment abliefern.“",
+        "Unter maximalem Druck vor 2.000 Menschen gibt es keinen Konjunktiv. Nur wenn Geist und Körper eine unzerstörbare Einheit bilden, kannst du auf den Punkt Spitzenleistung abrufen.",
+      quote:
+        "„Weltmeister wirst du nicht am Tag des Wettkampfs – du wirst es an den tausenden Tagen davor im stillen Trainingsraum.“",
     },
   },
   {
@@ -153,25 +169,29 @@ export const MILESTONES: Milestone[] = [
     era: "Choreografie & Vaterschaft",
     category: "roots",
     categoryLabel: "Jugend & Wurzeln",
-    title: "Internationale Großprojekte & Alleinerziehender Vater",
+    title: "Internationale Großprojekte & Das Leben als alleinerziehender Vater",
     shortDesc:
-      "Leitung europaweiter Jugendprojekte ('Air4Day', 'De-Light-House') und die größte persönliche Verantwortung des Lebens.",
+      "Leitung von Kultur- und Jugendprojekten („Air4Day“, „De-Light-House“) und die größte persönliche Bewährungsprobe des Lebens.",
     image: "/images/performance/hero-performance-5.jpg",
-    badge: "Projektleitung & Familie",
+    badge: "Führung & Familie",
     fullStory: {
-      lead: "Große internationale Kulturprojekte organisieren – und gleichzeitig als alleinerziehender Vater voll im echten Leben stehen.",
+      lead:
+        "Internationale Events mit tausenden Teilnehmern organisieren – und gleichzeitig als alleinerziehender Vater das Leben eines Kleinkinds meistern.",
       paragraphs: [
-        "In dieser Phase leitete, moderierte und choreografierte ich internationale Großprojekte wie „Air4Day meets Kingz Of The Circle“, „De-Light-House“ und „DLH 2.0 Streetskillz“ sowie bilaterale Austauschprogramme in Frankreich und den Niederlanden (Den Haag, Picardie). Ich engagierte mich intensiv als Schirmherr für benachteiligte Jugendliche.",
-        "Privat stellte sich die größte Prüfung: Die Mutter meiner Tochter verließ uns, als die Kleine ca. 1 Jahr alt war. Von einem Tag auf den anderen übernahm ich als alleinerziehender Vater die volle Verantwortung für Familie, Beruf, Schichtarbeit und Alltag – ohne Ausreden.",
+        "In dieser Schaffensphase konzipierte, choreografierte und leitete ich internationale Großprojekte wie „Air4Day meets Kingz Of The Circle“, „De-Light-House“ und „DLH 2.0 Streetskillz“. Zudem leitete ich bilaterale Austauschprogramme mit Frankreich (Picardie) und den Niederlanden (Den Haag) und engagierte mich als Schirmherr für benachteiligte Jugendliche.",
+        "Doch mitten in dieser intensiven Phase stellte das Leben mir die größte Prüfung: Als meine Tochter gerade einmal ein Jahr alt war, trennte sich ihre Mutter und verließ unsere Familie. Von einer Sekunde auf die andere war ich alleinerziehender Vater eines Kleinkinds.",
+        "Es folgten Jahre des extremen Spagats: Zwischen Windeln wechseln, Brei kochen, schlaflosen Nächten, Kindergartenorganisation, Schichtbetrieb und internationalen Projektfristen gab es kein Netz und keinen doppelten Boden. Diese Jahre ohne Ausreden haben mein Verständnis von alltagstauglicher Organisation und echter Belastbarkeit für immer geprägt.",
       ],
       highlights: [
-        "Projektleiter & Moderator von 'Air4Day' & 'Kingz Of The Circle'",
-        "Internationale Austauschprogramme (Deutschland, Frankreich, Niederlande)",
-        "Volle Verantwortung als alleinerziehender Vater",
+        "Projektleitung & Moderation von 'Air4Day' & 'Kingz Of The Circle'",
+        "Bilaterale Jugendaustauschprogramme (Deutschland, Frankreich, Niederlande)",
+        "Schirmherrschaft & Integrationsarbeit für benachteiligte Jugendliche",
+        "Volle Verantwortung und Meisterschaft als alleinerziehender Vater ab dem 1. Lebensjahr",
       ],
       lesson:
-        "Verantwortung für ein Kind zeigt dir ungeschönt, was echte Prioritäten im Alltag bedeuten: Kein Platz für Ausreden oder Schönfärberei.",
-      quote: "„Echte Stärke beweist sich nicht im Scheinwerferlicht, sondern wenn du nachts am Kinderbett stehst und am nächsten Tag ablieferst.“",
+        "Ein Kind alleine großzuziehen zeigt dir ungeschminkt, was echte Prioritäten bedeuten. Es gibt keine Ausreden – wenn du funktionieren musst, brauchst du Systeme, die auch bei Schlafmangel und Zeitnot greifen.",
+      quote:
+        "„Echte Stärke zeigt sich nicht im Rampenlicht, sondern wenn du nachts um 3 Uhr Fieber misst und morgens um 8 Uhr mit vollem Einsatz vor deinen Schülern stehst.“",
     },
   },
   {
@@ -180,27 +200,31 @@ export const MILESTONES: Milestone[] = [
     era: "Der Schicksalhafte Wendepunkt",
     category: "crisis",
     categoryLabel: "Krise & Transformation",
-    title: "Bandscheibenvorfall, Schmerzen & Der Weckruf",
+    title: "HWS-Bandscheibenvorfall, Schmerz-Odyssee & Die Biochemie-Wende",
     shortDesc:
-      "Schwerer HWS-Vorfall (C6/C7), Impingement, Darmprobleme und die fundamentale Erkenntnis: Höchstleistung scheitert ohne Fundament.",
+      "Schwerer Halswirbelsäulenvorfall (C6/C7), chronische Entzündungen und Darmprobleme – und die radikale Selbstheilung ohne Operation.",
     image: "/images/gym-shooting/A7401521.jpg",
-    badge: "Krise & Reset",
+    badge: "Krise & Der Reset",
     fullStory: {
-      lead: "Als der Körper stoppte: Der schmerzhafte Zusammenbruch und die wichtigste Wende meines gesamten Lebens.",
+      lead:
+        "Als der Weltmeister-Körper plötzlich kollabierte: Die dunkelste Phase meines Lebens und die Geburtsstunde des M³-Gesundheitssystems.",
       paragraphs: [
-        "2016 erlitt ich einen schweren HWS-Bandscheibenvorfall (C6/C7). Von einem Tag auf den anderen war die gewohnte Stabilität weg. Es folgten ein hartnäckiges Schulter-Impingement, chronische Entzündungen und Darm-Parasiten. Trotz Medikamenten blieb die Genesung aus. Mein Mindset war am Boden – Rückzug, schlechte Ernährung, Frust.",
-        "Doch genau an diesem Tiefpunkt fiel die Entscheidung: Keine voreilige OP! Ich begann ein radikales Eigenstudium der Biochemie, Zellgesundheit, Darmregeneration, gezielten Supplementierung und funktionellen Biomechanik.",
-        "Schritt für Schritt baute ich mich von innen nach außen wieder auf – bis ich schmerzfrei wieder auf dem Kopf stand und mich bewegte wie in alten Zeiten!",
+        "2016 zog mein Körper die absolute Notbremse. Ein schwerer Bandscheibenvorfall in der Halswirbelsäule (HWS C6/C7) mit Nervenkompression raubte mir über Nacht Kraft und Beweglichkeit. Es folgten ein massives Schulter-Impingement, ständige Nackenkrämpfe, Taubheitsgefühle in den Fingern, chronische Entzündungsschübe und eine schwere Darmdysbiose durch Parasitenbefall.",
+        "Die Schulmedizin bot mir fast ausschließlich Schmerzmittel, Cortisonspritzen und eine dringende Wirbelsäulen-OP (Versteifung) an. Ich erlebte den totalen mentalen Tiefpunkt: Rückzug, Frustration, schwere Schlafstörungen und eine fatale Abwärtsspirale.",
+        "An diesem Tiefpunkt traf ich die mutigste Entscheidung meines Lebens: Keine voreilige OP! Ich begann ein fünfjähriges, radikales Selbststudium in funktioneller Biochemie, mitochondrialer Zellenergie (ATP), Mikrobiom- und Darmsanierung sowie Neuro-Athletik und Faszientraining.",
+        "Ich heilte meinen Darm, löschte die chronischen Entzündungen von innen heraus und baute meine Biomechanik millimetergenau neu auf. Das Ergebnis: Ich wurde zu 100 % schmerzfrei, stand wieder auf dem Kopf und hatte mehr Energie und Belastbarkeit als je zuvor.",
       ],
       highlights: [
-        "Schwerer HWS-Bandscheibenvorfall (C6/C7) & Schulter-Impingement",
-        "Chronische Darmprobleme und Erschöpfung durch Entzündungen",
-        "Komplette schmerzfreie Rehabilitation ohne Operation",
-        "Geburtsstunde des Verständnisses für Biochemie & Zellenergie",
+        "Schwerer Bandscheibenvorfall HWS (C6/C7), Impingement & Nervenblockaden",
+        "Chronische Darmbeschwerden, Erschöpfung und Entzündungs-Odyssee",
+        "Mutige Entscheidung gegen Operation & Versteifung der Wirbelsäule",
+        "5 Jahre intensives Selbststudium in Biochemie, Zellgesundheit & Mikrobiom",
+        "Vollständige, 100% schmerzfreie Regeneration aus eigener Kraft",
       ],
       lesson:
-        "Wenn dein biochemisches Fundament brennt, nützt kein härteres Training. Erst Darm und Zellgesundheit heilen, dann schmerzfrei belasten.",
-      quote: "„Niemand wird dich retten. Du musst selbst anfangen, die volle Verantwortung für deine Gesundheit zu übernehmen.“",
+        "Wenn dein biochemisches Fundament und dein Darm brennen, ist jedes harte Training wie Benzin ins Feuer. Du musst erst die Zellenergie und den Stoffwechsel reparieren – dann wird der Körper von allein wieder schmerzfrei und leistungsfähig.",
+      quote:
+        "„Niemand wird dich retten. Du musst selbst die volle Verantwortung für deinen Körper übernehmen und die Ursachen an der Wurzel heilen.“",
     },
   },
   {
@@ -209,53 +233,63 @@ export const MILESTONES: Milestone[] = [
     era: "Wissenschaft & Rekonstruktion",
     category: "crisis",
     categoryLabel: "Krise & Transformation",
-    title: "90-Tage Challenge & Psychologische Modulauswertung",
+    title: "Die 90-Tage Challenge, TÜV-Zertifizierung & Psychologische Bestnoten",
     shortDesc:
-      "Intensive 90-Tage Transformation, zertifizierte Berufscoachings (TÜV) und die offizielle Bestätigung höchster Durchhaltekraft.",
+      "Rigorose Selbsttransformation, Zertifizierung zum Berufscoach (TÜV Rheinland) und Höchstnoten (5/5) in Führung, Durchhaltewille und Selbstwirksamkeit.",
     image: "/images/gym-shooting/A7401576.jpg",
-    badge: "Validierung & Coaching",
+    badge: "Validierung & System",
     fullStory: {
-      lead: "Die Verschmelzung aus 25 Jahren Erfahrung, psychologischer Analyse und wissenschaftlich fundierter Ernährungs- und Trainingslehre.",
+      lead:
+        "Die Fusion aus 25 Jahren Bewegungserfahrung, biochemischer Wissenschaft und fundierter psychologischer Führungskompetenz.",
       paragraphs: [
-        "Ende 2022 startete ich meine 90-Tage Challenge und bewies mir und meinem Umfeld erneut, wozu der Körper fähig ist, wenn Training, Ernährung und Routinen perfekt synchronisiert sind.",
-        "Gleichzeitig absolvierte ich Weiterbildungen im Bewerbungsmanagement und Berufscoaching (TÜV Rheinland). Die offizielle Modulauswertung der Bundesagentur für Arbeit attestierte mir Maximalwerte (Bereich 5 von 5) in Führungs- und Gestaltungsmotivation, Durchhaltevermögen, Selbstwirksamkeit, Ergebnisorientierung und konfliktfähiger Empathie.",
+        "Ende 2022 stellte ich mich der eigenen Bewährungsprobe: In einer wissenschaftlich dokumentierten 90-Tage Transformation synchronisierte ich Ernährung, Krafttraining, Zellstoffwechsel und Schlafrhythmus perfekt. Das Ergebnis war eine radikale Körpertransformation und der finale Beweis, wie mächtig ein ganzheitliches System ist.",
+        "Parallel professionalisierte ich meine Coaching-Methodik: Ich absolvierte fundierte Weiterbildungen im Bewerbungsmanagement und Berufscoaching (TÜV Rheinland), um Klienten auch psychologisch und mental durch schwierige Lebensphasen zu führen.",
+        "Die offizielle psychologische Potenzial- und Eignungsdiagnostik (Bundesagentur für Arbeit) attestierte mir die absoluten Maximalwerte (Bereich 5 von 5) in: Führungs- und Gestaltungsmotivation, Durchhaltevermögen & Frustrationstoleranz, Selbstwirksamkeit, Ergebnisorientierung und konfliktfähiger Empathie.",
+        "Aus dieser Kombination entstand der finale Bauplan von M³: Die drei untrennbaren Säulen Metabolism (Stoffwechsel), Movement (Bewegung) und Mental (Mindset).",
       ],
       highlights: [
-        "Erfolgreiche 90-Tage Transformation & Body Recomposition",
-        "Zertifizierte Weiterbildungen im Berufscoaching (TÜV Rheinland)",
-        "Maximalwerte (5/5) in Durchhaltevermögen, Führung & Selbstwirksamkeit",
-        "Entwicklung des 3-Säulen-Prinzips (Metabolism, Movement, Mental)",
+        "Erfolgreiche 90-Tage Challenge: Dokumentierte Bestform & Vitalitätsmaximum",
+        "Zertifizierter Berufscoach & Bewerbungsmanager (TÜV Rheinland)",
+        "Offizielle Bestnoten (5 von 5) in Durchhaltevermögen, Führung & Selbstwirksamkeit",
+        "Entwicklung des geschützten 3-Säulen-Systems von M³ Performance",
       ],
       lesson:
-        "Nachhaltige Veränderung scheitert nicht am Wissen, sondern an der alltagstauglichen Ausführung bei Stress.",
+        "Große Transformationen scheitern selten am Mangel an Wissen, sondern an fehlender psychologischer Struktur und mangelnder Alltagstauglichkeit unter hoher beruflicher Belastung.",
+      quote:
+        "„Disziplin wird einfach, wenn das System logisch ist und du die ersten spürbaren Resultate an deinem eigenen Körper siehst.“",
     },
   },
   {
     id: "m3-2024",
     year: "2024 – Heute",
-    era: "M³ Performance & Master Personal Trainer",
+    era: "M³ Performance & Master Coach",
     category: "m3",
     categoryLabel: "M³ Performance",
-    title: "Gründung M³ Performance & Master Personal Training",
+    title: "M³ Performance, Master Personal Trainer & Das Autonomie-Prinzip",
     shortDesc:
-      "Bündelung der gesamten Lebenspraxis im M³-System: 1:1 Betreuung für schmerzfreie Belastbarkeit, Vitalität und Unabhängigkeit.",
+      "Die Bündelung eines Lebenswerks: 1:1 Betreuung von Unternehmern und Führungskräften für dauerhafte Vitalität, Schmerzfreiheit und Unabhängigkeit.",
     image: "/images/gym-shooting/A7401490.jpg",
-    badge: "M³ Gründer & Master Coach",
+    badge: "Lebenswerk & 1:1 Coaching",
     fullStory: {
-      lead: "Mein Lebenswerk in Aktion: Menschen mitten im Leben zu echter Gesundheit, Vitalität und Autonomie führen.",
+      lead:
+        "Mein Lebenswerk in Aktion: Menschen mitten im Leben zu echter Gesundheit, schmerzfreier Kraft und dauerhafter Eigenverantwortung führen.",
       paragraphs: [
-        "Seit Januar 2024 konzentriere ich mich zu 100 % auf meine Kernkompetenz: M³ Performance & Gesundheit. Begleitend absolviere ich die Ausbildung zum Master Personal Trainer.",
-        "Über Instagram (@michelmeiermoves) und in der persönlichen 1:1 Betreuung helfe ich Unternehmern, Führungskräften und Familienmenschen, Nachmittagstiefs, Verspannungen und Stoffwechselblockaden dauerhaft aufzulösen.",
+        "Seit Januar 2024 widme ich mich zu 100 % meiner Berufung: M³ Performance & Gesundheit. Begleitend absolviere ich die Ausbildung zum Master Personal Trainer i.A. – der höchsten nationalen Qualitätsstufe im Personal Training.",
+        "Auf meinem Instagram-Kanal (@michelmeiermoves) teile ich täglich ungeschönte, praxisnahe Einblicke aus Training, Biochemie und Lebensführung, die tausende Menschen inspirieren und wachrütteln.",
+        "In der exklusiven 1:1 Begleitung helfe ich vielbeschäftigten Unternehmern, Selbstständigen und Führungskräften, chronische Nacken- und Rückenschmerzen zu besiegen, Nachmittagstiefs und Bauchfett loszuwerden und ihr Energieniveau dauerhaft zu verdoppeln.",
+        "Unser oberstes Credo bei M³ lautet: Autonomie statt Abhängigkeit. Ich mache mich für meine Klienten bewusst überflüssig, indem ich ihnen beibringe, wie ihr Körper, ihr Stoffwechsel und ihr Nervensystem funktionieren – für ein Leben in voller Kraft und Unabhängigkeit.",
       ],
       highlights: [
-        "Gründung von M³ Performance (Metabolism · Movement · Mental)",
-        "Master Personal Trainer Zertifizierung",
-        "Tägliche Impulse auf Instagram (@michelmeiermoves)",
-        "Persönliche 1:1 Begleitung mit messbaren Ergebnissen",
+        "Gründung & Vollzeit-Fokus auf M³ Performance & Gesundheit",
+        "Master Personal Trainer (i.A.) Ausbildung (Höchste Qualifikationsstufe)",
+        "Tägliche Bewegungsimpulse & Aufklärung auf Instagram (@michelmeiermoves)",
+        "Exklusive 1:1 Betreuung mit messbaren Resultaten in Stoffwechsel & Schmerzfreiheit",
+        "100% Autonomie-Fokus: Klienten lernen, sich dauerhaft selbst zu steuern",
       ],
       lesson:
-        "Ich mache mich überflüssig: Du lernst deinen Körper, deine Ernährung und deine Routinen selbstständig dauerhaft zu steuern.",
-      quote: "„Manchmal braucht es Verständnis. Manchmal einen Arschtritt. Oft beides.“",
+        "Wahre Gesundheit bedeutet Unabhängigkeit. Du brauchst keinen Trainer, der dich ein Leben lang an der Hand hält – du brauchst das Wissen und das System, um dich selbst dauerhaft in Bestform zu halten.",
+      quote:
+        "„Manchmal braucht es Verständnis. Manchmal einen Arschtritt. Oft beides. Aber immer mit dem Ziel deiner vollkommenen Freiheit.“",
     },
   },
 ];
