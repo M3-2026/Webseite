@@ -74,7 +74,7 @@ function UeberMichPage() {
 
                 <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-border bg-slate-50/80 text-xs font-semibold text-foreground shadow-2xs">
                   <Award className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>Master Personal Trainer</span>
+                  <span>Master Personal Trainer (i.A.)</span>
                 </div>
 
                 <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-border bg-slate-50/80 text-xs font-semibold text-foreground shadow-2xs">
@@ -87,17 +87,17 @@ function UeberMichPage() {
             {/* Authentic Studio Portrait */}
             <div className="lg:col-span-5 flex justify-center relative">
               <div className="relative w-full max-w-md">
-                <div className="rounded-3xl overflow-hidden border-2 border-gold/40 shadow-[var(--shadow-gold)] bg-black/40 aspect-[3/4] relative group">
+                <div className="rounded-3xl overflow-hidden border-2 border-gold/40 shadow-[var(--shadow-gold)] bg-black/40 aspect-[3/5] relative group">
                   <img
                     src="/images/gym-shooting/A7401490_enhanced.jpg"
-                    alt="Michél Meier – Master Personal Trainer & Gründer M³"
-                    className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                    alt="Michél Meier – Master Personal Trainer i.A. & Gründer M³"
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent pointer-events-none" />
-                  <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-black/60 backdrop-blur-md border border-white/10 text-left">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute bottom-3.5 left-3.5 right-3.5 p-3.5 rounded-2xl bg-black/65 backdrop-blur-md border border-white/10 text-left">
                     <div className="font-display font-extrabold text-base sm:text-lg text-white">Michél Meier</div>
                     <div className="text-[11px] sm:text-xs font-semibold text-gold tracking-wide">
-                      IDO Breakdance World Champion · Master Personal Trainer
+                      IDO Breakdance World Champion · Master Personal Trainer i.A.
                     </div>
                   </div>
                 </div>
