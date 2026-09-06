@@ -266,29 +266,38 @@ export function InteractiveTimeline() {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   const filteredMilestones =
     activeCategory === "all"
       ? MILESTONES
       : MILESTONES.filter((m) => m.category === activeCategory);
 
-  const checkScrollButtons = () => {
+  const updateScrollMetrics = () => {
     const el = scrollContainerRef.current;
-    if (el) {
+    if (!el) return;
+    const maxScroll = el.scrollWidth - el.clientWidth;
+    if (maxScroll > 0) {
+      const progress = (el.scrollLeft / maxScroll) * 100;
+      setScrollProgress(Math.min(100, Math.max(0, progress)));
       setCanScrollLeft(el.scrollLeft > 10);
-      setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 10);
+      setCanScrollRight(el.scrollLeft < maxScroll - 10);
+    } else {
+      setScrollProgress(0);
+      setCanScrollLeft(false);
+      setCanScrollRight(false);
     }
   };
 
   useEffect(() => {
-    checkScrollButtons();
+    updateScrollMetrics();
     const el = scrollContainerRef.current;
     if (el) {
-      el.addEventListener("scroll", checkScrollButtons);
-      window.addEventListener("resize", checkScrollButtons);
+      el.addEventListener("scroll", updateScrollMetrics, { passive: true });
+      window.addEventListener("resize", updateScrollMetrics);
       return () => {
-        el.removeEventListener("scroll", checkScrollButtons);
-        window.removeEventListener("resize", checkScrollButtons);
+        el.removeEventListener("scroll", updateScrollMetrics);
+        window.removeEventListener("resize", updateScrollMetrics);
       };
     }
   }, [filteredMilestones]);
@@ -296,8 +305,27 @@ export function InteractiveTimeline() {
   const scroll = (direction: "left" | "right") => {
     const el = scrollContainerRef.current;
     if (el) {
-      const scrollAmount = direction === "left" ? -380 : 380;
+      const scrollAmount = direction === "left" ? -280 : 280;
       el.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  };
+
+  const handleSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const val = Number(e.target.value);
+    setScrollProgress(val);
+    const el = scrollContainerRef.current;
+    if (el) {
+      const maxScroll = el.scrollWidth - el.clientWidth;
+      el.scrollLeft = (val / 100) * maxScroll;
+    }
+  };
+
+  const scrollToMilestoneIndex = (index: number) => {
+    const el = scrollContainerRef.current;
+    if (el && filteredMilestones.length > 1) {
+      const maxScroll = el.scrollWidth - el.clientWidth;
+      const targetScroll = (index / (filteredMilestones.length - 1)) * maxScroll;
+      el.scrollTo({ left: targetScroll, behavior: "smooth" });
     }
   };
 
@@ -330,83 +358,64 @@ export function InteractiveTimeline() {
   const getMilestoneIcon = (id: string, category: string) => {
     switch (id) {
       case "roots-1995":
-        return <Compass className="w-5 h-5 text-primary-foreground" />;
+        return <Compass className="w-4 h-4 text-primary-foreground" />;
       case "military-1998":
-        return <ShieldCheck className="w-5 h-5 text-primary-foreground" />;
+        return <ShieldCheck className="w-4 h-4 text-primary-foreground" />;
       case "pro-2001":
-        return <Award className="w-5 h-5 text-primary-foreground" />;
+        return <Award className="w-4 h-4 text-primary-foreground" />;
       case "worldchamp-2006":
-        return <Trophy className="w-5 h-5 text-primary-foreground" />;
+        return <Trophy className="w-4 h-4 text-primary-foreground" />;
       case "projects-2008":
-        return <Heart className="w-5 h-5 text-primary-foreground" />;
+        return <Heart className="w-4 h-4 text-primary-foreground" />;
       case "crisis-2016":
-        return <Flame className="w-5 h-5 text-primary-foreground" />;
+        return <Flame className="w-4 h-4 text-primary-foreground" />;
       case "transformation-2022":
-        return <Activity className="w-5 h-5 text-primary-foreground" />;
+        return <Activity className="w-4 h-4 text-primary-foreground" />;
       case "m3-2024":
-        return <Sparkles className="w-5 h-5 text-primary-foreground" />;
+        return <Sparkles className="w-4 h-4 text-primary-foreground" />;
       default:
         return category === "champion" ? (
-          <Trophy className="w-5 h-5 text-primary-foreground" />
+          <Trophy className="w-4 h-4 text-primary-foreground" />
         ) : (
-          <Clock className="w-5 h-5 text-primary-foreground" />
+          <Clock className="w-4 h-4 text-primary-foreground" />
         );
     }
   };
 
   return (
-    <section className="space-y-8 text-left relative">
+    <section className="space-y-6 text-left relative">
       {/* Section Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-border/70 pb-6">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-border/70 pb-5">
         <div className="space-y-2">
-          <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3.5 py-1 text-xs uppercase tracking-[0.2em] text-gold font-bold">
+          <div className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-gold font-bold">
             <Clock className="w-3.5 h-3.5" />
             <span>Interaktive Lebensstationen & Meilensteine</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-extrabold tracking-tight text-foreground">
             25+ Jahre Bewegung & Performance
           </h2>
-          <p className="text-sm md:text-base text-muted-foreground max-w-2xl">
+          <p className="text-xs sm:text-sm text-muted-foreground max-w-2xl">
             Vom frühen Einstieg und Weltmeistertitel über schwere Rückschläge bis zum M³-System. Klicke auf eine Station für die exklusiven Hintergrunddetails.
           </p>
         </div>
 
-        {/* Scroll Controls & Instagram Badge */}
+        {/* Instagram Badge */}
         <div className="flex items-center gap-3 shrink-0">
           <a
             href="https://www.instagram.com/michelmeiermoves/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full border border-border bg-white text-xs font-bold text-foreground hover:border-pink-500 hover:text-pink-600 transition-all shadow-sm group"
+            className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-border bg-white text-xs font-bold text-foreground hover:border-pink-500 hover:text-pink-600 transition-all shadow-sm group"
           >
             <span className="w-2 h-2 rounded-full bg-gradient-to-tr from-amber-500 via-pink-500 to-purple-500" />
             <span>@michelmeiermoves</span>
             <ExternalLink className="w-3.5 h-3.5 text-muted-foreground group-hover:text-pink-600 transition" />
           </a>
-
-          <div className="flex items-center gap-1.5 bg-white border border-border rounded-full p-1 shadow-sm">
-            <button
-              onClick={() => scroll("left")}
-              disabled={!canScrollLeft}
-              aria-label="Vorherige Stationen"
-              className="w-8 h-8 rounded-full flex items-center justify-center text-foreground hover:bg-slate-100 disabled:opacity-30 disabled:hover:bg-transparent transition cursor-pointer"
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </button>
-            <button
-              onClick={() => scroll("right")}
-              disabled={!canScrollRight}
-              aria-label="Nächste Stationen"
-              className="w-8 h-8 rounded-full flex items-center justify-center text-foreground hover:bg-slate-100 disabled:opacity-30 disabled:hover:bg-transparent transition cursor-pointer"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </button>
-          </div>
         </div>
       </div>
 
       {/* Filter Category Pills */}
-      <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none">
+      <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
         {[
           { id: "all", label: "Alle Stationen (8)" },
           { id: "roots", label: "Wurzeln & Jugend (1995–2001)" },
@@ -417,10 +426,10 @@ export function InteractiveTimeline() {
           <button
             key={cat.id}
             onClick={() => setActiveCategory(cat.id)}
-            className={`px-4 py-1.5 rounded-full text-xs font-bold tracking-wide transition-all whitespace-nowrap cursor-pointer border ${
+            className={`px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wide transition-all whitespace-nowrap cursor-pointer border ${
               activeCategory === cat.id
                 ? "bg-gold-gradient text-primary-foreground border-transparent shadow-[var(--shadow-gold)]"
-                : "bg-white text-muted-foreground border-border hover:text-foreground hover:border-gold/40 shadow-sm"
+                : "bg-white text-muted-foreground border-border hover:text-foreground hover:border-gold/40 shadow-xs"
             }`}
           >
             {cat.label}
@@ -428,82 +437,82 @@ export function InteractiveTimeline() {
         ))}
       </div>
 
-      {/* Horizontal Connected Timeline Track matching Reference */}
-      <div className="relative pt-2 pb-4">
+      {/* Horizontal Connected Timeline Track with Compact Cards */}
+      <div className="relative pt-1">
         <div
           ref={scrollContainerRef}
-          className="overflow-x-auto pb-6 pt-3 scroll-smooth scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0"
+          className="overflow-x-auto pb-4 pt-2 scroll-smooth scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0"
         >
-          <div className="min-w-max relative flex gap-6 md:gap-8 px-4 py-2">
+          <div className="min-w-max relative flex gap-5 md:gap-6 px-3 py-2">
             {/* Continuous Top Connector Line spanning across the timeline track */}
-            <div className="absolute top-[26px] left-16 right-16 h-[3px] bg-gradient-to-r from-gold/30 via-gold to-gold/30 z-0 pointer-events-none rounded-full shadow-xs" />
+            <div className="absolute top-[22px] left-12 right-12 h-[2px] bg-gradient-to-r from-gold/30 via-gold to-gold/30 z-0 pointer-events-none rounded-full shadow-2xs" />
 
             {filteredMilestones.map((item) => (
               <div
                 key={item.id}
-                className="w-[290px] sm:w-[330px] md:w-[350px] shrink-0 flex flex-col items-center select-none group"
+                className="w-[235px] sm:w-[260px] md:w-[280px] shrink-0 flex flex-col items-center select-none group"
               >
                 {/* Pin Node on the Line */}
                 <button
                   type="button"
                   onClick={() => setSelectedMilestone(item)}
-                  className="relative z-10 w-12 h-12 rounded-full bg-gold-gradient text-primary-foreground flex items-center justify-center border-4 border-white shadow-md ring-2 ring-gold/30 group-hover:scale-115 group-hover:ring-gold group-hover:shadow-lg transition-all duration-300 cursor-pointer focus:outline-none"
+                  className="relative z-10 w-10 h-10 rounded-full bg-gold-gradient text-primary-foreground flex items-center justify-center border-3 border-white shadow-sm ring-2 ring-gold/30 group-hover:scale-115 group-hover:ring-gold group-hover:shadow-md transition-all duration-300 cursor-pointer focus:outline-none"
                   aria-label={`Station ${item.year}: ${item.title}`}
                 >
                   {getMilestoneIcon(item.id, item.category)}
                 </button>
 
                 {/* Date Label directly underneath the node */}
-                <div className="mt-2.5 mb-4 text-center">
-                  <span className="inline-block font-mono font-bold text-xs text-foreground bg-slate-50 hover:bg-gold/10 border border-border px-3 py-1 rounded-full group-hover:border-gold/60 transition-colors shadow-2xs">
+                <div className="mt-2 mb-3 text-center">
+                  <span className="inline-block font-mono font-bold text-[11px] text-foreground bg-slate-50 hover:bg-gold/10 border border-border px-2.5 py-0.5 rounded-full group-hover:border-gold/60 transition-colors shadow-2xs">
                     {item.year}
                   </span>
                 </div>
 
-                {/* Card Container directly below */}
+                {/* Compact Card Container directly below */}
                 <div
                   onClick={() => setSelectedMilestone(item)}
-                  className="w-full bg-white rounded-3xl border border-border hover:border-gold/60 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer text-left group-hover:-translate-y-1"
+                  className="w-full bg-white rounded-2xl border border-border hover:border-gold/60 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer text-left group-hover:-translate-y-1"
                 >
                   {/* Thumbnail Image */}
                   <div className="relative w-full aspect-[16/10] bg-slate-900 overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700"
+                      className="w-full h-full object-cover object-center group-hover:scale-106 transition-transform duration-700"
                       loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
                     {/* Top Right Badge */}
-                    <div className="absolute top-3 right-3 px-2.5 py-0.5 rounded-full bg-gold/90 text-primary-foreground font-display text-[10px] font-extrabold uppercase tracking-wider shadow-sm">
+                    <div className="absolute top-2 right-2 px-2 py-0.5 rounded-full bg-gold/90 text-primary-foreground font-display text-[9px] font-extrabold uppercase tracking-wider shadow-xs">
                       {item.badge}
                     </div>
 
                     {/* Bottom Era String */}
-                    <div className="absolute bottom-2.5 left-3 right-3 text-white">
-                      <span className="text-[10px] font-mono uppercase tracking-widest text-gold font-bold">
+                    <div className="absolute bottom-2 left-2.5 right-2.5 text-white">
+                      <span className="text-[9px] font-mono uppercase tracking-widest text-gold font-bold">
                         {item.era}
                       </span>
                     </div>
                   </div>
 
                   {/* Card Content: Title & Short Text */}
-                  <div className="p-5 space-y-3 flex-grow flex flex-col justify-between bg-white">
-                    <div className="space-y-2">
-                      <h3 className="font-display font-extrabold text-base sm:text-lg text-foreground group-hover:text-gold transition-colors leading-snug line-clamp-2">
+                  <div className="p-3.5 sm:p-4 space-y-2 flex-grow flex flex-col justify-between bg-white">
+                    <div className="space-y-1.5">
+                      <h3 className="font-display font-extrabold text-sm sm:text-base text-foreground group-hover:text-gold transition-colors leading-snug line-clamp-2">
                         {item.title}
                       </h3>
-                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                      <p className="text-[11px] sm:text-xs text-muted-foreground leading-relaxed line-clamp-2">
                         {item.shortDesc}
                       </p>
                     </div>
 
                     {/* Open Story Action Link */}
-                    <div className="pt-3 border-t border-border/70 flex items-center justify-between text-xs font-bold text-gold group-hover:translate-x-0.5 transition-transform">
+                    <div className="pt-2.5 border-t border-border/70 flex items-center justify-between text-[11px] font-bold text-gold group-hover:translate-x-0.5 transition-transform">
                       <span>Story & Details öffnen</span>
-                      <div className="w-7 h-7 rounded-full bg-gold/10 flex items-center justify-center group-hover:bg-gold-gradient group-hover:text-primary-foreground transition-all shadow-2xs">
-                        <ArrowRight className="w-3.5 h-3.5" />
+                      <div className="w-6 h-6 rounded-full bg-gold/10 flex items-center justify-center group-hover:bg-gold-gradient group-hover:text-primary-foreground transition-all shadow-2xs">
+                        <ArrowRight className="w-3 h-3" />
                       </div>
                     </div>
                   </div>
@@ -511,6 +520,79 @@ export function InteractiveTimeline() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* ---------------------------------------------------- */}
+        {/* INTERACTIVE BOTTOM SCROLLBAR / PROGRESS CONTROLS */}
+        {/* ---------------------------------------------------- */}
+        <div className="mt-2 pt-3 border-t border-border/70 flex flex-col sm:flex-row items-center justify-between gap-3 bg-slate-50/60 rounded-2xl p-3 border">
+          {/* Left Step Button */}
+          <button
+            onClick={() => scroll("left")}
+            disabled={!canScrollLeft}
+            aria-label="Timeline nach links scrollen"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border bg-white text-xs font-bold text-foreground hover:border-gold hover:text-gold disabled:opacity-30 disabled:hover:border-border disabled:hover:text-foreground transition-all shadow-2xs cursor-pointer shrink-0"
+          >
+            <ChevronLeft className="w-3.5 h-3.5" />
+            <span>Zurück</span>
+          </button>
+
+          {/* Interactive Scrub / Progress Slider Bar */}
+          <div className="flex-1 w-full max-w-lg flex items-center gap-3 px-2">
+            <div className="relative flex-1 flex items-center group py-2">
+              {/* Background Track with Milestone Marks */}
+              <div className="w-full h-2 bg-slate-200/90 rounded-full overflow-hidden relative shadow-inner">
+                <div
+                  className="h-full bg-gold-gradient rounded-full transition-all duration-150"
+                  style={{ width: `${Math.max(12, scrollProgress)}%` }}
+                />
+              </div>
+
+              {/* Draggable scrub range input */}
+              <input
+                type="range"
+                min="0"
+                max="100"
+                value={scrollProgress}
+                onChange={handleSliderChange}
+                aria-label="Timeline Scroll-Leiste: Von links nach rechts ziehen"
+                className="absolute inset-0 w-full opacity-0 cursor-ew-resize h-8 -top-1"
+              />
+            </div>
+
+            {/* Quick-Jump Milestone Dots */}
+            <div className="hidden md:flex items-center gap-1 shrink-0">
+              {filteredMilestones.map((m, idx) => {
+                const stepPercent = (idx / Math.max(1, filteredMilestones.length - 1)) * 100;
+                const isActive = Math.abs(scrollProgress - stepPercent) < 15;
+                return (
+                  <button
+                    key={m.id}
+                    onClick={() => scrollToMilestoneIndex(idx)}
+                    title={`${m.year}: ${m.title}`}
+                    className={`w-2 h-2 rounded-full transition-all cursor-pointer ${
+                      isActive ? "bg-gold scale-125" : "bg-slate-300 hover:bg-slate-400"
+                    }`}
+                  />
+                );
+              })}
+            </div>
+
+            <span className="text-[10px] font-mono text-muted-foreground shrink-0 select-none font-semibold">
+              {Math.round(scrollProgress)}%
+            </span>
+          </div>
+
+          {/* Right Step Button */}
+          <button
+            onClick={() => scroll("right")}
+            disabled={!canScrollRight}
+            aria-label="Timeline nach rechts scrollen"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-border bg-white text-xs font-bold text-foreground hover:border-gold hover:text-gold disabled:opacity-30 disabled:hover:border-border disabled:hover:text-foreground transition-all shadow-2xs cursor-pointer shrink-0"
+          >
+            <span>Weiter</span>
+            <ChevronRight className="w-3.5 h-3.5" />
+          </button>
         </div>
       </div>
 
