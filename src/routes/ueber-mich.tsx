@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import {
   Trophy,
   Award,
@@ -24,7 +24,6 @@ import avatar from "@/assets/avatar.png";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { PathwayCrossNav } from "@/components/PathwayCrossNav";
 import { InteractiveTimeline } from "@/components/InteractiveTimeline";
 
 export const Route = createFileRoute("/ueber-mich")({
@@ -57,8 +56,6 @@ const HERO_PERFORMANCE_PICTURES_DOUBLED = [
 
 function UeberMichPage() {
   const [videoLoaded, setVideoLoaded] = useState(false);
-  const WHATSAPP_URL =
-    "https://wa.me/4917699016640?text=Hallo%20Mich%C3%A9l,%20ich%20habe%20deine%20Geschichte%20gelesen%20und%20m%C3%B6chte%20ein%20unverbindliches%20Orientierungsgespr%C3%A4ch%20vereinbaren.";
 
   return (
     <div className="min-h-screen bg-white text-foreground flex flex-col justify-between overflow-x-hidden selection:bg-gold/20 selection:text-foreground">
@@ -644,44 +641,9 @@ function UeberMichPage() {
           {/* INTERAKTIVE HORIZONTALE TIMELINE MIT DETAIL-POPUPS */}
           {/* ---------------------------------------------------- */}
           <InteractiveTimeline />
-
-          {/* ---------------------------------------------------- */}
-          {/* BOTTOM CTA */}
-          {/* ---------------------------------------------------- */}
-          <section className="pt-8 border-t border-border/80 text-center space-y-8">
-            <div className="max-w-2xl mx-auto space-y-4">
-              <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight text-foreground">
-                Lass uns über deine Ausgangslage sprechen.
-              </h2>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                Erst verstehen. Dann entscheiden: In einem unverbindlichen 20-minütigen Orientierungsgespräch schauen wir gemeinsam, wo deine wirklichen Hebel liegen.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full bg-gold-gradient px-8 py-4 font-bold text-sm md:text-base text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95 hover:scale-[1.02] transition-all"
-              >
-                <MessageCircle className="w-5 h-5" />
-                <span>Orientierungsgespräch vereinbaren</span>
-              </a>
-              <Link
-                to="/"
-                hash="system"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-border bg-white px-8 py-4 font-semibold text-foreground hover:bg-slate-50 transition-all shadow-sm"
-              >
-                <span>Das M³-System ansehen</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </section>
         </div>
       </main>
 
-      <PathwayCrossNav currentRoute="ueber-mich" />
       <Footer />
     </div>
   );
