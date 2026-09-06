@@ -123,14 +123,14 @@ export const MILESTONES: Milestone[] = [
       paragraphs: [
         "Nach meiner Zeit in NRW kehrte ich nach Erfurt zurück und wurde Dozent an der Tanzfabrik Erfurt. Über viele Jahre bildete ich zahlreiche Tänzer, Jugendliche und Nachwuchstalente aus und leistete damit kontinuierliche Aufbauarbeit für die urbane Tanzkultur in ganz Thüringen.",
         "Mit den Nasty Stylistix (1996/97 gemeinsam mit dem heutigen DJ Nas-D gegründet) ging es nun in die intensive Leistungsphase: Wir verbanden schweißtreibendes Training mit mentaler Fokusarbeit (Mindset-Training) und tourten durch ganz Deutschland auf unzählige Hip-Hop-Jams, um uns mit der Szene zu vernetzen und Erfahrungen zu sammeln.",
-        "2005 folgte der große sportliche Meilenstein: Beim Vorentscheid „Battle of the East“ holten wir den Sieg und qualifizierten uns für das renommierte „Battle of the Year Germany“ (die inoffizielle Deutsche Meisterschaft der Breakdance-Crews). Vor großem Publikum erkämpften wir uns einen starken 7. Platz unter den besten 16 Crews des Landes.",
+        "2005 folgte der große sportliche Meilenstein: Beim Vorentscheid „Battle of the East“ holten wir den 3. Platz und qualifizierten uns damit für das renommierte „Battle of the Year National Germany“ (die inoffizielle Deutsche Meisterschaft der Breakdance-Crews). Vor großem Publikum erkämpften wir uns einen starken 7. Platz unter den besten 16 Crews des Landes.",
         "In dieser Ära nutzte ich jede Gelegenheit, um mich auf Workshops bei den prägendsten Dozenten der Zeit weiterzuentwickeln – unter anderem verbrachte ich wertvolle Trainingszeit mit Breakdance-Legende Niels Robitzky (Storm), Marco da Silva (No Angels), Marvin A. Smith (Britney Spears), Marty Kudelka (Justin Timberlake) und Dante Harper (Streetstyle).",
       ],
       highlights: [
         "Dozent an der Tanzfabrik Erfurt: Ausbildung vieler Tänzer & Talente in Thüringen",
         "Intensives Training & Mindset-Arbeit mit den 'Nasty Stylistix' (mit DJ Nas-D)",
         "Bundesweite Hip-Hop-Jams & enge Vernetzung in der deutschen Tanzszene",
-        "Sieg beim 'Battle of the East' & Qualifikation zum Battle of the Year National 2005",
+        "3. Platz beim 'Battle of the East' & Qualifikation zum Battle of the Year National Germany (2005)",
         "Platz 7 bei den inoffiziellen Deutschen Meisterschaften (BOTY Germany 2005)",
         "Masterclasses mit Storm (Niels Robitzky), Marco da Silva, Marvin A. Smith, Marty Kudelka & Dante Harper",
       ],
