@@ -148,27 +148,27 @@ export const MILESTONES: Milestone[] = [
     categoryLabel: "Weltmeister-Ära",
     title: "Deutscher Meister, Europameister, IDO Weltmeister & Theater Erfurt",
     shortDesc:
-      "Titel-Triple mit den „Da Rookies“, Solorollen am Theater Erfurt („Anatevka“, „Der Feuervogel“, Gounods „Faust“) und 5 Jahre UNICEF-Gala.",
+      "Titel-Triple mit den „Da Rookies“, Solorolle in „Anatevka“ am Theater Erfurt und 5 Jahre UNICEF-Galas.",
     image: "/images/performance/hero-performance-1.jpg",
     badge: "Weltklasse & Kunst",
     fullStory: {
       lead:
         "Der sportliche und künstlerische Höhepunkt: Deutscher Meister, Europameister und offizieller IDO World Champion – parallel zu Solorollen am Theater Erfurt und hochkarätigen Galashows.",
       paragraphs: [
-        "2005/2006 schloss ich mich der Ausnahme-Formation „Da Rookies“ an – einer der stärksten Breakdance-Crews Deutschlands. In monatelangem Höchstleistungstraining perfektionierten wir Akrobatik, Kraft und synchrone Schnelligkeit auf absolutem Weltklasse-Niveau.",
-        "Der sportliche Durchmarsch war historisch: Zunächst sicherten wir uns den Titel als Deutscher Meister sowie als Europameister. 2005/2006 folgte der ultimative Triumph: Vor internationaler Fachjury und tausenden Zuschauern holten wir den offiziellen IDO Breakdance-Weltmeistertitel (IDO World Champion) und setzten uns souverän gegen die weltweite Konkurrenz durch.",
-        "Parallel öffnete sich die Tür zur Hochkultur: Als fest engagierter Solist stand ich am Theater Erfurt auf der Bühne in großen Opern- und Ballettinszenierungen – darunter der Broadway-Klassiker „Anatevka“, Igor Strawinskys Meisterwerk „Der Feuervogel“, Charles Gounods Oper „Faust“ sowie weitere Theaterproduktionen.",
-        "Es folgten ausgewählte Fernsehauftritte und zahlreiche hochkarätige Gala-Veranstaltungen mit Rang und Namen – darunter 5 Jahre in Folge die renommierte UNICEF-Gala (unter der Schirmherrschaft von Heribert Klein) sowie exklusive bundesweite Bühnenformate.",
+        "2005/2006 schloss ich mich auf direkte Anfrage der Ausnahme-Formation „Da Rookies“ an – einer seinerzeit mit professionellsten Breakdance-Crews Deutschlands. In monatelangem Höchstleistungstraining perfektionierten wir Akrobatik, Kraft und synchrone Schnelligkeit auf absolutem Top-Niveau.",
+        "Der sportliche Durchmarsch war historisch: Zunächst sicherten wir uns den Titel als Deutscher Meister sowie als Europameister. 2005/2006 folgte die Krönung: Vor einer internationalen Fachjury gewannen wir den offiziellen IDO Breakdance-Weltmeistertitel (IDO World Champion) und setzten uns souverän gegen die anwesende internationale Konkurrenz durch.",
+        "Parallel öffnete sich die Tür zur Theaterbühne: Als fest engagierter Solist stand ich am Theater Erfurt im Broadway-Klassiker „Anatevka“ auf der Bühne. In den Folgejahren wirkte ich dort unter anderem als Choreograf am großen Schulprojekt „Der Feuervogel“ mit und tanzte in Inszenierungen wie Charles Gounods Oper „Faust“ sowie weiteren Theaterstücken.",
+        "Es folgten ausgewählte Fernsehauftritte und hochkarätige Gala-Engagements – darunter fünf Jahre in Folge bei der renommierten internationalen sowie nationalen UNICEF-Gala unter der Schirmherrschaft von Heribert Klein sowie auf exklusiven bundesweiten Bühnenformaten.",
       ],
       highlights: [
         "Titel-Triple mit den 'Da Rookies': Deutscher Meister, Europameister & IDO World Champion (2005/2006)",
-        "Offizieller IDO Breakdance-Weltmeistertitel vor internationaler Fachjury",
-        "Solorollen am Theater Erfurt in 'Anatevka', 'Strawinsky – Der Feuervogel' & Gounods 'Faust'",
-        "5 Jahre in Folge UNICEF-Gala (unter Schirmherrschaft von Heribert Klein) & TV-Auftritte",
-        "Verschmelzung von urbaner Höchstleistungs-Akrobatik und klassischem Theater",
+        "Souveräner Sieg gegen die anwesende internationale Konkurrenz vor Fachjury",
+        "Solist am Theater Erfurt in 'Anatevka' & Choreograf beim 'Feuervogel'-Schulprojekt",
+        "5 Jahre in Folge UNICEF-Gala (internat. & nat. unter Schirmherrschaft von Heribert Klein)",
+        "Verschmelzung von urbaner Spitzen-Akrobatik, Theaterbühne & Gala-Formaten",
       ],
       lesson:
-        "Unter maximalem Druck vor tausenden Menschen gibt es keinen Konjunktiv. Nur wenn Geist und Körper eine unzerstörbare Einheit bilden, kannst du auf den Punkt Spitzenleistung abrufen.",
+        "Unter maximalem Druck vor internationaler Fachjury gibt es keinen Konjunktiv. Nur wenn Geist und Körper eine unzerstörbare Einheit bilden, kannst du auf den Punkt Spitzenleistung abrufen.",
       quote:
         "„Weltmeister wirst du nicht am Tag des Wettkampfs – du wirst es an den tausenden Tagen davor im stillen Trainingsraum.“",
     },
