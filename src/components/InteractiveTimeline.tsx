@@ -327,6 +327,33 @@ export function InteractiveTimeline() {
   const WHATSAPP_URL =
     "https://wa.me/4917699016640?text=Hallo%20Mich%C3%A9l,%20ich%20habe%20deine%20interaktive%20Timeline%20gesehen%20und%20m%C3%B6chte%20ein%20Orientierungsgespr%C3%A4ch%20vereinbaren.";
 
+  const getMilestoneIcon = (id: string, category: string) => {
+    switch (id) {
+      case "roots-1995":
+        return <Compass className="w-5 h-5 text-primary-foreground" />;
+      case "military-1998":
+        return <ShieldCheck className="w-5 h-5 text-primary-foreground" />;
+      case "pro-2001":
+        return <Award className="w-5 h-5 text-primary-foreground" />;
+      case "worldchamp-2006":
+        return <Trophy className="w-5 h-5 text-primary-foreground" />;
+      case "projects-2008":
+        return <Heart className="w-5 h-5 text-primary-foreground" />;
+      case "crisis-2016":
+        return <Flame className="w-5 h-5 text-primary-foreground" />;
+      case "transformation-2022":
+        return <Activity className="w-5 h-5 text-primary-foreground" />;
+      case "m3-2024":
+        return <Sparkles className="w-5 h-5 text-primary-foreground" />;
+      default:
+        return category === "champion" ? (
+          <Trophy className="w-5 h-5 text-primary-foreground" />
+        ) : (
+          <Clock className="w-5 h-5 text-primary-foreground" />
+        );
+    }
+  };
+
   return (
     <section className="space-y-8 text-left relative">
       {/* Section Header */}
@@ -401,64 +428,89 @@ export function InteractiveTimeline() {
         ))}
       </div>
 
-      {/* Horizontal Carousel Track */}
-      <div className="relative">
+      {/* Horizontal Connected Timeline Track matching Reference */}
+      <div className="relative pt-2 pb-4">
         <div
           ref={scrollContainerRef}
-          className="flex gap-5 overflow-x-auto pb-6 pt-2 snap-x snap-mandatory scroll-smooth scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0"
+          className="overflow-x-auto pb-6 pt-3 scroll-smooth scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0"
         >
-          {filteredMilestones.map((item, index) => (
-            <div
-              key={item.id}
-              onClick={() => setSelectedMilestone(item)}
-              className="w-[300px] sm:w-[340px] md:w-[360px] shrink-0 snap-start rounded-3xl border border-border bg-white hover:border-gold/60 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer group select-none relative"
-            >
-              {/* Image with overlay */}
-              <div className="relative w-full h-48 bg-slate-900 overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+          <div className="min-w-max relative flex gap-6 md:gap-8 px-4 py-2">
+            {/* Continuous Top Connector Line spanning across the timeline track */}
+            <div className="absolute top-[26px] left-16 right-16 h-[3px] bg-gradient-to-r from-gold/30 via-gold to-gold/30 z-0 pointer-events-none rounded-full shadow-xs" />
 
-                {/* Top Badge */}
-                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 backdrop-blur border border-white/40 text-foreground font-mono text-[11px] font-bold shadow-sm">
-                  {item.year}
-                </div>
+            {filteredMilestones.map((item) => (
+              <div
+                key={item.id}
+                className="w-[290px] sm:w-[330px] md:w-[350px] shrink-0 flex flex-col items-center select-none group"
+              >
+                {/* Pin Node on the Line */}
+                <button
+                  type="button"
+                  onClick={() => setSelectedMilestone(item)}
+                  className="relative z-10 w-12 h-12 rounded-full bg-gold-gradient text-primary-foreground flex items-center justify-center border-4 border-white shadow-md ring-2 ring-gold/30 group-hover:scale-115 group-hover:ring-gold group-hover:shadow-lg transition-all duration-300 cursor-pointer focus:outline-none"
+                  aria-label={`Station ${item.year}: ${item.title}`}
+                >
+                  {getMilestoneIcon(item.id, item.category)}
+                </button>
 
-                <div className="absolute top-3 right-3 px-2.5 py-0.5 rounded-full bg-gold/90 text-primary-foreground font-display text-[10px] font-extrabold uppercase tracking-wider shadow-sm">
-                  {item.badge}
-                </div>
-
-                <div className="absolute bottom-3 left-3 right-3 text-white">
-                  <span className="text-[11px] font-mono uppercase tracking-widest text-gold font-bold">
-                    {item.era}
+                {/* Date Label directly underneath the node */}
+                <div className="mt-2.5 mb-4 text-center">
+                  <span className="inline-block font-mono font-bold text-xs text-foreground bg-slate-50 hover:bg-gold/10 border border-border px-3 py-1 rounded-full group-hover:border-gold/60 transition-colors shadow-2xs">
+                    {item.year}
                   </span>
                 </div>
-              </div>
 
-              {/* Card Body */}
-              <div className="p-5 sm:p-6 space-y-3 flex-grow flex flex-col justify-between bg-white">
-                <div className="space-y-2">
-                  <h3 className="font-display font-extrabold text-lg text-foreground group-hover:text-gold transition-colors line-clamp-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed line-clamp-3">
-                    {item.shortDesc}
-                  </p>
-                </div>
+                {/* Card Container directly below */}
+                <div
+                  onClick={() => setSelectedMilestone(item)}
+                  className="w-full bg-white rounded-3xl border border-border hover:border-gold/60 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer text-left group-hover:-translate-y-1"
+                >
+                  {/* Thumbnail Image */}
+                  <div className="relative w-full aspect-[16/10] bg-slate-900 overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-                <div className="pt-4 border-t border-border/70 flex items-center justify-between text-xs font-bold text-gold group-hover:translate-x-0.5 transition-transform">
-                  <span>Details & Story öffnen</span>
-                  <div className="w-7 h-7 rounded-full bg-gold/10 flex items-center justify-center group-hover:bg-gold-gradient group-hover:text-primary-foreground transition-all">
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    {/* Top Right Badge */}
+                    <div className="absolute top-3 right-3 px-2.5 py-0.5 rounded-full bg-gold/90 text-primary-foreground font-display text-[10px] font-extrabold uppercase tracking-wider shadow-sm">
+                      {item.badge}
+                    </div>
+
+                    {/* Bottom Era String */}
+                    <div className="absolute bottom-2.5 left-3 right-3 text-white">
+                      <span className="text-[10px] font-mono uppercase tracking-widest text-gold font-bold">
+                        {item.era}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Card Content: Title & Short Text */}
+                  <div className="p-5 space-y-3 flex-grow flex flex-col justify-between bg-white">
+                    <div className="space-y-2">
+                      <h3 className="font-display font-extrabold text-base sm:text-lg text-foreground group-hover:text-gold transition-colors leading-snug line-clamp-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                        {item.shortDesc}
+                      </p>
+                    </div>
+
+                    {/* Open Story Action Link */}
+                    <div className="pt-3 border-t border-border/70 flex items-center justify-between text-xs font-bold text-gold group-hover:translate-x-0.5 transition-transform">
+                      <span>Story & Details öffnen</span>
+                      <div className="w-7 h-7 rounded-full bg-gold/10 flex items-center justify-center group-hover:bg-gold-gradient group-hover:text-primary-foreground transition-all shadow-2xs">
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
 
