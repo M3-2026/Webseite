@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import {
   Trophy,
@@ -7,9 +6,7 @@ import {
   Target,
   Flame,
   Clock,
-  Sparkles,
   UserCheck,
-  Play,
   HeartHandshake,
 } from "lucide-react";
 import { Header } from "@/components/Header";
@@ -32,8 +29,6 @@ export const Route = createFileRoute("/ueber-mich")({
 });
 
 function UeberMichPage() {
-  const [videoLoaded, setVideoLoaded] = useState(false);
-
   return (
     <div className="min-h-screen bg-white text-foreground flex flex-col justify-between overflow-x-hidden selection:bg-gold/20 selection:text-foreground">
       <Header />
@@ -113,60 +108,7 @@ function UeberMichPage() {
             </div>
           </div>
 
-          {/* ---------------------------------------------------- */}
-          {/* VIDEO SHOWCASE: FOKUSSIERTER EINBLICK */}
-          {/* ---------------------------------------------------- */}
-          <section className="rounded-3xl border border-border bg-white p-6 md:p-10 shadow-xs text-left">
-            <div className="grid lg:grid-cols-12 gap-8 items-center">
-              <div className="lg:col-span-5 space-y-4">
-                <div className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-3.5 py-1 text-xs uppercase tracking-[0.18em] text-gold font-bold">
-                  <Sparkles className="w-3.5 h-3.5" />
-                  <span>M³ Video-Einblick</span>
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-display font-extrabold text-foreground">
-                  Erlebe die Philosophie von M³
-                </h2>
-                <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
-                  Wie aus 25 Jahren Spitzensport, Anatomie-Verständnis und echter Alltagserfahrung ein modulares Gesundheitssystem für schmerzfreie Belastbarkeit und dauerhafte Vitalität entstand.
-                </p>
-                <div className="text-xs font-medium text-amber-700 italic border-l-2 border-amber-500 pl-3 py-1 bg-amber-500/5 rounded-r-lg">
-                  „Manchmal braucht es Verständnis. Manchmal einen Arschtritt. Oft beides.“
-                </div>
-              </div>
 
-              <div className="lg:col-span-7">
-                <div className="aspect-video rounded-2xl bg-[#090d16] border border-slate-800 overflow-hidden relative group shadow-2xl">
-                  {videoLoaded ? (
-                    <iframe
-                      className="w-full h-full"
-                      src="https://www.youtube-nocookie.com/embed/dQrADZQ1d5I?autoplay=1"
-                      title="M³ Performance & Gesundheit – Michél Meier"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  ) : (
-                    <div
-                      onClick={() => setVideoLoaded(true)}
-                      className="w-full h-full flex flex-col items-center justify-center p-6 cursor-pointer text-center relative overflow-hidden group"
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/30 group-hover:scale-105 transition-transform duration-700 pointer-events-none" />
-                      <div className="relative z-10 flex flex-col items-center space-y-3">
-                        <div className="w-16 h-16 rounded-full bg-gold-gradient text-primary-foreground flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform">
-                          <Play className="w-7 h-7 ml-1 fill-current" />
-                        </div>
-                        <span className="font-display font-extrabold text-sm sm:text-base text-white tracking-tight">
-                          M³ Performance Video abspielen
-                        </span>
-                        <span className="text-xs text-slate-300">
-                          Direkter Einblick in Philosophie & Methodik mit Michél
-                        </span>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-          </section>
 
           {/* ---------------------------------------------------- */}
           {/* DAS HERZSTÜCK: INTERAKTIVE HORIZONTALE TIMELINE */}
