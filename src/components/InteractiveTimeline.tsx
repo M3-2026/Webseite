@@ -46,7 +46,7 @@ export const MILESTONES: Milestone[] = [
     categoryLabel: "Jugend & Wurzeln",
     title: "Frühe Schicksale, Breakdance & Erste Verantwortung",
     shortDesc:
-      "Vom 12-jährigen Breakdance-Pionier auf Pappe und Beton über frühe familiäre Schicksalsschläge bis zum ersten Thüringer Jugendmusical mit Clueso.",
+      "Vom Aufwachsen über der Familiengastronomie, schweren Verlusten und der nächtlichen Alzheimer-Begleitung der Großmutter bis zum Jugendmusical mit Clueso.",
     image: "/images/performance/hero-performance-3.jpg",
     badge: "Wurzeln & Leidenschaft",
     fullStory: {
@@ -54,12 +54,15 @@ export const MILESTONES: Milestone[] = [
         "Meine Reise begann nicht mit perfekten Trainingsplänen, sondern auf rauem Beton – und mit harten Prüfungen, die mich zwangen, früh erwachsen zu werden.",
       paragraphs: [
         "Mit 12 Jahren infizierte mich das Breakdance-Fieber. Es waren die 90er: Pappkartons auf dem Asphalt, scheppernde Kassettenrekorder, endlose Versuche, die Gesetze der Schwerkraft zu überlisten. Die Bewegung war mein Ventil, mein kreativer Ausdruck und mein sicherer emotionaler Hafen.",
-        "Doch die Jugend hielt brutale Lektionen bereit: Mit nur 14 Jahren verlor ich meinen geliebten Vater innerhalb weniger Monate an den Krebs – von heute auf morgen fehlte der wichtigste Anker. Kurz darauf verstarben auch mein Großvater und meine Großmutter. Meine Oma lebte zuvor bei uns im Haus, schwer an Alzheimer erkrankt. Als 15-Jähriger saß ich nachts unzählige Stunden an ihrem Bett und erklärte ihr mit unendlicher Geduld, wer ich bin und dass sie in Sicherheit ist.",
-        "1996 überlebte ich gemeinsam mit Freunden einen schweren Autounfall mit mehrfachem Überschlag wie durch ein Wunder. Doch statt zu verzweifeln, schwor ich mir: Ich nutze jeden einzelnen Tag. Mit 15 Jahren stand ich bereits selbst als Tanzlehrer auf der Fläche und wirkte im ersten Thüringer Jugend-Musical „Crazy Town“ (an der Seite des damals noch jungen Clueso und der späteren VIVA-Moderatorin Janine Reinhard) mit.",
+        "Wir lebten damals im Haus direkt über unserer familieneigenen Gastronomie, die meine Eltern gemeinsam aufgebaut hatten. Doch als ich 14 Jahre alt war, riss der Krebstod meines Vaters innerhalb weniger Monate das bisherige Leben komplett auseinander – meine Mutter führte den Betrieb fortan unter enormem Einsatz alleine weiter.",
+        "Kurz darauf verstarb auch mein Großvater, und meine schwer an Alzheimer erkrankte Großmutter zog zu uns. Ein ganzes Jahr lang schlief sie bei mir im Kinderzimmer. Nachts wurde ich regelmäßig durch lautes Poltern wach, wenn sie desorientiert im Dunkeln durch die Wohnung irrte. Ich stand Nacht für Nacht auf, beruhigte sie sanft, stellte mich geduldig immer wieder neu vor, wer ich bin – und begleitete sie behutsam zurück ins Bett. Dieses Jahr hat sich tief in mein Herz eingebrannt und mich gelehrt, was bedingungslose Hingabe, Empathie und Geduld wirklich bedeuten.",
+        "1996 überlebte ich gemeinsam mit Freunden einen schweren Autounfall mit mehrfachem Überschlag wie durch ein Wunder. Aus diesen Prüfungen wuchs eine unbändige Kraft: Mit 15 Jahren stand ich bereits selbst als Tanzlehrer auf der Fläche und wirkte im ersten Thüringer Jugend-Musical „Crazy Town“ (an der Seite des damals noch jungen Clueso und der späteren VIVA-Moderatorin Janine Reinhard) mit.",
         "1997 gründete ich mit Freunden die Breakdance-Formation „Nasty Stylistix“, mit der wir bereits 1998 den Titel als Thüringenmeister holten und die ostdeutsche Szene aufmischten.",
       ],
       highlights: [
         "Erste Schritte im Breakdance & Hip Hop mit 12 Jahren auf der Straße",
+        "Familiengastronomie & frühe Verantwortung nach dem Verlust des Vaters",
+        "Ein Jahr nächtliche Fürsorge für die an Alzheimer erkrankte Großmutter",
         "Mit 15 Jahren bereits erste Lehrtätigkeit als Tanzlehrer",
         "Ensemble-Mitglied im 1. Thüringer Jugendmusical 'Crazy Town' (mit Clueso)",
         "Mitbegründer der 'Nasty Stylistix' & Thüringenmeister 1998",
@@ -67,7 +70,7 @@ export const MILESTONES: Milestone[] = [
       lesson:
         "Schwere Schicksale und Verluste nehmen dir die Illusion, dass dich irgendjemand rettet. Du lernst früh: Wenn du dein Leben und deine Energie nicht selbst in die Hand nimmst, tut es niemand für dich.",
       quote:
-        "„Die Bewegung hat mich in den dunkelsten Stunden gehalten – dort habe ich gelernt, was unbändiger Wille und Selbstverantwortung wirklich bedeuten.“",
+        "„Die Bewegung hat mich in den dunkelsten Stunden gehalten – dort habe ich gelernt, was unbändiger Wille, Empathie und echte Selbstverantwortung bedeuten.“",
     },
   },
   {
