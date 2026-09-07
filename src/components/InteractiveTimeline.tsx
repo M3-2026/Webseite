@@ -214,27 +214,27 @@ export const MILESTONES: Milestone[] = [
     categoryLabel: "Krise & Transformation",
     title: "HWS-Bandscheibenvorfall, Schmerz-Odyssee & Die Biochemie-Wende",
     shortDesc:
-      "Schwerer Halswirbelsäulenvorfall (C6/C7), chronische Entzündungen und Darmprobleme – und die radikale Selbstheilung ohne Operation.",
+      "Schwerer Halswirbelsäulenvorfall (C6/C7), chronische Entzündungen und Darmprobleme – und der Weg zurück zu Schmerzfreiheit und voller Belastbarkeit.",
     image: "/images/performance/mrt-hws-bandscheibenvorfall.jpg",
     badge: "Krise & Der Reset",
     fullStory: {
       lead:
-        "Als der Weltmeister-Körper plötzlich kollabierte: Die dunkelste Phase meines Lebens und die Geburtsstunde des M³-Gesundheitssystems.",
+        "Als der Weltmeister-Körper plötzlich stoppte: Die schwere Prüfung meines Lebens und die Geburtsstunde des M³-Gesundheitssystems.",
       paragraphs: [
-        "2016 zog mein Körper die absolute Notbremse. Ein schwerer Bandscheibenvorfall in der Halswirbelsäule (HWS C6/C7) mit Nervenkompression raubte mir über Nacht Kraft und Beweglichkeit. Es folgten ein massives Schulter-Impingement, ständige Nackenkrämpfe, Taubheitsgefühle in den Fingern, chronische Entzündungsschübe und eine schwere Darmdysbiose durch Parasitenbefall.",
-        "Die Schulmedizin bot mir fast ausschließlich Schmerzmittel, Cortisonspritzen und eine dringende Wirbelsäulen-OP (Versteifung) an. Ich erlebte den totalen mentalen Tiefpunkt: Rückzug, Frustration, schwere Schlafstörungen und eine fatale Abwärtsspirale.",
-        "An diesem Tiefpunkt traf ich die mutigste Entscheidung meines Lebens: Keine voreilige OP! Ich begann ein fünfjähriges, radikales Selbststudium in funktioneller Biochemie, mitochondrialer Zellenergie (ATP), Mikrobiom- und Darmsanierung sowie Neuro-Athletik und Faszientraining.",
-        "Ich heilte meinen Darm, löschte die chronischen Entzündungen von innen heraus und baute meine Biomechanik millimetergenau neu auf. Das Ergebnis: Ich wurde zu 100 % schmerzfrei, stand wieder auf dem Kopf und hatte mehr Energie und Belastbarkeit als je zuvor.",
+        "2016 zog mein Körper die Notbremse: Ein schwerer Bandscheibenvorfall in der Halswirbelsäule (HWS C6/C7) mit Nervenkompression raubte mir über Nacht Kraft und Beweglichkeit. Es folgten Schulter-Impingement, ständige Nackenkrämpfe, Taubheitsgefühle in den Fingern, chronische Entzündungsschübe und eine schwere Darmdysbiose durch Parasitenbefall.",
+        "Die Schulmedizin bot mir fast ausschließlich Schmerzmittel, Cortisonspritzen und eine dringende Wirbelsäulen-OP (Versteifung) an. Ich erlebte den mentalen Tiefpunkt: Rückzug, Frustration, schwere Schlafstörungen und eine spürbare Abwärtsspirale.",
+        "An diesem Wendepunkt traf ich eine mutige Entscheidung: Keine voreilige OP! Ich begann ein tiefes, mehrjähriges Selbststudium in funktioneller Biochemie, mitochondrialer Zellenergie (ATP), gezielter Vitalstoff-Versorgung, Mikrobiom- und Darmsanierung sowie Neuro-Athletik und Faszientraining.",
+        "Durch die Auseinandersetzung mit Vitalstoffen und ganzheitlicher Eigentherapie heilte mein Darm, die Entzündungen klangen ab und die Bewegungsfunktionen bauten sich Schritt für Schritt harmonisch wieder auf. Das Ergebnis: Nachweisbar zweieinhalb Jahre später drehte ich mich wieder auf den Kopf, war schmerzfrei und hatte die volle Belastbarkeit und Energie wie zu meinen besten Leistungszeiten zurück.",
       ],
       highlights: [
         "Schwerer Bandscheibenvorfall HWS (C6/C7), Impingement & Nervenblockaden",
         "Chronische Darmbeschwerden, Erschöpfung und Entzündungs-Odyssee",
         "Mutige Entscheidung gegen Operation & Versteifung der Wirbelsäule",
-        "5 Jahre intensives Selbststudium in Biochemie, Zellgesundheit & Mikrobiom",
-        "Vollständige, 100% schmerzfreie Regeneration aus eigener Kraft",
+        "Tiefes Selbststudium in Biochemie, Vitalstoffen, Zellgesundheit & Mikrobiom",
+        "Nachweisbar 2,5 Jahre später schmerzfrei, voll belastbar & wieder auf dem Kopf",
       ],
       lesson:
-        "Wenn dein biochemisches Fundament und dein Darm brennen, ist jedes harte Training wie Benzin ins Feuer. Du musst erst die Zellenergie und den Stoffwechsel reparieren – dann wird der Körper von allein wieder schmerzfrei und leistungsfähig.",
+        "Wenn dein biochemisches Fundament und dein Darm brennen, ist jedes harte Training wie Benzin ins Feuer. Du musst erst die Zellenergie, Vitalstoffe und den Stoffwechsel ins Gleichgewicht bringen – dann wird der Körper von allein wieder schmerzfrei und leistungsfähig.",
       quote:
         "„Niemand wird dich retten. Du musst selbst die volle Verantwortung für deinen Körper übernehmen und die Ursachen an der Wurzel heilen.“",
     },
