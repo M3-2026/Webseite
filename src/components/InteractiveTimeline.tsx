@@ -215,7 +215,7 @@ export const MILESTONES: Milestone[] = [
     title: "HWS-Bandscheibenvorfall, Schmerz-Odyssee & Die Biochemie-Wende",
     shortDesc:
       "Schwerer Halswirbelsäulenvorfall (C6/C7), chronische Entzündungen und Darmprobleme – und die radikale Selbstheilung ohne Operation.",
-    image: "/images/gym-shooting/A7401521.jpg",
+    image: "/images/performance/mrt-hws-bandscheibenvorfall.jpg",
     badge: "Krise & Der Reset",
     fullStory: {
       lead:
