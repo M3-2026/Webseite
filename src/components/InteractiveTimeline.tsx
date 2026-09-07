@@ -245,29 +245,29 @@ export const MILESTONES: Milestone[] = [
     era: "Wissenschaft & Rekonstruktion",
     category: "crisis",
     categoryLabel: "Krise & Transformation",
-    title: "Die 90-Tage Challenge, TÜV-Zertifizierung & Psychologische Bestnoten",
+    title: "Die 90-Tage Challenge, Master-Qualifikationen & Psychologische Bestnoten",
     shortDesc:
-      "Gezielte Darm- & Parasitenkur mit Premium-Vitalstoffen, 90-Tage-Transformation und Höchstnoten (5/5) in psychologischer Führung und Selbstwirksamkeit.",
+      "Erfolgreiche 90-Tage-Transformation (Top 30 von 3.000), Mikrobiom-Sanierung, fundierte Coaching-Ausbildungen und psychologische Höchstnoten (5/5).",
     image: "/images/gym-shooting/A7401576.jpg",
     badge: "Validierung & System",
     fullStory: {
       lead:
-        "Die Fusion aus 25 Jahren Bewegungserfahrung, biochemischer Wissenschaft und fundierter psychologischer Führungskompetenz.",
+        "Die Fusion aus 25 Jahren Bewegungserfahrung, eigener Transformation und fundierter psychologischer sowie sportwissenschaftlicher Coaching-Kompetenz.",
       paragraphs: [
-        "2022/2023 folgte eine weitere intensive Prüfung: Ein akuter Parasitenbefall und tiefe Darmdysbalancen machten mir zu schaffen. Nachdem schulmedizinische Chemiekeulen den Organismus zusätzlich schwächten, fand ich die nachhaltige Lösung: Ich lernte hochwirksame, synergetische Vitalstoff-Konzepte kennen, sanierte mein Mikrobiom von Grund auf, löschte verbliebene Entzündungen und brachte meine Zellenergie auf ein nie dagewesenes Level.",
-        "Ende 2022 stellte ich mich der eigenen Bewährungsprobe: In einer wissenschaftlich dokumentierten 90-Tage Transformation synchronisierte ich Ernährung, Krafttraining, Zellstoffwechsel und Schlafrhythmus perfekt. Das Ergebnis war der finale Beweis, wie mächtig ein ganzheitliches System ist.",
-        "Parallel professionalisierte ich meine Coaching-Methodik: Ich absolvierte fundierte Weiterbildungen im Bewerbungsmanagement und Berufscoaching (TÜV Rheinland), um Klienten auch psychologisch und mental durch schwierige Lebensphasen zu führen.",
-        "Die offizielle psychologische Potenzial- und Eignungsdiagnostik (Bundesagentur für Arbeit) attestierte mir die absoluten Maximalwerte (Bereich 5 von 5) in: Führungs- und Gestaltungsmotivation, Durchhaltevermögen & Frustrationstoleranz, Selbstwirksamkeit, Ergebnisorientierung und konfliktfähiger Empathie. Daraus entstand das geschützte 3-Säulen-Fundament von M³.",
+        "2022/2023 nutzte ich die Zeit für meine eigene Neuausrichtung: Über einen bekannten Fitness-Influencer startete ich am 1. Januar in eine 90-Tage-Challenge – für mich der entscheidende Schritt zurück zu absoluter Fitness. Ich dokumentierte jeden Schritt für mich persönlich akribisch: Ernährung, Krafttraining, Zellstoffwechsel und Schlafrhythmus wurden präzise aufeinander abgestimmt. Das Ergebnis: Mit einer herausragenden Body Recomposition wurde ich unter die Top 30 von rund 3.000 Teilnehmern gewählt.",
+        "Parallel meisterte ich eine weitere gesundheitliche Bewährungsprobe: Nach der Diagnose eines akuten Parasitenbefalls und Darmdysbalancen, die durch schulmedizinische Chemiekeulen zusätzlich belastet wurden, fand ich durch synergetische Premium-Vitalstoffe und Mikrobiom-Konzepte die nachhaltige, ganzheitliche Lösung.",
+        "Aus dieser eigenen Transformation wuchs der Entschluss, Menschen professionell als Personal Trainer zu begleiten: Ich absolvierte die fundierte Master Personal Trainer Ausbildung (inkl. A- und B-Lizenz, Ernährungsberatung & Ernährungscoaching, funktionell-medizinisches Training) sowie ein fortgeschrittenes Kommunikations- und Verkaufscoaching bei Marc Galal und Weiterbildungen im Berufscoaching (TÜV Rheinland).",
+        "Die offizielle psychologische Potenzial- und Eignungsdiagnostik (Bundesagentur für Arbeit) attestierte mir maximale Werte (Bereich 5 von 5) in: Führungs- und Gestaltungsmotivation, Durchhaltevermögen & Frustrationstoleranz, Selbstwirksamkeit, Ergebnisorientierung und konfliktfähiger Empathie. Daraus formte sich das 3-Säulen-Fundament von M³: Metabolism, Movement & Mental.",
       ],
       highlights: [
+        "90-Tage-Challenge: Eigene Top-Transformation (unter den besten 30 von 3.000)",
         "Mikrobiom- & Parasiten-Sanierung mit synergetischen Premium-Vitalstoffen",
-        "Erfolgreiche 90-Tage Challenge: Dokumentierte Bestform & Vitalitätsmaximum",
-        "Zertifizierter Berufscoach & Bewerbungsmanager (TÜV Rheinland)",
-        "Offizielle Bestnoten (5 von 5) in Durchhaltevermögen, Führung & Selbstwirksamkeit",
+        "Fundierte Master-Ausbildung: A-/B-Lizenz, Ernährungslehre, funktionelle Medizin & Marc Galal Coaching",
+        "Zertifizierter Berufscoach (TÜV Rheinland) & offizielle psychologische Bestnoten (5 von 5)",
         "Entwicklung des geschützten 3-Säulen-Systems von M³ Performance",
       ],
       lesson:
-        "Große Transformationen scheitern selten am Mangel an Wissen, sondern an fehlender psychologischer Struktur und mangelnder Alltagstauglichkeit unter hoher beruflicher Belastung.",
+        "Große Veränderungen beginnen mit einer klaren Entscheidung: Wenn Disziplin, das richtige System und neue Gewohnheiten ineinandergreifen, entstehen dauerhafte Resultate für Körper und Geist.",
       quote:
         "„Disziplin wird einfach, wenn das System logisch ist und du die ersten spürbaren Resultate an deinem eigenen Körper siehst.“",
     },
@@ -287,14 +287,14 @@ export const MILESTONES: Milestone[] = [
       lead:
         "Mein Lebenswerk in Aktion: Menschen mitten im Leben zu echter Gesundheit, schmerzfreier Kraft und dauerhafter Eigenverantwortung führen.",
       paragraphs: [
-        "Seit Januar 2024 widme ich mich zu 100 % meiner Berufung: M³ Performance & Gesundheit. Begleitend absolviere ich die Ausbildung zum Master Personal Trainer i.A. – der höchsten nationalen Qualitätsstufe im Personal Training.",
+        "Seit Januar 2024 widme ich mich zu 100 % meiner Berufung: M³ Performance & Gesundheit. Als Master Personal Trainer i.A. verbinde ich 25 Jahre Hochleistungssport, funktionelle Biochemie und psychologische Coaching-Kompetenz.",
         "Auf meinem Instagram-Kanal (@michelmeiermoves) teile ich täglich ungeschönte, praxisnahe Einblicke aus Training, Biochemie und Lebensführung, die tausende Menschen inspirieren und wachrütteln.",
         "In der exklusiven 1:1 Begleitung helfe ich vielbeschäftigten Unternehmern, Selbstständigen und Führungskräften, chronische Nacken- und Rückenschmerzen zu besiegen, Nachmittagstiefs und Bauchfett loszuwerden und ihr Energieniveau dauerhaft zu verdoppeln.",
         "Unser oberstes Credo bei M³ lautet: Autonomie statt Abhängigkeit. Ich mache mich für meine Klienten bewusst überflüssig, indem ich ihnen beibringe, wie ihr Körper, ihr Stoffwechsel und ihr Nervensystem funktionieren – für ein Leben in voller Kraft und Unabhängigkeit.",
       ],
       highlights: [
         "Gründung & Vollzeit-Fokus auf M³ Performance & Gesundheit",
-        "Master Personal Trainer (i.A.) Ausbildung (Höchste Qualifikationsstufe)",
+        "Master Personal Trainer (i.A.) mit ganzheitlichem 3-Säulen-Ansatz",
         "Tägliche Bewegungsimpulse & Aufklärung auf Instagram (@michelmeiermoves)",
         "Exklusive 1:1 Betreuung mit messbaren Resultaten in Stoffwechsel & Schmerzfreiheit",
         "100% Autonomie-Fokus: Klienten lernen, sich dauerhaft selbst zu steuern",
