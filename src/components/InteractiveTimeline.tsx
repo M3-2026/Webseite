@@ -176,27 +176,27 @@ export const MILESTONES: Milestone[] = [
   {
     id: "projects-2008",
     year: "2008 – 2015",
-    era: "Air4Day & Vaterschaft",
+    era: "Air4Day, Projekte & Vaterschaft",
     category: "roots",
     categoryLabel: "Jugend & Wurzeln",
-    title: "10 Jahre „Air4Day“, Ausbildungs-Module & Alleinerziehender Vater",
+    title: "10 Jahre „Air4Day“, Vielfältige Projekte & Alleinerziehender Vater",
     shortDesc:
-      "Initiator von 13 Ausgaben des „Air4Day“, die innovative „Air4Day Station“ mit Top-Dozenten (Breakletics, Break Anatomy) und Meisterschaft als alleinerziehender Vater.",
+      "13 Ausgaben „Air4Day“, innovative „Air4Day Station“, vielfältige Schul-, Migrations-, Kinder- & Jugendprojekte sowie Meisterschaft als alleinerziehender Vater.",
     image: "/images/performance/air4day-breakdance-competition.jpg",
-    badge: "Air4Day & Familie",
+    badge: "Projekte & Familie",
     fullStory: {
       lead:
-        "10 Jahre Herzblut für 13 Ausgaben des „Air4Day“ und Bildungs-Wochenenden – und gleichzeitig als alleinerziehender Vater das Leben eines Kleinkinds meistern.",
+        "10 Jahre Herzblut für 13 Ausgaben des „Air4Day“, unzählige Bildungs-, Schul- und Migrationsprojekte – und gleichzeitig als alleinerziehender Vater das Leben eines Kleinkinds meistern.",
       paragraphs: [
         "Über 10 Jahre hinweg (mit insgesamt 13 erfolgreichen Groß-Events bis 2019) rief ich das überregional bekannte Urban-Dance-Format „Air4Day“ ins Leben (ergänzt durch Kooperationen wie „Kingz Of The Circle“). Mit der eigens entwickelten „Air4Day Station“ schuf ich ein intensives Ausbildungs-Wochenende mit praxisnahen Fachmodulen für Tänzer und Athleten.",
-        "Dafür holte ich renommierte Pioniere nach Thüringen – darunter Peter Sowinski (Entwickler des weltweiten Trainingskonzepts Breakletics) sowie Sebastian Kim Jung Ung (engagierter Tänzer aus Köln und Initiator der „Break Anatomy“ an der Tanzhochschule Köln). Zudem leitete ich bilaterale Austauschprogramme mit Frankreich (Picardie) und den Niederlanden (Den Haag) und engagierte mich als Schirmherr für benachteiligte Jugendliche.",
+        "Dafür holte ich renommierte Pioniere nach Thüringen – darunter Peter Sowinski (Entwickler des weltweiten Trainingskonzepts Breakletics) sowie Sebastian Kim Jung Ung (Initiator der „Break Anatomy“ an der Tanzhochschule Köln). Parallel initiierte und leitete ich eine Vielzahl an Schulprojekten, integrativen Migrationsprojekten sowie Kinder- und Jugendförderprogrammen verschiedenster Kategorien, führte bilaterale Jugendaustauschprogramme mit Frankreich (Picardie) und den Niederlanden (Den Haag) durch und engagierte mich als Schirmherr für benachteiligte Jugendliche.",
         "Doch mitten in dieser intensiven Phase stellte das Leben mir die größte Prüfung: Als meine Tochter gerade einmal ein Jahr alt war, trennte sich ihre Mutter und verließ unsere Familie. Von einer Sekunde auf die andere war ich alleinerziehender Vater eines Kleinkinds.",
-        "Es folgten Jahre des extremen Spagats: Zwischen Windeln wechseln, Brei kochen, schlaflosen Nächten, Kindergartenorganisation, Schichtbetrieb und internationalen Projektfristen gab es kein Netz und keinen doppelten Boden. Diese Jahre ohne Ausreden haben mein Verständnis von alltagstauglicher Organisation und echter Belastbarkeit für immer geprägt.",
+        "Es folgten Jahre des extremen Spagats: Zwischen Windeln wechseln, Brei kochen, schlaflosen Nächten, Kindergartenorganisation, Schichtbetrieb und Projektfristen gab es kein Netz und keinen doppelten Boden. Diese Jahre ohne Ausreden haben mein Verständnis von alltagstauglicher Organisation und echter Belastbarkeit für immer geprägt.",
       ],
       highlights: [
-        "10 Jahre & 13 Ausgaben des 'Air4Day' (inkl. Partnerschaften wie 'Kingz Of The Circle')",
-        "'Air4Day Station': Fachausbildungs-Wochenenden mit innovativen Modulen",
-        "Kooperationen mit Peter Sowinski (Breakletics) & Sebastian Kim Jung Ung (Break Anatomy)",
+        "10 Jahre & 13 Ausgaben des 'Air4Day' (inkl. Kooperationen wie 'Kingz Of The Circle')",
+        "'Air4Day Station': Fachausbildungs-Wochenenden mit innovativen Modulen (Breakletics, Break Anatomy)",
+        "Vielfältige Schulprojekte, Migrationsprojekte, Kinder- & Jugendprojekte",
         "Bilaterale Jugendaustauschprogramme (Deutschland, Frankreich, Niederlande)",
         "Volle Verantwortung und Meisterschaft als alleinerziehender Vater ab dem 1. Lebensjahr",
       ],
@@ -252,7 +252,7 @@ export const MILESTONES: Milestone[] = [
     badge: "Validierung & System",
     fullStory: {
       lead:
-        "Die Fusion aus 25 Jahren Bewegungserfahrung, eigener Transformation und fundierter psychologischer sowie sportwissenschaftlicher Coaching-Kompetenz.",
+        "Die Fusion aus 30+ Jahren Bewegungserfahrung, 15 Jahren Profi-Tanz, eigener Transformation und fundierter psychologischer sowie sportwissenschaftlicher Coaching-Kompetenz.",
       paragraphs: [
         "2022/2023 nutzte ich die Zeit für meine eigene Neuausrichtung: Über einen bekannten Fitness-Influencer startete ich am 1. Januar in eine 90-Tage-Challenge – für mich der entscheidende Schritt zurück zu absoluter Fitness. Ich dokumentierte jeden Schritt für mich persönlich akribisch: Ernährung, Krafttraining, Zellstoffwechsel und Schlafrhythmus wurden präzise aufeinander abgestimmt. Das Ergebnis: Mit einer herausragenden Body Recomposition wurde ich unter die Top 30 von rund 3.000 Teilnehmern gewählt.",
         "Parallel meisterte ich eine weitere gesundheitliche Bewährungsprobe: Nach der Diagnose eines akuten Parasitenbefalls und Darmdysbalancen, die durch schulmedizinische Chemiekeulen zusätzlich belastet wurden, fand ich durch synergetische Premium-Vitalstoffe und Mikrobiom-Konzepte die nachhaltige, ganzheitliche Lösung.",
@@ -287,7 +287,7 @@ export const MILESTONES: Milestone[] = [
       lead:
         "Mein Lebenswerk in Aktion: Menschen mitten im Leben zu echter Gesundheit, natürlicher Leistungsfähigkeit und dauerhafter Eigenverantwortung führen.",
       paragraphs: [
-        "Seit Januar 2024 widme ich mich voll meiner Berufung: M³ Performance & Gesundheit. Als Master Personal Trainer in Ausbildung (i.A.) verbinde ich 25 Jahre Bewegungspraxis, funktionelle Biochemie und fundierte Coaching-Kompetenz.",
+        "Seit Januar 2024 widme ich mich voll meiner Berufung: M³ Performance & Gesundheit. Als Master Personal Trainer in Ausbildung (i.A.) verbinde ich über 30 Jahre Bewegungspraxis, 15 Jahre hauptberuflichen Tanz, funktionelle Biochemie und fundierte Coaching-Kompetenz.",
         "Auf meinem Instagram-Kanal (@michelmeiermoves) gebe ich regelmäßig praxisnahe Einblicke in Themen rund um Darm, Stoffwechsel, Bewegung und eine gesunde Lebensführung, um Menschen auf meine persönliche Art und Weise inspirierend wachzurütteln.",
         "In der persönlichen 1:1-Begleitung sowie in flexiblen Online-Formaten unterstütze ich vielbeschäftigte Menschen – sowohl im privaten als auch im geschäftlichen Alltag, vom Unternehmer, Selbstständigen oder der Führungskraft bis zum Normalverbraucher: in einen gesunden Lebensstil zu finden, Bauchfett loszuwerden, ihr Energieniveau nachhaltig zu steigern und dauerhaft in echter Gesundheit und Belastbarkeit zu leben.",
         "Mein oberstes Credo bei M³ lautet: Autonomie statt Abhängigkeit. Ich mache mich für meine Klienten bewusst überflüssig, indem ich ihnen verständlich vermittle, wie ihr Körper, ihr Stoffwechsel und ihr System funktionieren – für ein Leben in voller Kraft und Unabhängigkeit.",
@@ -439,10 +439,10 @@ export function InteractiveTimeline() {
             <span>Interaktive Lebensstationen & Meilensteine</span>
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-extrabold tracking-tight text-foreground">
-            25+ Jahre Bewegung & Performance
+            30+ Jahre Bewegung & Performance
           </h2>
           <p className="text-xs sm:text-sm text-muted-foreground max-w-2xl">
-            Vom frühen Einstieg und Weltmeistertitel über schwere Rückschläge bis zum M³-System. Klicke auf eine Station für die exklusiven Hintergrunddetails.
+            Davon 15 Jahre hauptberuflich Tanz sowie vielfältige Schul-, Migrations-, Kinder- und Jugendprojekte: Vom frühen Einstieg und Weltmeistertitel über schwere Rückschläge bis zum M³-System. Klicke auf eine Station für die exklusiven Hintergrunddetails.
           </p>
         </div>
 

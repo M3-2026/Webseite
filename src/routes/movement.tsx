@@ -224,10 +224,10 @@ function MovementPage() {
                   Athletische Praxis
                 </span>
                 <h2 className="text-3xl md:text-4xl font-display font-extrabold text-foreground">
-                  25 Jahre Erfahrung im Spitzensport
+                  30+ Jahre Bewegung & Spitzensport
                 </h2>
                 <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                  Vom Breakdance-Weltmeistertitel 2006/07 bis zur täglichen Coaching-Praxis als Personal Trainer & Gesundheitscoach: Michél Meier vermittelt Bewegung so, dass sie dich nicht verschleißt, sondern deinen Körper widerstandsfähig und stark für alle Anforderungen des Lebens macht.
+                  Vom Breakdance-Weltmeistertitel 2005/06 über 15 Jahre Profitanz bis zur täglichen Coaching-Praxis als Personal Trainer & Gesundheitscoach: Michél Meier vermittelt Bewegung so, dass sie dich nicht verschleißt, sondern deinen Körper widerstandsfähig und stark für alle Anforderungen des Lebens macht.
                 </p>
                 <div className="pt-2">
                   <Link

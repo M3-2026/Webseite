@@ -166,7 +166,7 @@ const SITEMAP_ITEMS: SitemapItem[] = [
     title: "M² Performance Training",
     subtitle: "1:1 Personal Training für Kraft & Explosivität",
     description:
-      "Hochindividuelles Personal Training, das Maximalkraft, Schnellkraft und athletische Körperbeherrschung verbindet – basierend auf 25+ Jahren Weltklasse-Erfahrung.",
+      "Hochindividuelles Personal Training, das Maximalkraft, Schnellkraft und athletische Körperbeherrschung verbindet – basierend auf 30+ Jahren Bewegungspraxis & Weltklasse-Erfahrung.",
     href: "/performance-training",
     category: "movement",
     pillar: "m2",
@@ -206,9 +206,9 @@ const SITEMAP_ITEMS: SitemapItem[] = [
   },
   {
     title: "Über Michél Meier",
-    subtitle: "25+ Jahre Bewegungspraxis & Weltmeisterjahre",
+    subtitle: "30+ Jahre Bewegung & Performance (15 J. Profi-Tanz)",
     description:
-      "Vom Breakdance-Weltmeistertitel 2006/07 und schweren Rückschlägen zur Entwicklung des modularen M³ Gesundheitssystems. Erfahre alles über Michéls Philosophie und Werte.",
+      "Vom Breakdance-Weltmeistertitel 2005/06 und schweren Rückschlägen zur Entwicklung des modularen M³ Gesundheitssystems. Erfahre alles über Michéls Philosophie und Werte.",
     href: "/ueber-mich",
     category: "about",
     pillar: "gold",

@@ -199,7 +199,7 @@ const HERO_TESTIMONIALS: HeroTestimonial[] = [
     role: "Architektin & Freizeitsportlerin (32 J.)",
     pillar: "M² Biomechanik & Haltung",
     badgeClass: "bg-indigo-600/10 text-indigo-700 border-indigo-600/25",
-    quote: "Man merkt in jeder Sekunde seine 25 Jahre Bewegungserfahrung. Er sieht minimale Fehlstellungen sofort und korrigiert sie präzise. Bestes Personal Training!",
+    quote: "Man merkt in jeder Sekunde seine über 30 Jahre Bewegungserfahrung. Er sieht minimale Fehlstellungen sofort und korrigiert sie präzise. Bestes Personal Training!",
     result: "Gelenke stabilisiert",
   },
 ];
@@ -810,7 +810,7 @@ function IndexPage() {
                 </div>
                 <div className="flex items-center gap-1.5 pt-0.5">
                   <span className="text-amber-500">★</span>
-                  <span>25+ Jahre Praxis</span>
+                  <span>30+ Jahre Praxis (15 J. Tanz)</span>
                 </div>
                 <div className="flex items-center gap-1.5 pt-0.5">
                   <span className="text-amber-500">★</span>

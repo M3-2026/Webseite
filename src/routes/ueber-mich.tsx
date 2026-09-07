@@ -22,7 +22,7 @@ export const Route = createFileRoute("/ueber-mich")({
       {
         name: "description",
         content:
-          "25+ Jahre Bewegungserfahrung, IDO Breakdance-Weltmeister & Master Personal Trainer (i.A.): Erfahre alles über Michél Meiers Geschichte, Werte und die Entstehung des M³-Systems.",
+          "30+ Jahre Bewegung & Performance (davon 15 Jahre hauptberuflich Tanz), IDO Breakdance-Weltmeister & Master Personal Trainer (i.A.): Erfahre alles über Michél Meiers Geschichte, Werte und die Entstehung des M³-Systems.",
       },
     ],
   }),
@@ -52,7 +52,7 @@ function UeberMichPage() {
               </h1>
 
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground font-medium leading-relaxed max-w-2xl">
-                Warum selbst die härteste Disziplin scheitert, wenn das Fundament nicht stimmt – und wie aus 25 Jahren Spitzensport, Rückschlägen und Alltagsrealität das M³-System entstand.
+                Warum selbst die härteste Disziplin scheitert, wenn das Fundament nicht stimmt – und wie aus 30+ Jahren Bewegungserfahrung, 15 Jahren Hauptberuflichkeit im Tanz, unzähligen Projekten und Alltagsrealität das M³-System entstand.
               </p>
 
               {/* Minimalist Key Facts Bar */}
@@ -64,7 +64,7 @@ function UeberMichPage() {
 
                 <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-border bg-slate-50/80 text-xs font-semibold text-foreground shadow-2xs">
                   <Clock className="w-4 h-4 text-primary shrink-0" />
-                  <span>25+ Jahre Bewegungspraxis</span>
+                  <span>30+ Jahre Bewegung (15 J. Profi-Tanz)</span>
                 </div>
 
                 <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-border bg-slate-50/80 text-xs font-semibold text-foreground shadow-2xs">
@@ -153,7 +153,7 @@ function UeberMichPage() {
                 {
                   icon: <ShieldCheck className="w-5 h-5 text-indigo-600" />,
                   title: "Kompromisslose Qualität",
-                  desc: "Aus 25 Jahren Spitzensport und Praxis: Nur Maßnahmen, die einem fundierten physiologischen Anspruch genügen. Kein Trend-Hype, sondern dauerhafte Schmerzfreiheit und Belastbarkeit.",
+                  desc: "Aus 30+ Jahren Bewegung, 15 Jahren professionellem Tanz und gelebter Praxis: Nur Maßnahmen, die einem fundierten physiologischen Anspruch genügen. Kein Trend-Hype, sondern dauerhafte Schmerzfreiheit und Belastbarkeit.",
                 },
               ].map((v, i) => (
                 <div

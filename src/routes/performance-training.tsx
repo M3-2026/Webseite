@@ -45,7 +45,7 @@ function PerformanceTrainingPage() {
               <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl whitespace-pre-line">
                 Nachhaltige Leistungsfähigkeit entsteht nicht durch Zufall oder sinnloses Auspowern.
                 {"\n\n"}
-                Mit einer maßgeschneiderten 1:1 Strategie, anatomisch sauberer Übungsausführung und über 25 Jahren Praxiserfahrung schaffen wir echte Kraft, Gelenkstabilität und Belastbarkeit für Beruf und Alltag.
+                Mit einer maßgeschneiderten 1:1 Strategie, anatomisch sauberer Übungsausführung und über 30 Jahren Bewegungspraxis (davon 15 Jahre Leistungssport & Profi-Tanz) schaffen wir echte Kraft, Gelenkstabilität und Belastbarkeit für Beruf und Alltag.
               </p>
 
               <div className="pt-2">
