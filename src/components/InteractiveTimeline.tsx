@@ -182,19 +182,19 @@ export const MILESTONES: Milestone[] = [
     title: "10 Jahre „Air4Day“, Ausbildungs-Module & Alleinerziehender Vater",
     shortDesc:
       "Initiator von 13 Ausgaben des „Air4Day“, die innovative „Air4Day Station“ mit Top-Dozenten (Breakletics, Break Anatomy) und Meisterschaft als alleinerziehender Vater.",
-    image: "/images/performance/hero-performance-5.jpg",
+    image: "/images/performance/air4day-breakdance-competition.jpg",
     badge: "Air4Day & Familie",
     fullStory: {
       lead:
         "10 Jahre Herzblut für 13 Ausgaben des „Air4Day“ und Bildungs-Wochenenden – und gleichzeitig als alleinerziehender Vater das Leben eines Kleinkinds meistern.",
       paragraphs: [
-        "Über 10 Jahre hinweg (mit insgesamt 13 erfolgreichen Groß-Events bis 2019) rief ich das überregional bekannte Urban-Dance-Format „Air4Day“ und „Kingz Of The Circle“ ins Leben. Mit der eigens entwickelten „Air4Day Station“ schuf ich ein intensives Ausbildungs-Wochenende mit praxisnahen Fachmodulen für Tänzer und Athleten.",
+        "Über 10 Jahre hinweg (mit insgesamt 13 erfolgreichen Groß-Events bis 2019) rief ich das überregional bekannte Urban-Dance-Format „Air4Day“ ins Leben (ergänzt durch Kooperationen wie „Kingz Of The Circle“). Mit der eigens entwickelten „Air4Day Station“ schuf ich ein intensives Ausbildungs-Wochenende mit praxisnahen Fachmodulen für Tänzer und Athleten.",
         "Dafür holte ich renommierte Pioniere nach Thüringen – darunter Peter Sowinski (Entwickler des weltweiten Trainingskonzepts Breakletics) sowie Sebastian Kim Jung Ung (engagierter Tänzer aus Köln und Initiator der „Break Anatomy“ an der Tanzhochschule Köln). Zudem leitete ich bilaterale Austauschprogramme mit Frankreich (Picardie) und den Niederlanden (Den Haag) und engagierte mich als Schirmherr für benachteiligte Jugendliche.",
         "Doch mitten in dieser intensiven Phase stellte das Leben mir die größte Prüfung: Als meine Tochter gerade einmal ein Jahr alt war, trennte sich ihre Mutter und verließ unsere Familie. Von einer Sekunde auf die andere war ich alleinerziehender Vater eines Kleinkinds.",
         "Es folgten Jahre des extremen Spagats: Zwischen Windeln wechseln, Brei kochen, schlaflosen Nächten, Kindergartenorganisation, Schichtbetrieb und internationalen Projektfristen gab es kein Netz und keinen doppelten Boden. Diese Jahre ohne Ausreden haben mein Verständnis von alltagstauglicher Organisation und echter Belastbarkeit für immer geprägt.",
       ],
       highlights: [
-        "10 Jahre & 13 Ausgaben des 'Air4Day' & 'Kingz Of The Circle' (bis 2019)",
+        "10 Jahre & 13 Ausgaben des 'Air4Day' (inkl. Partnerschaften wie 'Kingz Of The Circle')",
         "'Air4Day Station': Fachausbildungs-Wochenenden mit innovativen Modulen",
         "Kooperationen mit Peter Sowinski (Breakletics) & Sebastian Kim Jung Ung (Break Anatomy)",
         "Bilaterale Jugendaustauschprogramme (Deutschland, Frankreich, Niederlande)",
