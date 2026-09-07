@@ -280,29 +280,29 @@ export const MILESTONES: Milestone[] = [
     categoryLabel: "M³ Performance",
     title: "M³ Performance, Master Personal Trainer i.A. & Das Autonomie-Prinzip",
     shortDesc:
-      "Die Bündelung eines Lebenswerks: 1:1 Betreuung von Unternehmern und Führungskräften für dauerhafte Vitalität, Schmerzfreiheit und Unabhängigkeit.",
+      "Die Bündelung eines Lebenswerks: 1:1- und Online-Begleitung für vielbeschäftigte Menschen – für gesunden Lebensstil, mehr Energie, Fettabbau und echte Unabhängigkeit.",
     image: "/images/gym-shooting/A7401490.jpg",
     badge: "Lebenswerk & 1:1 Coaching",
     fullStory: {
       lead:
-        "Mein Lebenswerk in Aktion: Menschen mitten im Leben zu echter Gesundheit, schmerzfreier Kraft und dauerhafter Eigenverantwortung führen.",
+        "Mein Lebenswerk in Aktion: Menschen mitten im Leben zu echter Gesundheit, natürlicher Leistungsfähigkeit und dauerhafter Eigenverantwortung führen.",
       paragraphs: [
-        "Seit Januar 2024 widme ich mich zu 100 % meiner Berufung: M³ Performance & Gesundheit. Als Master Personal Trainer in Ausbildung (i.A.) verbinde ich 25 Jahre Hochleistungssport, funktionelle Biochemie und psychologische Coaching-Kompetenz.",
-        "Auf meinem Instagram-Kanal (@michelmeiermoves) teile ich täglich ungeschönte, praxisnahe Einblicke aus Training, Biochemie und Lebensführung, die tausende Menschen inspirieren und wachrütteln.",
-        "In der exklusiven 1:1 Begleitung helfe ich vielbeschäftigten Unternehmern, Selbstständigen und Führungskräften, chronische Nacken- und Rückenschmerzen zu besiegen, Nachmittagstiefs und Bauchfett loszuwerden und ihr Energieniveau dauerhaft zu verdoppeln.",
-        "Unser oberstes Credo bei M³ lautet: Autonomie statt Abhängigkeit. Ich mache mich für meine Klienten bewusst überflüssig, indem ich ihnen beibringe, wie ihr Körper, ihr Stoffwechsel und ihr Nervensystem funktionieren – für ein Leben in voller Kraft und Unabhängigkeit.",
+        "Seit Januar 2024 widme ich mich voll meiner Berufung: M³ Performance & Gesundheit. Als Master Personal Trainer in Ausbildung (i.A.) verbinde ich 25 Jahre Bewegungspraxis, funktionelle Biochemie und fundierte Coaching-Kompetenz.",
+        "Auf meinem Instagram-Kanal (@michelmeiermoves) gebe ich regelmäßig praxisnahe Einblicke in Themen rund um Darm, Stoffwechsel, Bewegung und eine gesunde Lebensführung, um Menschen auf meine persönliche Art und Weise inspirierend wachzurütteln.",
+        "In der persönlichen 1:1-Begleitung sowie in flexiblen Online-Formaten unterstütze ich vielbeschäftigte Menschen – sowohl im privaten als auch im geschäftlichen Alltag, vom Unternehmer, Selbstständigen oder der Führungskraft bis zum Normalverbraucher: in einen gesunden Lebensstil zu finden, Bauchfett loszuwerden, ihr Energieniveau nachhaltig zu steigern und dauerhaft in echter Gesundheit und Belastbarkeit zu leben.",
+        "Mein oberstes Credo bei M³ lautet: Autonomie statt Abhängigkeit. Ich mache mich für meine Klienten bewusst überflüssig, indem ich ihnen verständlich vermittle, wie ihr Körper, ihr Stoffwechsel und ihr System funktionieren – für ein Leben in voller Kraft und Unabhängigkeit.",
       ],
       highlights: [
-        "Gründung & Vollzeit-Fokus auf M³ Performance & Gesundheit",
-        "Master Personal Trainer (in Ausbildung) mit ganzheitlichem 3-Säulen-Ansatz",
-        "Tägliche Bewegungsimpulse & Aufklärung auf Instagram (@michelmeiermoves)",
-        "Exklusive 1:1 Betreuung mit messbaren Resultaten in Stoffwechsel & Schmerzfreiheit",
-        "100% Autonomie-Fokus: Klienten lernen, sich dauerhaft selbst zu steuern",
+        "Fokus auf M³ Performance & ganzheitliche Gesundheitsbegleitung",
+        "Master Personal Trainer (in Ausbildung) mit fundiertem 3-Säulen-Ansatz",
+        "Regelmäßige Einblicke zu Darm, Stoffwechsel & Lebensführung (@michelmeiermoves)",
+        "1:1- & Online-Begleitung: Gesunder Lebensstil, Bauchfett reduzieren & Energie steigern",
+        "Mein oberstes Credo bei M³: Autonomie statt Abhängigkeit",
       ],
       lesson:
         "Wahre Gesundheit bedeutet Unabhängigkeit. Du brauchst keinen Trainer, der dich ein Leben lang an der Hand hält – du brauchst das Wissen und das System, um dich selbst dauerhaft in Bestform zu halten.",
       quote:
-        "„Manchmal braucht es Verständnis. Manchmal einen Arschtritt. Oft beides. Aber immer mit dem Ziel deiner vollkommenen Freiheit.“",
+        "„Mein oberstes Credo: Autonomie statt Abhängigkeit. Du lernst, wie dein Körper funktioniert, um dich ein Leben lang selbst erfolgreich zu steuern.“",
     },
   },
 ];
