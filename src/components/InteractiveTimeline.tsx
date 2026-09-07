@@ -214,27 +214,27 @@ export const MILESTONES: Milestone[] = [
     categoryLabel: "Krise & Transformation",
     title: "HWS-Bandscheibenvorfall, Schmerz-Odyssee & Die Biochemie-Wende",
     shortDesc:
-      "Schwerer Halswirbelsäulenvorfall (C6/C7), chronische Entzündungen und Darmprobleme – und der Weg zurück zu Schmerzfreiheit und voller Belastbarkeit.",
+      "Schwerer Halswirbelsäulenvorfall (C6/C7), monatelange Fehldiagnosen und Impingement – und der Weg zurück zu Schmerzfreiheit und voller Belastbarkeit.",
     image: "/images/performance/mrt-hws-bandscheibenvorfall.jpg",
     badge: "Krise & Der Reset",
     fullStory: {
       lead:
         "Als der Weltmeister-Körper plötzlich stoppte: Die schwere Prüfung meines Lebens und die Geburtsstunde des M³-Gesundheitssystems.",
       paragraphs: [
-        "2016 zog mein Körper die Notbremse: Ein schwerer Bandscheibenvorfall in der Halswirbelsäule (HWS C6/C7) mit Nervenkompression raubte mir über Nacht Kraft und Beweglichkeit. Es folgten Schulter-Impingement, ständige Nackenkrämpfe, Taubheitsgefühle in den Fingern, chronische Entzündungsschübe und eine schwere Darmdysbiose durch Parasitenbefall.",
-        "Die Schulmedizin bot mir fast ausschließlich Schmerzmittel, Cortisonspritzen und eine dringende Wirbelsäulen-OP (Versteifung) an. Ich erlebte den mentalen Tiefpunkt: Rückzug, Frustration, schwere Schlafstörungen und eine spürbare Abwärtsspirale.",
-        "An diesem Wendepunkt traf ich eine mutige Entscheidung: Keine voreilige OP! Ich begann ein tiefes, mehrjähriges Selbststudium in funktioneller Biochemie, mitochondrialer Zellenergie (ATP), gezielter Vitalstoff-Versorgung, Mikrobiom- und Darmsanierung sowie Neuro-Athletik und Faszientraining.",
-        "Durch die Auseinandersetzung mit Vitalstoffen und ganzheitlicher Eigentherapie heilte mein Darm, die Entzündungen klangen ab und die Bewegungsfunktionen bauten sich Schritt für Schritt harmonisch wieder auf. Das Ergebnis: Nachweisbar zweieinhalb Jahre später drehte ich mich wieder auf den Kopf, war schmerzfrei und hatte die volle Belastbarkeit und Energie wie zu meinen besten Leistungszeiten zurück.",
+        "Es begann schleichend: Über ein halbes Jahr lang plagten mich diffuse körperliche Beschwerden und Kraftverluste, die medizinisch zunächst nicht identifiziert werden konnten. 2016 ereignete sich dann im Training der schwere Bandscheibenvorfall in der Halswirbelsäule (HWS C6/C7). Es dauerte eine quälende Odyssee, bis der MRT-Befund die Nervenkompression endlich schwarz auf weiß bestätigte. In der Folge entwickelten sich ein massives Schulter-Impingement-Syndrom, Taubheitsgefühle in den Fingern und chronische Schmerzen.",
+        "Die Schulmedizin bot fast ausschließlich Schmerzmittel, Cortisonspritzen und eine dringende Wirbelsäulen-OP (Versteifung) an. Ich erlebte den mentalen Tiefpunkt – und verstand gleichzeitig die Psychosomatik: Bis zu 75 % aller HWS-Vorfälle stehen in direktem Zusammenhang mit mentaler Überlastung. Der Körper resigniert und erzwingt eine Notbremse, um Raum zum Umdenken zu schaffen.",
+        "An diesem Wendepunkt entschied ich mich gegen eine voreilige Versteifung und begann ein tiefes Selbststudium in funktioneller Biochemie, mitochondrialer Zellenergie (ATP), gezielter Vitalstoff-Versorgung sowie Neuro-Athletik und Faszientraining.",
+        "Durch diese strukturierte Eigentherapie bauten sich die Bewegungsfunktionen Schritt für Schritt harmonisch wieder auf. Das Ergebnis: Nachweisbar zweieinhalb Jahre später drehte ich mich wieder auf den Kopf, war schmerzfrei und hatte die volle Belastbarkeit und Energie wie zu meinen besten Leistungszeiten zurück.",
       ],
       highlights: [
-        "Schwerer Bandscheibenvorfall HWS (C6/C7), Impingement & Nervenblockaden",
-        "Chronische Darmbeschwerden, Erschöpfung und Entzündungs-Odyssee",
-        "Mutige Entscheidung gegen Operation & Versteifung der Wirbelsäule",
-        "Tiefes Selbststudium in Biochemie, Vitalstoffen, Zellgesundheit & Mikrobiom",
+        "Monatelange Beschwerde-Odyssee bis zum klaren MRT-Befund (HWS C6/C7)",
+        "Schulter-Impingement, Nervenkompression & OP-Empfehlung (Versteifung)",
+        "Erkenntnis der Psychosomatik: Wenn der Körper eine Zwangspause erzwingt",
+        "Tiefes Selbststudium in Biochemie, Vitalstoffen, Zellgesundheit & Neuro-Athletik",
         "Nachweisbar 2,5 Jahre später schmerzfrei, voll belastbar & wieder auf dem Kopf",
       ],
       lesson:
-        "Wenn dein biochemisches Fundament und dein Darm brennen, ist jedes harte Training wie Benzin ins Feuer. Du musst erst die Zellenergie, Vitalstoffe und den Stoffwechsel ins Gleichgewicht bringen – dann wird der Körper von allein wieder schmerzfrei und leistungsfähig.",
+        "Wenn dein biochemisches Fundament und dein Nervensystem überlastet sind, erzwingt der Körper den Stopp. Du musst erst die Zellenergie, Vitalstoffe und die innere Balance wiederherstellen – dann kehrt die natürliche Belastbarkeit von allein zurück.",
       quote:
         "„Niemand wird dich retten. Du musst selbst die volle Verantwortung für deinen Körper übernehmen und die Ursachen an der Wurzel heilen.“",
     },
@@ -247,19 +247,20 @@ export const MILESTONES: Milestone[] = [
     categoryLabel: "Krise & Transformation",
     title: "Die 90-Tage Challenge, TÜV-Zertifizierung & Psychologische Bestnoten",
     shortDesc:
-      "Rigorose Selbsttransformation, Zertifizierung zum Berufscoach (TÜV Rheinland) und Höchstnoten (5/5) in Führung, Durchhaltewille und Selbstwirksamkeit.",
+      "Gezielte Darm- & Parasitenkur mit Premium-Vitalstoffen, 90-Tage-Transformation und Höchstnoten (5/5) in psychologischer Führung und Selbstwirksamkeit.",
     image: "/images/gym-shooting/A7401576.jpg",
     badge: "Validierung & System",
     fullStory: {
       lead:
         "Die Fusion aus 25 Jahren Bewegungserfahrung, biochemischer Wissenschaft und fundierter psychologischer Führungskompetenz.",
       paragraphs: [
-        "Ende 2022 stellte ich mich der eigenen Bewährungsprobe: In einer wissenschaftlich dokumentierten 90-Tage Transformation synchronisierte ich Ernährung, Krafttraining, Zellstoffwechsel und Schlafrhythmus perfekt. Das Ergebnis war eine radikale Körpertransformation und der finale Beweis, wie mächtig ein ganzheitliches System ist.",
+        "2022/2023 widmete ich mich der fundamentalen inneren Reinigung: Nach der Diagnose eines akuten Parasitenbefalls und tiefer Darmdysbalancen lernte ich hochwirksame, synergetische Vitalstoff-Konzepte kennen. Ich sanierte mein Mikrobiom von Grund auf, löschte verbliebene stille Entzündungen und brachte meine Zellenergie auf ein nie dagewesenes Level.",
+        "Ende 2022 stellte ich mich der eigenen Bewährungsprobe: In einer wissenschaftlich dokumentierten 90-Tage Transformation synchronisierte ich Ernährung, Krafttraining, Zellstoffwechsel und Schlafrhythmus perfekt. Das Ergebnis war der finale Beweis, wie mächtig ein ganzheitliches System ist.",
         "Parallel professionalisierte ich meine Coaching-Methodik: Ich absolvierte fundierte Weiterbildungen im Bewerbungsmanagement und Berufscoaching (TÜV Rheinland), um Klienten auch psychologisch und mental durch schwierige Lebensphasen zu führen.",
-        "Die offizielle psychologische Potenzial- und Eignungsdiagnostik (Bundesagentur für Arbeit) attestierte mir die absoluten Maximalwerte (Bereich 5 von 5) in: Führungs- und Gestaltungsmotivation, Durchhaltevermögen & Frustrationstoleranz, Selbstwirksamkeit, Ergebnisorientierung und konfliktfähiger Empathie.",
-        "Aus dieser Kombination entstand der finale Bauplan von M³: Die drei untrennbaren Säulen Metabolism (Stoffwechsel), Movement (Bewegung) und Mental (Mindset).",
+        "Die offizielle psychologische Potenzial- und Eignungsdiagnostik (Bundesagentur für Arbeit) attestierte mir die absoluten Maximalwerte (Bereich 5 von 5) in: Führungs- und Gestaltungsmotivation, Durchhaltevermögen & Frustrationstoleranz, Selbstwirksamkeit, Ergebnisorientierung und konfliktfähiger Empathie. Daraus entstand das geschützte 3-Säulen-Fundament von M³.",
       ],
       highlights: [
+        "Mikrobiom- & Parasiten-Sanierung mit gezielten Premium-Vitalstoff-Konzepten",
         "Erfolgreiche 90-Tage Challenge: Dokumentierte Bestform & Vitalitätsmaximum",
         "Zertifizierter Berufscoach & Bewerbungsmanager (TÜV Rheinland)",
         "Offizielle Bestnoten (5 von 5) in Durchhaltevermögen, Führung & Selbstwirksamkeit",
