@@ -22,7 +22,7 @@ export const Route = createFileRoute("/ueber-mich")({
       {
         name: "description",
         content:
-          "25+ Jahre Bewegungserfahrung, IDO Breakdance-Weltmeister & Master Personal Trainer: Erfahre alles über Michél Meiers Geschichte, Werte und die Entstehung des M³-Systems.",
+          "25+ Jahre Bewegungserfahrung, IDO Breakdance-Weltmeister & Master Personal Trainer (i.A.): Erfahre alles über Michél Meiers Geschichte, Werte und die Entstehung des M³-Systems.",
       },
     ],
   }),
