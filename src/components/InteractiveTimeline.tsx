@@ -149,7 +149,7 @@ export const MILESTONES: Milestone[] = [
     title: "Deutscher Meister, Europameister, IDO Weltmeister & Theater Erfurt",
     shortDesc:
       "Titel-Triple mit den „Da Rookies“, Solorolle in „Anatevka“ am Theater Erfurt und 5 Jahre UNICEF-Galas.",
-    image: "/images/performance/hero-performance-1.jpg",
+    image: "/images/performance/da-rookies-world-champions.jpg",
     badge: "Weltklasse & Kunst",
     fullStory: {
       lead:
