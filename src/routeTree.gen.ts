@@ -10,11 +10,16 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as BodyResetRouteImport } from './routes/body-reset'
 import { Route as CoachingFuerZweiRouteImport } from './routes/coaching-fuer-zwei'
 import { Route as DarmStoffwechselbegleitungRouteImport } from './routes/darm-stoffwechselbegleitung'
+import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as ErnaehrungscoachingRouteImport } from './routes/ernaehrungscoaching'
 import { Route as GoldeneGrundversorgungRouteImport } from './routes/goldene-grundversorgung'
+import { Route as ImpressumRouteImport } from './routes/impressum'
+import { Route as KatalogRouteImport } from './routes/katalog'
+import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as MentalPerformanceRouteImport } from './routes/mental-performance'
 import { Route as MetabolismRouteImport } from './routes/metabolism'
 import { Route as MovementRouteImport } from './routes/movement'
@@ -23,10 +28,16 @@ import { Route as SchmerzfreiRouteImport } from './routes/schmerzfrei'
 import { Route as SitemapRouteImport } from './routes/sitemap'
 import { Route as SystemStartRouteImport } from './routes/system-start'
 import { Route as UeberMichRouteImport } from './routes/ueber-mich'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BodyResetRoute = BodyResetRouteImport.update({
@@ -45,6 +56,11 @@ const DarmStoffwechselbegleitungRoute =
     path: '/darm-stoffwechselbegleitung',
     getParentRoute: () => rootRouteImport,
   } as any)
+const DatenschutzRoute = DatenschutzRouteImport.update({
+  id: '/datenschutz',
+  path: '/datenschutz',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ErnaehrungscoachingRoute = ErnaehrungscoachingRouteImport.update({
   id: '/ernaehrungscoaching',
   path: '/ernaehrungscoaching',
@@ -53,6 +69,21 @@ const ErnaehrungscoachingRoute = ErnaehrungscoachingRouteImport.update({
 const GoldeneGrundversorgungRoute = GoldeneGrundversorgungRouteImport.update({
   id: '/goldene-grundversorgung',
   path: '/goldene-grundversorgung',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ImpressumRoute = ImpressumRouteImport.update({
+  id: '/impressum',
+  path: '/impressum',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KatalogRoute = KatalogRouteImport.update({
+  id: '/katalog',
+  path: '/katalog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const KontaktRoute = KontaktRouteImport.update({
+  id: '/kontakt',
+  path: '/kontakt',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MentalPerformanceRoute = MentalPerformanceRouteImport.update({
@@ -95,14 +126,24 @@ const UeberMichRoute = UeberMichRouteImport.update({
   path: '/ueber-mich',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/blog': typeof BlogRouteWithChildren
   '/body-reset': typeof BodyResetRoute
   '/coaching-fuer-zwei': typeof CoachingFuerZweiRoute
   '/darm-stoffwechselbegleitung': typeof DarmStoffwechselbegleitungRoute
+  '/datenschutz': typeof DatenschutzRoute
   '/ernaehrungscoaching': typeof ErnaehrungscoachingRoute
   '/goldene-grundversorgung': typeof GoldeneGrundversorgungRoute
+  '/impressum': typeof ImpressumRoute
+  '/katalog': typeof KatalogRoute
+  '/kontakt': typeof KontaktRoute
   '/mental-performance': typeof MentalPerformanceRoute
   '/metabolism': typeof MetabolismRoute
   '/movement': typeof MovementRoute
@@ -111,14 +152,20 @@ export interface FileRoutesByFullPath {
   '/sitemap': typeof SitemapRoute
   '/system-start': typeof SystemStartRoute
   '/ueber-mich': typeof UeberMichRoute
+  '/blog/$slug': typeof BlogSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/blog': typeof BlogRouteWithChildren
   '/body-reset': typeof BodyResetRoute
   '/coaching-fuer-zwei': typeof CoachingFuerZweiRoute
   '/darm-stoffwechselbegleitung': typeof DarmStoffwechselbegleitungRoute
+  '/datenschutz': typeof DatenschutzRoute
   '/ernaehrungscoaching': typeof ErnaehrungscoachingRoute
   '/goldene-grundversorgung': typeof GoldeneGrundversorgungRoute
+  '/impressum': typeof ImpressumRoute
+  '/katalog': typeof KatalogRoute
+  '/kontakt': typeof KontaktRoute
   '/mental-performance': typeof MentalPerformanceRoute
   '/metabolism': typeof MetabolismRoute
   '/movement': typeof MovementRoute
@@ -127,15 +174,21 @@ export interface FileRoutesByTo {
   '/sitemap': typeof SitemapRoute
   '/system-start': typeof SystemStartRoute
   '/ueber-mich': typeof UeberMichRoute
+  '/blog/$slug': typeof BlogSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/blog': typeof BlogRouteWithChildren
   '/body-reset': typeof BodyResetRoute
   '/coaching-fuer-zwei': typeof CoachingFuerZweiRoute
   '/darm-stoffwechselbegleitung': typeof DarmStoffwechselbegleitungRoute
+  '/datenschutz': typeof DatenschutzRoute
   '/ernaehrungscoaching': typeof ErnaehrungscoachingRoute
   '/goldene-grundversorgung': typeof GoldeneGrundversorgungRoute
+  '/impressum': typeof ImpressumRoute
+  '/katalog': typeof KatalogRoute
+  '/kontakt': typeof KontaktRoute
   '/mental-performance': typeof MentalPerformanceRoute
   '/metabolism': typeof MetabolismRoute
   '/movement': typeof MovementRoute
@@ -144,16 +197,22 @@ export interface FileRoutesById {
   '/sitemap': typeof SitemapRoute
   '/system-start': typeof SystemStartRoute
   '/ueber-mich': typeof UeberMichRoute
+  '/blog/$slug': typeof BlogSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/blog'
     | '/body-reset'
     | '/coaching-fuer-zwei'
     | '/darm-stoffwechselbegleitung'
+    | '/datenschutz'
     | '/ernaehrungscoaching'
     | '/goldene-grundversorgung'
+    | '/impressum'
+    | '/katalog'
+    | '/kontakt'
     | '/mental-performance'
     | '/metabolism'
     | '/movement'
@@ -162,14 +221,20 @@ export interface FileRouteTypes {
     | '/sitemap'
     | '/system-start'
     | '/ueber-mich'
+    | '/blog/$slug'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/blog'
     | '/body-reset'
     | '/coaching-fuer-zwei'
     | '/darm-stoffwechselbegleitung'
+    | '/datenschutz'
     | '/ernaehrungscoaching'
     | '/goldene-grundversorgung'
+    | '/impressum'
+    | '/katalog'
+    | '/kontakt'
     | '/mental-performance'
     | '/metabolism'
     | '/movement'
@@ -178,14 +243,20 @@ export interface FileRouteTypes {
     | '/sitemap'
     | '/system-start'
     | '/ueber-mich'
+    | '/blog/$slug'
   id:
     | '__root__'
     | '/'
+    | '/blog'
     | '/body-reset'
     | '/coaching-fuer-zwei'
     | '/darm-stoffwechselbegleitung'
+    | '/datenschutz'
     | '/ernaehrungscoaching'
     | '/goldene-grundversorgung'
+    | '/impressum'
+    | '/katalog'
+    | '/kontakt'
     | '/mental-performance'
     | '/metabolism'
     | '/movement'
@@ -194,15 +265,21 @@ export interface FileRouteTypes {
     | '/sitemap'
     | '/system-start'
     | '/ueber-mich'
+    | '/blog/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BlogRoute: typeof BlogRouteWithChildren
   BodyResetRoute: typeof BodyResetRoute
   CoachingFuerZweiRoute: typeof CoachingFuerZweiRoute
   DarmStoffwechselbegleitungRoute: typeof DarmStoffwechselbegleitungRoute
+  DatenschutzRoute: typeof DatenschutzRoute
   ErnaehrungscoachingRoute: typeof ErnaehrungscoachingRoute
   GoldeneGrundversorgungRoute: typeof GoldeneGrundversorgungRoute
+  ImpressumRoute: typeof ImpressumRoute
+  KatalogRoute: typeof KatalogRoute
+  KontaktRoute: typeof KontaktRoute
   MentalPerformanceRoute: typeof MentalPerformanceRoute
   MetabolismRoute: typeof MetabolismRoute
   MovementRoute: typeof MovementRoute
@@ -220,6 +297,13 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/body-reset': {
@@ -243,6 +327,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DarmStoffwechselbegleitungRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/datenschutz': {
+      id: '/datenschutz'
+      path: '/datenschutz'
+      fullPath: '/datenschutz'
+      preLoaderRoute: typeof DatenschutzRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/ernaehrungscoaching': {
       id: '/ernaehrungscoaching'
       path: '/ernaehrungscoaching'
@@ -255,6 +346,27 @@ declare module '@tanstack/react-router' {
       path: '/goldene-grundversorgung'
       fullPath: '/goldene-grundversorgung'
       preLoaderRoute: typeof GoldeneGrundversorgungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/impressum': {
+      id: '/impressum'
+      path: '/impressum'
+      fullPath: '/impressum'
+      preLoaderRoute: typeof ImpressumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/katalog': {
+      id: '/katalog'
+      path: '/katalog'
+      fullPath: '/katalog'
+      preLoaderRoute: typeof KatalogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/kontakt': {
+      id: '/kontakt'
+      path: '/kontakt'
+      fullPath: '/kontakt'
+      preLoaderRoute: typeof KontaktRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/mental-performance': {
@@ -313,16 +425,38 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof UeberMichRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRoute
+    }
   }
 }
 
+interface BlogRouteChildren {
+  BlogSlugRoute: typeof BlogSlugRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogSlugRoute: BlogSlugRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BlogRoute: BlogRouteWithChildren,
   BodyResetRoute: BodyResetRoute,
   CoachingFuerZweiRoute: CoachingFuerZweiRoute,
   DarmStoffwechselbegleitungRoute: DarmStoffwechselbegleitungRoute,
+  DatenschutzRoute: DatenschutzRoute,
   ErnaehrungscoachingRoute: ErnaehrungscoachingRoute,
   GoldeneGrundversorgungRoute: GoldeneGrundversorgungRoute,
+  ImpressumRoute: ImpressumRoute,
+  KatalogRoute: KatalogRoute,
+  KontaktRoute: KontaktRoute,
   MentalPerformanceRoute: MentalPerformanceRoute,
   MetabolismRoute: MetabolismRoute,
   MovementRoute: MovementRoute,

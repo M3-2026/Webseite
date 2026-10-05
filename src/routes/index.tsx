@@ -21,18 +21,34 @@ import {
   TrendingUp,
   UserCheck,
   Zap,
+  Calendar,
+  Clock,
+  BookOpen,
 } from "lucide-react";
 import avatar from "@/assets/avatar.png";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { audience, faqs } from "@/data/content";
+import { posts } from "@/data/posts";
 
 export const Route = createFileRoute("/")({
   component: IndexPage,
+  head: () => ({
+    meta: [
+      { title: "M³ Performance & Gesundheit – Michél Meier | Personal Training & Coaching" },
+      {
+        name: "description",
+        content:
+          "M³ Performance & Gesundheit: Ganzheitliches Personal Training, das Stoffwechsel (M¹), Biomechanik (M²) und Mindset (M³) vereint. Für schmerzfreie Belastbarkeit und echte Zellenergie im Alltag.",
+      },
+    ],
+  }),
 });
 
 // Standard WhatsApp Kontakt
 const BASE_WHATSAPP = "https://wa.me/4917699016640";
 const WHATSAPP_URL = `${BASE_WHATSAPP}?text=Hallo%20Mich%C3%A9l,%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20kostenloses%20Erstgespr%C3%A4ch.`;
+const CAL_URL = "https://cal.com/michelmeier/30min";
 
 interface ServiceItem {
   name: string;
@@ -769,13 +785,18 @@ function IndexPage() {
               {/* Top Badge */}
               <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-amber-500/10 px-3.5 py-1 text-xs uppercase tracking-[0.22em] text-amber-700 font-bold shadow-sm">
                 <Sparkles className="w-3.5 h-3.5 text-amber-600" />
-                <span>1:1 Coaching & Gesundheitssystem</span>
+                <span>1:1 Coaching &amp; Gesundheitssystem</span>
               </div>
 
               {/* Main Headline */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[3.2rem] xl:text-[3.8rem] font-display font-extrabold leading-[1.04] tracking-tight text-foreground text-left">
-                Leistung beginnt mit <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-500">Gesundheit.</span>
+                M³ Performance &amp; <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-500">Gesundheit</span>
               </h1>
+
+              {/* Core Claim / Sub-Headline */}
+              <p className="text-xl sm:text-2xl md:text-2xl font-display font-bold text-foreground/95 tracking-tight">
+                Leistung beginnt mit Gesundheit.
+              </p>
 
               {/* Distilled Value Proposition */}
               <p className="text-base sm:text-lg md:text-xl text-foreground/90 font-medium leading-relaxed text-left max-w-xl">
@@ -794,11 +815,20 @@ function IndexPage() {
                   Kostenloses Erstgespräch
                 </a>
                 <a
+                  href={CAL_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-card/90 px-5 sm:px-6 py-3.5 sm:py-4 text-sm md:text-base font-semibold text-foreground hover:bg-secondary hover:border-amber-500/70 transition-all shadow-sm"
+                >
+                  <Calendar className="w-4 h-4 text-amber-600" />
+                  <span>30 Min. Slot buchen</span>
+                </a>
+                <a
                   href="#system-kompass"
-                  className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-card/90 px-5 sm:px-6 py-3.5 sm:py-4 text-sm md:text-base font-semibold text-foreground hover:bg-secondary transition-all shadow-sm"
+                  className="inline-flex items-center gap-2 rounded-full border border-border/80 bg-card/90 px-4 py-3.5 sm:py-4 text-xs md:text-sm font-semibold text-muted-foreground hover:text-foreground hover:bg-secondary transition-all shadow-sm"
                 >
                   <Compass className="w-4 h-4 text-amber-600" />
-                  System-Kompass
+                  <span>Kompass</span>
                 </a>
               </div>
 
@@ -1029,67 +1059,100 @@ function IndexPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-            {/* Left Tile: Interactive Kompass (7 cols) */}
-            <div className="lg:col-span-7">
-              <SystemStartKompass />
+          {/* Authentic 1-on-1 Chat Dialogues Grid */}
+          <div className="pt-6 space-y-6">
+            <div className="text-center max-w-2xl mx-auto space-y-2">
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-gold">
+                Praxis-Dialoge & Resonanz
+              </span>
+              <h3 className="font-display font-extrabold text-2xl md:text-3xl text-foreground">
+                Wo stehst du aktuell im Alltag?
+              </h3>
+              <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                Vier typische Ausgangslagen — und wie Michéls systemischer Ansatz das Problem an der Wurzel löst.
+              </p>
             </div>
 
-            {/* Right Tile: Target Personas & Transparenz (5 cols) */}
-            <div className="lg:col-span-5 rounded-3xl border border-border/90 bg-card p-6 md:p-8 flex flex-col justify-between shadow-sm text-left">
-              <div className="space-y-6">
-                <div>
-                  <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gold mb-2">
-                    <CheckCircle2 className="w-4 h-4 text-gold" />
-                    <span>Für wen M³ perfekt ist</span>
-                  </div>
-                  <h3 className="font-display font-bold text-xl md:text-2xl text-foreground">
-                    Echte Resultate für echte Menschen
-                  </h3>
-                </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {audience.map((a) => {
+                const clientName = a.persona.split("·")[0].trim();
+                const clientRole = a.persona.split("·")[1]?.trim() || "";
 
-                <div className="space-y-2.5 text-xs sm:text-sm text-muted-foreground">
-                  <div className="flex items-start gap-2.5 p-2 rounded-xl bg-secondary/40">
-                    <span className="text-gold font-bold">✓</span>
-                    <span><strong>Führungskräfte & 60h-Woche:</strong> Volle Vitalität ohne Nachmittagstiefs.</span>
-                  </div>
-                  <div className="flex items-start gap-2.5 p-2 rounded-xl bg-secondary/40">
-                    <span className="text-gold font-bold">✓</span>
-                    <span><strong>Schreibtisch-Schmerzen:</strong> Wieder schmerzfrei und anatomisch stabil.</span>
-                  </div>
-                  <div className="flex items-start gap-2.5 p-2 rounded-xl bg-secondary/40">
-                    <span className="text-gold font-bold">✓</span>
-                    <span><strong>Diät-Müde:</strong> Stoffwechsel-Reset ohne Jojo-Effekt und ohne Verbote.</span>
-                  </div>
-                  <div className="flex items-start gap-2.5 p-2 rounded-xl bg-secondary/40">
-                    <span className="text-gold font-bold">✓</span>
-                    <span><strong>Sportler & Ambitionierte:</strong> Plateaus durchbrechen & Belastbarkeit steigern.</span>
-                  </div>
-                </div>
+                return (
+                  <div
+                    key={a.title}
+                    className="rounded-3xl border border-border bg-card p-5 sm:p-6 shadow-sm flex flex-col justify-between space-y-5 hover:border-gold/40 transition-all text-left"
+                  >
+                    {/* Persona Header */}
+                    <div className="flex items-center gap-3.5 border-b border-border/60 pb-4">
+                      <div className="w-12 h-12 rounded-2xl overflow-hidden border border-border shrink-0 bg-secondary shadow-xs">
+                        <img
+                          src={a.image}
+                          alt={a.persona}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div className="space-y-0.5 min-w-0">
+                        <div className="flex items-center gap-2">
+                          <span className="font-display font-bold text-sm text-foreground">
+                            {clientName}
+                          </span>
+                          <span className="text-[10px] text-muted-foreground font-mono truncate">
+                            {clientRole}
+                          </span>
+                        </div>
+                        <h4 className="text-xs font-bold text-amber-600 uppercase tracking-wider">
+                          {a.title}
+                        </h4>
+                      </div>
+                    </div>
 
-                {/* Filter / Not a fit */}
-                <div className="pt-4 border-t border-border/70 space-y-2">
-                  <div className="text-[11px] uppercase tracking-wider font-bold text-muted-foreground flex items-center gap-1.5">
-                    <X className="w-3.5 h-3.5 text-destructive" />
-                    <span>Ehrlichkeit vor Verkauf</span>
-                  </div>
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    Keine Wunderpillen, keine 14-Tage-Crash-Diäten. Wir begleiten dich, bis du deinen Körper selbstständig steuerst.
-                  </p>
-                </div>
-              </div>
+                    {/* Chat Bubble Flow */}
+                    <div className="space-y-3.5 text-xs">
+                      {/* 1. Client Bubble */}
+                      <div className="space-y-1">
+                        <div className="flex items-center justify-between text-[10px] font-mono text-muted-foreground px-1">
+                          <span className="font-bold text-foreground/80">{clientName}</span>
+                          <span>08:42</span>
+                        </div>
+                        <div className="p-3.5 rounded-2xl rounded-tl-sm bg-secondary/80 border border-border text-foreground/90 leading-relaxed">
+                          {a.dailyLife}
+                        </div>
+                      </div>
 
-              <div className="pt-6">
-                <a
-                  href={WHATSAPP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 rounded-full bg-gold-gradient py-3.5 px-6 font-bold text-xs sm:text-sm text-primary-foreground shadow-[var(--shadow-gold)] hover:opacity-95 transition"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  Unverbindlich prüfen lassen
-                </a>
-              </div>
+                      {/* 2. Michél's Response Bubble */}
+                      <div className="space-y-1 pl-3 sm:pl-6">
+                        <div className="flex items-center justify-between text-[10px] font-mono text-amber-600 px-1">
+                          <span className="font-bold">Michél · M³</span>
+                          <span className="text-muted-foreground">08:45</span>
+                        </div>
+                        <div className="p-3.5 rounded-2xl rounded-tr-sm bg-amber-500/10 border border-amber-500/30 text-foreground leading-relaxed">
+                          {a.approach}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Bottom CTA Link */}
+                    <div className="pt-2 border-t border-border/50 flex items-center justify-between">
+                      <span className="text-[11px] text-muted-foreground">
+                        Klingt nach deiner Situation?
+                      </span>
+                      <a
+                        href={`https://wa.me/4917699016640?text=${encodeURIComponent(
+                          `Hallo Michél, ich finde mich in der Situation von ${clientName} (${a.title}) wieder und möchte ein Erstgespräch.`
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-600 hover:underline"
+                      >
+                        <span>Einschätzung anfragen</span>
+                        <ArrowRight className="w-3 h-3" />
+                      </a>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -1571,9 +1634,111 @@ function IndexPage() {
       </section>
 
       {/* ---------------------------------------------------- */}
-      {/* 7. FAQ SECTION */}
+      {/* 6.5 STANDALONE JOURNAL SECTION (10 Science & Practice Articles) */}
       {/* ---------------------------------------------------- */}
-      <section id="faq" className="py-16 md:py-24 border-b border-border/70 bg-card">
+      <section id="journal" className="py-16 md:py-24 border-b border-border/70 bg-card">
+        <div className="max-w-7xl mx-auto px-5 md:px-6 space-y-12">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
+              M³ System Journal & Wissenschaft
+            </span>
+            <h2 className="text-3xl md:text-5xl font-display font-extrabold tracking-tight">
+              Wenn du verstehen willst, <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-500">wie dein Körper wirklich funktioniert.</span>
+            </h2>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+              Nicht Theorie für die Schublade. Fundamentale Texte aus über 30 Jahren Praxis — warum der Blutzucker abstürzt, warum Last ohne saubere Bahn verschleißt und wie Routinen ohne Motivations-Hype halten.
+            </p>
+            <div className="pt-2 flex justify-center">
+              <Link
+                to="/blog"
+                className="inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/5 px-6 py-2.5 text-xs sm:text-sm font-bold text-amber-700 hover:bg-gold/10 transition shadow-sm hover:scale-[1.02]"
+              >
+                <BookOpen className="w-4 h-4 text-gold" />
+                <span>Alle 10 Texte im Journal ansehen</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {posts.slice(0, 6).map((post) => {
+              const pillarMeta = {
+                m1: { name: "M¹ Metabolism", color: "text-orange-600 border-orange-500/30 bg-orange-500/10" },
+                m2: { name: "M² Movement", color: "text-emerald-700 border-emerald-500/30 bg-emerald-500/10" },
+                m3: { name: "M³ Mindset", color: "text-blue-700 border-blue-500/30 bg-blue-500/10" },
+              }[post.pillar];
+
+              return (
+                <article
+                  key={post.slug}
+                  className="rounded-3xl border border-border bg-card overflow-hidden shadow-sm hover:border-gold/40 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group text-left"
+                >
+                  <div>
+                    <Link
+                      to="/blog/$slug"
+                      params={{ slug: post.slug }}
+                      className="block relative aspect-[16/10] overflow-hidden bg-black"
+                    >
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                      
+                      <div className="absolute top-3 left-3">
+                        <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider backdrop-blur-md border ${pillarMeta.color}`}>
+                          {pillarMeta.name}
+                        </span>
+                      </div>
+
+                      <div className="absolute bottom-3 right-3 text-white text-[11px] font-mono font-semibold flex items-center gap-1 bg-black/60 backdrop-blur-md px-2.5 py-0.5 rounded-md">
+                        <Clock className="w-3 h-3 text-gold" />
+                        <span>{post.minutes} Min.</span>
+                      </div>
+                    </Link>
+
+                    <div className="p-6 space-y-2.5">
+                      <h3 className="font-display font-extrabold text-base md:text-lg text-foreground leading-snug group-hover:text-amber-600 transition-colors">
+                        <Link to="/blog/$slug" params={{ slug: post.slug }}>
+                          {post.title}
+                        </Link>
+                      </h3>
+                      <p className="text-xs text-muted-foreground leading-relaxed line-clamp-3">
+                        {post.excerpt}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="p-6 pt-0 border-t border-border/50 mt-3 flex items-center justify-between">
+                    <span className="text-[11px] text-muted-foreground font-mono">
+                      {new Date(post.date).toLocaleDateString("de-DE", {
+                        day: "2-digit",
+                        month: "short",
+                        year: "numeric",
+                      })}
+                    </span>
+                    <Link
+                      to="/blog/$slug"
+                      params={{ slug: post.slug }}
+                      className="inline-flex items-center gap-1 text-xs font-bold text-amber-600 group-hover:translate-x-1 transition-transform"
+                    >
+                      <span>Lesen</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ---------------------------------------------------- */}
+      {/* 7. FAQ SECTION (ALL 13 SYSTEMIC FAQS) */}
+      {/* ---------------------------------------------------- */}
+      <section id="faq" className="py-16 md:py-24 border-b border-border/70 bg-secondary/20">
         <div className="max-w-4xl mx-auto px-5 md:px-6 space-y-10">
           <div className="text-center max-w-2xl mx-auto space-y-3">
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-gold block">
@@ -1583,31 +1748,14 @@ function IndexPage() {
               Häufige Fragen
             </h2>
             <p className="text-base text-muted-foreground">
-              Transparenz ab dem ersten Tag: Hier findest du Antworten auf die wichtigsten Fragen.
+              Transparenz ab dem ersten Tag: Hier findest du alle direkten Antworten zu Ablauf, Betreuung und dem M³-System.
             </p>
           </div>
 
           <div className="space-y-3">
-            <FAQItem
-              q="Muss ich bereits fit sein, um mit M³ zu starten?"
-              a="Nein, absolut nicht. Ganz im Gegenteil: M³ holt dich exakt dort ab, wo du heute stehst. Egal ob nach langer Pause, mit Übergewicht, Schmerzen oder als Sportler mit Leistungsambitionen."
-            />
-            <FAQItem
-              q="Wie läuft das kostenlose Erstgespräch ab?"
-              a="In rund 20 Minuten per Telefon oder Video sprechen wir über deine aktuellen Hürden, deinen Alltag und deine Ziele. Wir prüfen ehrlich, ob M³ der richtige Hebel für dich ist. Danach erhältst du eine erste Einschätzung – völlig unverbindlich."
-            />
-            <FAQItem
-              q="Kann die Betreuung auch komplett online stattfinden?"
-              a="Ja. Stoffwechselanalysen, Ernährungsbegleitung und mentale Routinen lassen sich ortsunabhängig digital durchführen. Beim Personal Training kombinieren wir je nach Wohnort Präsenz-Sessions mit digitaler Begleitung."
-            />
-            <FAQItem
-              q="Was unterscheidet M³ von klassischem Personal Training?"
-              a="Klassische Trainer lassen dich schwitzen und schicken dich nach 60 Minuten heim. M³ betrachtet das Gesamtsystem: Wenn dein Darm rebelliert oder du vor Stress nicht schläfst, verpufft jedes Training. Wir lösen die Ursachen, nicht die Symptome."
-            />
-            <FAQItem
-              q="Muss ich Nahrungsergänzungsmittel einnehmen?"
-              a="Nein. Die Basis sind immer echte Nahrung, Bewegung und Regeneration. Falls eine gezielte Mikronährstoff-Optimierung sinnvoll ist, besprechen wir das transparent und wissenschaftlich fundiert."
-            />
+            {faqs.map((f, i) => (
+              <FAQItem key={i} q={f.q} a={f.a} />
+            ))}
           </div>
         </div>
       </section>
@@ -1641,11 +1789,20 @@ function IndexPage() {
               <MessageCircle className="w-5 h-5" />
               Kostenloses Erstgespräch anfragen
             </a>
+            <a
+              href={CAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-full border border-amber-500/40 bg-card px-8 py-4 text-base font-semibold text-foreground hover:bg-secondary hover:border-amber-500/70 transition"
+            >
+              <Calendar className="w-5 h-5 text-amber-600" />
+              30 Min. Slot buchen
+            </a>
             <Link
               to="/system-start"
               className="w-full sm:w-auto inline-flex items-center justify-center rounded-full border border-border px-8 py-4 text-base font-semibold hover:bg-secondary transition"
             >
-              Mehr über den M³ System Start
+              System Start
             </Link>
           </div>
 

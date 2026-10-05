@@ -371,7 +371,25 @@ export function Header() {
               )}
             </div>
 
-            {/* 3. Über Michél Link */}
+            {/* 3. Journal & Wissenschaft */}
+            <Link
+              to="/blog"
+              onClick={() => setActiveDropdown(null)}
+              className="px-3 py-2 rounded-xl hover:bg-secondary/60 transition text-foreground/80 hover:text-foreground"
+            >
+              Journal
+            </Link>
+
+            {/* 4. Modul-Katalog */}
+            <Link
+              to="/katalog"
+              onClick={() => setActiveDropdown(null)}
+              className="px-3 py-2 rounded-xl hover:bg-secondary/60 transition text-foreground/80 hover:text-foreground"
+            >
+              Katalog
+            </Link>
+
+            {/* 5. Über Michél Link */}
             <Link
               to="/ueber-mich"
               onClick={() => setActiveDropdown(null)}
@@ -380,20 +398,11 @@ export function Header() {
               Über Michél
             </Link>
 
-            {/* 4. Sitemap Verzeichnis Link */}
-            <Link
-              to="/sitemap"
-              onClick={() => setActiveDropdown(null)}
-              className="px-3 py-2 rounded-xl hover:bg-secondary/60 transition text-foreground/80 hover:text-foreground"
-            >
-              Sitemap
-            </Link>
-
-            {/* 5. System Start Pill */}
+            {/* 6. System Start Pill */}
             <Link
               to="/system-start"
               onClick={() => setActiveDropdown(null)}
-              className="ml-2 inline-flex items-center gap-1.5 text-amber-700 font-bold bg-amber-500/10 px-3.5 py-1.5 rounded-full border border-amber-500/30 hover:bg-amber-500/20 transition shadow-sm"
+              className="ml-1 inline-flex items-center gap-1.5 text-amber-700 font-bold bg-amber-500/10 px-3.5 py-1.5 rounded-full border border-amber-500/30 hover:bg-amber-500/20 transition shadow-sm"
             >
               <Compass className="w-3.5 h-3.5 text-amber-600" />
               <span>System Start</span>
@@ -633,16 +642,43 @@ export function Header() {
                   <span>Über Michél</span>
                   <User className="w-3.5 h-3.5 text-muted-foreground" />
                 </Link>
+
+                <Link
+                  to="/blog"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-3 rounded-2xl bg-card border border-border text-foreground font-bold text-xs flex items-center justify-between"
+                >
+                  <span>Journal</span>
+                  <ArrowRight className="w-3.5 h-3.5 text-amber-600" />
+                </Link>
+
+                <Link
+                  to="/katalog"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-3 rounded-2xl bg-card border border-border text-foreground font-bold text-xs flex items-center justify-between"
+                >
+                  <span>Katalog</span>
+                  <Layers className="w-3.5 h-3.5 text-amber-600" />
+                </Link>
               </div>
 
-              <Link
-                to="/sitemap"
-                onClick={() => setMobileMenuOpen(false)}
-                className="w-full p-3 rounded-2xl bg-secondary/60 border border-border text-center font-bold text-xs text-foreground flex items-center justify-center gap-1.5"
-              >
-                <Layers className="w-3.5 h-3.5 text-amber-600" />
-                <span>Gesamtes System-Verzeichnis (Sitemap)</span>
-              </Link>
+              <div className="grid grid-cols-2 gap-2.5">
+                <Link
+                  to="/kontakt"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-3 rounded-2xl bg-secondary/80 border border-border text-center font-bold text-xs text-foreground flex items-center justify-center gap-1.5"
+                >
+                  <span>Kontakt & Termin</span>
+                </Link>
+
+                <Link
+                  to="/sitemap"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-3 rounded-2xl bg-secondary/80 border border-border text-center font-bold text-xs text-foreground flex items-center justify-center gap-1.5"
+                >
+                  <span>Sitemap</span>
+                </Link>
+              </div>
             </div>
 
             {/* Mobile Footer CTAs */}

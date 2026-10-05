@@ -124,9 +124,36 @@ export function Footer() {
           {/* Kontakt & Dialog */}
           <div>
             <h4 className="font-display font-bold text-xs uppercase tracking-wider text-foreground mb-4">
-              Kontakt & Dialog
+              Kontakt & Journal
             </h4>
             <ul className="space-y-2.5 text-xs sm:text-sm text-muted-foreground">
+              <li>
+                <Link to="/blog" className="hover:text-amber-600 transition-colors flex items-center gap-1 font-bold text-foreground">
+                  <span>M³ Journal & Wissenschaft</span>
+                  <span className="text-[9px] bg-amber-500/15 text-amber-700 px-1.5 py-0.5 rounded font-mono">10 Texte</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/katalog" className="hover:text-amber-600 transition-colors font-medium text-foreground">
+                  <span>Modul-Katalog</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/kontakt" className="hover:text-amber-600 transition-colors font-medium text-foreground">
+                  <span>Kontakt & Anfahrt</span>
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="https://cal.com/michelmeier/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-amber-600 transition-colors inline-flex items-center gap-1 text-amber-700 font-bold"
+                >
+                  <span>30 Min. Slot buchen (Cal.com)</span>
+                  <ArrowUpRight className="w-3 h-3 text-amber-600" />
+                </a>
+              </li>
               <li>
                 <a
                   href={WHATSAPP_URL}
@@ -144,22 +171,11 @@ export function Footer() {
                   href="https://wa.me/c/4917699016640"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:text-amber-600 transition-colors inline-flex items-center gap-1 text-amber-700 font-bold"
+                  className="hover:text-amber-600 transition-colors inline-flex items-center gap-1 text-muted-foreground hover:text-foreground"
                 >
                   <span>WhatsApp Katalog</span>
                   <ArrowUpRight className="w-3 h-3 text-amber-600" />
                 </a>
-              </li>
-              <li>
-                <Link to="/sitemap" className="hover:text-amber-600 transition-colors flex items-center gap-1 font-medium text-foreground">
-                  <span>Sitemap & Modulübersicht</span>
-                  <ArrowUpRight className="w-3 h-3 text-amber-600" />
-                </Link>
-              </li>
-              <li>
-                <Link to="/" hash="faq" className="hover:text-amber-600 transition-colors">
-                  Häufige Fragen (FAQ)
-                </Link>
               </li>
             </ul>
           </div>
@@ -170,7 +186,15 @@ export function Footer() {
           <div>
             © {new Date().getFullYear()} Michél Meier · M³ Performance & Gesundheit. Alle Rechte vorbehalten.
           </div>
-          <div className="flex items-center gap-4 text-[11px]">
+          <div className="flex flex-wrap items-center gap-4 text-[11px]">
+            <Link to="/impressum" className="hover:underline text-foreground font-semibold">
+              Impressum
+            </Link>
+            <span>·</span>
+            <Link to="/datenschutz" className="hover:underline text-foreground font-semibold">
+              Datenschutz
+            </Link>
+            <span>·</span>
             <Link to="/sitemap" className="hover:underline text-foreground font-semibold">
               Sitemap
             </Link>
