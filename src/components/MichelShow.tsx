@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { michelSlides } from '../data/content'
+import { useContent } from '../useContent'
 import { Img } from './Img'
 
 const HOLD_MS = 1600
@@ -160,6 +160,7 @@ function useFineMotion() {
 }
 
 function MichelFade() {
+  const { michelSlides } = useContent()
   const [index, setIndex] = useState(0)
   const wrapRef = useRef<HTMLDivElement>(null)
   const visible = useRef(true)
@@ -183,7 +184,7 @@ function MichelFade() {
       io.disconnect()
       window.clearInterval(id)
     }
-  }, [])
+  }, [michelSlides.length])
 
   return (
     <div className="michel-show michel-fade" ref={wrapRef} aria-label="Michél Meier">
@@ -206,6 +207,7 @@ export function MichelShow() {
 }
 
 function MichelShowGL() {
+  const { michelSlides } = useContent()
   const wrapRef = useRef<HTMLDivElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
 
@@ -464,7 +466,7 @@ function MichelShowGL() {
       window.cancelAnimationFrame(raf)
       gl?.getExtension('WEBGL_lose_context')?.loseContext()
     }
-  }, [])
+  }, [michelSlides])
 
   return (
     <div
