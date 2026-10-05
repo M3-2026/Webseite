@@ -65,8 +65,8 @@ export function Home() {
               </h1>
               <p className="bento-lead">
                 {isEn
-                  ? 'For leaders, entrepreneurs & high performers: We link metabolism, biomechanics, and mindset into one biologically proven system.'
-                  : 'Für Unternehmer, Macher & High-Performer: Wir verbinden Stoffwechsel, Biomechanik und Mindset zu einem biologisch fundierten System – nachhaltig & messbar.'}
+                  ? 'Holistic personal training brought to the point: We link nutrition (M¹), biomechanics (M²), and mental routines (M³) into one sustainable system – tailored to your daily life.'
+                  : 'Ganzheitliches Personal Training auf den Punkt gebracht: Wir verbinden Ernährung (M¹), Biomechanik (M²) und mentale Routinen (M³) zu einem nachhaltigen System – individuell auf deinen Alltag zugeschnitten.'}
               </p>
 
               {/* Minimalistic Transparent Showreel CTA */}
