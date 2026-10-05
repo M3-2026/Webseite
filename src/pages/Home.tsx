@@ -106,12 +106,12 @@ export function Home() {
             </div>
           </article>
 
-          {/* 3. PILLAR M¹: METABOLISM (Span 4 - Chapter 2A: The Internal Foundation) */}
+          {/* 3. PILLAR M¹: FOOD / METABOLISM (Span 4 - Chapter 2A: The Internal Foundation) */}
           <Link
             to="/metabolism"
             className="bento-card bento-card--pillar bento-card--m1 bento-span-4"
             style={{ '--pillar-color': '#e8a14a' } as CSSProperties}
-            aria-label="Pillar M1 Metabolism"
+            aria-label="Pillar M1 Food Metabolism"
           >
             <div className="bento-molecule-visual" style={{ position: 'absolute', inset: 0, opacity: 0.9, pointerEvents: 'none' }}>
               <SystemMolecule />
@@ -119,7 +119,7 @@ export function Home() {
             <div className="bento-overlay" />
             <div className="bento-content">
               <h2 className="bento-title">
-                <span className="bento-pillar-accent" style={{ color: '#e8a14a' }}>M¹</span> {isEn ? 'Metabolism & Cellular Energy' : 'Metabolismus & Zellenergie'}
+                <span className="bento-pillar-accent" style={{ color: '#e8a14a' }}>M¹</span> FOOD <span className="bento-pillar-sub">· {isEn ? 'Metabolism & Cellular Energy' : 'Metabolismus & Zellenergie'}</span>
               </h2>
               <p className="bento-desc">
                 {isEn
@@ -127,17 +127,17 @@ export function Home() {
                   : 'Stabiler Blutzucker, Darmgesundheit und optimale Nährstoffverwertung für konstante Tagesenergie.'}
               </p>
               <div className="bento-arrow-btn">
-                <span>{isEn ? 'Explore M¹ →' : 'Säule M¹ entdecken →'}</span>
+                <span>{isEn ? 'Explore M¹ FOOD →' : 'Säule M¹ entdecken →'}</span>
               </div>
             </div>
           </Link>
 
-          {/* 4. PILLAR M²: BIOMECHANICS (Span 4 - Chapter 2B: The Physical Freedom) */}
+          {/* 4. PILLAR M²: MOVE / BIOMECHANICS (Span 4 - Chapter 2B: The Physical Freedom) */}
           <Link
-            to="/biomechanics"
+            to="/movement"
             className="bento-card bento-card--pillar bento-card--m2 bento-span-4"
             style={{ '--pillar-color': '#2f9a72' } as CSSProperties}
-            aria-label="Pillar M2 Biomechanics"
+            aria-label="Pillar M2 Move Biomechanics"
           >
             <picture className="bento-bg">
               <source
@@ -149,7 +149,7 @@ export function Home() {
               />
               <img
                 src="/images/moodboard/mood-limitless.jpg"
-                alt="M2 Biomechanics Mobilität & Schmerzfreiheit"
+                alt="M2 Move Biomechanik & Schmerzfreiheit"
                 loading="lazy"
                 decoding="async"
                 className="bento-bg-img"
@@ -158,7 +158,7 @@ export function Home() {
             <div className="bento-overlay" />
             <div className="bento-content">
               <h2 className="bento-title">
-                <span className="bento-pillar-accent" style={{ color: '#2f9a72' }}>M²</span> {isEn ? 'Biomechanics & Pain Freedom' : 'Biomechanik & Schmerzfreiheit'}
+                <span className="bento-pillar-accent" style={{ color: '#2f9a72' }}>M²</span> MOVE <span className="bento-pillar-sub">· {isEn ? 'Biomechanics & Pain Freedom' : 'Biomechanik & Schmerzfreiheit'}</span>
               </h2>
               <p className="bento-desc">
                 {isEn
@@ -166,17 +166,17 @@ export function Home() {
                   : 'Gelenkstabilität, funktionelle Mobilität und maximale Belastbarkeit im Alltag und Sport.'}
               </p>
               <div className="bento-arrow-btn">
-                <span>{isEn ? 'Explore M² →' : 'Säule M² entdecken →'}</span>
+                <span>{isEn ? 'Explore M² MOVE →' : 'Säule M² entdecken →'}</span>
               </div>
             </div>
           </Link>
 
-          {/* 5. PILLAR M³: MINDSET (Span 4 - Chapter 2C: The Mental Clarity) */}
+          {/* 5. PILLAR M³: REPEAT / MINDSET (Span 4 - Chapter 2C: The Mental Clarity) */}
           <Link
-            to="/mental"
+            to="/mental-performance"
             className="bento-card bento-card--pillar bento-card--m3 bento-span-4"
             style={{ '--pillar-color': '#4f6fd6' } as CSSProperties}
-            aria-label="Pillar M3 Mindset"
+            aria-label="Pillar M3 Repeat Mindset"
           >
             <picture className="bento-bg">
               <source
@@ -188,7 +188,7 @@ export function Home() {
               />
               <img
                 src="/images/moodboard/mood-focus.jpg"
-                alt="M3 Mindset Fokus & neuronale Klarheit"
+                alt="M3 Repeat Mindset & neuronale Klarheit"
                 loading="lazy"
                 decoding="async"
                 className="bento-bg-img"
@@ -197,7 +197,7 @@ export function Home() {
             <div className="bento-overlay" />
             <div className="bento-content">
               <h2 className="bento-title">
-                <span className="bento-pillar-accent" style={{ color: '#4f6fd6' }}>M³</span> {isEn ? 'Mindset & Neural Clarity' : 'Mindset & neuronale Klarheit'}
+                <span className="bento-pillar-accent" style={{ color: '#4f6fd6' }}>M³</span> REPEAT <span className="bento-pillar-sub">· {isEn ? 'Mindset & Neural Clarity' : 'Mindset & neuronale Klarheit'}</span>
               </h2>
               <p className="bento-desc">
                 {isEn
@@ -205,7 +205,7 @@ export function Home() {
                   : 'Entscheidungsökonomie, tiefer Schlaf und Stressresilienz – trainiert wie ein Muskel.'}
               </p>
               <div className="bento-arrow-btn">
-                <span>{isEn ? 'Explore M³ →' : 'Säule M³ entdecken →'}</span>
+                <span>{isEn ? 'Explore M³ REPEAT →' : 'Säule M³ entdecken →'}</span>
               </div>
             </div>
           </Link>

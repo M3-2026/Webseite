@@ -3364,12 +3364,19 @@ picture.bento-bg img,
 
 .bento-title {
   margin: 2px 0 0;
-  font-size: clamp(15px, 1.6cqi, 20px);
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  font-size: clamp(15.5px, 1.65cqi, 20.5px);
+  font-weight: 850;
+  letter-spacing: -0.015em;
   line-height: 1.2;
   color: #ffffff;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75);
+}
+
+.bento-pillar-sub {
+  font-size: 0.88em;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.82);
+  letter-spacing: -0.01em;
 }
 
 .bento-pillar-accent {
