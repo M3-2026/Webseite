@@ -48,14 +48,21 @@ export function Home() {
                 className="bento-bg-img"
               />
             </picture>
-            <div className="bento-overlay" />
+            <div className="bento-overlay bento-overlay--hero" />
             <div className="bento-content bento-content--hero">
+              <div className="bento-tag-row">
+                <span className="bento-tag bento-tag--gold">
+                  <span className="bento-dot" />
+                  {isEn ? 'M³ Performance System' : 'M³ Performance System'}
+                </span>
+              </div>
               <h1 className="bento-hero-h1">
-                {isEn ? (
-                  <>M¹–M³ Performance. <span>Holistic, Pain-Free &amp; Sharp.</span></>
-                ) : (
-                  <>M³ Performance &amp; Gesundheit. <span>Schmerzfrei &amp; Klar.</span></>
-                )}
+                <span className="bento-hero-primary">
+                  {isEn ? 'M³ PERFORMANCE & HEALTH' : 'M³ PERFORMANCE & GESUNDHEIT'}
+                </span>
+                <span className="bento-hero-secondary">
+                  {isEn ? '– Performance Begins With Health.' : '– Leistung Beginnt Mit Gesundheit.'}
+                </span>
               </h1>
               <p className="bento-lead">
                 {isEn
@@ -65,7 +72,10 @@ export function Home() {
 
               {/* Minimalistic Transparent Showreel CTA */}
               <Link to="/ueber-mich" className="hero-btn-showreel">
-                Showreel
+                <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: 14, height: 14, flexShrink: 0 }}>
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                <span>{isEn ? 'Showreel' : 'Showreel'}</span>
               </Link>
             </div>
           </article>

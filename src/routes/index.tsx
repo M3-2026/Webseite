@@ -5,11 +5,11 @@ export const Route = createFileRoute("/")({
   component: HomePage,
   head: () => ({
     meta: [
-      { title: "M³ Performance & Gesundheit – Michél Meier | Personal Training & Coaching" },
+      { title: "M³ PERFORMANCE & GESUNDHEIT – Leistung Beginnt Mit Gesundheit | Michél Meier" },
       {
         name: "description",
         content:
-          "M³ Performance & Gesundheit: Ganzheitliches Personal Training, das Stoffwechsel (M¹), Biomechanik (M²) und Mindset (M³) vereint. Für schmerzfreie Belastbarkeit und echte Zellenergie im Alltag.",
+          "M³ Performance & Gesundheit: Leistung beginnt mit Gesundheit. Ganzheitliches Personal Training, das Stoffwechsel (M¹), Biomechanik (M²) und Mindset (M³) vereint.",
       },
     ],
   }),
