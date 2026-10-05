@@ -57,12 +57,11 @@ export function Home() {
                 </span>
               </div>
               <h1 className="bento-hero-h1">
-                <span className="bento-hero-primary">
-                  {isEn ? 'M³ PERFORMANCE & HEALTH' : 'M³ PERFORMANCE & GESUNDHEIT'}
-                </span>
-                <span className="bento-hero-secondary">
-                  {isEn ? '– Performance Begins With Health.' : '– Leistung Beginnt Mit Gesundheit.'}
-                </span>
+                {isEn ? (
+                  <>M³ PERFORMANCE &amp; HEALTH. <span>Performance begins with health.</span></>
+                ) : (
+                  <>M³ PERFORMANCE &amp; GESUNDHEIT. <span>Leistung beginnt mit Gesundheit.</span></>
+                )}
               </h1>
               <p className="bento-lead">
                 {isEn

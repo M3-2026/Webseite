@@ -3389,36 +3389,19 @@ picture.bento-bg img,
 
 /* International Luxury Standard Hero Headlines */
 .bento-hero-h1 {
-  margin: 3px 0 0;
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  color: #ffffff;
-}
-
-.bento-hero-primary {
-  display: block;
-  font-size: clamp(20px, 2.75cqi, 34px);
+  margin: 2px 0 0;
+  font-size: clamp(21px, 2.9cqi, 36px);
   font-weight: 900;
-  letter-spacing: 0.025em;
-  text-transform: uppercase;
-  line-height: 1.1;
+  letter-spacing: -0.02em;
+  line-height: 1.14;
   color: #ffffff;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.88), 0 0 28px rgba(245, 158, 11, 0.18);
-}
-
-.bento-hero-secondary {
-  display: block;
-  font-size: clamp(15px, 1.85cqi, 22px);
-  font-weight: 700;
-  letter-spacing: -0.015em;
-  line-height: 1.22;
-  color: #fde8cc;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.82), 0 0 16px rgba(245, 158, 11, 0.22);
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.85);
 }
 
 .bento-hero-h1 span {
-  font-weight: 700;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 650;
+  letter-spacing: -0.02em;
 }
 
 .bento-hero-h1 em {
@@ -4643,19 +4626,9 @@ picture.bento-bg img,
   }
 
   .bento-hero-h1 {
+    font-size: clamp(23px, 6.8vw, 30px);
     line-height: 1.15;
-    gap: 3px;
-  }
-
-  .bento-hero-primary {
-    font-size: clamp(19px, 5.8vw, 26px);
-    letter-spacing: 0.02em;
-    line-height: 1.12;
-  }
-
-  .bento-hero-secondary {
-    font-size: clamp(14px, 4.2vw, 18px);
-    line-height: 1.22;
+    letter-spacing: -0.02em;
   }
 
   .bento-lead {
@@ -4978,12 +4951,8 @@ picture.bento-bg img,
     justify-content: center;
   }
 
-  .bento-hero-primary {
-    font-size: 18px;
-  }
-
-  .bento-hero-secondary {
-    font-size: 13.5px;
+  .bento-hero-h1 {
+    font-size: 22px;
   }
 
   .bento-card {
