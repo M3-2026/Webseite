@@ -911,7 +911,7 @@ export const about = {
   intro:
     'Why even the hardest discipline fails when the foundation is off — and how 30+ years of movement became the M³ system.',
   quote: 'Sometimes you need understanding. Sometimes a kick. Often both.',
-  bio: 'Michél comes from 30+ years of movement: breakdance, stage, a world title — and from the life in between. Single father. A cervical disc herniation that nearly stopped him. Years when discipline alone was no longer enough. That is where M³ comes from: metabolism first, then technique, then routines that hold. Not a system off the shelf. The order he learned in his own body — with the goal that you eventually continue without him.',
+  bio: 'Michél draws from over 30 years of lived movement experience: from international stages and an IDO World Championship in breakdance to life as a single father and a full recovery from a severe cervical spine injury. Out of these real challenges, M³ was created — a holistic system linking metabolism, biomechanics, and mental routines so that you can sustainably master your own health and performance.',
   stations: [
     {
       years: '1995 – 1998',

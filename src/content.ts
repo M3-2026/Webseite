@@ -980,7 +980,7 @@ export const about = {
   intro:
     'Warum selbst die härteste Disziplin scheitert, wenn das Fundament nicht stimmt — und wie aus 30+ Jahren Bewegung & Erfahrung das M³-System entstand.',
   quote: 'Manchmal braucht es Verständnis. Manchmal einen Arschtritt. Oft beides.',
-  bio: 'Michél kommt aus 30+ Jahren Bewegung: Breakdance, Bühne, Weltmeisterschaft — und aus dem Leben dazwischen. Alleinerziehender Vater. Ein Bandscheibenvorfall im Halswirbelbereich, der ihn fast gestoppt hätte. Jahre, in denen Disziplin allein nicht mehr gereicht hat. Genau daraus ist M³ entstanden: Stoffwechsel zuerst, dann Technik, dann Routinen, die halten. Kein System von der Stange. Sondern die Reihenfolge, die er am eigenen Körper gelernt hat — mit dem Ziel, dass du irgendwann ohne ihn weiterkommst.',
+  bio: 'Michél schöpft aus über 30 Jahren gelebter Bewegungserfahrung: von internationalen Bühnen und dem Weltmeistertitel im Breakdance bis hin zum Alltag als alleinerziehender Vater und der vollständigen Genesung nach einem schweren Halswirbel-Bandscheibenvorfall. Aus diesen realen Herausforderungen entstand M³ – ein ganzheitliches System, das Stoffwechsel, Biomechanik und mentale Routinen so verzahnt, dass du deine Gesundheit und Leistungsfähigkeit dauerhaft eigenständig meisterst.',
   stations: [
     {
       years: '1995 – 1998',

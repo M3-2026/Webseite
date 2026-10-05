@@ -80,9 +80,9 @@ const ui = {
     michelEyebrow: 'Authentizität',
     michelH: 'Hinter M³ steckt mehr als Training.',
     michelLead:
-      'Michél ist kein Trainer, der ein System von der Stange verkauft. Er kommt aus 30+ Jahren Bewegung & Erfahrung: Breakdance, Bühne, Weltmeisterschaft — und aus dem Leben dazwischen. Alleinerziehender Vater. Ein Bandscheibenvorfall im Halswirbelbereich, der ihn fast gestoppt hätte. Jahre, in denen Disziplin allein nicht mehr gereicht hat.',
+      'Michél steht für ein Coaching, das nicht aus dem Lehrbuch kommt, sondern auf über 30 Jahren gelebter Bewegungserfahrung basiert. Von internationalen Wettkampfbühnen und dem Weltmeistertitel im Breakdance über die Herausforderungen als alleinerziehender Vater bis hin zum eigenen Weg zurück nach einem schweren Halswirbel-Bandscheibenvorfall: Er hat am eigenen Körper erfahren, warum eiserne Disziplin allein oft an Grenzen stößt.',
     michelLead2:
-      'Genau deshalb sitzt M³. Er kennt den Moment, in dem der Körper nicht mitzieht, obwohl der Kopf will. Und er kennt den anderen: wenn jemand Verständnis braucht — und wann einen klaren Impuls. Ohne Dogma. Ohne Show. Mit dem Ziel, dass du irgendwann ohne ihn weiterkommst.',
+      'Aus genau diesen Erfahrungen ist das M³-System entstanden. Michél weiß aus eigener Praxis, wie es sich anfühlt, wenn der Körper streikt oder der Alltag die Energie raubt. Er begleitet dich auf Augenhöhe mit einer ehrlichen Mischung aus tiefem Verständnis und dem entscheidenden Impuls zur richtigen Zeit – fundiert, alltagstauglich und mit dem klaren Ziel, dass du deine Gesundheit dauerhaft selbstständig meisterst.',
     michelQuote: 'Manchmal braucht es Verständnis. Manchmal einen Arschtritt. Oft beides.',
     michelMeta: '2006 / 2007 · IDO World Champion · Master Personal Trainer i. A. · 30+ Jahre Bewegung',
     faqEyebrow: 'Klarheit vorab',
@@ -245,9 +245,9 @@ const ui = {
     michelEyebrow: 'Authenticity',
     michelH: 'Behind M³ there is more than training.',
     michelLead:
-      'Michél is not a trainer selling a system off the shelf. He comes from 30+ years of movement and experience: breakdance, the stage, a world title — and from the life in between. Single father. A cervical disc herniation that nearly stopped him. Years when discipline alone was no longer enough.',
+      'Michél stands for coaching that does not come from a textbook, but is built on more than 30 years of lived movement experience. From international stages and an IDO World Championship in breakdance to the challenges of being a single father and recovering from a severe cervical spine injury: He experienced firsthand why pure discipline alone often hits a wall.',
     michelLead2:
-      'That is why M³ fits. He knows the moment when the body will not follow, even though the head wants it. And he knows the other one: when someone needs understanding — and when they need a clear push. No dogma. No show. With the goal that you eventually continue without him.',
+      'The M³ system was born directly from this journey. Michél understands how it feels when your body resists or everyday demands drain your energy. That is why he coaches at eye level with genuine empathy and the right decisive push at the right time — honest, scientifically grounded, and designed so you can sustainably steer your own health.',
     michelQuote: 'Sometimes you need understanding. Sometimes a kick. Often both.',
     michelMeta: '2006 / 2007 · IDO World Champion · Master Personal Trainer in training · 30+ years of movement',
     faqEyebrow: 'Clarity first',
