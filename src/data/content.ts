@@ -1044,3 +1044,8 @@ export const startProof = [
     image: '/images/michel-trainer.jpg',
   },
 ] as const;
+
+export const michelSlides = [
+  { src: '/images/michel-trainer.png', label: 'Trainer' },
+  { src: '/images/michel-politik.png', label: 'Politik' },
+] as const;
