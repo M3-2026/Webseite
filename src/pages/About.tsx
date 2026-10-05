@@ -1,3 +1,4 @@
+import { useState, useRef, useEffect } from 'react'
 import { Link } from '@tanstack/react-router'
 import { BackLink } from '../components/BackLink'
 import { ValueIcon } from '../components/ValueIcon'
@@ -10,6 +11,68 @@ export function About() {
   const { lang } = useLocale()
   const isEn = lang === 'en'
   const { about, contact, wa } = useContent()
+
+  const timelineRef = useRef<HTMLDivElement>(null)
+  const [canScrollLeft, setCanScrollLeft] = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(true)
+  const [scrollProgress, setScrollProgress] = useState(0)
+  const [activeStationIndex, setActiveStationIndex] = useState(0)
+
+  const checkScroll = () => {
+    const el = timelineRef.current
+    if (!el) return
+    const maxScroll = el.scrollWidth - el.clientWidth
+    if (maxScroll > 0) {
+      const progress = (el.scrollLeft / maxScroll) * 100
+      setScrollProgress(Math.min(100, Math.max(0, progress)))
+      setCanScrollLeft(el.scrollLeft > 15)
+      setCanScrollRight(el.scrollLeft < maxScroll - 15)
+
+      const idx = Math.round((el.scrollLeft / maxScroll) * (about.stations.length - 1))
+      setActiveStationIndex(idx)
+    } else {
+      setScrollProgress(0)
+      setCanScrollLeft(false)
+      setCanScrollRight(false)
+      setActiveStationIndex(0)
+    }
+  }
+
+  useEffect(() => {
+    checkScroll()
+    const el = timelineRef.current
+    if (el) {
+      el.addEventListener('scroll', checkScroll, { passive: true })
+      window.addEventListener('resize', checkScroll)
+      return () => {
+        el.removeEventListener('scroll', checkScroll)
+        window.removeEventListener('resize', checkScroll)
+      }
+    }
+  }, [about.stations])
+
+  const scrollTimeline = (direction: 'left' | 'right') => {
+    const el = timelineRef.current
+    if (el) {
+      const cardWidth = el.querySelector('.bento-timeline-card')?.clientWidth || 320
+      const scrollAmount = direction === 'left' ? -(cardWidth + 20) : (cardWidth + 20)
+      el.scrollBy({ left: scrollAmount, behavior: 'smooth' })
+    }
+  }
+
+  const scrollToStation = (index: number) => {
+    const el = timelineRef.current
+    if (el) {
+      const cards = el.querySelectorAll('.bento-timeline-card')
+      if (cards[index]) {
+        (cards[index] as HTMLElement).scrollIntoView({
+          behavior: 'smooth',
+          inline: 'start',
+          block: 'nearest',
+        })
+      }
+    }
+  }
 
   return (
     <main className="bento-page">
@@ -122,62 +185,120 @@ export function About() {
             </div>
           </article>
 
-          {/* 3. LIFE TIMELINE BENTO (Span 12) - Horizontal timeline layout */}
+          {/* 3. LIFE TIMELINE BENTO (Span 12) - Interactive Scrollable Timeline */}
           <article className="bento-card bento-card--journal bento-span-12" style={{ padding: 'clamp(22px, 3vw, 36px)' }}>
-            <div className="bento-card-header" style={{ marginBottom: 20 }}>
+            <div className="bento-card-header" style={{ marginBottom: 16, display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16 }}>
               <div>
-                <h2 className="bento-title" style={{ fontSize: 'clamp(20px, 2.4cqi, 28px)' }}>
-                  {t.aboutYears}
+                <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
+                  <span className="timeline-year-tag" style={{ fontSize: 11 }}>
+                    <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#e8a14a' }} />
+                    {isEn ? '30+ YEARS CHRONOLOGY' : '30+ JAHRE CHRONOLOGIE'}
+                  </span>
+                </div>
+                <h2 className="bento-title" style={{ fontSize: 'clamp(20px, 2.4cqi, 28px)', margin: '4px 0' }}>
+                  {isEn ? '30+ Years of Movement & Performance' : '30+ Jahre Bewegung und Performance'}
                 </h2>
-                <p className="bento-desc" style={{ maxWidth: '64ch' }}>
+                <p className="bento-desc" style={{ maxWidth: '68ch', marginTop: 4 }}>
                   {isEn
-                    ? 'From the early stages of competitive movement to the systematic origin of M³ Performance.'
+                    ? 'From early competitive sports and severe injuries to the birth of the M³ Performance System.'
                     : 'Vom frühen Leistungssport über kritische Verletzungen bis zur Geburt des M³ Performance Systems.'}
                 </p>
               </div>
+
+              {/* Top Navigation Step Buttons */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                <button
+                  type="button"
+                  onClick={() => scrollTimeline('left')}
+                  disabled={!canScrollLeft}
+                  className="timeline-nav-btn"
+                  aria-label={isEn ? 'Scroll timeline left' : 'Timeline nach links scrollen'}
+                  title={isEn ? 'Previous station' : 'Vorherige Station'}
+                >
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="15 18 9 12 15 6" />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => scrollTimeline('right')}
+                  disabled={!canScrollRight}
+                  className="timeline-nav-btn"
+                  aria-label={isEn ? 'Scroll timeline right' : 'Timeline nach rechts scrollen'}
+                  title={isEn ? 'Next station' : 'Nächste Station'}
+                >
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                </button>
+              </div>
             </div>
 
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                gap: 16,
-                width: '100%',
-                overflowX: 'auto',
-                paddingBottom: 14,
-                scrollbarWidth: 'none',
-                msOverflowStyle: 'none',
-                scrollSnapType: 'x mandatory',
-                WebkitOverflowScrolling: 'touch',
-              }}
-            >
-              {about.stations.map((s) => (
-                <div
+            {/* Quick Era Jump Pills */}
+            <div className="timeline-quick-pills" style={{ marginBottom: 14 }}>
+              {about.stations.map((s, idx) => (
+                <button
                   key={s.years}
-                  className="bento-compass-card"
+                  type="button"
+                  onClick={() => scrollToStation(idx)}
+                  className="timeline-pill-btn"
                   style={{
-                    flex: '0 0 clamp(260px, 24vw, 320px)',
-                    minHeight: 200,
-                    cursor: 'default',
-                    pointerEvents: 'none',
-                    justifyContent: 'flex-start',
-                    scrollSnapAlign: 'start',
+                    background: activeStationIndex === idx ? 'rgba(232, 161, 74, 0.2)' : undefined,
+                    borderColor: activeStationIndex === idx ? 'rgba(232, 161, 74, 0.6)' : undefined,
+                    color: activeStationIndex === idx ? '#e8a14a' : undefined,
                   }}
                 >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6 }}>
-                    <span style={{ fontSize: 11, fontWeight: 800, color: '#e8a14a', letterSpacing: '0.08em' }}>
+                  {s.years.split('–')[0].trim()}
+                </button>
+              ))}
+            </div>
+
+            {/* Scrollable Timeline Cards Track */}
+            <div ref={timelineRef} className="timeline-scroll-container">
+              {about.stations.map((s) => (
+                <div key={s.years} className="bento-timeline-card">
+                  <div className="timeline-card-header">
+                    <span className="timeline-year-tag">
+                      <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#e8a14a' }} />
                       {s.years}
                     </span>
-                    <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#e8a14a', opacity: 0.7 }} />
+                    {s.badge && (
+                      <span className="timeline-badge-tag">
+                        {s.badge}
+                      </span>
+                    )}
                   </div>
-                  <h3 style={{ margin: '4px 0 8px', fontSize: 16, fontWeight: 700, color: '#ffffff' }}>
+
+                  <h3 className="timeline-card-title">
                     {s.title}
                   </h3>
-                  <p style={{ margin: 0, fontSize: 13, color: 'rgba(255,255,255,0.75)', lineHeight: 1.45 }}>
+
+                  <p className="timeline-card-lead">
                     {s.text}
                   </p>
+
+                  {s.points && s.points.length > 0 && (
+                    <ul className="timeline-points-list">
+                      {s.points.map((pt, pIdx) => (
+                        <li key={pIdx} className="timeline-point-item">
+                          <span className="timeline-point-bullet">✔</span>
+                          <span>{pt}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               ))}
+            </div>
+
+            {/* Bottom Progress Bar and Controls */}
+            <div className="timeline-controls-bar">
+              <div className="timeline-progress-track">
+                <div className="timeline-progress-fill" style={{ width: `${Math.max(12, scrollProgress)}%` }} />
+              </div>
+              <span style={{ fontSize: 11, fontFamily: 'var(--font-mono, monospace)', color: 'rgba(255,255,255,0.6)', flexShrink: 0 }}>
+                {activeStationIndex + 1} / {about.stations.length} {isEn ? 'Stations' : 'Stationen'}
+              </span>
             </div>
           </article>
 
