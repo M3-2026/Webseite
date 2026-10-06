@@ -978,9 +978,9 @@ export const startProof = [
 export const about = {
   headline: 'Vom Breakdancer zu ganzheitlichem Personal Training & Gesundheit.',
   intro:
-    '30+ Jahre gelebte Bewegung: Vom urbanen Leistungssport über die vollständige HWS-Reha ohne OP bis zum Alltag als Vater – wie aus echten Herausforderungen das ganzheitliche M³-System entstand.',
+    'Leistung beginnt mit Gesundheit. Über 30 Jahre Bewegungspraxis gebündelt in einem System, das Stoffwechsel, Biomechanik und Mindset vereint – für echte Belastbarkeit im Alltag.',
   quote: 'Manchmal braucht es Verständnis. Manchmal einen Arschtritt. Oft beides.',
-  bio: 'Keine Dogmen. Keine leeren Theorien. Reine, gelebte Praxis aus drei Jahrzehnten Leistung, Krise und nachhaltiger Regeneration.',
+  bio: '30+ Jahre Bewegungspraxis: Von den Bühnen des urbanen Tanzes über die Genesung nach einem schweren HWS-Bandscheibenvorfall bis zum Alltag als alleinerziehender Vater. Keine Dogmen. Keine leeren Theorien. Warum Disziplin an Grenzen stößt, wenn das Fundament brennt – und wie daraus echte Autonomie entsteht.',
   stations: [
     {
       years: '1995 – 1998',

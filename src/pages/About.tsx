@@ -159,10 +159,10 @@ export function About() {
                     marginBottom: 8,
                   }}
                 >
-                  {isEn ? 'PROFILE & CODEX' : 'PROFIL & CODEX'}
+                  {isEn ? 'PROFILE & ETHOS' : 'PROFIL & HALTUNG'}
                 </span>
                 <h2 className="bento-title" style={{ fontSize: 'clamp(18px, 1.8cqi, 22px)', color: '#111111', margin: '4px 0 6px' }}>
-                  {isEn ? 'Facts & Foundation' : 'Fakten & Fundament'}
+                  {isEn ? 'Lived Practice & Ethos' : 'Gelebte Praxis & Haltung'}
                 </h2>
                 <p className="bento-desc" style={{ fontSize: 13, lineHeight: 1.45, color: '#333333' }}>
                   {about.bio}

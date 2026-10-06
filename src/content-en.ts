@@ -909,9 +909,9 @@ export const startProof = [
 export const about = {
   headline: 'From breakdancer to holistic personal training & health.',
   intro:
-    '30+ years of lived movement: From elite urban dance to full cervical spine recovery without surgery and fatherhood – how real challenges shaped the holistic M³ system.',
+    'Performance begins with health. Over 30 years of movement practice unified into a system linking metabolism, biomechanics, and mindset – for lasting resilience in daily life.',
   quote: 'Sometimes you need understanding. Sometimes a kick. Often both.',
-  bio: 'No dogmas. No empty theories. Pure lived practice from three decades of performance, recovery, and resilience.',
+  bio: '30+ years of movement practice: From urban dance stages to recovery from a severe cervical spine injury without surgery and daily life as a single father. No dogmas. No empty theories. Why discipline reaches its limits when the foundation is burning – and how true autonomy is built.',
   stations: [
     {
       years: '1995 – 1998',
