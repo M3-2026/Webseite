@@ -1,7 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 import { Link } from '@tanstack/react-router'
 import { BackLink } from '../components/BackLink'
-import { Img } from '../components/Img'
 import { useUi } from '../copy'
 import { useLocale } from '../locale'
 import { useContent } from '../useContent'
@@ -10,9 +9,8 @@ export function MentalPage() {
   const t = useUi()
   const { lang } = useLocale()
   const isEn = lang === 'en'
-  const { contact, pillars, posts, repeatManifesto, repeatThemes, wa } = useContent()
+  const { contact, pillars, repeatManifesto, repeatThemes, wa } = useContent()
   const pillar = pillars.find((p) => p.id === 'm3')!
-  const relatedPosts = posts.filter((p) => p.pillar === 'm3')
 
   // Selected theme for interactive deep-dive modal
   const [selectedThemeId, setSelectedThemeId] = useState<string | null>(null)
@@ -313,51 +311,7 @@ export function MentalPage() {
             </div>
           </article>
 
-          {/* 4. RELATED JOURNAL ARTICLES (Span 12) */}
-          {relatedPosts.length > 0 && (
-            <article className="bento-card bento-card--journal bento-span-12" style={{ padding: 'clamp(22px, 3vw, 36px)' }}>
-              <div className="bento-card-header" style={{ marginBottom: 20 }}>
-                <div>
-                  <span className="bento-tag bento-tag--gold" style={{ marginBottom: 8 }}>M³ JOURNAL</span>
-                  <h2 className="bento-title" style={{ fontSize: 'clamp(20px, 2.4cqi, 28px)' }}>
-                    {isEn ? 'In-depth articles on Mindset & Recovery' : 'Vertiefende Artikel zu Mindset & Erholung'}
-                  </h2>
-                </div>
-                <Link to="/blog" className="bento-header-link">
-                  {t.blogAll} →
-                </Link>
-              </div>
-
-              <div className="journal-cards-track" style={{ width: '100%', overflowX: 'auto', paddingBottom: 10 }}>
-                {relatedPosts.map((item) => (
-                  <Link
-                    key={item.slug}
-                    to={`/blog/${item.slug}`}
-                    className="journal-feed-card"
-                    style={{ flex: '0 0 clamp(280px, 32vw, 340px)' }}
-                  >
-                    <div className="journal-feed-media">
-                      <Img className="journal-feed-img" src={item.image} alt={item.title} />
-                      <span className="journal-feed-badge">
-                        {item.minutes} {t.blogMin}
-                      </span>
-                    </div>
-                    <div className="journal-feed-body">
-                      <h3 className="journal-feed-title">{item.title}</h3>
-                      <p className="journal-feed-excerpt">{item.excerpt}</p>
-                      <div className="journal-feed-footer">
-                        <span className="journal-feed-cta">
-                          {t.blogRead}
-                        </span>
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </article>
-          )}
-
-          {/* 5. MASTER BOTTOM CTA BENTO (Span 12) */}
+          {/* 4. MASTER BOTTOM CTA BENTO (Span 12) */}
           <article className="bento-card bento-card--start bento-span-12">
             <picture className="bento-bg">
               <source
