@@ -144,10 +144,6 @@ export function Home() {
               <h2 className="bento-title">
                 <span className="bento-pillar-accent" style={{ color: '#e8a14a' }}>M¹</span> FOOD
               </h2>
-              <div className="bento-pillar-domain">
-                <span className="domain-primary">{isEn ? 'METABOLISM.' : 'METABOLISMUS.'}</span>
-                <span className="domain-secondary">{isEn ? 'Cellular Energy' : 'Zellenergie'}</span>
-              </div>
               <p className="bento-desc">
                 {isEn
                   ? 'Stable blood sugar, gut health, and cellular nutrient absorption for sustained drive.'
@@ -187,10 +183,6 @@ export function Home() {
               <h2 className="bento-title">
                 <span className="bento-pillar-accent" style={{ color: '#2f9a72' }}>M²</span> MOVE
               </h2>
-              <div className="bento-pillar-domain">
-                <span className="domain-primary">{isEn ? 'BIOMECHANICS.' : 'BIOMECHANIK.'}</span>
-                <span className="domain-secondary">{isEn ? 'Pain Freedom' : 'Schmerzfreiheit'}</span>
-              </div>
               <p className="bento-desc">
                 {isEn
                   ? 'Joint stability, functional mobility, and full physical resilience under high demand.'
@@ -230,10 +222,6 @@ export function Home() {
               <h2 className="bento-title">
                 <span className="bento-pillar-accent" style={{ color: '#4f6fd6' }}>M³</span> REPEAT
               </h2>
-              <div className="bento-pillar-domain">
-                <span className="domain-primary">MINDSET.</span>
-                <span className="domain-secondary">{isEn ? 'Neural Clarity' : 'Neuronale Klarheit'}</span>
-              </div>
               <p className="bento-desc">
                 {isEn
                   ? 'Decision economy, deep restorative sleep, and nervous system control under pressure.'
