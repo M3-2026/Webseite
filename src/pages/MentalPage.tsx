@@ -97,7 +97,7 @@ export function MentalPage() {
                   <span className="bento-dot bento-dot--azure" />
                   {pillar.mark} · {pillar.name}
                 </span>
-                <span className="bento-tag">{isEn ? 'Pedagogical Umbrella' : 'Mentales Dach'}</span>
+                <span className="bento-tag">{pillar.label}</span>
               </div>
               <h1 className="bento-hero-h1">
                 {pillar.mark} · {pillar.name}. <span>{pillar.title}</span>
@@ -105,8 +105,8 @@ export function MentalPage() {
               <p className="bento-lead" style={{ fontStyle: 'italic', opacity: 0.95 }}>
                 „{pillar.quote}“
               </p>
-              <p className="bento-desc" style={{ maxWidth: '58ch', marginTop: 6, fontSize: 14 }}>
-                {pillar.body}
+              <p className="bento-desc" style={{ maxWidth: '54ch', marginTop: 6, fontSize: 14.5 }}>
+                {pillar.lead}
               </p>
               <div className="bento-cta-row" style={{ marginTop: 16 }}>
                 <Link to="/system-start" className="btn-white">
@@ -168,10 +168,10 @@ export function MentalPage() {
                 <h2 className="bento-title" style={{ fontSize: 'clamp(22px, 2.6cqi, 30px)' }}>
                   {repeatManifesto.heading}
                 </h2>
-                <p className="bento-desc" style={{ maxWidth: '72ch' }}>
+                <p className="bento-desc" style={{ maxWidth: '68ch' }}>
                   {isEn
-                    ? 'M³ REPEAT is the mental and pedagogical roof of the entire M³ system. It is not a separate product, but an integral part of every coaching journey. Explore the 6 core themes below:'
-                    : 'M³ REPEAT ist das mentale und pädagogische Dach des gesamten M³-Systems. Es ist kein separat buchbares Angebot, sondern fester Bestandteil jeder Coaching-Begleitung. Entdecke die 6 Kernthemen, mit denen du dauerhaft selbstständig handeln lernst:'}
+                    ? 'In every coaching automatically integrated – no separate package. 6 core themes that turn motivation into lasting habits:'
+                    : 'In jedem Coaching automatisch integriert – kein separates Paket. 6 Kernthemen für deine nachhaltige Veränderung:'}
                 </p>
               </div>
             </div>
