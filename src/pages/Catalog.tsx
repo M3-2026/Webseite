@@ -110,7 +110,38 @@ export function Catalog() {
                   </Link>
                 </div>
 
-                {group.length > 0 ? (
+                {pillar.id === 'm3' ? (
+                  <div
+                    style={{
+                      background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
+                      border: '1px solid var(--line)',
+                      borderRadius: 16,
+                      padding: '24px clamp(20px, 3vw, 32px)',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: 14,
+                    }}
+                  >
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
+                      <span className="bento-tag bento-tag--gold">
+                        {isEn ? 'THE M³ INTEGRATION ROOF' : 'DAS M³ SYSTEM-DACH'}
+                      </span>
+                      <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--muted)' }}>
+                        {isEn ? 'Included in every M¹ & M² coaching' : 'In jedem M¹ & M² Coaching integriert'}
+                      </span>
+                    </div>
+                    <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.6, color: 'var(--text)', maxWidth: '70ch' }}>
+                      {isEn
+                        ? 'M³ is not a separate paid module or standalone package. It is the overarching mindset and decision architecture that is automatically delivered inside every nutrition (M¹) and movement (M²) format — ensuring your progress endures in everyday life.'
+                        : 'M³ Mindset & Mental Performance ist kein separates Bezahlpaket. Es ist das übergeordnete System-Dach, das in jedem Ernährungs- (M¹) und Bewegungs-Coaching (M²) automatisch mitgeliefert wird — damit Entscheidungen, Schlaf und Routinen deinen Fortschritt dauerhaft absichern.'}
+                    </p>
+                    <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 4 }}>
+                      <Link to="/mental-performance" className="btn-white" style={{ fontSize: 13, padding: '8px 16px' }}>
+                        {isEn ? 'Discover M³ System Architecture →' : 'M³ System-Architektur ansehen →'}
+                      </Link>
+                    </div>
+                  </div>
+                ) : group.length > 0 ? (
                   <div className="bento-audience-grid">
                     {group.map((m) => (
                       <Link to={`/${m.slug}`} className="bento-sub-card" key={m.slug} style={{ textDecoration: 'none' }}>
