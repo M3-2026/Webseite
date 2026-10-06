@@ -3173,9 +3173,11 @@ picture {
   border-color: rgba(255, 255, 255, 0.35);
 }
 
-/* Hero & System Start top row height - Symmetrical 100dvh fit */
+/* Hero & Companion Top Row Cards Height - Symmetrical Fit */
 .bento-card--hero,
-.bento-card--start {
+.bento-card--start,
+.bento-grid > .bento-span-8:first-child,
+.bento-grid > .bento-span-8:first-child + .bento-span-4 {
   height: calc((100dvh - var(--nav-height) - 44px) * 0.565);
   min-height: 290px;
 }

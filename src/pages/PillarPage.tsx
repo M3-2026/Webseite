@@ -112,7 +112,7 @@ export function PillarPage({ slug: slugProp }: { slug?: string }) {
           </article>
 
           {/* 2. SIGNALS / AUDIT CARD (Span 4) */}
-          <article className="bento-card bento-card--audit-step bento-span-4" style={{ justifyContent: 'space-between', minHeight: 'clamp(440px, 50vh, 540px)' }}>
+          <article className="bento-card bento-card--audit-step bento-span-4">
             <div>
               <span className="bento-audit-badge">{isEn ? 'SIGNALS & ALARMS' : 'ALARMSIGNALE'}</span>
               <h2 className="bento-title" style={{ fontSize: 21 }}>
