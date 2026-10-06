@@ -3622,9 +3622,9 @@ picture.bento-bg img,
 .bento-card--orientation {
   position: relative !important;
   overflow: hidden !important;
-  background: radial-gradient(circle at 75% 45%, rgba(251, 191, 36, 0.16) 0%, rgba(232, 161, 74, 0.07) 35%, #0d1117 80%) !important;
-  border: 1px solid rgba(251, 191, 36, 0.25) !important;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  background: radial-gradient(circle at 75% 45%, rgba(251, 191, 36, 0.24) 0%, rgba(232, 161, 74, 0.12) 35%, #121824 85%) !important;
+  border: 1px solid rgba(251, 191, 36, 0.32) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
   border-radius: 20px !important;
   padding: clamp(20px, 2.5vw, 28px) !important;
   display: flex !important;
@@ -3634,8 +3634,8 @@ picture.bento-bg img,
 }
 
 .bento-card--orientation:hover {
-  border-color: rgba(251, 191, 36, 0.5) !important;
-  box-shadow: 0 12px 40px rgba(251, 191, 36, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(251, 191, 36, 0.6) !important;
+  box-shadow: 0 12px 40px rgba(251, 191, 36, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
   transform: translateY(-2px) !important;
 }
 
@@ -3650,23 +3650,23 @@ picture.bento-bg img,
   overflow: hidden !important;
   padding: 0 !important;
   pointer-events: none !important;
-  opacity: 0.96 !important;
+  opacity: 1 !important;
   z-index: 1 !important;
 }
 
 .bento-card--orientation .bento-molecule-visual .system-molecule {
   width: 100% !important;
   height: 100% !important;
-  max-width: 440px !important;
-  max-height: 400px !important;
-  transform: translate(14%, -2%) scale(1.35) !important;
-  filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.25)) !important;
+  max-width: 320px !important;
+  max-height: 290px !important;
+  transform: translate(4%, 0%) scale(0.92) !important;
+  filter: drop-shadow(0 0 24px rgba(251, 191, 36, 0.5)) !important;
 }
 
 .bento-card--orientation .bento-orientation-overlay {
   position: absolute !important;
   inset: 0 !important;
-  background: linear-gradient(to right, rgba(13, 17, 23, 0.95) 0%, rgba(13, 17, 23, 0.82) 42%, rgba(13, 17, 23, 0.25) 75%, transparent 100%) !important;
+  background: linear-gradient(to right, rgba(13, 17, 23, 0.92) 0%, rgba(13, 17, 23, 0.70) 45%, rgba(13, 17, 23, 0.12) 78%, transparent 100%) !important;
   pointer-events: none !important;
   z-index: 2 !important;
 }
@@ -5571,17 +5571,18 @@ picture.bento-bg img,
   }
 
   .bento-card--orientation .bento-molecule-visual {
-    opacity: 0.88 !important;
+    opacity: 0.96 !important;
   }
 
   .bento-card--orientation .bento-molecule-visual .system-molecule {
-    max-width: 320px !important;
-    max-height: 300px !important;
-    transform: translate(24%, -4%) scale(1.15) !important;
+    max-width: 250px !important;
+    max-height: 240px !important;
+    transform: translate(14%, -2%) scale(0.88) !important;
+    filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.45)) !important;
   }
 
   .bento-card--orientation .bento-orientation-overlay {
-    background: linear-gradient(to right, rgba(13, 17, 23, 0.96) 0%, rgba(13, 17, 23, 0.88) 55%, rgba(13, 17, 23, 0.45) 100%) !important;
+    background: linear-gradient(to right, rgba(13, 17, 23, 0.92) 0%, rgba(13, 17, 23, 0.76) 55%, rgba(13, 17, 23, 0.22) 100%) !important;
   }
 
   .bento-molecule-visual {
