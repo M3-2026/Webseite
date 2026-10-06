@@ -224,21 +224,19 @@ export function MentalPage() {
               ))}
             </div>
 
-            {/* Compact Central Message & Tagline Bar below the 6 Theme Tiles */}
+            {/* Compact Central Message Bar below the 6 Theme Tiles */}
             <div
               className="bento-repeat-bottom-strip"
               style={{
                 marginTop: 22,
-                padding: '16px 20px',
+                padding: '14px 20px',
                 borderRadius: 14,
                 background: 'linear-gradient(135deg, rgba(107, 140, 255, 0.12), rgba(107, 140, 255, 0.03))',
                 border: '1px solid rgba(107, 140, 255, 0.22)',
                 display: 'flex',
-                flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
                 textAlign: 'center',
-                gap: 8,
               }}
             >
               <div
@@ -258,17 +256,6 @@ export function MentalPage() {
                 <span>{isEn ? 'Discipline turns into routine' : 'Aus Disziplin wird Routine'}</span>
                 <span style={{ color: '#8ea9ff', opacity: 0.6 }}>→</span>
                 <span>{isEn ? 'Routine turns into habit' : 'Aus Routine wird Gewohnheit'}</span>
-              </div>
-              <div
-                style={{
-                  fontSize: 'clamp(12px, 1.2cqi, 13px)',
-                  fontWeight: 800,
-                  letterSpacing: '0.06em',
-                  color: '#8ea9ff',
-                  textTransform: 'uppercase',
-                }}
-              >
-                {repeatManifesto.tagline}
               </div>
             </div>
 
@@ -316,13 +303,13 @@ export function MentalPage() {
             <picture className="bento-bg">
               <source
                 type="image/webp"
-                srcSet="/images/moodboard/mood-pushup.webp 1x, /images/moodboard/mood-pushup@2x.webp 2x"
+                srcSet="/images/moodboard/mood-elevate.webp 1x, /images/moodboard/mood-elevate@2x.webp 2x"
               />
               <source
-                srcSet="/images/moodboard/mood-pushup.jpg 1x, /images/moodboard/mood-pushup.jpg 2x"
+                srcSet="/images/moodboard/mood-elevate.jpg 1x, /images/moodboard/mood-elevate@2x.jpg 2x"
               />
               <img
-                src="/images/moodboard/mood-pushup.jpg"
+                src="/images/moodboard/mood-elevate.jpg"
                 alt="Michél Meier Performance Coaching"
                 loading="lazy"
                 decoding="async"

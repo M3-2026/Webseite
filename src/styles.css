@@ -3309,6 +3309,13 @@ picture.bento-bg img,
   ) !important;
 }
 
+/* Master Bottom CTA Bento Overlay - Deep cinematic background shadow */
+.bento-card--start .bento-overlay {
+  background:
+    linear-gradient(180deg, rgba(6, 8, 14, 0.20) 0%, rgba(6, 8, 14, 0.58) 45%, rgba(6, 8, 14, 0.94) 100%),
+    linear-gradient(90deg, rgba(6, 8, 14, 0.88) 0%, rgba(6, 8, 14, 0.45) 50%, transparent 100%) !important;
+}
+
 /* International Luxury Cinematic Hero Overlay */
 .bento-overlay--hero {
   position: absolute !important;
