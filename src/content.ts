@@ -19,17 +19,17 @@ export const wa = {
   duo: contact.wa('Hallo Michél, wir interessieren uns für das M² Coaching für Zwei.'),
   gut: contact.wa('Hallo Michél, ich interessiere mich für die M¹ Darmbegleitung.'),
   supply: contact.wa('Hallo Michél, ich interessiere mich für die Goldene Grundversorgung.'),
-  mental: contact.wa('Hallo Michél, ich interessiere mich für Mental Performance Coaching.'),
+  mental: contact.wa('Hallo Michél, ich interessiere mich für M³ Mindset & Mentale Klarheit.'),
   m1Orient: contact.wa('Hallo Michél, ich möchte die kostenlose M¹ Orientierung.'),
   m1Mini: contact.wa('Hallo Michél, ich interessiere mich für den M¹ Mini-Reset.'),
   m1Intensive: contact.wa('Hallo Michél, ich interessiere mich für die M¹ Intensive 90 Tage.'),
   m2Check: contact.wa('Hallo Michél, ich möchte den kostenlosen M² Bewegungs-Check.'),
   m2Mobility: contact.wa('Hallo Michél, ich interessiere mich für M² Mobility Reset.'),
   m2Athlete: contact.wa('Hallo Michél, ich interessiere mich für M² Athlete Intensive.'),
-  m3Check: contact.wa('Hallo Michél, ich möchte den kostenlosen M³ Entscheidungs-Check.'),
+  m3Check: contact.wa('Hallo Michél, ich möchte den kostenlosen M³ Orientierungs-Check.'),
   m3Sleep: contact.wa('Hallo Michél, ich interessiere mich für den M³ Schlaf-Impuls.'),
-  m3Routines: contact.wa('Hallo Michél, ich interessiere mich für M³ Routinen-Setup.'),
-  m3Hold: contact.wa('Hallo Michél, ich interessiere mich für M³ System Hold.'),
+  m3Routines: contact.wa('Hallo Michél, ich interessiere mich für M³ Alltags-Routinen.'),
+  m3Hold: contact.wa('Hallo Michél, ich interessiere mich für M³ Notfall-Routinen.'),
 }
 
 export const pillars = [
@@ -39,7 +39,7 @@ export const pillars = [
     mark: 'M¹',
     name: 'FOOD',
     label: 'Fundament',
-    title: 'Metabolismus & Zellenergie',
+    title: 'Stoffwechsel & Zellenergie',
     quote: 'Wenn dein Fundament brennt, nützt kein härteres Training.',
     lead: 'Darm, Energie, Blutzucker und eine vernünftige Grundversorgung — damit Leistung wieder möglich wird.',
     body: 'M¹ ist die erste Säule, weil Leistung oft zuerst ein Stoffwechselthema ist — und erst danach ein Trainingsthema. Darm, Blutzucker und Versorgung entscheiden, ob der Körper Energie hat oder nur noch kompensiert. Wir bringen das in eine klare, zeitlich begrenzte Ordnung. Kein Detox-Theater. Keine Verbotsliste.',
@@ -75,16 +75,16 @@ export const pillars = [
     },
     principles: [
       {
-        title: 'Erst Status, dann Eingriff',
-        text: 'Verdauung, Energieverlauf, Schlaf und bisherige Versuche kommen auf den Tisch. Kein Schema F, keine 20 parallelen Biohacks.',
+        title: 'Erst prüfen, dann anpassen',
+        text: 'Verdauung, Energieverlauf, Schlaf und bisherige Versuche kommen auf den Tisch. Kein Schema F, keine 20 parallelen Experimente.',
       },
       {
         title: 'Zeitlich begrenzt, dann Alltag',
-        text: 'Reset-Phasen haben ein Ende. Was bleibt, ist eine Grundversorgung und eine Mahlzeitenlogik, die Beruf und Familie trägt.',
+        text: 'Aufbau- und Kurphasen haben ein klares Ende. Was bleibt, ist eine Grundversorgung und eine Mahlzeitenlogik, die Beruf und Familie trägt.',
       },
       {
-        title: 'Nahrung vor Dose',
-        text: 'Mikronährstoffe nur, wenn sie einen klaren Hebel haben. Die Basis bleibt Essen, Rhythmus und Schlaf.',
+        title: 'Essen vor Dose',
+        text: 'Mikronährstoffe nur, wenn sie einen klaren Hebel haben. Die Basis bleibt echtes Essen, Rhythmus und Schlaf.',
       },
     ],
     signals: [
@@ -98,8 +98,8 @@ export const pillars = [
     slug: 'movement',
     mark: 'M²',
     name: 'MOVE',
-    label: 'Biomechanik',
-    title: 'Biomechanik & Schmerzfreiheit',
+    label: 'Bewegung & Gelenke',
+    title: 'Bewegung & Schmerzfreiheit',
     quote: 'Technik schlägt Gewicht – Immer.',
     lead: 'Saubere Technik, stabile Gelenke und Training, das im Alltag trägt — ohne Verschleiß.',
     body: 'M² folgt auf das Fundament, weil Last ohne saubere Bewegung nur Ausweichmuster verstärkt. Wir trainieren Bewegungen, nicht isolierte Muskeln: Kontrolle, stabile Gelenke, klare Kraftübertragung. Intensität kommt, sobald die Technik trägt. Nicht vorher.',
@@ -135,7 +135,7 @@ export const pillars = [
     },
     principles: [
       {
-        title: 'Screen vor Plan',
+        title: 'Prüfung vor Plan',
         text: 'Bewegungsqualität, Schwachstellen, echte Kapazität. Der Spiegel ist kein Maß.',
       },
       {
@@ -143,7 +143,7 @@ export const pillars = [
         text: 'Wir korrigieren die Bahn, die den Schmerz erzeugt — nicht nur die Stelle, die brennt.',
       },
       {
-        title: 'Last erst nach sauberer Wiederholung',
+        title: 'Gewicht erst nach sauberer Wiederholung',
         text: '1:1-Korrektur live. Intensität folgt, wenn die Technik unter Last hält.',
       },
     ],

@@ -132,12 +132,12 @@ export function Catalog() {
                     </div>
                     <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.6, color: 'var(--text)', maxWidth: '70ch' }}>
                       {isEn
-                        ? 'M³ is not a separate paid module or standalone package. It is the overarching mindset and decision architecture that is automatically delivered inside every nutrition (M¹) and movement (M²) format — ensuring your progress endures in everyday life.'
-                        : 'M³ Mindset & Mental Performance ist kein separates Bezahlpaket. Es ist das übergeordnete System-Dach, das in jedem Ernährungs- (M¹) und Bewegungs-Coaching (M²) automatisch mitgeliefert wird — damit Entscheidungen, Schlaf und Routinen deinen Fortschritt dauerhaft absichern.'}
+                        ? 'M³ is not a separate paid module or standalone package. It is the overarching mindset foundation automatically integrated into every nutrition (M¹) and movement (M²) format — ensuring your progress holds in everyday life.'
+                        : 'M³ Mindset & Mentale Klarheit ist kein separates Bezahlpaket. Es ist das übergeordnete System-Dach, das in jedem Ernährungs- (M¹) und Bewegungs-Coaching (M²) automatisch integriert ist — damit gesunder Schlaf und verlässliche Gewohnheiten deinen Fortschritt dauerhaft absichern.'}
                     </p>
                     <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 4 }}>
                       <Link to="/mental-performance" className="btn-white" style={{ fontSize: 13, padding: '8px 16px' }}>
-                        {isEn ? 'Discover M³ System Architecture →' : 'M³ System-Architektur ansehen →'}
+                        {isEn ? 'Explore M³ Mental Clarity →' : 'Zu M³ Mentale Klarheit →'}
                       </Link>
                     </div>
                   </div>

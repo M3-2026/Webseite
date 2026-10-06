@@ -338,8 +338,8 @@ export function MentalPage() {
                 </strong>
                 <span style={{ fontSize: 13, color: 'var(--muted)' }}>
                   {isEn
-                    ? 'M³ mindset architecture and sleep protocols are automatically embedded from day one.'
-                    : 'Die M³ Entscheidungsarchitektur und Schlaf-Protokolle fließen ab Tag 1 nahtlos mit ein.'}
+                    ? 'M³ mindset routines and sleep principles are automatically embedded from day one.'
+                    : 'Die M³ Alltags-Routinen und Schlaf-Prinzipien fließen ab Tag 1 nahtlos mit ein.'}
                 </span>
               </div>
               <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>

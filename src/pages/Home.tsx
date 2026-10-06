@@ -133,7 +133,7 @@ export function Home() {
               />
               <img
                 src="/images/moodboard/mood-kitchen.jpg"
-                alt="M1 Food Metabolismus & Zellenergie"
+                alt="M1 Food Stoffwechsel & Zellenergie"
                 loading="lazy"
                 decoding="async"
                 className="bento-bg-img"
@@ -155,12 +155,12 @@ export function Home() {
             </div>
           </Link>
 
-          {/* 4. PILLAR M²: MOVE (Span 4 - Biomechanik & Schmerzfreiheit) */}
+          {/* 4. PILLAR M²: MOVE (Span 4 - Bewegung & Schmerzfreiheit) */}
           <Link
             to="/movement"
             className="bento-card bento-card--pillar bento-card--m2 bento-span-4"
             style={{ '--pillar-color': '#2f9a72' } as CSSProperties}
-            aria-label="Pillar M2 Move Biomechanics"
+            aria-label="Pillar M2 Move Movement"
           >
             <picture className="bento-bg">
               <source
@@ -172,7 +172,7 @@ export function Home() {
               />
               <img
                 src="/images/moodboard/mood-limitless.jpg"
-                alt="M2 Move Biomechanik & Schmerzfreiheit"
+                alt="M2 Move Bewegung & Schmerzfreiheit"
                 loading="lazy"
                 decoding="async"
                 className="bento-bg-img"
@@ -185,8 +185,8 @@ export function Home() {
               </h2>
               <p className="bento-desc">
                 {isEn
-                  ? 'Joint stability, functional mobility, and full physical resilience under high demand.'
-                  : 'Gelenkstabilität, funktionelle Mobilität und maximale Belastbarkeit im Alltag und Sport.'}
+                  ? 'Joint stability, functional movement quality, and resilient physical capacity.'
+                  : 'Gelenkstabilität, saubere Bewegungsabläufe und verlässliche Belastbarkeit im Alltag und Sport.'}
               </p>
               <div className="bento-arrow-btn">
                 <span>{isEn ? 'Explore M² here →' : 'Entdecke hier M² →'}</span>

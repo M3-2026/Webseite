@@ -13,17 +13,17 @@ export const wa = {
   duo: contact.wa('Hi Michél, we are interested in M² Coaching for Two.'),
   gut: contact.wa('Hi Michél, I am interested in M¹ gut support.'),
   supply: contact.wa('Hi Michél, I am interested in the Golden Baseline.'),
-  mental: contact.wa('Hi Michél, I am interested in Mental Performance Coaching.'),
+  mental: contact.wa('Hi Michél, I am interested in M³ Mindset & Mental Clarity.'),
   m1Orient: contact.wa('Hi Michél, I would like the free M¹ orientation.'),
   m1Mini: contact.wa('Hi Michél, I am interested in the M¹ Mini Reset.'),
   m1Intensive: contact.wa('Hi Michél, I am interested in M¹ Intensive 90 days.'),
   m2Check: contact.wa('Hi Michél, I would like the free M² movement check.'),
   m2Mobility: contact.wa('Hi Michél, I am interested in M² Mobility Reset.'),
   m2Athlete: contact.wa('Hi Michél, I am interested in M² Athlete Intensive.'),
-  m3Check: contact.wa('Hi Michél, I would like the free M³ decision check.'),
+  m3Check: contact.wa('Hi Michél, I would like the free M³ orientation check.'),
   m3Sleep: contact.wa('Hi Michél, I am interested in the M³ sleep impulse.'),
-  m3Routines: contact.wa('Hi Michél, I am interested in M³ routines setup.'),
-  m3Hold: contact.wa('Hi Michél, I am interested in M³ System Hold.'),
+  m3Routines: contact.wa('Hi Michél, I am interested in M³ daily routines.'),
+  m3Hold: contact.wa('Hi Michél, I am interested in M³ emergency routines.'),
 }
 
 export const pillars = [

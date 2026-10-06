@@ -81,33 +81,33 @@ export function SystemStart() {
           {/* 2. 3-STAGE AUDIT OVERVIEW (Span 4) */}
           <article className="bento-card bento-card--audit-step bento-span-4">
             <div>
-              <span className="bento-audit-badge">{isEn ? 'THE DIAGNOSTICS' : 'DIE DIAGNOSTIK'}</span>
+              <span className="bento-audit-badge">{isEn ? 'THE DIAGNOSTICS' : 'BESTANDSAUFNAHME'}</span>
               <h2 className="bento-title" style={{ fontSize: 21 }}>
-                {isEn ? '3-Stage Audit Sequence' : 'Das 3-Stufen-Audit'}
+                {isEn ? '3-Stage System Check' : 'Die 3 Stufen zur Bestandsaufnahme'}
               </h2>
               <p className="bento-desc">
                 {isEn
-                  ? 'Before we prescribe any intervention, we measure where your capacity is limited.'
-                  : 'Bevor wir eine Intervention starten, prüfen wir exakt, wo das System blockiert.'}
+                  ? 'Before we start any coaching, we identify exactly where your system is blocked.'
+                  : 'Bevor wir starten, prüfen wir exakt, wo dein Körper Energie verliert.'}
               </p>
             </div>
             <ul className="bento-audit-points">
               <li>
                 <div>
                   <strong>01 · Stoffwechsel & Zellenergie (M¹)</strong>
-                  <div style={{ fontSize: 12, marginTop: 2 }}>Mikrobiom, Blutzuckerstabilität, Entzündungslevel</div>
+                  <div style={{ fontSize: 12, marginTop: 2 }}>Darmgesundheit, Blutzuckerverlauf, Energieversorgung</div>
                 </div>
               </li>
               <li>
                 <div>
-                  <strong>02 · Biomechanik & Schmerz (M²)</strong>
-                  <div style={{ fontSize: 12, marginTop: 2 }}>Gelenkbelastbarkeit, Faszienketten, Bewegungsmuster</div>
+                  <strong>02 · Bewegung & Gelenke (M²)</strong>
+                  <div style={{ fontSize: 12, marginTop: 2 }}>Gelenkstabilität, Bewegungsmuster, Schmerzursachen</div>
                 </div>
               </li>
               <li>
                 <div>
-                  <strong>03 · Neuro-Stress-Profil (M³)</strong>
-                  <div style={{ fontSize: 12, marginTop: 2 }}>Tiefschlafarchitektur, Fokus & Entscheidungsresilienz</div>
+                  <strong>03 · Mindset & Erholung (M³)</strong>
+                  <div style={{ fontSize: 12, marginTop: 2 }}>Tiefschlaf, Fokus & verlässliche Alltags-Routinen</div>
                 </div>
               </li>
             </ul>
@@ -216,36 +216,36 @@ export function SystemStart() {
 
           {/* 4, 5, 6. THE 3 AUDIT DIMENSIONS (Span 4 Each) */}
           <article className="bento-card bento-card--audit-step bento-span-4">
-            <span className="bento-audit-badge">M¹ · METABOLISMUS</span>
+            <span className="bento-audit-badge">M¹ · STOFFWECHSEL</span>
             <h2 className="bento-title" style={{ fontSize: 19 }}>
-              {isEn ? 'Zellenergie & Mikrobiom-Audit' : 'Zellenergie & Mikrobiom-Audit'}
+              {isEn ? 'Cellular Energy & Gut Health' : 'Zellenergie & Darmgesundheit'}
             </h2>
             <p className="bento-desc">
               {isEn
-                ? 'We check nutrient absorption, blood sugar balance, and gut inflammation markers.'
-                : 'Wir analysieren Nährstoffresorption, Blutzuckerschwankungen, Darmimmunität und stille Entzündungen.'}
+                ? 'We check nutrient absorption, blood sugar balance, and gut health.'
+                : 'Wir analysieren Nährstoffaufnahme, Blutzuckerverlauf, Darmgesundheit und stille Entzündungen.'}
             </p>
             <ul className="bento-audit-points">
-              <li>Keine Nachmittagstiefs & Heißhunger mehr</li>
-              <li>Optimale mitochondriale ATP-Produktion</li>
-              <li>Stabiler Stoffwechsel ohne Verzichtsdogmen</li>
+              <li>{isEn ? 'No more afternoon crashes & cravings' : 'Keine Nachmittagstiefs & Heißhunger mehr'}</li>
+              <li>{isEn ? 'Full cellular energy all day long' : 'Volle Zellenergie und spürbare Frische über den Tag'}</li>
+              <li>{isEn ? 'Stable metabolism without dogmatic restrictions' : 'Stabiler Stoffwechsel ohne Verzichtsdogmen'}</li>
             </ul>
           </article>
 
           <article className="bento-card bento-card--audit-step bento-span-4">
-            <span className="bento-audit-badge">M² · BIOMECHANIK</span>
+            <span className="bento-audit-badge">M² · BEWEGUNG</span>
             <h2 className="bento-title" style={{ fontSize: 19 }}>
-              {isEn ? 'Gelenk- & Schmerz-Screening' : 'Gelenk- & Schmerz-Screening'}
+              {isEn ? 'Joint & Movement Quality' : 'Gelenk- & Bewegungsprüfung'}
             </h2>
             <p className="bento-desc">
               {isEn
-                ? 'Full range of motion audit, muscular imbalances, and functional joint decompression.'
-                : 'Prüfung von Gelenkwinkeln, myofaszialen Ketten, Wirbelsäulenbelastung und Asymmetrien.'}
+                ? 'Assessment of joint mobility, movement patterns, and spinal decompression.'
+                : 'Prüfung von Gelenkbeweglichkeit, Bewegungsmustern, Entlastung und Ausweichhaltungen.'}
             </p>
             <ul className="bento-audit-points">
-              <li>Schmerzfreie Beweglichkeit im Berufsalltag</li>
-              <li>Gezielte Dekompression geschädigter Segmente</li>
-              <li>Athletische Belastbarkeit & Gelenkschutz</li>
+              <li>{isEn ? 'Pain-free mobility in everyday work' : 'Schmerzfreie Beweglichkeit im Berufsalltag'}</li>
+              <li>{isEn ? 'Targeted relief for overloaded joints' : 'Gezielte Entlastung überlasteter Gelenke'}</li>
+              <li>{isEn ? 'Athletic resilience & joint protection' : 'Athletische Belastbarkeit & Gelenkschutz'}</li>
             </ul>
           </article>
 
