@@ -299,7 +299,74 @@ export function About() {
             </div>
           </article>
 
-          {/* 4. CORE VALUES GRID (Span 12) - Highlight color background */}
+          {/* 4. LEUCHTTURM-PROJEKTE & COMMUNITY (Span 12) - Cultural Initiatives & Impact */}
+          <article className="bento-card bento-card--journal bento-span-12" style={{ padding: 'clamp(22px, 3vw, 36px)' }}>
+            <div className="bento-card-header" style={{ marginBottom: 20 }}>
+              <div>
+                <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
+                  <span className="timeline-year-tag" style={{ fontSize: 11 }}>
+                    <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#e8a14a' }} />
+                    {isEn ? 'COMMUNITY & IMPACT' : 'COMMUNITY & KULTUR'}
+                  </span>
+                </div>
+                <h2 className="bento-title" style={{ fontSize: 'clamp(20px, 2.4cqi, 28px)' }}>
+                  {isEn ? 'Flagship Projects & Dance Pedagogy' : 'Leuchtturm-Projekte & Tanzpädagogik'}
+                </h2>
+                <p className="bento-desc" style={{ maxWidth: '68ch' }}>
+                  {isEn
+                    ? 'Long-term initiatives, festivals, and cultural education formats shaping youth empowerment and urban movement culture in central Germany.'
+                    : 'Mehrjährige Initiativen, Großevents und Bildungsformate, die über Jahrzehnte hinweg die urbane Bewegungskultur und den Zusammenhalt geprägt haben.'}
+                </p>
+              </div>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: 14, width: '100%' }}>
+              {about.initiatives.map((init) => (
+                <div
+                  key={init.title}
+                  className="bento-compass-card"
+                  style={{
+                    minHeight: 170,
+                    cursor: 'default',
+                    pointerEvents: 'none',
+                    justifyContent: 'flex-start',
+                    background: 'linear-gradient(145deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%)',
+                    borderColor: 'rgba(255, 255, 255, 0.12)',
+                    boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
+                  }}
+                >
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 8, marginBottom: 10, width: '100%' }}>
+                    <span
+                      style={{
+                        display: 'inline-block',
+                        padding: '3px 8px',
+                        borderRadius: 6,
+                        fontSize: 10.5,
+                        fontWeight: 800,
+                        letterSpacing: '0.04em',
+                        background: 'rgba(232, 161, 74, 0.18)',
+                        color: '#e8a14a',
+                        border: '1px solid rgba(232, 161, 74, 0.4)',
+                      }}
+                    >
+                      {init.badge}
+                    </span>
+                    <span style={{ fontSize: 11, color: 'rgba(255,255,255,0.6)', fontFamily: 'var(--font-mono, monospace)' }}>
+                      {init.partner}
+                    </span>
+                  </div>
+                  <h3 style={{ margin: '0 0 6px', fontSize: 16, fontWeight: 700, color: '#ffffff' }}>
+                    {init.title}
+                  </h3>
+                  <p style={{ margin: 0, fontSize: 12.8, color: 'rgba(255,255,255,0.82)', lineHeight: 1.48 }}>
+                    {init.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </article>
+
+          {/* 5. CORE VALUES GRID (Span 12) - Highlight color background */}
           <article className="bento-card bento-card--journal bento-span-12" style={{ padding: 'clamp(22px, 3vw, 36px)' }}>
             <div className="bento-card-header" style={{ marginBottom: 20 }}>
               <div>
