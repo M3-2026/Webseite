@@ -79,29 +79,24 @@ export function Home() {
             </div>
           </article>
 
-          {/* 2. SYSTEM START & ORIENTATION BENTO CARD (Span 4 - Clean White Card with SystemMolecule Visual) */}
-          <article className="bento-card bento-card--call-white bento-span-4" style={{ position: 'relative', overflow: 'hidden' }}>
+          {/* 2. SYSTEM START & ORIENTATION BENTO CARD (Span 4 - Luxury Bento Card with Original Animated SystemMolecule) */}
+          <article className="bento-card bento-card--orientation bento-span-4">
             <div className="bento-molecule-visual">
               <SystemMolecule />
             </div>
-            <div className="bento-content" style={{ position: 'relative', zIndex: 2, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', maxWidth: '350px' }}>
+            <div className="bento-orientation-overlay" />
+            <div className="bento-content bento-orientation-content">
               <div>
                 <div className="bento-tag-row" style={{ marginBottom: 8 }}>
-                  <span
-                    className="bento-audit-badge"
-                    style={{
-                      background: 'rgba(0, 0, 0, 0.07)',
-                      color: '#111111',
-                      borderColor: 'rgba(0, 0, 0, 0.14)',
-                    }}
-                  >
+                  <span className="bento-audit-badge bento-audit-badge--gold">
+                    <span className="bento-dot" style={{ background: '#fbbf24' }} />
                     {isEn ? 'ORIENTATION' : 'ORIENTIERUNG'}
                   </span>
                 </div>
-                <h2 className="bento-title" style={{ color: '#000000', fontSize: 'clamp(18px, 1.9cqi, 24px)', margin: '4px 0 8px' }}>
+                <h2 className="bento-title">
                   {isEn ? 'Your Entry with M³.' : 'Dein Einstieg mit M³.'}
                 </h2>
-                <p className="bento-desc" style={{ color: '#222222', fontSize: 13.5, lineHeight: 1.5 }}>
+                <p className="bento-desc">
                   {isEn
                     ? 'Whether M¹ FOOD, M² MOVE, or M³ REPEAT: Explore the three pillars below — or use System Start to pinpoint your personal starting point. Optional 20-min. discovery call included.'
                     : 'Ob M¹ FOOD, M² MOVE oder M³ REPEAT: Informiere dich direkt in den drei Säulen darunter – oder finde im System Start heraus, wo dein persönlicher Hebel liegt. Auf Wunsch gerne mit kurzem 20-Min.-Erstgespräch.'}
@@ -109,15 +104,14 @@ export function Home() {
               </div>
               <Link
                 to="/system-start"
-                className="bento-call-btn"
-                style={{ marginTop: 14 }}
+                className="bento-orientation-btn"
               >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ width: 16, height: 16, marginRight: 4 }}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ width: 16, height: 16 }}>
                   <circle cx="12" cy="12" r="10" />
                   <polyline points="12 16 16 12 12 8" />
                   <line x1="8" y1="12" x2="16" y2="12" />
                 </svg>
-                {isEn ? 'Explore System Start →' : 'Zum System Start →'}
+                <span>{isEn ? 'Explore System Start →' : 'Zum System Start →'}</span>
               </Link>
             </div>
           </article>
