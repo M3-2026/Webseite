@@ -158,73 +158,37 @@ export const pillars = [
     slug: 'mental-performance',
     mark: 'M³',
     name: 'REPEAT',
-    label: 'Entscheidungsökonomie',
-    title: 'Mindset & Neuronale Klarheit',
-    quote: 'Wer jeden Tag neu entscheidet, verliert gegen den Kalender.',
-    lead: 'Schlaf, Stress und wenige feststehende Entscheidungen — damit M¹ und M² im Alltag halten.',
-    body: 'Mental Performance ist kein Mood und kein Motivationsabo. Es ist Entscheidungsökonomie: weniger offene Fragen, klarere Wenn-dann-Regeln, Schlaf und Stress als harte Leistungsfaktoren. Ohne diese Schicht zerfallen M¹ und M² nach drei guten Wochen. Ziel ist Selbstverantwortung — nicht Abhängigkeit von Michél.',
+    label: 'Mentale Klarheit',
+    title: 'Mindset & Mentale Klarheit',
+    quote: 'Wer jeden Tag neu überlegt, verliert gegen den Alltag.',
+    lead: 'Ruhe im Kopf, gesunder Schlaf und Gewohnheiten, die im echten Leben halten.',
+    body: 'Echtes Coaching findet nicht im Labor statt, sondern in deinem Alltag zwischen Terminen, Familie und Verpflichtungen. M³ sorgt dafür, dass deine Ernährung (M¹) und dein Training (M²) nicht nach drei Wochen wieder einschlafen, sondern zu deiner zweiten Natur werden — ohne täglichen Kampf.',
     color: '#6b8cff',
     image: '/images/mental-hero.png',
-    prompts: [
-      {
-        q: 'Was opferst du als Erstes, wenn dein Kalender brennt?',
-        hint: 'Schlaf, saubere Mahlzeiten oder dein Training? Wer unter Stress sofort die eigene biologische Basis kürzt, hat kein Zeitproblem – sondern keine geschützte Mindestroutine. In M³ definieren wir Non-Negotiables, die selbst im dichtesten Alltag unantastbar stehen bleiben.',
-      },
-      {
-        q: 'Wie oft verhandelst du tagsüber mit dir selbst über dein Training & Essen?',
-        hint: 'Jede innere Verhandlung verbraucht Willenskraft aus demselben Tank wie dein Job. Wer abends erst entscheidet, verliert gegen Erschöpfung. M³ ersetzt zermürbende Selbstverhandlung durch feste Wenn-Dann-Regeln (Entscheidungsökonomie).',
-      },
-      {
-        q: 'Funktioniert dein System auch an Tagen, an denen du null Motivation hast?',
-        hint: 'Motivation ist ein unzuverlässiges Gefühl – Systeme sind biologische Verlässlichkeit. Wenn dein Fortschritt von Motivation abhängt, zerfällt er nach drei Wochen. M³ baut deine Gewohnheiten so, dass dein Standard trägt, selbst wenn der Kopf streikt.',
-      },
-    ],
-    science: [
-      {
-        title: 'Willenskraft ist endlich',
-        text: 'Selbstkontrolle verbraucht Aufmerksamkeit und Schlaf. Wer jeden Tag neu entscheidet, verliert gegen den Kalender. Stabile Wenn-dann-Paare entlasten den präfrontalen Cortex. Disziplin wird zur Umgebung — nicht zum täglichen Kampf.',
-        image: '/images/mental-decide.png',
-      },
-      {
-        title: 'Schlaf steuert Fehlerquote',
-        text: 'Tiefschlaf repariert Gewebe und Stoffwechsel. REM reguliert Emotionen. Fragmentierter Schlaf erhöht Schmerz, Cravings und Entscheidungsfehler. Schlaf ist keine Soft-Skill. Er ist Leistungsarbeit.',
-        image: '/images/blog-schlaf.jpg',
-      },
-      {
-        title: 'Stress frisst Klarheit',
-        text: 'Chronische HPA-Aktivierung hält Cortisol unruhig, senkt Erholung und verschiebt Hunger und Entzündung. Atmung, Abendritual und echte Lastpausen sind physiologische Hebel — kein Wellness.',
-        image: '/images/mental-hero.png',
-      },
-      {
-        title: 'Autonomie schlägt Aufsicht',
-        text: 'Menschen bleiben in Systemen, die sie selbst steuern. Deshalb: minimale, sichtbare Routinen und klare Entscheidungskriterien. Der Coach wird überflüssig. Das ist Absicht.',
-        image: '/images/mental-focus.png',
-      },
-    ],
     experience: {
       image: '/images/michel-portrait.jpg',
       title: 'Disziplin hat im Sport gereicht. Im Leben nicht.',
       text: 'Alleinerziehender Vater. 13 Ausgaben Air4Day. Schul- und Jugendprojekte. Ein Halswirbel, der die alte Härte unmöglich machte. Michél kennt den Punkt, an dem Vorsätze den Alltag verlieren — nicht aus Schwäche, sondern weil zu viele Entscheidungen offen bleiben. M³ kommt aus diesem Bruch: weniger Heroismus, mehr Struktur. Verständnis, wo jemand hält. Ein klarer Impuls, wo jemand sich dreht. Ohne Dogma. Mit dem Ziel, dass du ohne ihn weiterkommst.',
-      quote: 'Manchmal braucht es Verständnis. Manchmal einen Arschtritt. Oft beides.',
+      quote: 'Manchmal braucht es Verständnis. Manchmal einen Schubs nach vorn. Oft beides.',
     },
     principles: [
       {
-        title: 'Entscheidungen schließen — nicht stapeln',
-        text: 'Drei feststehende Regeln schlagen zwölf offene Optionen.',
+        title: 'Abläufe festlegen statt aufschieben',
+        text: 'Drei feste Gewohnheiten schlagen zwölf offene Optionen.',
       },
       {
-        title: 'Schlaf und Stress zuerst lesen',
-        text: 'Bevor neue Habits kommen: Was regiert Abend und Morgen wirklich?',
+        title: 'Erholung & Schlaf immer zuerst sichern',
+        text: 'Bevor neue Vorsätze kommen: Wie sieht dein Abend wirklich aus?',
       },
       {
-        title: 'Selbststeuerung als Exit',
-        text: 'Du lernst, wann du nachsteuerst. M³ ist Rahmen — kein Abo auf Motivation.',
+        title: 'Selbststeuerung als klares Ziel',
+        text: 'Du lernst, dein eigener Coach zu sein — für dauerhafte Unabhängigkeit.',
       },
     ],
     signals: [
-      'Zu viele offene Entscheidungen, ständig Abbruch, kein roter Faden',
-      'Stress frisst Vorsätze — Schlaf kippt zuerst',
-      'M¹ oder M² greifen — und zerfallen im Alltag wieder',
+      'Gute Vorsätze zerfallen, sobald die Woche stressig wird',
+      'Abends kreisen die Gedanken — der Schlaf bringt keine echte Erholung',
+      'Du musst dich jeden Tag aufs Neue zwingen und überwinden',
     ],
   },
 ] as const

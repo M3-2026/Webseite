@@ -90,7 +90,7 @@ export function Blog() {
             <ul className="bento-audit-points">
               <li>{isEn ? 'M¹ Metabolism & Cellular Energy' : 'M¹ Stoffwechsel & Zellenergie'}</li>
               <li>{isEn ? 'M² Biomechanics & Fascial Chains' : 'M² Biomechanik & Faszienketten'}</li>
-              <li>{isEn ? 'M³ Decision Economy & Deep Sleep' : 'M³ Entscheidungsökonomie & Tiefschlaf'}</li>
+              <li>{isEn ? 'M³ Mindset, Routines & Deep Sleep' : 'M³ Mindset, Routinen & Tiefschlaf'}</li>
             </ul>
 
             <div style={{ fontSize: 12, fontWeight: 700, color: '#ffffff', opacity: 0.85 }}>

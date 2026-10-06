@@ -252,17 +252,17 @@ export function SystemStart() {
           <article className="bento-card bento-card--audit-step bento-span-4">
             <span className="bento-audit-badge">M³ · MINDSET</span>
             <h2 className="bento-title" style={{ fontSize: 19 }}>
-              {isEn ? 'Neuro-Stress & Tiefschlaf-Audit' : 'Neuro-Stress & Tiefschlaf-Audit'}
+              {isEn ? 'Mindset, Sleep & Daily Routines' : 'Mindset, Schlaf & Alltags-Routinen'}
             </h2>
             <p className="bento-desc">
               {isEn
-                ? 'Analysis of decision fatigue, restorative sleep architecture, and neural recovery under pressure.'
-                : 'Analyse von Stressachsen, Tiefschlafphasen, Entscheidungsökonomie und mentalem Fokus.'}
+                ? 'Peace of mind, restorative sleep, and habits that reliably hold under daily pressure.'
+                : 'Ruhe im Kopf, gesunder Schlaf und Gewohnheiten, die im echten Alltag halten.'}
             </p>
             <ul className="bento-audit-points">
-              <li>Tiefer, erholsamer Schlaf ab Nacht eins</li>
-              <li>Glasklare Entscheidungsfähigkeit unter Last</li>
-              <li>Stabile Routinen, die bei Stress nicht kippen</li>
+              <li>{isEn ? 'Deep, restorative sleep from day one' : 'Tiefer, erholsamer Schlaf ab Nacht eins'}</li>
+              <li>{isEn ? 'Peace of mind & clear daily focus' : 'Innere Ruhe & klarer Kopf im Alltag'}</li>
+              <li>{isEn ? 'Stable routines that never collapse under stress' : 'Stabile Routinen, die bei Stress nicht kippen'}</li>
             </ul>
           </article>
 

@@ -35,7 +35,7 @@ export function MentalPage() {
               />
               <img
                 src="/images/moodboard/mood-focus.jpg"
-                alt="M3 Mental Performance Fokus & neuronale Klarheit"
+                alt="M3 Mindset & Mentale Klarheit"
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"
@@ -45,7 +45,10 @@ export function MentalPage() {
             <div className="bento-overlay" />
             <div className="bento-content bento-content--hero">
               <div className="bento-tag-row">
-                <span className="bento-tag bento-tag--gold">{pillar.mark} · {pillar.name}</span>
+                <span className="bento-tag bento-tag--azure">
+                  <span className="bento-dot bento-dot--azure" />
+                  {pillar.mark} · {pillar.name}
+                </span>
                 <span className="bento-tag">{pillar.label}</span>
               </div>
               <h1 className="bento-hero-h1">
@@ -79,15 +82,15 @@ export function MentalPage() {
             <div className="bento-audit-head">
               <span className="bento-audit-badge">
                 <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: '50%', backgroundColor: pillar.color }} />
-                {isEn ? 'NEURO-STRESS PROFILE' : 'NEURONALE RESILIENZ'}
+                {isEn ? 'MINDSET & DAILY LIFE' : 'MINDSET & ALLTAG'}
               </span>
               <h2 className="bento-title" style={{ fontSize: 'clamp(18px, 1.8cqi, 22px)' }}>
                 {pillar.label} · {t.mentalSignalsH}
               </h2>
               <p className="bento-desc">
                 {isEn
-                  ? 'High cognitive pace without proper nervous system recovery creates creeping focus loss:'
-                  : 'Hohe kognitive Taktung ohne parasympathische Erholung erzeugt schleichenden Fokusverlust:'}
+                  ? 'When cognitive load is high and recovery is missing, typical daily friction emerges:'
+                  : 'Wenn der Kopf voll ist und Erholung fehlt, schleichen sich im Alltag typische Muster ein:'}
               </p>
             </div>
             <ul className="bento-audit-points">
@@ -100,15 +103,16 @@ export function MentalPage() {
             </ul>
             <div className="bento-audit-footer">
               <span style={{ color: pillar.color, fontWeight: 800 }}>→</span>
-              <span>{isEn ? 'Mindset trained like a biological muscle.' : 'Trainiert wie ein biologischer Muskel.'}</span>
+              <span>{isEn ? 'Clarity grows through consistent daily habits.' : 'Klarheit entsteht durch feste Gewohnheiten.'}</span>
             </div>
           </article>
 
           {/* 3. DAS M³-PRINZIP: Echte mentale Arbeit statt Zitate-Kalender (Span 12) */}
-          <article className="bento-card bento-card--journal bento-span-12" style={{ padding: 'clamp(22px, 3vw, 36px)' }}>
+          <article className="bento-card bento-card--mindset bento-span-12" style={{ padding: 'clamp(22px, 3vw, 36px)' }}>
             <div className="bento-card-header" style={{ marginBottom: 20 }}>
               <div>
-                <span className="bento-tag bento-tag--gold" style={{ marginBottom: 8 }}>
+                <span className="bento-tag bento-tag--azure" style={{ marginBottom: 8 }}>
+                  <span className="bento-dot bento-dot--azure" />
                   {isEn ? 'THE M³ MINDSET PRINCIPLE' : 'DAS M³ PRINZIP'}
                 </span>
                 <h2 className="bento-title" style={{ fontSize: 'clamp(20px, 2.4cqi, 28px)' }}>
@@ -117,263 +121,198 @@ export function MentalPage() {
                 <p className="bento-desc" style={{ maxWidth: '68ch' }}>
                   {isEn
                     ? 'Mindset at Michél is not positive thinking or daily quotes. It is the practical mechanics that ensure your nutrition (M¹) and training (M²) actually hold in real everyday life.'
-                    : 'Mindset bei Michél ist kein Chaka-Chaka und kein Zitate-Kalender. Es ist die nüchterne Mechanik, die dafür sorgt, dass Ernährung (M¹) und Training (M²) in deinem echten Alltag dauerhaft halten.'}
+                    : 'Mindset bei Michél ist kein Chaka-Chaka und kein Zitate-Kalender. Es ist die verlässliche Struktur, die dafür sorgt, dass Ernährung (M¹) und Training (M²) in deinem echten Alltag dauerhaft halten.'}
                 </p>
               </div>
             </div>
 
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-                gap: 16,
-                width: '100%',
-              }}
-            >
+            <div className="bento-mindset-grid-3">
               {/* Point 1 */}
-              <div
-                style={{
-                  background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
-                  border: '1px solid var(--line)',
-                  borderRadius: 16,
-                  padding: 22,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: 10,
-                }}
-              >
-                <span style={{ fontSize: 12, fontWeight: 800, color: pillar.color }}>
-                  01 · ENTSCHEIDUNGSÖKONOMIE
-                </span>
-                <h3 style={{ margin: 0, fontSize: 16.5, fontWeight: 800, color: 'var(--text)' }}>
-                  {isEn ? 'End of daily negotiations' : 'Schluss mit täglicher Selbstverhandlung'}
-                </h3>
-                <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: 'var(--muted)' }}>
-                  {isEn
-                    ? 'Discipline is finite. Anyone who re-negotiates every day whether to workout or what to eat loses to exhaustion by evening. We replace internal negotiations with fixed if-then rules.'
-                    : 'Willenskraft ist eine endliche Ressource. Wer jeden Tag aufs Neue verhandelt, ob, wann und was er tut, verliert abends gegen die Erschöpfung. M³ ersetzt zermürbende Verhandlungen durch feste Wenn-Dann-Standards.'}
-                </p>
+              <div className="bento-mindset-tile">
+                <div>
+                  <span className="bento-mindset-badge">
+                    01 · FESTE ABLÄUFE
+                  </span>
+                  <h3 style={{ margin: '8px 0 6px', fontSize: 16.5, fontWeight: 800, color: 'var(--text)' }}>
+                    {isEn ? 'End of daily negotiations' : 'Schluss mit täglicher Selbstverhandlung'}
+                  </h3>
+                  <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: 'var(--muted)' }}>
+                    {isEn
+                      ? 'Discipline is finite. Anyone who re-negotiates every day whether to workout or what to eat loses to exhaustion by evening. We replace internal negotiations with fixed if-then rules.'
+                      : 'Willenskraft ist eine endliche Ressource. Wer jeden Tag aufs Neue verhandelt, ob, wann und was er tut, verliert abends gegen die Erschöpfung. M³ ersetzt zermürbende Verhandlungen durch feste Wenn-Dann-Standards.'}
+                  </p>
+                </div>
+                <div className="bento-mindset-footer">
+                  <span style={{ color: pillar.color, fontWeight: 800 }}>✓</span>
+                  <span>{isEn ? 'Saves mental energy for career & family' : 'Spart mentale Energie für Beruf & Familie'}</span>
+                </div>
               </div>
 
               {/* Point 2 */}
-              <div
-                style={{
-                  background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
-                  border: '1px solid var(--line)',
-                  borderRadius: 16,
-                  padding: 22,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: 10,
-                }}
-              >
-                <span style={{ fontSize: 12, fontWeight: 800, color: pillar.color }}>
-                  02 · ECHTE ERHOLUNG
-                </span>
-                <h3 style={{ margin: 0, fontSize: 16.5, fontWeight: 800, color: 'var(--text)' }}>
-                  {isEn ? 'Sleep as real performance work' : 'Schlaf & echtes Runterkommen'}
-                </h3>
-                <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: 'var(--muted)' }}>
-                  {isEn
-                    ? 'Sleep is not wellness — it is biological performance work. Poor sleep ruins tissue repair, drives food cravings, and destroys focus. We establish evenings that actually close decisions.'
-                    : 'Schlaf ist kein Wellness-Thema, sondern die Grundvoraussetzung für Fokus, Geduld und Fettabbau. Wer abends nicht runterfährt, schläft oberflächlich, wacht gerädert auf und trifft tagsüber schlechte Entscheidungen.'}
-                </p>
+              <div className="bento-mindset-tile">
+                <div>
+                  <span className="bento-mindset-badge">
+                    02 · ECHTE ERHOLUNG
+                  </span>
+                  <h3 style={{ margin: '8px 0 6px', fontSize: 16.5, fontWeight: 800, color: 'var(--text)' }}>
+                    {isEn ? 'Sleep as real performance work' : 'Schlaf & echtes Runterkommen'}
+                  </h3>
+                  <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: 'var(--muted)' }}>
+                    {isEn
+                      ? 'Sleep is not wellness — it is the foundation of focus, patience, and body recomposition. If you cannot wind down in the evening, you wake up exhausted and make worse choices.'
+                      : 'Schlaf ist kein Wellness-Thema, sondern die Grundvoraussetzung für Fokus, Geduld und Leistungsfähigkeit. Wer abends nicht abschalten kann, schläft oberflächlich, wacht gerädert auf und trifft tagsüber schlechte Entscheidungen.'}
+                  </p>
+                </div>
+                <div className="bento-mindset-footer">
+                  <span style={{ color: pillar.color, fontWeight: 800 }}>✓</span>
+                  <span>{isEn ? 'Solves exhaustion & cravings at the root' : 'Behebt Erschöpfung & Heißhunger an der Wurzel'}</span>
+                </div>
               </div>
 
               {/* Point 3 */}
-              <div
-                style={{
-                  background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
-                  border: '1px solid var(--line)',
-                  borderRadius: 16,
-                  padding: 22,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: 10,
-                }}
-              >
-                <span style={{ fontSize: 12, fontWeight: 800, color: pillar.color }}>
-                  03 · SYSTEM HOLD
-                </span>
-                <h3 style={{ margin: 0, fontSize: 16.5, fontWeight: 800, color: 'var(--text)' }}>
-                  {isEn ? 'The protocol for high-stress days' : 'Der Notfall-Plan für stressige Wochen'}
-                </h3>
-                <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: 'var(--muted)' }}>
-                  {isEn
-                    ? 'A plan that only works during relaxed weeks is useless. We build a protected minimum baseline that holds even during 60-hour weeks, travel, or family chaos — without crashing.'
-                    : 'Ein Plan, der nur bei idealen Bedingungen und bester Laune funktioniert, ist wertlos. M³ definiert unantastbare Mindestroutinen, die selbst bei 14-Stunden-Tagen, Reisen oder vollem Terminkalender greifen.'}
-                </p>
+              <div className="bento-mindset-tile">
+                <div>
+                  <span className="bento-mindset-badge">
+                    03 · ALLTAGS-HALT
+                  </span>
+                  <h3 style={{ margin: '8px 0 6px', fontSize: 16.5, fontWeight: 800, color: 'var(--text)' }}>
+                    {isEn ? 'The protocol for high-stress days' : 'Der Notfall-Plan für stressige Wochen'}
+                  </h3>
+                  <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: 'var(--muted)' }}>
+                    {isEn
+                      ? 'A plan that only works during relaxed weeks is useless. We build a protected minimum baseline that holds even during 60-hour weeks, travel, or family chaos — without crashing.'
+                      : 'Ein Plan, der nur bei idealen Bedingungen und bester Laune funktioniert, ist wertlos. M³ definiert unantastbare Mindestroutinen, die selbst bei 14-Stunden-Tagen, Reisen oder vollem Terminkalender greifen.'}
+                  </p>
+                </div>
+                <div className="bento-mindset-footer">
+                  <span style={{ color: pillar.color, fontWeight: 800 }}>✓</span>
+                  <span>{isEn ? 'Prevents the typical drop-off after 3 weeks' : 'Verhindert den typischen Abbruch nach 3 Wochen'}</span>
+                </div>
               </div>
             </div>
           </article>
 
           {/* 4. M³ AS THE INTEGRATION ROOF FOR M¹ & M² (Span 12) */}
-          <article className="bento-card bento-card--journal bento-span-12" style={{ padding: 'clamp(22px, 3vw, 36px)' }}>
+          <article className="bento-card bento-card--mindset bento-span-12" style={{ padding: 'clamp(22px, 3vw, 36px)' }}>
             <div className="bento-card-header" style={{ marginBottom: 20 }}>
               <div>
-                <span className="bento-tag bento-tag--gold" style={{ marginBottom: 8 }}>
+                <span className="bento-tag bento-tag--azure" style={{ marginBottom: 8 }}>
+                  <span className="bento-dot bento-dot--azure" />
                   {isEn ? 'THE M³ INTEGRATION ROOF' : 'DAS M³ SYSTEM-DACH'}
                 </span>
                 <h2 className="bento-title" style={{ fontSize: 'clamp(20px, 2.4cqi, 28px)' }}>
-                  {isEn ? 'What is automatically included in every coaching' : 'Was du in jedem Coaching automatisch mitbekommst'}
+                  {isEn ? 'What is automatically included in every coaching' : 'In jedem Coaching automatisch fest verankert'}
                 </h2>
                 <p className="bento-desc" style={{ maxWidth: '68ch' }}>
                   {isEn
-                    ? 'M³ is not a separate paid upsell or isolated package. It is the overarching system roof across M¹ (Nutrition) and M² (Training) — because every change in metabolism and movement only lasts if mindset, sleep, and decision economics carry it.'
-                    : 'M³ ist kein separates Bezahlpaket und kein isoliertes Extra. Es ist das übergeordnete System-Dach über M¹ (Ernährung) und M² (Training) — denn jede Veränderung in Stoffwechsel und Bewegung greift im Alltag nur, wenn Kopf, Schlaf und Entscheidungsarchitektur mitziehen.'}
+                    ? 'M³ is not a separate paid upsell or isolated package. It is the overarching system roof across M¹ (Nutrition) and M² (Training) — because every change in metabolism and movement only lasts if mindset, sleep, and daily routines carry it.'
+                    : 'M³ ist kein separates Bezahlpaket und kein isoliertes Extra. Es ist das übergeordnete System-Dach über M¹ (Ernährung) und M² (Training) — denn jede Veränderung bei Ernährung und Training greift im Alltag nur, wenn Kopf, Schlaf und feste Routinen mitziehen.'}
                 </p>
               </div>
             </div>
 
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-                gap: 16,
-                width: '100%',
-              }}
-            >
+            <div className="bento-mindset-grid-4">
               {/* Item 1 */}
-              <div
-                style={{
-                  background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
-                  border: '1px solid var(--line)',
-                  borderRadius: 16,
-                  padding: 22,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: 10,
-                  justifyContent: 'space-between',
-                }}
-              >
+              <div className="bento-mindset-tile">
                 <div>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6 }}>
-                    <span style={{ fontSize: 11.5, fontWeight: 800, color: pillar.color, letterSpacing: '0.06em' }}>
-                      01 · ENTSCHEIDUNGSÖKONOMIE
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+                    <span className="bento-mindset-badge">
+                      01 · FESTE ABLÄUFE
                     </span>
-                    <span style={{ fontSize: 11, fontWeight: 700, padding: '2px 8px', borderRadius: 6, background: 'rgba(255,255,255,0.06)', color: 'var(--muted)' }}>
+                    <span className="bento-mindset-badge-pill">
                       {isEn ? 'Included' : 'Inklusive'}
                     </span>
                   </div>
-                  <h3 style={{ margin: '0 0 6px', fontSize: 16.5, fontWeight: 800, color: 'var(--text)' }}>
-                    {isEn ? 'Decision Architecture & If-Then Rules' : 'Wenn-Dann-Architektur statt Willenskraft'}
+                  <h3 style={{ margin: '0 0 6px', fontSize: 15.5, fontWeight: 800, color: 'var(--text)' }}>
+                    {isEn ? 'Decision Architecture & If-Then Rules' : 'Wenn-Dann-Standards statt Willenskraft'}
                   </h3>
                   <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: 'var(--muted)' }}>
                     {isEn
-                      ? 'No daily negotiations. Fixed rules in your calendar eliminate cognitive friction so you never spend work willpower on health choices.'
+                      ? 'No daily negotiations. Fixed rules in your calendar eliminate friction so you never spend work willpower on health choices.'
                       : 'Schluss mit täglichen Verhandlungen im Kopf. Wir etablieren feste Wenn-Dann-Regeln im Kalender, damit du keine wertvolle Energie aus dem Job an Ernährungs- oder Trainingsfragen verlierst.'}
                   </p>
                 </div>
-                <div style={{ paddingTop: 10, borderTop: '1px solid var(--line)', fontSize: 12, fontWeight: 600, color: 'var(--text)', opacity: 0.9 }}>
-                  ✓ {isEn ? 'Protects cognitive willpower' : 'Schützt deinen Kopf vor täglicher Ermüdung'}
+                <div className="bento-mindset-footer">
+                  <span style={{ color: pillar.color, fontWeight: 800 }}>✓</span>
+                  <span>{isEn ? 'Protects cognitive willpower' : 'Schützt deinen Kopf vor täglicher Ermüdung'}</span>
                 </div>
               </div>
 
               {/* Item 2 */}
-              <div
-                style={{
-                  background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
-                  border: '1px solid var(--line)',
-                  borderRadius: 16,
-                  padding: 22,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: 10,
-                  justifyContent: 'space-between',
-                }}
-              >
+              <div className="bento-mindset-tile">
                 <div>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6 }}>
-                    <span style={{ fontSize: 11.5, fontWeight: 800, color: pillar.color, letterSpacing: '0.06em' }}>
-                      02 · PHYSIOLOGISCHE ERHOLUNG
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+                    <span className="bento-mindset-badge">
+                      02 · GESUNDER SCHLAF
                     </span>
-                    <span style={{ fontSize: 11, fontWeight: 700, padding: '2px 8px', borderRadius: 6, background: 'rgba(255,255,255,0.06)', color: 'var(--muted)' }}>
+                    <span className="bento-mindset-badge-pill">
                       {isEn ? 'Included' : 'Inklusive'}
                     </span>
                   </div>
-                  <h3 style={{ margin: '0 0 6px', fontSize: 16.5, fontWeight: 800, color: 'var(--text)' }}>
-                    {isEn ? 'Sleep & Evening Protocol' : 'Schlaf- & Abend-Setup als Leistungsarbeit'}
+                  <h3 style={{ margin: '0 0 6px', fontSize: 15.5, fontWeight: 800, color: 'var(--text)' }}>
+                    {isEn ? 'Sleep & Evening Setup as Performance Work' : 'Abend-Rhythmus & Tiefschlaf als Kraftquelle'}
                   </h3>
                   <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: 'var(--muted)' }}>
                     {isEn
-                      ? 'Sleep is performance work. Protocols for evening down-regulation, blue-light buffering, and deep sleep recovery for clear focus and hormonal stability.'
-                      : 'Schlaf ist kein Wellness-Thema, sondern harte biologische Leistungsarbeit. Protokolle für Einschlaf-Taktung, Reizfilter und echte Tiefenerholung für Fokus und Hormonbalance.'}
+                      ? 'Sleep is true performance work. Practical evening setups, blue-light reduction, and deep sleep recovery for focus and hormonal stability.'
+                      : 'Schlaf ist harte biologische Leistungsarbeit. Praktische Abend-Routinen, Reizfilter und echte Tiefenerholung für Fokus, hormonelle Balance und geistige Frische.'}
                   </p>
                 </div>
-                <div style={{ paddingTop: 10, borderTop: '1px solid var(--line)', fontSize: 12, fontWeight: 600, color: 'var(--text)', opacity: 0.9 }}>
-                  ✓ {isEn ? 'Eliminates afternoon crashes & cravings' : 'Behebt Nachmittagstiefs & Heißhunger an der Wurzel'}
+                <div className="bento-mindset-footer">
+                  <span style={{ color: pillar.color, fontWeight: 800 }}>✓</span>
+                  <span>{isEn ? 'Eliminates afternoon crashes & cravings' : 'Behebt Nachmittagstiefs & Heißhunger an der Wurzel'}</span>
                 </div>
               </div>
 
               {/* Item 3 */}
-              <div
-                style={{
-                  background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
-                  border: '1px solid var(--line)',
-                  borderRadius: 16,
-                  padding: 22,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: 10,
-                  justifyContent: 'space-between',
-                }}
-              >
+              <div className="bento-mindset-tile">
                 <div>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6 }}>
-                    <span style={{ fontSize: 11.5, fontWeight: 800, color: pillar.color, letterSpacing: '0.06em' }}>
-                      03 · ALLTAGS-RESILIENZ
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+                    <span className="bento-mindset-badge">
+                      03 · ALLTAGS-HALT
                     </span>
-                    <span style={{ fontSize: 11, fontWeight: 700, padding: '2px 8px', borderRadius: 6, background: 'rgba(255,255,255,0.06)', color: 'var(--muted)' }}>
+                    <span className="bento-mindset-badge-pill">
                       {isEn ? 'Included' : 'Inklusive'}
                     </span>
                   </div>
-                  <h3 style={{ margin: '0 0 6px', fontSize: 16.5, fontWeight: 800, color: 'var(--text)' }}>
-                    {isEn ? 'System Hold: Routines under High Pressure' : 'System Hold bei 60-Stunden-Wochen & Reisen'}
+                  <h3 style={{ margin: '0 0 6px', fontSize: 15.5, fontWeight: 800, color: 'var(--text)' }}>
+                    {isEn ? 'Emergency Routines under High Pressure' : 'Das Notfall-Programm für dichte Wochen'}
                   </h3>
                   <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: 'var(--muted)' }}>
                     {isEn
-                      ? 'Resilient minimum routines that never break when travel, family emergencies, or crunch periods hit. The system downshifts gracefully without abandoning progress.'
+                      ? 'Resilient minimum routines that hold during travel, long workdays, or family stress. The system downshifts gracefully without breaking.'
                       : 'Krisenfeste Mindestroutinen, die selbst in dichten Arbeitsphasen, auf Geschäftsreisen oder bei familiärem Druck greifen. Das System schaltet smart um, statt einzubrechen.'}
                   </p>
                 </div>
-                <div style={{ paddingTop: 10, borderTop: '1px solid var(--line)', fontSize: 12, fontWeight: 600, color: 'var(--text)', opacity: 0.9 }}>
-                  ✓ {isEn ? 'Zero yo-yo effect or abandoned plans' : 'Verhindert den typischen Abbruch nach 3 Wochen'}
+                <div className="bento-mindset-footer">
+                  <span style={{ color: pillar.color, fontWeight: 800 }}>✓</span>
+                  <span>{isEn ? 'Zero yo-yo effect or abandoned plans' : 'Verhindert den typischen Abbruch nach 3 Wochen'}</span>
                 </div>
               </div>
 
               {/* Item 4 */}
-              <div
-                style={{
-                  background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
-                  border: '1px solid var(--line)',
-                  borderRadius: 16,
-                  padding: 22,
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: 10,
-                  justifyContent: 'space-between',
-                }}
-              >
+              <div className="bento-mindset-tile">
                 <div>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 6 }}>
-                    <span style={{ fontSize: 11.5, fontWeight: 800, color: pillar.color, letterSpacing: '0.06em' }}>
-                      04 · AUTONOMIE ALS EXIT
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
+                    <span className="bento-mindset-badge">
+                      04 · DEINE UNABHÄNGIGKEIT
                     </span>
-                    <span style={{ fontSize: 11, fontWeight: 700, padding: '2px 8px', borderRadius: 6, background: 'rgba(255,255,255,0.06)', color: 'var(--muted)' }}>
+                    <span className="bento-mindset-badge-pill">
                       {isEn ? 'Included' : 'Inklusive'}
                     </span>
                   </div>
-                  <h3 style={{ margin: '0 0 6px', fontSize: 16.5, fontWeight: 800, color: 'var(--text)' }}>
+                  <h3 style={{ margin: '0 0 6px', fontSize: 15.5, fontWeight: 800, color: 'var(--text)' }}>
                     {isEn ? 'Self-Leadership: Making the Coach Obsolete' : 'Selbststeuerung: Der Coach macht sich überflüssig'}
                   </h3>
                   <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: 'var(--muted)' }}>
                     {isEn
-                      ? 'You understand the physiological mechanics and feedback loops deeply. Goal of every coaching is complete autonomy, not endless subscription dependence.'
+                      ? 'You understand the mechanics of your body deeply so you can adjust your system independently. The goal is your sovereignty — no endless subscription.'
                       : 'Du lernst die Hebel deines Körpers so verstehen, dass du dein System lebenslang eigenständig justieren kannst. Ziel ist deine Souveränität — kein dauerhaftes Abhängigkeitsverhältnis.'}
                   </p>
                 </div>
-                <div style={{ paddingTop: 10, borderTop: '1px solid var(--line)', fontSize: 12, fontWeight: 600, color: 'var(--text)', opacity: 0.9 }}>
-                  ✓ {isEn ? 'Lifelong independent sovereignty' : 'Lebenslange Beherrschung des eigenen Körpers'}
+                <div className="bento-mindset-footer">
+                  <span style={{ color: pillar.color, fontWeight: 800 }}>✓</span>
+                  <span>{isEn ? 'Lifelong independent sovereignty' : 'Lebenslange Beherrschung des eigenen Körpers'}</span>
                 </div>
               </div>
             </div>
@@ -418,16 +357,19 @@ export function MentalPage() {
           </article>
 
           {/* 5. CODEX & EVERYDAY LEADERSHIP EXPERIENCE (Span 6) */}
-          <article className="bento-card bento-card--journal bento-span-6" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
+          <article className="bento-card bento-card--mindset bento-span-6" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
             <div>
-              <span className="bento-tag bento-tag--gold" style={{ marginBottom: 8 }}>{isEn ? 'REAL LIFE RESILIENCE' : 'ALLTAGS-RESILIENZ'}</span>
+              <span className="bento-tag bento-tag--azure" style={{ marginBottom: 8 }}>
+                <span className="bento-dot bento-dot--azure" />
+                {isEn ? 'REAL LIFE RESILIENCE' : 'AUS MICHÉLS ALLTAG'}
+              </span>
               <h2 className="bento-title" style={{ fontSize: 20 }}>
                 {pillar.experience.title}
               </h2>
               <p style={{ margin: '14px 0 0', fontSize: 13.5, color: 'var(--muted)', lineHeight: 1.55 }}>
                 {pillar.experience.text}
               </p>
-              <div style={{ marginTop: 18, padding: 16, borderRadius: 14, background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)', border: '1px solid var(--line)' }}>
+              <div style={{ marginTop: 18, padding: 16, borderRadius: 14, background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)', border: '1px solid rgba(107, 140, 255, 0.18)' }}>
                 <p style={{ margin: 0, fontSize: 13, fontStyle: 'italic', color: 'var(--text)', lineHeight: 1.5 }}>
                   „{pillar.experience.quote}“
                 </p>
@@ -436,15 +378,18 @@ export function MentalPage() {
           </article>
 
           {/* 6. MENTAL PRINCIPLES (Span 6) */}
-          <article className="bento-card bento-card--journal bento-span-6" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
+          <article className="bento-card bento-card--mindset bento-span-6" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
             <div>
-              <span className="bento-tag bento-tag--gold" style={{ marginBottom: 8 }}>{isEn ? 'OPERATING RULES' : 'M³ MINDSET-REGELN'}</span>
+              <span className="bento-tag bento-tag--azure" style={{ marginBottom: 8 }}>
+                <span className="bento-dot bento-dot--azure" />
+                {isEn ? 'OPERATING RULES' : '3 EINFACHE GRUNDREGELN'}
+              </span>
               <h2 className="bento-title" style={{ fontSize: 20 }}>
                 {t.mentalPrinciplesH}
               </h2>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 14, marginTop: 16 }}>
                 {pillar.principles.map((pr, idx) => (
-                  <div key={pr.title} style={{ background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)', border: '1px solid var(--line)', borderRadius: 14, padding: 16 }}>
+                  <div key={pr.title} style={{ background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)', border: '1px solid rgba(107, 140, 255, 0.18)', borderRadius: 14, padding: 16 }}>
                     <div style={{ fontSize: 11.5, fontWeight: 800, color: pillar.color, marginBottom: 4 }}>REGEL 0{idx + 1}</div>
                     <strong style={{ display: 'block', fontSize: 14.5, color: 'var(--text)', marginBottom: 4 }}>
                       {pr.title}

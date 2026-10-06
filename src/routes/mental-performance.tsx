@@ -5,11 +5,11 @@ export const Route = createFileRoute("/mental-performance")({
   component: MentalPerformancePageRoute,
   head: () => ({
     meta: [
-      { title: "M³ Mental Performance – Neuronale Klarheit & Routinen" },
+      { title: "M³ Mindset & Mentale Klarheit – Fokus, Schlaf & Alltags-Routinen" },
       {
         name: "description",
         content:
-          "Entscheidungsökonomie, tiefer Schlaf und Stressresilienz. Neuronale Leistungsfähigkeit, trainiert wie ein Muskel.",
+          "Ruhe im Kopf, gesunder Schlaf und Gewohnheiten, die im echten Leben halten. Das mentale Fundament für nachhaltigen Erfolg.",
       },
     ],
   }),

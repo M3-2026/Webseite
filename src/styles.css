@@ -3346,6 +3346,13 @@ picture.bento-bg img,
   box-shadow: 0 0 16px rgba(245, 158, 11, 0.18);
 }
 
+.bento-tag--azure {
+  background: rgba(10, 15, 30, 0.85);
+  border-color: rgba(107, 140, 255, 0.5);
+  color: #9cb5ff;
+  box-shadow: 0 0 16px rgba(107, 140, 255, 0.18);
+}
+
 .bento-dot {
   display: inline-block;
   width: 6px;
@@ -3354,6 +3361,11 @@ picture.bento-bg img,
   background: #fbbf24;
   box-shadow: 0 0 8px #fbbf24;
   animation: bento-pulse-dot 2.2s ease-in-out infinite;
+}
+
+.bento-dot--azure {
+  background: #6b8cff;
+  box-shadow: 0 0 8px #6b8cff;
 }
 
 @keyframes bento-pulse-dot {
@@ -4450,6 +4462,82 @@ picture.bento-bg img,
   font-size: 11px;
   font-weight: 600;
   color: var(--muted);
+}
+
+/* ==========================================================================
+   M³ MINDSET BENTO CARDS & TILES (DISTINCT, LUCID, CLEARLY STRUCTURED)
+   ========================================================================== */
+
+.bento-card--mindset {
+  background: radial-gradient(ellipse at 15% 15%, rgba(107, 140, 255, 0.07) 0%, rgba(9, 10, 13, 0.98) 70%) !important;
+  border: 1px solid rgba(107, 140, 255, 0.2) !important;
+}
+
+.bento-card--mindset:hover {
+  border-color: rgba(107, 140, 255, 0.45) !important;
+}
+
+.bento-mindset-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.bento-mindset-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.bento-mindset-tile {
+  background: color-mix(in srgb, var(--bg) 65%, var(--bg-2) 35%);
+  border: 1px solid rgba(107, 140, 255, 0.18);
+  border-radius: 16px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: space-between;
+  transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.bento-mindset-tile:hover {
+  transform: translateY(-2px);
+  border-color: rgba(107, 140, 255, 0.45);
+  background: color-mix(in srgb, var(--bg-2) 80%, var(--bg) 20%);
+}
+
+.bento-mindset-badge {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #8ea9ff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.bento-mindset-badge-pill {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 6px;
+  background: rgba(107, 140, 255, 0.1);
+  border: 1px solid rgba(107, 140, 255, 0.25);
+  color: #9cb5ff;
+}
+
+.bento-mindset-footer {
+  padding-top: 12px;
+  border-top: 1px solid rgba(107, 140, 255, 0.15);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 

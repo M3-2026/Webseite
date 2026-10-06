@@ -152,73 +152,37 @@ export const pillars = [
     slug: 'mental-performance',
     mark: 'M³',
     name: 'REPEAT',
-    label: 'Decision economy',
-    title: 'Mindset & Neural Clarity',
+    label: 'Mental Clarity',
+    title: 'Mindset & Mental Clarity',
     quote: 'Anyone who decides anew every day loses to the calendar.',
-    lead: 'Sleep, stress and a few locked decisions — so M¹ and M² hold in real life.',
-    body: 'Mental Performance is not a mood and not a motivation subscription. It is decision economy: fewer open questions, clearer if–then rules, sleep and stress as hard performance factors. Without this layer, M¹ and M² fall apart after three good weeks. The goal is self-responsibility — not dependence on Michél.',
+    lead: 'Peace of mind, healthy sleep, and routines that hold in real life.',
+    body: 'Real coaching does not happen in a lab — it happens in your real life between meetings, family, and responsibilities. M³ ensures that your nutrition (M¹) and your training (M²) do not fade after three weeks, but become second nature — without daily battle.',
     color: '#6b8cff',
     image: '/images/mental-hero.png',
-    prompts: [
-      {
-        q: 'What do you sacrifice first when your schedule catches fire?',
-        hint: 'Sleep, clean nutrition, or your workout? If you immediately sacrifice your biological baseline under stress, you don’t have a time problem — you lack non-negotiable minimum routines. In M³, we build protected baselines that hold even in high-pressure weeks.',
-      },
-      {
-        q: 'How often during the day do you negotiate with yourself whether to train or what to eat?',
-        hint: 'Every internal negotiation drains willpower from the same cognitive tank as your work. Deciding in the evening means losing to exhaustion. M³ replaces negotiation with fixed If-Then decision architecture.',
-      },
-      {
-        q: 'Does your system still work on days when you have zero motivation?',
-        hint: 'Motivation is an emotional wave — systems are physiological reliability. If your health depends on enthusiasm, it collapses after three weeks. M³ designs habits so your standard carries you effortlessly, even when willpower runs dry.',
-      },
-    ],
-    science: [
-      {
-        title: 'Willpower is finite',
-        text: 'Self-control spends attention and sleep. Anyone who decides anew every day loses to the calendar. Stable if–then pairs unload the prefrontal cortex. Discipline becomes the environment — not a daily fight.',
-        image: '/images/mental-decide.png',
-      },
-      {
-        title: 'Sleep drives error rate',
-        text: 'Deep sleep repairs tissue and metabolism. REM regulates emotion. Fragmented sleep raises pain, cravings and decision errors. Sleep is not a soft skill. It is performance work.',
-        image: '/images/blog-schlaf.jpg',
-      },
-      {
-        title: 'Stress eats clarity',
-        text: 'Chronic HPA activation keeps cortisol restless, lowers recovery and shifts hunger and inflammation. Breathing, evening ritual and real load pauses are physiological levers — not wellness.',
-        image: '/images/mental-hero.png',
-      },
-      {
-        title: 'Autonomy beats supervision',
-        text: 'People stay in systems they can steer. So: minimal, visible routines and clear decision criteria. The coach becomes unnecessary. That is the point.',
-        image: '/images/mental-focus.png',
-      },
-    ],
     experience: {
       image: '/images/michel-portrait.jpg',
       title: 'Discipline was enough in sport. In life it was not.',
       text: 'Single father. 13 editions of Air4Day. School and youth projects. A cervical disc that made the old hardness impossible. Michél knows the point where intentions lose to the day — not from weakness, but because too many decisions stay open. M³ comes from that break: less heroism, more structure. Understanding where someone holds. A clear push where someone is spinning. No dogma. With the goal that you continue without him.',
-      quote: 'Sometimes you need understanding. Sometimes a kick. Often both.',
+      quote: 'Sometimes you need understanding. Sometimes a push forward. Often both.',
     },
     principles: [
       {
-        title: 'Close decisions — do not stack them',
-        text: 'Three locked rules beat twelve open options.',
+        title: 'Lock routines instead of postponing',
+        text: 'Three locked habits beat twelve open options.',
       },
       {
-        title: 'Read sleep and stress first',
-        text: 'Before new habits: what actually runs evening and morning?',
+        title: 'Secure recovery and sleep first',
+        text: 'Before new intentions: what does your evening actually look like?',
       },
       {
-        title: 'Self-steering as the exit',
-        text: 'You learn when to adjust. M³ is the frame — not a subscription to motivation.',
+        title: 'Self-steering as the clear goal',
+        text: 'You learn to be your own coach — for lasting independence.',
       },
     ],
     signals: [
-      'Too many open decisions, constant dropout, no clear thread',
-      'Stress eats intentions — sleep tips first',
-      'M¹ or M² land — and fall apart again in daily life',
+      'Good intentions collapse as soon as the workweek gets stressful',
+      'Thoughts race in the evening — sleep brings no real recovery',
+      'You have to force and overcome yourself anew every single day',
     ],
   },
 ] as const

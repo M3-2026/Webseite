@@ -211,7 +211,7 @@ export function Home() {
               />
               <img
                 src="/images/moodboard/mood-focus.jpg"
-                alt="M3 Repeat Mindset & neuronale Klarheit"
+                alt="M3 Repeat Mindset & Mentale Klarheit"
                 loading="lazy"
                 decoding="async"
                 className="bento-bg-img"
@@ -220,12 +220,12 @@ export function Home() {
             <div className="bento-overlay" />
             <div className="bento-content">
               <h2 className="bento-title">
-                <span className="bento-pillar-accent" style={{ color: '#4f6fd6' }}>M³</span> REPEAT
+                <span className="bento-pillar-accent" style={{ color: '#6b8cff' }}>M³</span> REPEAT
               </h2>
               <p className="bento-desc">
                 {isEn
-                  ? 'Decision economy, deep restorative sleep, and nervous system control under pressure.'
-                  : 'Entscheidungsökonomie, tiefer Schlaf und Stressresilienz – trainiert wie ein Muskel.'}
+                  ? 'Peace of mind, healthy sleep, and routines that hold in real life.'
+                  : 'Ruhe im Kopf, gesunder Schlaf und Gewohnheiten, die im echten Leben halten.'}
               </p>
               <div className="bento-arrow-btn">
                 <span>{isEn ? 'Explore M³ here →' : 'Entdecke hier M³ →'}</span>
