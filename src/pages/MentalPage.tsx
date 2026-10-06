@@ -159,7 +159,7 @@ export function MentalPage() {
           <article className="bento-card bento-card--mindset bento-span-12" style={{ padding: 'clamp(22px, 3vw, 36px)' }}>
             
             {/* Section Header */}
-            <div className="bento-card-header" style={{ marginBottom: 12 }}>
+            <div className="bento-card-header" style={{ marginBottom: 20 }}>
               <div>
                 <span className="bento-tag bento-tag--azure" style={{ marginBottom: 8 }}>
                   <span className="bento-dot bento-dot--azure" />
@@ -170,40 +170,20 @@ export function MentalPage() {
                 </h2>
                 <p className="bento-desc" style={{ maxWidth: '72ch' }}>
                   {isEn
-                    ? 'M³ REPEAT is the mental and pedagogical roof of the entire M³ system. It is not a separate product, but an integral part of every coaching journey. Explore the 6 interconnected stages below:'
-                    : 'M³ REPEAT ist das mentale und pädagogische Dach des gesamten M³-Systems. Es ist kein separat buchbares Angebot, sondern fester Bestandteil jeder Coaching-Begleitung. Entdecke die 6 Stufen, mit denen du dauerhaft selbstständig handeln lernst:'}
+                    ? 'M³ REPEAT is the mental and pedagogical roof of the entire M³ system. It is not a separate product, but an integral part of every coaching journey. Explore the 6 core themes below:'
+                    : 'M³ REPEAT ist das mentale und pädagogische Dach des gesamten M³-Systems. Es ist kein separat buchbares Angebot, sondern fester Bestandteil jeder Coaching-Begleitung. Entdecke die 6 Kernthemen, mit denen du dauerhaft selbstständig handeln lernst:'}
                 </p>
               </div>
-            </div>
-
-            {/* Visual Progression Stepper */}
-            <div className="bento-repeat-stepper" aria-label="M3 REPEAT Entwicklungskette">
-              {repeatManifesto.chain.map((step, idx) => (
-                <div key={step.num} style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
-                  <button
-                    type="button"
-                    className="bento-repeat-step-btn"
-                    onClick={() => handleOpenTheme(repeatThemes[idx]?.id || 'mindset')}
-                    title={`${step.label} – ${isEn ? 'Click to open details' : 'Klicken für Details'}`}
-                  >
-                    <span className="bento-repeat-step-num">{step.num}</span>
-                    <span>{step.label}</span>
-                  </button>
-                  {idx < repeatManifesto.chain.length - 1 && (
-                    <span className="bento-repeat-arrow" aria-hidden="true">→</span>
-                  )}
-                </div>
-              ))}
             </div>
 
             {/* Pedagogical Manifesto Banner */}
             <div className="bento-repeat-manifesto">
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20, alignItems: 'center' }}>
                 <div>
-                  <span style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.08em', color: '#6b8cff', textTransform: 'uppercase', display: 'block', marginBottom: 6 }}>
+                  <span style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.08em', color: '#8ea9ff', textTransform: 'uppercase', display: 'block', marginBottom: 8 }}>
                     {isEn ? 'CORE PRINCIPLE' : 'ZENTRALE BOTSCHAFT'}
                   </span>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                     {repeatManifesto.coreMessage.map((line, idx) => (
                       <strong
                         key={idx}
@@ -221,10 +201,10 @@ export function MentalPage() {
                 </div>
 
                 <div style={{ borderLeft: '1px solid rgba(107, 140, 255, 0.25)', paddingLeft: 'clamp(14px, 2vw, 24px)' }}>
-                  <p style={{ margin: '0 0 6px', fontSize: 14, fontWeight: 700, color: '#8ea9ff' }}>
+                  <p style={{ margin: '0 0 8px', fontSize: 14.5, fontWeight: 700, color: '#ffffff', lineHeight: 1.5 }}>
                     {repeatManifesto.repeatRule}
                   </p>
-                  <span style={{ fontSize: 13, color: 'var(--muted)', display: 'block' }}>
+                  <span style={{ fontSize: 13, color: '#8ea9ff', fontWeight: 600, display: 'block' }}>
                     {repeatManifesto.tagline}
                   </span>
                 </div>
