@@ -271,54 +271,7 @@ export function MentalPage() {
             </div>
           </article>
 
-          {/* 5. CODEX & EVERYDAY LEADERSHIP EXPERIENCE (Span 6) */}
-          <article className="bento-card bento-card--mindset bento-span-6" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
-            <div>
-              <span className="bento-tag bento-tag--azure" style={{ marginBottom: 8 }}>
-                <span className="bento-dot bento-dot--azure" />
-                {isEn ? 'REAL LIFE RESILIENCE' : 'AUS MICHÉLS ALLTAG'}
-              </span>
-              <h2 className="bento-title" style={{ fontSize: 20 }}>
-                {pillar.experience.title}
-              </h2>
-              <p style={{ margin: '14px 0 0', fontSize: 13.5, color: 'var(--muted)', lineHeight: 1.55 }}>
-                {pillar.experience.text}
-              </p>
-              <div style={{ marginTop: 18, padding: 16, borderRadius: 14, background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)', border: '1px solid rgba(107, 140, 255, 0.18)' }}>
-                <p style={{ margin: 0, fontSize: 13, fontStyle: 'italic', color: 'var(--text)', lineHeight: 1.5 }}>
-                  „{pillar.experience.quote}“
-                </p>
-              </div>
-            </div>
-          </article>
-
-          {/* 6. MENTAL PRINCIPLES (Span 6) */}
-          <article className="bento-card bento-card--mindset bento-span-6" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
-            <div>
-              <span className="bento-tag bento-tag--azure" style={{ marginBottom: 8 }}>
-                <span className="bento-dot bento-dot--azure" />
-                {isEn ? 'OPERATING RULES' : '3 EINFACHE GRUNDREGELN'}
-              </span>
-              <h2 className="bento-title" style={{ fontSize: 20 }}>
-                {t.mentalPrinciplesH}
-              </h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 14, marginTop: 16 }}>
-                {pillar.principles.map((pr, idx) => (
-                  <div key={pr.title} style={{ background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)', border: '1px solid rgba(107, 140, 255, 0.18)', borderRadius: 14, padding: 16 }}>
-                    <div style={{ fontSize: 11.5, fontWeight: 800, color: pillar.color, marginBottom: 4 }}>REGEL 0{idx + 1}</div>
-                    <strong style={{ display: 'block', fontSize: 14.5, color: 'var(--text)', marginBottom: 4 }}>
-                      {pr.title}
-                    </strong>
-                    <span style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.5 }}>
-                      {pr.text}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </article>
-
-          {/* 7. RELATED JOURNAL ARTICLES (Span 12) */}
+          {/* 4. RELATED JOURNAL ARTICLES (Span 12) */}
           {relatedPosts.length > 0 && (
             <article className="bento-card bento-card--journal bento-span-12" style={{ padding: 'clamp(22px, 3vw, 36px)' }}>
               <div className="bento-card-header" style={{ marginBottom: 20 }}>
