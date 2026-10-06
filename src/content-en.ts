@@ -909,9 +909,9 @@ export const startProof = [
 export const about = {
   headline: 'From breakdancer to holistic personal training & health.',
   intro:
-    '30+ years of movement practice — from urban dance stages to a full recovery from a severe cervical disc injury and daily life as a father: Why discipline alone hits a wall when the foundation is off, and how that shaped a sustainable system for lasting health and resilience.',
+    '30+ years of lived movement: From elite urban dance to full cervical spine recovery without surgery and fatherhood – how real challenges shaped the holistic M³ system.',
   quote: 'Sometimes you need understanding. Sometimes a kick. Often both.',
-  bio: 'Michél draws from over 30 years of lived movement experience: from international stages and an IDO World Championship in breakdance to life as a single father and a full recovery from a severe cervical spine injury. Out of these real challenges, M³ was created — a holistic system linking metabolism, biomechanics, and mental routines so that you can sustainably master your own health and performance.',
+  bio: 'No dogmas. No empty theories. Pure lived practice from three decades of performance, recovery, and resilience.',
   stations: [
     {
       years: '1995 – 1998',

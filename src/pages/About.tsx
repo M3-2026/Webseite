@@ -105,7 +105,7 @@ export function About() {
             </picture>
             <div className="bento-overlay" />
             <div className="bento-content bento-content--hero">
-              <div className="bento-tag-row" style={{ marginBottom: 10 }}>
+              <div className="bento-tag-row" style={{ marginBottom: 8 }}>
                 <span className="bento-tag bento-tag--gold">
                   <span className="bento-dot" />
                   {isEn ? 'SHOWREEL & STORY · 30+ YEARS MOVEMENT' : 'SHOWREEL & STORY · 30+ JAHRE BEWEGUNG'}
@@ -114,10 +114,10 @@ export function About() {
               <h1 className="bento-hero-h1">
                 MICHÉL MEIER. <span>{about.headline}</span>
               </h1>
-              <p className="bento-lead" style={{ maxWidth: '58ch', marginTop: 10, fontSize: 'clamp(13.5px, 1.4cqi, 15px)', lineHeight: 1.55 }}>
+              <p className="bento-lead" style={{ maxWidth: '56ch', marginTop: 8, fontSize: 'clamp(13px, 1.3cqi, 14.5px)', lineHeight: 1.5 }}>
                 {about.intro}
               </p>
-              <div className="bento-cta-row" style={{ marginTop: 18 }}>
+              <div className="bento-cta-row" style={{ marginTop: 16 }}>
                 <button
                   type="button"
                   onClick={() => {
@@ -146,58 +146,39 @@ export function About() {
             </div>
           </article>
 
-          {/* 2. SUMMARY / BIO CARD (Span 4) - White background with black text */}
-          <article
-            className="bento-card bento-card--audit-step bento-span-4"
-            style={{
-              justifyContent: 'space-between',
-              minHeight: 'clamp(440px, 50vh, 540px)',
-              background: '#ffffff',
-              color: '#111111',
-              border: '1px solid rgba(0, 0, 0, 0.08)',
-              boxShadow: '0 8px 30px rgba(0, 0, 0, 0.12)',
-            }}
-          >
-            <div>
-              <span
-                className="bento-audit-badge"
-                style={{
-                  background: 'rgba(0, 0, 0, 0.07)',
-                  color: '#111111',
-                  borderColor: 'rgba(0, 0, 0, 0.12)',
-                }}
-              >
-                {isEn ? 'PROFILE & CODEX' : 'PROFIL & CODEX'}
-              </span>
-              <h2 className="bento-title" style={{ fontSize: 21, color: '#111111', marginTop: 10 }}>
-                {isEn ? '30+ Years of Movement Practice' : '30+ Jahre Bewegungserfahrung'}
-              </h2>
-              <p className="bento-desc" style={{ marginTop: 8, fontSize: 13, lineHeight: 1.5, color: '#333333' }}>
-                {about.bio}
-              </p>
-            </div>
+          {/* 2. SUMMARY / BIO CARD (Span 4) - Clean White Card, Black Border & Text */}
+          <article className="bento-card bento-card--call-white bento-span-4">
+            <div className="bento-content" style={{ height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
+                <span
+                  className="bento-audit-badge"
+                  style={{
+                    background: 'rgba(0, 0, 0, 0.07)',
+                    color: '#111111',
+                    borderColor: 'rgba(0, 0, 0, 0.14)',
+                    marginBottom: 8,
+                  }}
+                >
+                  {isEn ? 'PROFILE & CODEX' : 'PROFIL & CODEX'}
+                </span>
+                <h2 className="bento-title" style={{ fontSize: 'clamp(18px, 1.8cqi, 22px)', color: '#111111', margin: '4px 0 6px' }}>
+                  {isEn ? 'Facts & Foundation' : 'Fakten & Fundament'}
+                </h2>
+                <p className="bento-desc" style={{ fontSize: 13, lineHeight: 1.45, color: '#333333' }}>
+                  {about.bio}
+                </p>
 
-            <ul className="bento-audit-points" style={{ marginTop: 14 }}>
-              <li style={{ color: '#222222' }}>
-                <span style={{ color: '#111111', marginRight: 6 }}>✔</span>
-                {isEn ? 'IDO World Champion & Breakdance Pioneer' : 'IDO World Champion & Breakdance-Pionier'}
-              </li>
-              <li style={{ color: '#222222' }}>
-                <span style={{ color: '#111111', marginRight: 6 }}>✔</span>
-                {isEn ? 'Overcame C6/C7 disc herniation without surgery' : 'C6/C7 Bandscheibenvorfall ohne OP überwunden'}
-              </li>
-              <li style={{ color: '#222222' }}>
-                <span style={{ color: '#111111', marginRight: 6 }}>✔</span>
-                {isEn ? 'Solo fatherhood in a high-performance routine' : 'Meisterschaft als alleinerziehender Vater im Alltag'}
-              </li>
-              <li style={{ color: '#222222' }}>
-                <span style={{ color: '#111111', marginRight: 6 }}>✔</span>
-                {isEn ? 'Master Personal Trainer (in tr.) & top scores (5/5)' : 'Master Personal Trainer i. A. & Bestnoten (5/5)'}
-              </li>
-            </ul>
+                <ul className="bento-audit-points" style={{ marginTop: 12, gap: 6 }}>
+                  <li>{isEn ? 'IDO World Champion & Breakdance Pioneer' : 'IDO World Champion & Breakdance-Pionier'}</li>
+                  <li>{isEn ? 'Overcame C6/C7 disc herniation without surgery' : 'C6/C7 Bandscheibenvorfall ohne OP überwunden'}</li>
+                  <li>{isEn ? 'Solo fatherhood in a high-performance routine' : 'Meisterschaft als alleinerziehender Vater im Alltag'}</li>
+                  <li>{isEn ? 'Master Personal Trainer (in tr.) & top scores (5/5)' : 'Master Personal Trainer i. A. & Bestnoten (5/5)'}</li>
+                </ul>
+              </div>
 
-            <div style={{ fontSize: 12, fontWeight: 700, color: '#111111', opacity: 0.9 }}>
-              {isEn ? '→ Autonomy over dependency. Pure practice.' : '→ Autonomie statt Abhängigkeit. Reine Praxis.'}
+              <div style={{ fontSize: 11.5, fontWeight: 700, color: '#111111', opacity: 0.9, marginTop: 12 }}>
+                {isEn ? '→ Autonomy over dependency. Pure practice.' : '→ Autonomie statt Abhängigkeit. Reine Praxis.'}
+              </div>
             </div>
           </article>
 
