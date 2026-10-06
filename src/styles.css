@@ -1078,17 +1078,17 @@ picture {
 }
 
 .system-molecule.is-running .mol-node-0 {
-  transform-origin: 175px 60px;
+  transform-origin: 215px 85px;
   animation: mol-breathe 3.6s ease-in-out infinite;
 }
 
 .system-molecule.is-running .mol-node-1 {
-  transform-origin: 268px 160px;
+  transform-origin: 258px 192px;
   animation: mol-breathe 3.6s ease-in-out infinite 0.45s;
 }
 
 .system-molecule.is-running .mol-node-2 {
-  transform-origin: 185px 255px;
+  transform-origin: 135px 242px;
   animation: mol-breathe 3.6s ease-in-out infinite 0.9s;
 }
 
@@ -3659,7 +3659,7 @@ picture.bento-bg img,
   height: 100% !important;
   max-width: 380px !important;
   max-height: 350px !important;
-  transform: translate(10%, 0%) scale(1.16) !important;
+  transform: translate(14%, 7%) scale(1.14) !important;
   filter: drop-shadow(0 0 28px rgba(251, 191, 36, 0.65)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.38)) !important;
 }
 
@@ -5578,7 +5578,7 @@ picture.bento-bg img,
   .bento-card--orientation .bento-molecule-visual .system-molecule {
     max-width: 300px !important;
     max-height: 280px !important;
-    transform: translate(14%, 0%) scale(1.06) !important;
+    transform: translate(18%, 6%) scale(1.05) !important;
     filter: drop-shadow(0 0 24px rgba(251, 191, 36, 0.6)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.35)) !important;
   }
 
