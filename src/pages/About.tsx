@@ -84,7 +84,7 @@ export function About() {
         {/* Master Bento Grid */}
         <section className="bento-grid" aria-label="Michél Meier About Bento Grid">
 
-          {/* 1. HERO BENTO CARD (Span 8 - World Champion & Codex) */}
+          {/* 1. HERO BENTO CARD (Span 8 - Showreel & Story) */}
           <article className="bento-card bento-card--hero bento-span-8">
             <picture className="bento-bg">
               <source
@@ -105,22 +105,34 @@ export function About() {
             </picture>
             <div className="bento-overlay" />
             <div className="bento-content bento-content--hero">
+              <div className="bento-tag-row" style={{ marginBottom: 10 }}>
+                <span className="bento-tag bento-tag--gold">
+                  <span className="bento-dot" />
+                  {isEn ? 'SHOWREEL & STORY · 30+ YEARS MOVEMENT' : 'SHOWREEL & STORY · 30+ JAHRE BEWEGUNG'}
+                </span>
+              </div>
               <h1 className="bento-hero-h1">
-                Michél Meier. <span>{about.headline}</span>
+                MICHÉL MEIER. <span>{about.headline}</span>
               </h1>
-              <p className="bento-lead" style={{ fontStyle: 'italic', opacity: 0.95 }}>
-                „{about.quote}“
-              </p>
-              <p className="bento-desc" style={{ maxWidth: '56ch', marginTop: 6, fontSize: 13.5 }}>
+              <p className="bento-lead" style={{ maxWidth: '58ch', marginTop: 10, fontSize: 'clamp(13.5px, 1.4cqi, 15px)', lineHeight: 1.55 }}>
                 {about.intro}
               </p>
-              <div className="bento-cta-row" style={{ marginTop: 16 }}>
-                <a href={wa.talk} target="_blank" rel="noreferrer" className="btn-white">
-                  <svg viewBox="0 0 24 24" fill="currentColor" className="btn-icon" style={{ width: 16, height: 16, marginRight: 6 }}>
-                    <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z" />
+              <div className="bento-cta-row" style={{ marginTop: 18 }}>
+                <button
+                  type="button"
+                  onClick={() => {
+                    const el = document.getElementById('about-timeline')
+                    if (el) el.scrollIntoView({ behavior: 'smooth' })
+                  }}
+                  className="btn-white"
+                  style={{ cursor: 'pointer' }}
+                >
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: 6 }}>
+                    <line x1="12" y1="5" x2="12" y2="19" />
+                    <polyline points="19 12 12 19 5 12" />
                   </svg>
-                  {t.firstTalk}
-                </a>
+                  {isEn ? 'Explore Timeline ↓' : 'Lebensstationen erkunden ↓'}
+                </button>
                 <a
                   href={contact.cal}
                   target="_blank"
@@ -168,25 +180,29 @@ export function About() {
             <ul className="bento-audit-points" style={{ marginTop: 14 }}>
               <li style={{ color: '#222222' }}>
                 <span style={{ color: '#111111', marginRight: 6 }}>✔</span>
-                {isEn ? 'Breakdance World Champion (Battle of the Year)' : 'Breakdance Weltmeister (Battle of the Year)'}
+                {isEn ? 'IDO World Champion & Breakdance Pioneer' : 'IDO World Champion & Breakdance-Pionier'}
               </li>
               <li style={{ color: '#222222' }}>
                 <span style={{ color: '#111111', marginRight: 6 }}>✔</span>
-                {isEn ? 'C6/C7 cervical disc herniation recovery' : 'C6/C7 Bandscheibenvorfall erfolgreich überwunden'}
+                {isEn ? 'Overcame C6/C7 disc herniation without surgery' : 'C6/C7 Bandscheibenvorfall ohne OP überwunden'}
               </li>
               <li style={{ color: '#222222' }}>
                 <span style={{ color: '#111111', marginRight: 6 }}>✔</span>
-                {isEn ? 'Solo fatherhood & high-performance balance' : 'Alleinerziehender Vater im High-Performance-Alltag'}
+                {isEn ? 'Solo fatherhood in a high-performance routine' : 'Meisterschaft als alleinerziehender Vater im Alltag'}
+              </li>
+              <li style={{ color: '#222222' }}>
+                <span style={{ color: '#111111', marginRight: 6 }}>✔</span>
+                {isEn ? 'Master Personal Trainer (in tr.) & top scores (5/5)' : 'Master Personal Trainer i. A. & Bestnoten (5/5)'}
               </li>
             </ul>
 
             <div style={{ fontSize: 12, fontWeight: 700, color: '#111111', opacity: 0.9 }}>
-              {isEn ? '→ No dogmas. Real life proof.' : '→ Keine Dogmen. Reine Praxis.'}
+              {isEn ? '→ Autonomy over dependency. Pure practice.' : '→ Autonomie statt Abhängigkeit. Reine Praxis.'}
             </div>
           </article>
 
           {/* 3. LIFE TIMELINE BENTO (Span 12) - Interactive Scrollable Timeline */}
-          <article className="bento-card bento-card--journal bento-span-12" style={{ padding: 'clamp(22px, 3vw, 36px)' }}>
+          <article id="about-timeline" className="bento-card bento-card--journal bento-span-12" style={{ padding: 'clamp(22px, 3vw, 36px)' }}>
             <div className="bento-card-header" style={{ marginBottom: 16, display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16 }}>
               <div>
                 <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>

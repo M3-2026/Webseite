@@ -976,9 +976,9 @@ export const startProof = [
 ] as const
 
 export const about = {
-  headline: 'Vom Weltmeistertitel zum ganzheitlichen Gesundheitssystem.',
+  headline: 'Vom Breakdancer zu ganzheitlichem Personal Training & Gesundheit.',
   intro:
-    'Warum selbst die härteste Disziplin scheitert, wenn das Fundament nicht stimmt — und wie aus 30+ Jahren Bewegung & Erfahrung das M³-System entstand.',
+    '30+ Jahre Bewegungspraxis – von den Bühnen des urbanen Tanzes über die vollständige Genesung nach einem schweren Halswirbel-Bandscheibenvorfall bis zum Alltag als Vater: Warum Disziplin allein oft an Grenzen stößt, wenn das Fundament brennt, und wie daraus ein nachhaltiges System für echte Gesundheit und Belastbarkeit entstand.',
   quote: 'Manchmal braucht es Verständnis. Manchmal einen Arschtritt. Oft beides.',
   bio: 'Michél schöpft aus über 30 Jahren gelebter Bewegungserfahrung: von internationalen Bühnen und dem Weltmeistertitel im Breakdance bis hin zum Alltag als alleinerziehender Vater und der vollständigen Genesung nach einem schweren Halswirbel-Bandscheibenvorfall. Aus diesen realen Herausforderungen entstand M³ – ein ganzheitliches System, das Stoffwechsel, Biomechanik und mentale Routinen so verzahnt, dass du deine Gesundheit und Leistungsfähigkeit dauerhaft eigenständig meisterst.',
   stations: [
