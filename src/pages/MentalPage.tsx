@@ -178,7 +178,7 @@ export function MentalPage() {
 
             {/* Pedagogical Manifesto Banner */}
             <div className="bento-repeat-manifesto">
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20, alignItems: 'center' }}>
+              <div className="bento-repeat-manifesto-grid">
                 <div>
                   <span style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.08em', color: '#8ea9ff', textTransform: 'uppercase', display: 'block', marginBottom: 8 }}>
                     {isEn ? 'CORE PRINCIPLE' : 'ZENTRALE BOTSCHAFT'}
@@ -200,7 +200,7 @@ export function MentalPage() {
                   </div>
                 </div>
 
-                <div style={{ borderLeft: '1px solid rgba(107, 140, 255, 0.25)', paddingLeft: 'clamp(14px, 2vw, 24px)' }}>
+                <div className="bento-repeat-manifesto-side">
                   <p style={{ margin: '0 0 8px', fontSize: 14.5, fontWeight: 700, color: '#ffffff', lineHeight: 1.5 }}>
                     {repeatManifesto.repeatRule}
                   </p>

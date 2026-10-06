@@ -4636,6 +4636,18 @@ picture.bento-bg img,
   overflow: hidden;
 }
 
+.bento-repeat-manifesto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  align-items: center;
+}
+
+.bento-repeat-manifesto-side {
+  border-left: 1px solid rgba(107, 140, 255, 0.25);
+  padding-left: clamp(14px, 2vw, 24px);
+}
+
 .bento-repeat-manifesto::before {
   content: '';
   position: absolute;
@@ -5278,6 +5290,30 @@ picture.bento-bg img,
     padding-right: 14px;
   }
 
+  /* Universal text wrapping & safety on mobile */
+  .bento-title,
+  .bento-hero-h1,
+  .bento-lead,
+  .bento-desc,
+  .bento-audit-points li,
+  .bento-audit-footer,
+  .bento-repeat-title,
+  .bento-repeat-subtitle,
+  .bento-repeat-summary,
+  .bento-repeat-more-btn,
+  .bento-persona-text,
+  .bento-persona-title,
+  .bento-sub-body h3,
+  .bento-sub-body p,
+  .timeline-card-title,
+  .timeline-card-lead,
+  .timeline-point-item {
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    hyphens: auto;
+  }
+
   /* Bento Page & Grid Mobile Layout */
   .bento-page {
     padding-top: calc(var(--nav-height, 60px) + 8px);
@@ -5285,9 +5321,9 @@ picture.bento-bg img,
   }
 
   .bento-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
   }
 
   .bento-span-12,
@@ -5295,48 +5331,78 @@ picture.bento-bg img,
   .bento-span-7,
   .bento-span-6,
   .bento-span-5,
-  .bento-span-4 {
-    width: 100%;
+  .bento-span-4,
+  .bento-span-3 {
+    width: 100% !important;
     grid-column: span 1 !important;
   }
 
-  /* Bento Cards Mobile Dimensions & Padding */
-  .bento-card {
-    min-height: 280px;
-    padding: 20px 18px;
-    border-radius: 18px;
-  }
-
-  .bento-card--hero {
-    min-height: 380px;
-    padding: 24px 18px;
-  }
-
-  .bento-hero-h1 {
-    font-size: clamp(23px, 6.8vw, 30px);
-    line-height: 1.15;
-    letter-spacing: -0.02em;
-  }
-
-  .bento-lead {
-    font-size: 13.5px;
-    line-height: 1.45;
-    margin-top: 8px;
-  }
-
-  .hero-btn-showreel {
-    margin-top: 14px;
-    min-height: 38px;
-    padding: 0 18px;
-    font-size: 13px;
-  }
-
+  /* Universal Reset of Fixed Desktop Heights */
+  .bento-card,
+  .bento-card--hero,
   .bento-card--start,
   .bento-card--pillar,
   .bento-card--michel,
   .bento-card--catalog,
-  .bento-card--contact {
-    min-height: 280px;
+  .bento-card--contact,
+  .bento-card--audit-step,
+  .bento-card--mindset,
+  .bento-card--molecule,
+  .bento-card--orientation,
+  .bento-card--audience,
+  .bento-card--call-white,
+  .bento-grid > .bento-span-8:first-child,
+  .bento-grid > .bento-span-8:first-child + .bento-span-4,
+  .bento-grid > .bento-span-8,
+  .bento-grid > .bento-span-4,
+  .bento-grid > .bento-span-6,
+  .bento-grid > .bento-span-12 {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+  }
+
+  /* Bento Card Mobile Base */
+  .bento-card {
+    position: relative;
+    overflow: hidden !important;
+    padding: clamp(18px, 4.8vw, 24px) clamp(16px, 4.2vw, 20px) !important;
+    border-radius: 18px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+  }
+
+  .bento-card--hero {
+    min-height: 360px !important;
+    padding: clamp(24px, 5.5vw, 32px) clamp(16px, 4.2vw, 20px) clamp(22px, 5vw, 28px) !important;
+  }
+
+  .bento-hero-h1 {
+    font-size: clamp(21px, 6vw, 28px) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+    margin-top: 6px !important;
+  }
+
+  .bento-lead {
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+    margin-top: 8px !important;
+    max-width: 100% !important;
+  }
+
+  .bento-desc {
+    font-size: 13px !important;
+    line-height: 1.5 !important;
+    max-width: 100% !important;
+  }
+
+  .hero-btn-showreel {
+    margin-top: 14px;
+    min-height: 40px;
+    padding: 0 20px;
+    font-size: 13px;
   }
 
   .bento-title {
@@ -5344,20 +5410,133 @@ picture.bento-bg img,
     line-height: 1.25;
   }
 
-  .bento-desc {
-    font-size: 13px;
-    line-height: 1.45;
-  }
-
   .bento-step-num {
     font-size: 14px;
   }
 
-  /* Molecule Mobile Rendering */
+  /* AUDIT & SIGNALS CARD MOBILE - 100% Complete Visibility Without Cut-Off */
+  .bento-card--audit-step {
+    background: #ffffff !important;
+    height: auto !important;
+    min-height: auto !important;
+    padding: clamp(18px, 4.8vw, 24px) clamp(16px, 4.2vw, 20px) !important;
+    justify-content: flex-start !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12) !important;
+    overflow: visible !important;
+  }
+
+  .bento-card--audit-step .bento-audit-head {
+    margin-bottom: 4px !important;
+  }
+
+  .bento-card--audit-step .bento-title {
+    font-size: clamp(17px, 4.8vw, 21px) !important;
+    line-height: 1.28 !important;
+    margin: 4px 0 6px 0 !important;
+  }
+
+  .bento-card--audit-step .bento-desc {
+    font-size: 13px !important;
+    line-height: 1.48 !important;
+    color: #444444 !important;
+  }
+
+  .bento-card--audit-step .bento-audit-points {
+    margin: 12px 0 !important;
+    gap: 8px !important;
+    flex: none !important;
+  }
+
+  .bento-card--audit-step .bento-audit-points li {
+    padding: 9px 12px !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+    background: rgba(0, 0, 0, 0.04) !important;
+    border: 1px solid rgba(0, 0, 0, 0.07) !important;
+    border-radius: 10px !important;
+  }
+
+  .bento-card--audit-step .bento-audit-footer {
+    margin-top: 8px !important;
+    padding: 10px 12px !important;
+    font-size: 12.5px !important;
+    line-height: 1.4 !important;
+    background: rgba(0, 0, 0, 0.05) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    border-radius: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+
+  /* M3 REPEAT Bento Section & 6 Cards Mobile */
+  .bento-card--mindset {
+    padding: clamp(18px, 4.8vw, 24px) clamp(16px, 4.2vw, 20px) !important;
+  }
+
+  .bento-repeat-manifesto {
+    padding: 18px 16px !important;
+    margin-bottom: 18px !important;
+    border-radius: 16px !important;
+  }
+
+  .bento-repeat-manifesto-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+  }
+
+  .bento-repeat-manifesto-side {
+    border-left: none !important;
+    border-top: 1px solid rgba(107, 140, 255, 0.22) !important;
+    padding-left: 0 !important;
+    padding-top: 12px !important;
+  }
+
+  .bento-repeat-grid-6 {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  .bento-repeat-card {
+    padding: 18px 16px !important;
+    height: auto !important;
+    min-height: auto !important;
+    border-radius: 16px !important;
+    gap: 14px !important;
+  }
+
+  .bento-repeat-title {
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+  }
+
+  .bento-repeat-subtitle {
+    font-size: 13.5px !important;
+    line-height: 1.45 !important;
+  }
+
+  .bento-repeat-summary {
+    font-size: 13px !important;
+    line-height: 1.55 !important;
+  }
+
+  .bento-repeat-more-btn {
+    min-height: 36px;
+    padding: 7px 14px !important;
+    font-size: 12.5px !important;
+  }
+
+  /* Molecule & Orientation Card Mobile */
   .bento-card--molecule,
   .bento-card--orientation {
-    min-height: 280px;
+    min-height: 300px !important;
     padding: 22px 18px !important;
+  }
+
+  .bento-card--orientation .bento-orientation-content {
+    max-width: 100% !important;
   }
 
   .bento-card--orientation .bento-molecule-visual {
@@ -5386,23 +5565,31 @@ picture.bento-bg img,
     max-height: 190px;
   }
 
-  /* Contact CTA Mobile Stacking */
-  .bento-card--contact .bento-cta-row {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: stretch;
-    gap: 8px;
-    margin-top: 14px;
+  /* Contact & Strategy Call Cards Mobile */
+  .bento-card--call-white {
+    padding: 22px 18px !important;
+    border-radius: 18px !important;
   }
 
-  .bento-card--contact .bento-cta-row .btn-gold,
-  .bento-card--contact .bento-cta-row .btn-ghost {
-    width: 100%;
-    min-height: 44px;
-    justify-content: center;
-    text-align: center;
-    font-size: 13.5px;
+  .bento-cta-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+    width: 100% !important;
+    margin-top: 14px !important;
+  }
+
+  .bento-cta-row .btn-white,
+  .bento-cta-row .btn-white-ghost,
+  .bento-cta-row .btn-gold,
+  .bento-cta-row .btn-ghost {
+    width: 100% !important;
+    min-height: 44px !important;
+    justify-content: center !important;
+    text-align: center !important;
+    font-size: 13px !important;
+    padding: 0 16px !important;
   }
 
   /* Audience & Personas Mobile Grid */
@@ -5642,7 +5829,13 @@ picture.bento-bg img,
   }
 }
 
+/* Specific enhancements for iPhone 13 Pro (390px), smaller iPhones (375px), and Androids (360px) */
 @media (max-width: 420px) {
+  .wrap {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
   .nav-cal-link span {
     display: none;
   }
@@ -5654,12 +5847,42 @@ picture.bento-bg img,
   }
 
   .bento-hero-h1 {
-    font-size: 22px;
+    font-size: 21px !important;
+    line-height: 1.2 !important;
+  }
+
+  .bento-lead {
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+  }
+
+  .bento-desc {
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
   }
 
   .bento-card {
-    padding: 18px 14px;
-    border-radius: 16px;
+    padding: 16px 14px !important;
+    border-radius: 16px !important;
+  }
+
+  .bento-card--hero {
+    padding: 22px 14px 18px !important;
+    min-height: 330px !important;
+  }
+
+  .bento-card--audit-step {
+    padding: 16px 14px !important;
+  }
+
+  .bento-card--audit-step .bento-audit-points li {
+    padding: 8px 10px !important;
+    font-size: 12.5px !important;
+  }
+
+  .bento-card--audit-step .bento-audit-footer {
+    padding: 8px 10px !important;
+    font-size: 12px !important;
   }
 
   .journal-feed-card {
