@@ -5,11 +5,11 @@ export const Route = createFileRoute("/mental-performance")({
   component: MentalPerformancePageRoute,
   head: () => ({
     meta: [
-      { title: "M³ Mindset & Mentale Klarheit – Fokus, Schlaf & Alltags-Routinen" },
+      { title: "M³ REPEAT – Mindset, Disziplin, Routinen & Nachhaltige Veränderung" },
       {
         name: "description",
         content:
-          "Ruhe im Kopf, gesunder Schlaf und Gewohnheiten, die im echten Leben halten. Das mentale Fundament für nachhaltigen Erfolg.",
+          "M³ REPEAT: Das mentale und pädagogische Dach des M³-Systems. Aus Motivation wird Disziplin, aus Disziplin Routine, aus Routine Gewohnheit.",
       },
     ],
   }),

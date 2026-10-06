@@ -1,3 +1,4 @@
+import { useState, useEffect, useCallback } from 'react'
 import { Link } from '@tanstack/react-router'
 import { BackLink } from '../components/BackLink'
 import { Img } from '../components/Img'
@@ -9,9 +10,56 @@ export function MentalPage() {
   const t = useUi()
   const { lang } = useLocale()
   const isEn = lang === 'en'
-  const { contact, pillars, posts, wa } = useContent()
+  const { contact, pillars, posts, repeatManifesto, repeatThemes, wa } = useContent()
   const pillar = pillars.find((p) => p.id === 'm3')!
   const relatedPosts = posts.filter((p) => p.pillar === 'm3')
+
+  // Selected theme for interactive deep-dive modal
+  const [selectedThemeId, setSelectedThemeId] = useState<string | null>(null)
+
+  const selectedTheme = selectedThemeId
+    ? repeatThemes.find((th) => th.id === selectedThemeId) || null
+    : null
+
+  const handleOpenTheme = (id: string) => {
+    setSelectedThemeId(id)
+  }
+
+  const handleCloseModal = useCallback(() => {
+    setSelectedThemeId(null)
+  }, [])
+
+  const handlePrevTheme = useCallback(() => {
+    if (!selectedThemeId) return
+    const currentIndex = repeatThemes.findIndex((th) => th.id === selectedThemeId)
+    const prevIndex = (currentIndex - 1 + repeatThemes.length) % repeatThemes.length
+    setSelectedThemeId(repeatThemes[prevIndex].id)
+  }, [selectedThemeId, repeatThemes])
+
+  const handleNextTheme = useCallback(() => {
+    if (!selectedThemeId) return
+    const currentIndex = repeatThemes.findIndex((th) => th.id === selectedThemeId)
+    const nextIndex = (currentIndex + 1) % repeatThemes.length
+    setSelectedThemeId(repeatThemes[nextIndex].id)
+  }, [selectedThemeId, repeatThemes])
+
+  // Keyboard navigation for modal
+  useEffect(() => {
+    if (!selectedThemeId) return
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        handleCloseModal()
+      } else if (e.key === 'ArrowLeft') {
+        handlePrevTheme()
+      } else if (e.key === 'ArrowRight') {
+        handleNextTheme()
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [selectedThemeId, handleCloseModal, handlePrevTheme, handleNextTheme])
 
   return (
     <main className="bento-page">
@@ -21,7 +69,7 @@ export function MentalPage() {
         </div>
 
         {/* Master Bento Grid */}
-        <section className="bento-grid" aria-label="M³ Mental Performance Bento Grid">
+        <section className="bento-grid" aria-label="M³ REPEAT Bento Grid">
 
           {/* 1. HERO BENTO CARD (Span 8) */}
           <article className="bento-card bento-card--hero bento-span-8">
@@ -35,7 +83,7 @@ export function MentalPage() {
               />
               <img
                 src="/images/moodboard/mood-focus.jpg"
-                alt="M3 Mindset & Mentale Klarheit"
+                alt="M3 REPEAT Mindset & Mentale Klarheit"
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"
@@ -49,7 +97,7 @@ export function MentalPage() {
                   <span className="bento-dot bento-dot--azure" />
                   {pillar.mark} · {pillar.name}
                 </span>
-                <span className="bento-tag">{pillar.label}</span>
+                <span className="bento-tag">{isEn ? 'Pedagogical Umbrella' : 'Mentales Dach'}</span>
               </div>
               <h1 className="bento-hero-h1">
                 {pillar.mark} · {pillar.name}. <span>{pillar.title}</span>
@@ -57,7 +105,7 @@ export function MentalPage() {
               <p className="bento-lead" style={{ fontStyle: 'italic', opacity: 0.95 }}>
                 „{pillar.quote}“
               </p>
-              <p className="bento-desc" style={{ maxWidth: '56ch', marginTop: 6, fontSize: 14 }}>
+              <p className="bento-desc" style={{ maxWidth: '58ch', marginTop: 6, fontSize: 14 }}>
                 {pillar.body}
               </p>
               <div className="bento-cta-row" style={{ marginTop: 16 }}>
@@ -77,7 +125,7 @@ export function MentalPage() {
             </div>
           </article>
 
-          {/* 2. NEURAL STRESS & SIGNALS AUDIT CARD (Span 4) */}
+          {/* 2. SIGNALS AUDIT CARD (Span 4) */}
           <article className="bento-card bento-card--audit-step bento-span-4">
             <div className="bento-audit-head">
               <span className="bento-audit-badge">
@@ -89,8 +137,8 @@ export function MentalPage() {
               </h2>
               <p className="bento-desc">
                 {isEn
-                  ? 'When cognitive load is high and recovery is missing, typical daily friction emerges:'
-                  : 'Wenn der Kopf voll ist und Erholung fehlt, schleichen sich im Alltag typische Muster ein:'}
+                  ? 'Why good intentions often collapse in real everyday life:'
+                  : 'Woran gute Vorsätze im echten Alltag typischerweise scheitern:'}
               </p>
             </div>
             <ul className="bento-audit-points">
@@ -103,139 +151,143 @@ export function MentalPage() {
             </ul>
             <div className="bento-audit-footer">
               <span style={{ color: pillar.color, fontWeight: 800 }}>→</span>
-              <span>{isEn ? 'Clarity grows through consistent daily habits.' : 'Klarheit entsteht durch feste Gewohnheiten.'}</span>
+              <span>{isEn ? 'Sustainable change grows through conscious repetition.' : 'Nachhaltige Veränderung entsteht durch bewusstes Wiederholen.'}</span>
             </div>
           </article>
 
-          {/* 3. WAS ALLES ZUSAMMENHÄLT (Span 12) */}
+          {/* 3. PÄDAGOGISCHER LEITGEDANKE & 6 THEMENKACHELN (Span 12) */}
           <article className="bento-card bento-card--mindset bento-span-12" style={{ padding: 'clamp(22px, 3vw, 36px)' }}>
-            <div className="bento-card-header" style={{ marginBottom: 20 }}>
+            
+            {/* Section Header */}
+            <div className="bento-card-header" style={{ marginBottom: 12 }}>
               <div>
                 <span className="bento-tag bento-tag--azure" style={{ marginBottom: 8 }}>
                   <span className="bento-dot bento-dot--azure" />
-                  {isEn ? 'THE CONNECTING FOUNDATION' : 'M³ · DAS BINDEGLIED'}
+                  {repeatManifesto.eyebrow}
                 </span>
-                <h2 className="bento-title" style={{ fontSize: 'clamp(20px, 2.4cqi, 28px)' }}>
-                  {isEn ? 'What holds everything together' : 'Was alles zusammenhält'}
+                <h2 className="bento-title" style={{ fontSize: 'clamp(22px, 2.6cqi, 30px)' }}>
+                  {repeatManifesto.heading}
                 </h2>
-                <p className="bento-desc" style={{ maxWidth: '68ch' }}>
+                <p className="bento-desc" style={{ maxWidth: '72ch' }}>
                   {isEn
-                    ? 'In every coaching automatically integrated – no separate package. Mindset at Michél is the reliable structure that ensures nutrition (M¹) and training (M²) hold in real everyday life.'
-                    : 'In jedem Coaching automatisch integriert – kein separates Paket. Mindset bei Michél ist die verlässliche Struktur, die dafür sorgt, dass Ernährung (M¹) und Training (M²) im echten Alltag halten.'}
+                    ? 'M³ REPEAT is the mental and pedagogical roof of the entire M³ system. It is not a separate product, but an integral part of every coaching journey. Explore the 6 interconnected stages below:'
+                    : 'M³ REPEAT ist das mentale und pädagogische Dach des gesamten M³-Systems. Es ist kein separat buchbares Angebot, sondern fester Bestandteil jeder Coaching-Begleitung. Entdecke die 6 Stufen, mit denen du dauerhaft selbstständig handeln lernst:'}
                 </p>
               </div>
             </div>
 
-            <div className="bento-mindset-track">
-              {/* Tile 1 */}
-              <div className="bento-mindset-tile">
-                <div>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
-                    <span className="bento-mindset-badge">
-                      01 · FESTE ABLÄUFE
-                    </span>
-                    <span className="bento-mindset-badge-pill">
-                      {isEn ? 'Included' : 'Inklusive'}
-                    </span>
-                  </div>
-                  <h3 style={{ margin: '0 0 6px', fontSize: 15.5, fontWeight: 800, color: 'var(--text)' }}>
-                    {isEn ? 'End of daily negotiations' : 'Schluss mit Selbstverhandlung'}
-                  </h3>
-                  <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: 'var(--muted)' }}>
-                    {isEn
-                      ? 'Fixed if-then standards in your calendar eliminate friction so you never spend work willpower on health choices.'
-                      : 'Feste Wenn-Dann-Standards im Kalender beenden das tägliche Grübeln und sparen wertvolle Energie im Alltag.'}
-                  </p>
+            {/* Visual Progression Stepper */}
+            <div className="bento-repeat-stepper" aria-label="M3 REPEAT Entwicklungskette">
+              {repeatManifesto.chain.map((step, idx) => (
+                <div key={step.num} style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+                  <button
+                    type="button"
+                    className="bento-repeat-step-btn"
+                    onClick={() => handleOpenTheme(repeatThemes[idx]?.id || 'mindset')}
+                    title={`${step.label} – ${isEn ? 'Click to open details' : 'Klicken für Details'}`}
+                  >
+                    <span className="bento-repeat-step-num">{step.num}</span>
+                    <span>{step.label}</span>
+                  </button>
+                  {idx < repeatManifesto.chain.length - 1 && (
+                    <span className="bento-repeat-arrow" aria-hidden="true">→</span>
+                  )}
                 </div>
-                <div className="bento-mindset-footer">
-                  <span style={{ color: pillar.color, fontWeight: 800 }}>✓</span>
-                  <span>{isEn ? 'Saves mental energy daily' : 'Spart mentale Energie im Alltag'}</span>
-                </div>
-              </div>
+              ))}
+            </div>
 
-              {/* Tile 2 */}
-              <div className="bento-mindset-tile">
+            {/* Pedagogical Manifesto Banner */}
+            <div className="bento-repeat-manifesto">
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: 20, alignItems: 'center' }}>
                 <div>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
-                    <span className="bento-mindset-badge">
-                      02 · REGENERATION & SCHLAF
-                    </span>
-                    <span className="bento-mindset-badge-pill">
-                      {isEn ? 'Included' : 'Inklusive'}
-                    </span>
+                  <span style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.08em', color: '#6b8cff', textTransform: 'uppercase', display: 'block', marginBottom: 6 }}>
+                    {isEn ? 'CORE PRINCIPLE' : 'ZENTRALE BOTSCHAFT'}
+                  </span>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+                    {repeatManifesto.coreMessage.map((line, idx) => (
+                      <strong
+                        key={idx}
+                        style={{
+                          fontSize: 'clamp(15px, 1.6cqi, 18px)',
+                          color: '#ffffff',
+                          fontWeight: 800,
+                          letterSpacing: '-0.01em',
+                        }}
+                      >
+                        {line}
+                      </strong>
+                    ))}
                   </div>
-                  <h3 style={{ margin: '0 0 6px', fontSize: 15.5, fontWeight: 800, color: 'var(--text)' }}>
-                    {isEn ? 'Deep sleep as a powerhouse' : 'Tiefschlaf als Kraftquelle'}
-                  </h3>
-                  <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: 'var(--muted)' }}>
-                    {isEn
-                      ? 'Evening wind-down and restorative deep sleep as the biological foundation for focus, muscle repair, and fat loss.'
-                      : 'Abendruhe und tiefe Erholung als biologische Basis für Fokus, Konzentration, Fettabbau und Regeneration.'}
-                  </p>
                 </div>
-                <div className="bento-mindset-footer">
-                  <span style={{ color: pillar.color, fontWeight: 800 }}>✓</span>
-                  <span>{isEn ? 'Solves exhaustion at the root' : 'Behebt Erschöpfung an der Wurzel'}</span>
-                </div>
-              </div>
 
-              {/* Tile 3 */}
-              <div className="bento-mindset-tile">
-                <div>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
-                    <span className="bento-mindset-badge">
-                      03 · HALT IM ALLTAG
-                    </span>
-                    <span className="bento-mindset-badge-pill">
-                      {isEn ? 'Included' : 'Inklusive'}
-                    </span>
-                  </div>
-                  <h3 style={{ margin: '0 0 6px', fontSize: 15.5, fontWeight: 800, color: 'var(--text)' }}>
-                    {isEn ? 'The protocol for high stress' : 'Der Notfall-Plan bei Stress'}
-                  </h3>
-                  <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: 'var(--muted)' }}>
-                    {isEn
-                      ? 'Resilient minimum routines that hold during travel, long workdays, or family chaos without abandoning progress.'
-                      : 'Feste Mindeststandards, die selbst bei 60-Stunden-Wochen, Reisen oder Familienchaos greifen.'}
+                <div style={{ borderLeft: '1px solid rgba(107, 140, 255, 0.25)', paddingLeft: 'clamp(14px, 2vw, 24px)' }}>
+                  <p style={{ margin: '0 0 6px', fontSize: 14, fontWeight: 700, color: '#8ea9ff' }}>
+                    {repeatManifesto.repeatRule}
                   </p>
-                </div>
-                <div className="bento-mindset-footer">
-                  <span style={{ color: pillar.color, fontWeight: 800 }}>✓</span>
-                  <span>{isEn ? 'Prevents dropping off after 3 weeks' : 'Verhindert den typischen Abbruch'}</span>
+                  <span style={{ fontSize: 13, color: 'var(--muted)', display: 'block' }}>
+                    {repeatManifesto.tagline}
+                  </span>
                 </div>
               </div>
+            </div>
 
-              {/* Tile 4 */}
-              <div className="bento-mindset-tile">
-                <div>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8 }}>
-                    <span className="bento-mindset-badge">
-                      04 · DEINE SELBSTSTEUERUNG
+            {/* 6 Interactive Theme Tiles */}
+            <div className="bento-repeat-grid-6">
+              {repeatThemes.map((theme) => (
+                <div
+                  key={theme.id}
+                  className="bento-repeat-card"
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => handleOpenTheme(theme.id)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault()
+                      handleOpenTheme(theme.id)
+                    }
+                  }}
+                  aria-label={`${theme.title} – ${theme.subtitle}`}
+                >
+                  <div>
+                    <div className="bento-repeat-head">
+                      <span className="bento-mindset-badge">
+                        {theme.badge}
+                      </span>
+                      <span className="bento-mindset-badge-pill">
+                        {isEn ? 'Integrated' : 'Inklusive'}
+                      </span>
+                    </div>
+                    <h3 className="bento-repeat-title">
+                      {theme.title}
+                    </h3>
+                    <p className="bento-repeat-subtitle">
+                      {theme.subtitle}
+                    </p>
+                    <p className="bento-repeat-summary">
+                      {theme.summary}
+                    </p>
+                  </div>
+
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 10, borderTop: '1px solid rgba(107, 140, 255, 0.15)' }}>
+                    <span className="bento-repeat-more-btn">
+                      {isEn ? 'Mehr erfahren' : 'Mehr erfahren'}
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                        <polyline points="12 5 19 12 12 19" />
+                      </svg>
                     </span>
-                    <span className="bento-mindset-badge-pill">
-                      {isEn ? 'Included' : 'Inklusive'}
+                    <span style={{ fontSize: 12, fontWeight: 800, color: 'rgba(107, 140, 255, 0.6)' }}>
+                      {theme.num}
                     </span>
                   </div>
-                  <h3 style={{ margin: '0 0 6px', fontSize: 15.5, fontWeight: 800, color: 'var(--text)' }}>
-                    {isEn ? 'Making the coach obsolete' : 'Der Coach macht sich überflüssig'}
-                  </h3>
-                  <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: 'var(--muted)' }}>
-                    {isEn
-                      ? 'You understand the mechanics of your body deeply so you can adjust independently. Goal is lasting sovereignty.'
-                      : 'Du lernst die Hebel deines Körpers verstehen, um dein System eigenständig zu steuern. Ziel ist Unabhängigkeit.'}
-                  </p>
                 </div>
-                <div className="bento-mindset-footer">
-                  <span style={{ color: pillar.color, fontWeight: 800 }}>✓</span>
-                  <span>{isEn ? 'Lifelong independent mastery' : 'Lebenslange Unabhängigkeit'}</span>
-                </div>
-              </div>
+              ))}
             </div>
 
             {/* Bottom Bridge Banner */}
             <div
               style={{
-                marginTop: 20,
+                marginTop: 24,
                 padding: '18px 24px',
                 borderRadius: 16,
                 background: 'linear-gradient(135deg, rgba(107, 140, 255, 0.12), rgba(107, 140, 255, 0.03))',
@@ -253,8 +305,8 @@ export function MentalPage() {
                 </strong>
                 <span style={{ fontSize: 13, color: 'var(--muted)' }}>
                   {isEn
-                    ? 'M³ mindset routines and sleep principles are automatically embedded from day one.'
-                    : 'Die M³ Alltags-Routinen und Schlaf-Prinzipien fließen ab Tag 1 nahtlos mit ein.'}
+                    ? 'M³ mindset routines and habit principles are automatically embedded from day one.'
+                    : 'Die M³ Alltags-Routinen und Gewohnheits-Prinzipien fließen ab Tag 1 nahtlos mit ein.'}
                 </span>
               </div>
               <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
@@ -315,7 +367,7 @@ export function MentalPage() {
             </article>
           )}
 
-          {/* 8. MASTER BOTTOM CTA BENTO (Span 12) */}
+          {/* 5. MASTER BOTTOM CTA BENTO (Span 12) */}
           <article className="bento-card bento-card--start bento-span-12">
             <picture className="bento-bg">
               <source
@@ -335,8 +387,11 @@ export function MentalPage() {
             </picture>
             <div className="bento-overlay" />
             <div className="bento-content" style={{ maxWidth: 680 }}>
+              <div className="bento-tag-row" style={{ marginBottom: 8 }}>
+                <span className="bento-tag bento-tag--gold">FOOD · MOVE · REPEAT</span>
+              </div>
               <h2 className="bento-title" style={{ fontSize: 'clamp(24px, 3.2cqi, 36px)' }}>
-                {t.ctaBefore} {t.ctaGold} {t.ctaAfter}
+                {isEn ? 'Your Goal. Your Path. Your System.' : 'Dein Ziel. Dein Weg. Dein System.'}
               </h2>
               <p className="bento-lead">
                 {t.pillarCtaLead}
@@ -363,6 +418,149 @@ export function MentalPage() {
 
         </section>
       </div>
+
+      {/* Interactive Deep-Dive Modal for 6 Themes */}
+      {selectedTheme && (
+        <div
+          className="repeat-modal-backdrop"
+          onClick={handleCloseModal}
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="repeat-modal-title"
+        >
+          <div
+            className="repeat-modal-dialog"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="repeat-modal-header">
+              <div>
+                <span className="bento-mindset-badge" style={{ marginBottom: 4 }}>
+                  {selectedTheme.badge}
+                </span>
+                <h2 id="repeat-modal-title" className="bento-repeat-title" style={{ fontSize: 20, margin: 0 }}>
+                  {selectedTheme.num} · {selectedTheme.title}
+                </h2>
+                <p style={{ margin: '4px 0 0', fontSize: 13.5, fontWeight: 700, color: '#8ea9ff' }}>
+                  {selectedTheme.subtitle}
+                </p>
+              </div>
+              <button
+                type="button"
+                className="repeat-modal-close-btn"
+                onClick={handleCloseModal}
+                aria-label={isEn ? 'Close dialog' : 'Fenster schließen'}
+              >
+                ✕
+              </button>
+            </div>
+
+            {/* Modal Body */}
+            <div className="repeat-modal-body">
+              
+              {/* 1. Pädagogischer Kern */}
+              <div className="repeat-modal-section">
+                <span className="repeat-modal-label">
+                  {isEn ? '1. Pedagogical Foundation' : '1. Der pädagogische Kern'}
+                </span>
+                <p className="repeat-modal-text">
+                  {selectedTheme.detail.lead}
+                </p>
+                <p className="repeat-modal-text" style={{ color: 'var(--muted)', marginTop: 4 }}>
+                  {selectedTheme.detail.concept}
+                </p>
+              </div>
+
+              {/* 2. Der Aha-Moment */}
+              <div className="repeat-modal-callout">
+                <span className="repeat-modal-label" style={{ color: '#ffffff', marginBottom: 4, display: 'block' }}>
+                  💡 {isEn ? 'The Aha Moment' : 'Der Aha-Moment'}
+                </span>
+                <p style={{ margin: 0, fontSize: 13.5, fontStyle: 'italic', color: 'var(--text)', lineHeight: 1.55 }}>
+                  „{selectedTheme.detail.ahaMoment}“
+                </p>
+              </div>
+
+              {/* 3. Praxis im Alltag */}
+              <div className="repeat-modal-section">
+                <span className="repeat-modal-label">
+                  {isEn ? '2. Real-World Application' : '2. Praxis im Alltag'}
+                </span>
+                <p className="repeat-modal-text">
+                  {selectedTheme.detail.practiceExample}
+                </p>
+              </div>
+
+              {/* 4. 3 Schlüssel-Erkenntnisse */}
+              <div className="repeat-modal-section">
+                <span className="repeat-modal-label">
+                  {isEn ? '3. Key Takeaways' : '3. Drei Schlüssel-Erkenntnisse'}
+                </span>
+                <ul className="repeat-modal-takeaways">
+                  {selectedTheme.detail.keyTakeaways.map((point, idx) => (
+                    <li key={idx}>
+                      <span className="repeat-modal-bullet">✓</span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* 5. Reflexionsfrage an dich */}
+              <div
+                style={{
+                  background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
+                  border: '1px solid rgba(107, 140, 255, 0.22)',
+                  borderRadius: 14,
+                  padding: 16,
+                }}
+              >
+                <span className="repeat-modal-label" style={{ color: '#e8a14a', display: 'block', marginBottom: 4 }}>
+                  🎯 {isEn ? 'Self-Reflection Prompt' : 'Reflexionsfrage an dich'}
+                </span>
+                <p style={{ margin: 0, fontSize: 13.5, fontWeight: 600, color: 'var(--text)' }}>
+                  {selectedTheme.detail.reflectionQuestion}
+                </p>
+              </div>
+
+            </div>
+
+            {/* Modal Footer with Stepper Cycling */}
+            <div className="repeat-modal-footer">
+              <div style={{ display: 'flex', gap: 8 }}>
+                <button
+                  type="button"
+                  className="repeat-modal-nav-btn"
+                  onClick={handlePrevTheme}
+                >
+                  ← {isEn ? 'Prev' : 'Zurück'}
+                </button>
+                <button
+                  type="button"
+                  className="repeat-modal-nav-btn"
+                  onClick={handleNextTheme}
+                >
+                  {isEn ? 'Next' : 'Weiter'} →
+                </button>
+              </div>
+
+              <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                <span style={{ fontSize: 12, color: 'var(--muted)', fontWeight: 600 }}>
+                  {selectedTheme.num} / 06
+                </span>
+                <button
+                  type="button"
+                  className="btn-white"
+                  style={{ fontSize: 12.5, padding: '7px 14px' }}
+                  onClick={handleCloseModal}
+                >
+                  {isEn ? 'Close' : 'Schließen'}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   )
 }

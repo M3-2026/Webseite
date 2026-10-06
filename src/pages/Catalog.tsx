@@ -124,20 +124,20 @@ export function Catalog() {
                   >
                     <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
                       <span className="bento-tag bento-tag--gold">
-                        {isEn ? 'THE M³ INTEGRATION ROOF' : 'DAS M³ SYSTEM-DACH'}
+                        {isEn ? 'THE M³ PEDAGOGICAL ROOF' : 'DAS M³ PÄDAGOGISCHE DACH'}
                       </span>
                       <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--muted)' }}>
-                        {isEn ? 'Included in every M¹ & M² coaching' : 'In jedem M¹ & M² Coaching integriert'}
+                        {isEn ? 'Integrated into every coaching journey' : 'Fester Bestandteil jeder Coaching-Begleitung'}
                       </span>
                     </div>
                     <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.6, color: 'var(--text)', maxWidth: '70ch' }}>
                       {isEn
-                        ? 'M³ is not a separate paid module or standalone package. It is the overarching mindset foundation automatically integrated into every nutrition (M¹) and movement (M²) format — ensuring your progress holds in everyday life.'
-                        : 'M³ Mindset & Mentale Klarheit ist kein separates Bezahlpaket. Es ist das übergeordnete System-Dach, das in jedem Ernährungs- (M¹) und Bewegungs-Coaching (M²) automatisch integriert ist — damit gesunder Schlaf und verlässliche Gewohnheiten deinen Fortschritt dauerhaft absichern.'}
+                        ? 'M³ REPEAT is not a separate paid module or standalone package. It is the pedagogical and mental foundation of the entire system — turning motivation into discipline, routines, and lifelong self-sovereignty.'
+                        : 'M³ REPEAT ist kein separat buchbares oder kostenpflichtiges Angebot, sondern fester Bestandteil der Coaching-Begleitung. Es vermittelt, wie aus Motivation Disziplin, Routine und dauerhafte Gewohnheit wird — für nachhaltige Veränderung im echten Alltag.'}
                     </p>
                     <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginTop: 4 }}>
                       <Link to="/mental-performance" className="btn-white" style={{ fontSize: 13, padding: '8px 16px' }}>
-                        {isEn ? 'Explore M³ Mental Clarity →' : 'Zu M³ Mentale Klarheit →'}
+                        {isEn ? 'Explore M³ REPEAT →' : 'Zu M³ REPEAT →'}
                       </Link>
                     </div>
                   </div>

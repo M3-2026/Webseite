@@ -193,6 +193,177 @@ export const pillars = [
   },
 ] as const
 
+export interface RepeatTheme {
+  id: string
+  num: string
+  title: string
+  subtitle: string
+  badge: string
+  summary: string
+  detail: {
+    lead: string
+    concept: string
+    ahaMoment: string
+    practiceExample: string
+    keyTakeaways: string[]
+    reflectionQuestion: string
+  }
+}
+
+export interface RepeatManifesto {
+  eyebrow: string
+  heading: string
+  subheading: string
+  chain: { num: string; label: string }[]
+  coreMessage: string[]
+  repeatRule: string
+  tagline: string
+}
+
+export const repeatManifesto: RepeatManifesto = {
+  eyebrow: 'M³ · PÄDAGOGISCHER LEITGEDANKE',
+  heading: 'Der Weg zur nachhaltigen Veränderung',
+  subheading: 'Kein starrer Ablauf, sondern ein fortlaufender, selbstbestimmter Lernprozess.',
+  chain: [
+    { num: '01', label: 'Mindset' },
+    { num: '02', label: 'Motivation' },
+    { num: '03', label: 'Disziplin' },
+    { num: '04', label: 'Routinen' },
+    { num: '05', label: 'Gewohnheiten' },
+    { num: '06', label: 'Eigenverantwortung' },
+  ],
+  coreMessage: [
+    'Aus Motivation wird Disziplin.',
+    'Aus Disziplin wird Routine.',
+    'Aus Routine wird Gewohnheit.',
+  ],
+  repeatRule: 'REPEAT bedeutet: Wiederholen. Lernen. Anpassen. Weitermachen.',
+  tagline: 'FOOD. MOVE. REPEAT. — Dein Ziel. Dein Weg. Dein System.',
+}
+
+export const repeatThemes: RepeatTheme[] = [
+  {
+    id: 'mindset',
+    num: '01',
+    title: 'MINDSET',
+    subtitle: 'Wie du denkst, beeinflusst, wie du handelst.',
+    badge: '01 · Grundhaltung & Reflexion',
+    summary: 'Denkweisen erkennen, Verhaltensmuster hinterfragen, Selbstreflexion entwickeln und Veränderungen bewusst gestalten.',
+    detail: {
+      lead: 'Veränderung beginnt nicht im Kalender oder auf dem Teller, sondern zwischen den Ohren. Wie du über dich, deine Belastbarkeit und bisherige Rückschläge denkst, steuert jede einzelne deiner täglichen Entscheidungen.',
+      concept: 'Im M³-System arbeiten wir zuerst an deiner inneren Haltung: Weg von starren Verboten, Selbstkritik und Dogmen, hin zu einem lösungsorientierten Wachstums-Mindset.',
+      ahaMoment: 'Nicht mangelnde Willenskraft ist der Grund für Rückschläge, sondern unbewusste Glaubenssätze wie „Ich halte das eh nie durch“ oder „Heute ist eh alles egal“.',
+      practiceExample: 'Nach einem stressigen Arbeitstag meldet sich der Drang nach Frustessen. Durch geschultes Mindset hältst du kurz inne und erkennst: Es ist kein biologischer Hunger, sondern emotionale Erschöpfung – und gibst deinem Körper die echte Erholung, die er braucht.',
+      keyTakeaways: [
+        'Unbewusste Denkmuster und Selbstsabotage entlarven',
+        'Vom Schwarz-Weiß-Perfektionismus zu kontinuierlichem Fortschritt',
+        'Selbstreflexion als tägliches Werkzeug für mentale Klarheit nutzen',
+      ],
+      reflectionQuestion: 'Welcher automatische Gedanke hält dich aktuell am meisten davon ab, dranzubleiben?',
+    },
+  },
+  {
+    id: 'motivation',
+    num: '02',
+    title: 'MOTIVATION',
+    subtitle: 'Motivation bringt dich ins Handeln – aber sie bleibt nicht immer.',
+    badge: '02 · Der Zündfunke',
+    summary: 'Verstehen, warum Motivation schwankt, wie sie entsteht und weshalb langfristiger Erfolg mehr als anfängliche Begeisterung benötigt.',
+    detail: {
+      lead: 'Motivation ist wie der Zündfunke eines Motors: Sie lässt uns voller Vorfreude und Energie starten. Doch als neurobiologisches Gefühl ist sie von Natur aus flüchtig und sinkt bei Stress oder Müdigkeit unweigerlich ab.',
+      concept: 'Bei M³ nutzen wir Motivation als wertvollen Startschuss, machen uns aber niemals von ihr abhängig. Langfristiger Erfolg baut auf tieferen inneren Werten auf, nicht auf momentaner Laune.',
+      ahaMoment: 'Warte nicht darauf, dass du dich „motiviert fühlst“, um anzufangen. Das Handeln erzeugt die Energie – die Motivation folgt der ersten Bewegung, nicht umgekehrt.',
+      practiceExample: 'Draußen regnet es und du fühlst dich träge. Wenn du auf Motivation wartest, bleibst du auf der Couch. Mit der Regel „Ich ziehe nur die Schuhe an und mache die ersten 5 Minuten“ kommt der Antrieb beim Machen.',
+      keyTakeaways: [
+        'Motivation als Starter wertschätzen, aber nicht als dauerhaften Treibstoff einplanen',
+        'Intrinsische Werte (Gesundheit, Lebensenergie) statt flüchtiger Social-Media-Euphorie',
+        'Handeln vor Fühlen: Der erste kleine Schritt aktiviert das Belohnungszentrum im Gehirn',
+      ],
+      reflectionQuestion: 'Was ist dein echtes, tiefes „Warum“, das auch dann trägt, wenn die erste Begeisterung verflogen ist?',
+    },
+  },
+  {
+    id: 'disziplin',
+    num: '03',
+    title: 'DISZIPLIN',
+    subtitle: 'Dranbleiben, auch wenn die Motivation fehlt.',
+    badge: '03 · Die Brücke',
+    summary: 'Disziplin als Fähigkeit verstehen, bewusste Entscheidungen konsequent umzusetzen – ohne Zwang, Selbstbestrafung oder Perfektionismus.',
+    detail: {
+      lead: 'Disziplin wird oft fälschlicherweise mit eiserner Härte, Drill oder Quälerei verwechselt. Im M³-System ist Disziplin die verlässliche Loyalität dir selbst gegenüber: das Versprechen zu halten, das du dir gegeben hast.',
+      concept: 'Disziplin ist kein angeborener Charakterzug, sondern eine trainierbare Fähigkeit. Sie ist die Brücke an Tagen, an denen die Motivation Pause macht.',
+      ahaMoment: 'Disziplin bedeutet nicht, jeden Tag 100 % Höchstleistung zu erzwingen. Sie bedeutet, auch an harten Tagen den vereinbarten Mindeststandard nicht zu unterbieten.',
+      practiceExample: 'Ein unvorhergesehenes Projekt zwingt dich zu Überstunden. Dein geplantes 60-Minuten-Workout platzt. Disziplin heißt hier: Nicht frustriert aufgeben, sondern 15 Minuten Mobility im Wohnzimmer machen und nahrhaft essen.',
+      keyTakeaways: [
+        'Disziplin als gelebte Selbstachtung und Verlässlichkeit verstehen',
+        'Flexible Mindeststandards etablieren statt in die Alles-oder-Nichts-Falle zu tappen',
+        'Die Fähigkeit trainieren, kurzfristige Bequemlichkeit für langfristige Lebensqualität aufzuschieben',
+      ],
+      reflectionQuestion: 'Welchen einfachen Mindeststandard kannst du dir für stressige Tage bedingungslos versprechen?',
+    },
+  },
+  {
+    id: 'routinen',
+    num: '04',
+    title: 'ROUTINEN',
+    subtitle: 'Mach das Richtige einfacher.',
+    badge: '04 · Das System',
+    summary: 'Struktur im Alltag schaffen, wiederkehrende Abläufe entwickeln und Veränderungen so gestalten, dass sie zum eigenen Leben passen.',
+    detail: {
+      lead: 'Jede bewusste Entscheidung verbraucht Glukose und mentale Energie. Wer jeden Morgen oder Abend neu verhandelt, was gegessen oder wann trainiert wird, verliert unausweichlich gegen die Willenskraft-Erschöpfung.',
+      concept: 'Routinen sind die Schienen, auf denen dein Alltag reibungslos rollt. Wir etablieren feste Wenn-Dann-Strukturen, die nahtlos in deinen Berufs- und Familienalltag passen.',
+      ahaMoment: 'Mach gute Entscheidungen zur Standardoption und ungesunde Gewohnheiten anstrengend. Deine Umgebung steuert dein Verhalten mehr als reine Willenskraft.',
+      practiceExample: 'Feste Morgenroutine: Nach dem Aufstehen steht das große Glas Wasser bereit und die Trainingskleidung liegt gepackt da. Keine Diskussion, keine Verzögerung – das System übernimmt.',
+      keyTakeaways: [
+        'Feste Wenn-Dann-Verknüpfungen eliminieren anstrengende Selbstverhandlungen',
+        'Die eigene Umgebung so gestalten, dass gesunde Abläufe der Weg des geringsten Widerstands sind',
+        'Routinen modular und anpassungsfähig an dichte Wochen halten',
+      ],
+      reflectionQuestion: 'An welcher Stelle in deinem Tag verlierst du unnötig Energie durch wiederkehrende Entscheidungen?',
+    },
+  },
+  {
+    id: 'gewohnheiten',
+    num: '05',
+    title: 'GEWOHNHEITEN',
+    subtitle: 'Was du wiederholst, wird Teil deines Alltags.',
+    badge: '05 · Die Automatisierung',
+    summary: 'Verstehen, wie aus bewussten Handlungen durch Wiederholung langfristige Gewohnheiten entstehen. Rückschläge akzeptieren, daraus lernen und weitermachen.',
+    detail: {
+      lead: 'Wird eine Routine oft genug unter gleichen Bedingungen wiederholt, schaltet das Gehirn auf automatische neuronale Bahnen um. Die Handlung wird zur zweiten Natur – wie Zähneputzen.',
+      concept: 'Gewohnheiten sind der Zinseszins deiner Gesundheit. Nicht die heroische Einzelaktion entscheidet über dein Wohlbefinden in 10 Jahren, sondern das, was du täglich wie selbstverständlich tust.',
+      ahaMoment: 'Ein Aussetzer oder ein Urlaub unterbricht eine Gewohnheit nicht für immer. Ein Rückschlag ist kein Scheitern, sondern schlicht das Signal, die Schleife wieder aufzunehmen.',
+      practiceExample: 'Nach 90 Tagen kontinuierlicher Praxis fühlt sich gesundes Kochen oder die abendliche Bildschirmpause nicht mehr wie Verzicht an – es fühlt sich im Gegenteil unnatürlich an, es wegzulassen.',
+      keyTakeaways: [
+        'Vom bewussten Kraftakt zum mühelosen neuronalen Automatismus',
+        'Die 1%-Regel: Kleine, tägliche Wiederholungen schlagen seltene Extrem-Aktionen',
+        'Rückschläge sachlich analysieren, Rahmenbedingungen anpassen und direkt weitermachen',
+      ],
+      reflectionQuestion: 'Welche positive Gewohnheit machst du heute schon, ohne überhaupt darüber nachzudenken?',
+    },
+  },
+  {
+    id: 'eigenverantwortung',
+    num: '06',
+    title: 'EIGENVERANTWORTUNG',
+    subtitle: 'Dein Weg gehört irgendwann dir.',
+    badge: '06 · Die Unabhängigkeit',
+    summary: 'Selbstständigkeit, Selbstvertrauen, bewusste Entscheidungen und persönliche Verantwortung entwickeln. Ziel ist es, langfristig unabhängig vom Coach handeln zu können.',
+    detail: {
+      lead: 'Pädagogisch wertvolles Coaching zeichnet sich dadurch aus, dass es sich mit der Zeit selbst überflüssig macht. Das höchste Ziel von M³ REPEAT ist deine lebenslange persönliche Souveränität.',
+      concept: 'Du lernst nicht nur Pläne abzuarbeiten, sondern die Mechanismen deines Körpers, deines Stoffwechsels und deiner Psyche so tief zu verstehen, dass du dein eigener lebenslanger Coach wirst.',
+      ahaMoment: 'Echte Freiheit bedeutet, bei Veränderungen, auf Reisen oder in Stressphasen genau zu wissen, welche Stellschrauben du justieren musst – ohne Angst vor Kontrollverlust.',
+      practiceExample: 'Nach dem Coaching wechselst du den Job oder die Lebenssituation. Statt in alte Muster zurückzufallen, passt du dein M³-System eigenständig, gelassen und zielsicher an.',
+      keyTakeaways: [
+        'Vom fremdgesteuerten Befolgen zur souveränen Meisterschaft des eigenen Körpers',
+        'Tiefes Verständnis der Prinzipien statt lebenslanger Abhängigkeit von Plänen',
+        'Dauerhafte Selbstwirksamkeit und Vertrauen in die eigene Handlungsfähigkeit',
+      ],
+      reflectionQuestion: 'Was brauchst du noch, um deiner eigenen Urteilskraft bei Ernährung und Training voll zu vertrauen?',
+    },
+  },
+]
+
 export const modules = [
   {
     slug: 'body-reset',

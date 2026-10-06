@@ -187,6 +187,177 @@ export const pillars = [
   },
 ] as const
 
+export interface RepeatTheme {
+  id: string
+  num: string
+  title: string
+  subtitle: string
+  badge: string
+  summary: string
+  detail: {
+    lead: string
+    concept: string
+    ahaMoment: string
+    practiceExample: string
+    keyTakeaways: string[]
+    reflectionQuestion: string
+  }
+}
+
+export interface RepeatManifesto {
+  eyebrow: string
+  heading: string
+  subheading: string
+  chain: { num: string; label: string }[]
+  coreMessage: string[]
+  repeatRule: string
+  tagline: string
+}
+
+export const repeatManifesto: RepeatManifesto = {
+  eyebrow: 'M³ · PEDAGOGICAL GUIDING PRINCIPLE',
+  heading: 'The Path to Sustainable Change',
+  subheading: 'Not a rigid sequence, but a continuous, self-directed learning journey.',
+  chain: [
+    { num: '01', label: 'Mindset' },
+    { num: '02', label: 'Motivation' },
+    { num: '03', label: 'Discipline' },
+    { num: '04', label: 'Routines' },
+    { num: '05', label: 'Habits' },
+    { num: '06', label: 'Self-Sovereignty' },
+  ],
+  coreMessage: [
+    'Motivation turns into discipline.',
+    'Discipline turns into routine.',
+    'Routine turns into habit.',
+  ],
+  repeatRule: 'REPEAT means: Repeat. Learn. Adapt. Keep going.',
+  tagline: 'FOOD. MOVE. REPEAT. — Your Goal. Your Path. Your System.',
+}
+
+export const repeatThemes: RepeatTheme[] = [
+  {
+    id: 'mindset',
+    num: '01',
+    title: 'MINDSET',
+    subtitle: 'How you think determines how you act.',
+    badge: '01 · Attitude & Reflection',
+    summary: 'Recognize thought patterns, question old behaviors, develop self-reflection, and consciously shape lasting change.',
+    detail: {
+      lead: 'Transformation does not begin on the plate or in the calendar, but between your ears. How you think about yourself, your capacity, and past setbacks dictates every daily choice you make.',
+      concept: 'In the M³ system, we start with your inner attitude: moving away from strict dogmas and self-criticism toward a solution-focused growth mindset.',
+      ahaMoment: 'Relapses are not caused by a lack of willpower, but by unconscious beliefs like "I never stick to anything" or "All or nothing".',
+      practiceExample: 'After an exhausting day at work, the urge for emotional binge eating kicks in. With a trained mindset, you pause and realize: This is not hunger, but mental fatigue – and give yourself true recovery instead.',
+      keyTakeaways: [
+        'Uncover unconscious mental traps and self-sabotage',
+        'Shift from black-and-white perfectionism to continuous progress',
+        'Use daily self-reflection as a precision tool for clarity',
+      ],
+      reflectionQuestion: 'Which recurring thought currently holds you back the most from staying consistent?',
+    },
+  },
+  {
+    id: 'motivation',
+    num: '02',
+    title: 'MOTIVATION',
+    subtitle: 'Motivation sparks action – but it does not last forever.',
+    badge: '02 · The Spark',
+    summary: 'Understand why motivation fluctuates, how it is triggered, and why long-term success requires much more than initial hype.',
+    detail: {
+      lead: 'Motivation is the spark plug of an engine: it gets us moving with excitement and energy. But neurochemically, it is fleeting and naturally fades when fatigue and stress rise.',
+      concept: 'At M³, we utilize motivation as a valuable initial trigger, but never rely on it as a long-term fuel. Real success is anchored in deep intrinsic values.',
+      ahaMoment: 'Never wait until you "feel motivated" to start. Action produces motivation – energy follows the first physical movement, not vice versa.',
+      practiceExample: 'It is cold and raining, and you feel sluggish. If you wait for motivation, you stay on the sofa. By following the rule "I just put my shoes on and step outside for 5 minutes", energy naturally flows.',
+      keyTakeaways: [
+        'Value motivation as an ignition switch, not as months-long fuel',
+        'Root yourself in intrinsic values (health, vitality) over short-lived social media hype',
+        'Action before emotion: Taking the first small step activates the brain reward center',
+      ],
+      reflectionQuestion: 'What is your genuine, deep "Why" that carries you even when the initial euphoria has vanished?',
+    },
+  },
+  {
+    id: 'disziplin',
+    num: '03',
+    title: 'DISCIPLINE',
+    subtitle: 'Staying consistent even when motivation is absent.',
+    badge: '03 · The Bridge',
+    summary: 'Discipline understood as a skill: implementing conscious choices consistently without force, guilt, or perfectionism.',
+    detail: {
+      lead: 'Discipline is often misconstrued as rigid brutality, punishment, or misery. In the M³ system, discipline is simply reliable loyalty to yourself: honoring the promise you made to your future self.',
+      concept: 'Discipline is not a genetic gift, but a trainable skill. It acts as the bridge on days when motivation takes a day off.',
+      ahaMoment: 'Discipline does not mean demanding 100% perfection every single day. It means refusing to drop below your agreed minimum standard, even on tough days.',
+      practiceExample: 'An urgent project demands overtime, blowing up your planned 60-minute gym workout. Discipline means not abandoning the day, but doing 15 minutes of mobility in the living room and eating nourishing food.',
+      keyTakeaways: [
+        'Understand discipline as self-respect and reliability',
+        'Establish adaptable baseline standards instead of falling into the all-or-nothing trap',
+        'Train the ability to postpone short-term comfort for lifelong vitality',
+      ],
+      reflectionQuestion: 'What simple minimum standard can you unconditionally promise yourself for high-stress days?',
+    },
+  },
+  {
+    id: 'routinen',
+    num: '04',
+    title: 'ROUTINES',
+    subtitle: 'Make doing the right thing effortless.',
+    badge: '04 · The System',
+    summary: 'Create structure in daily life, build repeatable workflows, and tailor changes so they seamlessly fit your reality.',
+    detail: {
+      lead: 'Every conscious decision drains glucose and mental energy in the prefrontal cortex. If you renegotiate what to eat or when to train every morning and night, willpower depletion wins.',
+      concept: 'Routines are the railway tracks on which your life moves effortlessly. We establish clear if-then triggers designed around your work and family obligations.',
+      ahaMoment: 'Make healthy choices the default and friction-heavy habits difficult. Your environment controls your actions far more than pure willpower.',
+      practiceExample: 'Morning routine: Before making coffee, a large glass of water is already prepared and workout clothes are set out. Zero thinking required – the system takes over.',
+      keyTakeaways: [
+        'Pre-committed if-then calendar triggers eliminate stressful daily negotiation',
+        'Design your environment so good decisions are the path of least resistance',
+        'Keep routines modular and responsive to busy travel or work phases',
+      ],
+      reflectionQuestion: 'Where in your daily routine do you waste the most energy by constantly re-deciding?',
+    },
+  },
+  {
+    id: 'gewohnheiten',
+    num: '05',
+    title: 'HABITS',
+    subtitle: 'What you repeat becomes part of who you are.',
+    badge: '05 · Automation',
+    summary: 'Understand how conscious actions become lifelong habits through repetition. Accept setbacks, learn from them, and keep moving.',
+    detail: {
+      lead: 'When a routine is repeated consistently in the same context, the brain offloads the task to automatic neural circuits. The behavior becomes second nature – like brushing your teeth.',
+      concept: 'Habits are the compound interest of self-mastery. Your health 10 years from now is not shaped by a single heroic weekend, but by what you repeat effortlessly every single day.',
+      ahaMoment: 'A slip-up or a vacation does not erase a habit. A setback is never a failure – it is merely an indicator to step right back into the repetition cycle.',
+      practiceExample: 'After 90 days of consistent execution, eating whole foods or winding down screen-free at night no longer feels like a chore – in fact, skipping it feels unnatural.',
+      keyTakeaways: [
+        'Transition from strenuous conscious effort to effortless automatic loops',
+        'The 1% rule: Small, daily repetitions outperform rare extreme efforts',
+        'Analyze setbacks objectively, optimize the environment, and resume immediately',
+      ],
+      reflectionQuestion: 'Which positive habit do you currently perform without having to think about it at all?',
+    },
+  },
+  {
+    id: 'eigenverantwortung',
+    num: '06',
+    title: 'SELF-SOVEREIGNTY',
+    subtitle: 'Eventually, your path belongs entirely to you.',
+    badge: '06 · True Independence',
+    summary: 'Cultivate independence, confidence, conscious decision-making, and personal accountability to thrive without the coach.',
+    detail: {
+      lead: 'High-level coaching is defined by making itself obsolete over time. The ultimate destination of M³ REPEAT is your permanent personal sovereignty.',
+      concept: 'You do not just follow instructions blindly; you understand the physiology, metabolism, and psychological triggers of your own body so deeply that you become your own lifelong coach.',
+      ahaMoment: 'True freedom means knowing precisely which levers to pull during major life shifts, travel, or stress – without fear of losing control.',
+      practiceExample: 'After finishing coaching, you transition into a new career. Instead of reverting to old patterns, you adjust your M³ routines calmly and independently.',
+      keyTakeaways: [
+        'Shift from passive compliance to sovereign mastery of your own body',
+        'Deep grasp of physiological principles over endless subscription dependency',
+        'Lifelong self-efficacy and unshakable confidence in your own capability',
+      ],
+      reflectionQuestion: 'What is still missing for you to fully trust your own judgment regarding nutrition and training?',
+    },
+  },
+]
+
 export const modules = [
   {
     slug: 'body-reset',
