@@ -81,10 +81,10 @@ export function Home() {
 
           {/* 2. SYSTEM START & ORIENTATION BENTO CARD (Span 4 - Clean White Card with SystemMolecule Visual) */}
           <article className="bento-card bento-card--call-white bento-span-4" style={{ position: 'relative', overflow: 'hidden' }}>
-            <div className="bento-molecule-visual" style={{ position: 'absolute', inset: 0, opacity: 0.18, pointerEvents: 'none' }}>
+            <div className="bento-molecule-visual">
               <SystemMolecule />
             </div>
-            <div className="bento-content" style={{ position: 'relative', zIndex: 2, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div className="bento-content" style={{ position: 'relative', zIndex: 2, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', maxWidth: '350px' }}>
               <div>
                 <div className="bento-tag-row" style={{ marginBottom: 8 }}>
                   <span
