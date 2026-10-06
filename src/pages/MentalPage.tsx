@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Link } from '@tanstack/react-router'
 import { BackLink } from '../components/BackLink'
 import { Img } from '../components/Img'
@@ -13,8 +12,6 @@ export function MentalPage() {
   const { contact, pillars, posts, wa } = useContent()
   const pillar = pillars.find((p) => p.id === 'm3')!
   const relatedPosts = posts.filter((p) => p.pillar === 'm3')
-  const prompts = 'prompts' in pillar ? pillar.prompts : []
-  const [activePrompt, setActivePrompt] = useState<number>(0)
 
   return (
     <main className="bento-page">
@@ -47,6 +44,10 @@ export function MentalPage() {
             </picture>
             <div className="bento-overlay" />
             <div className="bento-content bento-content--hero">
+              <div className="bento-tag-row">
+                <span className="bento-tag bento-tag--gold">{pillar.mark} · {pillar.name}</span>
+                <span className="bento-tag">{pillar.label}</span>
+              </div>
               <h1 className="bento-hero-h1">
                 {pillar.mark} · {pillar.name}. <span>{pillar.title}</span>
               </h1>
@@ -85,7 +86,7 @@ export function MentalPage() {
               </h2>
               <p className="bento-desc">
                 {isEn
-                  ? 'High performance without nervous system regulation leads to systemic burnout:'
+                  ? 'High cognitive pace without proper nervous system recovery creates creeping focus loss:'
                   : 'Hohe kognitive Taktung ohne parasympathische Erholung erzeugt schleichenden Fokusverlust:'}
               </p>
             </div>
@@ -103,82 +104,108 @@ export function MentalPage() {
             </div>
           </article>
 
-          {/* 3. INTERACTIVE DECISION & CLARITY DRILL (Span 12) */}
-          {prompts.length > 0 && (
-            <article className="bento-card bento-card--journal bento-span-12" style={{ padding: 'clamp(22px, 3vw, 36px)' }}>
-              <div className="bento-card-header" style={{ marginBottom: 20 }}>
-                <div>
-                  <span className="bento-tag bento-tag--gold" style={{ marginBottom: 8 }}>{t.mentalDrillEyebrow}</span>
-                  <h2 className="bento-title" style={{ fontSize: 'clamp(20px, 2.4cqi, 28px)' }}>
-                    {t.mentalDrillH}
-                  </h2>
-                  <p className="bento-desc" style={{ maxWidth: '64ch' }}>
-                    {t.mentalDrillLead}
-                  </p>
-                </div>
+          {/* 3. DAS M³-PRINZIP: Echte mentale Arbeit statt Zitate-Kalender (Span 12) */}
+          <article className="bento-card bento-card--journal bento-span-12" style={{ padding: 'clamp(22px, 3vw, 36px)' }}>
+            <div className="bento-card-header" style={{ marginBottom: 20 }}>
+              <div>
+                <span className="bento-tag bento-tag--gold" style={{ marginBottom: 8 }}>
+                  {isEn ? 'THE M³ MINDSET PRINCIPLE' : 'DAS M³ PRINZIP'}
+                </span>
+                <h2 className="bento-title" style={{ fontSize: 'clamp(20px, 2.4cqi, 28px)' }}>
+                  {isEn ? 'Real mental work instead of motivational hype' : 'Echte mentale Arbeit statt Motivations-Blabla'}
+                </h2>
+                <p className="bento-desc" style={{ maxWidth: '68ch' }}>
+                  {isEn
+                    ? 'Mindset at Michél is not positive thinking or daily quotes. It is the practical mechanics that ensure your nutrition (M¹) and training (M²) actually hold in real everyday life.'
+                    : 'Mindset bei Michél ist kein Chaka-Chaka und kein Zitate-Kalender. Es ist die nüchterne Mechanik, die dafür sorgt, dass Ernährung (M¹) und Training (M²) in deinem echten Alltag dauerhaft halten.'}
+                </p>
+              </div>
+            </div>
+
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                gap: 16,
+                width: '100%',
+              }}
+            >
+              {/* Point 1 */}
+              <div
+                style={{
+                  background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
+                  border: '1px solid var(--line)',
+                  borderRadius: 16,
+                  padding: 22,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 10,
+                }}
+              >
+                <span style={{ fontSize: 12, fontWeight: 800, color: pillar.color }}>
+                  01 · ENTSCHEIDUNGSÖKONOMIE
+                </span>
+                <h3 style={{ margin: 0, fontSize: 16.5, fontWeight: 800, color: 'var(--text)' }}>
+                  {isEn ? 'End of daily negotiations' : 'Schluss mit täglicher Selbstverhandlung'}
+                </h3>
+                <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: 'var(--muted)' }}>
+                  {isEn
+                    ? 'Discipline is finite. Anyone who re-negotiates every day whether to workout or what to eat loses to exhaustion by evening. We replace internal negotiations with fixed if-then rules.'
+                    : 'Willenskraft ist eine endliche Ressource. Wer jeden Tag aufs Neue verhandelt, ob, wann und was er tut, verliert abends gegen die Erschöpfung. M³ ersetzt zermürbende Verhandlungen durch feste Wenn-Dann-Standards.'}
+                </p>
               </div>
 
-              <div className="bento-compass-grid">
-                {prompts.map((p, idx) => {
-                  const isSelected = activePrompt === idx
-                  return (
-                    <button
-                      key={p.q}
-                      type="button"
-                      className={`bento-compass-card ${isSelected ? 'selected' : ''}`}
-                      onClick={() => setActivePrompt(idx)}
-                      style={{
-                        minHeight: 180,
-                        justifyContent: 'space-between',
-                        borderColor: isSelected ? pillar.color : 'rgba(255,255,255,0.1)',
-                        background: isSelected
-                          ? 'linear-gradient(145deg, rgba(107, 140, 255, 0.18), rgba(107, 140, 255, 0.05))'
-                          : 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
-                      }}
-                    >
-                      <div>
-                        <span style={{ fontSize: 11, fontWeight: 800, color: isSelected ? pillar.color : 'rgba(255,255,255,0.6)', letterSpacing: '0.08em' }}>
-                          {isEn ? `QUESTION 0${idx + 1}` : `FRAGE 0${idx + 1}`}
-                        </span>
-                        <h3 style={{ margin: '8px 0 0', fontSize: 15.5, fontWeight: 700, color: '#ffffff', lineHeight: 1.4 }}>
-                          {p.q}
-                        </h3>
-                      </div>
-                      <div style={{ marginTop: 12, fontSize: 12, fontWeight: 700, color: isSelected ? pillar.color : 'rgba(255,255,255,0.6)' }}>
-                        {isSelected ? '✓ ' + (isEn ? 'Active reflection' : 'M³ Impuls aktiv') : (isEn ? 'Reflect on this →' : 'Impuls ansehen →')}
-                      </div>
-                    </button>
-                  )
-                })}
+              {/* Point 2 */}
+              <div
+                style={{
+                  background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
+                  border: '1px solid var(--line)',
+                  borderRadius: 16,
+                  padding: 22,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 10,
+                }}
+              >
+                <span style={{ fontSize: 12, fontWeight: 800, color: pillar.color }}>
+                  02 · ECHTE ERHOLUNG
+                </span>
+                <h3 style={{ margin: 0, fontSize: 16.5, fontWeight: 800, color: 'var(--text)' }}>
+                  {isEn ? 'Sleep as real performance work' : 'Schlaf & echtes Runterkommen'}
+                </h3>
+                <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: 'var(--muted)' }}>
+                  {isEn
+                    ? 'Sleep is not wellness — it is biological performance work. Poor sleep ruins tissue repair, drives food cravings, and destroys focus. We establish evenings that actually close decisions.'
+                    : 'Schlaf ist kein Wellness-Thema, sondern die Grundvoraussetzung für Fokus, Geduld und Fettabbau. Wer abends nicht runterfährt, schläft oberflächlich, wacht gerädert auf und trifft tagsüber schlechte Entscheidungen.'}
+                </p>
               </div>
 
-              {prompts[activePrompt] && (
-                <div
-                  className="bento-result-box"
-                  style={{
-                    marginTop: 18,
-                    padding: 22,
-                    borderRadius: 16,
-                    border: '1px solid rgba(107, 140, 255, 0.3)',
-                    background: 'linear-gradient(135deg, rgba(107, 140, 255, 0.12), rgba(0, 0, 0, 0.3))',
-                  }}
-                >
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 8 }}>
-                    <span className="bento-audit-badge" style={{ margin: 0, background: 'rgba(107, 140, 255, 0.2)', borderColor: 'rgba(107, 140, 255, 0.4)', color: '#ffffff' }}>
-                      <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: '50%', backgroundColor: pillar.color }} />
-                      {isEn ? 'M³ SYSTEM IMPULSE & PROTOCOL' : 'M³ SYSTEM-IMPULS & PHYSIOLOGISCHER HEBEL'}
-                    </span>
-                  </div>
-                  <h3 style={{ margin: '4px 0 10px', fontSize: 17.5, fontWeight: 800, color: '#ffffff', lineHeight: 1.35 }}>
-                    {prompts[activePrompt].q}
-                  </h3>
-                  <p style={{ margin: 0, fontSize: 14.5, color: 'rgba(255,255,255,0.88)', lineHeight: 1.6 }}>
-                    {prompts[activePrompt].hint}
-                  </p>
-                </div>
-              )}
-            </article>
-          )}
+              {/* Point 3 */}
+              <div
+                style={{
+                  background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
+                  border: '1px solid var(--line)',
+                  borderRadius: 16,
+                  padding: 22,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 10,
+                }}
+              >
+                <span style={{ fontSize: 12, fontWeight: 800, color: pillar.color }}>
+                  03 · SYSTEM HOLD
+                </span>
+                <h3 style={{ margin: 0, fontSize: 16.5, fontWeight: 800, color: 'var(--text)' }}>
+                  {isEn ? 'The protocol for high-stress days' : 'Der Notfall-Plan für stressige Wochen'}
+                </h3>
+                <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: 'var(--muted)' }}>
+                  {isEn
+                    ? 'A plan that only works during relaxed weeks is useless. We build a protected minimum baseline that holds even during 60-hour weeks, travel, or family chaos — without crashing.'
+                    : 'Ein Plan, der nur bei idealen Bedingungen und bester Laune funktioniert, ist wertlos. M³ definiert unantastbare Mindestroutinen, die selbst bei 14-Stunden-Tagen, Reisen oder vollem Terminkalender greifen.'}
+                </p>
+              </div>
+            </div>
+          </article>
 
           {/* 4. M³ AS THE INTEGRATION ROOF FOR M¹ & M² (Span 12) */}
           <article className="bento-card bento-card--journal bento-span-12" style={{ padding: 'clamp(22px, 3vw, 36px)' }}>
@@ -238,7 +265,7 @@ export function MentalPage() {
                   </p>
                 </div>
                 <div style={{ paddingTop: 10, borderTop: '1px solid var(--line)', fontSize: 12, fontWeight: 600, color: 'var(--text)', opacity: 0.9 }}>
-                  ✓ {isEn ? 'Protects cognitive willpower' : 'Schützt den präfrontalen Cortex vor Ermüdung'}
+                  ✓ {isEn ? 'Protects cognitive willpower' : 'Schützt deinen Kopf vor täglicher Ermüdung'}
                 </div>
               </div>
 
@@ -265,12 +292,12 @@ export function MentalPage() {
                     </span>
                   </div>
                   <h3 style={{ margin: '0 0 6px', fontSize: 16.5, fontWeight: 800, color: 'var(--text)' }}>
-                    {isEn ? 'Sleep & HRV Parasympathetic Protocol' : 'Schlaf- & HRV-Regeneration als Leistungsarbeit'}
+                    {isEn ? 'Sleep & Evening Protocol' : 'Schlaf- & Abend-Setup als Leistungsarbeit'}
                   </h3>
                   <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: 'var(--muted)' }}>
                     {isEn
-                      ? 'Sleep is physiological performance work, not a soft skill. We optimize evening down-regulation, deep sleep phases, and HRV to accelerate metabolic and tissue recovery.'
-                      : 'Schlaf ist kein Wellness-Thema, sondern harte biologische Leistungsarbeit. Protokolle für Einschlaf-Taktung, Reizfilter und HRV-Erholung für maximale Gewebereparatur und Hormonbalance.'}
+                      ? 'Sleep is performance work. Protocols for evening down-regulation, blue-light buffering, and deep sleep recovery for clear focus and hormonal stability.'
+                      : 'Schlaf ist kein Wellness-Thema, sondern harte biologische Leistungsarbeit. Protokolle für Einschlaf-Taktung, Reizfilter und echte Tiefenerholung für Fokus und Hormonbalance.'}
                   </p>
                 </div>
                 <div style={{ paddingTop: 10, borderTop: '1px solid var(--line)', fontSize: 12, fontWeight: 600, color: 'var(--text)', opacity: 0.9 }}>
@@ -372,7 +399,7 @@ export function MentalPage() {
                 </strong>
                 <span style={{ fontSize: 13, color: 'var(--muted)' }}>
                   {isEn
-                    ? 'M³ mindset architecture and sleep protocols are automatically embedded.'
+                    ? 'M³ mindset architecture and sleep protocols are automatically embedded from day one.'
                     : 'Die M³ Entscheidungsarchitektur und Schlaf-Protokolle fließen ab Tag 1 nahtlos mit ein.'}
                 </span>
               </div>
@@ -390,30 +417,7 @@ export function MentalPage() {
             </div>
           </article>
 
-          {/* 5. NEURO-SCIENCE & HRV EVIDENCE (Span 6) */}
-          <article className="bento-card bento-card--journal bento-span-6" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
-            <div>
-              <span className="bento-tag bento-tag--gold" style={{ marginBottom: 8 }}>{isEn ? 'NEURO-PHYSIOLOGY' : 'NEURO-PHYSIOLOGIE'}</span>
-              <h2 className="bento-title" style={{ fontSize: 20 }}>
-                {t.mentalScienceH}
-              </h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 14, marginTop: 16 }}>
-                {pillar.science.map((s, idx) => (
-                  <div key={s.title} style={{ background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)', border: '1px solid var(--line)', borderRadius: 14, padding: 16 }}>
-                    <div style={{ fontSize: 11.5, fontWeight: 800, color: pillar.color, marginBottom: 4 }}>0{idx + 1} · EVIDENCE</div>
-                    <h3 style={{ margin: '0 0 6px', fontSize: 15, fontWeight: 700, color: 'var(--text)' }}>
-                      {s.title}
-                    </h3>
-                    <p style={{ margin: 0, fontSize: 13, color: 'var(--muted)', lineHeight: 1.5 }}>
-                      {s.text}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </article>
-
-          {/* 6. CODEX & EVERYDAY LEADERSHIP EXPERIENCE (Span 6) */}
+          {/* 5. CODEX & EVERYDAY LEADERSHIP EXPERIENCE (Span 6) */}
           <article className="bento-card bento-card--journal bento-span-6" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
             <div>
               <span className="bento-tag bento-tag--gold" style={{ marginBottom: 8 }}>{isEn ? 'REAL LIFE RESILIENCE' : 'ALLTAGS-RESILIENZ'}</span>
@@ -431,7 +435,7 @@ export function MentalPage() {
             </div>
           </article>
 
-          {/* 7. MENTAL PRINCIPLES (Span 6) */}
+          {/* 6. MENTAL PRINCIPLES (Span 6) */}
           <article className="bento-card bento-card--journal bento-span-6" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
             <div>
               <span className="bento-tag bento-tag--gold" style={{ marginBottom: 8 }}>{isEn ? 'OPERATING RULES' : 'M³ MINDSET-REGELN'}</span>
@@ -454,48 +458,51 @@ export function MentalPage() {
             </div>
           </article>
 
-          {/* 8. RELATED JOURNAL ARTICLES (Span 6) */}
-          <article className="bento-card bento-card--journal bento-span-6" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
-            <div>
-              <span className="bento-tag bento-tag--gold" style={{ marginBottom: 8 }}>{isEn ? 'INSIGHTS & JOURNAL' : 'VERTIEFENDE ARTIKEL'}</span>
-              <h2 className="bento-title" style={{ fontSize: 20 }}>
-                {t.blogMore}
-              </h2>
-              {relatedPosts.length > 0 ? (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 16 }}>
-                  {relatedPosts.map((post) => (
-                    <Link
-                      to={`/blog/${post.slug}`}
-                      key={post.slug}
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'space-between',
-                        padding: 14,
-                        borderRadius: 14,
-                        background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
-                        border: '1px solid var(--line)',
-                        textDecoration: 'none',
-                        color: 'var(--text)',
-                      }}
-                    >
-                      <div>
-                        <strong style={{ fontSize: 13.5, display: 'block', color: 'var(--text)' }}>{post.title}</strong>
-                        <span style={{ fontSize: 12, color: 'var(--muted)' }}>
-                          {post.minutes} {t.blogMin} · {post.excerpt.slice(0, 60)}…
+          {/* 7. RELATED JOURNAL ARTICLES (Span 12) */}
+          {relatedPosts.length > 0 && (
+            <article className="bento-card bento-card--journal bento-span-12" style={{ padding: 'clamp(22px, 3vw, 36px)' }}>
+              <div className="bento-card-header" style={{ marginBottom: 20 }}>
+                <div>
+                  <span className="bento-tag bento-tag--gold" style={{ marginBottom: 8 }}>M³ JOURNAL</span>
+                  <h2 className="bento-title" style={{ fontSize: 'clamp(20px, 2.4cqi, 28px)' }}>
+                    {isEn ? 'In-depth articles on Mindset & Recovery' : 'Vertiefende Artikel zu Mindset & Erholung'}
+                  </h2>
+                </div>
+                <Link to="/blog" className="bento-header-link">
+                  {t.blogAll} →
+                </Link>
+              </div>
+
+              <div className="journal-cards-track" style={{ width: '100%', overflowX: 'auto', paddingBottom: 10 }}>
+                {relatedPosts.map((item) => (
+                  <Link
+                    key={item.slug}
+                    to={`/blog/${item.slug}`}
+                    className="journal-feed-card"
+                    style={{ flex: '0 0 clamp(280px, 32vw, 340px)' }}
+                  >
+                    <div className="journal-feed-media">
+                      <Img className="journal-feed-img" src={item.image} alt={item.title} />
+                      <span className="journal-feed-badge">
+                        {item.minutes} {t.blogMin}
+                      </span>
+                    </div>
+                    <div className="journal-feed-body">
+                      <h3 className="journal-feed-title">{item.title}</h3>
+                      <p className="journal-feed-excerpt">{item.excerpt}</p>
+                      <div className="journal-feed-footer">
+                        <span className="journal-feed-cta">
+                          {t.blogRead}
                         </span>
                       </div>
-                      <span style={{ fontSize: 14, color: 'var(--gold)', marginLeft: 12, flexShrink: 0 }}>→</span>
-                    </Link>
-                  ))}
-                </div>
-              ) : (
-                <p className="bento-desc" style={{ marginTop: 12 }}>{isEn ? 'More insights in the journal.' : 'Weitere Artikel im Journal.'}</p>
-              )}
-            </div>
-          </article>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </article>
+          )}
 
-          {/* 9. MASTER BOTTOM CTA BENTO (Span 12) */}
+          {/* 8. MASTER BOTTOM CTA BENTO (Span 12) */}
           <article className="bento-card bento-card--start bento-span-12">
             <picture className="bento-bg">
               <source
