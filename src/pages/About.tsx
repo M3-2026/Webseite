@@ -359,47 +359,57 @@ export function About() {
             </div>
           </article>
 
-          {/* 5. MASTER BOTTOM CTA BENTO (Span 12) - High Res Pushup Asset */}
-          <article className="bento-card bento-card--start bento-span-12">
-            <picture className="bento-bg">
-              <source
-                type="image/webp"
-                srcSet="/images/moodboard/mood-pushup.webp 1x, /images/moodboard/mood-pushup@2x.webp 2x"
-              />
-              <source
-                srcSet="/images/moodboard/mood-pushup.jpg 1x, /images/moodboard/mood-pushup.jpg 2x"
-              />
-              <img
-                src="/images/moodboard/mood-pushup.jpg"
-                alt="M3 Performance System Start"
-                loading="lazy"
-                decoding="async"
-                className="bento-bg-img"
-              />
-            </picture>
-            <div className="bento-overlay" />
-            <div className="bento-content" style={{ maxWidth: 680 }}>
-              <h2 className="bento-title" style={{ fontSize: 'clamp(24px, 3.2cqi, 36px)' }}>
-                {isEn ? 'Work Directly with Michél.' : 'Direkt mit Michél arbeiten.'}
-              </h2>
-              <p className="bento-lead">
-                {isEn
-                  ? 'Get your baseline assessed or schedule your direct 20-30 min intro call.'
-                  : 'Starte mit deiner persönlichen 360° Standortbestimmung oder buche direkt ein 30 Min. Orientierungsgespräch.'}
-              </p>
-              <div className="bento-cta-row" style={{ marginTop: 16 }}>
-                <Link to="/system-start" className="btn-white">
-                  {t.systemStart}
-                </Link>
-                <a
-                  href={contact.cal}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn-white-ghost"
-                  data-cal-link="michelmeier/30min"
-                >
-                  {isEn ? 'Book 30-Min. Slot (Cal.com) →' : '30 Min. Slot buchen (Cal.com) →'}
-                </a>
+          {/* 5. MASTER BOTTOM CTA BENTO (Span 12) - Work Directly with Michél (Full Photo Visible) */}
+          <article className="bento-card bento-card--direct-work bento-span-12">
+            <div className="bento-direct-grid">
+              <div className="bento-direct-content">
+                <div style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginBottom: 8 }}>
+                  <span className="timeline-year-tag" style={{ fontSize: 11 }}>
+                    <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#e8a14a' }} />
+                    {isEn ? 'PERSONAL COACHING' : 'DIREKTE ZUSAMMENARBEIT'}
+                  </span>
+                </div>
+                <h2 className="bento-title" style={{ fontSize: 'clamp(24px, 3.2cqi, 34px)', margin: '6px 0 10px' }}>
+                  {isEn ? 'Work Directly with Michél.' : 'Direkt mit Michél arbeiten.'}
+                </h2>
+                <p className="bento-lead" style={{ fontSize: 14.5, lineHeight: 1.55, color: 'rgba(255,255,255,0.85)', margin: '0 0 20px', maxWidth: '54ch' }}>
+                  {isEn
+                    ? 'Get your baseline assessed with our 360° check or book your personal 30-min. orientation call directly with Michél.'
+                    : 'Starte mit deiner persönlichen 360° Standortbestimmung oder buche direkt ein 30 Min. Orientierungsgespräch mit Michél.'}
+                </p>
+                <div className="bento-cta-row" style={{ marginTop: 0 }}>
+                  <Link to="/system-start" className="btn-white">
+                    {t.systemStart}
+                  </Link>
+                  <a
+                    href={contact.cal}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-white-ghost"
+                    data-cal-link="michelmeier/30min"
+                  >
+                    {isEn ? 'Book 30-Min. Slot (Cal.com) →' : '30 Min. Slot buchen (Cal.com) →'}
+                  </a>
+                </div>
+              </div>
+
+              <div className="bento-direct-visual">
+                <picture className="bento-direct-picture">
+                  <source
+                    type="image/webp"
+                    srcSet="/images/moodboard/mood-pushup.webp 1x, /images/moodboard/mood-pushup@2x.webp 2x"
+                  />
+                  <source
+                    srcSet="/images/moodboard/mood-pushup.jpg 1x, /images/moodboard/mood-pushup.jpg 2x"
+                  />
+                  <img
+                    src="/images/moodboard/mood-pushup.jpg"
+                    alt="Michél Meier Training & Performance"
+                    loading="lazy"
+                    decoding="async"
+                    className="bento-direct-img"
+                  />
+                </picture>
               </div>
             </div>
           </article>
