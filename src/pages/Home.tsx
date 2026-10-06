@@ -79,30 +79,46 @@ export function Home() {
             </div>
           </article>
 
-          {/* 2. 20-MIN ORIENTIERUNGSGESPRÄCH BENTO CARD (Span 4 - Clean White Card, Black Border & Text) */}
-          <article className="bento-card bento-card--call-white bento-span-4">
-            <div className="bento-content">
+          {/* 2. SYSTEM START & ORIENTATION BENTO CARD (Span 4 - Clean White Card with SystemMolecule Visual) */}
+          <article className="bento-card bento-card--call-white bento-span-4" style={{ position: 'relative', overflow: 'hidden' }}>
+            <div className="bento-molecule-visual" style={{ position: 'absolute', inset: 0, opacity: 0.18, pointerEvents: 'none' }}>
+              <SystemMolecule />
+            </div>
+            <div className="bento-content" style={{ position: 'relative', zIndex: 2, height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <h2 className="bento-title">
-                  {isEn ? '20-Min. Strategy Call with Michél' : '20 Min. Orientierungsgespräch mit Michél'}
+                <div className="bento-tag-row" style={{ marginBottom: 8 }}>
+                  <span
+                    className="bento-audit-badge"
+                    style={{
+                      background: 'rgba(0, 0, 0, 0.07)',
+                      color: '#111111',
+                      borderColor: 'rgba(0, 0, 0, 0.14)',
+                    }}
+                  >
+                    {isEn ? 'ORIENTATION' : 'ORIENTIERUNG'}
+                  </span>
+                </div>
+                <h2 className="bento-title" style={{ color: '#000000', fontSize: 'clamp(18px, 1.9cqi, 24px)', margin: '4px 0 8px' }}>
+                  {isEn ? 'Your Entry with M³.' : 'Dein Einstieg mit M³.'}
                 </h2>
-                <p className="bento-desc">
+                <p className="bento-desc" style={{ color: '#222222', fontSize: 13.5, lineHeight: 1.5 }}>
                   {isEn
-                    ? 'We directly and honestly evaluate where your biggest performance lever is. Zero obligation, confidential, at eye level.'
-                    : 'Wir prüfen direkt und ehrlich, wo dein größter Hebel liegt. Unverbindlich, diskret und auf Augenhöhe.'}
+                    ? 'Whether M¹ FOOD, M² MOVE, or M³ REPEAT: Explore the three pillars below — or use System Start to pinpoint your personal starting point. Optional 20-min. discovery call included.'
+                    : 'Ob M¹ FOOD, M² MOVE oder M³ REPEAT: Informiere dich direkt in den drei Säulen darunter – oder finde im System Start heraus, wo dein persönlicher Hebel liegt. Auf Wunsch gerne mit kurzem 20-Min.-Erstgespräch.'}
                 </p>
               </div>
-              <a
-                href={wa.talk}
-                target="_blank"
-                rel="noreferrer"
+              <Link
+                to="/system-start"
                 className="bento-call-btn"
+                style={{ marginTop: 14 }}
               >
-                <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: 16, height: 16 }}>
-                  <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ width: 16, height: 16, marginRight: 4 }}>
+                  <circle cx="12" cy="12" r="10" />
+                  <polyline points="12 16 16 12 12 8" />
+                  <line x1="8" y1="12" x2="16" y2="12" />
                 </svg>
-                {isEn ? 'Free Strategy Session' : 'Kostenloses Erstgespräch'}
-              </a>
+                {isEn ? 'Explore System Start →' : 'Zum System Start →'}
+              </Link>
             </div>
           </article>
 
@@ -113,9 +129,22 @@ export function Home() {
             style={{ '--pillar-color': '#e8a14a' } as CSSProperties}
             aria-label="Pillar M1 Food Metabolism"
           >
-            <div className="bento-molecule-visual" style={{ position: 'absolute', inset: 0, opacity: 0.9, pointerEvents: 'none' }}>
-              <SystemMolecule />
-            </div>
+            <picture className="bento-bg">
+              <source
+                type="image/webp"
+                srcSet="/images/moodboard/mood-kitchen.webp 1x, /images/moodboard/mood-kitchen@2x.webp 2x"
+              />
+              <source
+                srcSet="/images/moodboard/mood-kitchen.jpg 1x, /images/moodboard/mood-kitchen.jpg 2x"
+              />
+              <img
+                src="/images/moodboard/mood-kitchen.jpg"
+                alt="M1 Food Metabolismus & Zellenergie"
+                loading="lazy"
+                decoding="async"
+                className="bento-bg-img"
+              />
+            </picture>
             <div className="bento-overlay" />
             <div className="bento-content">
               <h2 className="bento-title">

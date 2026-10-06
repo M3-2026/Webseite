@@ -3238,6 +3238,10 @@ picture.bento-bg img,
   transition: none !important;
 }
 
+.bento-card--m1 .bento-bg-img {
+  object-position: center 30% !important;
+}
+
 .bento-card--m2 .bento-bg-img {
   object-position: center 30% !important;
 }
@@ -3554,6 +3558,27 @@ picture.bento-bg img,
   max-width: 480px !important;
   max-height: 360px !important;
   transform: translateY(-10px) scale(1.45) !important;
+}
+
+.bento-card--call-white .bento-molecule-visual {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  pointer-events: none;
+  opacity: 0.18;
+}
+
+.bento-card--call-white .bento-molecule-visual .system-molecule {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 380px !important;
+  transform: translate(18%, -4%) scale(1.25) !important;
 }
 
 .bento-molecule-visual .system-molecule {
