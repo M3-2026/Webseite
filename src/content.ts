@@ -221,7 +221,7 @@ export interface RepeatManifesto {
 }
 
 export const repeatManifesto: RepeatManifesto = {
-  eyebrow: 'M³ · PÄDAGOGISCHER LEITGEDANKE',
+  eyebrow: 'M³ · LEITGEDANKE',
   heading: 'Der Weg zur nachhaltigen Veränderung',
   subheading: 'Kein starrer Ablauf, sondern ein fortlaufender, selbstbestimmter Lernprozess.',
   chain: [
@@ -237,7 +237,7 @@ export const repeatManifesto: RepeatManifesto = {
     'Aus Disziplin wird Routine.',
     'Aus Routine wird Gewohnheit.',
   ],
-  repeatRule: 'REPEAT bedeutet: Wiederholen. Lernen. Anpassen. Weitermachen.',
+  repeatRule: '',
   tagline: 'FOOD. MOVE. REPEAT. — Dein Ziel. Dein Weg. Dein System.',
 }
 

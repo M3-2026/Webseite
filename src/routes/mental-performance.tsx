@@ -9,7 +9,7 @@ export const Route = createFileRoute("/mental-performance")({
       {
         name: "description",
         content:
-          "M³ REPEAT: Das mentale und pädagogische Dach des M³-Systems. Aus Motivation wird Disziplin, aus Disziplin Routine, aus Routine Gewohnheit.",
+          "M³ REPEAT: Der Leitgedanke und die Philosophie des M³-Systems. Aus Motivation wird Disziplin, aus Disziplin Routine, aus Routine Gewohnheit.",
       },
     ],
   }),

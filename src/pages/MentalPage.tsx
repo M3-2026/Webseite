@@ -155,7 +155,7 @@ export function MentalPage() {
             </div>
           </article>
 
-          {/* 3. PÄDAGOGISCHER LEITGEDANKE & 6 THEMENKACHELN (Span 12) */}
+          {/* 3. M³ LEITGEDANKE & 6 THEMENKACHELN (Span 12) */}
           <article className="bento-card bento-card--mindset bento-span-12" style={{ padding: 'clamp(22px, 3vw, 36px)' }}>
             
             {/* Section Header */}
@@ -170,44 +170,9 @@ export function MentalPage() {
                 </h2>
                 <p className="bento-desc" style={{ maxWidth: '68ch' }}>
                   {isEn
-                    ? 'In every coaching automatically integrated – no separate package. 6 core themes that turn motivation into lasting habits:'
-                    : 'In jedem Coaching automatisch integriert – kein separates Paket. 6 Kernthemen für deine nachhaltige Veränderung:'}
+                    ? '6 core themes that turn motivation into lasting habits:'
+                    : '6 Kernthemen für deine nachhaltige Veränderung:'}
                 </p>
-              </div>
-            </div>
-
-            {/* Pedagogical Manifesto Banner */}
-            <div className="bento-repeat-manifesto">
-              <div className="bento-repeat-manifesto-grid">
-                <div>
-                  <span style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.08em', color: '#8ea9ff', textTransform: 'uppercase', display: 'block', marginBottom: 8 }}>
-                    {isEn ? 'CORE PRINCIPLE' : 'ZENTRALE BOTSCHAFT'}
-                  </span>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-                    {repeatManifesto.coreMessage.map((line, idx) => (
-                      <strong
-                        key={idx}
-                        style={{
-                          fontSize: 'clamp(15px, 1.6cqi, 18px)',
-                          color: '#ffffff',
-                          fontWeight: 800,
-                          letterSpacing: '-0.01em',
-                        }}
-                      >
-                        {line}
-                      </strong>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="bento-repeat-manifesto-side">
-                  <p style={{ margin: '0 0 8px', fontSize: 14.5, fontWeight: 700, color: '#ffffff', lineHeight: 1.5 }}>
-                    {repeatManifesto.repeatRule}
-                  </p>
-                  <span style={{ fontSize: 13, color: '#8ea9ff', fontWeight: 600, display: 'block' }}>
-                    {repeatManifesto.tagline}
-                  </span>
-                </div>
               </div>
             </div>
 
@@ -232,9 +197,6 @@ export function MentalPage() {
                     <div className="bento-repeat-head">
                       <span className="bento-mindset-badge">
                         {theme.badge}
-                      </span>
-                      <span className="bento-mindset-badge-pill">
-                        {isEn ? 'Integrated' : 'Inklusive'}
                       </span>
                     </div>
                     <h3 className="bento-repeat-title">
@@ -262,6 +224,54 @@ export function MentalPage() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Compact Central Message & Tagline Bar below the 6 Theme Tiles */}
+            <div
+              className="bento-repeat-bottom-strip"
+              style={{
+                marginTop: 22,
+                padding: '16px 20px',
+                borderRadius: 14,
+                background: 'linear-gradient(135deg, rgba(107, 140, 255, 0.12), rgba(107, 140, 255, 0.03))',
+                border: '1px solid rgba(107, 140, 255, 0.22)',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                textAlign: 'center',
+                gap: 8,
+              }}
+            >
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexWrap: 'wrap',
+                  gap: '8px 16px',
+                  fontSize: 'clamp(13.5px, 1.4cqi, 15px)',
+                  fontWeight: 700,
+                  color: '#ffffff',
+                }}
+              >
+                <span>{isEn ? 'Motivation turns into discipline' : 'Aus Motivation wird Disziplin'}</span>
+                <span style={{ color: '#8ea9ff', opacity: 0.6 }}>→</span>
+                <span>{isEn ? 'Discipline turns into routine' : 'Aus Disziplin wird Routine'}</span>
+                <span style={{ color: '#8ea9ff', opacity: 0.6 }}>→</span>
+                <span>{isEn ? 'Routine turns into habit' : 'Aus Routine wird Gewohnheit'}</span>
+              </div>
+              <div
+                style={{
+                  fontSize: 'clamp(12px, 1.2cqi, 13px)',
+                  fontWeight: 800,
+                  letterSpacing: '0.06em',
+                  color: '#8ea9ff',
+                  textTransform: 'uppercase',
+                }}
+              >
+                {repeatManifesto.tagline}
+              </div>
             </div>
 
             {/* Bottom Bridge Banner */}
@@ -438,10 +448,10 @@ export function MentalPage() {
             {/* Modal Body */}
             <div className="repeat-modal-body">
               
-              {/* 1. Pädagogischer Kern */}
+              {/* 1. Leitgedanke */}
               <div className="repeat-modal-section">
                 <span className="repeat-modal-label">
-                  {isEn ? '1. Pedagogical Foundation' : '1. Der pädagogische Kern'}
+                  {isEn ? '1. The Guiding Principle' : '1. Der Leitgedanke'}
                 </span>
                 <p className="repeat-modal-text">
                   {selectedTheme.detail.lead}
