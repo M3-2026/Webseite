@@ -79,7 +79,7 @@ export function PillarPage({ slug: slugProp }: { slug?: string }) {
             <div className="bento-overlay" />
             <div className="bento-content bento-content--hero">
               <div className="bento-tag-row">
-                <span className="bento-tag bento-tag--gold">{pillar.mark} SÄULE</span>
+                <span className="bento-tag bento-tag--gold">{pillar.mark} · {pillar.name}</span>
                 <span className="bento-tag">{pillar.label}</span>
               </div>
               <h1 className="bento-hero-h1" style={{ marginTop: 6 }}>
