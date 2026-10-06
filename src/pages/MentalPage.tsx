@@ -76,9 +76,12 @@ export function MentalPage() {
 
           {/* 2. NEURAL STRESS & SIGNALS AUDIT CARD (Span 4) */}
           <article className="bento-card bento-card--audit-step bento-span-4">
-            <div>
-              <span className="bento-audit-badge">{isEn ? 'NEURO-STRESS PROFILE' : 'NEURONALE RESILIENZ'}</span>
-              <h2 className="bento-title" style={{ fontSize: 21 }}>
+            <div className="bento-audit-head">
+              <span className="bento-audit-badge">
+                <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: '50%', backgroundColor: pillar.color }} />
+                {isEn ? 'NEURO-STRESS PROFILE' : 'NEURONALE RESILIENZ'}
+              </span>
+              <h2 className="bento-title" style={{ fontSize: 'clamp(18px, 1.8cqi, 22px)' }}>
                 {pillar.label} · {t.mentalSignalsH}
               </h2>
               <p className="bento-desc">
@@ -88,12 +91,16 @@ export function MentalPage() {
               </p>
             </div>
             <ul className="bento-audit-points">
-              {pillar.signals.map((sig) => (
-                <li key={sig}>{sig}</li>
+              {pillar.signals.map((sig, idx) => (
+                <li key={idx}>
+                  <span className="bento-audit-bullet" style={{ color: pillar.color }}>✓</span>
+                  <span>{sig}</span>
+                </li>
               ))}
             </ul>
-            <div style={{ fontSize: 12, fontWeight: 700, color: '#ffffff', opacity: 0.85 }}>
-              {isEn ? '→ Mindset trained like physical muscle' : '→ Trainiert wie ein biologischer Muskel'}
+            <div className="bento-audit-footer">
+              <span style={{ color: pillar.color, fontWeight: 800 }}>→</span>
+              <span>{isEn ? 'Mindset trained like a biological muscle.' : 'Trainiert wie ein biologischer Muskel.'}</span>
             </div>
           </article>
 
@@ -193,19 +200,20 @@ export function MentalPage() {
           )}
 
           {/* 5. NEURO-SCIENCE & HRV EVIDENCE (Span 6) */}
-          <article className="bento-card bento-card--audit-step bento-span-6" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
+          <article className="bento-card bento-card--journal bento-span-6" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
             <div>
-              <span className="bento-audit-badge">{isEn ? 'NEURO-PHYSIOLOGY' : 'NEURO-PHYSIOLOGIE'}</span>
+              <span className="bento-tag bento-tag--gold" style={{ marginBottom: 8 }}>{isEn ? 'NEURO-PHYSIOLOGY' : 'NEURO-PHYSIOLOGIE'}</span>
               <h2 className="bento-title" style={{ fontSize: 20 }}>
                 {t.mentalScienceH}
               </h2>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 16, marginTop: 16 }}>
-                {pillar.science.map((s) => (
-                  <div key={s.title} style={{ borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: 14 }}>
-                    <h3 style={{ margin: '0 0 4px', fontSize: 15, fontWeight: 700, color: '#ffffff' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 14, marginTop: 16 }}>
+                {pillar.science.map((s, idx) => (
+                  <div key={s.title} style={{ background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)', border: '1px solid var(--line)', borderRadius: 14, padding: 16 }}>
+                    <div style={{ fontSize: 11.5, fontWeight: 800, color: pillar.color, marginBottom: 4 }}>0{idx + 1} · EVIDENCE</div>
+                    <h3 style={{ margin: '0 0 6px', fontSize: 15, fontWeight: 700, color: 'var(--text)' }}>
                       {s.title}
                     </h3>
-                    <p style={{ margin: 0, fontSize: 13, color: 'rgba(255,255,255,0.72)', lineHeight: 1.45 }}>
+                    <p style={{ margin: 0, fontSize: 13, color: 'var(--muted)', lineHeight: 1.5 }}>
                       {s.text}
                     </p>
                   </div>
@@ -215,17 +223,17 @@ export function MentalPage() {
           </article>
 
           {/* 6. CODEX & EVERYDAY LEADERSHIP EXPERIENCE (Span 6) */}
-          <article className="bento-card bento-card--audit-step bento-span-6" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
+          <article className="bento-card bento-card--journal bento-span-6" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
             <div>
-              <span className="bento-audit-badge">{isEn ? 'REAL LIFE RESILIENCE' : 'ALLTAGS-RESILIENZ'}</span>
+              <span className="bento-tag bento-tag--gold" style={{ marginBottom: 8 }}>{isEn ? 'REAL LIFE RESILIENCE' : 'ALLTAGS-RESILIENZ'}</span>
               <h2 className="bento-title" style={{ fontSize: 20 }}>
                 {pillar.experience.title}
               </h2>
-              <p style={{ margin: '14px 0 0', fontSize: 13.5, color: '#333333', lineHeight: 1.55 }}>
+              <p style={{ margin: '14px 0 0', fontSize: 13.5, color: 'var(--muted)', lineHeight: 1.55 }}>
                 {pillar.experience.text}
               </p>
-              <div style={{ marginTop: 18, padding: 14, borderRadius: 12, background: 'rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.08)' }}>
-                <p style={{ margin: 0, fontSize: 13, fontStyle: 'italic', color: '#111111', lineHeight: 1.45 }}>
+              <div style={{ marginTop: 18, padding: 16, borderRadius: 14, background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)', border: '1px solid var(--line)' }}>
+                <p style={{ margin: 0, fontSize: 13, fontStyle: 'italic', color: 'var(--text)', lineHeight: 1.5 }}>
                   „{pillar.experience.quote}“
                 </p>
               </div>
@@ -233,19 +241,20 @@ export function MentalPage() {
           </article>
 
           {/* 7. MENTAL PRINCIPLES (Span 6) */}
-          <article className="bento-card bento-card--audit-step bento-span-6" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
+          <article className="bento-card bento-card--journal bento-span-6" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
             <div>
-              <span className="bento-audit-badge">{isEn ? 'OPERATING RULES' : 'M³ MINDSET-REGELN'}</span>
+              <span className="bento-tag bento-tag--gold" style={{ marginBottom: 8 }}>{isEn ? 'OPERATING RULES' : 'M³ MINDSET-REGELN'}</span>
               <h2 className="bento-title" style={{ fontSize: 20 }}>
                 {t.mentalPrinciplesH}
               </h2>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 14, marginTop: 16 }}>
-                {pillar.principles.map((pr) => (
-                  <div key={pr.title} style={{ borderBottom: '1px solid rgba(0,0,0,0.08)', paddingBottom: 12 }}>
-                    <strong style={{ display: 'block', fontSize: 14, color: '#111111', marginBottom: 2 }}>
+                {pillar.principles.map((pr, idx) => (
+                  <div key={pr.title} style={{ background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)', border: '1px solid var(--line)', borderRadius: 14, padding: 16 }}>
+                    <div style={{ fontSize: 11.5, fontWeight: 800, color: pillar.color, marginBottom: 4 }}>REGEL 0{idx + 1}</div>
+                    <strong style={{ display: 'block', fontSize: 14.5, color: 'var(--text)', marginBottom: 4 }}>
                       {pr.title}
                     </strong>
-                    <span style={{ fontSize: 12.5, color: '#555555', lineHeight: 1.4 }}>
+                    <span style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.5 }}>
                       {pr.text}
                     </span>
                   </div>
@@ -255,9 +264,9 @@ export function MentalPage() {
           </article>
 
           {/* 8. RELATED JOURNAL ARTICLES (Span 6) */}
-          <article className="bento-card bento-card--audit-step bento-span-6" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
+          <article className="bento-card bento-card--journal bento-span-6" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
             <div>
-              <span className="bento-audit-badge">{isEn ? 'INSIGHTS & JOURNAL' : 'VERTIEFENDE ARTIKEL'}</span>
+              <span className="bento-tag bento-tag--gold" style={{ marginBottom: 8 }}>{isEn ? 'INSIGHTS & JOURNAL' : 'VERTIEFENDE ARTIKEL'}</span>
               <h2 className="bento-title" style={{ fontSize: 20 }}>
                 {t.blogMore}
               </h2>
@@ -271,21 +280,21 @@ export function MentalPage() {
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'space-between',
-                        padding: 12,
-                        borderRadius: 12,
-                        background: 'rgba(0,0,0,0.03)',
-                        border: '1px solid rgba(0,0,0,0.08)',
+                        padding: 14,
+                        borderRadius: 14,
+                        background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
+                        border: '1px solid var(--line)',
                         textDecoration: 'none',
-                        color: '#111111',
+                        color: 'var(--text)',
                       }}
                     >
                       <div>
-                        <strong style={{ fontSize: 13.5, display: 'block', color: '#111111' }}>{post.title}</strong>
-                        <span style={{ fontSize: 12, color: '#666666' }}>
+                        <strong style={{ fontSize: 13.5, display: 'block', color: 'var(--text)' }}>{post.title}</strong>
+                        <span style={{ fontSize: 12, color: 'var(--muted)' }}>
                           {post.minutes} {t.blogMin} · {post.excerpt.slice(0, 60)}…
                         </span>
                       </div>
-                      <span style={{ fontSize: 14, color: '#111111', marginLeft: 12, flexShrink: 0 }}>→</span>
+                      <span style={{ fontSize: 14, color: 'var(--gold)', marginLeft: 12, flexShrink: 0 }}>→</span>
                     </Link>
                   ))}
                 </div>

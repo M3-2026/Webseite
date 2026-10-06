@@ -113,26 +113,31 @@ export function PillarPage({ slug: slugProp }: { slug?: string }) {
 
           {/* 2. SIGNALS / AUDIT CARD (Span 4) */}
           <article className="bento-card bento-card--audit-step bento-span-4">
-            <div>
-              <span className="bento-audit-badge">{isEn ? 'SIGNALS & ALARMS' : 'ALARMSIGNALE'}</span>
-              <h2 className="bento-title" style={{ fontSize: 21 }}>
+            <div className="bento-audit-head">
+              <span className="bento-audit-badge">
+                <span style={{ display: 'inline-block', width: 6, height: 6, borderRadius: '50%', backgroundColor: pillar.color }} />
+                {isEn ? 'SIGNALS & ALARMS' : 'ALARMSIGNALE'}
+              </span>
+              <h2 className="bento-title" style={{ fontSize: 'clamp(18px, 1.8cqi, 22px)' }}>
                 {t.signalsH}
               </h2>
-              <p className="bento-desc" style={{ marginTop: 8, fontSize: 13, lineHeight: 1.5 }}>
+              <p className="bento-desc">
                 {isEn ? 'If you recognize these symptoms, start with this pillar:' : 'Wenn du diese Symptome spürst, ist diese Säule dein Startpunkt:'}
               </p>
             </div>
 
-            <ul className="bento-audit-points" style={{ marginTop: 14 }}>
+            <ul className="bento-audit-points">
               {pillar.signals.map((signal, idx) => (
                 <li key={idx}>
+                  <span className="bento-audit-bullet" style={{ color: pillar.color }}>✓</span>
                   <span>{signal}</span>
                 </li>
               ))}
             </ul>
 
-            <div style={{ fontSize: 12, fontWeight: 700, color: '#111111', opacity: 0.9 }}>
-              {isEn ? '→ Prioritize root cause over compensation.' : '→ Ursache beheben statt kompensieren.'}
+            <div className="bento-audit-footer">
+              <span style={{ color: pillar.color, fontWeight: 800 }}>→</span>
+              <span>{isEn ? 'Prioritize root cause over compensation.' : 'Ursache beheben statt kompensieren.'}</span>
             </div>
           </article>
 

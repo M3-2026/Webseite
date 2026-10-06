@@ -4460,17 +4460,26 @@ picture.bento-bg img,
 
 .bento-card--audit-step {
   background: #ffffff !important;
-  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid rgba(0, 0, 0, 0.09) !important;
   color: #111111 !important;
   min-height: auto;
-  padding: clamp(22px, 2.8cqi, 32px) !important;
-  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.35), 0 4px 14px rgba(0, 0, 0, 0.12) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  padding: clamp(20px, 2.4cqi, 28px) !important;
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.28), 0 4px 14px rgba(0, 0, 0, 0.08) !important;
+  border-radius: 20px !important;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
 .bento-card--audit-step:hover {
-  transform: translateY(-3px) !important;
-  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.45), 0 8px 20px rgba(0, 0, 0, 0.18) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35), 0 6px 18px rgba(0, 0, 0, 0.12) !important;
+}
+
+.bento-card--audit-step .bento-audit-head {
+  display: flex;
+  flex-direction: column;
 }
 
 .bento-card--audit-step .bento-title,
@@ -4478,14 +4487,22 @@ picture.bento-bg img,
 .bento-card--audit-step h3,
 .bento-card--audit-step h4 {
   color: #111111 !important;
+  font-weight: 850 !important;
+  line-height: 1.24 !important;
+  letter-spacing: -0.02em !important;
   text-shadow: none !important;
+  margin: 4px 0 6px 0;
 }
 
 .bento-card--audit-step .bento-desc,
 .bento-card--audit-step .bento-lead,
 .bento-card--audit-step p {
   color: #333333 !important;
+  font-size: 13.5px !important;
+  line-height: 1.48 !important;
+  font-weight: 500 !important;
   text-shadow: none !important;
+  margin: 0;
 }
 
 .bento-card--audit-step div[style*="borderBottom"] {
@@ -4497,54 +4514,74 @@ picture.bento-bg img,
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #111111 !important;
-  background: rgba(0, 0, 0, 0.06) !important;
+  background: rgba(0, 0, 0, 0.05) !important;
   border: 1px solid rgba(0, 0, 0, 0.1) !important;
-  border-radius: 6px;
-  padding: 3px 8px;
-  margin-bottom: 8px;
+  border-radius: 999px;
+  padding: 3px 9px;
+  margin-bottom: 6px;
+  width: fit-content;
   opacity: 1 !important;
 }
 
 .bento-audit-points,
 .bento-card--audit-step .bento-audit-points {
-  margin: 14px 0 0;
+  margin: 10px 0;
   padding: 0;
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  flex: 1;
+  justify-content: center;
 }
 
 .bento-audit-points li,
 .bento-card--audit-step .bento-audit-points li {
   font-size: 13px;
-  line-height: 1.45;
-  color: #222222 !important;
+  line-height: 1.42;
+  font-weight: 550;
+  color: #1a1a1a !important;
   display: flex;
   align-items: flex-start;
   gap: 8px;
+  padding: 8px 10px;
+  background: rgba(0, 0, 0, 0.035);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  transition: background 0.18s ease, border-color 0.18s ease;
 }
 
-.bento-audit-points li::before,
-.bento-card--audit-step .bento-audit-points li::before {
-  content: '✓';
-  color: #111111 !important;
+.bento-audit-points li:hover,
+.bento-card--audit-step .bento-audit-points li:hover {
+  background: rgba(0, 0, 0, 0.055);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.bento-audit-bullet {
   font-weight: 900;
+  font-size: 13px;
+  line-height: 1;
   flex-shrink: 0;
+  margin-top: 2px;
 }
 
-.bento-card--audit-step div[style*="color: #ffffff"],
-.bento-card--audit-step div[style*="color:#ffffff"],
-.bento-card--audit-step strong,
-.bento-card--audit-step span[style*="color: rgba(255"],
-.bento-card--audit-step span[style*="color:#ffffff"],
-.bento-card--audit-step a {
+.bento-card--audit-step .bento-audit-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 750;
   color: #111111 !important;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.045);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  margin-top: 4px;
 }
 
 .bento-card--audit-step strong {
