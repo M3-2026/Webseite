@@ -154,7 +154,7 @@ export function Home() {
                   : 'Stabiler Blutzucker, Darmgesundheit und optimale Nährstoffverwertung für konstante Tagesenergie.'}
               </p>
               <div className="bento-arrow-btn">
-                <span>{isEn ? 'Explore M¹ →' : 'M¹ entdecken →'}</span>
+                <span>{isEn ? 'Explore M¹ here →' : 'Entdecke hier M¹ →'}</span>
               </div>
             </div>
           </Link>
@@ -197,7 +197,7 @@ export function Home() {
                   : 'Gelenkstabilität, funktionelle Mobilität und maximale Belastbarkeit im Alltag und Sport.'}
               </p>
               <div className="bento-arrow-btn">
-                <span>{isEn ? 'Explore M² →' : 'M² entdecken →'}</span>
+                <span>{isEn ? 'Explore M² here →' : 'Entdecke hier M² →'}</span>
               </div>
             </div>
           </Link>
@@ -240,7 +240,7 @@ export function Home() {
                   : 'Entscheidungsökonomie, tiefer Schlaf und Stressresilienz – trainiert wie ein Muskel.'}
               </p>
               <div className="bento-arrow-btn">
-                <span>{isEn ? 'Explore M³ →' : 'M³ entdecken →'}</span>
+                <span>{isEn ? 'Explore M³ here →' : 'Entdecke hier M³ →'}</span>
               </div>
             </div>
           </Link>
