@@ -40,7 +40,10 @@ export function PillarPage({ slug: slugProp }: { slug?: string }) {
       </main>
     )
   }
-  const related = modules.filter((m) => m.pillar === pillar.id).slice().sort(byTier)
+  const related = modules
+    .filter((m) => m.pillar === pillar.id && m.slug !== 'body-reset')
+    .slice()
+    .sort(byTier)
   const relatedPosts = posts.filter((p) => p.pillar === pillar.id)
 
   const moodMap: Record<string, string> = {
@@ -247,210 +250,56 @@ export function PillarPage({ slug: slugProp }: { slug?: string }) {
               </Link>
             </div>
 
-            {pillar.id === 'm1' ? (() => {
-              const nutritionMod = modules.find((m) => m.slug === 'ernaehrungscoaching')
-              const cureMods = ['darm-stoffwechselbegleitung', 'stoffwechselkur', 'goldene-grundversorgung']
-                .map((s) => modules.find((m) => m.slug === s))
-                .filter(Boolean) as typeof modules
-
-              return (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 20, width: '100%' }}>
-                  {/* Bereich 1: 1:1 Alltags- & Ernährungsstruktur */}
-                  {nutritionMod && (
-                    <div>
-                      <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', color: pillar.color, marginBottom: 10 }}>
-                        {isEn ? '1. Daily Nutrition & Structure (1:1 Coaching)' : '1. Alltags- & Ernährungsstruktur (1:1 Coaching)'}
-                      </div>
-                      <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 16 }}>
-                        <Link
-                          to={`/${nutritionMod.slug}`}
-                          style={{
-                            background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
-                            border: '1px solid var(--line)',
-                            borderRadius: 16,
-                            overflow: 'hidden',
-                            textDecoration: 'none',
-                            color: 'var(--text)',
-                            display: 'flex',
-                            flexDirection: 'row',
-                            flexWrap: 'wrap',
-                            transition: 'border-color 0.2s ease',
-                          }}
-                        >
-                          <div style={{ position: 'relative', width: 'clamp(180px, 28vw, 240px)', minHeight: 140, overflow: 'hidden' }}>
-                            <Img
-                              src={nutritionMod.image}
-                              alt={nutritionMod.title}
-                              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                            />
-                            <span
-                              className="journal-feed-badge"
-                              style={{ position: 'absolute', top: 10, left: 10 }}
-                            >
-                              {nutritionMod.badge}
-                            </span>
-                          </div>
-                          <div style={{ padding: 18, display: 'flex', flexDirection: 'column', gap: 6, flex: 1, minWidth: 260, justifyContent: 'space-between' }}>
-                            <div>
-                              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 6 }}>
-                                <h3 style={{ margin: 0, fontSize: 17, fontWeight: 800 }}>{nutritionMod.title}</h3>
-                                {nutritionMod.priceLabel && (
-                                  <span style={{ fontSize: 11.5, fontWeight: 700, color: 'var(--muted)' }}>
-                                    {nutritionMod.priceLabel}
-                                  </span>
-                                )}
-                              </div>
-                              <p style={{ margin: '6px 0 0', fontSize: 13, color: 'var(--muted)', lineHeight: 1.45 }}>
-                                {nutritionMod.text}
-                              </p>
-                            </div>
-                            <div style={{ marginTop: 10, paddingTop: 8, borderTop: '1px solid var(--line)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                              <span style={{ fontSize: 12.5, fontWeight: 700, color: pillar.color }}>{t.detailsView} →</span>
-                            </div>
-                          </div>
-                        </Link>
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Bereich 2: M³ Body Reset · Die 3 biologischen Bausteine */}
-                  <div
-                    style={{
-                      background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
-                      border: `1px solid color-mix(in srgb, ${pillar.color} 35%, var(--line))`,
-                      borderRadius: 18,
-                      padding: '24px clamp(18px, 2.5vw, 28px)',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      gap: 16,
-                    }}
-                  >
-                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
-                      <div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
-                          <span className="bento-tag bento-tag--gold">
-                            {isEn ? '2. M³ BODY RESET · PROTOCOLS' : '2. M³ BODY RESET · STOFFWECHSEL- & ZELL-PROTOKOLLE'}
-                          </span>
-                          <span style={{ fontSize: 11.5, fontWeight: 700, color: pillar.color }}>
-                            {isEn ? 'Product purchase · 1:1 guidance with Michél included' : 'Produktbezug · Persönliche 1:1 Betreuung inklusive'}
-                          </span>
-                        </div>
-                        <p style={{ margin: '6px 0 0', fontSize: 13.5, color: 'var(--muted)', lineHeight: 1.45, maxWidth: '75ch' }}>
-                          {isEn
-                            ? 'Three standalone biological building blocks according to your needs. Michél’s 1:1 coaching is fully included.'
-                            : 'Drei eigenständige biologische Bausteine nach individuellem Bedarf. Du beziehst nur die Produkte, Michéls persönliche 1:1 Betreuung ist für dich inklusive.'}
-                        </p>
-                      </div>
-                      <Link to="/body-reset" className="btn-white-ghost" style={{ fontSize: 12, padding: '6px 14px' }}>
-                        {isEn ? 'Explore Body Reset Roof →' : 'Das 360° Reset-Dach →'}
-                      </Link>
-                    </div>
-
-                    <div
-                      style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',
-                        gap: 16,
-                        width: '100%',
-                      }}
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+                gap: 14,
+                width: '100%',
+              }}
+            >
+              {related.map((mod) => (
+                <Link
+                  key={mod.slug}
+                  to={`/${mod.slug}`}
+                  style={{
+                    background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
+                    border: '1px solid var(--line)',
+                    borderRadius: 16,
+                    overflow: 'hidden',
+                    textDecoration: 'none',
+                    color: 'var(--text)',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    transition: 'border-color 0.2s ease',
+                  }}
+                >
+                  <div style={{ position: 'relative', width: '100%', height: 160, overflow: 'hidden' }}>
+                    <Img
+                      src={mod.image}
+                      alt={mod.title}
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    />
+                    <span
+                      className="journal-feed-badge"
+                      style={{ position: 'absolute', top: 10, left: 10 }}
                     >
-                      {cureMods.map((mod) => (
-                        <Link
-                          key={mod.slug}
-                          to={`/${mod.slug}`}
-                          style={{
-                            background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
-                            border: '1px solid var(--line)',
-                            borderRadius: 16,
-                            overflow: 'hidden',
-                            textDecoration: 'none',
-                            color: 'var(--text)',
-                            display: 'flex',
-                            flexDirection: 'column',
-                            transition: 'border-color 0.2s ease',
-                          }}
-                        >
-                          <div style={{ position: 'relative', width: '100%', height: 150, overflow: 'hidden' }}>
-                            <Img
-                              src={mod.image}
-                              alt={mod.title}
-                              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                            />
-                            <span
-                              className="journal-feed-badge"
-                              style={{ position: 'absolute', top: 10, left: 10 }}
-                            >
-                              {mod.badge}
-                            </span>
-                          </div>
-                          <div style={{ padding: 16, display: 'flex', flexDirection: 'column', gap: 6, flex: 1, justifyContent: 'space-between' }}>
-                            <div>
-                              <h3 style={{ margin: 0, fontSize: 16, fontWeight: 800 }}>{mod.title}</h3>
-                              <p style={{ margin: '4px 0 0', fontSize: 12.8, color: 'var(--muted)', lineHeight: 1.42 }}>{mod.kicker}</p>
-                            </div>
-                            <div style={{ marginTop: 10, paddingTop: 8, borderTop: '1px solid var(--line)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                              <span style={{ fontSize: 12, fontWeight: 700, color: pillar.color }}>{t.detailsView} →</span>
-                              {mod.priceLabel && <span style={{ fontSize: 11, fontWeight: 600, color: 'var(--muted)' }}>{mod.priceLabel}</span>}
-                            </div>
-                          </div>
-                        </Link>
-                      ))}
+                      {mod.badge}
+                    </span>
+                  </div>
+                  <div style={{ padding: 18, display: 'flex', flexDirection: 'column', gap: 6, flex: 1, justifyContent: 'space-between' }}>
+                    <div>
+                      <h3 style={{ margin: 0, fontSize: 16, fontWeight: 800 }}>{mod.title}</h3>
+                      <p style={{ margin: '4px 0 0', fontSize: 13, color: 'var(--muted)', lineHeight: 1.45 }}>{mod.kicker}</p>
+                    </div>
+                    <div style={{ marginTop: 12, paddingTop: 10, borderTop: '1px solid var(--line)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                      <span style={{ fontSize: 12.5, fontWeight: 700, color: pillar.color || 'var(--gold)' }}>{t.detailsView} →</span>
+                      {mod.priceLabel && <span style={{ fontSize: 12, fontWeight: 600, color: 'var(--muted)' }}>{mod.priceLabel}</span>}
                     </div>
                   </div>
-                </div>
-              )
-            })() : (
-              <div
-                style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-                  gap: 16,
-                  width: '100%',
-                }}
-              >
-                {related.map((mod) => (
-                  <Link
-                    key={mod.slug}
-                    to={`/${mod.slug}`}
-                    style={{
-                      background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
-                      border: '1px solid var(--line)',
-                      borderRadius: 16,
-                      overflow: 'hidden',
-                      textDecoration: 'none',
-                      color: 'var(--text)',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      transition: 'border-color 0.2s ease',
-                    }}
-                  >
-                    <div style={{ position: 'relative', width: '100%', height: 160, overflow: 'hidden' }}>
-                      <Img
-                        src={mod.image}
-                        alt={mod.title}
-                        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                      />
-                      <span
-                        className="journal-feed-badge"
-                        style={{ position: 'absolute', top: 10, left: 10 }}
-                      >
-                        {mod.badge}
-                      </span>
-                    </div>
-                    <div style={{ padding: 18, display: 'flex', flexDirection: 'column', gap: 6, flex: 1, justifyContent: 'space-between' }}>
-                      <div>
-                        <h3 style={{ margin: 0, fontSize: 16, fontWeight: 800 }}>{mod.title}</h3>
-                        <p style={{ margin: '4px 0 0', fontSize: 13, color: 'var(--muted)', lineHeight: 1.45 }}>{mod.kicker}</p>
-                      </div>
-                      <div style={{ marginTop: 12, paddingTop: 10, borderTop: '1px solid var(--line)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-                        <span style={{ fontSize: 12.5, fontWeight: 700, color: 'var(--gold)' }}>{t.detailsView}</span>
-                        {mod.priceLabel && <span style={{ fontSize: 12, fontWeight: 600, color: 'var(--muted)' }}>{mod.priceLabel}</span>}
-                      </div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            )}
+                </Link>
+              ))}
+            </div>
           </article>
 
           {/* 6. RELATED JOURNAL ARTICLES (Span 12) */}

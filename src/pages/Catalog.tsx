@@ -93,11 +93,10 @@ export function Catalog() {
 
           {/* 3. PILLAR BY PILLAR SECTIONS (Span 12 each) */}
           {pillars.map((pillar) => {
-            const group = modules.filter((m) => m.pillar === pillar.id).slice().sort(byTier)
-            const nutritionMod = modules.find((m) => m.slug === 'ernaehrungscoaching')
-            const cureMods = ['darm-stoffwechselbegleitung', 'stoffwechselkur', 'goldene-grundversorgung']
-              .map((s) => modules.find((m) => m.slug === s))
-              .filter(Boolean) as typeof modules
+            const group = modules
+              .filter((m) => m.pillar === pillar.id && m.slug !== 'body-reset')
+              .slice()
+              .sort(byTier)
 
             return (
               <article className="bento-card bento-card--journal bento-span-12" key={pillar.id} style={{ padding: 'clamp(22px, 3vw, 36px)' }}>
@@ -115,96 +114,7 @@ export function Catalog() {
                   </Link>
                 </div>
 
-                {pillar.id === 'm1' ? (
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 20, width: '100%' }}>
-                    {/* Bereich 1: 1:1 Alltags- & Ernährungsstruktur */}
-                    {nutritionMod && (
-                      <div>
-                        <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#e8a14a', marginBottom: 10 }}>
-                          {isEn ? '1. Daily Nutrition & Structure (1:1 Coaching)' : '1. Alltags- & Ernährungsstruktur (1:1 Coaching)'}
-                        </div>
-                        <div className="bento-audience-grid" style={{ gridTemplateColumns: '1fr' }}>
-                          <Link to={`/${nutritionMod.slug}`} className="bento-sub-card" style={{ textDecoration: 'none' }}>
-                            <Img className="bento-sub-media" src={nutritionMod.image} alt={nutritionMod.title} />
-                            <div className="bento-sub-body">
-                              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 6, flexWrap: 'wrap' }}>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                  <span className="journal-feed-badge" style={{ position: 'static' }}>{nutritionMod.badge}</span>
-                                  <h3 style={{ margin: 0 }}>{nutritionMod.title}</h3>
-                                </div>
-                                {nutritionMod.priceLabel && (
-                                  <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.7)' }}>
-                                    {nutritionMod.priceLabel}
-                                  </span>
-                                )}
-                              </div>
-                              <p style={{ marginTop: 6 }}>{nutritionMod.text}</p>
-                              <span style={{ fontSize: 12, fontWeight: 700, color: '#e8a14a', marginTop: 6 }}>
-                                {t.detailsArrow}
-                              </span>
-                            </div>
-                          </Link>
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Bereich 2: M³ Body Reset · Die 3 biologischen Bausteine */}
-                    <div
-                      style={{
-                        background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
-                        border: '1px solid rgba(232, 161, 74, 0.3)',
-                        borderRadius: 18,
-                        padding: '24px clamp(18px, 2.5vw, 28px)',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: 16,
-                      }}
-                    >
-                      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
-                        <div>
-                          <div style={{ display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
-                            <span className="bento-tag bento-tag--gold">
-                              {isEn ? '2. M³ BODY RESET · PROTOCOLS' : '2. M³ BODY RESET · STOFFWECHSEL- & ZELL-PROTOKOLLE'}
-                            </span>
-                            <span style={{ fontSize: 11.5, fontWeight: 700, color: '#e8a14a' }}>
-                              {isEn ? 'Product purchase · 1:1 guidance with Michél included' : 'Produktbezug · Persönliche 1:1 Betreuung inklusive'}
-                            </span>
-                          </div>
-                          <p style={{ margin: '6px 0 0', fontSize: 13.5, color: 'rgba(255,255,255,0.8)', lineHeight: 1.45, maxWidth: '75ch' }}>
-                            {isEn
-                              ? 'Three standalone biological building blocks to take individually or sequentially as needed. Michél’s 1:1 coaching is fully included.'
-                              : 'Drei eigenständige biologische Bausteine nach individuellem Bedarf. Du beziehst nur die Produkte, Michéls persönliche 1:1 Betreuung ist für dich inklusive.'}
-                          </p>
-                        </div>
-                        <Link to="/body-reset" className="btn-white-ghost" style={{ fontSize: 12, padding: '6px 14px' }}>
-                          {isEn ? 'Explore Body Reset Roof →' : 'Das 360° Reset-Dach →'}
-                        </Link>
-                      </div>
-
-                      <div className="bento-audience-grid">
-                        {cureMods.map((m) => (
-                          <Link to={`/${m.slug}`} className="bento-sub-card" key={m.slug} style={{ textDecoration: 'none' }}>
-                            <Img className="bento-sub-media" src={m.image} alt={m.title} />
-                            <div className="bento-sub-body">
-                              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 6 }}>
-                                <h3>{m.title}</h3>
-                                {m.badge && (
-                                  <span style={{ fontSize: 10.5, fontWeight: 700, color: '#e8a14a' }}>
-                                    {m.badge}
-                                  </span>
-                                )}
-                              </div>
-                              <p>{m.kicker}</p>
-                              <span style={{ fontSize: 12, fontWeight: 700, color: '#e8a14a', marginTop: 4 }}>
-                                {t.detailsArrow}
-                              </span>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                ) : pillar.id === 'm3' ? (
+                {pillar.id === 'm3' ? (
                   <div
                     style={{
                       background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
@@ -236,23 +146,37 @@ export function Catalog() {
                     </div>
                   </div>
                 ) : group.length > 0 ? (
-                  <div className="bento-audience-grid">
+                  <div
+                    style={{
+                      display: 'grid',
+                      gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+                      gap: 14,
+                      width: '100%',
+                    }}
+                  >
                     {group.map((m) => (
                       <Link to={`/${m.slug}`} className="bento-sub-card" key={m.slug} style={{ textDecoration: 'none' }}>
                         <Img className="bento-sub-media" src={m.image} alt={m.title} />
                         <div className="bento-sub-body">
-                          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 6 }}>
-                            <h3>{m.title}</h3>
+                          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 6, flexWrap: 'wrap' }}>
+                            <h3 style={{ margin: 0 }}>{m.title}</h3>
+                            {m.badge && (
+                              <span style={{ fontSize: 10.5, fontWeight: 700, color: pillar.id === 'm1' ? '#e8a14a' : '#3dba8a' }}>
+                                {m.badge}
+                              </span>
+                            )}
+                          </div>
+                          <p style={{ margin: '4px 0 0' }}>{m.kicker}</p>
+                          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 8, paddingTop: 6, borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+                            <span style={{ fontSize: 12, fontWeight: 700, color: pillar.id === 'm1' ? '#e8a14a' : '#ffffff' }}>
+                              {t.detailsArrow}
+                            </span>
                             {'priceLabel' in m && m.priceLabel && (
-                              <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.6)' }}>
+                              <span style={{ fontSize: 10.5, fontWeight: 600, color: 'rgba(255,255,255,0.6)' }}>
                                 {m.priceLabel}
                               </span>
                             )}
                           </div>
-                          <p>{m.kicker}</p>
-                          <span style={{ fontSize: 12, fontWeight: 700, color: '#ffffff', marginTop: 4 }}>
-                            {t.detailsArrow}
-                          </span>
                         </div>
                       </Link>
                     ))}
