@@ -190,8 +190,8 @@ export function SystemStart() {
                         </span>{' '}
                         {c.title}
                       </h3>
-                      <p className="bento-desc" style={{ fontSize: 13, color: 'rgba(255,255,255,0.86)' }}>{c.text}</p>
-                      <div style={{ marginTop: 8, fontSize: 12, fontWeight: 800, color: isSelected ? theme.accent : 'rgba(255,255,255,0.6)' }}>
+                      <p className="bento-desc">{c.text}</p>
+                      <div className="bento-compass-action" style={{ color: isSelected ? theme.accent : 'rgba(255,255,255,0.6)' }}>
                         {isSelected ? (isEn ? '✓ Selected Starting Point' : '✓ Ausgewählter Startpunkt') : (isEn ? 'Select this area →' : 'Diesen Bereich wählen →')}
                       </div>
                     </div>

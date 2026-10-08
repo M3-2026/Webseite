@@ -5157,7 +5157,7 @@ picture.bento-bg img,
   align-items: flex-start;
   text-align: left;
   transition: border-color 0.24s ease, box-shadow 0.24s ease;
-  min-height: 240px;
+  min-height: 250px;
   justify-content: flex-end;
   color: #ffffff;
 }
@@ -5169,6 +5169,45 @@ picture.bento-bg img,
 .bento-compass-card.selected {
   border-color: #ffffff !important;
   box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
+}
+
+.bento-compass-card .bento-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+.bento-compass-card .bento-title {
+  margin: 0 0 6px 0;
+  line-height: 1.3;
+}
+
+.bento-compass-card .bento-desc {
+  margin: 0;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.45;
+}
+
+.bento-compass-card .bento-compass-action {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+@media (min-width: 861px) {
+  .bento-compass-card .bento-title {
+    min-height: 48px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .bento-compass-card .bento-desc {
+    min-height: 60px;
+  }
 }
 
 .bento-result-box {
