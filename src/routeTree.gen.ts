@@ -14,6 +14,7 @@ import { Route as BlogRouteImport } from './routes/blog'
 import { Route as BodyResetRouteImport } from './routes/body-reset'
 import { Route as CoachingFuerZweiRouteImport } from './routes/coaching-fuer-zwei'
 import { Route as DarmStoffwechselbegleitungRouteImport } from './routes/darm-stoffwechselbegleitung'
+import { Route as DarmkurRouteImport } from './routes/darmkur'
 import { Route as DatenschutzRouteImport } from './routes/datenschutz'
 import { Route as ErnaehrungscoachingRouteImport } from './routes/ernaehrungscoaching'
 import { Route as GoldeneGrundversorgungRouteImport } from './routes/goldene-grundversorgung'
@@ -26,6 +27,7 @@ import { Route as MovementRouteImport } from './routes/movement'
 import { Route as PerformanceTrainingRouteImport } from './routes/performance-training'
 import { Route as SchmerzfreiRouteImport } from './routes/schmerzfrei'
 import { Route as SitemapRouteImport } from './routes/sitemap'
+import { Route as StoffwechselkurRouteImport } from './routes/stoffwechselkur'
 import { Route as SystemStartRouteImport } from './routes/system-start'
 import { Route as UeberMichRouteImport } from './routes/ueber-mich'
 import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
@@ -56,6 +58,11 @@ const DarmStoffwechselbegleitungRoute =
     path: '/darm-stoffwechselbegleitung',
     getParentRoute: () => rootRouteImport,
   } as any)
+const DarmkurRoute = DarmkurRouteImport.update({
+  id: '/darmkur',
+  path: '/darmkur',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DatenschutzRoute = DatenschutzRouteImport.update({
   id: '/datenschutz',
   path: '/datenschutz',
@@ -116,6 +123,11 @@ const SitemapRoute = SitemapRouteImport.update({
   path: '/sitemap',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StoffwechselkurRoute = StoffwechselkurRouteImport.update({
+  id: '/stoffwechselkur',
+  path: '/stoffwechselkur',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SystemStartRoute = SystemStartRouteImport.update({
   id: '/system-start',
   path: '/system-start',
@@ -138,6 +150,7 @@ export interface FileRoutesByFullPath {
   '/body-reset': typeof BodyResetRoute
   '/coaching-fuer-zwei': typeof CoachingFuerZweiRoute
   '/darm-stoffwechselbegleitung': typeof DarmStoffwechselbegleitungRoute
+  '/darmkur': typeof DarmkurRoute
   '/datenschutz': typeof DatenschutzRoute
   '/ernaehrungscoaching': typeof ErnaehrungscoachingRoute
   '/goldene-grundversorgung': typeof GoldeneGrundversorgungRoute
@@ -150,6 +163,7 @@ export interface FileRoutesByFullPath {
   '/performance-training': typeof PerformanceTrainingRoute
   '/schmerzfrei': typeof SchmerzfreiRoute
   '/sitemap': typeof SitemapRoute
+  '/stoffwechselkur': typeof StoffwechselkurRoute
   '/system-start': typeof SystemStartRoute
   '/ueber-mich': typeof UeberMichRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -160,6 +174,7 @@ export interface FileRoutesByTo {
   '/body-reset': typeof BodyResetRoute
   '/coaching-fuer-zwei': typeof CoachingFuerZweiRoute
   '/darm-stoffwechselbegleitung': typeof DarmStoffwechselbegleitungRoute
+  '/darmkur': typeof DarmkurRoute
   '/datenschutz': typeof DatenschutzRoute
   '/ernaehrungscoaching': typeof ErnaehrungscoachingRoute
   '/goldene-grundversorgung': typeof GoldeneGrundversorgungRoute
@@ -172,6 +187,7 @@ export interface FileRoutesByTo {
   '/performance-training': typeof PerformanceTrainingRoute
   '/schmerzfrei': typeof SchmerzfreiRoute
   '/sitemap': typeof SitemapRoute
+  '/stoffwechselkur': typeof StoffwechselkurRoute
   '/system-start': typeof SystemStartRoute
   '/ueber-mich': typeof UeberMichRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -183,6 +199,7 @@ export interface FileRoutesById {
   '/body-reset': typeof BodyResetRoute
   '/coaching-fuer-zwei': typeof CoachingFuerZweiRoute
   '/darm-stoffwechselbegleitung': typeof DarmStoffwechselbegleitungRoute
+  '/darmkur': typeof DarmkurRoute
   '/datenschutz': typeof DatenschutzRoute
   '/ernaehrungscoaching': typeof ErnaehrungscoachingRoute
   '/goldene-grundversorgung': typeof GoldeneGrundversorgungRoute
@@ -195,6 +212,7 @@ export interface FileRoutesById {
   '/performance-training': typeof PerformanceTrainingRoute
   '/schmerzfrei': typeof SchmerzfreiRoute
   '/sitemap': typeof SitemapRoute
+  '/stoffwechselkur': typeof StoffwechselkurRoute
   '/system-start': typeof SystemStartRoute
   '/ueber-mich': typeof UeberMichRoute
   '/blog/$slug': typeof BlogSlugRoute
@@ -207,6 +225,7 @@ export interface FileRouteTypes {
     | '/body-reset'
     | '/coaching-fuer-zwei'
     | '/darm-stoffwechselbegleitung'
+    | '/darmkur'
     | '/datenschutz'
     | '/ernaehrungscoaching'
     | '/goldene-grundversorgung'
@@ -219,6 +238,7 @@ export interface FileRouteTypes {
     | '/performance-training'
     | '/schmerzfrei'
     | '/sitemap'
+    | '/stoffwechselkur'
     | '/system-start'
     | '/ueber-mich'
     | '/blog/$slug'
@@ -229,6 +249,7 @@ export interface FileRouteTypes {
     | '/body-reset'
     | '/coaching-fuer-zwei'
     | '/darm-stoffwechselbegleitung'
+    | '/darmkur'
     | '/datenschutz'
     | '/ernaehrungscoaching'
     | '/goldene-grundversorgung'
@@ -241,6 +262,7 @@ export interface FileRouteTypes {
     | '/performance-training'
     | '/schmerzfrei'
     | '/sitemap'
+    | '/stoffwechselkur'
     | '/system-start'
     | '/ueber-mich'
     | '/blog/$slug'
@@ -251,6 +273,7 @@ export interface FileRouteTypes {
     | '/body-reset'
     | '/coaching-fuer-zwei'
     | '/darm-stoffwechselbegleitung'
+    | '/darmkur'
     | '/datenschutz'
     | '/ernaehrungscoaching'
     | '/goldene-grundversorgung'
@@ -263,6 +286,7 @@ export interface FileRouteTypes {
     | '/performance-training'
     | '/schmerzfrei'
     | '/sitemap'
+    | '/stoffwechselkur'
     | '/system-start'
     | '/ueber-mich'
     | '/blog/$slug'
@@ -274,6 +298,7 @@ export interface RootRouteChildren {
   BodyResetRoute: typeof BodyResetRoute
   CoachingFuerZweiRoute: typeof CoachingFuerZweiRoute
   DarmStoffwechselbegleitungRoute: typeof DarmStoffwechselbegleitungRoute
+  DarmkurRoute: typeof DarmkurRoute
   DatenschutzRoute: typeof DatenschutzRoute
   ErnaehrungscoachingRoute: typeof ErnaehrungscoachingRoute
   GoldeneGrundversorgungRoute: typeof GoldeneGrundversorgungRoute
@@ -286,6 +311,7 @@ export interface RootRouteChildren {
   PerformanceTrainingRoute: typeof PerformanceTrainingRoute
   SchmerzfreiRoute: typeof SchmerzfreiRoute
   SitemapRoute: typeof SitemapRoute
+  StoffwechselkurRoute: typeof StoffwechselkurRoute
   SystemStartRoute: typeof SystemStartRoute
   UeberMichRoute: typeof UeberMichRoute
 }
@@ -325,6 +351,13 @@ declare module '@tanstack/react-router' {
       path: '/darm-stoffwechselbegleitung'
       fullPath: '/darm-stoffwechselbegleitung'
       preLoaderRoute: typeof DarmStoffwechselbegleitungRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/darmkur': {
+      id: '/darmkur'
+      path: '/darmkur'
+      fullPath: '/darmkur'
+      preLoaderRoute: typeof DarmkurRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/datenschutz': {
@@ -411,6 +444,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/stoffwechselkur': {
+      id: '/stoffwechselkur'
+      path: '/stoffwechselkur'
+      fullPath: '/stoffwechselkur'
+      preLoaderRoute: typeof StoffwechselkurRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/system-start': {
       id: '/system-start'
       path: '/system-start'
@@ -451,6 +491,7 @@ const rootRouteChildren: RootRouteChildren = {
   BodyResetRoute: BodyResetRoute,
   CoachingFuerZweiRoute: CoachingFuerZweiRoute,
   DarmStoffwechselbegleitungRoute: DarmStoffwechselbegleitungRoute,
+  DarmkurRoute: DarmkurRoute,
   DatenschutzRoute: DatenschutzRoute,
   ErnaehrungscoachingRoute: ErnaehrungscoachingRoute,
   GoldeneGrundversorgungRoute: GoldeneGrundversorgungRoute,
@@ -463,6 +504,7 @@ const rootRouteChildren: RootRouteChildren = {
   PerformanceTrainingRoute: PerformanceTrainingRoute,
   SchmerzfreiRoute: SchmerzfreiRoute,
   SitemapRoute: SitemapRoute,
+  StoffwechselkurRoute: StoffwechselkurRoute,
   SystemStartRoute: SystemStartRoute,
   UeberMichRoute: UeberMichRoute,
 }
