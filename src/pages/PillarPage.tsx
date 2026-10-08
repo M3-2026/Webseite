@@ -44,7 +44,7 @@ export function PillarPage({ slug: slugProp }: { slug?: string }) {
     .filter((m) => m.pillar === pillar.id && m.slug !== 'body-reset')
     .slice()
     .sort(byTier)
-  const relatedPosts = pillar.id === 'm1' ? [] : posts.filter((p) => p.pillar === pillar.id)
+  const relatedPosts = pillar.id === 'm1' || pillar.id === 'm2' ? [] : posts.filter((p) => p.pillar === pillar.id)
 
   const moodMap: Record<string, string> = {
     m1: '/images/moodboard/mood-kitchen',
