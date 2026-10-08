@@ -1001,7 +1001,7 @@ picture {
 
 .system-molecule {
   width: min(100%, 520px);
-  aspect-ratio: 340 / 320;
+  aspect-ratio: 350 / 320;
   margin: 0 auto;
   contain: layout paint;
 }
@@ -1015,52 +1015,56 @@ picture {
 
 .mol-orbit ellipse {
   fill: none;
-  stroke: color-mix(in srgb, var(--gold) 22%, transparent);
-  stroke-width: 1;
+  stroke: color-mix(in srgb, var(--gold) 28%, transparent);
+  stroke-width: 1.1;
   stroke-dasharray: 4 10;
 }
 
 .mol-bond {
-  stroke-width: 1.6;
-  stroke-opacity: 0.55;
+  stroke-width: 1.8;
+  stroke-opacity: 0.65;
   stroke-linecap: round;
 }
 
 .mol-bond-glow {
-  stroke-width: 6;
-  stroke-opacity: 0.18;
+  stroke-width: 7;
+  stroke-opacity: 0.22;
   stroke-linecap: round;
 }
 
 .mol-halo {
-  opacity: 0.16;
+  opacity: 0.22;
 }
 
 .mol-label {
-  fill: #14110c;
-  font-size: 15px;
-  font-weight: 800;
-  letter-spacing: -0.03em;
+  fill: #ffffff;
+  font-family: var(--font-sans, system-ui, -apple-system, sans-serif);
+  font-size: 14.5px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
   text-anchor: middle;
-  dominant-baseline: middle;
+  dominant-baseline: central;
   pointer-events: none;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.8));
 }
 
 [data-theme='night'] .mol-label {
-  fill: #f4f0e8;
+  fill: #ffffff;
 }
 
 .mol-nucleus-ring {
   fill: none;
-  stroke: color-mix(in srgb, var(--gold) 45%, transparent);
+  stroke: color-mix(in srgb, var(--gold) 55%, transparent);
   stroke-width: 1.2;
-  stroke-dasharray: 3 7;
+  stroke-dasharray: 3 6;
 }
 
 .system-molecule.is-running .mol-orbit-a,
 .system-molecule.is-running .mol-orbit-b,
 .system-molecule.is-running .mol-nucleus,
 .system-molecule.is-running .mol-nucleus-ring,
+.system-molecule.is-running .mol-nucleus-pulse,
+.system-molecule.is-running .mol-core-aura,
 .system-molecule.is-running .mol-node-0,
 .system-molecule.is-running .mol-node-1,
 .system-molecule.is-running .mol-node-2 {
@@ -1068,38 +1072,48 @@ picture {
 }
 
 .system-molecule.is-running .mol-orbit-a {
-  transform-origin: 170px 160px;
-  animation: mol-spin 28s linear infinite;
+  transform-origin: 176px 162px;
+  animation: mol-spin 26s linear infinite;
 }
 
 .system-molecule.is-running .mol-orbit-b {
-  transform-origin: 170px 160px;
-  animation: mol-spin 38s linear infinite reverse;
+  transform-origin: 176px 162px;
+  animation: mol-spin 36s linear infinite reverse;
 }
 
 .system-molecule.is-running .mol-node-0 {
-  transform-origin: 215px 85px;
+  transform-origin: 228px 82px;
   animation: mol-breathe 3.6s ease-in-out infinite;
 }
 
 .system-molecule.is-running .mol-node-1 {
-  transform-origin: 258px 192px;
+  transform-origin: 268px 198px;
   animation: mol-breathe 3.6s ease-in-out infinite 0.45s;
 }
 
 .system-molecule.is-running .mol-node-2 {
-  transform-origin: 135px 242px;
+  transform-origin: 132px 236px;
   animation: mol-breathe 3.6s ease-in-out infinite 0.9s;
 }
 
 .system-molecule.is-running .mol-nucleus {
-  transform-origin: 168px 168px;
+  transform-origin: 176px 162px;
   animation: mol-pulse 2.8s ease-in-out infinite;
 }
 
 .system-molecule.is-running .mol-nucleus-ring {
-  transform-origin: 168px 168px;
-  animation: mol-spin 16s linear infinite;
+  transform-origin: 176px 162px;
+  animation: mol-spin 14s linear infinite;
+}
+
+.system-molecule.is-running .mol-nucleus-pulse {
+  transform-origin: 176px 162px;
+  animation: mol-glow 3s ease-in-out infinite;
+}
+
+.system-molecule.is-running .mol-core-aura {
+  transform-origin: 176px 162px;
+  animation: mol-pulse 4.2s ease-in-out infinite alternate;
 }
 
 .system-molecule.is-running .mol-bond {
@@ -3664,16 +3678,16 @@ picture.bento-bg img,
 .bento-card--orientation .bento-molecule-visual .system-molecule {
   width: 100% !important;
   height: 100% !important;
-  max-width: 380px !important;
-  max-height: 350px !important;
-  transform: translate(14%, 7%) scale(1.14) !important;
-  filter: drop-shadow(0 0 28px rgba(251, 191, 36, 0.65)) drop-shadow(0 0 12px rgba(255, 255, 255, 0.38)) !important;
+  max-width: 400px !important;
+  max-height: 360px !important;
+  transform: translate(10%, 4%) scale(1.1) !important;
+  filter: drop-shadow(0 0 28px rgba(251, 191, 36, 0.5)) drop-shadow(0 8px 24px rgba(0, 0, 0, 0.6)) !important;
 }
 
 .bento-card--orientation .bento-orientation-overlay {
   position: absolute !important;
   inset: 0 !important;
-  background: linear-gradient(to right, rgba(13, 17, 23, 0.94) 0%, rgba(13, 17, 23, 0.55) 38%, rgba(13, 17, 23, 0.0) 65%, transparent 100%) !important;
+  background: linear-gradient(to right, rgba(13, 17, 23, 0.94) 0%, rgba(13, 17, 23, 0.55) 42%, rgba(13, 17, 23, 0.0) 70%, transparent 100%) !important;
   pointer-events: none !important;
   z-index: 2 !important;
 }
@@ -5619,14 +5633,14 @@ picture.bento-bg img,
   }
 
   .bento-card--orientation .bento-molecule-visual .system-molecule {
-    max-width: 300px !important;
-    max-height: 280px !important;
-    transform: translate(18%, 6%) scale(1.05) !important;
-    filter: drop-shadow(0 0 24px rgba(251, 191, 36, 0.6)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.35)) !important;
+    max-width: 320px !important;
+    max-height: 290px !important;
+    transform: translate(12%, 4%) scale(1.05) !important;
+    filter: drop-shadow(0 0 22px rgba(251, 191, 36, 0.45)) drop-shadow(0 4px 16px rgba(0, 0, 0, 0.6)) !important;
   }
 
   .bento-card--orientation .bento-orientation-overlay {
-    background: linear-gradient(to right, rgba(13, 17, 23, 0.92) 0%, rgba(13, 17, 23, 0.62) 48%, rgba(13, 17, 23, 0.05) 100%) !important;
+    background: linear-gradient(to right, rgba(13, 17, 23, 0.92) 0%, rgba(13, 17, 23, 0.62) 52%, rgba(13, 17, 23, 0.05) 100%) !important;
   }
 
   .bento-molecule-visual {
