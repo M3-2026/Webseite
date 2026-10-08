@@ -91,8 +91,7 @@ export function MentalPage() {
             <div className="bento-overlay" />
             <div className="bento-content bento-content--hero">
               <div className="bento-tag-row">
-                <span className="bento-tag bento-tag--azure">
-                  <span className="bento-dot bento-dot--azure" />
+                <span className="bento-tag bento-tag--gold">
                   {pillar.mark} · {pillar.name}
                 </span>
                 <span className="bento-tag">{pillar.label}</span>
@@ -154,13 +153,12 @@ export function MentalPage() {
           </article>
 
           {/* 3. M³ LEITGEDANKE & 6 THEMENKACHELN (Span 12) */}
-          <article className="bento-card bento-card--mindset bento-span-12" style={{ padding: 'clamp(22px, 3vw, 36px)' }}>
+          <article className="bento-card bento-card--journal bento-span-12" style={{ padding: 'clamp(22px, 3vw, 36px)' }}>
             
             {/* Section Header */}
             <div className="bento-card-header" style={{ marginBottom: 20 }}>
               <div>
-                <span className="bento-tag bento-tag--azure" style={{ marginBottom: 8 }}>
-                  <span className="bento-dot bento-dot--azure" />
+                <span className="bento-tag bento-tag--gold" style={{ marginBottom: 8 }}>
                   {repeatManifesto.eyebrow}
                 </span>
                 <h2 className="bento-title" style={{ fontSize: 'clamp(22px, 2.6cqi, 30px)' }}>
@@ -208,7 +206,7 @@ export function MentalPage() {
                     </p>
                   </div>
 
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 10, borderTop: '1px solid rgba(107, 140, 255, 0.15)' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 10, borderTop: '1px solid var(--line)' }}>
                     <span className="bento-repeat-more-btn">
                       {isEn ? 'Mehr erfahren' : 'Mehr erfahren'}
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -216,7 +214,7 @@ export function MentalPage() {
                         <polyline points="12 5 19 12 12 19" />
                       </svg>
                     </span>
-                    <span style={{ fontSize: 12, fontWeight: 800, color: 'rgba(107, 140, 255, 0.6)' }}>
+                    <span style={{ fontSize: 12, fontWeight: 800, color: 'var(--gold)' }}>
                       {theme.num}
                     </span>
                   </div>
@@ -231,8 +229,8 @@ export function MentalPage() {
                 marginTop: 22,
                 padding: '14px 20px',
                 borderRadius: 14,
-                background: 'linear-gradient(135deg, rgba(107, 140, 255, 0.12), rgba(107, 140, 255, 0.03))',
-                border: '1px solid rgba(107, 140, 255, 0.22)',
+                background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
+                border: '1px solid var(--line)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -252,9 +250,9 @@ export function MentalPage() {
                 }}
               >
                 <span>{isEn ? 'Motivation turns into discipline' : 'Aus Motivation wird Disziplin'}</span>
-                <span style={{ color: '#8ea9ff', opacity: 0.6 }}>→</span>
+                <span style={{ color: 'var(--gold)', fontWeight: 800 }}>→</span>
                 <span>{isEn ? 'Discipline turns into routine' : 'Aus Disziplin wird Routine'}</span>
-                <span style={{ color: '#8ea9ff', opacity: 0.6 }}>→</span>
+                <span style={{ color: 'var(--gold)', fontWeight: 800 }}>→</span>
                 <span>{isEn ? 'Routine turns into habit' : 'Aus Routine wird Gewohnheit'}</span>
               </div>
             </div>
@@ -265,8 +263,8 @@ export function MentalPage() {
                 marginTop: 24,
                 padding: '18px 24px',
                 borderRadius: 16,
-                background: 'linear-gradient(135deg, rgba(107, 140, 255, 0.12), rgba(107, 140, 255, 0.03))',
-                border: '1px solid rgba(107, 140, 255, 0.25)',
+                background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
+                border: '1px solid var(--line)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
@@ -372,7 +370,7 @@ export function MentalPage() {
                 <h2 id="repeat-modal-title" className="bento-repeat-title" style={{ fontSize: 20, margin: 0 }}>
                   {selectedTheme.num} · {selectedTheme.title}
                 </h2>
-                <p style={{ margin: '4px 0 0', fontSize: 13.5, fontWeight: 700, color: '#8ea9ff' }}>
+                <p style={{ margin: '4px 0 0', fontSize: 13.5, fontWeight: 700, color: 'var(--gold)' }}>
                   {selectedTheme.subtitle}
                 </p>
               </div>
@@ -441,7 +439,7 @@ export function MentalPage() {
               <div
                 style={{
                   background: 'color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%)',
-                  border: '1px solid rgba(107, 140, 255, 0.22)',
+                  border: '1px solid var(--line)',
                   borderRadius: 14,
                   padding: 16,
                 }}

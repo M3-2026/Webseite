@@ -4497,12 +4497,12 @@ picture.bento-bg img,
    ========================================================================== */
 
 .bento-card--mindset {
-  background: radial-gradient(ellipse at 15% 15%, rgba(107, 140, 255, 0.07) 0%, rgba(9, 10, 13, 0.98) 70%) !important;
-  border: 1px solid rgba(107, 140, 255, 0.2) !important;
+  background: color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%) !important;
+  border: 1px solid var(--line) !important;
 }
 
 .bento-card--mindset:hover {
-  border-color: rgba(107, 140, 255, 0.45) !important;
+  border-color: color-mix(in srgb, var(--gold) 40%, var(--line)) !important;
 }
 
 .bento-mindset-grid-3 {
@@ -4538,7 +4538,7 @@ picture.bento-bg img,
     padding: 4px 4px 14px 4px;
     margin: 0 -4px;
     scrollbar-width: thin;
-    scrollbar-color: rgba(107, 140, 255, 0.4) transparent;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
   }
 
   .bento-mindset-grid-4::-webkit-scrollbar,
@@ -4548,7 +4548,7 @@ picture.bento-bg img,
 
   .bento-mindset-grid-4::-webkit-scrollbar-thumb,
   .bento-mindset-track::-webkit-scrollbar-thumb {
-    background: rgba(107, 140, 255, 0.35);
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 999px;
   }
 
@@ -4561,7 +4561,7 @@ picture.bento-bg img,
 
 .bento-mindset-tile {
   background: color-mix(in srgb, var(--bg) 65%, var(--bg-2) 35%);
-  border: 1px solid rgba(107, 140, 255, 0.18);
+  border: 1px solid var(--line);
   border-radius: 16px;
   padding: 20px;
   display: flex;
@@ -4573,7 +4573,7 @@ picture.bento-bg img,
 
 .bento-mindset-tile:hover {
   transform: translateY(-2px);
-  border-color: rgba(107, 140, 255, 0.45);
+  border-color: color-mix(in srgb, var(--gold) 40%, var(--line));
   background: color-mix(in srgb, var(--bg-2) 80%, var(--bg) 20%);
 }
 
@@ -4581,7 +4581,8 @@ picture.bento-bg img,
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.06em;
-  color: #8ea9ff;
+  color: var(--gold);
+  text-transform: uppercase;
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -4592,14 +4593,14 @@ picture.bento-bg img,
   font-weight: 700;
   padding: 2px 7px;
   border-radius: 6px;
-  background: rgba(107, 140, 255, 0.1);
-  border: 1px solid rgba(107, 140, 255, 0.25);
-  color: #9cb5ff;
+  background: rgba(232, 161, 74, 0.1);
+  border: 1px solid rgba(232, 161, 74, 0.25);
+  color: var(--gold);
 }
 
 .bento-mindset-footer {
   padding-top: 10px;
-  border-top: 1px solid rgba(107, 140, 255, 0.15);
+  border-top: 1px solid var(--line);
   font-size: 12px;
   font-weight: 600;
   color: var(--text);
@@ -4622,7 +4623,7 @@ picture.bento-bg img,
 
 .bento-repeat-step-btn {
   background: color-mix(in srgb, var(--bg) 70%, var(--bg-2) 30%);
-  border: 1px solid rgba(107, 140, 255, 0.2);
+  border: 1px solid var(--line);
   border-radius: 999px;
   padding: 6px 14px;
   font-size: 12.5px;
@@ -4636,8 +4637,8 @@ picture.bento-bg img,
 }
 
 .bento-repeat-step-btn:hover {
-  background: rgba(107, 140, 255, 0.15);
-  border-color: rgba(107, 140, 255, 0.45);
+  background: color-mix(in srgb, var(--bg-2) 75%, var(--bg) 25%);
+  border-color: var(--gold);
   color: #ffffff;
   transform: translateY(-1px);
 }
@@ -4645,18 +4646,18 @@ picture.bento-bg img,
 .bento-repeat-step-num {
   font-size: 11px;
   font-weight: 800;
-  color: #6b8cff;
+  color: var(--gold);
 }
 
 .bento-repeat-arrow {
-  color: rgba(107, 140, 255, 0.4);
+  color: var(--muted);
   font-size: 12px;
   user-select: none;
 }
 
 .bento-repeat-bottom-strip {
-  background: linear-gradient(135deg, rgba(107, 140, 255, 0.12) 0%, rgba(107, 140, 255, 0.03) 100%);
-  border: 1px solid rgba(107, 140, 255, 0.25);
+  background: color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%);
+  border: 1px solid var(--line);
   border-radius: 16px;
   padding: 16px 24px;
   margin-top: 22px;
@@ -4677,7 +4678,7 @@ picture.bento-bg img,
 }
 
 .bento-repeat-manifesto-side {
-  border-left: 1px solid rgba(107, 140, 255, 0.25);
+  border-left: 1px solid var(--line);
   padding-left: clamp(14px, 2vw, 24px);
 }
 
@@ -4688,7 +4689,7 @@ picture.bento-bg img,
   right: -40px;
   width: 140px;
   height: 140px;
-  background: radial-gradient(circle, rgba(107, 140, 255, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(232, 161, 74, 0.15) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -4713,14 +4714,14 @@ picture.bento-bg img,
 }
 
 .bento-repeat-card {
-  background: color-mix(in srgb, var(--bg) 65%, var(--bg-2) 35%);
-  border: 1px solid rgba(107, 140, 255, 0.18);
-  border-radius: 18px;
-  padding: 22px;
+  background: color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 16px;
+  gap: 14px;
   position: relative;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
@@ -4728,13 +4729,13 @@ picture.bento-bg img,
 
 .bento-repeat-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(107, 140, 255, 0.5);
-  background: color-mix(in srgb, var(--bg-2) 82%, var(--bg) 18%);
-  box-shadow: 0 12px 28px -10px rgba(107, 140, 255, 0.18);
+  border-color: color-mix(in srgb, var(--gold) 40%, var(--line));
+  background: color-mix(in srgb, var(--bg-2) 75%, var(--bg) 25%);
+  box-shadow: 0 12px 28px -10px rgba(0, 0, 0, 0.4);
 }
 
 .bento-repeat-card:focus-visible {
-  outline: 2px solid #6b8cff;
+  outline: 2px solid var(--gold);
   outline-offset: 2px;
 }
 
@@ -4742,11 +4743,11 @@ picture.bento-bg img,
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .bento-repeat-title {
-  font-size: 16.5px;
+  font-size: 16px;
   font-weight: 800;
   color: var(--text);
   margin: 0 0 4px;
@@ -4754,16 +4755,16 @@ picture.bento-bg img,
 }
 
 .bento-repeat-subtitle {
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 700;
-  color: #8ea9ff;
+  color: var(--gold);
   margin: 0 0 8px;
   line-height: 1.4;
 }
 
 .bento-repeat-summary {
   font-size: 13px;
-  line-height: 1.55;
+  line-height: 1.5;
   color: var(--muted);
   margin: 0;
 }
@@ -4774,20 +4775,16 @@ picture.bento-bg img,
   gap: 6px;
   font-size: 12.5px;
   font-weight: 700;
-  color: #9cb5ff;
-  background: rgba(107, 140, 255, 0.08);
-  border: 1px solid rgba(107, 140, 255, 0.22);
-  padding: 6px 12px;
-  border-radius: 8px;
+  color: var(--gold);
+  background: transparent;
+  border: none;
+  padding: 0;
   transition: all 0.2s ease;
   width: fit-content;
 }
 
 .bento-repeat-card:hover .bento-repeat-more-btn {
-  background: rgba(107, 140, 255, 0.18);
-  border-color: rgba(107, 140, 255, 0.45);
   color: #ffffff;
-  padding-right: 14px;
 }
 
 .bento-repeat-more-btn svg {
@@ -4802,7 +4799,7 @@ picture.bento-bg img,
 .repeat-modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(4, 7, 18, 0.78);
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 10000;
@@ -4815,14 +4812,14 @@ picture.bento-bg img,
 
 .repeat-modal-dialog {
   background: color-mix(in srgb, var(--bg) 85%, var(--bg-2) 15%);
-  border: 1px solid rgba(107, 140, 255, 0.35);
-  border-radius: 22px;
+  border: 1px solid var(--line-strong);
+  border-radius: 20px;
   max-width: 680px;
   width: 100%;
   max-height: min(88vh, 760px);
   display: flex;
   flex-direction: column;
-  box-shadow: 0 24px 60px -15px rgba(0, 0, 0, 0.6), 0 0 35px rgba(107, 140, 255, 0.15);
+  box-shadow: 0 24px 60px -15px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.5);
   animation: modalFadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   overflow: hidden;
   position: relative;
@@ -4830,7 +4827,7 @@ picture.bento-bg img,
 
 .repeat-modal-header {
   padding: 22px 26px 16px;
-  border-bottom: 1px solid rgba(107, 140, 255, 0.15);
+  border-bottom: 1px solid var(--line);
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -4867,7 +4864,7 @@ picture.bento-bg img,
   flex-direction: column;
   gap: 18px;
   scrollbar-width: thin;
-  scrollbar-color: rgba(107, 140, 255, 0.3) transparent;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
 }
 
 .repeat-modal-body::-webkit-scrollbar {
@@ -4875,7 +4872,7 @@ picture.bento-bg img,
 }
 
 .repeat-modal-body::-webkit-scrollbar-thumb {
-  background: rgba(107, 140, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 999px;
 }
 
@@ -4889,7 +4886,7 @@ picture.bento-bg img,
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.08em;
-  color: #6b8cff;
+  color: var(--gold);
   text-transform: uppercase;
 }
 
@@ -4901,8 +4898,8 @@ picture.bento-bg img,
 }
 
 .repeat-modal-callout {
-  background: linear-gradient(135deg, rgba(107, 140, 255, 0.12), rgba(107, 140, 255, 0.04));
-  border: 1px solid rgba(107, 140, 255, 0.25);
+  background: color-mix(in srgb, var(--bg-2) 60%, var(--bg) 40%);
+  border: 1px solid color-mix(in srgb, var(--gold) 30%, var(--line));
   border-radius: 14px;
   padding: 14px 18px;
 }
@@ -4926,7 +4923,7 @@ picture.bento-bg img,
 }
 
 .repeat-modal-bullet {
-  color: #6b8cff;
+  color: var(--gold);
   font-weight: 800;
   flex-shrink: 0;
   margin-top: 1px;
@@ -4934,7 +4931,7 @@ picture.bento-bg img,
 
 .repeat-modal-footer {
   padding: 16px 24px;
-  border-top: 1px solid rgba(107, 140, 255, 0.15);
+  border-top: 1px solid var(--line);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -4944,12 +4941,12 @@ picture.bento-bg img,
 }
 
 .repeat-modal-nav-btn {
-  background: rgba(107, 140, 255, 0.08);
-  border: 1px solid rgba(107, 140, 255, 0.22);
+  background: color-mix(in srgb, var(--bg) 60%, var(--bg-2) 40%);
+  border: 1px solid var(--line);
   color: var(--text);
   padding: 8px 14px;
-  border-radius: 10px;
-  font-size: 12.5px;
+  border-radius: 999px;
+  font-size: 12px;
   font-weight: 700;
   cursor: pointer;
   display: inline-flex;
@@ -4959,8 +4956,8 @@ picture.bento-bg img,
 }
 
 .repeat-modal-nav-btn:hover {
-  background: rgba(107, 140, 255, 0.18);
-  border-color: rgba(107, 140, 255, 0.4);
+  background: color-mix(in srgb, var(--bg-2) 75%, var(--bg) 25%);
+  border-color: var(--gold);
   color: #ffffff;
 }
 
@@ -5560,7 +5557,7 @@ picture.bento-bg img,
 
   .bento-repeat-manifesto-side {
     border-left: none !important;
-    border-top: 1px solid rgba(107, 140, 255, 0.22) !important;
+    border-top: 1px solid var(--line) !important;
     padding-left: 0 !important;
     padding-top: 12px !important;
   }

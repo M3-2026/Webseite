@@ -159,7 +159,7 @@ export const pillars = [
     quote: 'Wer jeden Tag neu überlegt, verliert gegen den Alltag.',
     lead: 'Ruhe im Kopf, gesunder Schlaf und Gewohnheiten, die im echten Leben halten.',
     body: 'Echtes Coaching findet nicht im Labor statt, sondern in deinem Alltag zwischen Terminen, Familie und Verpflichtungen. M³ sorgt dafür, dass deine Ernährung (M¹) und dein Training (M²) nicht nach drei Wochen wieder einschlafen, sondern zu deiner zweiten Natur werden — ohne täglichen Kampf.',
-    color: '#6b8cff',
+    color: '#e8a14a',
     image: '/images/mental-hero.png',
     experience: {
       image: '/images/michel-portrait.jpg',

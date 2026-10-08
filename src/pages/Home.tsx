@@ -198,7 +198,7 @@ export function Home() {
           <Link
             to="/mental-performance"
             className="bento-card bento-card--pillar bento-card--m3 bento-span-4"
-            style={{ '--pillar-color': '#4f6fd6' } as CSSProperties}
+            style={{ '--pillar-color': '#d97706' } as CSSProperties}
             aria-label="Pillar M3 Repeat Mindset"
           >
             <picture className="bento-bg">
@@ -220,7 +220,7 @@ export function Home() {
             <div className="bento-overlay" />
             <div className="bento-content">
               <h2 className="bento-title">
-                <span className="bento-pillar-accent" style={{ color: '#6b8cff' }}>M³</span> REPEAT
+                <span className="bento-pillar-accent" style={{ color: '#d97706' }}>M³</span> REPEAT
               </h2>
               <p className="bento-desc">
                 {isEn

@@ -196,7 +196,7 @@ export const pillars: Pillar[] = [
     quote: 'Wer jeden Tag neu entscheidet, verliert gegen den Kalender.',
     lead: 'Schlaf, Stress und wenige feststehende Entscheidungen — damit M¹ und M² im Alltag halten.',
     body: 'Mental Performance ist kein Mood und kein Motivationsabo. Es ist Entscheidungsökonomie: weniger offene Fragen, klarere Wenn-dann-Regeln, Schlaf und Stress als harte Leistungsfaktoren. Ohne diese Schicht zerfallen M¹ und M² nach drei guten Wochen. Ziel ist Selbstverantwortung — nicht Abhängigkeit von Michél.',
-    color: '#6b8cff',
+    color: '#e8a14a',
     image: '/images/mental-hero.png',
     prompts: [
       {

@@ -22,11 +22,11 @@ const compassColors: Record<string, { accent: string; mark: string; glow: string
     bg: 'rgba(47, 154, 114, 0.05)',
   },
   m3: {
-    accent: '#6b8cff',
+    accent: '#e8a14a',
     mark: 'M³',
-    glow: 'rgba(107, 140, 255, 0.22)',
-    border: 'rgba(107, 140, 255, 0.55)',
-    bg: 'rgba(107, 140, 255, 0.05)',
+    glow: 'rgba(232, 161, 74, 0.22)',
+    border: 'rgba(232, 161, 74, 0.55)',
+    bg: 'rgba(232, 161, 74, 0.05)',
   },
 }
 

@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 const NODES = [
   { id: 'm1', label: 'M¹', cx: 215, cy: 85, color: '#fcd34d' },
   { id: 'm2', label: 'M²', cx: 258, cy: 192, color: '#4ade80' },
-  { id: 'm3', label: 'M³', cx: 135, cy: 242, color: '#93c5fd' },
+  { id: 'm3', label: 'M³', cx: 135, cy: 242, color: '#fbbf24' },
 ] as const
 
 const BONDS: [number, number][] = [

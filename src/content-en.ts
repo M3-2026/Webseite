@@ -153,7 +153,7 @@ export const pillars = [
     quote: 'Anyone who decides anew every day loses to the calendar.',
     lead: 'Peace of mind, healthy sleep, and routines that hold in real life.',
     body: 'Real coaching does not happen in a lab — it happens in your real life between meetings, family, and responsibilities. M³ ensures that your nutrition (M¹) and your training (M²) do not fade after three weeks, but become second nature — without daily battle.',
-    color: '#6b8cff',
+    color: '#e8a14a',
     image: '/images/mental-hero.png',
     experience: {
       image: '/images/michel-portrait.jpg',
