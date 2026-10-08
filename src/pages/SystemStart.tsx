@@ -6,10 +6,28 @@ import { useUi } from '../copy'
 import { useLocale } from '../locale'
 import { useContent } from '../useContent'
 
-const compassColors: Record<string, { accent: string; mark: string; glow: string }> = {
-  m1: { accent: '#e8a14a', mark: 'M¹', glow: 'rgba(232, 161, 74, 0.35)' },
-  m2: { accent: '#2f9a72', mark: 'M²', glow: 'rgba(47, 154, 114, 0.35)' },
-  m3: { accent: '#6b8cff', mark: 'M³', glow: 'rgba(107, 140, 255, 0.35)' },
+const compassColors: Record<string, { accent: string; mark: string; glow: string; border: string; bg: string }> = {
+  m1: {
+    accent: '#e8a14a',
+    mark: 'M¹',
+    glow: 'rgba(232, 161, 74, 0.22)',
+    border: 'rgba(232, 161, 74, 0.55)',
+    bg: 'rgba(232, 161, 74, 0.05)',
+  },
+  m2: {
+    accent: '#2f9a72',
+    mark: 'M²',
+    glow: 'rgba(47, 154, 114, 0.22)',
+    border: 'rgba(47, 154, 114, 0.55)',
+    bg: 'rgba(47, 154, 114, 0.05)',
+  },
+  m3: {
+    accent: '#6b8cff',
+    mark: 'M³',
+    glow: 'rgba(107, 140, 255, 0.22)',
+    border: 'rgba(107, 140, 255, 0.55)',
+    bg: 'rgba(107, 140, 255, 0.05)',
+  },
 }
 
 export function SystemStart() {
@@ -183,46 +201,66 @@ export function SystemStart() {
             </div>
 
             {/* Dynamic Results Panel */}
-            {picked && (
-              <div className="bento-result-box">
-                <div className="bento-result-header">
-                  <div>
-                    <span className="bento-audit-badge">{isEn ? 'YOUR RECOMMENDED ENTRY' : 'DEIN EMPFOHLENER EINSTIEG'}</span>
-                    <h3 style={{ margin: '4px 0 0', fontSize: 20, color: '#ffffff' }}>
-                      <span className="bento-pillar-accent" style={{ color: compassColors[picked.id]?.accent || '#ffffff' }}>{picked.mark}</span> {picked.name} · {picked.title}
-                    </h3>
+            {picked && (() => {
+              const pickedTheme = compassColors[picked.id] || compassColors.m1
+              return (
+                <div
+                  className="bento-result-box"
+                  style={{
+                    borderColor: pickedTheme.border,
+                    background: `linear-gradient(180deg, ${pickedTheme.bg} 0%, rgba(255, 255, 255, 0.02) 100%)`,
+                    boxShadow: `0 12px 36px ${pickedTheme.glow}`,
+                    transition: 'border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease',
+                  }}
+                >
+                  <div className="bento-result-header">
+                    <div>
+                      <span
+                        className="bento-audit-badge"
+                        style={{
+                          color: pickedTheme.accent,
+                          borderColor: pickedTheme.border,
+                          background: pickedTheme.bg,
+                        }}
+                      >
+                        {isEn ? 'YOUR RECOMMENDED ENTRY' : 'DEIN EMPFOHLENER EINSTIEG'}
+                      </span>
+                      <h3 style={{ margin: '4px 0 0', fontSize: 20, color: '#ffffff' }}>
+                        <span className="bento-pillar-accent" style={{ color: pickedTheme.accent }}>{picked.mark}</span> {picked.name} · {picked.title}
+                      </h3>
+                    </div>
+                    <Link to={`/${picked.slug}`} className="btn-white">
+                      {isEn ? `Explore Pillar ${picked.mark} →` : `Säule ${picked.mark} vertiefen →`}
+                    </Link>
                   </div>
-                  <Link to={`/${picked.slug}`} className="btn-white">
-                    {isEn ? `Explore Pillar ${picked.mark} →` : `Säule ${picked.mark} vertiefen →`}
-                  </Link>
-                </div>
-                <p style={{ margin: 0, fontSize: 14, color: 'rgba(255,255,255,0.78)', lineHeight: 1.5, maxWidth: '75ch' }}>
-                  {picked.body}
-                </p>
+                  <p style={{ margin: 0, fontSize: 14, color: 'rgba(255,255,255,0.78)', lineHeight: 1.5, maxWidth: '75ch' }}>
+                    {picked.body}
+                  </p>
 
-                {next.length > 0 && (
-                  <div style={{ marginTop: 20 }}>
-                    <div style={{ fontSize: 12, fontWeight: 800, letterSpacing: '0.06em', textTransform: 'uppercase', color: '#ffffff', marginBottom: 10 }}>
-                      {isEn ? 'Matching Modules in this Pillar:' : 'Passende Module in dieser Säule:'}
+                  {next.length > 0 && (
+                    <div style={{ marginTop: 20 }}>
+                      <div style={{ fontSize: 12, fontWeight: 800, letterSpacing: '0.06em', textTransform: 'uppercase', color: '#ffffff', marginBottom: 10 }}>
+                        {isEn ? 'Matching Modules in this Pillar:' : 'Passende Module in dieser Säule:'}
+                      </div>
+                      <div className="bento-audience-grid">
+                        {next.map((m) => (
+                          <Link to={`/${m.slug}`} className="bento-sub-card" key={m.slug} style={{ textDecoration: 'none' }}>
+                            <Img className="bento-sub-media" src={m.image} alt={m.title} />
+                            <div className="bento-sub-body">
+                              <h3>{m.title}</h3>
+                              <p>{m.text}</p>
+                              <span style={{ fontSize: 12, fontWeight: 700, color: pickedTheme.accent, marginTop: 4 }}>
+                                {t.detailsArrow}
+                              </span>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
                     </div>
-                    <div className="bento-audience-grid">
-                      {next.map((m) => (
-                        <Link to={`/${m.slug}`} className="bento-sub-card" key={m.slug} style={{ textDecoration: 'none' }}>
-                          <Img className="bento-sub-media" src={m.image} alt={m.title} />
-                          <div className="bento-sub-body">
-                            <h3>{m.title}</h3>
-                            <p>{m.text}</p>
-                            <span style={{ fontSize: 12, fontWeight: 700, color: '#ffffff', marginTop: 4 }}>
-                              {t.detailsArrow}
-                            </span>
-                          </div>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            )}
+                  )}
+                </div>
+              )
+            })()}
           </article>
 
           {/* 4, 5, 6. THE 3 AUDIT DIMENSIONS (Span 4 Each) */}
