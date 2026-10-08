@@ -6,6 +6,12 @@ import { useUi } from '../copy'
 import { useLocale } from '../locale'
 import { useContent } from '../useContent'
 
+const compassColors: Record<string, { accent: string; mark: string; glow: string }> = {
+  m1: { accent: '#e8a14a', mark: 'M¹', glow: 'rgba(232, 161, 74, 0.35)' },
+  m2: { accent: '#2f9a72', mark: 'M²', glow: 'rgba(47, 154, 114, 0.35)' },
+  m3: { accent: '#6b8cff', mark: 'M³', glow: 'rgba(107, 140, 255, 0.35)' },
+}
+
 export function SystemStart() {
   const t = useUi()
   const { lang } = useLocale()
@@ -48,9 +54,9 @@ export function SystemStart() {
             <div className="bento-content bento-content--hero">
               <h1 className="bento-hero-h1">
                 {isEn ? (
-                  <>01 · System Start. <span>Your 360° Assessment.</span></>
+                  <>System Start – <span>Your 360° Assessment</span></>
                 ) : (
-                  <>01 · System Start. <span>Deine Standortbestimmung.</span></>
+                  <>System Start – <span>Deine Standortbestimmung</span></>
                 )}
               </h1>
               <p className="bento-lead">
@@ -135,6 +141,7 @@ export function SystemStart() {
             <div className="bento-compass-grid">
               {compass.map((c) => {
                 const isSelected = pick === c.id
+                const theme = compassColors[c.id] || { accent: '#ffffff', mark: c.id.toUpperCase(), glow: 'rgba(255,255,255,0.2)' }
                 const imgMap: Record<string, string> = {
                   m1: '/images/moodboard/mood-kitchen.webp',
                   m2: '/images/moodboard/mood-limitless.webp',
@@ -148,6 +155,10 @@ export function SystemStart() {
                     type="button"
                     className={`bento-compass-card ${isSelected ? 'selected' : ''}`}
                     onClick={() => setPick(c.id)}
+                    style={{
+                      borderColor: isSelected ? theme.accent : 'rgba(255, 255, 255, 0.12)',
+                      boxShadow: isSelected ? `0 0 0 2px ${theme.accent}, 0 8px 26px ${theme.glow}` : undefined,
+                    }}
                   >
                     <picture className="bento-bg">
                       <source type="image/webp" srcSet={`${imgSrc} 1x, ${imgSrc.replace('.webp', '@2x.webp')} 2x`} />
@@ -156,13 +167,13 @@ export function SystemStart() {
                     <div className="bento-overlay" />
                     <div className="bento-content">
                       <h3 className="bento-title" style={{ fontSize: 18 }}>
-                        <span className="bento-pillar-accent" style={{ color: '#ffffff' }}>
-                          {c.id.toUpperCase()}
+                        <span className="bento-pillar-accent" style={{ color: theme.accent }}>
+                          {theme.mark}
                         </span>{' '}
                         {c.title}
                       </h3>
                       <p className="bento-desc" style={{ fontSize: 13, color: 'rgba(255,255,255,0.86)' }}>{c.text}</p>
-                      <div style={{ marginTop: 8, fontSize: 12, fontWeight: 800, color: isSelected ? '#ffffff' : 'rgba(255,255,255,0.6)' }}>
+                      <div style={{ marginTop: 8, fontSize: 12, fontWeight: 800, color: isSelected ? theme.accent : 'rgba(255,255,255,0.6)' }}>
                         {isSelected ? (isEn ? '✓ Selected Starting Point' : '✓ Ausgewählter Startpunkt') : (isEn ? 'Select this area →' : 'Diesen Bereich wählen →')}
                       </div>
                     </div>
@@ -178,7 +189,7 @@ export function SystemStart() {
                   <div>
                     <span className="bento-audit-badge">{isEn ? 'YOUR RECOMMENDED ENTRY' : 'DEIN EMPFOHLENER EINSTIEG'}</span>
                     <h3 style={{ margin: '4px 0 0', fontSize: 20, color: '#ffffff' }}>
-                      <span className="bento-pillar-accent" style={{ color: '#ffffff' }}>{picked.mark}</span> {picked.name} · {picked.title}
+                      <span className="bento-pillar-accent" style={{ color: compassColors[picked.id]?.accent || '#ffffff' }}>{picked.mark}</span> {picked.name} · {picked.title}
                     </h3>
                   </div>
                   <Link to={`/${picked.slug}`} className="btn-white">
