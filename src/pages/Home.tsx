@@ -12,7 +12,7 @@ export function Home() {
   const { lang } = useLocale()
   const isEn = lang === 'en'
   const [openFaq, setOpenFaq] = useState<number | null>(0)
-  const { audience, faqs, pillars, posts, wa } = useContent()
+  const { audience, faqs, pillars, wa } = useContent()
 
   return (
     <main className="bento-page">
@@ -323,51 +323,11 @@ export function Home() {
                 : 'Nicht Theorie für die Schublade. 10 fundamentale Texte aus der Praxis – warum der Blutzucker abstürzt, warum Last ohne saubere Bahn verschleißt und wie Routinen ohne Motivations-Hype halten.'}
             </p>
 
-            <div className="journal-header-actions">
-              <Link to="/blog" className="journal-header-link">
-                {isEn ? 'View all 10 articles →' : 'Alle 10 Texte ansehen →'}
+            <div className="journal-header-actions" style={{ marginTop: 28 }}>
+              <Link to="/blog" className="btn-gold" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '13px 28px', fontSize: 14.5, fontWeight: 750, textDecoration: 'none', borderRadius: 999 }}>
+                <span>{isEn ? 'If you want to read more, click here' : 'Wenn du mehr lesen möchtest, klicke hier'}</span>
+                <span aria-hidden="true">→</span>
               </Link>
-            </div>
-          </div>
-
-          <div className="journal-cards-container">
-            <div className="journal-cards-track">
-              {posts.map((post) => {
-                const pillar = pillars.find((p) => p.id === post.pillar)
-                return (
-                  <Link
-                    key={post.slug}
-                    to={`/blog/${post.slug}`}
-                    className="journal-feed-card"
-                  >
-                    <div className="journal-feed-media">
-                      <Img className="journal-feed-img" src={post.image} alt={post.title} />
-                      {pillar && (
-                        <span
-                          className="journal-feed-badge"
-                          style={{
-                            borderColor: colorMixPillar(pillar.color),
-                            color: pillar.color,
-                          }}
-                        >
-                          {pillar.mark} · {pillar.name}
-                        </span>
-                      )}
-                    </div>
-                    <div className="journal-feed-body">
-                      <h3 className="journal-feed-title">{post.title}</h3>
-                      <p className="journal-feed-excerpt">{post.excerpt}</p>
-                      <div className="journal-feed-footer">
-                        <span className="journal-feed-cta">
-                          {isEn ? 'Read article' : 'Lesen'}
-                          <span className="journal-feed-arrow" aria-hidden="true">→</span>
-                        </span>
-                        <span className="journal-feed-min">{post.minutes} Min.</span>
-                      </div>
-                    </div>
-                  </Link>
-                )
-              })}
             </div>
           </div>
         </section>
@@ -431,10 +391,6 @@ export function Home() {
       </div>
     </main>
   )
-}
-
-function colorMixPillar(color: string) {
-  return `color-mix(in srgb, ${color} 45%, var(--line))`
 }
 
 
