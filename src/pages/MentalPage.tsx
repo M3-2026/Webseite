@@ -90,12 +90,6 @@ export function MentalPage() {
             </picture>
             <div className="bento-overlay" />
             <div className="bento-content bento-content--hero">
-              <div className="bento-tag-row">
-                <span className="bento-tag bento-tag--gold">
-                  {pillar.mark} · {pillar.name}
-                </span>
-                <span className="bento-tag">{pillar.label}</span>
-              </div>
               <h1 className="bento-hero-h1">
                 {pillar.mark} · {pillar.name}. <span>{pillar.title}</span>
               </h1>
@@ -158,9 +152,6 @@ export function MentalPage() {
             {/* Section Header */}
             <div className="bento-card-header" style={{ marginBottom: 20 }}>
               <div>
-                <span className="bento-tag bento-tag--gold" style={{ marginBottom: 8 }}>
-                  {repeatManifesto.eyebrow}
-                </span>
                 <h2 className="bento-title" style={{ fontSize: 'clamp(22px, 2.6cqi, 30px)' }}>
                   {repeatManifesto.heading}
                 </h2>
@@ -206,16 +197,13 @@ export function MentalPage() {
                     </p>
                   </div>
 
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: 10, borderTop: '1px solid var(--line)' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', paddingTop: 10, borderTop: '1px solid var(--line)' }}>
                     <span className="bento-repeat-more-btn">
                       {isEn ? 'Mehr erfahren' : 'Mehr erfahren'}
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                         <line x1="5" y1="12" x2="19" y2="12" />
                         <polyline points="12 5 19 12 12 19" />
                       </svg>
-                    </span>
-                    <span style={{ fontSize: 12, fontWeight: 800, color: 'var(--gold)' }}>
-                      {theme.num}
                     </span>
                   </div>
                 </div>
