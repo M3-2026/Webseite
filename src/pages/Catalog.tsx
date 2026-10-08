@@ -82,7 +82,7 @@ export function Catalog() {
 
             <ul className="bento-audit-points">
               <li>{isEn ? 'Free Entry & Orientation Checks' : 'Kostenlose Orientierung & Checks'}</li>
-              <li>{isEn ? 'Targeted Self-Paced & Compact Resets' : 'Gezielte Mini-Resets & Leitfäden'}</li>
+              <li>{isEn ? 'Targeted Self-Paced Modules & Guides' : 'Gezielte Module & Leitfäden'}</li>
               <li>{isEn ? 'Comprehensive 90-Day 1:1 High Ticket Trajectories' : '90 Tage 1:1 Intensivbetreuung'}</li>
             </ul>
 
