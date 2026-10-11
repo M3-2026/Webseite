@@ -3348,6 +3348,24 @@ picture {
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
 }
 
+.bento-page--landing .bento-card--pillar {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bento-page--landing .bento-card,
+.bento-page--landing .bento-card:hover,
+.bento-page--landing .bento-card--pillar:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  transition: none !important;
+}
+
+.bento-page--landing .bento-card:hover .bento-arrow-btn {
+  transform: none;
+  color: #fbbf24;
+}
+
 .bento-pillar-head {
   font-size: clamp(32px, 3.8cqi, 44px);
   font-weight: 800;
@@ -3375,10 +3393,12 @@ picture {
   font-weight: 800;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  background: rgba(0, 0, 0, 0.65);
-  border: 1px solid;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: #ffffff;
+  border: 0;
+  color: #d97706;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
   width: fit-content;
 }
 

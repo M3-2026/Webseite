@@ -45,15 +45,13 @@ export function Home() {
             </picture>
             <div className="bento-overlay" />
             <div className="bento-content">
-              <span className="bento-pillar-badge" style={{ borderColor: 'rgba(232, 161, 74, 0.45)', color: '#e8a14a' }}>
-                SÄULE M¹
-              </span>
+              <span className="bento-pillar-badge">SÄULE M¹</span>
               <h2 className="bento-pillar-head">Food.</h2>
               <p className="bento-pillar-sub">
                 {isEn ? 'Metabolism & Cellular Energy' : 'Metabolismus & Zellenergie'}
               </p>
               <div className="bento-arrow-btn">
-                <span>{isEn ? 'Explore Food (M¹) →' : 'Säule Food entdecken →'}</span>
+                <span>{isEn ? 'Learn more →' : 'Mehr erfahren →'}</span>
               </div>
             </div>
           </Link>
@@ -83,15 +81,13 @@ export function Home() {
             </picture>
             <div className="bento-overlay" />
             <div className="bento-content">
-              <span className="bento-pillar-badge" style={{ borderColor: 'rgba(47, 154, 114, 0.45)', color: '#2f9a72' }}>
-                SÄULE M²
-              </span>
+              <span className="bento-pillar-badge">SÄULE M²</span>
               <h2 className="bento-pillar-head">Move.</h2>
               <p className="bento-pillar-sub">
                 {isEn ? 'Biomechanics & Pain Freedom' : 'Biomechanik & Schmerzfreiheit'}
               </p>
               <div className="bento-arrow-btn">
-                <span>{isEn ? 'Explore Move (M²) →' : 'Säule Move entdecken →'}</span>
+                <span>{isEn ? 'Learn more →' : 'Mehr erfahren →'}</span>
               </div>
             </div>
           </Link>
@@ -106,14 +102,14 @@ export function Home() {
             <picture className="bento-bg">
               <source
                 type="image/webp"
-                srcSet="/images/moodboard/mood-focus@2x.webp 2x, /images/moodboard/mood-focus.webp 1x"
+                srcSet="/images/moodboard/mood-books@2x.webp 2x, /images/moodboard/mood-books.webp 1x"
               />
               <source
-                srcSet="/images/moodboard/mood-focus@2x.jpg 2x, /images/moodboard/mood-focus.jpg 1x"
+                srcSet="/images/moodboard/mood-books@2x.jpg 2x, /images/moodboard/mood-books.jpg 1x"
               />
               <img
-                src="/images/moodboard/mood-focus@2x.jpg"
-                alt="M3 Repeat Mindset Fokus & neuronale Klarheit"
+                src="/images/moodboard/mood-books@2x.jpg"
+                alt="Bücher über gesundes Leben: Schlaf, Ernährung, Bewegung, Alltag"
                 loading="lazy"
                 decoding="async"
                 className="bento-bg-img"
@@ -121,15 +117,13 @@ export function Home() {
             </picture>
             <div className="bento-overlay" />
             <div className="bento-content">
-              <span className="bento-pillar-badge" style={{ borderColor: 'rgba(79, 111, 214, 0.45)', color: '#4f6fd6' }}>
-                SÄULE M³
-              </span>
+              <span className="bento-pillar-badge">SÄULE M³</span>
               <h2 className="bento-pillar-head">Repeat.</h2>
               <p className="bento-pillar-sub">
                 {isEn ? 'Mindset & Neural Clarity' : 'Mindset & neuronale Klarheit'}
               </p>
               <div className="bento-arrow-btn">
-                <span>{isEn ? 'Explore Repeat (M³) →' : 'Säule Repeat entdecken →'}</span>
+                <span>{isEn ? 'Learn more →' : 'Mehr erfahren →'}</span>
               </div>
             </div>
           </Link>
