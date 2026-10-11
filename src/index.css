@@ -474,6 +474,11 @@ img.card-media[src*='michel-trainer'] {
 
 .nav .brand {
   justify-self: center;
+  display: flex;
+  align-items: center;
+  height: var(--nav-control-h);
+  font-size: 24px;
+  line-height: 1;
 }
 
 .nav-controls {
@@ -641,9 +646,28 @@ img.card-media[src*='michel-trainer'] {
 
 .brand-mark {
   display: inline-flex;
-  align-items: baseline;
-  gap: 0.28em;
+  align-items: flex-start;
+  height: 1em;
+  gap: 0;
+  font-size: 1em;
+  line-height: 0.82;
   white-space: nowrap;
+}
+
+.brand-mark-m {
+  font-weight: 800;
+  -webkit-text-stroke: 0.7px currentColor;
+  paint-order: stroke fill;
+}
+
+.brand-mark-sup {
+  font-size: 0.58em;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--highlight);
+  margin-left: 0.02em;
+  position: relative;
+  top: 0.06em;
 }
 
 .brand-fire {
@@ -2431,7 +2455,9 @@ picture {
   }
 
   .nav .brand {
-    font-size: 15px;
+    height: var(--nav-control-h);
+    font-size: 24px;
+    line-height: 1;
     letter-spacing: -0.04em;
   }
 
@@ -2692,7 +2718,9 @@ picture {
   }
 
   .nav .brand {
-    font-size: 14px;
+    height: var(--nav-control-h);
+    font-size: 24px;
+    line-height: 1;
   }
 
   .hero-board {
@@ -2725,7 +2753,9 @@ picture {
 
 @media (max-width: 360px) {
   .nav .brand {
-    font-size: 13px;
+    height: var(--nav-control-h);
+    font-size: 24px;
+    line-height: 1;
   }
 
   .nav .btn-gold {
@@ -5778,7 +5808,9 @@ picture.bento-bg img,
   }
 
   .nav .brand {
-    font-size: 14px;
+    height: var(--nav-control-h);
+    font-size: 24px;
+    line-height: 1;
   }
 
   .nav-actions {
