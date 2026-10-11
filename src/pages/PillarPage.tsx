@@ -75,9 +75,7 @@ export function PillarPage() {
               <h1 className="bento-hero-h1">
                 {pillar.mark} · {pillar.name}. <span>{pillar.title}</span>
               </h1>
-              <p className="bento-lead" style={{ fontStyle: 'italic', opacity: 0.95 }}>
-                „{pillar.quote}“
-              </p>
+              <p className="bento-lead">{pillar.subline}</p>
               <p className="bento-desc" style={{ maxWidth: '56ch', marginTop: 6, fontSize: 14 }}>
                 {pillar.body}
               </p>

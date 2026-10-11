@@ -486,9 +486,9 @@ img.card-media[src*='michel-trainer'] {
 /* ─── Burger Button ─── */
 .nav-burger {
   appearance: none;
-  background: none;
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 8px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
   width: 38px;
   height: 38px;
   display: inline-flex;
@@ -499,22 +499,15 @@ img.card-media[src*='michel-trainer'] {
   padding: 0;
   cursor: pointer;
   color: var(--text);
-  background: rgba(255, 255, 255, 0.06);
-  transition: background 0.2s, border-color 0.2s;
+  box-shadow: none;
   position: relative;
   z-index: 1002;
 }
-.nav-burger:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.28);
-}
-[data-theme='day'] .nav-burger {
-  border-color: rgba(0, 0, 0, 0.12);
-  background: rgba(0, 0, 0, 0.04);
-}
+.nav-burger:hover,
+[data-theme='day'] .nav-burger,
 [data-theme='day'] .nav-burger:hover {
-  background: rgba(0, 0, 0, 0.08);
-  border-color: rgba(0, 0, 0, 0.2);
+  background: transparent;
+  border: 0;
 }
 
 .nav-burger-line {
@@ -3359,16 +3352,17 @@ picture {
   font-size: clamp(32px, 3.8cqi, 44px);
   font-weight: 800;
   letter-spacing: -0.03em;
-  line-height: 1.05;
-  margin: 6px 0 2px;
+  line-height: 0.95;
+  margin: 6px 0 0;
   color: #ffffff;
 }
 
 .bento-pillar-sub {
   font-size: 13.5px;
   font-weight: 600;
+  line-height: 1.15;
   color: rgba(255, 255, 255, 0.72);
-  margin-bottom: 8px;
+  margin: -4px 0 8px;
 }
 
 .bento-pillar-badge {
@@ -3478,7 +3472,7 @@ body:has(.bento-page--landing) {
     height: 100% !important;
     display: grid !important;
     grid-template-columns: repeat(12, 1fr) !important;
-    grid-template-rows: minmax(0, 1.15fr) minmax(0, 1.85fr) !important;
+    grid-template-rows: minmax(0, 1fr) !important;
     gap: clamp(10px, 1.2vw, 16px) !important;
     align-items: stretch !important;
     margin-bottom: 0 !important;
@@ -3518,13 +3512,14 @@ body:has(.bento-page--landing) {
 
   .bento-grid--landing .bento-pillar-head {
     font-size: clamp(24px, 2.6vw, 36px) !important;
-    margin: 0 0 clamp(2px, 0.4vh, 4px) !important;
-    line-height: 1.05 !important;
+    margin: 0 !important;
+    line-height: 0.92 !important;
   }
 
   .bento-grid--landing .bento-pillar-sub {
     font-size: clamp(11.5px, 0.95vw, 13px) !important;
-    margin-bottom: clamp(4px, 0.6vh, 6px) !important;
+    margin: -4px 0 clamp(4px, 0.6vh, 6px) !important;
+    line-height: 1.1 !important;
     white-space: nowrap !important;
     overflow: hidden !important;
     text-overflow: ellipsis !important;
@@ -3561,24 +3556,69 @@ body:has(.bento-page--landing) {
 
 /* 2. MOBILE & COMPACT PORTRAIT (< 768px or min-height < 520px) */
 @media (max-width: 767px), (max-height: 519px) {
+  html:has(.bento-page--landing),
+  body:has(.bento-page--landing),
+  html.page-landing,
+  body.page-landing {
+    overflow: hidden !important;
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+  }
+
+  body.page-landing #root,
+  body:has(.bento-page--landing) #root {
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+  }
+
   .bento-page--landing {
-    padding-top: calc(var(--nav-height, 60px) + var(--landing-frame, 12px)) !important;
-    padding-bottom: var(--landing-frame, 12px) !important;
-    padding-left: var(--landing-frame, 12px) !important;
-    padding-right: var(--landing-frame, 12px) !important;
+    flex: 1 1 0% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    padding-top: calc(var(--nav-height, 60px) + var(--landing-frame, 10px)) !important;
+    padding-bottom: var(--landing-frame, 8px) !important;
+    padding-left: var(--landing-frame, 10px) !important;
+    padding-right: var(--landing-frame, 10px) !important;
   }
 
   .bento-page--landing .wrap--landing {
+    flex: 1 1 0% !important;
+    min-height: 0 !important;
+    height: 100% !important;
     width: 100% !important;
     max-width: none !important;
     margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
 
   .bento-grid--landing {
+    flex: 1 1 0% !important;
+    min-height: 0 !important;
+    height: 100% !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 12px !important;
+    gap: 10px !important;
     width: 100% !important;
+  }
+
+  body.page-landing .footer--minimal,
+  body:has(.bento-page--landing) .footer--minimal {
+    flex-shrink: 0 !important;
+    padding: 6px var(--landing-frame, 10px) max(6px, env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  body.page-landing .footer--minimal .wrap,
+  body:has(.bento-page--landing) .footer--minimal .wrap {
+    width: 100% !important;
+    max-width: none !important;
   }
 
   .bento-grid--landing .bento-card--temple-roof {
@@ -3601,25 +3641,27 @@ body:has(.bento-page--landing) {
   }
 
   .bento-grid--landing .bento-card--pillar {
+    flex: 1 1 0% !important;
     width: 100% !important;
-    height: clamp(190px, 26vh, 250px) !important;
-    min-height: 190px !important;
+    height: auto !important;
+    min-height: 0 !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: flex-end !important;
-    padding: clamp(16px, 4vw, 22px) !important;
+    padding: clamp(14px, 3.5vw, 20px) !important;
     border-radius: 18px !important;
   }
 
   .bento-grid--landing .bento-pillar-head {
     font-size: clamp(26px, 6.5vw, 34px) !important;
-    margin: 0 0 3px !important;
-    line-height: 1.05 !important;
+    margin: 0 !important;
+    line-height: 0.92 !important;
   }
 
   .bento-grid--landing .bento-pillar-sub {
     font-size: 12.5px !important;
-    margin-bottom: 4px !important;
+    margin: -4px 0 4px !important;
+    line-height: 1.1 !important;
   }
 
   .bento-grid--landing .bento-desc {
@@ -5399,12 +5441,14 @@ picture.bento-bg img,
 
   .bento-card--pillar .bento-pillar-head {
     font-size: 34px !important;
-    margin: 6px 0 2px !important;
+    margin: 6px 0 0 !important;
+    line-height: 0.92 !important;
   }
 
   .bento-card--pillar .bento-pillar-sub {
     font-size: 13px !important;
-    margin-bottom: 8px !important;
+    margin: -4px 0 8px !important;
+    line-height: 1.1 !important;
   }
 
   .bento-card--pillar .bento-desc {
@@ -5669,10 +5713,11 @@ picture.bento-bg img,
     width: 36px;
     height: 36px;
     padding: 0;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    background: rgba(255, 255, 255, 0.06);
-    color: #ffffff;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    color: var(--text);
     cursor: pointer;
     pointer-events: auto;
     user-select: none;
@@ -5689,8 +5734,8 @@ picture.bento-bg img,
   }
 
   [data-theme='day'] .nav-burger {
-    border-color: rgba(0, 0, 0, 0.14);
-    background: rgba(0, 0, 0, 0.05);
+    border: 0;
+    background: transparent;
     color: #090a0d;
   }
 

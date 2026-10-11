@@ -17,50 +17,10 @@ export function Home() {
     <main className="bento-page bento-page--landing">
       <div className="wrap wrap--landing">
         {/* Bento Grid Master Universe */}
+        <h1 className="sr-only">{isEn ? 'Performance through Health' : 'Leistung durch Gesundheit'}</h1>
         <section className="bento-grid bento-grid--landing" aria-label="M³ Performance System Bento Grid">
-          
-          {/* 1. HERO BENTO CARD (Span 12 - The Temple Roof / Dach) */}
-          <Link
-            to="/system-start"
-            className="bento-card bento-card--hero bento-card--temple-roof bento-span-12"
-            style={{ textDecoration: 'none' }}
-            aria-label={isEn ? 'System Start: Performance through Health' : 'System Start: Leistung durch Gesundheit'}
-          >
-            <picture className="bento-bg">
-              <source
-                media="(max-width: 860px)"
-                type="image/webp"
-                srcSet="/images/hero-system-mobile.webp 2x, /images/hero-system-mobile.webp 1x"
-              />
-              <source
-                media="(max-width: 860px)"
-                srcSet="/images/hero-system-mobile.jpg 2x, /images/hero-system-mobile.jpg 1x"
-              />
-              <source
-                type="image/webp"
-                srcSet="/images/hero-system.webp 2x, /images/hero-system.webp 1x"
-              />
-              <source
-                srcSet="/images/hero-system.jpg 2x, /images/hero-system.jpg 1x"
-              />
-              <img
-                src="/images/hero-system.jpg"
-                alt="Leistung durch Gesundheit"
-                loading="eager"
-                decoding="async"
-                fetchPriority="high"
-                className="bento-bg-img"
-              />
-            </picture>
-            <div className="bento-overlay" />
-            <div className="bento-content bento-content--hero" style={{ maxWidth: 760 }}>
-              <h1 className="bento-hero-h1">
-                {isEn ? 'Performance through Health' : 'Leistung durch Gesundheit'}
-              </h1>
-            </div>
-          </Link>
 
-          {/* 2. PILLAR M¹: FOOD (Span 4 - The First Column) */}
+          {/* PILLAR M¹: FOOD */}
           <Link
             to="/metabolism"
             className="bento-card bento-card--pillar bento-card--m1 bento-span-4"
@@ -91,11 +51,6 @@ export function Home() {
               <h2 className="bento-pillar-head">Food.</h2>
               <p className="bento-pillar-sub">
                 {isEn ? 'Metabolism & Cellular Energy' : 'Metabolismus & Zellenergie'}
-              </p>
-              <p className="bento-desc">
-                {isEn
-                  ? 'Stable blood sugar, gut health, and cellular nutrient absorption for sustained drive.'
-                  : 'Stabiler Blutzucker, Darmgesundheit und optimale Nährstoffverwertung für konstante Tagesenergie.'}
               </p>
               <div className="bento-arrow-btn">
                 <span>{isEn ? 'Explore Food (M¹) →' : 'Säule Food entdecken →'}</span>
@@ -135,11 +90,6 @@ export function Home() {
               <p className="bento-pillar-sub">
                 {isEn ? 'Biomechanics & Pain Freedom' : 'Biomechanik & Schmerzfreiheit'}
               </p>
-              <p className="bento-desc">
-                {isEn
-                  ? 'Joint stability, functional mobility, and full physical resilience under high demand.'
-                  : 'Gelenkstabilität, funktionelle Mobilität und maximale Belastbarkeit im Alltag und Sport.'}
-              </p>
               <div className="bento-arrow-btn">
                 <span>{isEn ? 'Explore Move (M²) →' : 'Säule Move entdecken →'}</span>
               </div>
@@ -177,11 +127,6 @@ export function Home() {
               <h2 className="bento-pillar-head">Repeat.</h2>
               <p className="bento-pillar-sub">
                 {isEn ? 'Mindset & Neural Clarity' : 'Mindset & neuronale Klarheit'}
-              </p>
-              <p className="bento-desc">
-                {isEn
-                  ? 'Decision economy, deep restorative sleep, and nervous system control under pressure.'
-                  : 'Entscheidungsökonomie, tiefer Schlaf und Stressresilienz – trainiert wie ein Muskel.'}
               </p>
               <div className="bento-arrow-btn">
                 <span>{isEn ? 'Explore Repeat (M³) →' : 'Säule Repeat entdecken →'}</span>
