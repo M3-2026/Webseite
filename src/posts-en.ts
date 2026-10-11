@@ -234,7 +234,7 @@ export const posts = [
       },
       {
         h: 'Too much at once is a design error',
-        p: 'Metabolism, training, sleep, supplements, journaling — started in parallel, dropped in parallel. M³ sets the order: the bottleneck first, then the next lever. System Start exists for exactly that. You do not need to know the pillar in advance. You need to stop repairing everything at once.',
+        p: 'Metabolism, training, sleep, supplements, journaling — started in parallel, dropped in parallel. M³ sets the order: the bottleneck first, then the next lever. The matching pillar exists for exactly that. You do not need to know the module in advance. You need to stop repairing everything at once.',
       },
       {
         h: 'Supervision lasts less than autonomy',

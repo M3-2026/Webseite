@@ -88,38 +88,14 @@ export function Contact() {
                 href={wa.talk}
                 target="_blank"
                 rel="noreferrer"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 10,
-                  padding: '12px 16px',
-                  borderRadius: 12,
-                  background: 'rgba(255,255,255,0.05)',
-                  border: '1px solid rgba(255,255,255,0.12)',
-                  color: '#ffffff',
-                  textDecoration: 'none',
-                  fontSize: 13.5,
-                  fontWeight: 650,
-                }}
+                className="contact-channel"
               >
                 <span>WhatsApp: {t.footerWaTalk}</span>
               </a>
 
               <a
                 href={`tel:+${contact.phone}`}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 10,
-                  padding: '12px 16px',
-                  borderRadius: 12,
-                  background: 'rgba(255,255,255,0.05)',
-                  border: '1px solid rgba(255,255,255,0.12)',
-                  color: '#ffffff',
-                  textDecoration: 'none',
-                  fontSize: 13.5,
-                  fontWeight: 650,
-                }}
+                className="contact-channel"
               >
                 <span>Telefon: {phoneDisplay}</span>
               </a>
@@ -128,19 +104,7 @@ export function Contact() {
                 href={contact.instagram}
                 target="_blank"
                 rel="noreferrer"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 10,
-                  padding: '12px 16px',
-                  borderRadius: 12,
-                  background: 'rgba(255,255,255,0.05)',
-                  border: '1px solid rgba(255,255,255,0.12)',
-                  color: '#ffffff',
-                  textDecoration: 'none',
-                  fontSize: 13.5,
-                  fontWeight: 650,
-                }}
+                className="contact-channel"
               >
                 <span>Instagram: @michelmeiermoves</span>
               </a>
@@ -217,7 +181,7 @@ export function Contact() {
               />
               <img
                 src="/images/moodboard/mood-elevate.jpg"
-                alt="M3 System Start Standortbestimmung"
+                alt="Standortbestimmung mit Michél"
                 loading="lazy"
                 decoding="async"
                 className="bento-bg-img"
@@ -230,12 +194,12 @@ export function Contact() {
               </h2>
               <p className="bento-lead">
                 {isEn
-                  ? 'Start with the comprehensive 360° System Start or book your 30-min intro slot.'
-                  : 'Starte direkt mit der 360° System Start Diagnostik oder sichere dir deinen Termin.'}
+                  ? 'Book a 30-minute intro call with Michél.'
+                  : 'Sichere dir dein 30-Minuten-Orientierungsgespräch mit Michél.'}
               </p>
               <div className="bento-cta-row" style={{ marginTop: 16 }}>
-                <Link to="/system-start" className="btn-white">
-                  {t.systemStart}
+                <Link to="/buchen" className="btn-white">
+                  {t.bookMichel}
                 </Link>
                 <a
                   href={contact.cal}

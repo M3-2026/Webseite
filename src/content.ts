@@ -11,7 +11,7 @@ export const contact = {
 
 export const wa = {
   talk: contact.wa('Hallo Michél, ich interessiere mich für ein kostenloses Erstgespräch.'),
-  start: contact.wa('Hallo Michél, ich möchte den M³ System Start machen.'),
+  start: contact.wa('Hallo Michél, ich möchte eine Standortbestimmung machen.'),
   bodyReset: contact.wa('Hallo Michél, ich interessiere mich für den M¹ Body Reset.'),
   nutrition: contact.wa('Hallo Michél, ich interessiere mich für das M¹ Ernährungscoaching.'),
   painfree: contact.wa('Hallo Michél, ich interessiere mich für M² Schmerzfrei.'),
@@ -846,6 +846,7 @@ export const audience = [
     dailyLife: '„Hi Michél, 12h-Tage und Dauermeetings killen mich gerade. Ab 14:30 Uhr falle ich in ein massives Loch, abends kreisen die Gedanken und ich schlafe trotz Erschöpfung nur oberflächlich. Ich brauche volle Klarheit, aber mein Kalender hat null Puffer für stundenlange Routinen.“',
     approach: '„Hi Sarah, kein Stressor extra in deinem Kalender: Wir setzen direkt an deiner Blutzuckerkurve und deinem Cortisol-Rhythmus an. Wir etablieren 3 feste, stressfreie Ernährungskerne und zwei 90-Sekunden-Zirkadian-Trigger für den Vormittag. Damit stoppen wir das Nachmittagstief und du fährst abends das Nervensystem gezielt herunter – tiefer Schlaf, ohne Zeitverlust.“',
     image: '/images/aud-exec-face.jpg',
+    pillar: 'm3',
   },
   {
     title: 'Schreibtisch & Chronische Schmerzen',
@@ -853,6 +854,7 @@ export const audience = [
     dailyLife: '„Hi Michél, sitze 9-10h am Code. Im Lendenwirbelbereich brennt es dumpf, der Nacken ist bretthart. Massagen und Physio bringen immer nur für zwei Tage Ruhe. Ich brauche endlich eine dauerhafte Lösung, die mich im Alltag nicht einschränkt.“',
     approach: '„Hi Markus, kenne ich aus eigener Erfahrung mit meinem HWS-Vorfall: Reines Dehnen bringt nichts, wenn die neuronale Ansteuerung der Gelenkkette blockiert ist. Wir testen deine Hüft- und Rumpfstabilisatoren und schalten die inaktiven Muskeln wieder scharf. Dazu gibt’s 3 gezielte 2-Minuten-Resets direkt am Schreibtisch – so beheben wir die Ursache, nicht nur das Symptom.“',
     image: '/images/aud-desk-face.jpg',
+    pillar: 'm2',
   },
   {
     title: 'Diät-Müde & Stoffwechsel-Blockade',
@@ -860,6 +862,7 @@ export const audience = [
     dailyLife: '„Hi Michél, ich habe jahrelang Low-Carb und Kalorientracken durchgezogen. Trotz aller Disziplin: ständiger Blähbauch, Heißhunger am Abend und auf der Waage rührt sich absolut nichts mehr. Es fühlt sich an, als hätte mein Körper komplett dichtgemacht.“',
     approach: '„Hi Elena, Schluss mit Verzicht und Diätstress! Dein Stoffwechsel ist nicht kaputt, sondern im zellulären Schutzmodus. Wir reparieren zuerst dein Mikrobiom, stabilisieren deinen Glukosespiegel und versorgen deine Mitochondrien wieder mit gezielten Nährstoffen. Sobald deine Zellen Energie bekommen, schaltet der Körper von Blockade auf natürliche Fettverbrennung – ganz ohne Jojo-Effekt.“',
     image: '/images/aud-diet-face.jpg',
+    pillar: 'm1',
   },
   {
     title: 'Ambitionierte & Sportler-Plateau',
@@ -867,6 +870,7 @@ export const audience = [
     dailyLife: '„Hi Michél, ich ziehe 5 harte Einheiten pro Woche durch, aber meine Hyrox-Zeiten stagnieren komplett. Dazu zwickt ständig die linke Achillessehne und ich brauche nach Intervallen Tage, um wieder frisch zu sein. Wo hakt es?“',
     approach: '„Hi David, mehr Härte zerstört, wo Präzision fehlt. Bei dir kompensiert die Kette eine Asymmetrie im Becken, was die Sehne überlastet. Wir analysieren deine Bewegungsmuster, optimieren deine intrazelluläre Mikronährstoffversorgung und stellen dein Training auf ein periodisiertes Kraft-Mobilitäts-System um. Mehr Output bei deutlich schnellerer Regeneration.“',
     image: '/images/aud-athlete-face.jpg',
+    pillar: 'm2',
   },
 ]
 
@@ -883,54 +887,67 @@ export const faqs = [
   {
     q: 'Muss ich bereits fit sein, um mit M³ zu starten?',
     a: 'Nein, absolut nicht. Ganz im Gegenteil: M³ holt dich exakt dort ab, wo du heute stehst. Egal ob nach langer Pause, mit Übergewicht, Schmerzen oder als Sportler mit Leistungsambitionen.',
+    pillar: 'all',
   },
   {
     q: 'Wie läuft das kostenlose Erstgespräch ab?',
     a: 'In rund 20 Minuten per Telefon oder Video sprechen wir über deine aktuellen Hürden, deinen Alltag und deine Ziele. Wir prüfen ehrlich, ob M³ der richtige Hebel für dich ist. Danach erhältst du eine erste Einschätzung – völlig unverbindlich.',
+    pillar: 'all',
   },
   {
     q: 'Kann die Betreuung auch komplett online stattfinden?',
     a: 'Ja. Stoffwechselanalysen, Ernährungsbegleitung und mentale Routinen lassen sich ortsunabhängig digital durchführen. Beim Personal Training kombinieren wir je nach Wohnort Präsenz-Sessions mit digitaler Begleitung.',
+    pillar: 'all',
   },
   {
     q: 'Was unterscheidet M³ von klassischem Personal Training?',
     a: 'Klassische Trainer lassen dich schwitzen und schicken dich nach 60 Minuten heim. M³ betrachtet das Gesamtsystem: Wenn dein Darm rebelliert oder du vor Stress nicht schläfst, verpufft jedes Training. Wir lösen die Ursachen, nicht die Symptome.',
+    pillar: 'm2',
   },
   {
     q: 'Muss ich Nahrungsergänzungsmittel einnehmen?',
     a: 'Nein. Die Basis sind immer echte Nahrung, Bewegung und Regeneration. Falls eine gezielte Mikronährstoff-Optimierung sinnvoll ist, besprechen wir das transparent und wissenschaftlich fundiert.',
+    pillar: 'm1',
   },
   {
     q: 'Womit starte ich, wenn ich nicht weiß, wo das Problem liegt?',
-    a: 'Mit dem System Start. Wir klären zuerst, ob Stoffwechsel, Bewegung oder Routinen der Engpass sind – und bauen danach den Fahrplan. Du musst nicht vorher wissen, welches Modul du brauchst.',
+    a: 'Mit der Säule, die zum Engpass passt. M¹, wenn Energie und Stoffwechsel blockieren. M², wenn Bewegung oder Schmerz begrenzen. M³, wenn Schlaf, Stress oder Routinen kippen. Du musst das Modul nicht vorher kennen.',
+    pillar: 'all',
   },
   {
     q: 'Wie viel Zeit brauche ich pro Woche?',
     a: 'So viel, wie dein Alltag hergibt – und nicht mehr. Wir bauen minimale Routinen, die in Beruf und Familie passen. Lieber drei saubere Hebel als ein Plan, den du nach zwei Wochen abbrichst.',
+    pillar: 'm3',
   },
   {
     q: 'Arbeitet ihr mit starren Diäten oder Verboten?',
     a: 'Nein. Keine 14-Tage-Crash-Diäten, keine Korsetts. In der Ernährung geht es um alltagstaugliche Struktur, Blutzucker und Stoffwechsel – ohne Jojo-Effekt.',
+    pillar: 'm1',
   },
   {
     q: 'Was, wenn ich Schmerzen habe und nicht richtig trainieren kann?',
     a: 'Dann ist das der Startpunkt, nicht das Hindernis. Über M² klären wir Ursachen an Rücken, Nacken und Gelenken, bevor Last und Intensität erhöht werden. Technik schlägt Gewicht – immer.',
+    pillar: 'm2',
   },
   {
     q: 'Kann ich als Paar oder mit einem Freund starten?',
     a: 'Ja. Das M² Coaching für Zwei ist genau dafür: individuelle Pläne, gemeinsame Termine, doppelte Motivation – ohne dass einer im Schema des anderen mitläuft.',
+    pillar: 'm2',
   },
   {
     q: 'Wie lange dauert es, bis sich etwas verändert?',
     a: 'Energie und Klarheit merken viele schon in den ersten Wochen, sobald Darm, Schlaf oder Technik greifen. Haltbare Routinen brauchen länger – genau deshalb begleiten wir, bis du selbst steuerst.',
+    pillar: 'all',
   },
   {
     q: 'Für wen ist M³ nicht geeignet?',
     a: 'Für alle, die eine Wunderpille, einen 6-Wochen-Kick oder reines Abtrainieren ohne Ursachenarbeit suchen. M³ ist 1:1-Begleitung mit dem Ziel Autonomie – nicht ein Abo, das dich abhängig hält.',
+    pillar: 'all',
   },
   {
     q: 'Wie geht es nach dem Erstgespräch weiter?',
-    a: 'Wenn es passt, folgt Analyse, Priorität und ein klarer nächster Schritt: System Start oder das passende Modul. Du entscheidest. Es gibt keinen Druck und keinen Standardvertrag von der Stange.',
+    a: 'Wenn es passt, folgen Analyse, Priorität und ein klarer nächster Schritt: die passende Säule oder das passende Modul. Du entscheidest. Es gibt keinen Druck und keinen Standardvertrag von der Stange.',
+    pillar: 'all',
   },
 ]
 
@@ -955,26 +972,69 @@ export const compass = [
   },
 ] as const
 
+export const audits = [
+  {
+    id: 'm1',
+    badge: 'M¹ · METABOLISMUS',
+    title: 'Zellenergie & Mikrobiom-Audit',
+    text: 'Wir analysieren Nährstoffresorption, Blutzuckerschwankungen, Darmimmunität und stille Entzündungen.',
+    focus: 'Mikrobiom, Blutzuckerstabilität, Entzündungslevel',
+    points: [
+      'Keine Nachmittagstiefs und kein Heißhunger mehr',
+      'Optimale mitochondriale ATP-Produktion',
+      'Stabiler Stoffwechsel ohne Verzichtsdogmen',
+    ],
+  },
+  {
+    id: 'm2',
+    badge: 'M² · BIOMECHANIK',
+    title: 'Gelenk- & Schmerz-Screening',
+    text: 'Prüfung von Gelenkwinkeln, myofaszialen Ketten, Wirbelsäulenbelastung und Asymmetrien.',
+    focus: 'Gelenkbelastbarkeit, Faszienketten, Bewegungsmuster',
+    points: [
+      'Schmerzfreie Beweglichkeit im Berufsalltag',
+      'Gezielte Dekompression geschädigter Segmente',
+      'Athletische Belastbarkeit und Gelenkschutz',
+    ],
+  },
+  {
+    id: 'm3',
+    badge: 'M³ · MINDSET',
+    title: 'Neuro-Stress & Tiefschlaf-Audit',
+    text: 'Analyse von Stressachsen, Tiefschlafphasen, Entscheidungsökonomie und mentalem Fokus.',
+    focus: 'Tiefschlafarchitektur, Fokus und Entscheidungsresilienz',
+    points: [
+      'Tiefer, erholsamer Schlaf',
+      'Klare Entscheidungsfähigkeit unter Last',
+      'Stabile Routinen, die bei Stress nicht kippen',
+    ],
+  },
+] as const
+
 export const startProof = [
   {
     title: 'Ein Katalog fragt nach der Wahl. Ein Eingang fragt nach dem Engpass.',
-    text: 'Body Reset, Schmerzfrei, Performance — das sind Module. Wer dort startet, hat die Diagnose schon selbst gestellt. Der System Start tut das Gegenteil: er prüft zuerst, ob Stoffwechsel, Bewegung oder Routinen der begrenzende Faktor sind. Deshalb ist er kein Angebot unter anderen. Er ist die Stelle, an der das System dich einordnet.',
+    text: 'Body Reset, Schmerzfrei, Performance — das sind Module. Wer dort startet, hat die Diagnose schon selbst gestellt. M¹ prüft zuerst, ob Stoffwechsel der begrenzende Faktor ist. Deshalb ist diese Säule kein Angebot unter anderen. Sie ist die Stelle, an der das System die Energie einordnet.',
     image: '/images/blog-plaene.jpg',
+    pillar: 'm1',
   },
   {
     title: 'Die Säulen bedingen einander. Parallel starten ist Raten.',
     text: 'M¹, M² und M³ sind keine Menüpunkte. Last auf einem brennenden Fundament erzeugt Verschleiß. Saubere Technik zerfällt, wenn Schlaf und Stress die Wiederholung fressen. Wer drei Hebel gleichzeitig zieht, kann nicht sagen, welcher trägt. Die feste Reihenfolge existiert, weil der Körper eine Reihenfolge hat — nicht weil es sich besser verkauft.',
     image: '/images/blog-fundament.jpg',
+    pillar: 'm1',
   },
   {
     title: 'Du musst die Säule nicht kennen. Das ist die Arbeit.',
-    text: 'Müde trotz Training. Schmerz trotz Pause. Pläne, die in Woche drei kippen. Dieselben Symptome können in drei verschiedenen Säulen sitzen. Der System Start nimmt dir die Vorentscheidung ab: Status, Priorität, ein nächster Schritt. Danach erst ein Modul — oder keiner, wenn es nicht passt.',
+    text: 'Müde trotz Training. Schmerz trotz Pause. Pläne, die in Woche drei kippen. Dieselben Symptome können in drei verschiedenen Säulen sitzen. M³ klärt, wenn Schlaf, Stress oder fehlende Routinen der Engpass sind: Status, Priorität, ein nächster Schritt. Danach erst ein Modul — oder keiner, wenn es nicht passt.',
     image: '/images/blog-willenskraft.jpg',
+    pillar: 'm3',
   },
   {
     title: 'Status vor Eingriff. So arbeitet Michél.',
-    text: 'Nach dem Bandscheibenvorfall im Halswirbelbereich hat mehr Disziplin den Körper nicht zurückgeholt. Der Weg zurück begann mit der Frage, was zuerst trägt. Genau diese Frage stellt der System Start: nicht „welches Paket willst du“, sondern „wo hält das System nicht“. Erst dann folgen Reset, Technik oder Routine.',
+    text: 'Nach dem Bandscheibenvorfall im Halswirbelbereich hat mehr Disziplin den Körper nicht zurückgeholt. Der Weg zurück begann mit der Frage, was zuerst trägt. M² stellt genau diese Frage bei Schmerz und Last: nicht „welches Paket willst du“, sondern „wo hält das System nicht“. Erst dann folgen Technik und Belastung.',
     image: '/images/michel-trainer.jpg',
+    pillar: 'm2',
   },
 ] as const
 
@@ -1054,7 +1114,6 @@ export const nav = [
   { to: '/#system', label: 'System' },
   { to: '/#module', label: 'Module' },
   { to: '/ueber-mich', label: 'Michél' },
-  { to: '/system-start', label: 'System Start' },
 ]
 
 export const michelSlides = [

@@ -1679,9 +1679,9 @@ picture {
 
 .footer-brand-text {
   font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: none;
   color: var(--muted);
   display: inline-flex;
   align-items: baseline;
@@ -1701,11 +1701,11 @@ picture {
 }
 
 .footer-trademark {
-  font-size: 8px;
+  font-size: 0.72em;
   vertical-align: super;
   font-weight: 700;
   color: var(--gold, #fbbf24);
-  margin-left: 2px;
+  margin-left: 1px;
 }
 
 .legal-page {
@@ -1729,7 +1729,7 @@ picture {
   font-size: clamp(38px, 5.5vw, 64px);
   font-weight: 800;
   letter-spacing: -0.03em;
-  color: #ffffff;
+  color: var(--text);
   line-height: 1.08;
 }
 
@@ -1753,7 +1753,7 @@ picture {
   margin: 0 0 10px;
   font-size: clamp(20px, 2.2vw, 26px);
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text);
 }
 
 .legal p {
@@ -3229,9 +3229,9 @@ picture {
    ========================================================================== */
 
 .bento-page {
-  padding-top: calc(var(--nav-height) + 14px);
-  padding-bottom: 56px;
-  background: #f3efe8;
+  padding-top: calc(var(--nav-height) + 10px);
+  padding-bottom: 72px;
+  background: #ffffff;
 }
 
 .bento-page--landing {
@@ -4295,8 +4295,8 @@ picture.bento-bg img,
 }
 
 .bento-audience-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 14px;
   width: 100%;
 }
@@ -4304,6 +4304,8 @@ picture.bento-bg img,
 .bento-persona-card {
   display: flex;
   flex-direction: column;
+  flex: 1 1 320px;
+  max-width: 520px;
   background: #ffffff;
   border: 1px solid rgba(28, 22, 16, 0.1);
   border-radius: 18px;
@@ -5874,7 +5876,7 @@ picture.bento-bg img,
 
   .footer-brand-text {
     font-size: 10px;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -5901,6 +5903,304 @@ picture.bento-bg img,
   .journal-feed-card {
     flex: 0 0 84vw;
   }
+}
+
+/* ==========================================================================
+   SUBPAGES — same quiet language as the landing
+   ========================================================================== */
+
+.bento-page:not(.bento-page--landing) .bento-grid {
+  gap: 18px;
+}
+
+.bento-page:not(.bento-page--landing) .bento-card,
+.bento-page:not(.bento-page--landing) .bento-card:hover,
+.bento-page:not(.bento-page--landing) .bento-card--pillar,
+.bento-page:not(.bento-page--landing) .bento-card--pillar:hover,
+.bento-page:not(.bento-page--landing) .bento-card--audit-step,
+.bento-page:not(.bento-page--landing) .bento-card--audit-step:hover,
+.bento-page:not(.bento-page--landing) .bento-card--journal,
+.bento-page:not(.bento-page--landing) .bento-card--audience,
+.bento-page:not(.bento-page--landing) .bento-card--temple-base,
+.bento-page:not(.bento-page--landing) .bento-card--surface,
+.bento-page:not(.bento-page--landing) .bento-card--call-white {
+  border: 0 !important;
+  outline: none;
+  box-shadow: none !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+.bento-page:not(.bento-page--landing) .bento-card:has(.bento-bg),
+.bento-page:not(.bento-page--landing) .bento-card:has(.bento-bg):hover {
+  background: transparent !important;
+}
+
+.bento-page:not(.bento-page--landing) .bento-card:has(.bento-bg) .bento-bg-img,
+.bento-page:not(.bento-page--landing) .bento-card:has(.bento-bg) picture.bento-bg img {
+  transform: scale(1.02) !important;
+}
+
+.bento-page:not(.bento-page--landing) .bento-card:has(.bento-bg) .bento-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(20, 16, 12, 0) 0%,
+    rgba(20, 16, 12, 0) 42%,
+    rgba(20, 16, 12, 0.4) 72%,
+    rgba(20, 16, 12, 0.78) 100%
+  ) !important;
+}
+
+.bento-page:not(.bento-page--landing) .bento-card--hero {
+  height: auto;
+  min-height: clamp(440px, 56vh, 600px);
+}
+
+.bento-page:not(.bento-page--landing) .bento-card--start {
+  height: auto;
+  min-height: clamp(260px, 34vh, 380px);
+}
+
+.bento-page:not(.bento-page--landing) .bento-card--audit-step,
+.bento-page:not(.bento-page--landing) .bento-card--journal,
+.bento-page:not(.bento-page--landing) .bento-card--audience,
+.bento-page:not(.bento-page--landing) .bento-card--temple-base,
+.bento-page:not(.bento-page--landing) .bento-card--surface,
+.bento-page:not(.bento-page--landing) .bento-card--call-white {
+  background: #f6f4f0 !important;
+  color: #1c1610 !important;
+}
+
+.bento-page:not(.bento-page--landing) .bento-hero-h1,
+.bento-page:not(.bento-page--landing) .bento-title,
+.bento-page:not(.bento-page--landing) .bento-lead,
+.bento-page:not(.bento-page--landing) .bento-desc {
+  text-shadow: none !important;
+}
+
+.bento-page:not(.bento-page--landing) .bento-card:has(.bento-bg) .bento-hero-h1 {
+  font-size: clamp(30px, 3.4cqi, 46px);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+}
+
+.bento-page:not(.bento-page--landing) .bento-card:has(.bento-bg) .bento-lead {
+  margin-top: 8px;
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 42ch;
+}
+
+.bento-page:not(.bento-page--landing) .bento-card:has(.bento-bg) .bento-tag,
+.bento-page:not(.bento-page--landing) .bento-card:has(.bento-bg) .bento-tag--gold {
+  background: #ffffff !important;
+  color: #d97706 !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: none !important;
+  padding: 3px 9px;
+  letter-spacing: 0.08em;
+}
+
+.bento-page:not(.bento-page--landing) .bento-audit-badge,
+.bento-page:not(.bento-page--landing) .bento-card--journal .bento-audit-badge,
+.bento-page:not(.bento-page--landing) .bento-card--audience .bento-audit-badge,
+.bento-page:not(.bento-page--landing) .bento-persona-role {
+  background: transparent !important;
+  border: 0 !important;
+  color: #d97706 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  letter-spacing: 0.12em;
+  box-shadow: none !important;
+}
+
+.bento-page:not(.bento-page--landing) .bento-card--audit-step .bento-title,
+.bento-page:not(.bento-page--landing) .bento-card--journal .bento-title,
+.bento-page:not(.bento-page--landing) .bento-card--audience .bento-title {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.bento-page:not(.bento-page--landing) .bento-card--audit-step .bento-desc,
+.bento-page:not(.bento-page--landing) .bento-card--journal .bento-desc,
+.bento-page:not(.bento-page--landing) .bento-card--audience .bento-desc,
+.bento-page:not(.bento-page--landing) .bento-card--audit-step p,
+.bento-page:not(.bento-page--landing) .bento-card--journal p {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.55;
+  color: #5c564e !important;
+  max-width: 62ch;
+}
+
+.bento-page:not(.bento-page--landing) .bento-audit-points li::before,
+.bento-page:not(.bento-page--landing) .bento-card--audit-step .bento-audit-points li::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  margin-top: 0.55em;
+  border-radius: 50%;
+  background: #d97706;
+  flex-shrink: 0;
+}
+
+.bento-page:not(.bento-page--landing) .bento-card:has(.bento-bg) .btn-white,
+.bento-page:not(.bento-page--landing) .bento-card:has(.bento-bg) .btn-white:hover,
+.bento-page:not(.bento-page--landing) .bento-card:has(.bento-bg) .btn-white-ghost,
+.bento-page:not(.bento-page--landing) .bento-card:has(.bento-bg) .btn-white-ghost:hover {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: #fbbf24 !important;
+  padding: 0 !important;
+  min-height: 0 !important;
+  border-radius: 0 !important;
+  font-size: 13.5px;
+  font-weight: 700;
+  transform: none !important;
+}
+
+.bento-page:not(.bento-page--landing) .bento-card:has(.bento-bg) .btn-white svg,
+.bento-page:not(.bento-page--landing) .bento-card:has(.bento-bg) .btn-white-ghost svg {
+  display: none;
+}
+
+.bento-page:not(.bento-page--landing) .bento-card--journal .btn-white,
+.bento-page:not(.bento-page--landing) .bento-card--audit-step .btn-white,
+.bento-page:not(.bento-page--landing) .bento-card--audience .btn-white,
+.bento-page:not(.bento-page--landing) .bento-card--temple-base .btn-white {
+  background: transparent !important;
+  color: #d97706 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  font-weight: 700;
+}
+
+.bento-page:not(.bento-page--landing) .bento-card--journal .btn-white-ghost,
+.bento-page:not(.bento-page--landing) .bento-card--audit-step .btn-white-ghost,
+.bento-page:not(.bento-page--landing) .bento-card--audience .btn-white-ghost {
+  background: transparent !important;
+  border: 0 !important;
+  color: #d97706 !important;
+  padding: 0 !important;
+}
+
+.bento-page:not(.bento-page--landing) .bento-sub-card,
+.bento-page:not(.bento-page--landing) .bento-sub-card:hover,
+.bento-page:not(.bento-page--landing) .bento-persona-card,
+.bento-page:not(.bento-page--landing) .bento-persona-card:hover,
+.bento-page:not(.bento-page--landing) .bento-compass-card,
+.bento-page:not(.bento-page--landing) .bento-compass-card:hover,
+.bento-page:not(.bento-page--landing) .journal-feed-card,
+.bento-page:not(.bento-page--landing) .journal-feed-card:hover {
+  border: 0 !important;
+  box-shadow: none !important;
+  transform: none !important;
+  background: #ffffff !important;
+}
+
+.bento-page:not(.bento-page--landing) .bento-persona-avatar-wrap,
+.bento-page:not(.bento-page--landing) .bento-persona-card:hover .bento-persona-avatar-wrap {
+  border: 0;
+  box-shadow: none;
+}
+
+.bento-page:not(.bento-page--landing) .bento-sub-media {
+  height: 148px;
+  border-radius: 16px 16px 0 0;
+}
+
+.bento-page:not(.bento-page--landing) .bento-pillar-accent {
+  color: #d97706 !important;
+}
+
+.contact-channel {
+  display: flex;
+  align-items: center;
+  padding: 2px 0;
+  background: none;
+  border: 0;
+  color: #1c1610;
+  font-size: 15px;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.contact-channel:hover {
+  color: #d97706;
+}
+
+.bento-page:not(.bento-page--landing) .back-link {
+  margin: 0 0 12px;
+  gap: 10px 14px;
+}
+
+.bento-page:not(.bento-page--landing) .back-link-btn,
+.bento-page:not(.bento-page--landing) .back-link-home {
+  font-size: 12px;
+  font-weight: 500;
+  color: #8a837a;
+}
+
+.section .card,
+.section .card:hover {
+  background: #f6f4f0;
+  border: 0;
+  box-shadow: none;
+  transform: none;
+}
+
+.bento-page:not(.bento-page--landing) :is(
+  .bento-card--audit-step,
+  .bento-card--journal,
+  .bento-card--audience,
+  .bento-card--temple-base,
+  .bento-card--surface
+) :is(h1, h2, h3, h4, p, span, strong, li, div, a) {
+  color: #1c1610 !important;
+}
+
+.bento-page:not(.bento-page--landing) :is(
+  .bento-card--audit-step,
+  .bento-card--journal,
+  .bento-card--audience
+) :is(.bento-desc, .bento-lead, p) {
+  color: #5c564e !important;
+}
+
+.bento-page:not(.bento-page--landing) .bento-audit-badge,
+.bento-page:not(.bento-page--landing) .bento-persona-role,
+.bento-page:not(.bento-page--landing) .bento-pillar-accent,
+.bento-page:not(.bento-page--landing) .journal-feed-cta,
+.bento-page:not(.bento-page--landing) .bento-header-link,
+.bento-page:not(.bento-page--landing) .bento-card--journal .btn-white,
+.bento-page:not(.bento-page--landing) .bento-card--audit-step .btn-white,
+.bento-page:not(.bento-page--landing) .bento-card--audience .btn-white,
+.bento-page:not(.bento-page--landing) .bento-card--journal .btn-white-ghost,
+.bento-page:not(.bento-page--landing) .bento-card--audit-step .btn-white-ghost,
+.bento-page:not(.bento-page--landing) .contact-channel,
+.bento-page:not(.bento-page--landing) .contact-channel span {
+  color: #d97706 !important;
+}
+
+.bento-page:not(.bento-page--landing) .bento-card:has(.bento-bg) .bento-cta-row {
+  gap: 22px;
+}
+
+.bento-page:not(.bento-page--landing) .bento-card:has(.bento-bg) .btn-white-ghost,
+.bento-page:not(.bento-page--landing) .bento-card:has(.bento-bg) .btn-white-ghost:hover {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+.bento-page:not(.bento-page--landing) .bento-sub-body > span {
+  color: #d97706 !important;
 }
 
 

@@ -46,12 +46,7 @@ export function About() {
               <h1 className="bento-hero-h1">
                 Michél Meier. <span>{about.headline}</span>
               </h1>
-              <p className="bento-lead" style={{ fontStyle: 'italic', opacity: 0.95 }}>
-                „{about.quote}“
-              </p>
-              <p className="bento-desc" style={{ maxWidth: '56ch', marginTop: 6, fontSize: 13.5 }}>
-                {about.intro}
-              </p>
+              <p className="bento-lead">„{about.quote}“</p>
               <div className="bento-cta-row" style={{ marginTop: 16 }}>
                 <a href={wa.talk} target="_blank" rel="noreferrer" className="btn-white">
                   <svg viewBox="0 0 24 24" fill="currentColor" className="btn-icon" style={{ width: 16, height: 16, marginRight: 6 }}>
@@ -98,7 +93,10 @@ export function About() {
               <h2 className="bento-title" style={{ fontSize: 21, color: '#111111', marginTop: 10 }}>
                 {isEn ? '30+ Years of Movement Practice' : '30+ Jahre Bewegungserfahrung'}
               </h2>
-              <p className="bento-desc" style={{ marginTop: 8, fontSize: 13, lineHeight: 1.5, color: '#333333' }}>
+              <p className="bento-desc" style={{ marginTop: 8 }}>
+                {about.intro}
+              </p>
+              <p className="bento-desc" style={{ marginTop: 8 }}>
                 {about.bio}
               </p>
             </div>
@@ -270,7 +268,7 @@ export function About() {
               />
               <img
                 src="/images/moodboard/mood-pushup.jpg"
-                alt="M3 Performance System Start"
+                alt="Standortbestimmung mit Michél"
                 loading="lazy"
                 decoding="async"
                 className="bento-bg-img"
@@ -287,8 +285,8 @@ export function About() {
                   : 'Starte mit deiner persönlichen 360° Standortbestimmung oder buche direkt ein 30 Min. Orientierungsgespräch.'}
               </p>
               <div className="bento-cta-row" style={{ marginTop: 16 }}>
-                <Link to="/system-start" className="btn-white">
-                  {t.systemStart}
+                <Link to="/buchen" className="btn-white">
+                  {t.bookMichel}
                 </Link>
                 <a
                   href={contact.cal}

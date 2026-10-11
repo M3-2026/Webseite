@@ -20,7 +20,6 @@ export function Sitemap() {
           <article className="card">
             <h3>{t.system}</h3>
             <p><Link to="/">{t.smHome}</Link></p>
-            <p><Link to="/system-start">{t.systemStart}</Link></p>
             <p><Link to="/ueber-mich">{t.footerAboutMichel}</Link></p>
             {pillars.map((p) => (
               <p key={p.slug}>

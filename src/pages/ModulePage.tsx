@@ -51,14 +51,9 @@ export function ModulePage() {
             <div className="bento-overlay" />
             <div className="bento-content bento-content--hero">
               <h1 className="bento-hero-h1">
-                {pillar?.mark ? `${pillar.mark} · ` : ''}{mod.title}. <span>{mod.badge}</span>
+                {pillar?.mark && !mod.title.includes(pillar.mark) ? `${pillar.mark} · ` : ''}{mod.title}. <span>{mod.badge}</span>
               </h1>
-              <p className="bento-lead" style={{ fontWeight: 650 }}>
-                {mod.kicker}
-              </p>
-              <p className="bento-desc" style={{ maxWidth: '56ch', marginTop: 6, fontSize: 13.5 }}>
-                {mod.text}
-              </p>
+              <p className="bento-lead">{mod.kicker}</p>
               <div className="bento-cta-row" style={{ marginTop: 16 }}>
                 <a href={mod.wa} target="_blank" rel="noreferrer" className="btn-white">
                   <svg viewBox="0 0 24 24" fill="currentColor" className="btn-icon" style={{ width: 16, height: 16, marginRight: 6 }}>
@@ -86,6 +81,7 @@ export function ModulePage() {
               <h2 className="bento-title" style={{ fontSize: 20 }}>
                 {mod.outcome}
               </h2>
+              <p className="bento-desc" style={{ marginTop: 8 }}>{mod.text}</p>
               {'priceLabel' in mod && mod.priceLabel && (
                 <div style={{ marginTop: 10, fontSize: 14, fontWeight: 700, color: '#ffffff' }}>
                   {isEn ? 'Investment: ' : 'Investition: '}
@@ -230,7 +226,7 @@ export function ModulePage() {
               />
               <img
                 src="/images/moodboard/mood-elevate.jpg"
-                alt="M3 System Start Standortbestimmung"
+                alt="Standortbestimmung mit Michél"
                 loading="lazy"
                 decoding="async"
                 className="bento-bg-img"
@@ -243,8 +239,8 @@ export function ModulePage() {
               </h2>
               <p className="bento-lead">
                 {isEn
-                  ? 'Start directly with this module or take the comprehensive 360° System Start assessment.'
-                  : 'Starte direkt mit diesem Modul oder ermittle im 360° System Start deinen primären Hebel.'}
+                  ? 'Start directly with this module, or open the matching pillar.'
+                  : 'Starte direkt mit diesem Modul oder öffne die passende Säule.'}
               </p>
               <div className="bento-cta-row" style={{ marginTop: 16 }}>
                 <a href={mod.wa} target="_blank" rel="noreferrer" className="btn-white">
@@ -253,8 +249,8 @@ export function ModulePage() {
                   </svg>
                   {t.writeMe}
                 </a>
-                <Link to="/system-start" className="btn-white-ghost">
-                  {t.preferStart}
+                <Link to={pillar ? `/${pillar.slug}` : '/'} className="btn-white-ghost">
+                  {t.openPillar}
                 </Link>
                 <a
                   href={contact.cal}

@@ -50,8 +50,8 @@ export function Catalog() {
                 {t.catalogLead}
               </p>
               <div className="bento-cta-row" style={{ marginTop: 16 }}>
-                <Link to="/system-start" className="btn-white">
-                  {t.systemStart}
+                <Link to="/buchen" className="btn-white">
+                  {t.bookMichel}
                 </Link>
                 <a
                   href={contact.cal}
@@ -151,7 +151,7 @@ export function Catalog() {
               />
               <img
                 src="/images/moodboard/mood-elevate.jpg"
-                alt="M3 System Start Standortbestimmung"
+                alt="Standortbestimmung mit Michél"
                 loading="lazy"
                 decoding="async"
                 className="bento-bg-img"
@@ -164,12 +164,12 @@ export function Catalog() {
               </h2>
               <p className="bento-lead">
                 {isEn
-                  ? 'Take the 360° System Start assessment or schedule your 20-30 min intro call with Michél.'
+                  ? 'Open the matching pillar or schedule your 20–30 min intro call with Michél.'
                   : 'Starte mit der 360° Standortbestimmung oder sprich direkt mit Michél im kostenlosen Kennenlernen.'}
               </p>
               <div className="bento-cta-row" style={{ marginTop: 16 }}>
-                <Link to="/system-start" className="btn-white">
-                  {t.systemStart}
+                <Link to="/buchen" className="btn-white">
+                  {t.bookMichel}
                 </Link>
                 <a
                   href={contact.cal}

@@ -2,6 +2,7 @@ import { Link, Navigate, useParams } from 'react-router-dom'
 import { BackLink } from '../components/BackLink'
 import { BentoDisclosure } from '../components/BentoDisclosure'
 import { Img } from '../components/Img'
+import { PillarStartContent } from '../components/PillarStartContent'
 import { useUi } from '../copy'
 import { useLocale } from '../locale'
 import { byTier } from '../tierSort'
@@ -76,13 +77,10 @@ export function PillarPage() {
                 {pillar.mark} · {pillar.name}. <span>{pillar.title}</span>
               </h1>
               <p className="bento-lead">{pillar.subline}</p>
-              <p className="bento-desc" style={{ maxWidth: '56ch', marginTop: 6, fontSize: 14 }}>
-                {pillar.body}
-              </p>
               <div className="bento-cta-row" style={{ marginTop: 16 }}>
-                <Link to="/system-start" className="btn-white">
-                  {t.systemStart}
-                </Link>
+                <a href="#einstieg" className="btn-white">
+                  {isEn ? 'See the audit' : 'Zum Audit'}
+                </a>
                 <a
                   href={contact.cal}
                   target="_blank"
@@ -103,11 +101,7 @@ export function PillarPage() {
               <h2 className="bento-title" style={{ fontSize: 21 }}>
                 {pillar.label} · {t.signalsH}
               </h2>
-              <p className="bento-desc">
-                {isEn
-                  ? 'Typical friction points indicating an acute bottleneck in this pillar:'
-                  : 'Typische Reibungspunkte, die auf einen akuten Engpass in diesem Bereich hinweisen:'}
-              </p>
+              <p className="bento-desc">{pillar.body}</p>
             </div>
             <ul className="bento-audit-points">
               {pillar.signals.map((sig) => (
@@ -118,6 +112,8 @@ export function PillarPage() {
               {isEn ? '→ Solved in the 90-Day Trajectory' : '→ Gelöst im 90-Tage-Fahrplan'}
             </div>
           </article>
+
+          <PillarStartContent pillarId={pillar.id} />
 
           {/* 3. MATCHING MODULES IN THIS PILLAR (Span 12) */}
           <article className="bento-card bento-card--journal bento-span-12" style={{ padding: 'clamp(22px, 3vw, 36px)' }}>

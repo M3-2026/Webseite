@@ -5,7 +5,7 @@ export { posts } from './posts-en'
 
 export const wa = {
   talk: contact.wa('Hi Michél, I am interested in a free intro call.'),
-  start: contact.wa('Hi Michél, I would like to do the M³ System Start.'),
+  start: contact.wa('Hi Michél, I would like a baseline assessment.'),
   bodyReset: contact.wa('Hi Michél, I am interested in the M¹ Body Reset.'),
   nutrition: contact.wa('Hi Michél, I am interested in M¹ nutrition coaching.'),
   painfree: contact.wa('Hi Michél, I am interested in M² Pain-free.'),
@@ -777,6 +777,7 @@ export const audience = [
     dailyLife: '“Hey Michél, 12-hour days and back-to-back meetings are draining me. By 2:30 PM severe brain fog hits, at night my thoughts race, and despite exhaustion my sleep is fragmented. I need razor-sharp clarity, but my calendar has zero buffer for long routines.”',
     approach: '“Hey Sarah, zero extra burden on your schedule: We target your blood glucose curve and cortisol rhythm directly. We set up 3 effortless nutritional anchors and two 90-second circadian triggers in the morning. This eliminates the afternoon crash and shifts your nervous system into restorative sleep at night — with zero time wasted.”',
     image: '/images/aud-exec-face.jpg',
+    pillar: 'm3',
   },
   {
     title: 'Desk Workers & Chronic Pain',
@@ -784,6 +785,7 @@ export const audience = [
     dailyLife: '“Hey Michél, sitting 9-10h coding. Dull pain in my lower back, neck completely locked up. Massages and physio only ever bring 48h of relief. I need a real, lasting fix that fits into my working day.”',
     approach: '“Hey Markus, I know this firsthand from my own severe cervical herniation: generic stretching fails if neuromuscular recruitment is blocked. We test your hip and core stabilizers, restore dormant muscle firing, and install 3 targeted 2-minute desk resets. We fix the root mechanical cause, not just the symptom.”',
     image: '/images/aud-desk-face.jpg',
+    pillar: 'm2',
   },
   {
     title: 'Diet-Tired & Metabolic Stagnation',
@@ -791,6 +793,7 @@ export const audience = [
     dailyLife: '“Hey Michél, spent years on low-carb and strict calorie counting. Despite discipline: constant bloating, late-night sugar cravings, and weight is totally stuck. It feels like my metabolism has completely shut down.”',
     approach: '“Hey Elena, no more diet dogma and restriction! Your metabolism isn\'t broken — it\'s in cellular survival mode. We first repair your microbiome, balance glucose spikes, and nourish your mitochondria with essential micronutrients. Once your cells receive real energy, fat oxidation restarts naturally — free of the yo-yo trap.”',
     image: '/images/aud-diet-face.jpg',
+    pillar: 'm1',
   },
   {
     title: 'Athletes & Ambitious Performers',
@@ -798,6 +801,7 @@ export const audience = [
     dailyLife: '“Hey Michél, crushing 5 heavy sessions a week, but my Hyrox splits are plateauing. Plus my left Achilles tendon keeps flaring up and recovery takes days instead of hours. Where is the bottleneck?”',
     approach: '“Hey David, adding more grit only causes breakdown when precision is missing. Your kinetic chain is compensating for a pelvic asymmetry, overloading the tendon. We audit your movement patterns, optimize intracellular micronutrient delivery, and shift you to a periodized strength-mobility framework. Peak power output with vastly faster recovery.”',
     image: '/images/aud-athlete-face.jpg',
+    pillar: 'm2',
   },
 ]
 
@@ -814,54 +818,67 @@ export const faqs = [
   {
     q: 'Do I already need to be fit to start with M³?',
     a: 'No. M³ meets you exactly where you are today — after a long pause, with extra weight, with pain, or as an athlete with performance goals.',
+    pillar: 'all',
   },
   {
     q: 'How does the free intro call work?',
     a: 'In about 20 minutes by phone or video we talk about your current hurdles, your day and your goals. We check honestly whether M³ is the right lever. Then you get a first read — no commitment.',
+    pillar: 'all',
   },
   {
     q: 'Can the work happen fully online?',
     a: 'Yes. Metabolic analysis, nutrition support and mental routines work remotely. For personal training we combine in-person sessions with digital support depending on where you live.',
+    pillar: 'all',
   },
   {
     q: 'What makes M³ different from classic personal training?',
     a: 'Classic trainers make you sweat and send you home after 60 minutes. M³ looks at the whole system: if your gut rebels or stress kills your sleep, training evaporates. We solve causes, not symptoms.',
+    pillar: 'm2',
   },
   {
     q: 'Do I have to take supplements?',
     a: 'No. The base is always real food, movement and recovery. If a targeted micronutrient step makes sense, we discuss it transparently and on scientific ground.',
+    pillar: 'm1',
   },
   {
     q: 'Where do I start if I do not know where the problem is?',
-    a: 'With System Start. We first clarify whether metabolism, movement or routines are the bottleneck — then we build the plan. You do not need to know which module you need first.',
+    a: 'With the pillar that matches the bottleneck. M¹ when energy and metabolism are blocked. M² when movement or pain set the limit. M³ when sleep, stress or routines tip. You do not need to know the module first.',
+    pillar: 'all',
   },
   {
     q: 'How much time do I need per week?',
     a: 'As much as your day can give — and no more. We build minimal routines that fit work and family. Three clean levers beat a plan you drop after two weeks.',
+    pillar: 'm3',
   },
   {
     q: 'Do you work with rigid diets or bans?',
     a: 'No. No 14-day crash diets, no corsets. Nutrition is about everyday structure, blood sugar and metabolism — without the yo-yo.',
+    pillar: 'm1',
   },
   {
     q: 'What if I am in pain and cannot train properly?',
     a: 'Then that is the starting point, not the obstacle. Through M² we clarify causes in back, neck and joints before load and intensity go up. Technique beats weight — always.',
+    pillar: 'm2',
   },
   {
     q: 'Can I start as a couple or with a friend?',
     a: 'Yes. M² Coaching for Two is built for that: individual plans, shared sessions, double the motivation — without one of you running the other’s schema.',
+    pillar: 'm2',
   },
   {
     q: 'How long until something changes?',
     a: 'Many feel energy and clarity in the first weeks once gut, sleep or technique click. Lasting routines take longer — that is why we stay until you steer yourself.',
+    pillar: 'all',
   },
   {
     q: 'Who is M³ not for?',
     a: 'Anyone looking for a miracle pill, a 6-week kick or pure sweat work without cause work. M³ is 1:1 support with autonomy as the goal — not a subscription that keeps you dependent.',
+    pillar: 'all',
   },
   {
     q: 'What happens after the intro call?',
-    a: 'If it fits, analysis, priority and a clear next step follow: System Start or the matching module. You decide. No pressure, no off-the-shelf contract.',
+    a: 'If it fits, analysis, priority and a clear next step follow: the matching pillar or the matching module. You decide. No pressure, no off-the-shelf contract.',
+    pillar: 'all',
   },
 ]
 
@@ -886,26 +903,69 @@ export const compass = [
   },
 ] as const
 
+export const audits = [
+  {
+    id: 'm1',
+    badge: 'M¹ · METABOLISM',
+    title: 'Cellular energy & microbiome audit',
+    text: 'We check nutrient absorption, blood sugar swings, gut immunity and silent inflammation.',
+    focus: 'Microbiome, blood sugar stability, inflammation',
+    points: [
+      'No more afternoon crashes or cravings',
+      'Useful mitochondrial energy production',
+      'A stable metabolism without restriction dogma',
+    ],
+  },
+  {
+    id: 'm2',
+    badge: 'M² · BIOMECHANICS',
+    title: 'Joint & pain screening',
+    text: 'We check joint angles, myofascial chains, spinal load and asymmetries.',
+    focus: 'Joint capacity, fascial lines, movement patterns',
+    points: [
+      'Pain-free mobility in a working day',
+      'Targeted decompression of irritated segments',
+      'Athletic capacity with joint protection',
+    ],
+  },
+  {
+    id: 'm3',
+    badge: 'M³ · MINDSET',
+    title: 'Neuro-stress & deep-sleep audit',
+    text: 'We look at stress axes, deep-sleep phases, decision economy and mental focus.',
+    focus: 'Sleep architecture, focus and decision resilience',
+    points: [
+      'Deep, restorative sleep',
+      'Clear decisions under load',
+      'Routines that hold when stress rises',
+    ],
+  },
+] as const
+
 export const startProof = [
   {
     title: 'A catalog asks for a choice. An entrance asks for the bottleneck.',
-    text: 'Body Reset, Pain-free, Performance — those are modules. Starting there means you already made the diagnosis. System Start does the opposite: it first checks whether metabolism, movement or routines are the limiting factor. That is why it is not one offer among others. It is the place where the system places you.',
+    text: 'Body Reset, Pain-free, Performance — those are modules. Starting there means you already made the diagnosis. M¹ first checks whether metabolism is the limiting factor. That is why this pillar is not one offer among others. It is where the system places your energy.',
     image: '/images/blog-plaene.jpg',
+    pillar: 'm1',
   },
   {
     title: 'The pillars condition each other. Starting in parallel is guessing.',
     text: 'M¹, M² and M³ are not menu items. Load on a burning foundation creates wear. Clean technique falls apart when sleep and stress eat the repetition. Anyone who pulls three levers at once cannot say which one carries. The fixed order exists because physiology has an order — not because it sells better.',
     image: '/images/blog-fundament.jpg',
+    pillar: 'm1',
   },
   {
     title: 'You do not need to know the pillar. That is the work.',
-    text: 'Tired despite training. Pain despite rest. Plans that tip in week three. The same symptoms can sit in three different pillars. System Start takes the pre-decision away: status, priority, one next step. Only then a module — or none, if it does not fit.',
+    text: 'Tired despite training. Pain despite rest. Plans that tip in week three. The same symptoms can sit in three different pillars. M³ clarifies when sleep, stress or missing routines are the bottleneck: status, priority, one next step. Only then a module — or none, if it does not fit.',
     image: '/images/blog-willenskraft.jpg',
+    pillar: 'm3',
   },
   {
     title: 'Status before intervention. That is how Michél works.',
-    text: 'After the cervical disc herniation, more discipline did not bring the body back. The way back started with the question of what carries first. System Start asks exactly that: not “which package do you want”, but “where does the system not hold”. Only then come reset, technique or routine.',
+    text: 'After the cervical disc herniation, more discipline did not bring the body back. The way back started with the question of what carries first. M² asks exactly that when pain and load are the limit: not “which package do you want”, but “where does the system not hold”. Only then come technique and load.',
     image: '/images/michel-trainer.jpg',
+    pillar: 'm2',
   },
 ] as const
 
@@ -985,7 +1045,6 @@ export const nav = [
   { to: '/#system', label: 'System' },
   { to: '/#module', label: 'Modules' },
   { to: '/ueber-mich', label: 'Michél' },
-  { to: '/system-start', label: 'System Start' },
 ]
 
 export const michelSlides = [

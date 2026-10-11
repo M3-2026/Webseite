@@ -50,7 +50,6 @@ const menuCategories: MenuCategory[] = [
     title: 'System',
     items: [
       { label: 'Startseite', to: '/' },
-      { label: 'System Start', to: '/system-start' },
     ],
   },
   {

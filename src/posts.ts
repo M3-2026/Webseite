@@ -234,7 +234,7 @@ export const posts = [
       },
       {
         h: 'Zu viel auf einmal ist ein Designfehler',
-        p: 'Stoffwechsel, Training, Schlaf, Supplements, Journaling — parallel gestartet, parallel abgebrochen. M³ setzt die Reihenfolge: erst der Engpass, dann der nächste Hebel. Der System Start existiert genau deshalb. Du musst die Säule nicht vorher kennen. Du musst aufhören, alles gleichzeitig zu reparieren.',
+        p: 'Stoffwechsel, Training, Schlaf, Supplements, Journaling — parallel gestartet, parallel abgebrochen. M³ setzt die Reihenfolge: erst der Engpass, dann der nächste Hebel. Die passende Säule existiert genau deshalb. Du musst das Modul nicht vorher kennen. Du musst aufhören, alles gleichzeitig zu reparieren.',
       },
       {
         h: 'Aufsicht hält kürzer als Autonomie',

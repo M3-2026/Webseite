@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { BackLink } from '../components/BackLink'
 import { BentoDisclosure } from '../components/BentoDisclosure'
 import { Img } from '../components/Img'
+import { PillarStartContent } from '../components/PillarStartContent'
 import { useUi } from '../copy'
 import { useLocale } from '../locale'
 import { useContent } from '../useContent'
@@ -53,13 +54,10 @@ export function MentalPage() {
                 {pillar.mark} · {pillar.name}. <span>{pillar.title}</span>
               </h1>
               <p className="bento-lead">{pillar.subline}</p>
-              <p className="bento-desc" style={{ maxWidth: '56ch', marginTop: 6, fontSize: 14 }}>
-                {pillar.body}
-              </p>
               <div className="bento-cta-row" style={{ marginTop: 16 }}>
-                <Link to="/system-start" className="btn-white">
-                  {t.systemStart}
-                </Link>
+                <a href="#einstieg" className="btn-white">
+                  {isEn ? 'See the audit' : 'Zum Audit'}
+                </a>
                 <a
                   href={contact.cal}
                   target="_blank"
@@ -80,11 +78,7 @@ export function MentalPage() {
               <h2 className="bento-title" style={{ fontSize: 21 }}>
                 {pillar.label} · {t.mentalSignalsH}
               </h2>
-              <p className="bento-desc">
-                {isEn
-                  ? 'High performance without nervous system regulation leads to systemic burnout:'
-                  : 'Hohe kognitive Taktung ohne parasympathische Erholung erzeugt schleichenden Fokusverlust:'}
-              </p>
+              <p className="bento-desc">{pillar.body}</p>
             </div>
             <ul className="bento-audit-points">
               {pillar.signals.map((sig) => (
@@ -95,6 +89,8 @@ export function MentalPage() {
               {isEn ? '→ Mindset trained like physical muscle' : '→ Trainiert wie ein biologischer Muskel'}
             </div>
           </article>
+
+          <PillarStartContent pillarId="m3" />
 
           {/* 3. INTERACTIVE DECISION & CLARITY DRILL (Span 12) */}
           {prompts.length > 0 && (
