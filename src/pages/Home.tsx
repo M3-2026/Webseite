@@ -30,13 +30,13 @@ export function Home() {
             <picture className="bento-bg">
               <source
                 type="image/webp"
-                srcSet="/images/moodboard/mood-kitchen@2x.webp 2x, /images/moodboard/mood-kitchen.webp 1x"
+                srcSet="/images/moodboard/mood-kitchen-day@2x.webp 2x, /images/moodboard/mood-kitchen-day.webp 1x"
               />
               <source
-                srcSet="/images/moodboard/mood-kitchen@2x.jpg 2x, /images/moodboard/mood-kitchen.jpg 1x"
+                srcSet="/images/moodboard/mood-kitchen-day@2x.jpg 2x, /images/moodboard/mood-kitchen-day.jpg 1x"
               />
               <img
-                src="/images/moodboard/mood-kitchen@2x.jpg"
+                src="/images/moodboard/mood-kitchen-day@2x.jpg"
                 alt="M1 Food Metabolismus & Zellenergie"
                 loading="lazy"
                 decoding="async"
@@ -102,13 +102,13 @@ export function Home() {
             <picture className="bento-bg">
               <source
                 type="image/webp"
-                srcSet="/images/moodboard/mood-books@2x.webp 2x, /images/moodboard/mood-books.webp 1x"
+                srcSet="/images/moodboard/mood-books-day@2x.webp 2x, /images/moodboard/mood-books-day.webp 1x"
               />
               <source
-                srcSet="/images/moodboard/mood-books@2x.jpg 2x, /images/moodboard/mood-books.jpg 1x"
+                srcSet="/images/moodboard/mood-books-day@2x.jpg 2x, /images/moodboard/mood-books-day.jpg 1x"
               />
               <img
-                src="/images/moodboard/mood-books@2x.jpg"
+                src="/images/moodboard/mood-books-day@2x.jpg"
                 alt="Bücher über gesundes Leben: Schlaf, Ernährung, Bewegung, Alltag"
                 loading="lazy"
                 decoding="async"
