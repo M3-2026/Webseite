@@ -240,7 +240,7 @@ export function About() {
           </article>
 
           {/* 5. ABOUT MICHÉL INTERACTIVE SHOWREEL (Span 12) */}
-          <article className="bento-card bento-span-12" style={{ padding: 'clamp(24px, 3.5vw, 40px)', background: 'var(--bg-2)', border: '1px solid var(--line)' }}>
+          <article className="bento-card bento-card--surface bento-span-12" style={{ padding: 'clamp(24px, 3.5vw, 40px)' }}>
             <div className="michel-split" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 32, alignItems: 'center', width: '100%' }}>
               <div className="michel-visual">
                 <MichelShow />

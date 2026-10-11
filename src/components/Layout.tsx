@@ -1,9 +1,7 @@
-import { useLayoutEffect } from 'react'
+import { useLayoutEffect, useState, useCallback, useEffect } from 'react'
 import { Link, Outlet, useLocation } from 'react-router-dom'
 import { BrandMark } from './BrandMark'
 import { useUi } from '../copy'
-import { useLocale } from '../locale'
-
 
 function scrollToPageStart() {
   window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
@@ -37,30 +35,141 @@ function ScrollToTop() {
   return null
 }
 
-function LangSwitch() {
-  const { lang, setLang } = useLocale()
+/* ─── Menu Data ─── */
+interface MenuItem {
+  label: string
+  to: string
+}
+interface MenuCategory {
+  title: string
+  items: MenuItem[]
+}
+
+const menuCategories: MenuCategory[] = [
+  {
+    title: 'System',
+    items: [
+      { label: 'Startseite', to: '/' },
+      { label: 'System Start', to: '/system-start' },
+    ],
+  },
+  {
+    title: 'Säulen',
+    items: [
+      { label: 'M¹ Food – Metabolismus', to: '/metabolism' },
+      { label: 'M² Move – Biomechanik', to: '/biomechanics' },
+      { label: 'M³ Repeat – Mindset', to: '/mental' },
+    ],
+  },
+  {
+    title: 'Services',
+    items: [
+      { label: 'Booking', to: '/buchen' },
+      { label: 'Modulkatalog', to: '/katalog' },
+      { label: 'Über Michel', to: '/ueber-mich' },
+      { label: 'Kontakt', to: '/kontakt' },
+      { label: 'Blog', to: '/blog' },
+    ],
+  },
+  {
+    title: 'Rechtliches',
+    items: [
+      { label: 'Impressum', to: '/impressum' },
+      { label: 'Datenschutz', to: '/datenschutz' },
+    ],
+  },
+]
+
+/* ─── Burger Menu Component ─── */
+function BurgerMenu() {
+  const [open, setOpen] = useState(false)
+  const location = useLocation()
+
+  const toggle = useCallback(() => {
+    setOpen((prev) => !prev)
+  }, [])
+
+  const close = useCallback(() => {
+    setOpen(false)
+  }, [])
+
+  // Close on route change
+  useEffect(() => {
+    setOpen(false)
+  }, [location.pathname])
+
+  // Lock body scroll when open
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [open])
+
+  // Close on Escape
+  useEffect(() => {
+    if (!open) return
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') close()
+    }
+    window.addEventListener('keydown', handleKey)
+    return () => window.removeEventListener('keydown', handleKey)
+  }, [open, close])
+
   return (
-    <div className="lang-switch" role="group" aria-label="Language">
+    <>
       <button
         type="button"
-        className={lang === 'de' ? 'on' : undefined}
-        aria-pressed={lang === 'de'}
-        onClick={() => setLang('de')}
+        className={`nav-burger${open ? ' nav-burger--open' : ''}`}
+        onClick={toggle}
+        aria-expanded={open}
+        aria-controls="nav-drawer"
+        aria-label={open ? 'Menü schließen' : 'Menü öffnen'}
       >
-        DE
+        <span className="nav-burger-line" />
+        <span className="nav-burger-line" />
+        <span className="nav-burger-line" />
       </button>
-      <span className="sep" aria-hidden>
-        /
-      </span>
-      <button
-        type="button"
-        className={lang === 'en' ? 'on' : undefined}
-        aria-pressed={lang === 'en'}
-        onClick={() => setLang('en')}
+
+      {/* Backdrop */}
+      <div
+        className={`nav-backdrop${open ? ' nav-backdrop--visible' : ''}`}
+        onClick={close}
+        aria-hidden="true"
+      />
+
+      {/* Off-Canvas Drawer */}
+      <nav
+        id="nav-drawer"
+        className={`nav-drawer${open ? ' nav-drawer--open' : ''}`}
+        aria-label="Hauptnavigation"
       >
-        EN
-      </button>
-    </div>
+        <div className="nav-drawer-inner">
+          {menuCategories.map((cat) => (
+            <div className="nav-drawer-group" key={cat.title}>
+              <span className="nav-drawer-cat">{cat.title}</span>
+              <ul className="nav-drawer-list">
+                {cat.items.map((item) => (
+                  <li key={item.to}>
+                    <Link
+                      to={item.to}
+                      className={`nav-drawer-link${location.pathname === item.to ? ' nav-drawer-link--active' : ''}`}
+                      onClick={close}
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </nav>
+    </>
   )
 }
 
@@ -72,12 +181,7 @@ export function Layout() {
       <ScrollToTop />
       <header className="nav">
         <div className="nav-controls">
-          <div className="nav-burger" aria-hidden="true" role="presentation" title="Menü">
-            <span className="nav-burger-line" />
-            <span className="nav-burger-line" />
-            <span className="nav-burger-line" />
-          </div>
-          <LangSwitch />
+          <BurgerMenu />
         </div>
         <Link className="brand" to="/" aria-label="M³ Performance">
           <BrandMark />

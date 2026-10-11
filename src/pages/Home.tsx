@@ -113,13 +113,13 @@ export function Home() {
             <picture className="bento-bg">
               <source
                 type="image/webp"
-                srcSet="/images/moodboard/mood-limitless@2x.webp 2x, /images/moodboard/mood-limitless.webp 1x"
+                srcSet="/images/michel-work-training.webp"
               />
               <source
-                srcSet="/images/moodboard/mood-limitless@2x.jpg 2x, /images/moodboard/mood-limitless.jpg 1x"
+                srcSet="/images/michel-work-training.jpg"
               />
               <img
-                src="/images/moodboard/mood-limitless@2x.jpg"
+                src="/images/michel-work-training.jpg"
                 alt="M2 Move Biomechanik & Schmerzfreiheit"
                 loading="lazy"
                 decoding="async"

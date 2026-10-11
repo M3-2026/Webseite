@@ -170,8 +170,8 @@ export function Booking() {
                 minHeight: 650,
                 borderRadius: 16,
                 overflow: 'hidden',
-                background: '#090a0d',
-                border: '1px solid rgba(255, 255, 255, 0.12)',
+                background: '#f7f4ef',
+                border: '1px solid rgba(28, 22, 16, 0.1)',
               }}
             >
               {!calLoaded && (
@@ -184,7 +184,7 @@ export function Booking() {
                     alignItems: 'center',
                     justifyContent: 'center',
                     gap: 12,
-                    background: '#090a0d',
+                    background: '#f7f4ef',
                     zIndex: 1,
                   }}
                 >
@@ -193,7 +193,7 @@ export function Booking() {
                       width: 32,
                       height: 32,
                       borderRadius: '50%',
-                      border: '3px solid rgba(255,255,255,0.2)',
+                      border: '3px solid rgba(28,22,16,0.15)',
                       borderTopColor: '#fbbf24',
                       animation: 'spin 0.8s linear infinite',
                     }}
@@ -204,7 +204,7 @@ export function Booking() {
                 </div>
               )}
               <iframe
-                src="https://cal.com/michelmeier/30min?embed=true&theme=dark"
+                src="https://cal.com/michelmeier/30min?embed=true&theme=light"
                 title="Michél Meier Cal.com Scheduler"
                 width="100%"
                 height="650"
@@ -239,7 +239,24 @@ export function Booking() {
           </article>
 
           {/* 4. THE 3 PILLARS IN YOUR 30 DAYS (Food. Move. Repeat.) */}
-          <article className="bento-card bento-card--pillar bento-span-4" style={{ '--pillar-color': '#e8a14a' } as CSSProperties}>
+          <article className="bento-card bento-card--pillar bento-card--m1 bento-span-4" style={{ '--pillar-color': '#e8a14a' } as CSSProperties}>
+            <picture className="bento-bg">
+              <source
+                type="image/webp"
+                srcSet="/images/moodboard/mood-kitchen@2x.webp 2x, /images/moodboard/mood-kitchen.webp 1x"
+              />
+              <source
+                srcSet="/images/moodboard/mood-kitchen@2x.jpg 2x, /images/moodboard/mood-kitchen.jpg 1x"
+              />
+              <img
+                src="/images/moodboard/mood-kitchen@2x.jpg"
+                alt="Food – Metabolismus"
+                loading="lazy"
+                decoding="async"
+                className="bento-bg-img"
+              />
+            </picture>
+            <div className="bento-overlay" />
             <div className="bento-content">
               <span className="bento-pillar-badge" style={{ borderColor: 'rgba(232, 161, 74, 0.45)', color: '#e8a14a' }}>
                 SÄULE M¹
@@ -256,7 +273,19 @@ export function Booking() {
             </div>
           </article>
 
-          <article className="bento-card bento-card--pillar bento-span-4" style={{ '--pillar-color': '#2f9a72' } as CSSProperties}>
+          <article className="bento-card bento-card--pillar bento-card--m2 bento-span-4" style={{ '--pillar-color': '#2f9a72' } as CSSProperties}>
+            <picture className="bento-bg">
+              <source type="image/webp" srcSet="/images/michel-work-training.webp" />
+              <source srcSet="/images/michel-work-training.jpg" />
+              <img
+                src="/images/michel-work-training.jpg"
+                alt="Move – Biomechanik"
+                loading="lazy"
+                decoding="async"
+                className="bento-bg-img"
+              />
+            </picture>
+            <div className="bento-overlay" />
             <div className="bento-content">
               <span className="bento-pillar-badge" style={{ borderColor: 'rgba(47, 154, 114, 0.45)', color: '#2f9a72' }}>
                 SÄULE M²
@@ -273,7 +302,24 @@ export function Booking() {
             </div>
           </article>
 
-          <article className="bento-card bento-card--pillar bento-span-4" style={{ '--pillar-color': '#4f6fd6' } as CSSProperties}>
+          <article className="bento-card bento-card--pillar bento-card--m3 bento-span-4" style={{ '--pillar-color': '#4f6fd6' } as CSSProperties}>
+            <picture className="bento-bg">
+              <source
+                type="image/webp"
+                srcSet="/images/moodboard/mood-focus@2x.webp 2x, /images/moodboard/mood-focus.webp 1x"
+              />
+              <source
+                srcSet="/images/moodboard/mood-focus@2x.jpg 2x, /images/moodboard/mood-focus.jpg 1x"
+              />
+              <img
+                src="/images/moodboard/mood-focus@2x.jpg"
+                alt="Repeat – Mindset"
+                loading="lazy"
+                decoding="async"
+                className="bento-bg-img"
+              />
+            </picture>
+            <div className="bento-overlay" />
             <div className="bento-content">
               <span className="bento-pillar-badge" style={{ borderColor: 'rgba(79, 111, 214, 0.45)', color: '#4f6fd6' }}>
                 SÄULE M³
