@@ -1,4 +1,4 @@
-import { useState, type CSSProperties } from 'react'
+import { type CSSProperties } from 'react'
 import { BackLink } from '../components/BackLink'
 import { useLocale } from '../locale'
 import { useContent } from '../useContent'
@@ -7,7 +7,6 @@ export function Booking() {
   const { lang } = useLocale()
   const isEn = lang === 'en'
   const { contact } = useContent()
-  const [calLoaded, setCalLoaded] = useState(false)
 
   return (
     <main className="bento-page">
@@ -20,26 +19,7 @@ export function Booking() {
         <section className="bento-grid" aria-label="Michél Meier 1:1 Mentoring Booking">
 
           {/* 1. HERO BENTO CARD: 1:1 MENTORING OVERVIEW (Span 8) */}
-          <article className="bento-card bento-card--hero bento-span-8" style={{ minHeight: 'clamp(420px, 48vh, 520px)' }}>
-            <picture className="bento-bg">
-              <source
-                type="image/webp"
-                srcSet="/images/moodboard/mood-elevate.webp 1x, /images/moodboard/mood-elevate@2x.webp 2x"
-              />
-              <source
-                srcSet="/images/moodboard/mood-elevate.jpg 1x, /images/moodboard/mood-elevate.jpg 2x"
-              />
-              <img
-                src="/images/moodboard/mood-elevate.jpg"
-                alt="Michél Meier 1:1 Performance Mentoring"
-                loading="eager"
-                decoding="async"
-                fetchPriority="high"
-                className="bento-bg-img"
-                style={{ objectPosition: 'center 25%' }}
-              />
-            </picture>
-            <div className="bento-overlay" style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,0.85) 85%, #090a0d 100%)' }} />
+          <article className="bento-card bento-card--hero bento-card--ink bento-span-8">
             <div className="bento-content bento-content--hero" style={{ maxWidth: 660 }}>
               <div className="bento-tag bento-tag--gold" style={{ marginBottom: 6 }}>
                 {isEn ? 'EXCLUSIVE 1:1 MENTORING · MICHÉL MEIER' : 'EXKLUSIVE 1:1 BEGLEITUNG · MICHÉL MEIER'}
@@ -58,25 +38,16 @@ export function Booking() {
               </p>
 
               <div className="bento-cta-row" style={{ marginTop: 18 }}>
-                <a href="#cal-booking" className="btn-white">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ width: 16, height: 16, marginRight: 6 }}>
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                    <line x1="16" y1="2" x2="16" y2="6" />
-                    <line x1="8" y1="2" x2="8" y2="6" />
-                    <line x1="3" y1="10" x2="21" y2="10" />
-                  </svg>
-                  {isEn ? 'Select Kickoff Date (Cal.com) ↓' : 'Termin auswählen (Cal.com) ↓'}
-                </a>
                 <a
                   href={contact.wa('Hallo Michél, ich interessiere mich für die 30-Tage Begleitung für 150€/Tag.')}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn-white-ghost"
+                  className="btn-white"
                 >
-                  <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: 16, height: 16, marginRight: 6 }}>
+                  <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: 16, height: 16, marginRight: 8 }} aria-hidden="true">
                     <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z" />
                   </svg>
-                  {isEn ? 'Direct WhatsApp Inquiry' : 'Direkt per WhatsApp anfragen'}
+                  {isEn ? 'Message on WhatsApp' : 'Per WhatsApp anfragen'}
                 </a>
               </div>
             </div>
@@ -134,111 +105,7 @@ export function Booking() {
             </div>
           </article>
 
-          {/* 3. CAL.COM INTERACTIVE EMBED CONTAINER (Span 12) */}
-          <article id="cal-booking" className="bento-card bento-card--journal bento-span-12" style={{ padding: 'clamp(22px, 3vw, 36px)' }}>
-            <div className="bento-card-header" style={{ marginBottom: 20 }}>
-              <div>
-                <span className="bento-audit-badge">{isEn ? 'ONLINE SCHEDULING' : 'TERMIN DIREKT BUCHEN'}</span>
-                <h2 className="bento-title" style={{ fontSize: 'clamp(22px, 2.6cqi, 32px)', marginTop: 4 }}>
-                  {isEn ? 'Book Your Intro & Onboarding Slot via Cal.com' : 'Wähle deinen Kennenlern- & Onboarding-Termin'}
-                </h2>
-                <p className="bento-desc" style={{ maxWidth: '72ch', marginTop: 6 }}>
-                  {isEn
-                    ? 'Select your preferred 30-minute introductory call. We evaluate your baseline, ensure a 100% mutual fit for the 30-day mentoring, and establish your target start date.'
-                    : 'Wähle deinen Wunschtermin für das 30-minütige Orientierungsgespräch mit Michél. Wir analysieren deine Ausgangslage, prüfen die Eignung für die 30 Tage und legen deinen Starttermin fest.'}
-                </p>
-              </div>
-              <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', alignItems: 'center' }}>
-                <a
-                  href={contact.cal}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn-white-ghost"
-                  style={{ fontSize: 12, padding: '8px 14px' }}
-                >
-                  {isEn ? 'Open in new tab ↗' : 'In neuem Tab öffnen ↗'}
-                </a>
-              </div>
-            </div>
-
-            {/* Cal.com IFrame Embed Wrapper */}
-            <div
-              className="cal-embed-wrapper"
-              style={{
-                position: 'relative',
-                width: '100%',
-                minHeight: 650,
-                borderRadius: 16,
-                overflow: 'hidden',
-                background: '#f7f4ef',
-                border: '1px solid rgba(28, 22, 16, 0.1)',
-              }}
-            >
-              {!calLoaded && (
-                <div
-                  style={{
-                    position: 'absolute',
-                    inset: 0,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    gap: 12,
-                    background: '#f7f4ef',
-                    zIndex: 1,
-                  }}
-                >
-                  <div
-                    style={{
-                      width: 32,
-                      height: 32,
-                      borderRadius: '50%',
-                      border: '3px solid rgba(28,22,16,0.15)',
-                      borderTopColor: '#fbbf24',
-                      animation: 'spin 0.8s linear infinite',
-                    }}
-                  />
-                  <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.65)' }}>
-                    {isEn ? 'Loading Cal.com scheduler...' : 'Cal.com Kalender wird geladen...'}
-                  </span>
-                </div>
-              )}
-              <iframe
-                src="https://cal.com/michelmeier/30min?embed=true&theme=light"
-                title="Michél Meier Cal.com Scheduler"
-                width="100%"
-                height="650"
-                frameBorder="0"
-                onLoad={() => setCalLoaded(true)}
-                style={{
-                  width: '100%',
-                  height: 650,
-                  border: 0,
-                  borderRadius: 16,
-                  display: 'block',
-                }}
-              />
-            </div>
-
-            <div style={{ marginTop: 14, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 10, fontSize: 12, color: 'rgba(255,255,255,0.65)' }}>
-              <span>
-                🔒 {isEn ? 'Confidential 1:1 strategy session · Zero obligation' : 'Vertrauliches 1:1 Gespräch · 100% unverbindlich'}
-              </span>
-              <span>
-                {isEn ? 'Prefer WhatsApp?' : 'Lieber direkt per WhatsApp?'}{' '}
-                <a
-                  href={contact.wa('Hallo Michél, ich habe eine Frage zur 30-Tage Begleitung für 150€/Tag.')}
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{ color: '#ffffff', textDecoration: 'underline' }}
-                >
-                  {isEn ? 'Message Michél directly →' : 'Michél direkt schreiben →'}
-                </a>
-              </span>
-            </div>
-          </article>
-
-          {/* 4. THE 3 PILLARS IN YOUR 30 DAYS (Food. Move. Repeat.) */}
+          {/* 3. THE 3 PILLARS IN YOUR 30 DAYS (Food. Move. Repeat.) */}
           <article className="bento-card bento-card--pillar bento-card--m1 bento-span-4" style={{ '--pillar-color': '#e8a14a' } as CSSProperties}>
             <picture className="bento-bg">
               <source
@@ -421,23 +288,16 @@ export function Booking() {
                 </h2>
                 <p className="bento-desc" style={{ maxWidth: '68ch', marginTop: 6 }}>
                   {isEn
-                    ? '150 € per day · 30-day minimum duration (4,500 € total). Book your intro call now or reach out directly via WhatsApp.'
-                    : '150 € pro Tag · Mindestabnahme 30 Tage (4.500 € Gesamtinvestition). Sichere dir deinen Kennenlern-Termin via Cal.com oder schreibe Michél direkt.'}
+                    ? '150 € per day · 30-day minimum duration (4,500 € total). Message Michél directly.'
+                    : '150 € pro Tag · Mindestabnahme 30 Tage (4.500 € Gesamtinvestition). Schreib Michél direkt.'}
                 </p>
               </div>
               <div className="bento-base-actions">
                 <a
-                  href="#cal-booking"
-                  className="btn-white"
-                  style={{ padding: '12px 22px', fontSize: 14 }}
-                >
-                  {isEn ? 'Select Slot via Cal.com ↑' : 'Termin via Cal.com wählen ↑'}
-                </a>
-                <a
                   href={contact.wa('Hallo Michél, ich möchte die 30-Tage Begleitung für 150€/Tag buchen.')}
                   target="_blank"
                   rel="noreferrer"
-                  className="btn-white-ghost"
+                  className="btn-white"
                   style={{ padding: '12px 20px', fontSize: 14 }}
                 >
                   <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: 16, height: 16, marginRight: 8 }}>
