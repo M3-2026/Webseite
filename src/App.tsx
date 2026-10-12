@@ -4,7 +4,6 @@ import { About } from './pages/About'
 import { Article } from './pages/Article'
 import { Blog } from './pages/Blog'
 import { Booking } from './pages/Booking'
-import { Catalog } from './pages/Catalog'
 import { Contact } from './pages/Contact'
 import { Home } from './pages/Home'
 import { ResolvePage } from './pages/ResolvePage'
@@ -22,7 +21,7 @@ export default function App() {
           <Route path="system-start" element={<Navigate to="/" replace />} />
           <Route path="ueber-mich" element={<About />} />
           <Route path="kontakt" element={<Contact />} />
-          <Route path="katalog" element={<Catalog />} />
+          <Route path="katalog" element={<Navigate to="/" replace />} />
           <Route path="blog" element={<Blog />} />
           <Route path="blog/:slug" element={<Article />} />
           <Route path="sitemap" element={<Sitemap />} />

@@ -6249,6 +6249,54 @@ picture.bento-bg img,
   fill: #25d366;
 }
 
+.btn-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px 8px 10px;
+  background: #25d366;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13.5px;
+  line-height: 1;
+  border: 0;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.btn-wa:hover {
+  background: #1da851;
+  color: #ffffff;
+}
+
+.btn-wa svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  fill: #ffffff;
+  flex-shrink: 0;
+}
+
+.bento-page:not(.bento-page--landing) .bento-card:has(.bento-bg) .btn-wa,
+.bento-page:not(.bento-page--landing) .bento-card:has(.bento-bg) .btn-wa:hover {
+  background: #25d366 !important;
+  color: #ffffff !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  padding: 8px 14px 8px 10px !important;
+  min-height: 0 !important;
+  box-shadow: none !important;
+}
+
+.bento-page:not(.bento-page--landing) .bento-card:has(.bento-bg) .btn-wa:hover {
+  background: #1da851 !important;
+}
+
+.bento-page:not(.bento-page--landing) .bento-card:has(.bento-bg) .btn-wa svg {
+  display: block !important;
+  fill: #ffffff !important;
+}
+
 
 
 

@@ -51,7 +51,6 @@ export function Sitemap() {
           <article className="card">
             <h3>{t.footerContact}</h3>
             <p><Link to="/kontakt">{t.footerWaTalk}</Link></p>
-            <p><Link to="/katalog">{t.footerWaCat}</Link></p>
             <p><Link to="/ueber-mich">{t.footerAboutMichel}</Link></p>
             <p><Link to="/#faq">{t.smFaq}</Link></p>
             <p><Link to="/impressum">{t.imprint}</Link></p>

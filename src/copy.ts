@@ -32,7 +32,6 @@ const ui = {
     footerModules: 'Module',
     footerContact: 'Kontakt',
     footerWaTalk: 'WhatsApp Erstgespräch',
-    footerWaCat: 'WhatsApp Katalog',
     footerAboutMichel: 'Über Michél',
     footerCopy: '© 2026 Michél Meier · M³ Performance & Gesundheit',
     imprint: 'Impressum',
@@ -162,11 +161,6 @@ const ui = {
     contactPhone: 'Telefon',
     contactIg: 'Instagram',
     contactWa: 'WhatsApp öffnen',
-    catalogEyebrow: 'Katalog',
-    catalogH: 'Alle Module. Eine Übersicht.',
-    catalogLead:
-      'Baukasten über alle drei Säulen: von kostenlosen Einstiegen bis High Ticket — klar gestaffelt.',
-    catalogWa: 'WhatsApp-Katalog',
   },
   en: {
     writeMe: 'Write me',
@@ -199,7 +193,6 @@ const ui = {
     footerModules: 'Modules',
     footerContact: 'Contact',
     footerWaTalk: 'WhatsApp intro call',
-    footerWaCat: 'WhatsApp catalog',
     footerAboutMichel: 'About Michél',
     footerCopy: '© 2026 Michél Meier · M³ Performance & Health',
     imprint: 'Imprint',
@@ -329,11 +322,6 @@ const ui = {
     contactPhone: 'Phone',
     contactIg: 'Instagram',
     contactWa: 'Open WhatsApp',
-    catalogEyebrow: 'Catalog',
-    catalogH: 'Every module. One overview.',
-    catalogLead:
-      'A modular system across all three pillars: from free entry points to high ticket — clearly tiered.',
-    catalogWa: 'WhatsApp catalog',
   },
 } as const
 

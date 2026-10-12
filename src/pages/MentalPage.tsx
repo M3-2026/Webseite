@@ -51,7 +51,7 @@ export function MentalPage() {
             <div className="bento-overlay" />
             <div className="bento-content bento-content--hero">
               <h1 className="bento-hero-h1">
-                {pillar.mark} · {pillar.name}. <span>{pillar.title}</span>
+                {pillar.name}. <span>{pillar.title}</span>
               </h1>
               <p className="bento-lead">{pillar.subline}</p>
               <div className="bento-cta-row" style={{ marginTop: 16 }}>

@@ -64,7 +64,6 @@ const menuCategories: MenuCategory[] = [
     title: 'Services',
     items: [
       { label: 'Booking', to: '/buchen' },
-      { label: 'Modulkatalog', to: '/katalog' },
       { label: 'Über Michel', to: '/ueber-mich' },
       { label: 'Kontakt', to: '/kontakt' },
       { label: 'Blog', to: '/blog' },
