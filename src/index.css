@@ -3473,8 +3473,8 @@ body:has(.bento-page--landing) {
   --landing-frame: clamp(8px, 1vh, 12px);
 }
 
-/* 1. DESKTOP & TABLETS (min-width: 768px and min-height: 520px) */
-@media (min-width: 768px) and (min-height: 520px) {
+/* 1. DESKTOP, TABLET, AND WIDE LANDSCAPE (min-width: 768px) */
+@media (min-width: 768px) {
   html:has(.bento-page--landing),
   body:has(.bento-page--landing),
   html.page-landing,
@@ -3608,8 +3608,8 @@ body:has(.bento-page--landing) {
   }
 }
 
-/* 2. MOBILE & COMPACT PORTRAIT (< 768px or min-height < 520px) */
-@media (max-width: 767px), (max-height: 519px) {
+/* 2. NARROW PORTRAIT (< 768px) */
+@media (max-width: 767px) {
   html:has(.bento-page--landing),
   body:has(.bento-page--landing),
   html.page-landing,
@@ -3731,6 +3731,36 @@ body:has(.bento-page--landing) {
   .bento-grid--landing .bento-arrow-btn {
     margin-top: 8px !important;
     font-size: 12px !important;
+  }
+}
+
+/* Narrow phones in landscape: a column stack leaves cards shorter than the label. */
+@media (max-width: 767px) and (max-height: 480px) and (min-width: 480px) {
+  .bento-grid--landing {
+    flex-direction: row !important;
+  }
+
+  .bento-grid--landing .bento-card--pillar {
+    flex: 1 1 0% !important;
+    width: auto !important;
+    height: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+  }
+
+  .bento-grid--landing .bento-content {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .bento-grid--landing .bento-pillar-sub {
+    display: block !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
   }
 }
 
