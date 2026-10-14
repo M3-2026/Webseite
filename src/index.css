@@ -3389,8 +3389,7 @@ picture {
 }
 
 .bento-page--landing .bento-card--pillar .bento-bg-img,
-.bento-page--landing .bento-card--pillar picture.bento-bg img,
-.bento-page--landing .michel-wink {
+.bento-page--landing .bento-card--pillar picture.bento-bg img {
   transform: scale(1.02) !important;
 }
 
@@ -3865,10 +3864,6 @@ picture.bento-bg img,
 .bento-card--m2 .bento-bg-img,
 .bento-bg-img--michel {
   object-position: center 22% !important;
-}
-
-.michel-wink {
-  filter: saturate(1.08) contrast(1.04);
 }
 
 .bento-card--m3 .bento-bg-img {

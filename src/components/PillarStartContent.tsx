@@ -10,12 +10,11 @@ function illuClass(src: string) {
 export function PillarStartContent({ pillarId }: { pillarId: string }) {
   const { lang } = useLocale()
   const isEn = lang === 'en'
-  const { audience, audits, compass, faqs, startProof } = useContent()
+  const { audience, audits, compass, startProof } = useContent()
   const audit = audits.find((item) => item.id === pillarId)
   const entry = compass.find((item) => item.id === pillarId)
   const people = audience.filter((item) => item.pillar === pillarId)
   const proofs = startProof.filter((item) => item.pillar === pillarId)
-  const questions = faqs.filter((item) => item.pillar === pillarId || item.pillar === 'all')
 
   if (!audit) return null
 
@@ -114,22 +113,31 @@ export function PillarStartContent({ pillarId }: { pillarId: string }) {
           </div>
         </article>
       )}
-
-      {questions.length > 0 && (
-        <article className="bento-card bento-card--audit-step bento-span-12" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
-          <span className="bento-audit-badge">FAQ</span>
-          <h2 className="bento-title" style={{ fontSize: 20, marginBottom: 12 }}>
-            {isEn ? 'Questions about this pillar' : 'Fragen zu dieser Säule'}
-          </h2>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            {questions.map((item) => (
-              <BentoDisclosure key={item.q} title={item.q} theme="light">
-                <p style={{ margin: 0 }}>{item.a}</p>
-              </BentoDisclosure>
-            ))}
-          </div>
-        </article>
-      )}
     </>
+  )
+}
+
+export function PillarFaq({ pillarId }: { pillarId: string }) {
+  const { lang } = useLocale()
+  const isEn = lang === 'en'
+  const { faqs } = useContent()
+  const questions = faqs.filter((item) => item.pillar === pillarId || item.pillar === 'all')
+
+  if (questions.length === 0) return null
+
+  return (
+    <article id="faq" className="bento-card bento-card--audit-step bento-span-12" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
+      <span className="bento-audit-badge">FAQ</span>
+      <h2 className="bento-title" style={{ fontSize: 20, marginBottom: 12 }}>
+        {isEn ? 'Questions about this pillar' : 'Fragen zu dieser Säule'}
+      </h2>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+        {questions.map((item) => (
+          <BentoDisclosure key={item.q} title={item.q} theme="light">
+            <p style={{ margin: 0 }}>{item.a}</p>
+          </BentoDisclosure>
+        ))}
+      </div>
+    </article>
   )
 }

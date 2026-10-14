@@ -1,6 +1,5 @@
 import { useEffect, type CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
-import { MichelWink } from '../components/MichelWink'
 import { useLocale } from '../locale'
 
 export function Home() {
@@ -82,7 +81,6 @@ export function Home() {
                 className="bento-bg-img"
               />
             </picture>
-            <MichelWink />
             <div className="bento-overlay" />
             <div className="bento-content">
               <span className="bento-pillar-mark">M²</span>

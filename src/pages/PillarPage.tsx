@@ -2,7 +2,7 @@ import { Link, Navigate, useParams } from 'react-router-dom'
 import { BackLink } from '../components/BackLink'
 import { BentoDisclosure } from '../components/BentoDisclosure'
 import { Img } from '../components/Img'
-import { PillarStartContent } from '../components/PillarStartContent'
+import { PillarFaq, PillarStartContent } from '../components/PillarStartContent'
 import { useUi } from '../copy'
 import { useLocale } from '../locale'
 import { byTier } from '../tierSort'
@@ -79,9 +79,6 @@ export function PillarPage() {
               </h1>
               <p className="bento-lead">{pillar.subline}</p>
               <div className="bento-cta-row" style={{ marginTop: 16 }}>
-                <a href="#einstieg" className="btn-white">
-                  {isEn ? 'See the audit' : 'Zum Audit'}
-                </a>
                 <a
                   href={contact.wa(
                     isEn
@@ -282,6 +279,8 @@ export function PillarPage() {
               )}
             </div>
           </article>
+
+          <PillarFaq pillarId={pillar.id} />
 
           {/* 8. MASTER BOTTOM CTA BENTO (Span 12) */}
           <article className="bento-card bento-card--start bento-span-12">
