@@ -45,13 +45,15 @@ export function Home() {
             </picture>
             <div className="bento-overlay" />
             <div className="bento-content">
-              <span className="bento-pillar-badge">SÄULE M¹</span>
-              <h2 className="bento-pillar-head">Food.</h2>
-              <p className="bento-pillar-sub">
-                {isEn ? 'Metabolism & Cellular Energy' : 'Metabolismus & Zellenergie'}
-              </p>
-              <div className="bento-arrow-btn">
-                <span>{isEn ? 'Learn more →' : 'Mehr erfahren →'}</span>
+              <span className="bento-pillar-mark">M¹</span>
+              <div className="bento-pillar-foot">
+                <h2 className="bento-pillar-head">Food.</h2>
+                <p className="bento-pillar-sub">
+                  {isEn ? 'Metabolism & Cellular Energy' : 'Metabolismus & Zellenergie'}
+                </p>
+                <div className="bento-arrow-btn">
+                  <span>Start for FREE</span>
+                </div>
               </div>
             </div>
           </Link>
@@ -81,13 +83,15 @@ export function Home() {
             </picture>
             <div className="bento-overlay" />
             <div className="bento-content">
-              <span className="bento-pillar-badge">SÄULE M²</span>
-              <h2 className="bento-pillar-head">Move.</h2>
-              <p className="bento-pillar-sub">
-                {isEn ? 'Biomechanics & Pain Freedom' : 'Biomechanik & Schmerzfreiheit'}
-              </p>
-              <div className="bento-arrow-btn">
-                <span>{isEn ? 'Learn more →' : 'Mehr erfahren →'}</span>
+              <span className="bento-pillar-mark">M²</span>
+              <div className="bento-pillar-foot">
+                <h2 className="bento-pillar-head">Move.</h2>
+                <p className="bento-pillar-sub">
+                  {isEn ? 'Biomechanics & Pain Freedom' : 'Biomechanik & Schmerzfreiheit'}
+                </p>
+                <div className="bento-arrow-btn">
+                  <span>Start for FREE</span>
+                </div>
               </div>
             </div>
           </Link>
@@ -117,13 +121,15 @@ export function Home() {
             </picture>
             <div className="bento-overlay" />
             <div className="bento-content">
-              <span className="bento-pillar-badge">SÄULE M³</span>
-              <h2 className="bento-pillar-head">Repeat.</h2>
-              <p className="bento-pillar-sub">
-                {isEn ? 'Mindset & Neural Clarity' : 'Mindset & neuronale Klarheit'}
-              </p>
-              <div className="bento-arrow-btn">
-                <span>{isEn ? 'Learn more →' : 'Mehr erfahren →'}</span>
+              <span className="bento-pillar-mark">M³</span>
+              <div className="bento-pillar-foot">
+                <h2 className="bento-pillar-head">Repeat.</h2>
+                <p className="bento-pillar-sub">
+                  {isEn ? 'Mindset & Neural Clarity' : 'Mindset & neuronale Klarheit'}
+                </p>
+                <div className="bento-arrow-btn">
+                  <span>Start for FREE</span>
+                </div>
               </div>
             </div>
           </Link>

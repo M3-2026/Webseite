@@ -7,7 +7,7 @@ type Props = {
   home?: boolean
 }
 
-export function BackLink({ fallback = '/', label, home = true }: Props) {
+export function BackLink({ fallback = '/', label, home = false }: Props) {
   const t = useUi()
   const navigate = useNavigate()
   const text = label ?? t.back

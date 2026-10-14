@@ -37,10 +37,11 @@ export function PillarPage() {
 
   const moodMap: Record<string, string> = {
     m1: '/images/moodboard/mood-kitchen',
-    m2: '/images/moodboard/mood-limitless',
+    m2: '/images/michel-work-training',
     m3: '/images/moodboard/mood-focus',
   }
   const heroImageBase = moodMap[pillar.id] || '/images/moodboard/mood-kitchen'
+  const heroRetina = pillar.id !== 'm2'
 
   return (
     <main className="bento-page">
@@ -57,10 +58,10 @@ export function PillarPage() {
             <picture className="bento-bg">
               <source
                 type="image/webp"
-                srcSet={`${heroImageBase}.webp 1x, ${heroImageBase}@2x.webp 2x`}
+                srcSet={heroRetina ? `${heroImageBase}.webp 1x, ${heroImageBase}@2x.webp 2x` : `${heroImageBase}.webp`}
               />
               <source
-                srcSet={`${heroImageBase}.jpg 1x, ${heroImageBase}@2x.jpg 2x`}
+                srcSet={heroRetina ? `${heroImageBase}.jpg 1x, ${heroImageBase}@2x.jpg 2x` : `${heroImageBase}.jpg`}
               />
               <img
                 src={`${heroImageBase}.jpg`}
@@ -68,7 +69,7 @@ export function PillarPage() {
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"
-                className="bento-bg-img"
+                className={pillar.id === 'm2' ? 'bento-bg-img bento-bg-img--michel' : 'bento-bg-img'}
               />
             </picture>
             <div className="bento-overlay" />

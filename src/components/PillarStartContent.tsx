@@ -3,6 +3,10 @@ import { Img } from './Img'
 import { useLocale } from '../locale'
 import { useContent } from '../useContent'
 
+function illuClass(src: string) {
+  return /michel-trainer|aud-exec/.test(src) ? 'pillar-illu pillar-illu--portrait' : 'pillar-illu'
+}
+
 export function PillarStartContent({ pillarId }: { pillarId: string }) {
   const { lang } = useLocale()
   const isEn = lang === 'en'
@@ -38,9 +42,14 @@ export function PillarStartContent({ pillarId }: { pillarId: string }) {
 
       {entry && (
         <article className="bento-card bento-card--audit-step bento-span-6">
-          <span className="bento-audit-badge">{isEn ? 'WHEN THIS PILLAR COMES FIRST' : 'WANN DIESE SÄULE ZUERST KOMMT'}</span>
-          <h2 className="bento-title" style={{ fontSize: 19 }}>{entry.title}</h2>
-          <p className="bento-desc" style={{ marginTop: 8 }}>{entry.text}</p>
+          <div className={illuClass(entry.image)}>
+            <Img src={entry.image} alt="" />
+          </div>
+          <div className="pillar-illu-copy">
+            <span className="bento-audit-badge">{isEn ? 'WHEN THIS PILLAR COMES FIRST' : 'WANN DIESE SÄULE ZUERST KOMMT'}</span>
+            <h2 className="bento-title" style={{ fontSize: 19 }}>{entry.title}</h2>
+            <p className="bento-desc" style={{ marginTop: 8 }}>{entry.text}</p>
+          </div>
         </article>
       )}
 
@@ -49,8 +58,13 @@ export function PillarStartContent({ pillarId }: { pillarId: string }) {
           key={proof.title}
           className={`bento-card bento-card--audit-step ${proofs.length > 1 ? 'bento-span-6' : 'bento-span-12'}`}
         >
-          <h2 className="bento-title" style={{ fontSize: 19 }}>{proof.title}</h2>
-          <p className="bento-desc" style={{ marginTop: 8 }}>{proof.text}</p>
+          <div className={illuClass(proof.image)}>
+            <Img src={proof.image} alt="" />
+          </div>
+          <div className="pillar-illu-copy">
+            <h2 className="bento-title" style={{ fontSize: 19 }}>{proof.title}</h2>
+            <p className="bento-desc" style={{ marginTop: 8 }}>{proof.text}</p>
+          </div>
         </article>
       ))}
 

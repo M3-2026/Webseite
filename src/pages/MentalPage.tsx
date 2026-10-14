@@ -34,18 +34,18 @@ export function MentalPage() {
             <picture className="bento-bg">
               <source
                 type="image/webp"
-                srcSet="/images/moodboard/mood-focus.webp 1x, /images/moodboard/mood-focus@2x.webp 2x"
+                srcSet="/images/moodboard/mood-books-day.webp 1x, /images/moodboard/mood-books-day@2x.webp 2x"
               />
               <source
-                srcSet="/images/moodboard/mood-focus.jpg 1x, /images/moodboard/mood-focus@2x.jpg 2x"
+                srcSet="/images/moodboard/mood-books-day.jpg 1x, /images/moodboard/mood-books-day@2x.jpg 2x"
               />
               <img
-                src="/images/moodboard/mood-focus.jpg"
-                alt="M3 Mental Performance Fokus & neuronale Klarheit"
+                src="/images/moodboard/mood-books-day@2x.jpg"
+                alt="Bücher über gesundes Leben: Schlaf, Ernährung, Bewegung, Alltag"
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"
-                className="bento-bg-img"
+                className="bento-bg-img bento-bg-img--books"
               />
             </picture>
             <div className="bento-overlay" />

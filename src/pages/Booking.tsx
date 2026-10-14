@@ -125,7 +125,6 @@ export function Booking() {
             </picture>
             <div className="bento-overlay" />
             <div className="bento-content">
-              <span className="bento-pillar-badge">SÄULE M¹</span>
               <h2 className="bento-pillar-head" style={{ fontSize: 32 }}>Food.</h2>
               <p className="bento-pillar-sub">
                 {isEn ? 'Metabolic Fine-Tuning' : 'Metabolismus & Zellenergie'}
@@ -152,7 +151,6 @@ export function Booking() {
             </picture>
             <div className="bento-overlay" />
             <div className="bento-content">
-              <span className="bento-pillar-badge">SÄULE M²</span>
               <h2 className="bento-pillar-head" style={{ fontSize: 32 }}>Move.</h2>
               <p className="bento-pillar-sub">
                 {isEn ? 'Biomechanics & Resilience' : 'Biomechanik & Schmerzfreiheit'}
@@ -184,7 +182,6 @@ export function Booking() {
             </picture>
             <div className="bento-overlay" />
             <div className="bento-content">
-              <span className="bento-pillar-badge">SÄULE M³</span>
               <h2 className="bento-pillar-head" style={{ fontSize: 32 }}>Repeat.</h2>
               <p className="bento-pillar-sub">
                 {isEn ? 'Neural Clarity & Sleep Architecture' : 'Mindset & neuronale Klarheit'}
