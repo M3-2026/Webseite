@@ -3,6 +3,8 @@ export { posts } from './posts'
 export const contact = {
   phone: '4917699016640',
   instagram: 'https://www.instagram.com/michelmeiermoves/',
+  facebook: 'https://www.facebook.com/michelmeiermoves',
+  youtube: 'https://www.youtube.com/@MichelMeier',
   cal: 'https://cal.com/michelmeier/30min',
   wa: (text: string) =>
     `https://wa.me/4917699016640?text=${encodeURIComponent(text)}`,

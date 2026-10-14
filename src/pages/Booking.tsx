@@ -1,4 +1,3 @@
-import { type CSSProperties } from 'react'
 import { BackLink } from '../components/BackLink'
 import { useLocale } from '../locale'
 import { useContent } from '../useContent'
@@ -19,7 +18,7 @@ export function Booking() {
         <section className="bento-grid" aria-label="Michél Meier 1:1 Mentoring Booking">
 
           {/* 1. HERO BENTO CARD: 1:1 MENTORING OVERVIEW (Span 8) */}
-          <article className="bento-card bento-card--hero bento-card--ink bento-span-8">
+          <article className="bento-card bento-card--hero bento-card--ink bento-span-12">
             <div className="bento-content bento-content--hero" style={{ maxWidth: 660 }}>
               <div className="bento-tag bento-tag--gold" style={{ marginBottom: 6 }}>
                 {isEn ? 'EXCLUSIVE 1:1 MENTORING · MICHÉL MEIER' : 'EXKLUSIVE 1:1 BEGLEITUNG · MICHÉL MEIER'}
@@ -54,7 +53,7 @@ export function Booking() {
           </article>
 
           {/* 2. INVESTMENT & TERMS SUMMARY CARD (Span 4) */}
-          <article className="bento-card bento-card--audit-step bento-span-4" style={{ justifyContent: 'space-between', minHeight: 'clamp(420px, 48vh, 520px)' }}>
+          <article className="bento-card bento-card--audit-step bento-span-6 bento-pair" style={{ justifyContent: 'space-between' }}>
             <div>
               <span className="bento-audit-badge">{isEn ? 'THE INVESTMENT' : 'DIE KONDITIONEN'}</span>
               
@@ -105,97 +104,8 @@ export function Booking() {
             </div>
           </article>
 
-          {/* 3. THE 3 PILLARS IN YOUR 30 DAYS (Food. Move. Repeat.) */}
-          <article className="bento-card bento-card--pillar bento-card--m1 bento-span-4" style={{ '--pillar-color': '#e8a14a' } as CSSProperties}>
-            <picture className="bento-bg">
-              <source
-                type="image/webp"
-                srcSet="/images/moodboard/mood-kitchen@2x.webp 2x, /images/moodboard/mood-kitchen.webp 1x"
-              />
-              <source
-                srcSet="/images/moodboard/mood-kitchen@2x.jpg 2x, /images/moodboard/mood-kitchen.jpg 1x"
-              />
-              <img
-                src="/images/moodboard/mood-kitchen@2x.jpg"
-                alt="Food – Metabolismus"
-                loading="lazy"
-                decoding="async"
-                className="bento-bg-img"
-              />
-            </picture>
-            <div className="bento-overlay" />
-            <div className="bento-content">
-              <h2 className="bento-pillar-head" style={{ fontSize: 32 }}>Food.</h2>
-              <p className="bento-pillar-sub">
-                {isEn ? 'Metabolic Fine-Tuning' : 'Metabolismus & Zellenergie'}
-              </p>
-              <p className="bento-desc" style={{ fontSize: 13 }}>
-                {isEn
-                  ? 'Continuous glucose regulation, gut barrier protection, and cellular ATP optimization without restrictive dogma.'
-                  : 'Blutzuckerstabilisierung, Mikrobiom-Entlastung und optimale Nährstoffverwertung für konstante Energie ohne Leistungstiefs.'}
-              </p>
-            </div>
-          </article>
-
-          <article className="bento-card bento-card--pillar bento-card--m2 bento-span-4" style={{ '--pillar-color': '#2f9a72' } as CSSProperties}>
-            <picture className="bento-bg">
-              <source type="image/webp" srcSet="/images/michel-work-training.webp" />
-              <source srcSet="/images/michel-work-training.jpg" />
-              <img
-                src="/images/michel-work-training.jpg"
-                alt="Move – Biomechanik"
-                loading="lazy"
-                decoding="async"
-                className="bento-bg-img"
-              />
-            </picture>
-            <div className="bento-overlay" />
-            <div className="bento-content">
-              <h2 className="bento-pillar-head" style={{ fontSize: 32 }}>Move.</h2>
-              <p className="bento-pillar-sub">
-                {isEn ? 'Biomechanics & Resilience' : 'Biomechanik & Schmerzfreiheit'}
-              </p>
-              <p className="bento-desc" style={{ fontSize: 13 }}>
-                {isEn
-                  ? 'Joint decompression, elimination of movement compensations, and bulletproof physical longevity.'
-                  : 'Gelenk-Dekompression, Beseitigung von Schmerzkaskaden und gezielter Aufbau von athletischer Stabilität.'}
-              </p>
-            </div>
-          </article>
-
-          <article className="bento-card bento-card--pillar bento-card--m3 bento-span-4" style={{ '--pillar-color': '#4f6fd6' } as CSSProperties}>
-            <picture className="bento-bg">
-              <source
-                type="image/webp"
-                srcSet="/images/moodboard/mood-focus@2x.webp 2x, /images/moodboard/mood-focus.webp 1x"
-              />
-              <source
-                srcSet="/images/moodboard/mood-focus@2x.jpg 2x, /images/moodboard/mood-focus.jpg 1x"
-              />
-              <img
-                src="/images/moodboard/mood-focus@2x.jpg"
-                alt="Repeat – Mindset"
-                loading="lazy"
-                decoding="async"
-                className="bento-bg-img"
-              />
-            </picture>
-            <div className="bento-overlay" />
-            <div className="bento-content">
-              <h2 className="bento-pillar-head" style={{ fontSize: 32 }}>Repeat.</h2>
-              <p className="bento-pillar-sub">
-                {isEn ? 'Neural Clarity & Sleep Architecture' : 'Mindset & neuronale Klarheit'}
-              </p>
-              <p className="bento-desc" style={{ fontSize: 13 }}>
-                {isEn
-                  ? 'Deep sleep architecture, nervous system downregulation under high executive stress, and non-negotiable routines.'
-                  : 'Tiefschlafarchitektur, Dämpfung von Stressachsen und unerschütterliche Gewohnheiten auch in Hochlastphasen.'}
-              </p>
-            </div>
-          </article>
-
           {/* 5. PROCESS & PROTOCOL (Span 6) */}
-          <article className="bento-card bento-card--audit-step bento-span-6" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
+          <article className="bento-card bento-card--audit-step bento-span-6 bento-pair" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
             <span className="bento-audit-badge">{isEn ? 'THE ROADMAP' : 'DER 30-TAGE-ABLAUF'}</span>
             <h2 className="bento-title" style={{ fontSize: 21, marginTop: 4 }}>
               {isEn ? 'Structured Protocol, Zero Guesswork' : 'Strukturierter Fahrplan, null Raten'}
@@ -234,7 +144,7 @@ export function Booking() {
           </article>
 
           {/* 6. FAQ & FRAMEWORK (Span 6) */}
-          <article className="bento-card bento-card--audit-step bento-span-6" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
+          <article className="bento-card bento-card--audit-step bento-span-12" style={{ padding: 'clamp(22px, 3vw, 32px)' }}>
             <span className="bento-audit-badge">{isEn ? 'FAQ & DETAILS' : 'HÄUFIGE FRAGEN'}</span>
             <h2 className="bento-title" style={{ fontSize: 21, marginTop: 4 }}>
               {isEn ? 'Everything You Need to Know' : 'Wichtige Rahmenbedingungen'}
@@ -271,37 +181,6 @@ export function Booking() {
                     ? 'Direct WhatsApp channel with voice notes and rapid feedback loops, combined with scheduled Cal.com video strategy calls.'
                     : 'Über einen direkten, priorisierten WhatsApp-Kanal mit schnellen Feedback-Schleifen und Sprachnachrichten, ergänzt durch geplante Video-Deep-Dives via Cal.com.'}
                 </p>
-              </div>
-            </div>
-          </article>
-
-          {/* 7. BOTTOM DIRECT CAL.COM / WHATSAPP BANNER (Span 12) */}
-          <article className="bento-card bento-card--temple-base bento-span-12">
-            <div className="bento-base-content">
-              <div className="bento-base-text">
-                <span className="bento-audit-badge">{isEn ? 'READY TO START?' : 'BEREIT FÜR DEINEN START?'}</span>
-                <h2 className="bento-title" style={{ fontSize: 'clamp(21px, 2.6cqi, 30px)', marginTop: 4 }}>
-                  {isEn ? '30 Days 1:1 Mentoring with Michél Meier' : '30 Tage 1:1 Begleitung mit Michél Meier'}
-                </h2>
-                <p className="bento-desc" style={{ maxWidth: '68ch', marginTop: 6 }}>
-                  {isEn
-                    ? '150 € per day · 30-day minimum duration (4,500 € total). Message Michél directly.'
-                    : '150 € pro Tag · Mindestabnahme 30 Tage (4.500 € Gesamtinvestition). Schreib Michél direkt.'}
-                </p>
-              </div>
-              <div className="bento-base-actions">
-                <a
-                  href={contact.wa('Hallo Michél, ich möchte die 30-Tage Begleitung für 150€/Tag buchen.')}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn-white"
-                  style={{ padding: '12px 20px', fontSize: 14 }}
-                >
-                  <svg viewBox="0 0 24 24" fill="currentColor" style={{ width: 16, height: 16, marginRight: 8 }}>
-                    <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z" />
-                  </svg>
-                  {isEn ? 'Direct WhatsApp' : 'WhatsApp Direktanfrage'}
-                </a>
               </div>
             </div>
           </article>
