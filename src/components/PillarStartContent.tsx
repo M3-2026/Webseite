@@ -20,7 +20,7 @@ export function PillarStartContent({ pillarId }: { pillarId: string }) {
 
   return (
     <>
-      <article id="einstieg" className="bento-card bento-card--audit-step bento-span-6" style={{ justifyContent: 'space-between' }}>
+      <article id="einstieg" className="bento-card bento-card--audit-step bento-span-6 bento-mosaic-a" style={{ justifyContent: 'space-between' }}>
         <div>
           <span className="bento-audit-badge">{audit.badge}</span>
           <h2 className="bento-title" style={{ fontSize: 19 }}>{audit.title}</h2>
@@ -40,7 +40,7 @@ export function PillarStartContent({ pillarId }: { pillarId: string }) {
       </article>
 
       {entry && (
-        <article className="bento-card bento-card--audit-step bento-span-6">
+        <article className="bento-card bento-card--audit-step bento-span-6 bento-mosaic-b">
           <div className={illuClass(entry.image)}>
             <Img src={entry.image} alt="" />
           </div>
@@ -55,7 +55,7 @@ export function PillarStartContent({ pillarId }: { pillarId: string }) {
       {proofs.map((proof) => (
         <article
           key={proof.title}
-          className={`bento-card bento-card--audit-step ${proofs.length > 1 ? 'bento-span-6' : 'bento-span-12'}`}
+          className="bento-card bento-card--audit-step bento-span-12 bento-mosaic-band"
         >
           <div className={illuClass(proof.image)}>
             <Img src={proof.image} alt="" />

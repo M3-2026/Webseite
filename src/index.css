@@ -5512,6 +5512,40 @@ picture.bento-bg img,
   }
 }
 
+/* Pillar opening: tall card left, one card above two, full band below. */
+@media (min-width: 769px) {
+  .bento-grid > .bento-mosaic-lead {
+    grid-column: 1 / span 6 !important;
+    grid-row: 1 / span 2;
+    width: auto;
+    height: auto !important;
+    min-height: 0;
+    align-self: stretch;
+  }
+
+  .bento-grid > .bento-mosaic-top {
+    grid-column: 7 / span 6 !important;
+    grid-row: 1;
+    width: auto;
+    min-height: 0 !important;
+    height: auto;
+  }
+
+  .bento-grid > .bento-mosaic-a {
+    grid-column: 7 / span 3 !important;
+    grid-row: 2;
+    width: auto;
+    min-height: 0;
+  }
+
+  .bento-grid > .bento-mosaic-b {
+    grid-column: 10 / span 3 !important;
+    grid-row: 2;
+    width: auto;
+    min-height: 0;
+  }
+}
+
 @media (max-width: 768px) {
   :root,
   [data-theme='night'],
@@ -6419,6 +6453,32 @@ picture.bento-bg img,
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+  .bento-page:not(.bento-page--landing) .bento-mosaic-b:has(.pillar-illu--portrait) {
+    flex-direction: column;
+    padding: clamp(22px, 3vw, 32px) !important;
+  }
+
+  .bento-page:not(.bento-page--landing) .bento-mosaic-b .pillar-illu,
+  .bento-page:not(.bento-page--landing) .bento-mosaic-b .pillar-illu--portrait {
+    width: calc(100% + 64px);
+    max-width: none;
+    height: 148px;
+    min-height: 0;
+    margin: -32px -32px 16px;
+  }
+
+  .bento-page:not(.bento-page--landing) .bento-mosaic-b .pillar-illu picture,
+  .bento-page:not(.bento-page--landing) .bento-mosaic-b .pillar-illu img,
+  .bento-page:not(.bento-page--landing) .bento-mosaic-b .pillar-illu--portrait picture,
+  .bento-page:not(.bento-page--landing) .bento-mosaic-b .pillar-illu--portrait img {
+    min-height: 0;
+    height: 100%;
+  }
+
+  .bento-page:not(.bento-page--landing) .bento-mosaic-b .pillar-illu-copy {
+    padding: 0;
   }
 }
 

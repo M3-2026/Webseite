@@ -33,7 +33,7 @@ export const pillars = [
     id: 'm1',
     slug: 'metabolism',
     mark: 'M¹',
-    name: 'Metabolism',
+    name: 'Metabolismus',
     label: 'Fundament',
     title: 'Gesundheit von innen',
     quote: 'Wenn dein Fundament brennt, nützt kein härteres Training.',
