@@ -45,9 +45,10 @@ export function Home() {
             </picture>
             <div className="bento-overlay" />
             <div className="bento-content">
-              <span className="bento-pillar-mark">M¹</span>
               <div className="bento-pillar-foot">
-                <h2 className="bento-pillar-head">Food.</h2>
+                <h2 className="bento-pillar-head">
+                  <span className="bento-pillar-prefix">M1</span> FOOD
+                </h2>
                 <p className="bento-pillar-sub">
                   {isEn ? 'Metabolism & Cellular Energy' : 'Metabolismus & Zellenergie'}
                 </p>
@@ -62,7 +63,7 @@ export function Home() {
           <Link
             to="/biomechanics"
             className="bento-card bento-card--pillar bento-card--m2 bento-span-4"
-            style={{ '--pillar-color': '#2f9a72' } as CSSProperties}
+            style={{ '--pillar-color': '#3dba8a' } as CSSProperties}
             aria-label="Pillar M2 Move Biomechanics"
           >
             <picture className="bento-bg">
@@ -83,9 +84,10 @@ export function Home() {
             </picture>
             <div className="bento-overlay" />
             <div className="bento-content">
-              <span className="bento-pillar-mark">M²</span>
               <div className="bento-pillar-foot">
-                <h2 className="bento-pillar-head">Move.</h2>
+                <h2 className="bento-pillar-head">
+                  <span className="bento-pillar-prefix">M2</span> MOVE
+                </h2>
                 <p className="bento-pillar-sub">
                   {isEn ? 'Biomechanics & Pain Freedom' : 'Biomechanik & Schmerzfreiheit'}
                 </p>
@@ -100,7 +102,7 @@ export function Home() {
           <Link
             to="/mental"
             className="bento-card bento-card--pillar bento-card--m3 bento-span-4"
-            style={{ '--pillar-color': '#4f6fd6' } as CSSProperties}
+            style={{ '--pillar-color': '#6b8cff' } as CSSProperties}
             aria-label="Pillar M3 Repeat Mindset"
           >
             <picture className="bento-bg">
@@ -121,9 +123,10 @@ export function Home() {
             </picture>
             <div className="bento-overlay" />
             <div className="bento-content">
-              <span className="bento-pillar-mark">M³</span>
               <div className="bento-pillar-foot">
-                <h2 className="bento-pillar-head">Repeat.</h2>
+                <h2 className="bento-pillar-head">
+                  <span className="bento-pillar-prefix">M3</span> REPEAT
+                </h2>
                 <p className="bento-pillar-sub">
                   {isEn ? 'Mindset & Neural Clarity' : 'Mindset & neuronale Klarheit'}
                 </p>

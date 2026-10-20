@@ -3406,6 +3406,20 @@ picture {
   line-height: 0.95;
   margin: 6px 0 0;
   color: #ffffff;
+  display: flex;
+  align-items: baseline;
+  flex-wrap: nowrap;
+}
+
+.bento-pillar-prefix {
+  color: var(--pillar-color, #f59e0b);
+  font-size: 1em;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  display: inline-block;
+  margin-right: 0.28em;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+  flex-shrink: 0;
 }
 
 .bento-pillar-sub {
@@ -3564,9 +3578,12 @@ body:has(.bento-page--landing) {
   }
 
   .bento-grid--landing .bento-pillar-head {
-    font-size: clamp(40px, 3.6vw, 56px) !important;
+    font-size: clamp(38px, 3.4vw, 52px) !important;
     margin: 0 !important;
     line-height: 0.92 !important;
+    display: flex !important;
+    align-items: baseline !important;
+    flex-wrap: nowrap !important;
   }
 
   .bento-grid--landing .bento-pillar-sub {
@@ -3706,9 +3723,12 @@ body:has(.bento-page--landing) {
   }
 
   .bento-grid--landing .bento-pillar-head {
-    font-size: clamp(34px, 8vw, 44px) !important;
+    font-size: clamp(32px, 7.5vw, 44px) !important;
     margin: 0 !important;
     line-height: 0.92 !important;
+    display: flex !important;
+    align-items: baseline !important;
+    flex-wrap: nowrap !important;
   }
 
   .bento-grid--landing .bento-pillar-sub {
@@ -3774,6 +3794,10 @@ body:has(.bento-page--landing) {
   justify-content: space-between !important;
 }
 
+.bento-grid--landing .bento-card--pillar .bento-content {
+  justify-content: flex-end !important;
+}
+
 .bento-grid--landing .bento-arrow-btn {
   display: inline-flex;
   align-items: center;
@@ -3803,6 +3827,7 @@ body:has(.bento-page--landing) {
   align-items: flex-start;
   width: 100%;
   min-width: 0;
+  margin-top: auto;
 }
 
 /* Next row (Michél Codex card) starts cleanly below the initial viewport */
