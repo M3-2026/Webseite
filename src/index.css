@@ -3388,9 +3388,13 @@ picture {
   transition: none !important;
 }
 
+.bento-card--pillar .bento-bg-img,
+.bento-card--pillar picture.bento-bg img,
 .bento-page--landing .bento-card--pillar .bento-bg-img,
 .bento-page--landing .bento-card--pillar picture.bento-bg img {
   transform: scale(1.02) !important;
+  filter: brightness(0.85) contrast(1.08) saturate(1.05) !important;
+  transition: filter 0.35s ease, transform 0.4s ease !important;
 }
 
 .bento-page--landing .bento-card:hover .bento-arrow-btn {
@@ -3409,6 +3413,7 @@ picture {
   display: flex;
   align-items: baseline;
   flex-wrap: nowrap;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.85), 0 1px 4px rgba(0, 0, 0, 0.95);
 }
 
 .bento-pillar-prefix {
@@ -3418,16 +3423,17 @@ picture {
   letter-spacing: -0.02em;
   display: inline-block;
   margin-right: 0.28em;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.8);
   flex-shrink: 0;
 }
 
 .bento-pillar-sub {
-  font-size: 13.5px;
+  font-size: 14.5px;
   font-weight: 600;
-  line-height: 1.15;
-  color: rgba(255, 255, 255, 0.72);
-  margin: -4px 0 8px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.92) !important;
+  margin: -2px 0 10px;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.85);
 }
 
 .bento-pillar-badge {
@@ -3630,59 +3636,65 @@ body:has(.bento-page--landing) {
   body:has(.bento-page--landing),
   html.page-landing,
   body.page-landing {
-    overflow: hidden !important;
-    height: 100dvh !important;
-    max-height: 100dvh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: auto !important;
+    min-height: 100% !important;
+    max-height: none !important;
+    -webkit-overflow-scrolling: touch !important;
   }
 
   body.page-landing #root,
   body:has(.bento-page--landing) #root {
-    height: 100dvh !important;
-    max-height: 100dvh !important;
+    height: auto !important;
+    min-height: 100% !important;
+    max-height: none !important;
     display: flex !important;
     flex-direction: column !important;
-    overflow: hidden !important;
+    overflow: visible !important;
   }
 
   .bento-page--landing {
-    flex: 1 1 0% !important;
-    min-height: 0 !important;
+    flex: 1 0 auto !important;
+    min-height: auto !important;
     height: auto !important;
     display: flex !important;
     flex-direction: column !important;
-    overflow: hidden !important;
+    overflow: visible !important;
     box-sizing: border-box !important;
-    padding-top: calc(var(--nav-height, 60px) + var(--landing-frame, 10px)) !important;
-    padding-bottom: var(--landing-frame, 8px) !important;
-    padding-left: var(--landing-frame, 10px) !important;
-    padding-right: var(--landing-frame, 10px) !important;
+    padding-top: calc(var(--nav-height, 60px) + 12px) !important;
+    padding-bottom: 24px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
   }
 
   .bento-page--landing .wrap--landing {
-    flex: 1 1 0% !important;
-    min-height: 0 !important;
-    height: 100% !important;
+    flex: 1 0 auto !important;
+    min-height: auto !important;
+    height: auto !important;
     width: 100% !important;
     max-width: none !important;
     margin: 0 !important;
     display: flex !important;
     flex-direction: column !important;
+    overflow: visible !important;
   }
 
   .bento-grid--landing {
-    flex: 1 1 0% !important;
-    min-height: 0 !important;
-    height: 100% !important;
+    flex: 1 0 auto !important;
+    min-height: auto !important;
+    height: auto !important;
     display: flex !important;
     flex-direction: column !important;
-    gap: 10px !important;
+    gap: 14px !important;
     width: 100% !important;
+    overflow: visible !important;
   }
 
   body.page-landing .footer--minimal,
   body:has(.bento-page--landing) .footer--minimal {
     flex-shrink: 0 !important;
-    padding: 6px var(--landing-frame, 10px) max(6px, env(safe-area-inset-bottom, 0px)) !important;
+    padding: 16px var(--landing-frame, 12px) max(16px, env(safe-area-inset-bottom, 12px)) !important;
   }
 
   body.page-landing .footer--minimal .wrap,
@@ -3711,30 +3723,32 @@ body:has(.bento-page--landing) {
   }
 
   .bento-grid--landing .bento-card--pillar {
-    flex: 1 1 0% !important;
+    flex: 0 0 auto !important;
     width: 100% !important;
     height: auto !important;
-    min-height: 0 !important;
+    min-height: 310px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: flex-end !important;
-    padding: clamp(14px, 3.5vw, 20px) !important;
-    border-radius: 18px !important;
+    padding: clamp(16px, 4.5vw, 22px) !important;
+    border-radius: 20px !important;
+    overflow: hidden !important;
   }
 
   .bento-grid--landing .bento-pillar-head {
-    font-size: clamp(32px, 7.5vw, 44px) !important;
+    font-size: clamp(32px, 7.5vw, 42px) !important;
     margin: 0 !important;
-    line-height: 0.92 !important;
+    line-height: 0.95 !important;
     display: flex !important;
     align-items: baseline !important;
     flex-wrap: nowrap !important;
   }
 
   .bento-grid--landing .bento-pillar-sub {
-    font-size: 16px !important;
-    margin: 10px 0 0 !important;
+    font-size: 15px !important;
+    margin: 6px 0 0 !important;
     line-height: 1.25 !important;
+    color: rgba(255, 255, 255, 0.92) !important;
   }
 
   .bento-grid--landing .bento-desc {
@@ -3748,8 +3762,9 @@ body:has(.bento-page--landing) {
   }
 
   .bento-grid--landing .bento-arrow-btn {
-    margin-top: 12px !important;
+    margin-top: 14px !important;
     font-size: 13px !important;
+    padding: 10px 18px !important;
   }
 }
 
@@ -3905,23 +3920,51 @@ picture.bento-bg img,
   -webkit-backface-visibility: hidden !important;
 }
 
-.bento-card--pillar .bento-overlay {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.08) 0%,
-    rgba(0, 0, 0, 0.35) 45%,
-    rgba(0, 0, 0, 0.88) 100%
-  ) !important;
-}
-
+.bento-card--pillar .bento-overlay,
 .bento-page--landing .bento-card--pillar .bento-overlay {
   background: linear-gradient(
     180deg,
-    rgba(20, 16, 12, 0.45) 0%,
-    rgba(20, 16, 12, 0) 24%,
-    rgba(20, 16, 12, 0) 46%,
-    rgba(20, 16, 12, 0.34) 70%,
-    rgba(20, 16, 12, 0.72) 100%
+    rgba(10, 8, 12, 0.45) 0%,
+    rgba(10, 8, 12, 0.25) 25%,
+    rgba(8, 7, 10, 0.65) 55%,
+    rgba(6, 5, 8, 0.88) 80%,
+    rgba(4, 3, 6, 0.96) 100%
+  ) !important;
+}
+
+.bento-card--m1 .bento-overlay,
+.bento-page--landing .bento-card--m1 .bento-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(24, 14, 6, 0.45) 0%,
+    rgba(28, 16, 6, 0.22) 25%,
+    rgba(22, 12, 4, 0.68) 52%,
+    rgba(14, 8, 2, 0.90) 78%,
+    rgba(8, 4, 1, 0.97) 100%
+  ) !important;
+}
+
+.bento-card--m2 .bento-overlay,
+.bento-page--landing .bento-card--m2 .bento-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(6, 20, 14, 0.45) 0%,
+    rgba(6, 24, 16, 0.22) 25%,
+    rgba(4, 18, 12, 0.68) 52%,
+    rgba(3, 12, 8, 0.90) 78%,
+    rgba(2, 7, 5, 0.97) 100%
+  ) !important;
+}
+
+.bento-card--m3 .bento-overlay,
+.bento-page--landing .bento-card--m3 .bento-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(8, 14, 28, 0.45) 0%,
+    rgba(10, 18, 34, 0.22) 25%,
+    rgba(6, 13, 26, 0.68) 52%,
+    rgba(4, 8, 18, 0.90) 78%,
+    rgba(2, 5, 12, 0.97) 100%
   ) !important;
 }
 
