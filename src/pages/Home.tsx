@@ -47,7 +47,7 @@ export function Home() {
             <div className="bento-content">
               <div className="bento-pillar-foot">
                 <h2 className="bento-pillar-head">
-                  <span className="bento-pillar-prefix">M1</span> FOOD
+                  <span className="bento-pillar-prefix">M¹</span> FOOD
                 </h2>
                 <p className="bento-pillar-sub">
                   {isEn ? 'Metabolism & Cellular Energy' : 'Metabolismus & Zellenergie'}
@@ -86,7 +86,7 @@ export function Home() {
             <div className="bento-content">
               <div className="bento-pillar-foot">
                 <h2 className="bento-pillar-head">
-                  <span className="bento-pillar-prefix">M2</span> MOVE
+                  <span className="bento-pillar-prefix">M²</span> MOVE
                 </h2>
                 <p className="bento-pillar-sub">
                   {isEn ? 'Biomechanics & Pain Freedom' : 'Biomechanik & Schmerzfreiheit'}
@@ -125,7 +125,7 @@ export function Home() {
             <div className="bento-content">
               <div className="bento-pillar-foot">
                 <h2 className="bento-pillar-head">
-                  <span className="bento-pillar-prefix">M3</span> REPEAT
+                  <span className="bento-pillar-prefix">M³</span> REPEAT
                 </h2>
                 <p className="bento-pillar-sub">
                   {isEn ? 'Mindset & Neural Clarity' : 'Mindset & neuronale Klarheit'}
